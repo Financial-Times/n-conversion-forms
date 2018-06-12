@@ -23,6 +23,10 @@
     "@financial-times/n-gage": "^2.0.2"
   },
   "devDependencies": {
-    "@financial-times/n-internal-tool": "^2.2.4"
+    "@financial-times/n-handlebars": "^1.19.6",
+    "@financial-times/n-internal-tool": "^2.2.4",
+    "chai": "^4.1.2",
+    "cheerio": "^1.0.0-rc.2",
+    "mocha": "^5.1.1"
   }
 }

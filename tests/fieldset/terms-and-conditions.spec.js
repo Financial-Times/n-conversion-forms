@@ -1,7 +1,7 @@
-import {
-	fetchPartial,
-	shouldContainPartials
-} from '../../helpers';
+const { 
+	fetchPartial, 
+	shouldContainPartials 
+} = require('../helpers');
 
 let context = {};
 

@@ -1,11 +1,11 @@
-import fs from 'fs';
-import { promisify } from 'util';
-import { handlebars } from '@financial-times/n-handlebars';
-import cheerio from 'cheerio';
-import { expect } from 'chai';
+const fs = require('fs');
+const cheerio = require('cheerio');
+const expect = require('chai').expect;
+const promisify = require('util').promisify;
+const handlebars = require('@financial-times/n-handlebars').handlebars;
 
 const readFile = promisify(fs.readFile);
-const PARTIAL_DIR = __dirname + '/../../../views/partials/';
+const PARTIAL_DIR = __dirname + '/../templates/';
 const options = [
 	{value: 'testValue1', label: 'testLabel1'},
 	{value: 'testValue2', label: 'testValue2'},
@@ -14,22 +14,22 @@ const options = [
 const optionsWithDefault = options.map((option, index) => ({...option, isSelected: index === 1}));
 const selectedOption = optionsWithDefault.find(option => option.isSelected);
 
-export const registerPartial = (name, partial) => {
+const registerPartial = (name, partial) => {
 	return handlebars().registerPartial(name, partial);
 };
 
-export const unregisterPartial = name => {
+const unregisterPartial = name => {
 	return handlebars().unregisterPartial(name);
 };
 
-export const fetchPartial = async name => {
+const fetchPartial = async name => {
 	const file = await readFile(PARTIAL_DIR + name, 'utf8');
 	const template = handlebars().compile(file);
 
 	return (context) => cheerio.load(template(context));
 };
 
-export const shouldPopulateOptions = function (context) {
+const shouldPopulateOptions = function (context) {
 	it('should show no options if none passed in', () => {
 		const $ = context.template({});
 
@@ -54,7 +54,7 @@ export const shouldPopulateOptions = function (context) {
 	});
 };
 
-export const shouldSelectOption = function (context) {
+const shouldSelectOption = function (context) {
 
 	it('should select the correct option if value passed', () => {
 		const value = options[1].value;
@@ -107,7 +107,7 @@ export const shouldSelectOption = function (context) {
 	});
 };
 
-export const shouldPopulateValue = function (context) {
+const shouldPopulateValue = function (context) {
 	it('should have a blank value if one isnt passed in', () => {
 		const $ = context.template({});
 
@@ -124,7 +124,7 @@ export const shouldPopulateValue = function (context) {
 	});
 };
 
-export const shouldBeRequired = function (context, selector) {
+const shouldBeRequired = function (context, selector) {
 	it('should be required', () => {
 		const $ = context.template({});
 
@@ -132,7 +132,7 @@ export const shouldBeRequired = function (context, selector) {
 	});
 };
 
-export const shouldContainPartials = function (context, partials) {
+const shouldContainPartials = function (context, partials) {
 	it('should contain partials', () => {
 		partials.forEach(({id, partial}) => registerPartial(partial, `<div id="${id}"></div>`));
 
@@ -143,4 +143,15 @@ export const shouldContainPartials = function (context, partials) {
 			expect($(`#${id}`).length).to.equal(1);
 		});
 	});
+};
+
+module.exports = {
+    registerPartial,
+    unregisterPartial,
+    fetchPartial,
+    shouldPopulateOptions,
+    shouldSelectOption,
+    shouldPopulateValue,
+    shouldBeRequired,
+    shouldContainPartials
 };
