@@ -146,12 +146,12 @@ const shouldContainPartials = function (context, partials) {
 };
 
 module.exports = {
-    registerPartial,
-    unregisterPartial,
-    fetchPartial,
-    shouldPopulateOptions,
-    shouldSelectOption,
-    shouldPopulateValue,
-    shouldBeRequired,
-    shouldContainPartials
+	registerPartial,
+	unregisterPartial,
+	fetchPartial,
+	shouldPopulateOptions,
+	shouldSelectOption,
+	shouldPopulateValue,
+	shouldBeRequired,
+	shouldContainPartials
 };
