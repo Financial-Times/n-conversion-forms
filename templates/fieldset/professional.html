@@ -1,0 +1,13 @@
+<fieldset name="professional" class="su-form__fieldset">
+	<legend class="o-normalise-visually-hidden">Professional details</legend>
+	<div class="su-header">
+		<h2>Customise your experience</h2>
+	</div>
+
+	{{> ../field/industry value=user.industry options=demographic.industries }}
+
+	{{> ../field/responsibility value=user.responsibility options=demographic.responsibilities }}
+
+	{{> ../field/position value=user.position options=demographic.positions }}
+
+</fieldset>

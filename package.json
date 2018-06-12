@@ -4,7 +4,10 @@
   "description": "Containing partials and styles for forms included on Conversion apps (next-signup, next-corp-signup, next-b2b-prospect etc).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "node_modules/.bin/secret-squirrel",
+    "commitmsg": "node_modules/.bin/secret-squirrel-commitmsg",
+    "prepush": "make verify -j3"
   },
   "repository": {
     "type": "git",
