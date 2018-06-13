@@ -1,0 +1,58 @@
+{
+  "industries": [
+    {
+      "value": "ACC",
+      "label": "Accountancy & tax advisory"
+    },
+    {
+      "value": "DEF",
+      "label": "Aerospace & defence"
+    },
+    {
+      "value": "CAR",
+      "label": "Automobiles"
+    }
+  ],
+  "positions": [
+    {
+      "value": "AN",
+      "label": "Analyst"
+    },
+    {
+      "value": "AS",
+      "label": "Associate"
+    },
+    {
+      "value": "BR",
+      "label": "Broker/Trader/Advisor"
+    }
+  ],
+  "responsibilities": [
+    {
+      "value": "FIN",
+      "label": "Accounting/finance"
+    },
+    {
+      "value": "ADL",
+      "label": "Administration"
+    },
+    {
+      "value": "RES",
+      "label": "Broker/trader"
+    }
+  ],
+  "countries": [
+    {
+      "value": "ABW",
+      "label": "Aruba"
+    },
+    {
+      "value": "AFG",
+      "label": "Afghanistan"
+    },
+    {
+      "value": "AGO",
+      "label": "Angola"
+    }
+  ]
+}

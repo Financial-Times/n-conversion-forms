@@ -11,7 +11,7 @@
 
 		<div class="demo__partial">
 			<h3 class="demo__header">field/country</h3>
-			{{> field/country }}
+			{{> field/country options=testData.countries }}
 		</div>
 
 		<div class="demo__partial">
@@ -26,7 +26,7 @@
 
 		<div class="demo__partial">
 			<h3 class="demo__header">field/industry</h3>
-			{{> field/industry }}
+			{{> field/industry options=testData.industries }}
 		</div>
 
 		<div class="demo__partial">
@@ -51,19 +51,23 @@
 
 		<div class="demo__partial">
 			<h3 class="demo__header">field/position</h3>
-			{{> field/position }}
+			{{> field/position options=testData.positions }}
 		</div>
 
 		<div class="demo__partial">
 			<h3 class="demo__header">field/responsibility</h3>
-			{{> field/responsibility }}
+			{{> field/responsibility options=testData.responsibilities }}
 		</div>
 
 		<h2 class="demo__header">Fieldsets</h2>
 
 		<div class="demo__partial">
 			<h3 class="demo__header">fieldset/professional</h3>
-			{{> fieldset/professional }}
+			{{> fieldset/professional
+				responsibilities=testData.responsibilities
+				positions=testData.positions
+				industries=testData.industries
+			}}
 		</div>
 
 		<div class="demo__partial">

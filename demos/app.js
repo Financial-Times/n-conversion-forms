@@ -3,6 +3,7 @@ const resolve = require('path').resolve;
 const chalk = require('chalk');
 const express = require('@financial-times/n-internal-tool');
 const PORT = process.env.PORT || 5005;
+const testData = require('./data.json');
 
 const app = express({
 	name: 'public',
@@ -22,7 +23,8 @@ const app = express({
 app.get('/', (req, res) => {
 	res.render('index', {
 		layout: 'vanilla',
-		title: 'Demo'
+		title: 'Demo',
+		testData
 	});
 });
 
