@@ -1,6 +1,6 @@
 {
-  "name": "n-swg",
-  "homepage": "https://github.com/Financial-Times/n-swg",
+  "name": "n-conversion-forms",
+  "homepage": "https://github.com/Financial-Times/n-conversion-forms",
   "description": "JS, Styles, Templates and utils for FT.com",
   "ignore": [
     "**/.*",
@@ -30,11 +30,11 @@
     "main.js"
   ],
   "main": [
-    "main.scss",
-    "main-client.js"
+    "main.scss"
   ],
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
+    "o-forms": "^5.7.2",
+    "n-ui-foundations": "^3.0.1"
   }
 }
