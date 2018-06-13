@@ -2,7 +2,7 @@
 const { resolve } = require('path');
 const express = require('@financial-times/n-internal-tool');
 const logger = require('@financial-times/n-logger').default;
-const PORT = process.env.PORT || 5050;
+const PORT = process.env.PORT || 5005;
 
 const app = express({
 	name: 'public',
