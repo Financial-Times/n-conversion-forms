@@ -1,2 +1,14 @@
 @import 'n-ui-foundations/main';
 @import '../main.scss';
+
+.demo {
+	&__header {
+		font-family: 'Courier New', Courier, monospace;
+	}
+
+	&__partial {
+		border: 1px dashed #000;
+		margin: 10px 0;
+		padding: 10px;
+	}
+}

@@ -2,7 +2,7 @@
 
 	<input type="checkbox" id="termsAcceptance" name="termsAcceptance" value="true" class="o-forms__checkbox js-item__value js-field__input" data-trackable="field-terms" aria-required="true" required>
 
-	<label for="termsAcceptance" class="o-forms__label o-forms__terms">
+	<label for="termsAcceptance" class="o-forms__label su-form__terms">
 		<p id="terms-default">
 			I confirm I am {{#if offer.ageRestriction}}{{offer.ageRestriction}}{{else}}16{{/if}} years or older and have read and agree to the
 			<a class="su-link-external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}" rel="noopener" data-trackable="terms-and-conditions">Terms &amp; Conditions</a>{{#unless hasConsent}},

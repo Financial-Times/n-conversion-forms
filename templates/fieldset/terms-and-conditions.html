@@ -5,7 +5,7 @@
 		<h2 aria-hidden="true">Terms and conditions</h2>
 	</div>
 
-	{{> ../field/accept-terms
+	{{> field/accept-terms
 		isRegister=isRegister
 		isSignup=isSignup
 		hasConsent=hasConsent
@@ -14,7 +14,7 @@
 	}}
 
 	{{#unless hasConsent}}
-	{{> ../field/marketing }}
+	{{> field/marketing }}
 	{{/unless}}
 
 </fieldset>
