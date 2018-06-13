@@ -27,8 +27,8 @@ unit-test:
 	mocha --recursive --reporter spec tests
 
 a11y-demo:
-	export TEST_URL=http://localhost:5050; \
+	export TEST_URL=http://localhost:5005; \
 	make a11y
 
 smoke:
-	n-test smoke --host http://localhost:5050
+	n-test smoke --host http://localhost:5005
