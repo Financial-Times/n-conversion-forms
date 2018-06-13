@@ -11,8 +11,8 @@ describe('fieldset/professional template', () => {
 	});
 
 	shouldContainPartials(context, [
-		{id: 'industry', partial: '../field/industry'},
-		{id: 'position', partial: '../field/position'},
-		{id: 'responsibility', partial:'../field/responsibility'}
+		{id: 'industry', partial: 'field/industry'},
+		{id: 'position', partial: 'field/position'},
+		{id: 'responsibility', partial:'field/responsibility'}
 	]);
 });
