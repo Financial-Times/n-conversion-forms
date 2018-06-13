@@ -13,10 +13,10 @@ demo: demo-build
 	@DEMO_MODE=true nodemon --ext html,css --watch public --watch views demos/app.js
 
 run:
-	@DEMO_MODE=true HTTP_MODE=true node demos/app
+	@DEMO_MODE=true node demos/app
 
 a11y: demo-build
-	@PA11Y=true DEMO_MODE=true node demos/app
+	@PA11Y=true node demos/app
 	@$(DONE)
 
 test: verify
