@@ -1,0 +1,50 @@
+<header class="o-header-services" data-o-component="o-header">
+	<div class="o-header-services__top o-header-services__container">
+		<div class="o-header-services__ftlogo"></div>
+		<div class="o-header-services__title">
+			<div class="o-header-services__product-name">
+				<a href="/">n-conversion-forms</a>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="o-techdocs-container">
+	<div class="o-techdocs-layout">
+		<div class="o-techdocs-sidebar">
+			<ul class="o-techdocs-nav">
+				{{#each data.types}}
+				<li>
+					<a href="#{{name}}">{{name}}</a>
+					<ul class="o-techdocs-nav o-techdocs-nav--sub">
+					{{#each partials}}
+						<li><a href="#{{name}}">{{name}}</a></li>
+					{{/each}}
+					</ul>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+
+		<div class="o-techdocs-main">
+			<div class="o-techdocs-content">
+				<h1>Demos</h1>
+				{{#each data.types }}
+				<div class="demo__type">
+					<h2 id={{name}}>{{name}}</h2>
+					{{#each partials }}
+					<div class="demo__partial">
+						<h3 id={{name}}>{{name}}</h3>
+						<div class="o-techdocs-card">
+							<div class="o-techdocs-card__content">
+								<iframe class="demo__iframe" src="/partial/{{name}}"></iframe>
+							</div>
+						</div>
+					</div>
+					{{/each}}
+				</div>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</div>
