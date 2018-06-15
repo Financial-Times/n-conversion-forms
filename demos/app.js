@@ -2,8 +2,9 @@
 const resolve = require('path').resolve;
 const chalk = require('chalk');
 const express = require('@financial-times/n-internal-tool');
+const handlebars = require('@financial-times/n-handlebars').handlebars;
 const PORT = process.env.PORT || 5005;
-const testData = require('./data.json');
+const data = require('./data.json');
 
 const app = express({
 	name: 'public',
@@ -13,7 +14,7 @@ const app = express({
 	withNavigation: false,
 	withAnonMiddleware: false,
 	hasHeadCss: false,
-	viewsDirectory: '/demos',
+	viewsDirectory: '/demos/views',
 	partialsDirectory: resolve(__dirname, '../templates'),
 	directory: process.cwd(),
 	demo: true,
@@ -24,8 +25,14 @@ app.get('/', (req, res) => {
 	res.render('index', {
 		layout: 'vanilla',
 		title: 'Demo',
-		testData
+		data: data
 	});
+});
+
+app.get('/partial/:type/:name', (req, res) => {
+	const partial = `${req.params.type}/${req.params.name}`;
+	const template = compilePartial(partial, req.query);
+	res.send(template(data));
 });
 
 app.listen(PORT, () => {
@@ -54,4 +61,22 @@ function runPa11yTests () {
 	pa11y.on('close', code => {
 		process.exit(code);
 	});
+}
+
+function compilePartial (partial, options) {
+	const parameters = Object.keys(options).map(key => `${key}=${options[key]}`).join(' ');
+	const html = `
+		<html>
+			<head>
+				<link rel="stylesheet" href="/public/component.css">
+			</head>
+			<body>
+				<form class="ncf">
+					{{> ${partial} ${parameters} }}
+				</form>
+			</body>
+		</html>
+	`;
+
+	return handlebars().compile(html);
 }

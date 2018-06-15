@@ -32,7 +32,9 @@
   "main": [
     "main.scss"
   ],
-  "devDependencies": {},
+  "devDependencies": {
+    "o-techdocs": "^7.0.8"
+  },
   "dependencies": {
     "o-forms": "^5.7.2",
     "n-ui-foundations": "^3.0.1"
