@@ -1,29 +1,4 @@
 {
-  "types": [
-    {
-      "name": "Fields",
-      "partials": [
-        {"name": "field/accept-terms"},
-        {"name": "field/country"},
-        {"name": "field/email"},
-        {"name": "field/firstname"},
-        {"name": "field/industry"},
-        {"name": "field/lastname"},
-        {"name": "field/marketing"},
-        {"name": "field/password"},
-        {"name": "field/phone"},
-        {"name": "field/position"},
-        {"name": "field/responsibility"}
-      ]
-    },
-    {
-      "name": "Fieldsets",
-      "partials": [
-        {"name": "fieldset/professional"},
-        {"name": "fieldset/terms-and-conditions"}
-      ]
-    }
-  ],
   "industries": [
     {
       "value": "ACC",

@@ -1,10 +1,13 @@
 /* eslint no-console:0 */
 const resolve = require('path').resolve;
+const fs = require('fs');
 const chalk = require('chalk');
 const express = require('@financial-times/n-internal-tool');
 const handlebars = require('@financial-times/n-handlebars').handlebars;
-const PORT = process.env.PORT || 5005;
 const data = require('./data.json');
+
+const PORT = process.env.PORT || 5005;
+const PARIALS_DIR = resolve(__dirname, '../partials');
 
 const app = express({
 	name: 'public',
@@ -15,7 +18,7 @@ const app = express({
 	withAnonMiddleware: false,
 	hasHeadCss: false,
 	viewsDirectory: '/demos/views',
-	partialsDirectory: resolve(__dirname, '../partials'),
+	partialsDirectory: PARIALS_DIR,
 	directory: process.cwd(),
 	demo: true,
 	s3o: false
@@ -25,7 +28,8 @@ app.get('/', (req, res) => {
 	res.render('index', {
 		layout: 'vanilla',
 		title: 'Demo',
-		data: data
+		data: data,
+		types: fetchTypesAndPartials(PARIALS_DIR)
 	});
 });
 
@@ -60,6 +64,17 @@ function runPa11yTests () {
 
 	pa11y.on('close', code => {
 		process.exit(code);
+	});
+}
+
+function fetchTypesAndPartials (dir) {
+	const types = fs.readdirSync(dir);
+	return types.map(type => {
+		const partials = fs.readdirSync(dir + '/' + type);
+		return {
+			name: type,
+			partials: partials.map(partial => ({name: `${type}/${partial.replace('.html', '')}`}))
+		};
 	});
 }
 

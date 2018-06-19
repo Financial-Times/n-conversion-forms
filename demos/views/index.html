@@ -13,7 +13,7 @@
 	<div class="o-techdocs-layout">
 		<div class="o-techdocs-sidebar">
 			<ul class="o-techdocs-nav">
-				{{#each data.types}}
+				{{#each types}}
 				<li>
 					<a href="#{{name}}">{{name}}</a>
 					<ul class="o-techdocs-nav o-techdocs-nav--sub">
@@ -29,7 +29,7 @@
 		<div class="o-techdocs-main">
 			<div class="o-techdocs-content">
 				<h1>Demos</h1>
-				{{#each data.types }}
+				{{#each types }}
 				<div class="demo__type">
 					<h2 id={{name}}>{{name}}</h2>
 					{{#each partials }}
