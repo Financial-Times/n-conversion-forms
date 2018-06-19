@@ -65,17 +65,17 @@ function runPa11yTests () {
 
 function compilePartial (partial, options) {
 	const parameters = Object.keys(options).map(key => `${key}=${options[key]}`).join(' ');
-	const html = `
-		<html>
-			<head>
-				<link rel="stylesheet" href="/public/component.css">
-			</head>
-			<body>
-				<form class="ncf">
-					{{> ${partial} ${parameters} }}
-				</form>
-			</body>
-		</html>
+	const html = `<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/public/component.css">
+	</head>
+	<body style="background-color:#fff1e5;">
+		<form class="ncf">
+			{{> ${partial} ${parameters} }}
+		</form>
+	</body>
+</html>
 	`;
 
 	return handlebars().compile(html);

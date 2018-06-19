@@ -7,10 +7,6 @@
 @include oFormsSuffixFeature();
 @include oFormsWideFeature();
 
-.o-normalise-visually-hidden {
-	@include oNormaliseVisuallyHidden;
-}
-
 // Custom styles
 .ncf {
 	@include oTypographySans($scale: 0);
@@ -30,5 +26,9 @@
 		> * {
 			margin-top: 10px;
 		}
+	}
+
+	&__link--external {
+		@include oTypographyLinkExternal;
 	}
 }

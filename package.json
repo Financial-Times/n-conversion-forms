@@ -24,6 +24,7 @@
     "@financial-times/n-gage": "^2.0.2",
     "@financial-times/n-handlebars": "^1.19.6",
     "@financial-times/n-internal-tool": "^2.2.4",
+    "autoprefixer": "^8.6.3",
     "bower": "^1.8.4",
     "bower-resolve-webpack-plugin": "^1.0.4",
     "chai": "^4.1.2",
@@ -32,6 +33,7 @@
     "node-sass": "^4.9.0",
     "nodemon": "^1.17.5",
     "pa11y-ci": "^2.1.1",
+    "postcss-cli": "^5.0.1",
     "webpack": "^4.12.0",
     "webpack-cli": "^3.0.4"
   }
