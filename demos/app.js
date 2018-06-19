@@ -15,7 +15,7 @@ const app = express({
 	withAnonMiddleware: false,
 	hasHeadCss: false,
 	viewsDirectory: '/demos/views',
-	partialsDirectory: resolve(__dirname, '../templates'),
+	partialsDirectory: resolve(__dirname, '../partials'),
 	directory: process.cwd(),
 	demo: true,
 	s3o: false

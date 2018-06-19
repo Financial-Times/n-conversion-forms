@@ -5,7 +5,7 @@ const promisify = require('util').promisify;
 const handlebars = require('@financial-times/n-handlebars').handlebars;
 
 const readFile = promisify(fs.readFile);
-const PARTIAL_DIR = __dirname + '/../templates/';
+const PARTIAL_DIR = __dirname + '/../partials/';
 const options = [
 	{value: 'testValue1', label: 'testLabel1'},
 	{value: 'testValue2', label: 'testValue2'},
