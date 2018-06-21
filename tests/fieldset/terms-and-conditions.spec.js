@@ -11,7 +11,6 @@ describe('fieldset/terms-and-conditions template', () => {
 	});
 
 	shouldContainPartials(context, [
-		{id: 'accept-terms-field', partial: 'field/accept-terms'},
-		{id: 'marketing-field', partial: 'field/marketing'}
+		{id: 'accept-terms-field', partial: 'field/accept-terms'}
 	]);
 });

@@ -5,13 +5,8 @@
 	{{> field/accept-terms
 		isRegister=isRegister
 		isSignup=isSignup
-		hasConsent=hasConsent
 		requestedTerm=requestedTerm
 		offer=offer
 	}}
-
-	{{#unless hasConsent}}
-	{{> field/marketing }}
-	{{/unless}}
 
 </fieldset>

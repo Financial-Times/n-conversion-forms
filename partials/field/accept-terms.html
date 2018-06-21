@@ -5,17 +5,8 @@
 	<label for="termsAcceptance" class="o-forms__label ncf__terms">
 		<p id="terms-default">
 			I confirm I am {{#if offer.ageRestriction}}{{offer.ageRestriction}}{{else}}16{{/if}} years or older and have read and agree to the
-			<a class="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}" rel="noopener" data-trackable="terms-and-conditions">Terms &amp; Conditions</a>{{#unless hasConsent}},
-			<a class="ncf__link--external" href="http://help.ft.com/help/legal-privacy/privacy/" target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}" data-trackable="privacy" rel="noopener">Privacy Policy</a> and
-			<a class="ncf__link--external" href="http://help.ft.com/help/legal-privacy/cookies/" target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}" data-trackable="cookie" rel="noopener">Cookie Policy</a>.
-			{{/unless}}
+			<a class="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}" rel="noopener" data-trackable="terms-and-conditions">Terms &amp; Conditions</a>
 		</p>
-
-		{{#if isRegister}}
-			{{#unless hasConsent}}
-		<p id="terms-register">We may contact you occasionally, by email and phone, to improve your experience of the Financial Times.</p>
-			{{/unless}}
-		{{/if}}
 
 		{{#if isSignup}}
 			{{#if offer.isPrintProduct}}
@@ -24,9 +15,6 @@
 		<p id="terms-signup">&dagger; Your subscription lasts for <span class="tc-term">{{requestedTerm}}</span>. To give you uninterrupted access we will automatically renew it using the payment method you provided, unless you cancel before your renewal date.</p>
 			{{/if}}
 		<p id="terms-cancellation">Find out more about our cancellation policy in our <a class="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}" rel="noopener">Terms &amp; Conditions</a></p>
-			{{#unless hasConsent}}
-		<p id="terms-marketing">We may contact you occasionally, by email and phone, to improve your experience of the Financial Times.</p>
-			{{/unless}}
 			{{#if offer.hasSpecialTerms}}
 		<p id="terms-special">{{offer.specialTerms}}</p>
 			{{/if}}
