@@ -2,10 +2,10 @@
 
 	<legend class="ncf__header" >Customise your experience</legend>
 
-	{{> field/industry value=industry options=industries }}
+	{{> field/industry value=industry options=industries hasError=hasIndustryError }}
 
-	{{> field/responsibility value=responsibility options=responsibilities }}
+	{{> field/responsibility value=responsibility options=responsibilities hasError=hasResponsibilityError }}
 
-	{{> field/position value=position options=positions }}
+	{{> field/position value=position options=positions hasError=hasPositionError }}
 
 </fieldset>

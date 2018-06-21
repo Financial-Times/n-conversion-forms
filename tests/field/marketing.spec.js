@@ -1,5 +1,8 @@
 const { expect } = require('chai');
-const { fetchPartial } = require('../helpers');
+const {
+	fetchPartial,
+	shouldError
+} = require('../helpers');
 
 let context = {};
 
@@ -13,4 +16,6 @@ describe('field/marketing template', () => {
 
 		expect($('input').attr('checked')).to.equal('checked');
 	});
+
+	shouldError(context);
 });

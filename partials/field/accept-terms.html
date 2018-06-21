@@ -1,4 +1,4 @@
-<div id="acceptTermsField" class="o-forms o-forms--wide ncf__field js-field" data-ui-item="multi" data-ui-item-name="acceptTerms" data-validate="required,checked" {{#if isSignup}}data-trackable="sign-up-terms"{{/if}}{{#if isRegister}}data-trackable="register-up-terms"{{/if}}>
+<div id="acceptTermsField" class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}" data-ui-item="multi" data-ui-item-name="acceptTerms" data-validate="required,checked" {{#if isSignup}}data-trackable="sign-up-terms"{{/if}}{{#if isRegister}}data-trackable="register-up-terms"{{/if}}>
 
 	<input type="checkbox" id="termsAcceptance" name="termsAcceptance" value="true" class="o-forms__checkbox js-item__value js-field__input" data-trackable="field-terms" aria-required="true" required>
 

@@ -1,5 +1,8 @@
 const { expect } = require('chai');
-const { fetchPartial } = require('../helpers');
+const {
+	fetchPartial,
+	shouldError
+} = require('../helpers');
 
 let context = {};
 const offer = {
@@ -160,4 +163,6 @@ describe('field/accept-terms template', () => {
 			expect(a.attribs.target).to.equal('_blank');
 		});
 	});
+
+	shouldError(context);
 });

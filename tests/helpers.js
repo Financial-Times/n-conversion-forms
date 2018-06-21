@@ -6,6 +6,7 @@ const handlebars = require('@financial-times/n-handlebars').handlebars;
 
 const readFile = promisify(fs.readFile);
 const PARTIAL_DIR = __dirname + '/../partials/';
+const ERROR_CLASS = 'o-forms--error';
 const options = [
 	{value: 'testValue1', label: 'testLabel1'},
 	{value: 'testValue2', label: 'testValue2'},
@@ -145,6 +146,22 @@ const shouldContainPartials = function (context, partials) {
 	});
 };
 
+const shouldError = function (context) {
+	it('should not have error class by default', () => {
+		const $ = context.template({});
+
+		expect($(ERROR_CLASS).length).to.equal(0);
+	});
+
+	it('should have error class if hasError is passed', () => {
+		const $ = context.template({
+			hasError: true
+		});
+
+		expect($(`.${ERROR_CLASS}`).length).to.equal(1);
+	});
+};
+
 module.exports = {
 	registerPartial,
 	unregisterPartial,
@@ -153,5 +170,6 @@ module.exports = {
 	shouldSelectOption,
 	shouldPopulateValue,
 	shouldBeRequired,
-	shouldContainPartials
+	shouldContainPartials,
+	shouldError
 };
