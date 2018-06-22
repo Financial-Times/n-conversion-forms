@@ -1,7 +1,8 @@
 const {
 	fetchPartial,
 	shouldBeRequired,
-	shouldPopulateValue
+	shouldPopulateValue,
+	shouldError
 } = require('../helpers');
 
 let context = {};
@@ -14,4 +15,6 @@ describe('field/lastname template', () => {
 	shouldPopulateValue(context);
 
 	shouldBeRequired(context, 'input');
+
+	shouldError(context);
 });

@@ -4,7 +4,8 @@ const {
 	registerPartial,
 	unregisterPartial,
 	shouldBeRequired,
-	shouldPopulateValue
+	shouldPopulateValue,
+	shouldError
 } = require('../helpers');
 
 let context = {};
@@ -60,4 +61,6 @@ describe('field/email template', () => {
 
 		expect($('input').attr('type')).to.equal('email');
 	});
+
+	shouldError(context);
 });

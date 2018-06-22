@@ -2,7 +2,8 @@ const {
 	fetchPartial,
 	shouldBeRequired,
 	shouldPopulateOptions,
-	shouldSelectOption
+	shouldSelectOption,
+	shouldError
 } = require('../helpers');
 
 let context = {};
@@ -17,4 +18,6 @@ describe('field/responsibility template', () => {
 	shouldSelectOption(context);
 
 	shouldBeRequired(context, 'select');
+
+	shouldError(context);
 });

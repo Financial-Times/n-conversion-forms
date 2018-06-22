@@ -1,5 +1,9 @@
 const { expect } = require('chai');
-const { fetchPartial, shouldBeRequired } = require('../helpers');
+const {
+	fetchPartial,
+	shouldBeRequired,
+	shouldError
+} = require('../helpers');
 
 let context = {};
 
@@ -34,4 +38,6 @@ describe('field/password-field template', () => {
 	it('should be required by default', () => {
 		shouldBeRequired(context.template, 'input');
 	});
+
+	shouldError(context);
 });
