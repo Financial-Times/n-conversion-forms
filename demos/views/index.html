@@ -13,14 +13,9 @@
 	<div class="o-techdocs-layout">
 		<div class="o-techdocs-sidebar">
 			<ul class="o-techdocs-nav">
-				{{#each types}}
+				{{#each partials}}
 				<li>
 					<a href="#{{name}}">{{name}}</a>
-					<ul class="o-techdocs-nav o-techdocs-nav--sub">
-					{{#each partials}}
-						<li><a href="#{{name}}">{{name}}</a></li>
-					{{/each}}
-					</ul>
 				</li>
 				{{/each}}
 			</ul>
@@ -29,19 +24,14 @@
 		<div class="o-techdocs-main">
 			<div class="o-techdocs-content">
 				<h1>Demos</h1>
-				{{#each types }}
-				<div class="demo__type">
+				{{#each partials }}
+				<div class="demo__partial">
 					<h2 id={{name}}>{{name}}</h2>
-					{{#each partials }}
-					<div class="demo__partial">
-						<h3 id={{name}}>{{name}}</h3>
-						<div class="o-techdocs-card">
-							<div class="o-techdocs-card__content">
-								<iframe class="demo__iframe" src="/partial/{{name}}"></iframe>
-							</div>
+					<div class="o-techdocs-card">
+						<div class="o-techdocs-card__content">
+							<iframe class="demo__iframe" src="/partial/{{name}}"></iframe>
 						</div>
 					</div>
-					{{/each}}
 				</div>
 				{{/each}}
 			</div>

@@ -7,9 +7,9 @@ const {
 
 let context = {};
 
-describe('field/firstname template', () => {
+describe('firstname template', () => {
 	before(async () => {
-		context.template = await fetchPartial('field/firstname.html');
+		context.template = await fetchPartial('firstname.html');
 	});
 
 	shouldPopulateValue(context);

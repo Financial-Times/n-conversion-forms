@@ -8,9 +8,9 @@ const {
 
 let context = {};
 
-describe('field/responsibility template', () => {
+describe('position template', () => {
 	before(async () => {
-		context.template = await fetchPartial('field/responsibility.html');
+		context.template = await fetchPartial('position.html');
 	});
 
 	shouldPopulateOptions(context);

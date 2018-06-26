@@ -12,9 +12,9 @@ const offer = {
 	isPrintProduct: false
 };
 
-describe('field/accept-terms template', () => {
+describe('accept-terms template', () => {
 	before(async () => {
-		context.template = await fetchPartial('field/accept-terms.html');
+		context.template = await fetchPartial('accept-terms.html');
 	});
 
 	it('should be 16 age restriction by default', () => {

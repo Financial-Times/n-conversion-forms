@@ -10,9 +10,9 @@ const {
 
 let context = {};
 
-describe('field/email template', () => {
+describe('email template', () => {
 	before(async () => {
-		context.template = await fetchPartial('field/email.html');
+		context.template = await fetchPartial('email.html');
 	});
 
 	shouldPopulateValue(context);

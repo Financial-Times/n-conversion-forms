@@ -7,9 +7,9 @@ const {
 
 let context = {};
 
-describe('field/password-field template', () => {
+describe('password template', () => {
 	before(async () => {
-		context.template = await fetchPartial('field/password.html');
+		context.template = await fetchPartial('password.html');
 	});
 
 	it('should never have a value', () => {

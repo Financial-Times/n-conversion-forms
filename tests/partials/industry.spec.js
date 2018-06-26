@@ -1,16 +1,16 @@
 const {
 	fetchPartial,
+	shouldBeRequired,
 	shouldPopulateOptions,
 	shouldSelectOption,
-	shouldBeRequired,
 	shouldError
 } = require('../helpers');
 
 let context = {};
 
-describe('field/country template', () => {
+describe('industry template', () => {
 	before(async () => {
-		context.template = await fetchPartial('field/country.html');
+		context.template = await fetchPartial('industry.html');
 	});
 
 	shouldPopulateOptions(context);

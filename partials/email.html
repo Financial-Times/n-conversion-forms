@@ -7,7 +7,7 @@
 		{{/description}}
 	</small>
 
-	<input type="email" id="email" name="email" value="{{value}}" placeholder="Enter your email address" class="no-mouseflow o-forms__text  js-field__input js-item__value" data-trackable="field-email" aria-describedby="email-description" aria-required="true" required{{#if disabled}} disabled{{/if}}>
+	<input type="email" id="email" name="email" value="{{value}}" placeholder="Enter your email address" class="no-mouseflow o-forms__text js-field__input js-item__value{{#if readonly}} o-forms__field-disabled{{/if}}" data-trackable="field-email" aria-describedby="email-description" aria-required="true" required{{#if disabled}} disabled{{/if}}>
 
 	<div class="o-forms__errortext">This email address is not valid</div>
 

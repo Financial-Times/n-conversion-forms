@@ -29,12 +29,12 @@ app.get('/', (req, res) => {
 		layout: 'vanilla',
 		title: 'Demo',
 		data: data,
-		types: fetchTypesAndPartials(PARIALS_DIR)
+		partials: fetchPartials(PARIALS_DIR)
 	});
 });
 
-app.get('/partial/:type/:name', (req, res) => {
-	const partial = `${req.params.type}/${req.params.name}`;
+app.get('/partial/:name', (req, res) => {
+	const partial = `${req.params.name}`;
 	const template = compilePartial(partial, req.query);
 	res.send(template(data));
 });
@@ -67,15 +67,9 @@ function runPa11yTests () {
 	});
 }
 
-function fetchTypesAndPartials (dir) {
-	const types = fs.readdirSync(dir);
-	return types.map(type => {
-		const partials = fs.readdirSync(dir + '/' + type);
-		return {
-			name: type,
-			partials: partials.map(partial => ({name: `${type}/${partial.replace('.html', '')}`}))
-		};
-	});
+function fetchPartials (dir) {
+	const partials = fs.readdirSync(dir);
+	return partials.map(partial => ({name: `${partial.replace('.html', '')}`}));
 }
 
 function compilePartial (partial, options) {
