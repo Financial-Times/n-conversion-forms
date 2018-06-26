@@ -1,6 +1,7 @@
 @import 'o-normalise/main';
 @import 'o-typography/main';
 @import 'o-forms/main';
+@import 'o-buttons/main';
 
 @include oFormsBaseFeatures();
 @include oFormsRadioCheckboxFeatures();
@@ -23,12 +24,15 @@
 
 	&__header {
 		@include oTypographyProductHeadingLevel5;
-		> * {
-			margin-top: 10px;
-		}
 	}
 
 	&__link--external {
 		@include oTypographyLinkExternal;
+	}
+
+	&__submit {
+		@include oButtons;
+		@include oButtonsSize('big');
+		@include oButtonsTheme('primary');
 	}
 }

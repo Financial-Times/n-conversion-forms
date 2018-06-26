@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "o-forms": "^5.7.2",
-    "n-ui-foundations": "^3.0.1"
+    "n-ui-foundations": "^3.0.1",
+    "o-buttons": "^5.12.0"
   }
 }
