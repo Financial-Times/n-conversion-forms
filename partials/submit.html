@@ -1,3 +1,9 @@
-<div class="o-forms o-forms--wide ncf__field">
+<div class="o-forms o-forms--wide ncf__field{{#if isCentered}} ncf__field--center{{/if}}">
+
 	<button class="ncf__submit" data-trackable="submit" type="submit">{{#if label}}{{label}}{{else}}Continue{{/if}}</button>
+
+	{{#if description}}
+	<p class="ncf__submit-description">{{description}}</p>
+	{{/if}}
+
 </div>

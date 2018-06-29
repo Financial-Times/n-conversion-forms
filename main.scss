@@ -7,6 +7,7 @@
 @include oFormsRadioCheckboxFeatures();
 @include oFormsSuffixFeature();
 @include oFormsWideFeature();
+@include oFormsSectionFeature();
 
 // Custom styles
 .ncf {
@@ -16,6 +17,12 @@
 		padding: 0;
 		margin: 0;
 		border: 0;
+	}
+
+	&__field {
+		&--center {
+			text-align: center;
+		}
 	}
 
 	&__terms {
@@ -35,6 +42,10 @@
 		@include oButtons;
 		@include oButtonsSize('big');
 		@include oButtonsTheme('primary');
+
+		&-description {
+			margin-top: 5px;
+		}
 	}
 
 	// Override o-forms padding set at certain screen sizes

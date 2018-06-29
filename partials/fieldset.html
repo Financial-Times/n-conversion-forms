@@ -1,9 +1,11 @@
 <fieldset {{#if name}}name="{{name}}" {{/if}}class="ncf__fieldset">
 
 	{{#if legend}}
-	<legend class="ncf__header">{{legend}}</legend>
+	<legend class="o-forms__label">{{legend}}</legend>
 	{{/if}}
 
-	{{> fields }}
+	<div class="o-forms__group">
+		{{> fields }}
+	</div>
 
 </fieldset>

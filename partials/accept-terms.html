@@ -1,12 +1,18 @@
 <div id="acceptTermsField" class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}" data-ui-item="multi" data-ui-item-name="acceptTerms" data-validate="required,checked" {{#if isSignup}}data-trackable="sign-up-terms"{{/if}}{{#if isRegister}}data-trackable="register-up-terms"{{/if}}>
 
-	<input type="checkbox" id="termsAcceptance" name="termsAcceptance" value="true" class="o-forms__checkbox js-item__value js-field__input" data-trackable="field-terms" aria-required="true" required>
+	<input type="checkbox" id="termsAcceptance" name="termsAcceptance" value="true" class="o-forms__checkbox js-item__value js-field__input" data-trackable="field-terms" aria-required="true" required {{#if isChecked}}checked{{/if}}>
 
 	<label for="termsAcceptance" class="o-forms__label ncf__terms">
+		{{#if isB2b }}
+		<p id="terms-b2b">
+			By submitting this form, you indicate your consent to also being contacted by Financial Times by email, post, or phone about our other products, services or special offers unless you untick this box.
+		</p>
+		{{else}}
 		<p id="terms-default">
 			I confirm I am {{#if offer.ageRestriction}}{{offer.ageRestriction}}{{else}}16{{/if}} years or older and have read and agree to the
 			<a class="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}" rel="noopener" data-trackable="terms-and-conditions">Terms &amp; Conditions</a>
 		</p>
+		{{/if}}
 
 		{{#if isSignup}}
 			{{#if offer.isPrintProduct}}

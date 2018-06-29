@@ -51,6 +51,7 @@ describe('accept-terms template', () => {
 			expect($('label p#terms-signup').length).to.equal(0);
 			expect($('label p#terms-cancellation').length).to.equal(0);
 			expect($('label p#terms-special').length).to.equal(0);
+			expect($('label p#terms-b2b').length).to.equal(0);
 		});
 	});
 
@@ -72,6 +73,7 @@ describe('accept-terms template', () => {
 			expect($('label p#terms-signup').length).to.equal(0);
 			expect($('label p#terms-cancellation').length).to.equal(0);
 			expect($('label p#terms-special').length).to.equal(0);
+			expect($('label p#terms-b2b').length).to.equal(0);
 		});
 	});
 
@@ -95,6 +97,7 @@ describe('accept-terms template', () => {
 			expect($('label p#terms-signup').length).to.equal(1);
 			expect($('label p#terms-cancellation').length).to.equal(1);
 			expect($('label p#terms-special').length).to.equal(0);
+			expect($('label p#terms-b2b').length).to.equal(0);
 		});
 
 		it('should have print related copy if a print product', () => {
@@ -106,6 +109,7 @@ describe('accept-terms template', () => {
 			expect($('label p#terms-signup').length).to.equal(0);
 			expect($('label p#terms-cancellation').length).to.equal(1);
 			expect($('label p#terms-special').length).to.equal(0);
+			expect($('label p#terms-b2b').length).to.equal(0);
 		});
 
 		it('should have special offer terms copy if supplied', () => {
@@ -118,6 +122,24 @@ describe('accept-terms template', () => {
 			expect($('label p#terms-signup').length).to.equal(1);
 			expect($('label p#terms-cancellation').length).to.equal(1);
 			expect($('label p#terms-special').length).to.equal(1);
+			expect($('label p#terms-b2b').length).to.equal(0);
+		});
+	});
+
+	describe('b2b', () => {
+		const params = {
+			isB2b: true
+		};
+
+		it('should have just the b2b terms', () => {
+			const $ = context.template(params);
+
+			expect($('label p#terms-default').length).to.equal(0);
+			expect($('label p#terms-print').length).to.equal(0);
+			expect($('label p#terms-signup').length).to.equal(0);
+			expect($('label p#terms-cancellation').length).to.equal(0);
+			expect($('label p#terms-special').length).to.equal(0);
+			expect($('label p#terms-b2b').length).to.equal(1);
 		});
 	});
 
@@ -131,6 +153,14 @@ describe('accept-terms template', () => {
 		const $ = context.template({});
 
 		expect($('input').attr('checked')).to.be.undefined;
+	});
+
+	it('should be checked if set', () => {
+		const $ = context.template({
+			isChecked: true
+		});
+
+		expect($('input').attr('checked')).to.equal('checked');
 	});
 
 	it('should have link targets of _blank', () => {
