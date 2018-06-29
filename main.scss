@@ -6,8 +6,8 @@
 @include oFormsBaseFeatures();
 @include oFormsRadioCheckboxFeatures();
 @include oFormsSuffixFeature();
-@include oFormsWideFeature();
 @include oFormsSectionFeature();
+@include oFormsWideFeature();
 
 // Custom styles
 .ncf {
