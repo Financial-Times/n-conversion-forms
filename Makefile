@@ -4,20 +4,17 @@ node_modules/@financial-times/n-gage/index.mk:
 
 -include node_modules/@financial-times/n-gage/index.mk
 
-demo-build:
+build:
 	webpack --config demos/webpack.config.js
 	node-sass demos/main.scss public/main.css --include-path bower_components
 	node-sass main.scss public/component.css --include-path bower_components
 	postcss public/component.css -u autoprefixer -r
 	@$(DONE)
 
-demo: demo-build
+run: build
 	@DEMO_MODE=true nodemon --ext html,css --watch public --watch views demos/app.js
 
-run:
-	@DEMO_MODE=true node demos/app
-
-a11y: demo-build
+a11y: build
 	@PA11Y=true node demos/app
 	@$(DONE)
 
