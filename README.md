@@ -48,6 +48,5 @@ The styles can be used by including the `main.scss` file within your own SASS fi
 To contribute to this project, clone this repository locally and commit your code to a seperate branch. Please write unit tests for your code and run the linter before opening a pull-request.
 
 ```bash
-make test # unit tests
-make verify # linter
+make test # runs linter and unit tests
 ```
