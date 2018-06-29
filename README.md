@@ -6,7 +6,7 @@ Contains HTML and CSS that's used within the conversion forms
 
 ```bash
 make install # install all dependencies
-make run # start documentation app at http://local.ft.com:5005/
+make run # build and start documentation app at http://local.ft.com:5005/
 ```
 
 ## Table of contents
