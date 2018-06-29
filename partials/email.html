@@ -1,10 +1,12 @@
 <div id="emailField" class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}" data-validate="required,email">
 
-	<label for="email" class="o-forms__label">Email address</label>
+	<label for="email" class="o-forms__label">{{#if label}}{{label}}{{else}}Email address{{/if}}</label>
 	<small id="email-description" class="o-forms__additional-info">
-		{{#> description}}
+		{{#if description}}
+		{{description}}
+		{{else}}
 		Please enter an email address
-		{{/description}}
+		{{/if}}
 	</small>
 
 	<input type="email" id="email" name="email" value="{{value}}" placeholder="Enter your email address" class="no-mouseflow o-forms__text js-field__input js-item__value{{#if readonly}} o-forms__field-disabled{{/if}}" data-trackable="field-email" aria-describedby="email-description" aria-required="true" required{{#if disabled}} disabled{{/if}}>

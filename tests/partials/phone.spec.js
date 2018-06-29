@@ -23,5 +23,21 @@ describe('phone template', () => {
 		expect($('input').attr('type')).to.equal('tel');
 	});
 
+	it('should have a default label', () => {
+		const label = 'Phone number';
+		const $ = context.template({});
+
+		expect($('label').text().trim()).to.equal(label);
+	});
+
+	it('should be able to over write the description', () => {
+		const label = 'This is a test label';
+		const $ = context.template({
+			label
+		});
+
+		expect($('label').text().trim()).to.equal(label);
+	});
+
 	shouldError(context);
 });

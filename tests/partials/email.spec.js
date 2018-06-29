@@ -1,8 +1,6 @@
 const { expect } = require('chai');
 const {
 	fetchPartial,
-	registerPartial,
-	unregisterPartial,
 	shouldBeRequired,
 	shouldPopulateValue,
 	shouldError
@@ -31,6 +29,22 @@ describe('email template', () => {
 		expect($('input').attr('disabled')).to.equal('disabled');
 	});
 
+	it('should have a default label', () => {
+		const label = 'Email address';
+		const $ = context.template({});
+
+		expect($('label').text().trim()).to.equal(label);
+	});
+
+	it('should be able to over write the description', () => {
+		const label = 'This is a test label';
+		const $ = context.template({
+			label
+		});
+
+		expect($('label').text().trim()).to.equal(label);
+	});
+
 	it('should have a default description', () => {
 		const description = 'Please enter an email address';
 		const $ = context.template({});
@@ -40,16 +54,9 @@ describe('email template', () => {
 
 	it('should be able to over write the description', () => {
 		const description = 'This is a test description';
-
-		// As it sets an inline parial for the description register it before templating
-		registerPartial('description', description);
-
 		const $ = context.template({
 			description
 		});
-
-		// Clean up this partial so it does no further damage
-		unregisterPartial('description');
 
 		expect($('#email-description').text().trim()).to.equal(description);
 	});
