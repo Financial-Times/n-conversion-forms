@@ -30,10 +30,10 @@ describe('phone template', () => {
 		expect($('label').text().trim()).to.equal(label);
 	});
 
-	it('should be able to over write the description', () => {
-		const label = 'This is a test label';
+	it('should have the b2b label if isB2b is set', () => {
+		const label = 'Work phone number';
 		const $ = context.template({
-			label
+			isB2b: true
 		});
 
 		expect($('label').text().trim()).to.equal(label);

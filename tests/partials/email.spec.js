@@ -36,10 +36,10 @@ describe('email template', () => {
 		expect($('label').text().trim()).to.equal(label);
 	});
 
-	it('should be able to over write the description', () => {
-		const label = 'This is a test label';
+	it('should have the b2b label if isB2b set', () => {
+		const label = 'Work email address';
 		const $ = context.template({
-			label
+			isB2b: true
 		});
 
 		expect($('label').text().trim()).to.equal(label);

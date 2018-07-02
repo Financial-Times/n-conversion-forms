@@ -1,6 +1,12 @@
 <div id="emailField" class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}" data-validate="required,email">
 
-	<label for="email" class="o-forms__label">{{#if label}}{{label}}{{else}}Email address{{/if}}</label>
+	<label for="email" class="o-forms__label">
+		{{#if isB2b}}
+		Work email address
+		{{else}}
+		Email address
+		{{/if}}
+	</label>
 	<small id="email-description" class="o-forms__additional-info">
 		{{#if description}}
 		{{description}}
