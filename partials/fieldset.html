@@ -1,7 +1,7 @@
 <fieldset {{#if name}}name="{{name}}" {{/if}}class="ncf__fieldset">
 
 	{{#if legend}}
-	<legend class="o-forms__label">{{legend}}</legend>
+	<legend class="o-forms__label{{#if hideLegend}} o-normalise-visually-hidden{{/if}}">{{legend}}</legend>
 	{{/if}}
 
 	<div class="o-forms__group">

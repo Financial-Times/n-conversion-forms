@@ -23,6 +23,11 @@
 		&--center {
 			text-align: center;
 		}
+
+		&--flex {
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 
 	&__terms {
@@ -38,10 +43,13 @@
 		@include oTypographyLinkExternal;
 	}
 
-	&__submit {
+	&__button {
 		@include oButtons;
 		@include oButtonsSize('big');
-		@include oButtonsTheme('primary');
+
+		&--submit {
+			@include oButtonsTheme('primary');
+		}
 	}
 
 	// Override o-forms padding set at certain screen sizes

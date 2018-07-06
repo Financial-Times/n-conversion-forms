@@ -14,6 +14,12 @@
 		</p>
 		{{/if}}
 
+		{{#if isCorpSignup}}
+		<p id="terms-corp-signup">Your organisation’s administrator(s) may view basic usage and profile data about your account and have the ability to set up myFT topic follows on your behalf.</p>
+		<p id="terms-corp-signup">Basic usage and profile data about your account can include; for example, your job title and profile information, the date you last visited, volume of content consumed, etc.</p>
+		<p id="terms-corp-signup">myFT topics may be selected on your behalf by your company administrator or FT representative for you to follow. You can unfollow these topics or unsubscribe from the myFT digest through the Contact preferences section on myFT.</p>
+		{{/if}}
+
 		{{#if isSignup}}
 			{{#if offer.isPrintProduct}}
 		<p id="terms-print">Savings quoted based on Financial Times’ weekly cover price and FT.com’s equivalent weekly price where applicable. Offer open to new individual customers only and is only available in the UK. Only 1 subscription available per customer. Subscriptions are non-refundable and cannot be transferred or resold. Credit for suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription term (4 issues per yearly FT Weekend subscription term). Vouchers to redeem subscriptions may not be purchased by retailers of the Financial Times. Your subscription lasts for <span class="tc-term">{{requestedTerm}}</span>. To give you uninterrupted access we will automatically renew it using the payment method you provided, unless you cancel before your renewal date.</p>
