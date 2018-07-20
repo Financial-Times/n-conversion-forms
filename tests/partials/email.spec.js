@@ -21,7 +21,7 @@ describe('email template', () => {
 		expect($('input').attr('disabled')).to.be.undefined;
 	});
 
-	it('should be enabled by default', () => {
+	it('should be disabled if the option passed', () => {
 		const $ = context.template({
 			disabled: true
 		});
