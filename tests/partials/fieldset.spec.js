@@ -6,6 +6,7 @@ const {
 } = require('../helpers');
 
 const CLASS_VISUALLY_HIDDEN = 'o-normalise-visually-hidden';
+const CLASS_HEADER = 'ncf__header';
 const SELECTOR_LEGEND = 'legend';
 const SELECTOR_FIELDSET = 'fieldset';
 const TEST_LEGEND = 'testing';
@@ -54,13 +55,30 @@ describe('fieldset template', () => {
 		expect($(SELECTOR_LEGEND).attr('class')).to.not.contain(CLASS_VISUALLY_HIDDEN);
 	});
 
-	it('should visually display legend by default', () => {
+	it('should visually hide legend when "hideLegend" passed', () => {
 		const $ = context.template({
 			legend: TEST_LEGEND,
 			hideLegend: true
 		});
 
 		expect($(SELECTOR_LEGEND).attr('class')).to.contain(CLASS_VISUALLY_HIDDEN);
+	});
+
+	it('should not have heading class by default', () => {
+		const $ = context.template({
+			legend: TEST_LEGEND
+		});
+
+		expect($(SELECTOR_LEGEND).attr('class')).to.not.contain(CLASS_HEADER);
+	});
+
+	it('should add heaing class when "isHeader" is passed', () => {
+		const $ = context.template({
+			legend: TEST_LEGEND,
+			isHeader: true
+		});
+
+		expect($(SELECTOR_LEGEND).attr('class')).to.contain(CLASS_HEADER);
 	});
 
 	it('should have feilds inner partial', () => {
