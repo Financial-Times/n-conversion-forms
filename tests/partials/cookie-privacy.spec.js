@@ -11,6 +11,6 @@ describe('cookie-privacy template', () => {
 	it('should be compiled', () => {
 		const $ = context.template({});
 
-		expect($('#cookie-privacy').length).to.be(1);
+		expect($('#cookie-privacy').length).to.equal(1);
 	});
 });
