@@ -12,7 +12,7 @@ const SELECTOR_SPECIAL_TERMS = 'label p#terms-special';
 const SELECTOR_B2B_TERMS = 'label p#terms-b2b';
 const SELECTOR_CORP_TERMS = 'label p#terms-corp';
 const SELECTOR_ACCEPT_TERMS_FIELD = '#acceptTermsField';
-const SELECTOR_USA_TERMS = 'label p#terms-usa';
+const SELECTOR_EXTENDED_TERMS = 'label p#terms-extended';
 const SELECTOR_CHECKBOX = 'input';
 const SELECTOR_ANCHOR = 'a';
 
@@ -104,10 +104,10 @@ describe('accept-terms template', () => {
 			expectTerms($, {standard:1, cancellation:1, print:1});
 		});
 
-		it('should only show the USA terms when isUsa set', () => {
-			const $ = context.template({...params, offer: {...offer}, isUsa: true});
+		it('should only show the extended terms when isExtendedTerms set', () => {
+			const $ = context.template({...params, offer: {...offer}, isExtendedTerms: true});
 
-			expectTerms($, {standard:1, cancellation:1, usa:2});
+			expectTerms($, {standard:1, cancellation:1, extended:2});
 		});
 
 		it('should have special offer terms copy if supplied', () => {
@@ -162,7 +162,7 @@ describe('accept-terms template', () => {
 	shouldError(context);
 });
 
-function expectTerms ($, { standard=0, print=0, signup=0, cancellation=0, special=0, b2b=0, corp=0, usa=0 }) {
+function expectTerms ($, { standard=0, print=0, signup=0, cancellation=0, special=0, b2b=0, corp=0, extended=0 }) {
 	expect($(SELECTOR_STANDARD_TERMS).length).to.equal(standard);
 	expect($(SELECTOR_PRINT_TERMS).length).to.equal(print);
 	expect($(SELECTOR_SIGNUP_TERMS).length).to.equal(signup);
@@ -170,5 +170,5 @@ function expectTerms ($, { standard=0, print=0, signup=0, cancellation=0, specia
 	expect($(SELECTOR_SPECIAL_TERMS).length).to.equal(special);
 	expect($(SELECTOR_B2B_TERMS).length).to.equal(b2b);
 	expect($(SELECTOR_CORP_TERMS).length).to.equal(corp);
-	expect($(SELECTOR_USA_TERMS).length).to.equal(usa);
+	expect($(SELECTOR_EXTENDED_TERMS).length).to.equal(extended);
 }
