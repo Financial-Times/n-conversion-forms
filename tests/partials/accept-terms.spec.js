@@ -7,22 +7,14 @@ const {
 const SELECTOR_STANDARD_TERMS = 'label p#terms-default';
 const SELECTOR_PRINT_TERMS = 'label p#terms-print';
 const SELECTOR_SIGNUP_TERMS = 'label p#terms-signup';
-const SELECTOR_CANCELLATION_TERMS = 'label p#terms-cancellation';
 const SELECTOR_SPECIAL_TERMS = 'label p#terms-special';
 const SELECTOR_B2B_TERMS = 'label p#terms-b2b';
 const SELECTOR_CORP_TERMS = 'label p#terms-corp';
 const SELECTOR_ACCEPT_TERMS_FIELD = '#acceptTermsField';
-const SELECTOR_EXTENDED_TERMS = 'label p#terms-extended';
 const SELECTOR_CHECKBOX = 'input';
 const SELECTOR_ANCHOR = 'a';
 
 let context = {};
-const offer = {
-	ageRestriction: 18,
-	hasSpecialTerms: false,
-	specialTerms: '',
-	isPrintProduct: false
-};
 
 describe('accept-terms template', () => {
 	before(async () => {
@@ -37,10 +29,11 @@ describe('accept-terms template', () => {
 	});
 
 	it('should use the given restricted age in the copy', () => {
-		const ageRestrictionText = '18 years';
+		const ageRestriction = 18;
+		const ageRestrictionText = `${ageRestriction} years`;
 
 		const $ = context.template({
-			offer: offer
+			ageRestriction
 		});
 
 		expect($(SELECTOR_STANDARD_TERMS).text().trim()).to.contain(ageRestrictionText);
@@ -83,7 +76,7 @@ describe('accept-terms template', () => {
 	describe('signup', () => {
 		const params = {
 			isSignup: true,
-			offer: offer
+			isExtended: true, // @todo Remove once extended terms test has been completed
 		};
 
 		it('should use the signup data tracking if the isSignup is true', () => {
@@ -92,30 +85,30 @@ describe('accept-terms template', () => {
 			expect($(SELECTOR_ACCEPT_TERMS_FIELD).data('trackable')).to.equal('sign-up-terms');
 		});
 
-		it('should have default, signup, cancellation and marketing terms by default', () => {
+		it('should have default and signup terms by default', () => {
 			const $ = context.template(params);
 
-			expectTerms($, {standard:1, cancellation:1, signup:1});
+			expectTerms($, {standard:1, signup:2});
 		});
 
 		it('should have print related copy if a print product', () => {
-			const $ = context.template({...params, offer: {...offer, isPrintProduct: true}});
+			const $ = context.template({
+				...params,
+				isPrintProduct: true
+			});
 
-			expectTerms($, {standard:1, cancellation:1, print:1});
+			expectTerms($, {standard:1, print:2});
 		});
 
-		it('should only show the extended terms when isExtendedTerms set', () => {
-			const $ = context.template({...params, offer: {...offer}, isExtendedTerms: true});
-
-			expectTerms($, {standard:1, cancellation:1, extended:2});
-		});
-
-		it('should have special offer terms copy if supplied', () => {
-			const specialTerms = 'These are some special terms that an offer supplies';
-			const $ = context.template({...params, offer: {...offer, hasSpecialTerms: true, specialTerms: specialTerms}});
+		it('should have special terms copy if supplied', () => {
+			const specialTerms = 'These are some special terms can be supplied';
+			const $ = context.template({
+				...params,
+				specialTerms
+			});
 
 			expect($(SELECTOR_SPECIAL_TERMS).text().trim()).to.contain(specialTerms);
-			expectTerms($, {standard:1, cancellation:1, signup:1, special:1});
+			expectTerms($, {standard:1, signup:2, special:1});
 		});
 	});
 
@@ -162,13 +155,11 @@ describe('accept-terms template', () => {
 	shouldError(context);
 });
 
-function expectTerms ($, { standard=0, print=0, signup=0, cancellation=0, special=0, b2b=0, corp=0, extended=0 }) {
+function expectTerms ($, { standard=0, print=0, signup=0, special=0, b2b=0, corp=0 }) {
 	expect($(SELECTOR_STANDARD_TERMS).length).to.equal(standard);
 	expect($(SELECTOR_PRINT_TERMS).length).to.equal(print);
 	expect($(SELECTOR_SIGNUP_TERMS).length).to.equal(signup);
-	expect($(SELECTOR_CANCELLATION_TERMS).length).to.equal(cancellation);
 	expect($(SELECTOR_SPECIAL_TERMS).length).to.equal(special);
 	expect($(SELECTOR_B2B_TERMS).length).to.equal(b2b);
 	expect($(SELECTOR_CORP_TERMS).length).to.equal(corp);
-	expect($(SELECTOR_EXTENDED_TERMS).length).to.equal(extended);
 }
