@@ -2,6 +2,7 @@ const { expect } = require('chai');
 const { fetchPartial } = require('../helpers');
 
 const CLASS_ERROR = 'o-message--error';
+const CLASS_SUCCESS = 'o-message--success';
 const SELECTOR_MESSAGE = '.o-message__content-main';
 const SELECTOR_CONTAINER = '.o-message';
 
@@ -27,10 +28,11 @@ describe('message template', () => {
 		expect($(SELECTOR_MESSAGE).text()).to.equal(message);
 	});
 
-	it('should not have the error class if isError is not passed', () => {
+	it('should not have the error or success classes by default', () => {
 		const $ = context.template({});
 
 		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_ERROR);
+		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_SUCCESS);
 	});
 
 	it('should have the error class if isError passed', () => {
@@ -39,5 +41,15 @@ describe('message template', () => {
 		});
 
 		expect($(SELECTOR_CONTAINER).attr('class')).to.contain(CLASS_ERROR);
+		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_SUCCESS);
+	});
+
+	it('should have the error class if isError passed', () => {
+		const $ = context.template({
+			isSuccess: true
+		});
+
+		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_ERROR);
+		expect($(SELECTOR_CONTAINER).attr('class')).to.contain(CLASS_SUCCESS);
 	});
 });
