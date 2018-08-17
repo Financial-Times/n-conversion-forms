@@ -2,12 +2,14 @@
 @import 'o-typography/main';
 @import 'o-forms/main';
 @import 'o-buttons/main';
+@import 'o-message/main';
 
 @include oFormsBaseFeatures();
 @include oFormsRadioCheckboxFeatures();
 @include oFormsSuffixFeature();
 @include oFormsSectionFeature();
 @include oFormsWideFeature();
+@include oMessage($types: 'alert');
 
 // Custom styles
 .ncf {
