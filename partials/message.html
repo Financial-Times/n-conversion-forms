@@ -1,4 +1,4 @@
-<div class="o-forms o-forms--wide o-message o-message--alert{{#if isError}} o-message--error{{/if}}{{#if isSuccess}} o-message--success{{/if}}" data-o-component="o-message">
+<div class="o-forms o-forms--wide o-message o-message--alert{{#if isError}} o-message--error{{else if isSuccess}} o-message--success{{else}} o-message--neutral{{/if}}" data-o-component="o-message">
 	<div class="o-message__container">
 		<div class="o-message__content">
 			<p class="o-message__content-main">{{message}}</p>
