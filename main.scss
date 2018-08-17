@@ -50,6 +50,21 @@
 		&--submit {
 			@include oButtonsTheme('primary');
 		}
+
+		&--google {
+			@include oButtonsTheme('secondary');
+			background-color: oColorsGetPaletteColor('white');
+			padding-left: 40px;
+
+			&:before {
+				content: '';
+				background: transparent url('https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2FG_active_focused_pressed.svg?source=m-login&width=20&height=20&format=svg') no-repeat;
+				position: absolute;
+				left: 10px;
+				width: 18px;
+				height: 18px;
+			}
+		}
 	}
 
 	// Override o-forms padding set at certain screen sizes
