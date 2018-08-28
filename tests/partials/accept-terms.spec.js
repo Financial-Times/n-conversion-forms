@@ -88,7 +88,7 @@ describe('accept-terms template', () => {
 		it('should have default and signup terms by default', () => {
 			const $ = context.template(params);
 
-			expectTerms($, {standard:1, signup:2});
+			expectTerms($, {standard:1, signup:3});
 		});
 
 		it('should have print related copy if a print product', () => {
@@ -108,7 +108,7 @@ describe('accept-terms template', () => {
 			});
 
 			expect($(SELECTOR_SPECIAL_TERMS).text().trim()).to.contain(specialTerms);
-			expectTerms($, {standard:1, signup:2, special:1});
+			expectTerms($, {standard:1, signup:3, special:1});
 		});
 	});
 
