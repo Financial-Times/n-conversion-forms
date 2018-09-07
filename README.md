@@ -43,6 +43,14 @@ The styles can be used by including the `main.scss` file within your own SASS fi
 @import 'n-conversion-forms/main';
 ```
 
+### JS
+
+The utils can be used by including the individual file from within your own JS files.
+
+```js
+import MyModule from 'n-conversion-forms/utils/my-module';
+```
+
 ## Contributing
 
 To contribute to this project, clone this repository locally and commit your code to a seperate branch. Please write unit tests for your code and run the linter before opening a pull-request.
