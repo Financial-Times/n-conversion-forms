@@ -5,11 +5,11 @@ const {
 } = require('../helpers');
 
 const SELECTOR_STANDARD_TERMS = 'label p#terms-default';
-const SELECTOR_PRINT_TERMS = 'label p#terms-print';
-const SELECTOR_SIGNUP_TERMS = 'label p#terms-signup';
+const SELECTOR_PRINT_TERMS = 'label p.terms-print';
+const SELECTOR_SIGNUP_TERMS = 'label p.terms-signup';
 const SELECTOR_SPECIAL_TERMS = 'label p#terms-special';
 const SELECTOR_B2B_TERMS = 'label p#terms-b2b';
-const SELECTOR_CORP_TERMS = 'label p#terms-corp';
+const SELECTOR_CORP_TERMS = 'label p.terms-corp-signup';
 const SELECTOR_ACCEPT_TERMS_FIELD = '#acceptTermsField';
 const SELECTOR_CHECKBOX = 'input';
 const SELECTOR_ANCHOR = 'a';
@@ -120,7 +120,18 @@ describe('accept-terms template', () => {
 		it('should have just the b2b terms', () => {
 			const $ = context.template(params);
 
-			expectTerms($, {b2b:1});
+			expectTerms($, { b2b:1 });
+		});
+	});
+
+	describe('Corp Signup', () => {
+		const params = {
+			isCorpSignup: true
+		};
+
+		it('should have default and corp-signup terms', () => {
+			const $ = context.template(params);
+			expectTerms($, { standard: 1, corp: 3 });
 		});
 	});
 
