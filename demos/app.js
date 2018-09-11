@@ -35,8 +35,8 @@ app.get('/', (req, res) => {
 
 app.get('/partial/:name', (req, res) => {
 	const partial = `${req.params.name}`;
-	const template = compilePartial(partial, req.query);
-	res.send(template(data));
+	const template = compilePartial(partial);
+	res.send(template);
 });
 
 app.listen(PORT, () => {
@@ -72,20 +72,40 @@ function fetchPartials (dir) {
 	return partials.map(partial => ({name: `${partial.replace('.html', '')}`}));
 }
 
-function compilePartial (partial, options) {
-	const parameters = Object.keys(options).map(key => `${key}=${options[key]}`).join(' ');
+function compilePartial (partial) {
+	let parameters = '';
+	let exampleParams = '';
+	const partialData = data[partial];
+
+	if (partialData) {
+		parameters = Object.keys(partialData).map(key => {
+			if (typeof partialData[key] === 'string') {
+				exampleParams += ` ${key}="${partialData[key]}"`;
+			} else {
+				exampleParams += ` ${key}=${JSON.stringify(partialData[key])}`;
+			}
+
+			return `${key}=${key}`;
+		}).join(' ');
+	}
+
+	const template = `{{> ${partial} ${parameters} }}`;
+	const rendered = handlebars().compile(template)(partialData);
 	const html = `<!doctype html>
 <html>
 	<head>
 		<link rel="stylesheet" href="/public/component.css">
 	</head>
 	<body style="background-color:#fff1e5;">
+
 		<form class="ncf">
-			{{> ${partial} ${parameters} }}
+			${rendered}
 		</form>
+
+		${partialData ? `<p style="font-family: monospace;">{{> ${partial}${exampleParams} }}</p>` : ''}
 	</body>
 </html>
 	`;
 
-	return handlebars().compile(html);
+	return html;
 }

@@ -9,7 +9,7 @@
 @include oFormsSuffixFeature();
 @include oFormsSectionFeature();
 @include oFormsWideFeature();
-@include oMessage($types: 'alert');
+@include oMessage($types: ('alert', 'notice-bleed'), $status: ('error', 'inform', 'success'));
 
 // Custom styles
 .ncf {
@@ -53,6 +53,11 @@
 			@include oButtonsTheme('primary');
 		}
 
+		&--mono {
+			@include oButtonsSize('default');
+			@include oButtonsTheme('mono');
+		}
+
 		&--google {
 			@include oButtonsTheme('secondary');
 			background-color: oColorsGetPaletteColor('white');
@@ -66,6 +71,19 @@
 				width: 18px;
 				height: 18px;
 			}
+		}
+	}
+
+	&__package-change {
+		.o-message__content {
+			align-items: center;
+			display: flex;
+		}
+		.o-message__content-main {
+			flex: 1;
+		}
+		.o-message__actions {
+			padding-bottom: 0;
 		}
 	}
 

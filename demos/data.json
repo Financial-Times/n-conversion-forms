@@ -1,60 +1,64 @@
 {
-  "industries": [
-    {
-      "value": "ACC",
-      "label": "Accountancy & tax advisory"
-    },
-    {
-      "value": "DEF",
-      "label": "Aerospace & defence"
-    },
-    {
-      "value": "CAR",
-      "label": "Automobiles"
-    }
-  ],
-  "positions": [
-    {
-      "value": "AN",
-      "label": "Analyst"
-    },
-    {
-      "value": "AS",
-      "label": "Associate"
-    },
-    {
-      "value": "BR",
-      "label": "Broker/Trader/Advisor"
-    }
-  ],
-  "responsibilities": [
-    {
-      "value": "FIN",
-      "label": "Accounting/finance"
-    },
-    {
-      "value": "ADL",
-      "label": "Administration"
-    },
-    {
-      "value": "RES",
-      "label": "Broker/trader"
-    }
-  ],
-  "countries": [
-    {
+  "industry": {
+    "options": [{
+        "value": "ACC",
+        "label": "Accountancy & tax advisory"
+      }, {
+        "value": "DEF",
+        "label": "Aerospace & defence"
+      }, {
+        "value": "CAR",
+        "label": "Automobiles"
+      }
+    ]},
+  "position": {
+    "options": [{
+        "value": "AN",
+        "label": "Analyst"
+      }, {
+        "value": "AS",
+        "label": "Associate"
+      }, {
+        "value": "BR",
+        "label": "Broker/Trader/Advisor"
+      }
+    ]},
+  "responsibility": {
+    "options": [{
+        "value": "FIN",
+        "label": "Accounting/finance"
+      }, {
+        "value": "ADL",
+        "label": "Administration"
+      }, {
+        "value": "RES",
+        "label": "Broker/trader"
+      }
+    ]},
+  "country": {
+    "options": [{
       "value": "ABW",
       "label": "Aruba"
-    },
-    {
+    }, {
       "value": "AFG",
       "label": "Afghanistan"
-    },
-    {
+    }, {
       "value": "AGO",
       "label": "Angola"
-    }
-  ],
-  "isError": true,
-  "message": "The quick brown fox jumped over the lazy hare!"
+    }]
+  },
+  "message": {
+    "isError": true,
+    "message": "The quick brown fox jumped over the lazy dog!"
+  },
+  "package-change": {
+    "action": "/foo",
+    "currentPackage": "Digital",
+    "currentPrice": "£5.60 per week",
+    "class": "extra-css-classes-here space-separated",
+    "formInfo": [{
+      "name": "foo",
+      "value": "bar"
+    }]
+  }
 }

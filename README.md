@@ -58,3 +58,7 @@ To contribute to this project, clone this repository locally and commit your cod
 ```bash
 make test # runs linter and unit tests
 ```
+
+### Passing data to the demo components
+
+Add any component properties under the key of the template you're adding/working on to [demos/data.json].
