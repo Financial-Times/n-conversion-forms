@@ -75,17 +75,7 @@
 	}
 
 	&__package-change {
-		&__content {
-			align-items: center;
-			display: flex;
-		}
-		&__message {
-			flex: 1;
-		}
-		// Note: Need to do this to get around specificity issues.
-		& &__actions {
-			padding-bottom: 0;
-		}
+		text-align: center;
 	}
 
 	// Override o-forms padding set at certain screen sizes

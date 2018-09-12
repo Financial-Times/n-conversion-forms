@@ -25,8 +25,8 @@ describe('package-change template', () => {
 		};
 		const $ = context.template(data);
 
-		expect($('.ncf__package-change__message').text()).to.contain(data.currentPackage);
-		expect($('.ncf__package-change__message').text()).to.contain(data.currentPrice);
+		expect($('.ncf__package-change').text()).to.contain(data.currentPackage);
+		expect($('.ncf__package-change').text()).to.contain(data.currentPrice);
 	});
 
 	it('should display package name and price when passed', () => {

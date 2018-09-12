@@ -1,8 +1,8 @@
 <div class="ncf__package-change o-message o-message--notice-bleed o-message--inform{{#if class}} {{class}}{{/if}}" data-o-component="o-message">
 	<div class="o-message__container">
-		<div class="o-message__content ncf__package-change__content">
-			<p class="o-message__content-main ncf__package-change__message">You have chosen <strong>{{currentPackage}}</strong> {{currentPrice}}</p>
-			<div class="o-message__actions ncf__package-change__actions">
+		<div class="o-message__content">
+			<p class="o-message__content-main">You have chosen <strong>{{currentPackage}}</strong> {{currentPrice}}</p>
+			<div class="o-message__actions">
 				<form action="{{changePackageUrl}}">
 					{{#each formData}}<input type="hidden" name="{{name}}" value="{{value}}" />{{/each}}
 					<button class="ncf__button ncf__button--mono" data-trackable="change" type="submit">Change</button>
