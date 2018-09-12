@@ -56,7 +56,7 @@
     "currentPackage": "Digital",
     "currentPrice": "£5.60 per week",
     "class": "extra-css-classes-here space-separated",
-    "formInfo": [{
+    "formData": [{
       "name": "foo",
       "value": "bar"
     }]

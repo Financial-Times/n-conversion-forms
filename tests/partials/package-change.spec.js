@@ -31,7 +31,7 @@ describe('package-change template', () => {
 
 	it('should display package name and price when passed', () => {
 		const data = {
-			formInfo: [{
+			formData: [{
 				name: 'foo',
 				value: 'bar'
 			}]
