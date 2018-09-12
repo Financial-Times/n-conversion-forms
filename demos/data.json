@@ -52,7 +52,7 @@
     "message": "The quick brown fox jumped over the lazy dog!"
   },
   "package-change": {
-    "action": "/foo",
+    "changePackageUrl": "/foo",
     "currentPackage": "Digital",
     "currentPrice": "£5.60 per week",
     "class": "extra-css-classes-here space-separated",

@@ -11,7 +11,7 @@ describe('package-change template', () => {
 	});
 
 	it('should set the form up correctly', () => {
-		const data = { 'action': '/foo' };
+		const data = { changePackageUrl: '/foo' };
 		const $ = context.template(data);
 
 		expect($('form').attr('action')).to.equal('/foo');
