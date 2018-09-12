@@ -75,14 +75,15 @@
 	}
 
 	&__package-change {
-		.o-message__content {
+		&__content {
 			align-items: center;
 			display: flex;
 		}
-		.o-message__content-main {
+		&__message {
 			flex: 1;
 		}
-		.o-message__actions {
+		// Note: Need to do this to get around specificity issues.
+		& &__actions {
 			padding-bottom: 0;
 		}
 	}
