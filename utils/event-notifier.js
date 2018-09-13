@@ -16,6 +16,10 @@ module.exports = {
 			});
 		}
 
+		return {
+			notify: () => notifier({ [emitProperty]: watchedElement[watchedProperty] + buffer }, targetWindow)
+		};
+
 	}
 };
 
