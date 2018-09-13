@@ -102,7 +102,7 @@ function compilePartial (partial) {
 			${rendered}
 		</form>
 
-		${partialData ? `<p style="font-family: monospace;">{{> ${partial}${exampleParams} }}</p>` : ''}
+		<textarea style="width:100%" readonly>{{> ${partial}${exampleParams} }}</textarea>
 	</body>
 </html>
 	`;

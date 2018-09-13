@@ -60,5 +60,8 @@
       "name": "foo",
       "value": "bar"
     }]
+  },
+  "email": {
+    "showConfirm": true
   }
 }

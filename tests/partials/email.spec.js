@@ -70,4 +70,23 @@ describe('email template', () => {
 	});
 
 	shouldError(context);
+
+	it('should not show the confirm email by default', () => {
+		const $ = context.template({});
+
+		expect($('#emailConfirmField').length).to.equal(0);
+	});
+
+	it('should show the confirm email if asked', () => {
+		const $ = context.template({
+			showConfirm: true
+		});
+
+		expect($('#emailConfirmField').length).to.equal(1);
+	});
+
+	shouldError(context, {
+		showConfirm: true,
+		hasConfirmError: true
+	});
 });

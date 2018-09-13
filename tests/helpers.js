@@ -146,7 +146,7 @@ const shouldContainPartials = function (context, partials) {
 	});
 };
 
-const shouldError = function (context) {
+const shouldError = function (context, errorParams = { hasError: true }) {
 	it('should not have error class by default', () => {
 		const $ = context.template({});
 
@@ -154,9 +154,7 @@ const shouldError = function (context) {
 	});
 
 	it('should have error class if hasError is passed', () => {
-		const $ = context.template({
-			hasError: true
-		});
+		const $ = context.template(errorParams);
 
 		expect($(`.${ERROR_CLASS}`).length).to.equal(1);
 	});
