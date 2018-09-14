@@ -1,0 +1,12 @@
+<div class="ncf__progress">
+	{{#each items}}
+		<form class="ncf__progress__form ncf__progress__form--{{status}}" method="POST" action="{{url}}">
+			{{#each ../formData}}<input type="hidden" name="{{name}}" value="{{value}}" />{{/each}}
+
+			<button class="ncf__progress__button" data-trackable="submit" type="submit">
+				<i class="ncf__progress__icon"></i>
+				<span class="ncf__progress__label">{{name}}</span>
+			</button>
+		</form>
+	{{/each}}
+</div>

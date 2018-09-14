@@ -63,5 +63,28 @@
   },
   "email": {
     "showConfirm": true
+  },
+  "progress-indicator": {
+    "formData": [{
+      "name": "foo",
+      "value": "bar"
+    }],
+    "items": [{
+      "name": "Details",
+      "status": "complete",
+      "url": "#details"
+    }, {
+      "name": "Preferences",
+      "status": "complete",
+      "url": "#preferences"
+    }, {
+      "name": "Print",
+      "status": "current",
+      "url": "#print"
+    }, {
+      "name": "Payment",
+      "status": "new",
+      "url": "#payment"
+    }]
   }
 }

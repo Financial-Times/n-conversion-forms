@@ -98,9 +98,7 @@ function compilePartial (partial) {
 	</head>
 	<body style="background-color:#fff1e5;">
 
-		<form class="ncf">
-			${rendered}
-		</form>
+		${rendered}
 
 		<textarea style="width:100%" readonly>{{> ${partial}${exampleParams} }}</textarea>
 	</body>

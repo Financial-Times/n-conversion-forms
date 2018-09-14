@@ -1,8 +1,10 @@
+@import 'o-colors/main';
 @import 'o-normalise/main';
 @import 'o-typography/main';
 @import 'o-forms/main';
 @import 'o-buttons/main';
 @import 'o-message/main';
+@import "o-icons/main";
 
 @include oFormsBaseFeatures();
 @include oFormsRadioCheckboxFeatures();
@@ -34,7 +36,7 @@
 
 	&__terms {
 		@include oTypographySans($scale: 0);
-		color: getColor('black-80');
+		color: oColorsGetPaletteColor('black-80');
 	}
 
 	&__header {
@@ -76,6 +78,89 @@
 
 	&__package-change {
 		text-align: center;
+	}
+
+	// NOTE: This is going to mostly get replaced with the official origami version when it's ready.
+	&__progress {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+
+		&:before {
+			background: oColorsGetPaletteColor('black-40');
+			content: '';
+			display: block;
+			height: 2px;
+			left: 33px;
+			position: absolute;
+			top: 20px;
+			width: calc(100% - 70px);
+		}
+
+		&__button {
+			border: none;
+			background: none;
+			position: relative;
+		}
+
+		&__icon {
+			background: oColorsGetPaletteColor('paper');
+			border: 2px solid oColorsGetPaletteColor('black-40');
+			border-radius: 9999px;
+			cursor: pointer;
+			display: block;
+			height: 20px;
+			margin: 0 auto;
+			width: 20px;
+		}
+
+		&__label {
+			@include oTypographySans($scale: -1);
+
+			display: inline-block;
+			margin-top: 10px;
+		}
+
+		&__form {
+			position: relative;
+
+			&--current {
+				.ncf__progress__icon {
+					border-color: oColorsGetPaletteColor('black');
+					&:before {
+						background: oColorsGetPaletteColor('black');
+						border-radius: 9999px;
+						content: '';
+						display: block;
+						width: 14px;
+						height: 14px;
+						margin: 3px 0 0 3px;
+					}
+				}
+			}
+			&--complete {
+				.ncf__progress__icon {
+					background: oColorsGetPaletteColor('black');
+					border-color: oColorsGetPaletteColor('black');
+					&:before {
+						@include oIconsGetIcon('tick', oColorsGetPaletteColor('paper'), 20);
+						content: '';
+						color: oColorsGetPaletteColor('paper');
+					}
+				}
+				.ncf__progress__label {
+					position: relative;
+					text-decoration: underline;
+
+					&:after {
+						@include oIconsGetIcon('edit', oColorsGetPaletteColor('black'), 20);
+						content: '';
+						position: absolute;
+						top: -2px;
+					}
+				}
+			}
+		}
 	}
 
 	// Override o-forms padding set at certain screen sizes
