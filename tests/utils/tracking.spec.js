@@ -14,8 +14,8 @@ describe('Tracking', () => {
 		tracking = new Tracking(window, element);
 
 		sandbox = sinon.createSandbox();
-		sandbox.spy(tracking, 'dispatchEventAsCustomEvent');
-		sandbox.spy(tracking, 'dispatchEventAsImage');
+		sandbox.spy(tracking, 'dispatchCustomEvent');
+		sandbox.spy(tracking, 'dispatchImage');
 	});
 
 	afterEach(() => {
@@ -54,16 +54,16 @@ describe('Tracking', () => {
 		describe('dispatch events', () => {
 			it('should call dispatchEvent', () => {
 				tracking.dispatch('test', 'test');
-				expect(tracking.dispatchEventAsCustomEvent.calledOnce).to.be.true;
+				expect(tracking.dispatchCustomEvent.calledOnce).to.be.true;
 			});
 
 			it('should fallback to dispatchImage if dispatchEvent errors', () => {
-				tracking.dispatchEventAsCustomEvent.restore();
-				sandbox.stub(tracking, 'dispatchEventAsCustomEvent').callsFake(() => {
+				tracking.dispatchCustomEvent.restore();
+				sandbox.stub(tracking, 'dispatchCustomEvent').callsFake(() => {
 					throw new Error();
 				});
 				tracking.dispatch('test', 'test');
-				expect(tracking.dispatchEventAsImage.calledOnce).to.be.true;
+				expect(tracking.dispatchImage.calledOnce).to.be.true;
 			});
 		});
 
@@ -71,43 +71,43 @@ describe('Tracking', () => {
 			it('should merge extra tracking data', () => {
 				const data = { extra: 'data' };
 				tracking.dispatch('test', 'test', data);
-				expect(tracking.dispatchEventAsCustomEvent.getCall(0).args[0]).to.include(data);
+				expect(tracking.dispatchCustomEvent.getCall(0).args[0]).to.include(data);
 			});
 
 			it('should not overwrite the given action and test', () => {
 				const data = { action: 'bad', category: 'bad' };
 				tracking.dispatch('test', 'test', data);
-				expect(tracking.dispatchEventAsCustomEvent.getCall(0).args[0]).to.not.include({ action: 'bad', category: 'bad' });
+				expect(tracking.dispatchCustomEvent.getCall(0).args[0]).to.not.include({ action: 'bad', category: 'bad' });
 			});
 		});
 	});
 
-	describe('dispatchEventAsCustomEvent', () => {
+	describe('dispatchCustomEvent', () => {
 		const eventData = { action: 'test', category: 'test' };
 
 		it('should not throw an error', () => {
 			expect(() => {
-				tracking.dispatchEventAsCustomEvent(eventData);
+				tracking.dispatchCustomEvent(eventData);
 			}).to.not.throw();
 		});
 
 		it('should write debug data', () => {
-			tracking.dispatchEventAsCustomEvent(eventData);
+			tracking.dispatchCustomEvent(eventData);
 			expect(tracking.getDebugData()[0].data).to.include(eventData);
 		});
 	});
 
-	describe('dispatchEventAsImage', () => {
+	describe('dispatchImage', () => {
 		const eventData = { action: 'test', category: 'test' };
 
 		it('should not throw an error', () => {
 			expect(() => {
-				tracking.dispatchEventAsImage(eventData);
+				tracking.dispatchImage(eventData);
 			}).to.not.throw();
 		});
 
 		it('should write debug data', () => {
-			tracking.dispatchEventAsImage(eventData);
+			tracking.dispatchImage(eventData);
 			expect(tracking.getDebugData()[0].data).to.include(eventData);
 		});
 	});

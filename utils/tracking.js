@@ -32,9 +32,9 @@ class Tracking {
 		const eventData = Object.assign({}, data, { action, category });
 
 		try {
-			return this.dispatchEventAsCustomEvent(eventData);
+			return this.dispatchCustomEvent(eventData);
 		} catch (e) {
-			return this.dispatchEventAsImage(eventData);
+			return this.dispatchImage(eventData);
 		}
 	}
 
@@ -43,7 +43,7 @@ class Tracking {
 	 * @param {object} data
 	 * @returns {number} Amount of events dispatched
 	 */
-	dispatchEventAsCustomEvent (data) {
+	dispatchCustomEvent (data) {
 		const event = new this.window.CustomEvent(eventName, {
 			bubbles: true,
 			cancelable: true,
@@ -59,7 +59,7 @@ class Tracking {
 	 * @param {object} data
 	 * @returns {number} Amount of events dispatched
 	 */
-	dispatchEventAsImage (data) {
+	dispatchImage (data) {
 		const image = new this.window.Image();
 		const encodedData = encodeURIComponent(JSON.stringify(data));
 
