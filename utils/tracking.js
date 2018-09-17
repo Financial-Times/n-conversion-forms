@@ -3,7 +3,7 @@ const eventName = 'oTracking.event';
 
 class Tracking {
 	/**
-	 *
+	 * Construct with window and element
 	 * @param {Window} window Window object to access Image and CustomEvent on
 	 * @param {Element} element HTML element to dispatch event on, normally document.body
 	 */
@@ -18,7 +18,7 @@ class Tracking {
 	}
 
 	/**
-	 * Construct and dispatch a standard tracking event, falls back to dispacting tracking pixel
+	 * Dispatch a standard tracking event, falls back to dispacting tracking pixel
 	 * @param {string} category
 	 * @param {string} action
 	 * @param {object} data

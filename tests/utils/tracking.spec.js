@@ -10,12 +10,12 @@ describe('Tracking', () => {
 
 	beforeEach(() => {
 		element = { dispatchEvent: () => {} };
-		window = {CustomEvent: function () {}, Image: function () {} };
+		window = { CustomEvent: function () {}, Image: function () {} };
 		tracking = new Tracking(window, element);
 
 		sandbox = sinon.createSandbox();
-		sandbox.spy(tracking, 'dispatchEvent');
-		sandbox.spy(tracking, 'dispatchImage');
+		sandbox.spy(tracking, 'dispatchEventAsCustomEvent');
+		sandbox.spy(tracking, 'dispatchEventAsImage');
 	});
 
 	afterEach(() => {
@@ -54,16 +54,16 @@ describe('Tracking', () => {
 		describe('dispatch events', () => {
 			it('should call dispatchEvent', () => {
 				tracking.dispatch('test', 'test');
-				expect(tracking.dispatchEvent.calledOnce).to.be.true;
+				expect(tracking.dispatchEventAsCustomEvent.calledOnce).to.be.true;
 			});
 
 			it('should fallback to dispatchImage if dispatchEvent errors', () => {
-				tracking.dispatchEvent.restore();
-				sandbox.stub(tracking, 'dispatchEvent').callsFake(() => {
+				tracking.dispatchEventAsCustomEvent.restore();
+				sandbox.stub(tracking, 'dispatchEventAsCustomEvent').callsFake(() => {
 					throw new Error();
 				});
 				tracking.dispatch('test', 'test');
-				expect(tracking.dispatchImage.calledOnce).to.be.true;
+				expect(tracking.dispatchEventAsImage.calledOnce).to.be.true;
 			});
 		});
 
@@ -71,13 +71,13 @@ describe('Tracking', () => {
 			it('should merge extra tracking data', () => {
 				const data = { extra: 'data' };
 				tracking.dispatch('test', 'test', data);
-				expect(tracking.dispatchEvent.getCall(0).args[0]).to.include(data);
+				expect(tracking.dispatchEventAsCustomEvent.getCall(0).args[0]).to.include(data);
 			});
 
 			it('should not overwrite the given action and test', () => {
 				const data = { action: 'bad', category: 'bad' };
 				tracking.dispatch('test', 'test', data);
-				expect(tracking.dispatchEvent.getCall(0).args[0]).to.not.include({ action: 'bad', category: 'bad' });
+				expect(tracking.dispatchEventAsCustomEvent.getCall(0).args[0]).to.not.include({ action: 'bad', category: 'bad' });
 			});
 		});
 	});
