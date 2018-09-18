@@ -43,7 +43,7 @@ class Tracking {
 	 * @param {object} data
 	 * @returns {number} Amount of events dispatched
 	 */
-	dispatchCustomEvent (data) {
+	dispatchCustomEvent (data = {}) {
 		const event = new this.window.CustomEvent(eventName, {
 			bubbles: true,
 			cancelable: true,
@@ -59,7 +59,7 @@ class Tracking {
 	 * @param {object} data
 	 * @returns {number} Amount of events dispatched
 	 */
-	dispatchImage (data) {
+	dispatchImage (data = {}) {
 		const image = new this.window.Image();
 		const encodedData = encodeURIComponent(JSON.stringify(data));
 
@@ -80,7 +80,7 @@ class Tracking {
 	 * @param {object} data
 	 * @returns {number} Number of debug messages
 	 */
-	addDebugData (data) {
+	addDebugData (data = {}) {
 		return this.window.debugTracking.push({ time: new this.window.Date(), data });
 	}
 
