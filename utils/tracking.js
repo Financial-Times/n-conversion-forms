@@ -81,8 +81,7 @@ class Tracking {
 	 * @returns {number} Number of debug messages
 	 */
 	addDebugData (data) {
-		this.window.debugTracking.push({ time: new Date(), data });
-		return this.window.debugTracking.length;
+		return this.window.debugTracking.push({ time: new this.window.Date(), data });
 	}
 
 	/**

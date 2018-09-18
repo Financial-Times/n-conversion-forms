@@ -10,7 +10,7 @@ describe('Tracking', () => {
 
 	beforeEach(() => {
 		element = { dispatchEvent: () => {} };
-		window = { CustomEvent: function () {}, Image: function () {} };
+		window = { CustomEvent: function () {}, Image: function () {}, Date: function () {} };
 		tracking = new Tracking(window, element);
 
 		sandbox = sinon.createSandbox();
