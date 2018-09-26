@@ -16,6 +16,7 @@ describe('Tracking', () => {
 		sandbox = sinon.createSandbox();
 		sandbox.spy(tracking, 'dispatchCustomEvent');
 		sandbox.spy(tracking, 'dispatchImage');
+		sandbox.spy(window, 'CustomEvent');
 	});
 
 	afterEach(() => {
@@ -89,6 +90,11 @@ describe('Tracking', () => {
 			expect(() => {
 				tracking.dispatchCustomEvent(eventData);
 			}).to.not.throw();
+		});
+
+		it('should pass event data to the CustomEvent detail parameter', () => {
+			tracking.dispatchCustomEvent(eventData);
+			expect(window.CustomEvent.getCall(0).args[1].detail).to.equal(eventData);
 		});
 
 		it('should write debug data', () => {

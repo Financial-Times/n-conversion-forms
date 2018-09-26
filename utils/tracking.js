@@ -47,7 +47,7 @@ class Tracking {
 		const event = new this.window.CustomEvent(eventName, {
 			bubbles: true,
 			cancelable: true,
-			data
+			detail: data
 		});
 
 		this.element.dispatchEvent(event);
