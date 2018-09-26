@@ -1,6 +1,6 @@
 <div class="ncf__progress">
 	{{#each items}}
-		<form class="ncf__progress__form ncf__progress__form--{{status}}" method="POST" action="{{url}}">
+		<form class="ncf__progress__form{{#if isComplete}} ncf__progress__form--complete{{/if}}{{#if isCurrent}} ncf__progress__form--current{{/if}}" method="POST" action="{{url}}">
 			{{#each ../formData}}<input type="hidden" name="{{name}}" value="{{value}}" />{{/each}}
 
 			<button class="ncf__progress__button" data-trackable="submit" type="submit">
