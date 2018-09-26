@@ -9,7 +9,7 @@ let context = {};
 
 describe('form template', () => {
 	before(async () => {
-		context.template = await fetchPartial('fieldset.html');
+		context.template = await fetchPartial('form.html');
 		registerPartial('fields', '<div></div>');
 	});
 
