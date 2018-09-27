@@ -102,6 +102,7 @@
 		&__button {
 			border: 0;
 			background: none;
+			cursor: pointer;
 			position: relative;
 		}
 
@@ -109,7 +110,6 @@
 			background: oColorsGetPaletteColor('paper');
 			border: 2px solid oColorsGetPaletteColor('black-40');
 			border-radius: 9999px;
-			cursor: pointer;
 			display: block;
 			height: 20px;
 			margin: 0 auto;
@@ -123,7 +123,7 @@
 			margin-top: 10px;
 		}
 
-		&__form {
+		&__item {
 			position: relative;
 
 			&--current {

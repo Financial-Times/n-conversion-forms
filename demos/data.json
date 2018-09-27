@@ -71,19 +71,18 @@
     }],
     "items": [{
       "name": "Details",
-      "status": "complete",
+      "isComplete": true,
       "url": "#details"
     }, {
       "name": "Preferences",
-      "status": "complete",
+      "isComplete": true,
       "url": "#preferences"
     }, {
       "name": "Print",
-      "status": "current",
+      "isCurrent": true,
       "url": "#print"
     }, {
       "name": "Payment",
-      "status": "new",
       "url": "#payment"
     }]
   }
