@@ -65,7 +65,7 @@
 			background-color: oColorsGetPaletteColor('white');
 			padding-left: 40px;
 
-			&:before {
+			&::before {
 				content: '';
 				background: transparent url('https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2FG_active_focused_pressed.svg?source=m-login&width=20&height=20&format=svg') no-repeat;
 				position: absolute;
@@ -88,7 +88,7 @@
 		margin-top: 20px;
 		position: relative;
 
-		&:before {
+		&::before {
 			background: oColorsGetPaletteColor('black-40');
 			content: '';
 			display: block;
@@ -129,7 +129,7 @@
 			&--current {
 				.ncf__progress__icon {
 					border-color: oColorsGetPaletteColor('black');
-					&:before {
+					&::before {
 						background: oColorsGetPaletteColor('black');
 						border-radius: 9999px;
 						content: '';
@@ -144,7 +144,7 @@
 				.ncf__progress__icon {
 					background: oColorsGetPaletteColor('black');
 					border-color: oColorsGetPaletteColor('black');
-					&:before {
+					&::before {
 						@include oIconsGetIcon('tick', oColorsGetPaletteColor('paper'), 20);
 						content: '';
 						color: oColorsGetPaletteColor('paper');
@@ -154,7 +154,7 @@
 					position: relative;
 					text-decoration: underline;
 
-					&:after {
+					&::after {
 						@include oIconsGetIcon('edit', oColorsGetPaletteColor('black'), 20);
 						content: '';
 						position: absolute;
