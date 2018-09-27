@@ -1,8 +1,8 @@
 const { expect } = require('chai');
 const { fetchPartial } = require('../helpers');
 
-const CLASS_COMPLETE = 'ncf__progress__form--complete';
-const CLASS_CURRENT = 'ncf__progress__form--current';
+const CLASS_COMPLETE = 'ncf__progress__item--complete';
+const CLASS_CURRENT = 'ncf__progress__item--current';
 
 let context = {};
 
@@ -14,7 +14,7 @@ describe('progress-indicator template', () => {
 	it('should be empty if no items are passed', () => {
 		const $ = context.template({});
 
-		expect($('form').length).to.equal(0);
+		expect($('.ncf__progress__item').length).to.equal(0);
 	});
 
 	it('should display one item if passed', () => {
@@ -22,40 +22,40 @@ describe('progress-indicator template', () => {
 			items: [{name: 'test', url: '/test'}]
 		});
 
-		expect($('form').length).to.equal(1);
+		expect($('.ncf__progress__item').length).to.equal(1);
 	});
 
 	it('should display all items if multiple passed', () => {
 		const $ = context.template({
 			items: [
 				{name: 'test', url: '/test'},
-				{name: 'test1', url: '/test1'}
+				{isComplete: true, name: 'test1', url: '/test1'}
 			]
 		});
 
-		expect($('form').length).to.equal(2);
+		expect($('.ncf__progress__item').length).to.equal(2);
 		expect($('form[action="/test1"] button').text()).to.contain('test1');
 	});
 
-	it('should mark the form complete', () => {
+	it('should mark the progress item complete', () => {
 		const $ = context.template({
 			items: [{isComplete: true}]
 		});
 
-		expect($('form').hasClass(CLASS_COMPLETE)).to.be.true;
+		expect($('.ncf__progress__item').hasClass(CLASS_COMPLETE)).to.be.true;
 	});
 
-	it('should mark the form current', () => {
+	it('should mark the progress item current', () => {
 		const $ = context.template({
 			items: [{isCurrent: true}]
 		});
 
-		expect($('form').hasClass(CLASS_CURRENT)).to.be.true;
+		expect($('.ncf__progress__item').hasClass(CLASS_CURRENT)).to.be.true;
 	});
 
 	it('should write out all formData as hidden fields', () => {
 		const $ = context.template({
-			items: [{name: 'test', url: '/test'}],
+			items: [{isComplete: true, name: 'test', url: '/test'}],
 			formData: [
 				{name: 'test', value: 'test'},
 				{name: 'test1', value: 'test1'}
