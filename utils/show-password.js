@@ -1,4 +1,3 @@
-
 class ShowPassword {
 	/**
 	 * Initalise the ShowPassword
