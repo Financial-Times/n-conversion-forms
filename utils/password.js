@@ -34,7 +34,8 @@ class Password {
 	 * @return {String} Current input type
 	 */
 	toggleVisibility (visible) {
-		return this.password.type = (visible ? 'text' : 'password');
+		const type = visible ? 'text' : 'password';
+		return this.password.type = type;
 	}
 };
 
