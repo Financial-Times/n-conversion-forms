@@ -2,12 +2,17 @@ class Password {
 	/**
 	 * Initalise the Password utility
 	 * @param {Element} password Input element
+	 * @param {Element} checkbox Optional checkbox element for visibility toggle
 	 */
-	constructor (password) {
+	constructor (password, checkbox) {
 		if (!password) {
 			throw new Error('Please supply a password element');
 		}
 		this.password = password;
+
+		if (checkbox) {
+			this.registerVisibilityCheckbox(checkbox);
+		}
 	}
 
 	/**
@@ -29,7 +34,7 @@ class Password {
 	 * @return {String} Current input type
 	 */
 	toggleVisibility (visible) {
-		return this.password.type = visible ? 'text' : 'password';
+		return this.password.type = (visible ? 'text' : 'password');
 	}
 };
 

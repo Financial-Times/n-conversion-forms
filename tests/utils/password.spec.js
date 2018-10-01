@@ -27,6 +27,11 @@ describe('Password', () => {
 				new Password();
 			}).to.throw();
 		});
+
+		it('should add event listener to checkbox if passed', () => {
+			new Password(passwordElement, checkboxElement);
+			expect(checkboxElement.addEventListener.calledOnce).to.be.true;
+		});
 	});
 
 	describe('registerVisibilityCheckbox', () => {
