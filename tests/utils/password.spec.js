@@ -13,7 +13,7 @@ describe('Password', () => {
 		checkboxElement = { addEventListener: function () {}, checked: false };
 		password = new Password(passwordElement);
 		sandbox = sinon.createSandbox();
-		sandbox.spy(password, 'toggleVisibility');
+		sandbox.spy(password, 'toggleMask');
 		sandbox.spy(checkboxElement, 'addEventListener');
 	});
 
@@ -34,53 +34,51 @@ describe('Password', () => {
 		});
 	});
 
-	describe('registerVisibilityCheckbox', () => {
+	describe('registerMaskCheckbox', () => {
 		it('should throw an error if checkbox element is not supplied', () => {
 			expect(() => {
-				password.registerVisibilityCheckbox();
+				password.registerMaskCheckbox();
 			}).to.throw();
 		});
 
 		it('should add addEventListener to checkbox', () => {
-			password.registerVisibilityCheckbox(checkboxElement);
+			password.registerMaskCheckbox(checkboxElement);
 			expect(checkboxElement.addEventListener.calledOnce).to.be.true;
 		});
 
-		it('should call showPassword when control is checked', () => {
+		it('should call toggleMask with false when control is checked', () => {
 			let eventListenerCallback;
 			checkboxElement.checked = true;
 			checkboxElement.addEventListener = (type, callback) => eventListenerCallback = callback;
 
-			password.registerVisibilityCheckbox(checkboxElement);
+			password.registerMaskCheckbox(checkboxElement);
 			eventListenerCallback();
 
-			expect(password.toggleVisibility.calledOnce).to.be.true;
-			expect(password.toggleVisibility.getCall(0).args[0]).to.be.true;
+			expect(password.toggleMask.getCall(0).args[0]).to.be.false;
 		});
 
-		it('should call hidePassword when control is not checked', () => {
+		it('should call toggleMask with true when control is not checked', () => {
 			let eventListenerCallback;
 			checkboxElement.checked = false;
 			checkboxElement.addEventListener = (type, callback) => eventListenerCallback = callback;
 
-			password.registerVisibilityCheckbox(checkboxElement);
+			password.registerMaskCheckbox(checkboxElement);
 			eventListenerCallback();
 
-			expect(password.toggleVisibility.calledOnce).to.be.true;
-			expect(password.toggleVisibility.getCall(0).args[0]).to.be.false;
+			expect(password.toggleMask.getCall(0).args[0]).to.be.true;
 		});
 	});
 
 	describe('toggleVisibility', () => {
 		it('should set the input type to text', () => {
 			passwordElement.type = 'password';
-			password.toggleVisibility(true);
+			password.toggleMask(false);
 			expect(passwordElement.type).to.equal('text');
 		});
 
 		it('should set the input type to password', () => {
 			passwordElement.type = 'text';
-			password.toggleVisibility(false);
+			password.toggleMask(true);
 			expect(passwordElement.type).to.equal('password');
 		});
 	});

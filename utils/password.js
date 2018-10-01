@@ -11,7 +11,7 @@ class Password {
 		this.password = password;
 
 		if (checkbox) {
-			this.registerVisibilityCheckbox(checkbox);
+			this.registerMaskCheckbox(checkbox);
 		}
 	}
 
@@ -19,21 +19,21 @@ class Password {
 	 * Setup checkbox to toggle password visibility
 	 * @param {Element} checkbox
 	 */
-	registerVisibilityCheckbox (checkbox) {
+	registerMaskCheckbox (checkbox) {
 		if (!checkbox) {
 			throw new Error('Please supply a checkbox element');
 		}
 		checkbox.addEventListener('change', () => {
-			this.toggleVisibility(checkbox.checked);
+			this.toggleMask(!checkbox.checked);
 		});
 	}
 
 	/**
 	 * Toggle whether the password is shown in plain text or not
-	 * @param {Boolean} visible Pass true to show plain text
+	 * @param {Boolean} mask Pass true to show plain text
 	 */
-	toggleVisibility (visible) {
-		const type = visible ? 'text' : 'password';
+	toggleMask (mask) {
+		const type = mask ? 'password' : 'text';
 		this.password.type = type;
 	}
 };
