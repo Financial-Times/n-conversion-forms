@@ -69,7 +69,7 @@ describe('Password', () => {
 		});
 	});
 
-	describe('toggleVisibility', () => {
+	describe('toggleMask', () => {
 		it('should set the input type to text', () => {
 			passwordElement.type = 'password';
 			password.toggleMask(false);
