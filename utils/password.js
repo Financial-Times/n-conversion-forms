@@ -7,7 +7,6 @@ class Password {
 		if (!password) {
 			throw new Error('Please supply a password element');
 		}
-
 		this.password = password;
 	}
 
@@ -30,11 +29,7 @@ class Password {
 	 * @return {String} Current input type
 	 */
 	toggleVisibility (visible) {
-		if (visible) {
-			return this.password.type = 'text';
-		} else {
-			return this.password.type = 'password';
-		}
+		return this.password.type = visible ? 'text' : 'password';
 	}
 };
 
