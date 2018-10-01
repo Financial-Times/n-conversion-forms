@@ -29,8 +29,8 @@ class Password {
 	}
 
 	/**
-	 * Make a decision to show or hide password when a change occurs
-	 * @param {Boolean} visible Pass true to display password in plain text
+	 * Toggle whether the password is shown in plain text or not
+	 * @param {Boolean} visible Pass true to show plain text
 	 */
 	toggleVisibility (visible) {
 		const type = visible ? 'text' : 'password';
