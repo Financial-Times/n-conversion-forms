@@ -31,11 +31,10 @@ class Password {
 	/**
 	 * Make a decision to show or hide password when a change occurs
 	 * @param {Boolean} visible Pass true to display password in plain text
-	 * @return {String} Current input type
 	 */
 	toggleVisibility (visible) {
 		const type = visible ? 'text' : 'password';
-		return this.password.type = type;
+		this.password.type = type;
 	}
 };
 
