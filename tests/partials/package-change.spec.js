@@ -20,13 +20,11 @@ describe('package-change template', () => {
 
 	it('should display package name and price when passed', () => {
 		const data = {
-			currentPackage: 'Digital',
-			currentPrice: '£5.60 per week'
+			currentPackage: 'Digital'
 		};
 		const $ = context.template(data);
 
 		expect($('.ncf__package-change').text()).to.contain(data.currentPackage);
-		expect($('.ncf__package-change').text()).to.contain(data.currentPrice);
 	});
 
 	it('should display package name and price when passed', () => {
