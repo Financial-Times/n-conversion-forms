@@ -54,7 +54,6 @@
   "package-change": {
     "changePackageUrl": "/foo",
     "currentPackage": "Digital",
-    "currentPrice": "£5.60 per week",
     "class": "extra-css-classes-here space-separated",
     "formData": [{
       "name": "foo",

@@ -1,3 +1,4 @@
+@import 'o-icons/main';
 @import 'o-colors/main';
 @import 'o-normalise/main';
 @import 'o-typography/main';
@@ -16,6 +17,11 @@
 // Custom styles
 .ncf {
 	@include oTypographySans($scale: 0);
+
+	&__wrapper {
+		background: oColorsGetPaletteColor('white');
+		padding: 50px;
+	}
 
 	&__fieldset {
 		padding: 0;
@@ -93,10 +99,10 @@
 			content: '';
 			display: block;
 			height: 2px;
-			left: 33px;
+			left: 30px;
 			position: absolute;
 			top: 12px;
-			width: calc(100% - 70px);
+			width: calc(100% - 60px);
 		}
 
 		&__button {
