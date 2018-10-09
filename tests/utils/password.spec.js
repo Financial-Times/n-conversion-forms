@@ -4,14 +4,24 @@ const sinon = require('sinon');
 
 describe('Password', () => {
 	let password;
+	let document;
 	let passwordElement;
 	let checkboxElement;
 	let sandbox;
 
 	beforeEach(() => {
 		passwordElement = { type: '' };
-		checkboxElement = { addEventListener: function () {}, checked: false };
-		password = new Password(passwordElement);
+		checkboxElement = { addEventListener: function () { }, checked: false };
+		document = {
+			querySelector: (selector) => {
+				if (selector.indexOf('#password') !== -1) {
+					return passwordElement;
+				} else {
+					return checkboxElement;
+				}
+			}
+		};
+		password = new Password(document);
 		sandbox = sinon.createSandbox();
 		sandbox.spy(password, 'toggleMask');
 		sandbox.spy(checkboxElement, 'addEventListener');
@@ -22,50 +32,27 @@ describe('Password', () => {
 	});
 
 	describe('constructor', () => {
-		it('should throw an error if password element is not supplied', () => {
+		it('should throw an error if document element isn\'t passed in.', () => {
 			expect(() => {
 				new Password();
 			}).to.throw();
 		});
 
-		it('should add event listener to checkbox if passed', () => {
-			new Password(passwordElement, checkboxElement);
-			expect(checkboxElement.addEventListener.calledOnce).to.be.true;
-		});
-	});
-
-	describe('registerMaskCheckbox', () => {
-		it('should throw an error if checkbox element is not supplied', () => {
+		it('should throw an error if password element does not exist on the page', () => {
 			expect(() => {
-				password.registerMaskCheckbox();
+				document.querySelector = () => {};
+				new Password(document);
 			}).to.throw();
 		});
 
-		it('should add addEventListener to checkbox', () => {
-			password.registerMaskCheckbox(checkboxElement);
+		it('should add event listener to checkbox if passed', () => {
+			new Password(document);
 			expect(checkboxElement.addEventListener.calledOnce).to.be.true;
 		});
 
-		it('should call toggleMask with false when control is checked', () => {
-			let eventListenerCallback;
-			checkboxElement.checked = true;
-			checkboxElement.addEventListener = (type, callback) => eventListenerCallback = callback;
-
-			password.registerMaskCheckbox(checkboxElement);
-			eventListenerCallback();
-
-			expect(password.toggleMask.getCall(0).args[0]).to.be.false;
-		});
-
-		it('should call toggleMask with true when control is not checked', () => {
-			let eventListenerCallback;
-			checkboxElement.checked = false;
-			checkboxElement.addEventListener = (type, callback) => eventListenerCallback = callback;
-
-			password.registerMaskCheckbox(checkboxElement);
-			eventListenerCallback();
-
-			expect(password.toggleMask.getCall(0).args[0]).to.be.true;
+		it('should add addEventListener to checkbox', () => {
+			new Password(document);
+			expect(checkboxElement.addEventListener.calledOnce).to.be.true;
 		});
 	});
 

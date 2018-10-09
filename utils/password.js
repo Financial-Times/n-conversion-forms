@@ -1,31 +1,24 @@
 class Password {
 	/**
 	 * Initalise the Password utility
-	 * @param {Element} password Input element
-	 * @param {Element} checkbox Optional checkbox element for visibility toggle
 	 */
-	constructor (password, checkbox) {
-		if (!password) {
-			throw new Error('Please supply a password element');
+	constructor (document) {
+		if (!document) {
+			throw new Error('Please supply the document object');
 		}
-		this.password = password;
 
-		if (checkbox) {
-			this.registerMaskCheckbox(checkbox);
-		}
-	}
+		this.$password = document.querySelector('.ncf #password');
+		this.$checkbox = document.querySelector('.ncf #showPassword');
 
-	/**
-	 * Setup checkbox to toggle password visibility
-	 * @param {Element} checkbox
-	 */
-	registerMaskCheckbox (checkbox) {
-		if (!checkbox) {
-			throw new Error('Please supply a checkbox element');
+		if (!this.$password) {
+			throw new Error('Please include the password partial on the page');
 		}
-		checkbox.addEventListener('change', () => {
-			this.toggleMask(!checkbox.checked);
-		});
+
+		if (this.$checkbox) {
+			this.$checkbox.addEventListener('change', () => {
+				this.toggleMask(!this.$checkbox.checked);
+			});
+		}
 	}
 
 	/**
@@ -33,8 +26,7 @@ class Password {
 	 * @param {Boolean} mask Pass true to show plain text
 	 */
 	toggleMask (mask) {
-		const type = mask ? 'password' : 'text';
-		this.password.type = type;
+		this.$password.type = mask ? 'password' : 'text';
 	}
 };
 
