@@ -1,11 +1,13 @@
-const COMMON_DATA = require('n-common-static-data');
+const countries = require('n-common-static-data').billingCountries;
 
 module.exports = function ({ hash = {}, fn }) {
 	this.commonData = this.commonData || {};
-	const data = COMMON_DATA.billingCountries;
-	this.commonData.billingCountries = !Array.isArray(hash.filterList) ? data : data.filter(item => {
-		return hash.filterList.includes(item.code);
-	});
-
+	this.commonData.countries = Array.isArray(hash.filterList) ? countries.filter(countryInFilterList(hash.filterList)) : countries;
 	return fn(this);
 };
+
+function countryInFilterList (filterList) {
+	return item => {
+		return filterList.includes(item.code);
+	};
+}
