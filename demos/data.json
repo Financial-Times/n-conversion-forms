@@ -36,16 +36,7 @@
       }
     ]},
   "country": {
-    "options": [{
-      "value": "ABW",
-      "label": "Aruba"
-    }, {
-      "value": "AFG",
-      "label": "Afghanistan"
-    }, {
-      "value": "AGO",
-      "label": "Angola"
-    }]
+    "filterList": ["GBR", "JPN", "USA", "FRA"]
   },
   "message": {
     "isError": true,
