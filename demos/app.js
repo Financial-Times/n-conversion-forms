@@ -8,6 +8,7 @@ const data = require('./data.json');
 
 const PORT = process.env.PORT || 5005;
 const PARIALS_DIR = resolve(__dirname, '../partials');
+const HELPERS = require('../helpers');
 
 const app = express({
 	name: 'public',
@@ -21,7 +22,8 @@ const app = express({
 	partialsDirectory: PARIALS_DIR,
 	directory: process.cwd(),
 	demo: true,
-	s3o: false
+	s3o: false,
+	helpers: Object.assign({}, HELPERS)
 });
 
 app.get('/', (req, res) => {
