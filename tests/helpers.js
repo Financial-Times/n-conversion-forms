@@ -19,8 +19,16 @@ const registerPartial = (name, partial) => {
 	return handlebars().registerPartial(name, partial);
 };
 
+const registerHelper = (name, helper) => {
+	return handlebars().registerHelper(name, helper);
+};
+
 const unregisterPartial = name => {
 	return handlebars().unregisterPartial(name);
+};
+
+const unregisterHelper = name => {
+	return handlebars().unregisterHelper(name);
 };
 
 const fetchPartial = async name => {
@@ -33,7 +41,6 @@ const fetchPartial = async name => {
 const shouldPopulateOptions = function (context) {
 	it('should show no options if none passed in', () => {
 		const $ = context.template({});
-
 		expect($('select').find('option').length).to.equal(0);
 	});
 
@@ -163,6 +170,8 @@ const shouldError = function (context, errorParams = { hasError: true }) {
 module.exports = {
 	registerPartial,
 	unregisterPartial,
+	registerHelper,
+	unregisterHelper,
 	fetchPartial,
 	shouldPopulateOptions,
 	shouldSelectOption,

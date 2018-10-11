@@ -5,7 +5,7 @@ const { expect } = require('chai');
 const mockBillingCountries = [{ code: 'a'}, { code: 'b'}, { code: 'c'}, { code: 'd'}];
 const helper = proxyquire('../../helpers/ncf-countries', {
 	'n-common-static-data': {
-		billingCountries: mockBillingCountries
+		billingCountries: { countries: mockBillingCountries }
 	}
 });
 
@@ -17,37 +17,19 @@ describe('NCF Countries', () => {
 		stub = sinon.stub();
 	});
 
-	it('sets commonData on the context if its not set', () => {
-		const context = {};
-		helper.call(context, { hash: {}, fn: stub });
-		expect(context).to.have.property('commonData');
-	});
+	it('sets countries on the context', () => {
 
-	it('doesnt overwrite commonData if its already set', () => {
-		const preExistingCommonData = 'test';
-		const context = { commonData: preExistingCommonData };
-		helper.call(context, { hash: {}, fn: stub });
-		expect(context).to.have.property('commonData', preExistingCommonData);
-	});
-
-	it('calls the render function with the context', () => {
-		const context = {};
-		helper.call(context, { hash: {}, fn: stub });
-		expect(stub.calledWith(context)).to.be.true;
-	});
-
-	it('assigns countries to commonData', () => {
-		const context = { };
-		helper.call(context, { hash: {}, fn: stub });
-		expect(context.commonData).to.have.property('countries', mockBillingCountries);
+		helper({ hash: {}, fn: stub });
+		const context = stub.getCall(0).args[0];
+		expect(context).to.have.property('countries', mockBillingCountries);
 	});
 
 	it('filterList filters billingCountries', () => {
-		const context = { };
 		const filterList = ['b', 'c'];
-		helper.call(context, { hash: { filterList }, fn: stub });
-		expect(context.commonData.countries).to.deep.equal([{ code: 'b'}, { code: 'c'}]);
-		expect(context.commonData.countries).to.not.include([{ code: 'a'}, { code: 'd'}]);
+		helper({ hash: { filterList }, fn: stub });
+		const context = stub.getCall(0).args[0];
+		expect(context.countries).to.deep.equal([{ code: 'b'}, { code: 'c'}]);
+		expect(context.countries).to.not.include([{ code: 'a'}, { code: 'd'}]);
 
 	});
 
