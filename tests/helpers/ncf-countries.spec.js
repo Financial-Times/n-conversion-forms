@@ -36,18 +36,18 @@ describe('NCF Countries', () => {
 		expect(stub.calledWith(context)).to.be.true;
 	});
 
-	it('assigns billingCountries to commonData', () => {
+	it('assigns countries to commonData', () => {
 		const context = { };
 		helper.call(context, { hash: {}, fn: stub });
-		expect(context.commonData).to.have.property('billingCountries', mockBillingCountries);
+		expect(context.commonData).to.have.property('countries', mockBillingCountries);
 	});
 
 	it('filterList filters billingCountries', () => {
 		const context = { };
 		const filterList = ['b', 'c'];
 		helper.call(context, { hash: { filterList }, fn: stub });
-		expect(context.commonData.billingCountries).to.deep.equal([{ code: 'b'}, { code: 'c'}]);
-		expect(context.commonData.billingCountries).to.not.include([{ code: 'a'}, { code: 'd'}]);
+		expect(context.commonData.countries).to.deep.equal([{ code: 'b'}, { code: 'c'}]);
+		expect(context.commonData.countries).to.not.include([{ code: 'a'}, { code: 'd'}]);
 
 	});
 
