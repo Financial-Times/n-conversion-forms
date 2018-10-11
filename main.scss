@@ -182,7 +182,7 @@
 	&__payment-term-select {
 
 		.o-forms__radio + .o-forms__label {
-			padding: 14px 20px;;
+			padding: 14px 20px;
 			min-height: 110px;
 			border: 2px solid oColorsGetPaletteColor('teal');
 			text-align: left;
@@ -218,7 +218,7 @@
 		&__label--title {
 			@include oTypographySans($scale: 2);
 		}
-		
+
 		&__label--description {
 			padding-top: 18px;
 		}
