@@ -1,0 +1,16 @@
+<div id="countryField" class="o-forms o-forms--wide ncf__field js-field js-unknown-user-field{{#if hasError}} o-forms--error{{/if}}"
+    data-ui-item="select" data-ui-item-name="country" data-ui-item-store-previous="true" data-validate="required">
+
+    <label for="country" class="o-forms__label">Country</label>
+
+    <select id="delivery-country" name="delivery-country" class="o-forms__select js-field__input js-item__value" data-trackable="field-delivery-country" aria-required="true"
+        required>
+        {{#each options as |option|}}
+        <option value="{{option.value}}" {{#if ../value}}{{#ifEquals option.value ../value }} selected{{/ifEquals}}{{else}}{{#if
+            option.isSelected}} selected{{/if}}{{/if}}>{{option.label}}</option>
+        {{/each}}
+    </select>
+
+    <div class="o-forms__errortext">Please select your country</div>
+
+</div>

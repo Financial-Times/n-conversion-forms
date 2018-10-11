@@ -1,0 +1,11 @@
+<div class="o-forms__group ncf__payment-term-select">
+    {{#each buttonOptions}}
+        <input type="radio" name="paymentTermSelector" value="{{this.name}}" class="o-forms__radio ncf__payment-term-select" id="{{this.name}}" {{#if this.selected}} checked="checked" {{/if}}>
+        <label for="{{this.name}}" class="o-forms__label">{{this.title}}</label>
+        <p>{{this.description}}</p>
+        <p>{{this.subText}}</p>
+    {{/each}}
+    <div>
+        {{legalWording}}
+    </div>
+</div>
