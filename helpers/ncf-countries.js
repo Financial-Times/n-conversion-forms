@@ -7,7 +7,5 @@ module.exports = function ({ hash = {}, fn }) {
 };
 
 function countryInFilterList (filterList) {
-	return item => {
-		return filterList.includes(item.code);
-	};
+	return item => filterList.includes(item.code);
 }
