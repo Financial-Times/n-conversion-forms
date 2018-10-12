@@ -15,8 +15,8 @@ class Email {
 			throw new Error(`Please include the email partial on the page${!this.$emailConfirm ? ' making sure to specify showConfirm=true' : ''}.`);
 		}
 
-		this.$email.addEventListener('change', this.checkMatch.bind(this));
-		this.$emailConfirm.addEventListener('change', this.checkMatch.bind(this));
+		this.$email.addEventListener('blur', this.checkMatch.bind(this));
+		this.$emailConfirm.addEventListener('blur', this.checkMatch.bind(this));
 	}
 
 	/**
