@@ -11,7 +11,7 @@ describe('Password', () => {
 
 	beforeEach(() => {
 		passwordElement = { type: '' };
-		checkboxElement = { addEventListener: function () { }, checked: false };
+		checkboxElement = { addEventListener: ()=>{}, checked: false };
 		document = {
 			querySelector: (selector) => {
 				if (selector.indexOf('#password') !== -1) {
