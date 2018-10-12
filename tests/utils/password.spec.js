@@ -44,13 +44,10 @@ describe('Password', () => {
 				new Password(document);
 			}).to.throw();
 		});
+	});
 
-		it('should add event listener to checkbox if passed', () => {
-			new Password(document);
-			expect(checkboxElement.addEventListener.calledOnce).to.be.true;
-		});
-
-		it('should add addEventListener to checkbox', () => {
+	describe('registerMaskCheckbox', () => {
+		it('should add event listener to checkbox if it exists', () => {
 			new Password(document);
 			expect(checkboxElement.addEventListener.calledOnce).to.be.true;
 		});

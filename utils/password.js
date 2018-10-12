@@ -14,6 +14,13 @@ class Password {
 			throw new Error('Please include the password partial on the page');
 		}
 
+		this.registerMaskCheckbox();
+	}
+
+	/**
+	 * Setup checkbox to toggle password visibility
+	 */
+	registerMaskCheckbox () {
 		if (this.$checkbox) {
 			this.$checkbox.addEventListener('change', () => {
 				this.toggleMask(!this.$checkbox.checked);
