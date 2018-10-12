@@ -2,8 +2,8 @@
 
 	<label for="postCode" class="o-forms__label">Post code</label>
 
-	<input type="text" id="postCode" name="postCode" value="{{value}}" placeholder="Post code" class="o-forms__text js-field__input js-item__value" data-trackable="post-code" aria-required="true" required>
+	<input type="text" id="postCode" name="postCode" value="{{value}}" placeholder="Post code" class="o-forms__text js-field__input js-item__value" data-trackable="post-code" aria-required="true" required{{#if pattern}} pattern="{{pattern}}"{{/if}}>
 
-	<div class="o-forms__errortext">Please enter your post code</div>
+	<div class="o-forms__errortext">Please enter a valid post code.</div>
 
 </div>
