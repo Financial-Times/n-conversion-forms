@@ -23,10 +23,12 @@ class EmailMatcher {
 	 * Check the values of the two fields and update error state accordingly.
 	 */
 	checkMatch () {
-		if (this.$email.value !== this.$emailConfirm.value) {
-			this.$emailConfirmField.classList.add('o-forms--error');
-		} else {
-			this.$emailConfirmField.classList.remove('o-forms--error');
+		if (this.$emailConfirm.value) {
+			if (this.$email.value !== this.$emailConfirm.value) {
+				this.$emailConfirmField.classList.add('o-forms--error');
+			} else {
+				this.$emailConfirmField.classList.remove('o-forms--error');
+			}
 		}
 	}
 };

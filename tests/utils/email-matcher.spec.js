@@ -78,7 +78,7 @@ describe('EmailMatcher', () => {
 			emailConfirmElement.value = 'pass';
 
 			let emailMatcher = new EmailMatcher(document);
-			emailMatcher.checkMatch(false);
+			emailMatcher.checkMatch();
 
 			expect(emailConfirmFieldElement.classList.add.calledOnce).to.be.true;
 		});
@@ -88,9 +88,20 @@ describe('EmailMatcher', () => {
 			emailConfirmElement.value = 'password';
 
 			let emailMatcher = new EmailMatcher(document);
-			emailMatcher.checkMatch(false);
+			emailMatcher.checkMatch();
 
 			expect(emailConfirmFieldElement.classList.remove.calledOnce).to.be.true;
+		});
+
+		it('should only check if valid if emailConfirm field has a value.', () => {
+			emailElement.value = 'password';
+			emailConfirmElement.value = '';
+
+			let emailMatcher = new EmailMatcher(document);
+			emailMatcher.checkMatch();
+
+			expect(emailConfirmFieldElement.classList.add.calledOnce).to.be.false;
+			expect(emailConfirmFieldElement.classList.remove.calledOnce).to.be.false;
 		});
 	});
 });
