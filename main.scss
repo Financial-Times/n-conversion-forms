@@ -13,6 +13,7 @@
 @include oFormsSectionFeature();
 @include oFormsWideFeature();
 @include oMessage($types: ('alert', 'notice-bleed'), $status: ('error', 'inform', 'success'));
+@include oFormsRadioCheckboxRightModifier();
 
 // Custom styles
 .ncf {
