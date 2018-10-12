@@ -3,7 +3,7 @@ const { fetchPartial } = require('../helpers');
 
 let context = {};
 
-describe.only('confirmation template', () => {
+describe('confirmation template', () => {
 	before(async () => {
 		context.template = await fetchPartial('confirmation.html');
 	});
