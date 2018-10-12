@@ -84,5 +84,23 @@
       "name": "Payment",
       "url": "#payment"
     }]
+  },
+  "confirmation": {
+    "offer": "Premium Digital & Print",
+    "email": "test@example.com",
+    "details": [
+      {
+        "title": "Annual payment",
+        "data": "£XXXX"
+      },
+      {
+        "title": "Renewal date",
+        "data": "June 11th, 2019"
+      },
+      {
+        "title": "Payment method",
+        "data": "Credit Card"
+      }
+    ]
   }
 }

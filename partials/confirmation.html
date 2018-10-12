@@ -1,0 +1,30 @@
+<div class="ncf__wrapper">
+	<div class="ncf__center">
+		<div class="ncf__icon ncf__icon--tick ncf__icon--large"></div>
+		<p>You are now subscribed to:</p>
+		<h1 class="ncf__header ncf__header--confirmation">{{offer}}</h1>
+	</div>
+
+	<p>
+		We've sent confirmation of your new subscription to {{email}}.
+		Here's a summary of your {{offer}} subscription:
+	</p>
+
+	<h2>Your billing details</h2>
+	<dl class="ncf__list">
+		{{#each details as |detail|}}
+		<dt class="ncf__list-title">{{detail.title}}</dt>
+		<dd class="ncf__list-data">{{detail.data}}</dd>
+		{{/each}}
+	</dl>
+
+	<h3>Something not right?</h3>
+	<p>
+		Go to your account settings to edit your account.
+		If you need to get in touch call us on <a href="tel:+442077556248" class="ncf__link--external">+44 (0) 207 755 6248</a>.
+		Or contact us for additional support.
+	</p>
+	<p class="ncf__center">
+		<a href="/" class="ncf__button ncf__button--submit">Start exploring</a>
+	</p>
+</div>
