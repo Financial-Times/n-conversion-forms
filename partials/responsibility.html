@@ -2,11 +2,15 @@
 
 	<label for="responsibility" class="o-forms__label">Which best describes your job responsibility?</label>
 
+	{{#ncf-common-data import="demographics.responsibilities.responsibilities" export="options"}}
+
 	<select id="responsibility" name="responsibility" class="o-forms__select js-field__input js-item__value" data-trackable="field-responsibility" aria-required="true" required>
 		{{#each options as |option|}}
-		<option value="{{option.value}}"{{#if ../value}}{{#ifEquals option.value ../value }} selected{{/ifEquals}}{{else}}{{#if option.isSelected}} selected{{/if}}{{/if}}>{{option.label}}</option>
+		<option value="{{option.code}}"{{#if ../value}}{{#ifEquals option.code ../value }} selected{{/ifEquals}}{{/if}}>{{option.description}}</option>
 		{{/each}}
 	</select>
+
+	{{/ncf-common-data}}
 
 	<div class="o-forms__errortext">Please select your responsibility</div>
 

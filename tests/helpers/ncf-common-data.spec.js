@@ -25,14 +25,14 @@ describe('NCF Common Data', () => {
 		const hash = { import: 'example', export: 'whatever' };
 		helper({ hash, fn: stub });
 		const context = stub.getCall(0).args[0];
-		expect(context.commonData).to.have.property(hash.export, mockCommonModule[hash.import]);
+		expect(context).to.have.property(hash.export, mockCommonModule[hash.import]);
 	});
 
 	it('can import nested properties', () => {
 		const hash = { import: 'nested.property', export: 'whatever' };
 		helper({ hash, fn: stub });
 		const context = stub.getCall(0).args[0];
-		expect(context.commonData).to.have.property(hash.export, mockCommonModule.nested.property);
+		expect(context).to.have.property(hash.export, mockCommonModule.nested.property);
 	});
 
 });

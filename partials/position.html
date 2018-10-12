@@ -2,11 +2,15 @@
 
 	<label for="position" class="o-forms__label">What's your job position?</label>
 
+	{{#ncf-common-data import="demographics.positions.positions" export="options"}}
+
 	<select id="position" name="position" class="o-forms__select js-field__input js-item__value" data-trackable="field-position" aria-required="true" required>
 		{{#each options as |option|}}
-		<option value="{{option.value}}"{{#if ../value}}{{#ifEquals option.value ../value }} selected{{/ifEquals}}{{else}}{{#if option.isSelected}} selected{{/if}}{{/if}}>{{option.label}}</option>
+		<option value="{{option.code}}"{{#if ../value}}{{#ifEquals option.code ../value }} selected{{/ifEquals}}{{/if}}>{{option.description}}</option>
 		{{/each}}
 	</select>
+
+{{/ncf-common-data}}
 
 	<div class="o-forms__errortext">Please select your position</div>
 
