@@ -1,8 +1,8 @@
-const EmailMatcher = require('../../utils/email-matcher');
+const Email = require('../../utils/email');
 const expect = require('chai').expect;
 const sinon = require('sinon');
 
-describe('EmailMatcher', () => {
+describe('Email', () => {
 	let document;
 	let emailElement;
 	let emailConfirmElement;
@@ -39,14 +39,14 @@ describe('EmailMatcher', () => {
 	describe('constructor', () => {
 		it('should throw an error if document element isn\'t passed in.', () => {
 			expect(() => {
-				new EmailMatcher();
+				new Email();
 			}).to.throw();
 		});
 
 		it('should throw an error if email confirm element does not exist on the page', () => {
 			expect(() => {
 				document.querySelector = () => { };
-				new EmailMatcher(document);
+				new Email(document);
 			}).to.throw();
 		});
 
@@ -57,17 +57,17 @@ describe('EmailMatcher', () => {
 						return emailConfirmFieldElement;
 					}
 				};
-				new EmailMatcher(document);
+				new Email(document);
 			}).to.throw();
 		});
 
 		it('should add event listener to email element', () => {
-			new EmailMatcher(document);
+			new Email(document);
 			expect(emailElement.addEventListener.calledOnce).to.be.true;
 		});
 
 		it('should add addEventListener to email confirm element', () => {
-			new EmailMatcher(document);
+			new Email(document);
 			expect(emailConfirmElement.addEventListener.calledOnce).to.be.true;
 		});
 	});
@@ -77,8 +77,8 @@ describe('EmailMatcher', () => {
 			emailElement.value = 'password';
 			emailConfirmElement.value = 'pass';
 
-			let emailMatcher = new EmailMatcher(document);
-			emailMatcher.checkMatch();
+			let email = new Email(document);
+			email.checkMatch();
 
 			expect(emailConfirmFieldElement.classList.add.calledOnce).to.be.true;
 		});
@@ -87,8 +87,8 @@ describe('EmailMatcher', () => {
 			emailElement.value = 'password';
 			emailConfirmElement.value = 'password';
 
-			let emailMatcher = new EmailMatcher(document);
-			emailMatcher.checkMatch();
+			let email = new Email(document);
+			email.checkMatch();
 
 			expect(emailConfirmFieldElement.classList.remove.calledOnce).to.be.true;
 		});
@@ -97,8 +97,8 @@ describe('EmailMatcher', () => {
 			emailElement.value = 'password';
 			emailConfirmElement.value = '';
 
-			let emailMatcher = new EmailMatcher(document);
-			emailMatcher.checkMatch();
+			let email = new Email(document);
+			email.checkMatch();
 
 			expect(emailConfirmFieldElement.classList.add.calledOnce).to.be.false;
 			expect(emailConfirmFieldElement.classList.remove.calledOnce).to.be.false;

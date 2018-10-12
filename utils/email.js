@@ -1,6 +1,6 @@
-class EmailMatcher {
+class Email {
 	/**
-	 * Initalise the EmailMatcher utility
+	 * Initalise the Email utility
 	 */
 	constructor (document) {
 		if (!document) {
@@ -33,4 +33,4 @@ class EmailMatcher {
 	}
 };
 
-module.exports = EmailMatcher;
+module.exports = Email;
