@@ -11,12 +11,14 @@ class Email {
 		this.$emailConfirm = document.querySelector('.ncf #emailConfirm');
 		this.$emailConfirmField = document.querySelector('.ncf #emailConfirmField');
 
-		if (!this.$email || !this.$emailConfirm) {
-			throw new Error(`Please include the email partial on the page${!this.$emailConfirm ? ' making sure to specify showConfirm=true' : ''}.`);
+		if (!this.$email) {
+			throw new Error('Please include the email partial on the page.');
 		}
 
-		this.$email.addEventListener('blur', this.checkMatch.bind(this));
-		this.$emailConfirm.addEventListener('blur', this.checkMatch.bind(this));
+		if (this.$emailConfirm) {
+			this.$email.addEventListener('blur', this.checkMatch.bind(this));
+			this.$emailConfirm.addEventListener('blur', this.checkMatch.bind(this));
+		}
 	}
 
 	/**
