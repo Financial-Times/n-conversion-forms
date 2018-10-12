@@ -17,7 +17,11 @@ module.exports = {
 		}
 
 		return {
-			notify: () => notifier({ [emitProperty]: watchedElement[watchedProperty] + buffer }, targetWindow)
+			notify: () => {
+				if (!watchedElement) return;
+
+				return notifier({ [emitProperty]: watchedElement[watchedProperty] + buffer }, targetWindow);
+			}
 		};
 
 	}
