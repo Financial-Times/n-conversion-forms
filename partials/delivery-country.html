@@ -3,13 +3,14 @@
 
 	<label for="country" class="o-forms__label">Country</label>
 
-	<select id="delivery-country" name="delivery-country" class="o-forms__select js-field__input js-item__value" data-trackable="field-delivery-country" aria-required="true"
-		required>
-		{{#each options as |option|}}
-		<option value="{{option.value}}" {{#if ../value}}{{#ifEquals option.value ../value }} selected{{/ifEquals}}{{else}}{{#if
-			option.isSelected}} selected{{/if}}{{/if}}>{{option.label}}</option>
+	{{#ncf-countries filterList=filterList}}
+	<select id="delivery-country" name="delivery-country" class="o-forms__select js-field__input js-item__value" data-trackable="field-delivery-country" aria-required="true" required>
+		{{#each countries as |country|}}
+		<option value="{{country.code}}" {{#ifEquals country.code ../value }} selected{{/ifEquals}}>{{country.name}}</option>
 		{{/each}}
 	</select>
+
+	{{/ncf-countries}}
 
 	<div class="o-forms__errortext">Please select your country</div>
 

@@ -5,7 +5,7 @@
 	{{#ncf-countries filterList=filterList}}
 	<select id="country" name="country" class="o-forms__select js-field__input js-item__value" data-trackable="field-billing-country" aria-required="true" required>
 		{{#each countries as |country|}}
-		<option value="{{country.code}}"{{#if ../value}}{{#ifEquals country.code ../value }} selected{{/ifEquals}}{{/if}}>{{country.name}}</option>
+		<option value="{{country.code}}" {{#ifEquals country.code ../value }} selected{{/ifEquals}}>{{country.name}}</option>
 		{{/each}}
 	</select>
 	{{/ncf-countries}}
