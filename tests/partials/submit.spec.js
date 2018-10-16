@@ -15,7 +15,7 @@ describe('submit template', () => {
 	it('should say Continue by default', () => {
 		const $ = context.template({});
 
-		expect($(SELECTOR_BUTTON).text()).to.equal('Continue');
+		expect($(SELECTOR_BUTTON).text().trim()).to.equal('Continue');
 	});
 
 	it('should display label if given', () => {
@@ -24,7 +24,7 @@ describe('submit template', () => {
 			label
 		});
 
-		expect($(SELECTOR_BUTTON).text()).to.equal(label);
+		expect($(SELECTOR_BUTTON).text().trim()).to.equal(label);
 	});
 
 	it('should not be centered by default', () => {

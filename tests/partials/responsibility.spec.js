@@ -4,6 +4,7 @@ const {
 	fetchPartial,
 	registerHelper,
 	unregisterHelper,
+	shouldBeDisableable,
 	shouldBeRequired,
 	shouldError
 } = require('../helpers');
@@ -69,4 +70,6 @@ describe('responsibility template', () => {
 	shouldBeRequired(context, 'select');
 
 	shouldError(context);
+
+	shouldBeDisableable(context, 'select');
 });

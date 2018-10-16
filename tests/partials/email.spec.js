@@ -1,6 +1,7 @@
 const { expect } = require('chai');
 const {
 	fetchPartial,
+	shouldBeDisableable,
 	shouldBeRequired,
 	shouldPopulateValue,
 	shouldError
@@ -19,14 +20,6 @@ describe('email template', () => {
 		const $ = context.template({});
 
 		expect($('input').attr('disabled')).to.be.undefined;
-	});
-
-	it('should be disabled if the option passed', () => {
-		const $ = context.template({
-			disabled: true
-		});
-
-		expect($('input').attr('disabled')).to.equal('disabled');
 	});
 
 	it('should have a default label', () => {
@@ -89,4 +82,7 @@ describe('email template', () => {
 		showConfirm: true,
 		hasConfirmError: true
 	});
+
+	shouldBeDisableable(context, '#email');
+	shouldBeDisableable(context, '#emailConfirm', { showConfirm: true });
 });

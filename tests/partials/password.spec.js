@@ -1,6 +1,7 @@
 const { expect } = require('chai');
 const {
 	fetchPartial,
+	shouldBeDisableable,
 	shouldBeRequired,
 	shouldError
 } = require('../helpers');
@@ -40,4 +41,6 @@ describe('password template', () => {
 	});
 
 	shouldError(context);
+
+	shouldBeDisableable(context, 'input');
 });

@@ -132,6 +132,14 @@ const shouldPopulateValue = function (context) {
 	});
 };
 
+const shouldBeDisableable = function (context, selector, options) {
+	it('should be able to get disabled', () => {
+		const $ = context.template(Object.assign({ isDisabled: true }, options));
+
+		expect($(selector).attr('disabled')).to.equal('disabled');
+	});
+};
+
 const shouldBeRequired = function (context, selector) {
 	it('should be required', () => {
 		const $ = context.template({});
@@ -176,6 +184,7 @@ module.exports = {
 	shouldPopulateOptions,
 	shouldSelectOption,
 	shouldPopulateValue,
+	shouldBeDisableable,
 	shouldBeRequired,
 	shouldContainPartials,
 	shouldError

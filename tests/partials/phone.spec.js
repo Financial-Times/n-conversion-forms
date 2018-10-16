@@ -1,6 +1,7 @@
 const { expect } = require('chai');
 const {
 	fetchPartial,
+	shouldBeDisableable,
 	shouldBeRequired,
 	shouldPopulateValue,
 	shouldError
@@ -40,4 +41,6 @@ describe('phone template', () => {
 	});
 
 	shouldError(context);
+
+	shouldBeDisableable(context, 'input');
 });

@@ -1,5 +1,6 @@
 const {
 	fetchPartial,
+	shouldBeDisableable,
 	shouldBeRequired,
 	shouldPopulateValue,
 	shouldError
@@ -17,4 +18,6 @@ describe('lastname template', () => {
 	shouldBeRequired(context, 'input');
 
 	shouldError(context);
+
+	shouldBeDisableable(context, 'input');
 });
