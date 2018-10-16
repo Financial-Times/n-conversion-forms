@@ -11,7 +11,15 @@
 		5 to 15 characters (numbers only)
 	</small>
 
-	<input type="tel" id="primaryTelephone" name="primaryTelephone" value="{{value}}" class="o-forms__text js-field__input js-item__value" placeholder="Enter your phone number" data-min="5" data-max="15" data-trackable="field-phone" aria-describedby="phone-description" aria-required="true" required{{#if pattern}} pattern="{{pattern}}"{{/if}}>
+	<input type="tel" id="primaryTelephone" name="primaryTelephone" value="{{value}}" placeholder="Enter your phone number"
+				class="o-forms__text js-field__input js-item__value"
+				data-min="5"
+				data-max="15"
+				data-trackable="field-phone"
+				aria-describedby="phone-description"
+				aria-required="true" required
+				{{#if pattern}}pattern="{{pattern}}"{{/if}}
+				{{#if disabled}}disabled{{/if}}>
 
 	<div class="o-forms__errortext">This phone number is not valid</div>
 

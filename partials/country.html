@@ -3,7 +3,10 @@
 	<label for="country" class="o-forms__label">Country</label>
 
 	{{#ncf-countries filterList=filterList}}
-	<select id="country" name="country" class="o-forms__select js-field__input js-item__value" data-trackable="field-billing-country" aria-required="true" required>
+	<select id="country" name="country" class="o-forms__select js-field__input js-item__value"
+					data-trackable="field-billing-country"
+					aria-required="true" required
+					{{#if disabled}}disabled{{/if}}>
 		{{#each countries as |country|}}
 		<option value="{{country.code}}" {{#ifEquals country.code ../value }} selected{{/ifEquals}}>{{country.name}}</option>
 		{{/each}}

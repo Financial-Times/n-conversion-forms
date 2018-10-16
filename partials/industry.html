@@ -4,7 +4,10 @@
 
 	{{#ncf-common-data import="demographics.industries.industries" export="options"}}
 
-	<select id="industry" name="industry" class="o-forms__select js-field__input js-item__value" data-trackable="field-industry" aria-required="true" required>
+	<select id="industry" name="industry" class="o-forms__select js-field__input js-item__value"
+					data-trackable="field-industry"
+					aria-required="true" required
+					{{#if disabled}}disabled{{/if}}>
 		{{#each options as |option|}}
 		<option value="{{option.code}}"{{#if ../value}}{{#ifEquals option.code ../value }} selected{{/ifEquals}}{{else}}{{/if}}>{{option.description}}</option>
 		{{/each}}

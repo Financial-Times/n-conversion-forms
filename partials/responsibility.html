@@ -4,7 +4,10 @@
 
 	{{#ncf-common-data import="demographics.responsibilities.responsibilities" export="options"}}
 
-	<select id="responsibility" name="responsibility" class="o-forms__select js-field__input js-item__value" data-trackable="field-responsibility" aria-required="true" required>
+	<select id="responsibility" name="responsibility" class="o-forms__select js-field__input js-item__value"
+					data-trackable="field-responsibility"
+					aria-required="true" required
+					{{#if disabled}}disabled{{/if}}>
 		{{#each options as |option|}}
 		<option value="{{option.code}}"{{#if ../value}}{{#ifEquals option.code ../value }} selected{{/ifEquals}}{{/if}}>{{option.description}}</option>
 		{{/each}}
