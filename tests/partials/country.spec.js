@@ -31,22 +31,25 @@ describe('country template', () => {
 		unregisterHelper('ncf-countries');
 	});
 
-	it('should show no options if none passed in', () => {
+	it('should show just default option if none passed in', () => {
 		countries = [];
 		const $ = context.template({});
-		expect($('select').find('option').length).to.equal(0);
+		expect($('select').find('option').length).to.equal(1);
+
+		expect($('select option').first().attr('value')).to.equal('');
+		expect($('select option').first().text()).to.equal('Please select a country');
 	});
 
 	it('should generate options if passed', () => {
 		const $ = context.template({});
-		expect($('select').find('option').length).to.equal(countries.length);
+		expect($('select').find('option').length).to.equal(countries.length + 1);
 	});
 
 	it('should generate options with the correct label and value', () => {
 		const $ = context.template({});
-
-		expect($('select option').first().attr('value')).to.equal(mockCountries[0].code);
-		expect($('select option').first().text()).to.equal(mockCountries[0].name);
+		const secondOption = $('select option').get(1);
+		expect($(secondOption).attr('value')).to.equal(mockCountries[0].code);
+		expect($(secondOption).text()).to.equal(mockCountries[0].name);
 	});
 
 	it('should select the correct option if value passed', () => {

@@ -5,6 +5,7 @@
 	{{#ncf-common-data import="demographics.positions.positions" export="options"}}
 
 	<select id="position" name="position" class="o-forms__select js-field__input js-item__value" data-trackable="field-position" aria-required="true" required>
+		<option value>Please select a job position</option>
 		{{#each options as |option|}}
 		<option value="{{option.code}}"{{#if ../value}}{{#ifEquals option.code ../value }} selected{{/ifEquals}}{{/if}}>{{option.description}}</option>
 		{{/each}}

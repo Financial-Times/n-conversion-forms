@@ -5,6 +5,7 @@
 
 	{{#ncf-countries filterList=filterList}}
 	<select id="delivery-country" name="delivery-country" class="o-forms__select js-field__input js-item__value" data-trackable="field-delivery-country" aria-required="true" required>
+		<option value>Please select a country</option>
 		{{#each countries as |country|}}
 		<option value="{{country.code}}" {{#ifEquals country.code ../value }} selected{{/ifEquals}}>{{country.name}}</option>
 		{{/each}}
