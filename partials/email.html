@@ -20,7 +20,7 @@
 				data-trackable="field-email"
 				aria-describedby="email-description"
 				aria-required="true" required
-				{{#if disabled}}disabled{{/if}}>
+				{{#if isDisabled}}disabled{{/if}}>
 
 	<div class="o-forms__errortext">This email address is not valid</div>
 
@@ -36,7 +36,7 @@
 				class="no-mouseflow o-forms__text js-field__input js-item__value{{#if readonly}} o-forms__field-disabled{{/if}}"
 				data-trackable="field-emailConfrm"
 				aria-required="true" required
-				{{#if disabled}}disabled{{/if}}>
+				{{#if isDisabled}}disabled{{/if}}>
 
 	<div class="o-forms__errortext">This email address does not match</div>
 
