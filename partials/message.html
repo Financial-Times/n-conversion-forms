@@ -6,7 +6,7 @@
 			{{#if actions}}
 				<div class="o-message__actions">
 					{{#each actions}}
-						<a href="{{link}}" class="o-message__actions__{{#if isSecondary}}secondary{{else}}primary{{/if}}">{{text}}</a>
+						<a href="{{link}}" class="{{#if isSecondary}}o-message__actions__secondary{{else}}o-message__actions__primary{{/if}}">{{text}}</a>
 					{{/each}}
 				</div>
 			{{/if}}
