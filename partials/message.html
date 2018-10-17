@@ -1,7 +1,16 @@
-<div class="o-forms o-forms--wide o-message o-message--alert{{#if isError}} o-message--error{{else if isSuccess}} o-message--success{{else}} o-message--neutral{{/if}}" data-o-component="o-message">
+<div class="ncf__message o-forms o-forms--wide o-message o-message--alert{{#if isError}} o-message--error{{else if isSuccess}} o-message--success{{else}} o-message--neutral{{/if}}" data-o-component="o-message">
 	<div class="o-message__container">
 		<div class="o-message__content">
-			<p class="o-message__content-main">{{message}}</p>
+			<p class="o-message__content-main">
+				{{#if title}}
+					<span class="o-message__content-highlight">{{title}}</span>
+				{{/if}}
+				<span class="o-message__content-detail">{{message}}</span>
+			</p>
+
+			{{#each additional}}
+				<p class="o-message__content--additional">{{this}}</p>
+			{{/each}}
 
 			{{#if actions}}
 				<div class="o-message__actions">

@@ -5,6 +5,8 @@
   "message": {
     "isError": true,
     "message": "The quick brown fox jumped over the lazy dog!",
+    "title": "Hooray!",
+    "additional": ["You can specify additional messages."],
     "actions": [
       { "link": "#", "text": "Button" },
       { "link": "#", "text": "Text link", "isSecondary": true }

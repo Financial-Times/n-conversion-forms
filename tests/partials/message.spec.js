@@ -7,8 +7,10 @@ const CLASS_ACTIONS_SECONDARY = 'o-message__actions__secondary';
 const CLASS_SUCCESS = 'o-message--success';
 const CLASS_NEUTRAL = 'o-message--neutral';
 const SELECTOR_ACTIONS = '.o-message__actions';
+const SELECTOR_ADDITIONAL = '.o-message__content--additional';
 const SELECTOR_MESSAGE = '.o-message__content-main';
 const SELECTOR_CONTAINER = '.o-message';
+const SELECTOR_TITLE = '.o-message__content-highlight';
 
 let context = {};
 
@@ -20,7 +22,7 @@ describe('message template', () => {
 	it('should say nothing by default', () => {
 		const $ = context.template({});
 
-		expect($(SELECTOR_MESSAGE).text()).to.equal('');
+		expect($(SELECTOR_MESSAGE).text().trim()).to.equal('');
 	});
 
 	it('should output the message if passed', () => {
@@ -29,7 +31,7 @@ describe('message template', () => {
 			message
 		});
 
-		expect($(SELECTOR_MESSAGE).text()).to.equal(message);
+		expect($(SELECTOR_MESSAGE).text().trim()).to.equal(message);
 	});
 
 	it('should have the error class if isError passed', () => {
@@ -58,6 +60,37 @@ describe('message template', () => {
 		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_ERROR);
 		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_SUCCESS);
 		expect($(SELECTOR_CONTAINER).attr('class')).to.contain(CLASS_NEUTRAL);
+	});
+
+	it('should not display a title if not specified', () => {
+		const $ = context.template({});
+		const $title = $(SELECTOR_TITLE);
+
+		expect($title.length).to.equal(0);
+	});
+
+	it('should display a title if specified', () => {
+		const $ = context.template({ title: 'Foo' });
+		const $title = $(SELECTOR_TITLE);
+
+		expect($title.length).to.equal(1);
+		expect($title.text().trim()).to.equal('Foo');
+	});
+
+	it('should not display additional copy if not specified', () => {
+		const $ = context.template({});
+		const $additional = $(SELECTOR_ADDITIONAL);
+
+		expect($additional.length).to.equal(0);
+	});
+
+	it('should display additional copy if specified', () => {
+		const $ = context.template({ additional: ['Foo', 'Bar'] });
+		const $additional = $(SELECTOR_ADDITIONAL);
+
+		expect($additional.length).to.equal(2);
+		expect($additional.eq(0).text().trim()).to.equal('Foo');
+		expect($additional.eq(1).text().trim()).to.equal('Bar');
 	});
 
 	it('should add actions if specified', () => {
