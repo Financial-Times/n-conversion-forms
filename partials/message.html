@@ -1,24 +1,26 @@
-<div class="ncf__message o-forms o-forms--wide o-message o-message--alert{{#if isError}} o-message--error{{else if isSuccess}} o-message--success{{else if isInform}} o-message--inform{{else}} o-message--neutral{{/if}}" data-o-component="o-message">
-	<div class="o-message__container">
-		<div class="o-message__content">
-			<p class="o-message__content-main">
-				{{#if title}}
-					<span class="o-message__content-highlight">{{title}}</span>
+<div class="ncf__message o-forms o-forms--wide">
+	<div class="o-message {{#if isNotice}}o-message--notice-inner{{else}}o-message--alert-inner{{/if}}{{#if isError}} o-message--error{{else if isSuccess}} o-message--success{{else if isInform}} o-message--inform{{else}} o-message--neutral{{/if}}" data-o-component="o-message">
+		<div class="o-message__container">
+			<div class="o-message__content">
+				<p class="o-message__content-main">
+					{{#if title}}
+						<span class="o-message__content-highlight">{{title}}</span>
+					{{/if}}
+					<span class="o-message__content-detail">{{message}}</span>
+				</p>
+
+				{{#each additional}}
+					<p class="o-message__content--additional">{{this}}</p>
+				{{/each}}
+
+				{{#if actions}}
+					<div class="o-message__actions">
+						{{#each actions}}
+							<a href="{{link}}" class="{{#if isSecondary}}o-message__actions__secondary{{else}}o-message__actions__primary{{/if}}">{{text}}</a>
+						{{/each}}
+					</div>
 				{{/if}}
-				<span class="o-message__content-detail">{{message}}</span>
-			</p>
-
-			{{#each additional}}
-				<p class="o-message__content--additional">{{this}}</p>
-			{{/each}}
-
-			{{#if actions}}
-				<div class="o-message__actions">
-					{{#each actions}}
-						<a href="{{link}}" class="{{#if isSecondary}}o-message__actions__secondary{{else}}o-message__actions__primary{{/if}}">{{text}}</a>
-					{{/each}}
-				</div>
-			{{/if}}
+			</div>
 		</div>
 	</div>
 </div>
