@@ -1,6 +1,8 @@
 const { expect } = require('chai');
 const { fetchPartial } = require('../helpers');
 
+const CLASS_ALERT = 'o-message--alert-inner';
+const CLASS_NOTICE = 'o-message--notice-inner';
 const CLASS_ERROR = 'o-message--error';
 const CLASS_ACTIONS_PRIMARY = 'o-message__actions__primary';
 const CLASS_ACTIONS_SECONDARY = 'o-message__actions__secondary';
@@ -35,7 +37,21 @@ describe('message template', () => {
 		expect($(SELECTOR_MESSAGE).text().trim()).to.equal(message);
 	});
 
-	it('should have the error class if isError passed', () => {
+	it('should have the notice message type if isNotice is passed', () => {
+		const $ = context.template({
+			isNotice: true
+		});
+
+		expect($(SELECTOR_CONTAINER).attr('class')).to.contain(CLASS_NOTICE);
+	});
+
+	it('should default to the alert message type', () => {
+		const $ = context.template();
+
+		expect($(SELECTOR_CONTAINER).attr('class')).to.contain(CLASS_ALERT);
+	});
+
+	it('should have the error class if isError is passed', () => {
 		const $ = context.template({
 			isError: true
 		});
@@ -46,7 +62,7 @@ describe('message template', () => {
 		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_NEUTRAL);
 	});
 
-	it('should have the success class if isSuccess passed', () => {
+	it('should have the success class if isSuccess is passed', () => {
 		const $ = context.template({
 			isSuccess: true
 		});
@@ -57,7 +73,7 @@ describe('message template', () => {
 		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_NEUTRAL);
 	});
 
-	it('should have the inform class if isSuccess passed', () => {
+	it('should have the inform class if isSuccess is passed', () => {
 		const $ = context.template({
 			isInform: true
 		});
