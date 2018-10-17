@@ -2,8 +2,11 @@ const { expect } = require('chai');
 const { fetchPartial } = require('../helpers');
 
 const CLASS_ERROR = 'o-message--error';
+const CLASS_ACTIONS_PRIMARY = 'o-message__actions__primary';
+const CLASS_ACTIONS_SECONDARY = 'o-message__actions__secondary';
 const CLASS_SUCCESS = 'o-message--success';
 const CLASS_NEUTRAL = 'o-message--neutral';
+const SELECTOR_ACTIONS = '.o-message__actions';
 const SELECTOR_MESSAGE = '.o-message__content-main';
 const SELECTOR_CONTAINER = '.o-message';
 
@@ -55,5 +58,27 @@ describe('message template', () => {
 		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_ERROR);
 		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_SUCCESS);
 		expect($(SELECTOR_CONTAINER).attr('class')).to.contain(CLASS_NEUTRAL);
+	});
+
+	it('should add actions if specified', () => {
+		const $ = context.template({ actions: [{ link: '#', text: 'Foo' }] });
+		const $link = $(`${SELECTOR_ACTIONS} a`);
+
+		expect($(SELECTOR_ACTIONS).length).to.equal(1);
+		expect($link.attr('class')).to.contain(CLASS_ACTIONS_PRIMARY);
+		expect($link.attr('href')).to.equal('#');
+		expect($link.text()).to.equal('Foo');
+	});
+
+	it('should add multiple actions if specified', () => {
+		const $ = context.template({ actions: [{ link: '#', text: 'Foo' }, { link: '#', text: 'Bar' }] });
+
+		expect($(`${SELECTOR_ACTIONS} a`).length).to.equal(2);
+	});
+
+	it('should add secondary action if specified', () => {
+		const $ = context.template({ actions: [{ link: '#', text: 'Foo', isSecondary: true }] });
+
+		expect($(`${SELECTOR_ACTIONS} a`).attr('class')).to.contain(CLASS_ACTIONS_SECONDARY);
 	});
 });

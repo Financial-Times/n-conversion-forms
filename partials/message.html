@@ -2,6 +2,14 @@
 	<div class="o-message__container">
 		<div class="o-message__content">
 			<p class="o-message__content-main">{{message}}</p>
+
+			{{#if actions}}
+				<div class="o-message__actions">
+					{{#each actions}}
+						<a href="{{link}}" class="o-message__actions__{{#if isSecondary}}secondary{{else}}primary{{/if}}">{{text}}</a>
+					{{/each}}
+				</div>
+			{{/if}}
 		</div>
 	</div>
 </div>

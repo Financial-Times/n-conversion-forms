@@ -4,7 +4,11 @@
   },
   "message": {
     "isError": true,
-    "message": "The quick brown fox jumped over the lazy dog!"
+    "message": "The quick brown fox jumped over the lazy dog!",
+    "actions": [
+      { "link": "#", "text": "Button" },
+      { "link": "#", "text": "Text link", "isSecondary": true }
+    ]
   },
   "package-change": {
     "changePackageUrl": "/foo",
