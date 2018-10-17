@@ -4,6 +4,7 @@ const { fetchPartial } = require('../helpers');
 const CLASS_ERROR = 'o-message--error';
 const CLASS_ACTIONS_PRIMARY = 'o-message__actions__primary';
 const CLASS_ACTIONS_SECONDARY = 'o-message__actions__secondary';
+const CLASS_INFORM = 'o-message--inform';
 const CLASS_SUCCESS = 'o-message--success';
 const CLASS_NEUTRAL = 'o-message--neutral';
 const SELECTOR_ACTIONS = '.o-message__actions';
@@ -40,6 +41,7 @@ describe('message template', () => {
 		});
 
 		expect($(SELECTOR_CONTAINER).attr('class')).to.contain(CLASS_ERROR);
+		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_INFORM);
 		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_SUCCESS);
 		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_NEUTRAL);
 	});
@@ -50,7 +52,19 @@ describe('message template', () => {
 		});
 
 		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_ERROR);
+		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_INFORM);
 		expect($(SELECTOR_CONTAINER).attr('class')).to.contain(CLASS_SUCCESS);
+		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_NEUTRAL);
+	});
+
+	it('should have the inform class if isSuccess passed', () => {
+		const $ = context.template({
+			isInform: true
+		});
+
+		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_ERROR);
+		expect($(SELECTOR_CONTAINER).attr('class')).to.contain(CLASS_INFORM);
+		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_SUCCESS);
 		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_NEUTRAL);
 	});
 
@@ -58,6 +72,7 @@ describe('message template', () => {
 		const $ = context.template({});
 
 		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_ERROR);
+		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_INFORM);
 		expect($(SELECTOR_CONTAINER).attr('class')).to.not.contain(CLASS_SUCCESS);
 		expect($(SELECTOR_CONTAINER).attr('class')).to.contain(CLASS_NEUTRAL);
 	});
