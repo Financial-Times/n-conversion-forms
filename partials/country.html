@@ -8,10 +8,21 @@
 					aria-required="true" required
 					{{#if isDisabled}}disabled{{/if}}>
 		<option value>Please select a country</option>
-		{{#each countries as |country|}}
-		<option value="{{country.code}}" {{#ifEquals country.code ../value }} selected{{/ifEquals}}>{{country.name}}</option>
-		{{/each}}
+		{{#if ncfCountryGroups}}
+			{{#each ncfCountryGroups as |group|}}
+			<optgroup label="{{group.label}}">
+				{{#each group.countries as |country|}}
+					<option value="{{country.code}}" {{#ifEquals country.code ../value }} selected{{/ifEquals}}>{{country.name}}</option>
+				{{/each}}
+			</optgroup>
+			{{/each}}
+		{{else}}
+			{{#each countries as |country|}}
+				<option value="{{country.code}}" {{#ifEquals country.code ../value }} selected{{/ifEquals}}>{{country.name}}</option>
+			{{/each}}
+		{{/if}}
 	</select>
+
 	{{/ncf-countries}}
 
 	<div class="o-forms__errortext">Please select your country</div>
