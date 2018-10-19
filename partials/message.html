@@ -6,11 +6,11 @@
 					{{#if title}}
 						<span class="o-message__content-highlight">{{title}}</span>
 					{{/if}}
-					<span class="o-message__content-detail">{{message}}</span>
+					<span class="o-message__content-detail">{{{message}}}</span>
 				</p>
 
 				{{#each additional}}
-					<p class="o-message__content--additional">{{this}}</p>
+					<p class="o-message__content--additional">{{{this}}}</p>
 				{{/each}}
 
 				{{#if actions}}

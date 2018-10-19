@@ -12,6 +12,7 @@ const CLASS_NEUTRAL = 'o-message--neutral';
 const SELECTOR_ACTIONS = '.o-message__actions';
 const SELECTOR_ADDITIONAL = '.o-message__content--additional';
 const SELECTOR_MESSAGE = '.o-message__content-main';
+const SELECTOR_MESSAGE_CONTENT = '.o-message__content-detail';
 const SELECTOR_CONTAINER = '.o-message';
 const SELECTOR_TITLE = '.o-message__content-highlight';
 
@@ -108,6 +109,19 @@ describe('message template', () => {
 		expect($title.text().trim()).to.equal('Foo');
 	});
 
+	it('should display a message if specified', () => {
+		const $ = context.template({ message: 'Foo' });
+		const $message = $(SELECTOR_MESSAGE_CONTENT);
+
+		expect($message.length).to.equal(1);
+		expect($message.text().trim()).to.equal('Foo');
+	});
+
+	it('should allow html in the message content', () => {
+		const $ = context.template({ message: '<span id="message-content">Foo</span>' });
+		expect($('#message-content').length).to.equal(1);
+	});
+
 	it('should not display additional copy if not specified', () => {
 		const $ = context.template({});
 		const $additional = $(SELECTOR_ADDITIONAL);
@@ -122,6 +136,11 @@ describe('message template', () => {
 		expect($additional.length).to.equal(2);
 		expect($additional.eq(0).text().trim()).to.equal('Foo');
 		expect($additional.eq(1).text().trim()).to.equal('Bar');
+	});
+
+	it('should allow html in the additional copy', () => {
+		const $ = context.template({ additional: ['<span id="additional-content">Foo</span>'] });
+		expect($('#additional-content').length).to.equal(1);
 	});
 
 	it('should add actions if specified', () => {
