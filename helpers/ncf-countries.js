@@ -6,7 +6,7 @@ const MINIMUM_TO_SHOW_SPLIT = 2;
 module.exports = function ({ hash = {}, fn }) {
 	let newContext = {};
 	const data = Array.isArray(hash.filterList) ? countries.filter(countryInFilterList(hash.filterList)) : countries;
-	newContext = data.length >= MINIMUM_TO_SPLIT ? splitIntoUsage(data) : { countries: data };
+	const newContext = data.length >= MINIMUM_TO_SPLIT ? splitIntoUsage(data) : { countries: data };
 	const context = Object.assign(newContext, this);
 	return fn(context);
 };
