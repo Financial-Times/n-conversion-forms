@@ -12,7 +12,7 @@
 			{{#each ncfCountryGroups as |group|}}
 			<optgroup label="{{group.label}}">
 				{{#each group.countries as |country|}}
-					<option value="{{country.code}}" {{#ifEquals country.code ../value }} selected{{/ifEquals}}>{{country.name}}</option>
+					<option value="{{country.code}}" {{#ifEquals country.code ../../value }} selected{{/ifEquals}}>{{country.name}}</option>
 				{{/each}}
 			</optgroup>
 			{{/each}}
