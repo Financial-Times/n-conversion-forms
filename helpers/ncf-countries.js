@@ -1,14 +1,12 @@
 const { countries } = require('n-common-static-data').billingCountries;
 
-module.exports = function ({ hash = {}, fn }) {
+const MINIMUM_TO_SPLIT = 50;
+const MINIMUM_TO_SHOW_SPLIT = 2;
 
+module.exports = function ({ hash = {}, fn }) {
 	let newContext = {};
-	if (Array.isArray(hash.filterList)) {
-		const data = countries.filter(countryInFilterList(hash.filterList));
-		newContext = { countries: data };
-	} else {
-		newContext = { ncfCountryGroups: splitIntoUsage(countries) };
-	}
+	const data = Array.isArray(hash.filterList) ? countries.filter(countryInFilterList(hash.filterList)) : countries;
+	newContext = data.length >= MINIMUM_TO_SPLIT ? splitIntoUsage(countries) : { countries: data };
 	const context = Object.assign(newContext, this);
 	return fn(context);
 };
@@ -17,21 +15,25 @@ function countryInFilterList (filterList) {
 	return item => filterList.includes(item.code);
 }
 
-
 function splitIntoUsage (countries) {
 	const frequentCountries = ['GBR', 'USA', 'JPN', 'FRA', 'CAN'];
-	const grouped = countries.reduce((acc, item) => {
-		const key = frequentCountries.includes(item.code) ? 'frequent' : 'remainder';
-		acc[key].push(item);
-		return acc;
-	}, { frequent: [], remainder: [] });
+	let foundFrequent = countries.map((item) => {
+		return frequentCountries.includes(item.code) && item;
+	}).filter(Boolean);
 
-	grouped.frequent = grouped.frequent.sort((a, b) => {
+	if (foundFrequent.length < MINIMUM_TO_SHOW_SPLIT) {
+		// Not worth showing the split version, just return the original
+		return { countries };
+	}
+
+	foundFrequent = foundFrequent.sort((a, b) => {
 		return frequentCountries.indexOf(a.code) - frequentCountries.indexOf(b.code);
 	});
 
-	return [
-		{ label: 'Frequently Used', countries: grouped.frequent },
-		{ label: 'Alphabetical', countries: grouped.remainder }
-	];
+	return {
+		ncfCountryGroups: [
+			{ label: 'Frequently Used', countries: foundFrequent },
+			{ label: 'Alphabetical', countries }
+		]
+	};
 }

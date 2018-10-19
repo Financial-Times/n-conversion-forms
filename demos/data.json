@@ -1,8 +1,8 @@
 {
-	"country": {
+  "country": {
     "filterList": ["GBR", "JPN", "USA", "FRA"]
-	},
-	"message": {
+  },
+  "message": {
     "isError": true,
     "message": "The quick brown fox jumped over the lazy dog!"
   },
