@@ -6,7 +6,7 @@ const MINIMUM_TO_SHOW_SPLIT = 2;
 module.exports = function ({ hash = {}, fn }) {
 	let newContext = {};
 	const data = Array.isArray(hash.filterList) ? countries.filter(countryInFilterList(hash.filterList)) : countries;
-	newContext = data.length >= MINIMUM_TO_SPLIT ? splitIntoUsage(countries) : { countries: data };
+	newContext = data.length >= MINIMUM_TO_SPLIT ? splitIntoUsage(data) : { countries: data };
 	const context = Object.assign(newContext, this);
 	return fn(context);
 };
@@ -26,6 +26,7 @@ function splitIntoUsage (countries) {
 		return { countries };
 	}
 
+	// Sort the frequently used countries into the usage metrics order (as defined on L#19)
 	foundFrequent = foundFrequent.sort((a, b) => {
 		return frequentCountries.indexOf(a.code) - frequentCountries.indexOf(b.code);
 	});
