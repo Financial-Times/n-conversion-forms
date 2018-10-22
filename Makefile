@@ -31,3 +31,6 @@ a11y-demo:
 
 smoke:
 	n-test smoke --host http://localhost:5005
+
+docs:
+	jsdoc2md ./utils/*.js > DOCUMENTATION.md
