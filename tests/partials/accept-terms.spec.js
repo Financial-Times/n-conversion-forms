@@ -75,8 +75,7 @@ describe('accept-terms template', () => {
 
 	describe('signup', () => {
 		const params = {
-			isSignup: true,
-			isExtended: true, // @todo Remove once extended terms test has been completed
+			isSignup: true
 		};
 
 		it('should use the signup data tracking if the isSignup is true', () => {
