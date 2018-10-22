@@ -12,7 +12,7 @@
 @include oFormsSuffixFeature();
 @include oFormsSectionFeature();
 @include oFormsWideFeature();
-@include oMessage($types: ('alert', 'notice-bleed'), $status: ('error', 'inform', 'success'));
+@include oMessage();
 @include oFormsRadioCheckboxRightModifier();
 
 // Custom styles

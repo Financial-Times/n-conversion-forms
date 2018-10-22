@@ -24,22 +24,22 @@
     "n-common-static-data": "financial-times/n-common-static-data#v1.5.0"
   },
   "devDependencies": {
-    "@financial-times/n-gage": "^2.0.2",
-    "@financial-times/n-handlebars": "^1.19.6",
-    "@financial-times/n-internal-tool": "^2.2.4",
+    "@financial-times/n-gage": "^2.1.2",
+    "@financial-times/n-handlebars": "^1.21.0",
+    "@financial-times/n-internal-tool": "^2.3.1",
     "autoprefixer": "^8.6.3",
     "bower": "^1.8.4",
     "bower-resolve-webpack-plugin": "^1.0.4",
-    "chai": "^4.1.2",
+    "chai": "^4.2.0",
     "cheerio": "^1.0.0-rc.2",
     "mocha": "^5.1.1",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.9.4",
     "nodemon": "^1.17.5",
     "pa11y-ci": "^2.1.1",
     "postcss-cli": "^5.0.1",
     "proxyquire": "^2.1.0",
-    "sinon": "^6.2.0",
-    "webpack": "^4.12.0",
-    "webpack-cli": "^3.0.4"
+    "sinon": "^6.3.5",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
   }
 }
