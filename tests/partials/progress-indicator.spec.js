@@ -33,7 +33,7 @@ describe('progress-indicator template', () => {
 				{isComplete: true, name: 'test1', url: '/test1'}
 			]
 		});
-		
+
 		expect($(`.${CLASS_PROGRESS_ITEM}`).length).to.equal(2);
 		expect($('a[href="/test1"]').text()).to.contain('test1');
 	});
