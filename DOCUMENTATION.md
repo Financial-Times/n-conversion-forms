@@ -1,6 +1,8 @@
 <a name="utils"></a>
 
 ## utils : <code>object</code>
+Simple utilities for enhancing conversion forms
+
 **Kind**: global namespace  
 
 * [utils](#utils) : <code>object</code>
