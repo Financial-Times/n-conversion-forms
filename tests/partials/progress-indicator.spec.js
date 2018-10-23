@@ -33,9 +33,9 @@ describe('progress-indicator template', () => {
 				{isComplete: true, name: 'test1', url: '/test1'}
 			]
 		});
-
+		
 		expect($(`.${CLASS_PROGRESS_ITEM}`).length).to.equal(2);
-		expect($('form[action="/test1"] button').text()).to.contain('test1');
+		expect($('a[href="/test1"]').text()).to.contain('test1');
 	});
 
 	it('should mark the progress item complete', () => {
@@ -54,20 +54,7 @@ describe('progress-indicator template', () => {
 		expect($(`.${CLASS_PROGRESS_ITEM}`).hasClass(CLASS_CURRENT)).to.be.true;
 	});
 
-	it('should write out all formData as hidden fields', () => {
-		const $ = context.template({
-			items: [{isComplete: true, name: 'test', url: '/test'}],
-			formData: [
-				{name: 'test', value: 'test'},
-				{name: 'test1', value: 'test1'}
-			]
-		});
-
-		expect($('input').length).to.equal(2);
-		expect($('input[name="test1"]').attr('value')).to.equal('test1');
-	});
-
-	it('should only create form items for pages you can go back to', () => {
+	it('should only create links for pages you can go back to', () => {
 		const $ = context.template({
 			items: [
 				{ isComplete: true, name: 'test', url: '/test' },
@@ -76,7 +63,7 @@ describe('progress-indicator template', () => {
 			]
 		});
 
-		expect($(`form.${CLASS_PROGRESS_ITEM}`).length).to.equal(1);
+		expect($(`a.${CLASS_PROGRESS_ITEM}`).length).to.equal(1);
 		expect($(`div.${CLASS_PROGRESS_ITEM}`).length).to.equal(2);
 	});
 });
