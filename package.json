@@ -21,7 +21,7 @@
   "homepage": "https://github.com/Financial-Times/n-conversion-forms#readme",
   "dependencies": {
     "lodash.get": "^4.4.2",
-    "n-common-static-data": "financial-times/n-common-static-data#v1.5.0"
+    "n-common-static-data": "financial-times/n-common-static-data#v1.6.1"
   },
   "devDependencies": {
     "@financial-times/n-gage": "^2.1.2",
