@@ -1,15 +1,16 @@
 /**
  * Utility for the `n-conversion-forms/partial/password.html` partial
- * @param {Document} document Windows [document](https://developer.mozilla.org/en-US/docs/Web/API/Document) object
- * @throws If document not passed
- * @throws If password or checkbox elements not found
- * @example
- * // Initiate with window.document
- * const password = new Password(window.document);
+ * @memberof utils
  */
 class Password {
 	/**
 	 * Create password utility and register change listener to toggle password mask
+ 	 * @param {Document} document Windows [document](https://developer.mozilla.org/en-US/docs/Web/API/Document) object
+	 * @throws If `document` object is not passed
+   	 * @throws If password or checkbox elements not found in document
+     * @example
+     * // Initiate with window.document
+     * const password = new Password(window.document);
 	 */
 	constructor (document) {
 		if (!document) {
@@ -30,9 +31,9 @@ class Password {
 
 	/**
 	 * Toggles whether the password is shown in plain text or not
-	 * @param {Boolean} mask Pass true to show plain text
+	 * @param {Boolean} mask Pass `false` to show the password in plain text
 	 * @example
- 	 * // Force password to be shown in plain text
+ 	 * // Show the password in plain text
 	 * password.toggleMask(false);
 	 */
 	toggleMask (mask) {

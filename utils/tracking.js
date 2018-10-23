@@ -1,11 +1,18 @@
 const imageUrl = 'https://spoor-api.ft.com/px.gif';
 const eventName = 'oTracking.event';
 
+/**
+ * Utility for o-tracking
+ * @memberof utils
+ */
 class Tracking {
 	/**
 	 * Construct with window and element
 	 * @param {Window} window Window object to access Image and CustomEvent on
 	 * @param {Element} element HTML element to dispatch event on, normally document.body
+ 	 * @example
+     * // Initiate with the window and body
+ 	 * const tracking = new Tracking(window, window.document.body);
 	 */
 	constructor (window, element) {
 		if (!window || !element) {
@@ -23,6 +30,9 @@ class Tracking {
 	 * @param {string} action
 	 * @param {object} data
 	 * @returns {number} Amount of events dispatched
+	 * @example
+	 * // Dispatch a tracking event
+	 * tracking.dispatch('signup', 'view', { custom: 'data' });
 	 */
 	dispatch (category, action, data = {}) {
 		if (!category || !action) {
@@ -40,6 +50,7 @@ class Tracking {
 
 	/**
 	 * Fire a CustomEvent on the given element with tracking data
+	 * @private
 	 * @param {object} data
 	 * @returns {number} Amount of events dispatched
 	 */
@@ -56,6 +67,7 @@ class Tracking {
 
 	/**
 	 * Load a tracking pixel with encoded tracking data
+	 * @private
 	 * @param {object} data
 	 * @returns {number} Amount of events dispatched
 	 */
@@ -69,6 +81,7 @@ class Tracking {
 
 	/**
 	 * Initalise debug data array
+	 * @private
 	 * @returns {array}
 	 */
 	initDebugData () {
@@ -77,6 +90,7 @@ class Tracking {
 
 	/**
 	 * Add a new debug message
+     * @private
 	 * @param {object} data
 	 * @returns {number} Number of debug messages
 	 */

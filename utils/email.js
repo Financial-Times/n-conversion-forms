@@ -1,6 +1,16 @@
+/**
+ * Utility for the `n-conversion-forms/partial/email.html` partial
+ * @memberof utils
+ */
 class Email {
 	/**
-	 * Initalise the Email utility
+ 	 * Create email utility and register change listener to toggle password mask
+     * @param {Document} document Windows [document](https://developer.mozilla.org/en-US/docs/Web/API/Document) object
+	 * @throws If `document` object is not passed
+ 	 * @throws If email element is not found in document
+ 	 * @example
+ 	 * // Initiate with window.document
+ 	 * const email = new Email(window.document);
 	 */
 	constructor (document) {
 		if (!document) {
@@ -23,6 +33,7 @@ class Email {
 
 	/**
 	 * Check the values of the two fields and update error state accordingly.
+	 * @private
 	 */
 	checkMatch () {
 		if (this.$emailConfirm.value) {

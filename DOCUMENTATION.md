@@ -1,99 +1,87 @@
-## Classes
+<a name="utils"></a>
 
-<dl>
-<dt><a href="#Email">Email</a></dt>
-<dd></dd>
-<dt><a href="#Password">Password</a></dt>
-<dd><p>Utility for the <code>n-conversion-forms/partial/password.html</code> partial</p>
-</dd>
-<dt><a href="#Tracking">Tracking</a></dt>
-<dd></dd>
-</dl>
+## utils : <code>object</code>
+**Kind**: global namespace  
 
-<a name="Email"></a>
+* [utils](#utils) : <code>object</code>
+    * [.Email](#utils.Email)
+        * [new Email(document)](#new_utils.Email_new)
+    * [.Password](#utils.Password)
+        * [new Password(document)](#new_utils.Password_new)
+        * [.toggleMask(mask)](#utils.Password+toggleMask)
+    * [.Tracking](#utils.Tracking)
+        * [new Tracking(window, element)](#new_utils.Tracking_new)
+        * [.dispatch(category, action, data)](#utils.Tracking+dispatch) ⇒ <code>number</code>
+        * [.getDebugData()](#utils.Tracking+getDebugData) ⇒ <code>array</code>
 
-## Email
-**Kind**: global class  
+<a name="utils.Email"></a>
 
-* [Email](#Email)
-    * [new Email()](#new_Email_new)
-    * [.checkMatch()](#Email+checkMatch)
+### utils.Email
+Utility for the `n-conversion-forms/partial/email.html` partial
 
-<a name="new_Email_new"></a>
+**Kind**: static class of [<code>utils</code>](#utils)  
+<a name="new_utils.Email_new"></a>
 
-### new Email()
-Initalise the Email utility
-
-<a name="Email+checkMatch"></a>
-
-### email.checkMatch()
-Check the values of the two fields and update error state accordingly.
-
-**Kind**: instance method of [<code>Email</code>](#Email)  
-<a name="Password"></a>
-
-## Password
-Utility for the `n-conversion-forms/partial/password.html` partial
-
-**Kind**: global class  
-
-* [Password](#Password)
-    * [new Password(document)](#new_Password_new)
-    * [.toggleMask(mask)](#Password+toggleMask)
-
-<a name="new_Password_new"></a>
-
-### new Password(document)
-Create password utility and register change listener to toggle password mask
-
-**Throws**:
-
-- If document not passed
-- If password or checkbox elements not found
+#### new Email(document)
+Create email utility and register change listener to toggle password mask
 
 
 | Param | Type | Description |
 | --- | --- | --- |
 | document | <code>Document</code> | Windows [document](https://developer.mozilla.org/en-US/docs/Web/API/Document) object |
 
-**Example**  
-```js
-// Initiate with window.document
-const password = new Password(window.document);
-```
-<a name="Password+toggleMask"></a>
+<a name="utils.Password"></a>
 
-### password.toggleMask(mask)
-Toggles whether the password is shown in plain text or not
+### utils.Password
+Utility for the `n-conversion-forms/partial/password.html` partial
 
-**Kind**: instance method of [<code>Password</code>](#Password)  
+**Kind**: static class of [<code>utils</code>](#utils)  
+
+* [.Password](#utils.Password)
+    * [new Password(document)](#new_utils.Password_new)
+    * [.toggleMask(mask)](#utils.Password+toggleMask)
+
+<a name="new_utils.Password_new"></a>
+
+#### new Password(document)
+Create password utility and register change listener to toggle password mask
+
 
 | Param | Type | Description |
 | --- | --- | --- |
-| mask | <code>Boolean</code> | Pass true to show plain text |
+| document | <code>Document</code> | Windows [document](https://developer.mozilla.org/en-US/docs/Web/API/Document) object |
+
+<a name="utils.Password+toggleMask"></a>
+
+#### password.toggleMask(mask)
+Toggles whether the password is shown in plain text or not
+
+**Kind**: instance method of [<code>Password</code>](#utils.Password)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| mask | <code>Boolean</code> | Pass `false` to show the password in plain text |
 
 **Example**  
 ```js
-// Force password to be shown in plain text
+// Show the password in plain text
 password.toggleMask(false);
 ```
-<a name="Tracking"></a>
+<a name="utils.Tracking"></a>
 
-## Tracking
-**Kind**: global class  
+### utils.Tracking
+Utility for o-tracking
 
-* [Tracking](#Tracking)
-    * [new Tracking(window, element)](#new_Tracking_new)
-    * [.dispatch(category, action, data)](#Tracking+dispatch) ⇒ <code>number</code>
-    * [.dispatchCustomEvent(data)](#Tracking+dispatchCustomEvent) ⇒ <code>number</code>
-    * [.dispatchImage(data)](#Tracking+dispatchImage) ⇒ <code>number</code>
-    * [.initDebugData()](#Tracking+initDebugData) ⇒ <code>array</code>
-    * [.addDebugData(data)](#Tracking+addDebugData) ⇒ <code>number</code>
-    * [.getDebugData()](#Tracking+getDebugData) ⇒ <code>array</code>
+**Kind**: static class of [<code>utils</code>](#utils)  
 
-<a name="new_Tracking_new"></a>
+* [.Tracking](#utils.Tracking)
+    * [new Tracking(window, element)](#new_utils.Tracking_new)
+    * [.dispatch(category, action, data)](#utils.Tracking+dispatch) ⇒ <code>number</code>
+    * [.getDebugData()](#utils.Tracking+getDebugData) ⇒ <code>array</code>
 
-### new Tracking(window, element)
+<a name="new_utils.Tracking_new"></a>
+
+#### new Tracking(window, element)
 Construct with window and element
 
 
@@ -102,12 +90,12 @@ Construct with window and element
 | window | <code>Window</code> | Window object to access Image and CustomEvent on |
 | element | <code>Element</code> | HTML element to dispatch event on, normally document.body |
 
-<a name="Tracking+dispatch"></a>
+<a name="utils.Tracking+dispatch"></a>
 
-### tracking.dispatch(category, action, data) ⇒ <code>number</code>
+#### tracking.dispatch(category, action, data) ⇒ <code>number</code>
 Dispatch a standard tracking event, falls back to dispacting tracking pixel
 
-**Kind**: instance method of [<code>Tracking</code>](#Tracking)  
+**Kind**: instance method of [<code>Tracking</code>](#utils.Tracking)  
 **Returns**: <code>number</code> - Amount of events dispatched  
 
 | Param | Type |
@@ -116,51 +104,14 @@ Dispatch a standard tracking event, falls back to dispacting tracking pixel
 | action | <code>string</code> | 
 | data | <code>object</code> | 
 
-<a name="Tracking+dispatchCustomEvent"></a>
+**Example**  
+```js
+// Dispatch a tracking event
+tracking.dispatch('signup', 'view', { custom: 'data' });
+```
+<a name="utils.Tracking+getDebugData"></a>
 
-### tracking.dispatchCustomEvent(data) ⇒ <code>number</code>
-Fire a CustomEvent on the given element with tracking data
-
-**Kind**: instance method of [<code>Tracking</code>](#Tracking)  
-**Returns**: <code>number</code> - Amount of events dispatched  
-
-| Param | Type |
-| --- | --- |
-| data | <code>object</code> | 
-
-<a name="Tracking+dispatchImage"></a>
-
-### tracking.dispatchImage(data) ⇒ <code>number</code>
-Load a tracking pixel with encoded tracking data
-
-**Kind**: instance method of [<code>Tracking</code>](#Tracking)  
-**Returns**: <code>number</code> - Amount of events dispatched  
-
-| Param | Type |
-| --- | --- |
-| data | <code>object</code> | 
-
-<a name="Tracking+initDebugData"></a>
-
-### tracking.initDebugData() ⇒ <code>array</code>
-Initalise debug data array
-
-**Kind**: instance method of [<code>Tracking</code>](#Tracking)  
-<a name="Tracking+addDebugData"></a>
-
-### tracking.addDebugData(data) ⇒ <code>number</code>
-Add a new debug message
-
-**Kind**: instance method of [<code>Tracking</code>](#Tracking)  
-**Returns**: <code>number</code> - Number of debug messages  
-
-| Param | Type |
-| --- | --- |
-| data | <code>object</code> | 
-
-<a name="Tracking+getDebugData"></a>
-
-### tracking.getDebugData() ⇒ <code>array</code>
+#### tracking.getDebugData() ⇒ <code>array</code>
 Return all the debug data
 
-**Kind**: instance method of [<code>Tracking</code>](#Tracking)  
+**Kind**: instance method of [<code>Tracking</code>](#utils.Tracking)  
