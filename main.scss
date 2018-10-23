@@ -170,13 +170,6 @@
 			width: calc(100% - 60px);
 		}
 
-		&__button {
-			border: 0;
-			background: none;
-			cursor: pointer;
-			position: relative;
-		}
-
 		&__icon {
 			background: oColorsGetPaletteColor('paper');
 			border: 2px solid oColorsGetPaletteColor('black-40');
@@ -196,6 +189,12 @@
 
 		&__item {
 			position: relative;
+			color: oColorsGetPaletteColor('black');
+			border-bottom: none;
+
+			&:hover {
+				color: oColorsGetPaletteColor('black');
+			}
 
 			&--current {
 				.ncf__progress__icon {

@@ -1,19 +1,15 @@
 <div class="ncf__progress">
 	{{#each items}}
-		{{#if isComplete}}
-			<form class="ncf__progress__item{{#if isComplete}} ncf__progress__item--complete{{/if}}" method="POST" action="{{url}}">
-				{{#each ../formData}}<input type="hidden" name="{{name}}" value="{{value}}" />{{/each}}
-
-				<button class="ncf__progress__button" data-trackable="submit" type="submit">
-					<i class="ncf__progress__icon"></i>
-					<span class="ncf__progress__label">{{name}}</span>
-				</button>
-			</form>
-		{{else}}
-			<div class="ncf__progress__item{{#if isCurrent}} ncf__progress__item--current{{/if}}">
-				<i class="ncf__progress__icon"></i>
-				<span class="ncf__progress__label">{{name}}</span>
-			</div>
-		{{/if}}
+	{{#if isComplete}}
+	<a class="ncf__progress__item{{#if isComplete}} ncf__progress__item--complete{{/if}}" href="{{this.url}}" data-trackable="change-progress">
+		<i class="ncf__progress__icon"></i>
+		<span class="ncf__progress__label">{{this.name}}</span>
+	</a>
+	{{else}}
+	<div class="ncf__progress__item{{#if isCurrent}} ncf__progress__item--current{{/if}}">
+		<i class="ncf__progress__icon"></i>
+		<span class="ncf__progress__label">{{this.name}}</span>
+	</div>
+	{{/if}}
 	{{/each}}
 </div>
