@@ -190,7 +190,7 @@
 		&__item {
 			position: relative;
 			color: oColorsGetPaletteColor('black');
-			border-bottom: none;
+			border-bottom: initial;
 
 			&:hover {
 				color: oColorsGetPaletteColor('black');
