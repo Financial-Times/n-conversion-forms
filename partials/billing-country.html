@@ -1,11 +1,11 @@
-<div id="deliveryCountryField" class="o-forms o-forms--wide ncf__field js-field js-unknown-user-field{{#if hasError}} o-forms--error{{/if}}"
-	data-ui-item="select" data-ui-item-name="deliveryCountry" data-ui-item-store-previous="true" data-validate="required">
+<div id="billingCountryField" class="o-forms o-forms--wide ncf__field js-field js-unknown-user-field{{#if hasError}} o-forms--error{{/if}}"
+	data-ui-item="select" data-ui-item-name="billingCountry" data-ui-item-store-previous="true" data-validate="required">
 
-	<label for="deliveryCountry" class="o-forms__label">Country</label>
+	<label for="billingCountry" class="o-forms__label">Billing Country</label>
 
 	{{#ncf-countries filterList=filterList}}
-	<select id="deliveryCountry" name="deliveryCountry" class="o-forms__select js-field__input js-item__value"
-					data-trackable="field-delivery-country"
+	<select id="billingCountry" name="billingCountry" class="o-forms__select js-field__input js-item__value"
+					data-trackable="field-billing-country"
 					aria-required="true" required
 					{{#if isDisabled}}disabled{{/if}}>
 		<option value>Please select a country</option>
