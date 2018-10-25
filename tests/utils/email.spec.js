@@ -172,7 +172,7 @@ describe('Email', () => {
 		});
 
 		it('should call the onFound callback if the user exists', async () => {
-			fetchMock.mock(url, { userExists: true });
+			fetchMock.mock(url, 'true');
 
 			emailElement.value = 'test@example.com';
 			await email.handleEmailExistsChange(url, onFound, onNotFound);
@@ -182,7 +182,7 @@ describe('Email', () => {
 		});
 
 		it('should call the onNotFound callback if the user doesn\'t exist', async () => {
-			fetchMock.mock(url, { userExists: false });
+			fetchMock.mock(url, 'false');
 
 			emailElement.value = 'test@example.com';
 			await email.handleEmailExistsChange(url, onFound, onNotFound);

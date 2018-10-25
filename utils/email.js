@@ -70,7 +70,7 @@ class Email {
 			})
 				.then(fetchres.json)
 				.then(response => {
-					if (response.userExists) {
+					if (response === true) {
 						onFound();
 					} else {
 						onNotFound();
