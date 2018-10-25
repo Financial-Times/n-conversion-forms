@@ -23,7 +23,7 @@ describe('Email', () => {
 					return emailConfirmFieldElement;
 				} else if (selector.indexOf('#emailConfirm') !== -1) {
 					return emailConfirmElement;
-				} else if (selector.indexOf('#csrf-token') !== -1) {
+				} else if (selector.indexOf('#csrfToken') !== -1) {
 					return csrfFieldElement;
 				} else {
 					return emailElement;
@@ -128,6 +128,12 @@ describe('Email', () => {
 			email.registerEmailExistsCheck(url, onFound, onNotFound);
 			// Check it's called twice since by default we bind a change listener in the constructor.
 			expect(emailElement.addEventListener.calledTwice).to.be.true;
+		});
+
+		it('should return the handler function so it can potentially be unregistered', () => {
+			let handler = email.registerEmailExistsCheck(url, onFound, onNotFound);
+
+			expect(typeof handler).to.equal('function');
 		});
 
 		it('should call the onNotFound callback if the email field has no value.', () => {

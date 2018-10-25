@@ -69,7 +69,7 @@ This utility provides the following:
     email.registerEmailExistsCheck(backendServiceUrl, onFoundCallback, onNotFoundCallback);
     ```
   
-  **NB** It's recommended you have a hidden `#csrf-token` input element that you validate the request with in your backend service to prevent having your service abused.
+  **NB** It's recommended you have a hidden `#csrfToken` input element that you validate the request with in your backend service to prevent having your service abused.
 
   The backend service will be sent the following as the body of a `POST` request: `{ email, csrfToken }`.
 

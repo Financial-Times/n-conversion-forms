@@ -12,7 +12,7 @@ class Email {
 		this.$email = document.querySelector('.ncf #email');
 		this.$emailConfirm = document.querySelector('.ncf #emailConfirm');
 		this.$emailConfirmField = document.querySelector('.ncf #emailConfirmField');
-		this.$csrfToken = document.querySelector('.ncf #csrf-token');
+		this.$csrfToken = document.querySelector('.ncf #csrfToken');
 
 		if (!this.$email) {
 			throw new Error('Please include the email partial on the page.');
@@ -39,16 +39,21 @@ class Email {
 
 	/**
 	 * Register the email exists call.
-	 * **NB** It's recommended you have a hidden #csrf-token input element that you validate the request with in your backend service.
+	 * **NB** It's recommended you have a hidden #csrfToken input element that you validate the request with in your backend service.
 	 *
 	 * @param {string} url URL to the email exists endpoint.
 	 * @param {function} onFound Callback function to run if email does exist
 	 * @param {function} onNotFound Callback function to run if email does *not* exist.
+	 * @returns {function} The handler function so the caller can unregister it if they need.
 	 */
 	registerEmailExistsCheck (url, onFound, onNotFound) {
-		this.$email.addEventListener('change', () => {
+		const handler = () => {
 			this.handleEmailExistsChange(url, onFound, onNotFound);
-		});
+		};
+
+		this.$email.addEventListener('change', handler);
+
+		return handler;
 	}
 
 	handleEmailExistsChange (url, onFound, onNotFound) {
