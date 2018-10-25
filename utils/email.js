@@ -1,3 +1,5 @@
+const fetchres = require('fetchres');
+
 class Email {
 	/**
 	 * Initalise the Email utility
@@ -10,6 +12,7 @@ class Email {
 		this.$email = document.querySelector('.ncf #email');
 		this.$emailConfirm = document.querySelector('.ncf #emailConfirm');
 		this.$emailConfirmField = document.querySelector('.ncf #emailConfirmField');
+		this.$csrfToken = document.querySelector('.ncf #csrf-token');
 
 		if (!this.$email) {
 			throw new Error('Please include the email partial on the page.');
@@ -33,6 +36,47 @@ class Email {
 			}
 		}
 	}
+
+	/**
+	 * Register the email exists call.
+	 * **NB** It's recommended you have a hidden #csrf-token input element that you validate the request with in your backend service.
+	 *
+	 * @param {string} url URL to the email exists endpoint.
+	 * @param {function} onFound Callback function to run if email does exist
+	 * @param {function} onNotFound Callback function to run if email does *not* exist.
+	 */
+	registerEmailExistsCheck (url, onFound, onNotFound) {
+		this.$email.addEventListener('change', () => {
+			this.handleEmailExistsChange(url, onFound, onNotFound);
+		});
+	}
+
+	handleEmailExistsChange (url, onFound, onNotFound) {
+		if (this.$email.value) {
+			return fetch(url, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					email: this.$email.value,
+					csrfToken: this.$csrfToken && this.$csrfToken.value
+				})
+			})
+				.then(fetchres.json)
+				.then(response => {
+					if (response.userExists) {
+						onFound();
+					} else {
+						onNotFound();
+					}
+				})
+				.catch(onNotFound);
+		} else {
+			onNotFound();
+		}
+	};
+
 };
 
 module.exports = Email;

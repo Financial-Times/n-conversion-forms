@@ -1,5 +1,6 @@
 const Email = require('../../utils/email');
 const expect = require('chai').expect;
+const fetchMock = require('fetch-mock');
 const sinon = require('sinon');
 
 describe('Email', () => {
@@ -7,12 +8,14 @@ describe('Email', () => {
 	let emailElement;
 	let emailConfirmElement;
 	let emailConfirmFieldElement;
+	let csrfFieldElement;
 	let sandbox;
 
 	beforeEach(() => {
 		emailElement = { addEventListener: ()=>{} };
 		emailConfirmElement = { addEventListener: ()=>{} };
 		emailConfirmFieldElement = { classList: { add: ()=>{}, remove: ()=>{} } };
+		csrfFieldElement = { value: '1234567890' };
 
 		document = {
 			querySelector: (selector) => {
@@ -20,6 +23,8 @@ describe('Email', () => {
 					return emailConfirmFieldElement;
 				} else if (selector.indexOf('#emailConfirm') !== -1) {
 					return emailConfirmElement;
+				} else if (selector.indexOf('#csrf-token') !== -1) {
+					return csrfFieldElement;
 				} else {
 					return emailElement;
 				}
@@ -33,6 +38,7 @@ describe('Email', () => {
 	});
 
 	afterEach(() => {
+		fetchMock.restore();
 		sandbox.restore();
 	});
 
@@ -104,4 +110,80 @@ describe('Email', () => {
 			expect(emailConfirmFieldElement.classList.remove.calledOnce).to.be.false;
 		});
 	});
+
+	describe('Email Exists', () => {
+		const url = '/foo';
+		let email;
+		let onFound;
+		let onNotFound;
+
+		beforeEach(() => {
+			onFound = sinon.stub();
+			onNotFound = sinon.stub();
+
+			email = new Email(document);
+		});
+
+		it('should add an additional event listener to the email field', () => {
+			email.registerEmailExistsCheck(url, onFound, onNotFound);
+			// Check it's called twice since by default we bind a change listener in the constructor.
+			expect(emailElement.addEventListener.calledTwice).to.be.true;
+		});
+
+		it('should call the onNotFound callback if the email field has no value.', () => {
+			email.handleEmailExistsChange(url, onFound, onNotFound);
+			expect(onFound.called).to.be.false;
+			expect(onNotFound.called).to.be.true;
+		});
+
+		it('should call the specified url with the correct params if the email field has a value', () => {
+			fetchMock.mock(url, 200);
+
+			emailElement.value = 'test@example.com';
+			email.handleEmailExistsChange(url, onFound, onNotFound);
+
+			expect(fetchMock.called(url)).to.be.true;
+			expect(fetchMock.lastOptions(url)).to.deep.equal({
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					email: 'test@example.com',
+					csrfToken: '1234567890'
+				})
+			});
+		});
+
+		it('should call the onNotFound callback if the call to the url fails', async () => {
+			fetchMock.mock(url, 500);
+
+			emailElement.value = 'test@example.com';
+			await email.handleEmailExistsChange(url, onFound, onNotFound);
+
+			expect(onFound.called).to.be.false;
+			expect(onNotFound.called).to.be.true;
+		});
+
+		it('should call the onFound callback if the user exists', async () => {
+			fetchMock.mock(url, { userExists: true });
+
+			emailElement.value = 'test@example.com';
+			await email.handleEmailExistsChange(url, onFound, onNotFound);
+
+			expect(onFound.called).to.be.true;
+			expect(onNotFound.called).to.be.false;
+		});
+
+		it('should call the onNotFound callback if the user doesn\'t exist', async () => {
+			fetchMock.mock(url, { userExists: false });
+
+			emailElement.value = 'test@example.com';
+			await email.handleEmailExistsChange(url, onFound, onNotFound);
+
+			expect(onFound.called).to.be.false;
+			expect(onNotFound.called).to.be.true;
+		});
+	});
+
 });

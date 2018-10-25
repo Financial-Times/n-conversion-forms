@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Financial-Times/n-conversion-forms#readme",
   "dependencies": {
+    "fetchres": "^1.7.2",
     "lodash.get": "^4.4.2",
     "n-common-static-data": "financial-times/n-common-static-data#v1.5.0"
   },
@@ -32,6 +33,7 @@
     "bower-resolve-webpack-plugin": "^1.0.4",
     "chai": "^4.2.0",
     "cheerio": "^1.0.0-rc.2",
+    "fetch-mock": "^7.2.0",
     "mocha": "^5.1.1",
     "node-sass": "^4.9.4",
     "nodemon": "^1.17.5",
