@@ -39,8 +39,9 @@ describe('Payment', () => {
 		describe('constructor', () => {
 			it('should not setup the request if PaymentRequest not available', () => {
 				window.PaymentRequest = null;
-				payment = new Payment(window, 'apple', product);
-				expect(payment.request).to.be.undefined;
+				expect(() => {
+					new Payment(window, 'apple', product);
+				}).to.throw();
 			});
 
 			it('should throw an error if the button not available', () => {

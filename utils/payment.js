@@ -34,10 +34,15 @@ async function processResponse (response) {
  * Payment wrapper for Payment Request API interaction
  * @example
  * // Create a payment instance
- * const payment = new Payment(window, Payment.METHOD_APPLE_PAY, {value: 1.00, currency: 'GBP', label: 'Standard FT'});
- * const shown = await payment.showPaymentButton();
- * if (!shown) {
- *     // Browser doesn't support the payment method
+ * try {
+ *     const product = {value: 1.00, currency: 'GBP', label: 'Standard FT'};
+ *     const payment = new Payment(window, Payment.METHOD_APPLE_PAY, product);
+ *     const shown = await payment.showPaymentButton();
+ *     if (!shown) {
+ *         // User can't make a payment for example no card on account
+ *     }
+ * } catch (e) {
+ *     // Payment Request API not supported or payment button not found
  * }
  */
 class Payment {
@@ -52,8 +57,8 @@ class Payment {
 	 */
 	constructor (window, method, {value, currency, label}) {
 		if (!window.PaymentRequest) {
-			// For method='apple' fallback to using Apple Pay JS instead?
-			return;
+			// @todo for method='apple' fallback to using Apple Pay JS instead?
+			throw new Error('Browser does not support Payment Request API');
 		}
 
 		// Create the payment request
@@ -84,7 +89,8 @@ class Payment {
 			return false;
 		}
 		this.paymentButton.classList.remove(CLASS_HIDDEN);
-		this.paymentButton.addEventListener('click', () => {
+		this.paymentButton.addEventListener('click', e => {
+			e.preventDefault();
 			this.show();
 		});
 		return true;
