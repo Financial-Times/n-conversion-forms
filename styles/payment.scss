@@ -22,7 +22,7 @@
 			background-repeat: no-repeat;
 			background-position: 50% 50%;
 			border-radius: 5px;
-			padding: 0px;
+			padding: 0;
 			box-sizing: border-box;
 			min-width: 200px;
 			min-height: 32px;
@@ -39,7 +39,7 @@
 		.apple-pay-button-white-with-line {
 			background-image: -webkit-named-image(apple-pay-logo-black);
 			background-color: white;
-			border: .5px solid black;
+			border: 0.5px solid black;
 		}
 	}
 }
