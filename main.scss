@@ -5,7 +5,8 @@
 @import 'o-forms/main';
 @import 'o-buttons/main';
 @import 'o-message/main';
-@import "o-icons/main";
+@import 'o-icons/main';
+@import './styles/payment';
 
 @include oFormsBaseFeatures();
 @include oFormsRadioCheckboxFeatures();
@@ -283,6 +284,8 @@
 			margin: 20px 0;
 		}
 	}
+
+	@include ncfPaymentApplePay();
 
 	// Override o-forms padding set at certain screen sizes
 	// This should be removed when Origami remove this from o-forms
