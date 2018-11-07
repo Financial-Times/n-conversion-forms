@@ -38,7 +38,7 @@ describe('payment-term-selector', () => {
 		expect($('label').length).to.equal(2);
 	});
 
-	it('should only have one radio button selected', () => {
+	it.only('should only have one radio button selected', () => {
 		const $ = context.template({
 			buttonOptions:
 				[
@@ -46,8 +46,7 @@ describe('payment-term-selector', () => {
 					{ name: 'mockNameTwo', description: 'mockTwo' }
 				]
 		});
-
-		expect($('input[checked]').length).to.equal(1);
+		expect($('input[checked]').attr('id')).to.equal('mockName');
 	});
 
 
