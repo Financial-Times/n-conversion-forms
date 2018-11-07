@@ -38,7 +38,7 @@ describe('payment-term-selector', () => {
 		expect($('label').length).to.equal(2);
 	});
 
-	it.only('should only have one radio button selected', () => {
+	it('should only have one radio button selected', () => {
 		const $ = context.template({
 			buttonOptions:
 				[
