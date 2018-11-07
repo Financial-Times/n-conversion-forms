@@ -17,18 +17,38 @@ describe('payment-term-selector', () => {
 		expect($('.ncf__payment-term-select__label--description')).to.exist;
 	});
 
-	it('should contain terms and conditions copy', () => {
-		const $ = context.template({});
-		const terms = 'With all subscription types, we will automatically renew your subscription';
+	it('should have the html properties to successfully function as a radio button', () => {
+		const $ = context.template({ buttonOptions: [{ name: 'mockName', displayName: 'mockDisplayName', description: 'mockDescription', selected: true }] });
 
-		expect($('.ncf__payment-term-select__legal').text().trim()).to.contain(terms);
+		expect($('input').attr('id')).to.equal('mockName');
+		expect($('input').attr('value')).to.equal('mockName');
+		expect($('label').attr('for')).to.equal('mockName');
 	});
 
-	it('should contain link to more terms and conditions', () => {
-		const $ = context.template({});
-		const termsLink = 'https://help.ft.com/help/legal-privacy/terms-conditions/';
+	it('should display two radio buttons when two objects passed to it', () => {
+		const $ = context.template({
+			buttonOptions:
+				[
+					{ name: 'mockName', description: 'mock', selected: true },
+					{ name: 'mockNameTwo', description: 'mockTwo' }
+				]
+			});
 
-		expect($('.ncf__payment-term-select__legal').html()).to.contain(termsLink);
+		expect($('input').length).to.equal(2);
+		expect($('label').length).to.equal(2);
 	});
+
+	it('should only have one radio button selected', () => {
+		const $ = context.template({
+			buttonOptions:
+				[
+					{ name: 'mockName', description: 'mock', selected: true },
+					{ name: 'mockNameTwo', description: 'mockTwo' }
+				]
+		});
+
+		expect($('input[checked]').length).to.equal(1);
+	});
+
 
 });
