@@ -4,7 +4,9 @@
 	<label for="{{this.name}}" class="o-forms__label ncf__payment-term-select__label">
 		<strong class="ncf__payment-term-select__label--title">{{this.displayName}}</strong>
 		<div class="ncf__payment-term-select__label--description">{{this.description}}</div>
+		{{#if this.subText}}
 		<div class="ncf__payment-term-select__label--subText">{{this.subText}}</div>
+		{{/if}}
 	</label>
 	{{/each}}
 	<div class="ncf__payment-term-select__legal">
