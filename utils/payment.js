@@ -141,6 +141,8 @@ class Payment {
 
 	/**
 	 * Return the requested payment method
+	 * Payment Request API expects this to an array of payment methods but we want this only
+	 * to be a single payment method as the user will select this upfront on the signup form.
 	 * @param {string} name `apple` is only supported currently
 	 * @return {array<object>}
 	 */
