@@ -121,7 +121,7 @@ describe('Payment', () => {
 			});
 
 			it('should return apple payment method', () => {
-				expect(Payment.getPaymentMethod('apple')).to.have.property('supportedMethods');
+				expect(Payment.getPaymentMethod('apple')).to.be.an('array');
 			});
 		});
 
