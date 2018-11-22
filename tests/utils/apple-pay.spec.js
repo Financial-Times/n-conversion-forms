@@ -79,7 +79,7 @@ describe('Apple Pay', () => {
 			});
 
 			it('should use the test merchant validation URL', () => {
-				applePay = new ApplePay(window, ApplePay.TEST_PAYMENT_METHOD);
+				applePay = new ApplePay(window, ApplePay.TEST_PAYMENT_METHODS);
 				applePay.handleMerchantValidation(event);
 				expect(window.fetch.calledOnceWith(ApplePay.MERCHANT_VALIDATION_URL));
 			});
@@ -99,19 +99,19 @@ describe('Apple Pay', () => {
 				expect(ApplePay.getMerchantId()).to.be.a('string');
 			});
 
-			it('should return default merchant id if method has no data', () => {
-				const method = [{}];
-				expect(ApplePay.getMerchantId(method)).to.be.a('string');
+			it('should return default merchant id if methods has no data', () => {
+				const methods = [{}];
+				expect(ApplePay.getMerchantId(methods)).to.be.a('string');
 			});
 
-			it('should return default merchant id if method data hasn\'t got one', () => {
-				const method = [{ data: {} }];
-				expect(ApplePay.getMerchantId(method)).to.be.a('string');
+			it('should return default merchant id if methods data hasn\'t got one', () => {
+				const methods = [{ data: {} }];
+				expect(ApplePay.getMerchantId(methods)).to.be.a('string');
 			});
 
-			it('should return merchant id from method data', () => {
-				const method = [{ data: { merchantIdentifier: 'test' } }];
-				expect(ApplePay.getMerchantId(method)).to.equal('test');
+			it('should return merchant id from methods data', () => {
+				const methods = [{ data: { merchantIdentifier: 'test' } }];
+				expect(ApplePay.getMerchantId(methods)).to.equal('test');
 			});
 		});
 

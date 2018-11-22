@@ -3,7 +3,7 @@ const DOMAIN_NAME = 'www.ft.com';
 
 const MERCHANT_ID = 'merchant.com.ft';
 const MERCHANT_VALIDATION_URL = 'https://api.ft.com/idm/v1/apple-merchant-validation/validate';
-const PAYMENT_METHOD = [{
+const PAYMENT_METHODS = [{
 	supportedMethods: 'https://apple.com/apple-pay',
 	data: {
 		version: 1,
@@ -16,7 +16,7 @@ const PAYMENT_METHOD = [{
 
 const TEST_MERCHANT_ID = 'merchant.test.env.apple.pay';
 const TEST_MERCHANT_VALIDATION_URL = 'https://api-t.ft.com/idm/v1/apple-merchant-validation/validate';
-const TEST_PAYMENT_METHOD = [{
+const TEST_PAYMENT_METHODS = [{
 	supportedMethods: 'https://apple.com/apple-pay',
 	data: {
 		version: 1,
@@ -58,8 +58,8 @@ const PAYMENT_OPTIONS = {
  *     // Browser may not support it
  * }
  *
- * // Use test by passing the test payment method
- * const applePay = new ApplePay(window, ApplePay.TEST_PAYMENT_METHOD);
+ * // Use test by passing the test payment methods
+ * const applePay = new ApplePay(window, ApplePay.TEST_PAYMENT_METHODS);
  *
  * // On click of payment button you can updated payment details
  * try {
@@ -79,14 +79,14 @@ class ApplePay {
 	/**
 	 * Setup a Payment Request API request with Apple Pay defaults
 	 * @param {object} window Browser window object
-	 * @param {array} method PaymentRequest API payment methods array
+	 * @param {array} methods PaymentRequest API payment methods array
 	 * @param {object} details PaymentRequest API payment details object
 	 * @param {object} options PaymentRequest API payment options object
 	 * @throws If browser doesn't support PaymentRequest API
 	 */
-	constructor (window, method = PAYMENT_METHOD, details = PAYMENT_DETAILS, options = PAYMENT_OPTIONS) {
+	constructor (window, methods = PAYMENT_METHODS, details = PAYMENT_DETAILS, options = PAYMENT_OPTIONS) {
 		this.window = window;
-		this.method = method;
+		this.methods = methods;
 		this.details = details;
 		this.options = options;
 		this.request = new this.window.PaymentRequest(this.method, this.details, this.options);
@@ -147,12 +147,12 @@ class ApplePay {
 	}
 
 	/**
-	 * Return merchant id from method or default to production id
-	 * @param {array} method
+	 * Return merchant id from methods or default to production id
+	 * @param {array} methods
 	 * @return {string}
 	 */
-	static getMerchantId (methodArray = []) {
-		const method = methodArray[0] || {};
+	static getMerchantId (methods = []) {
+		const method = methods[0] || {};
 		return method.data && method.data.merchantIdentifier || MERCHANT_ID;
 	}
 
@@ -203,11 +203,11 @@ class ApplePay {
 	}
 
 	/**
-	 * Expose production payment method
+	 * Expose production payment methods
 	 * @return {string}
 	 */
-	static get PAYMENT_METHOD () {
-		return PAYMENT_METHOD;
+	static get PAYMENT_METHODS () {
+		return PAYMENT_METHODS;
 	}
 
 	/**
@@ -227,11 +227,11 @@ class ApplePay {
 	}
 
 	/**
-	 * Expose the test payment method
+	 * Expose the test payment methods
 	 * @return {string}
 	 */
-	static get TEST_PAYMENT_METHOD () {
-		return TEST_PAYMENT_METHOD;
+	static get TEST_PAYMENT_METHODS () {
+		return TEST_PAYMENT_METHODS;
 	}
 }
 
