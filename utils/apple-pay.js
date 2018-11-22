@@ -1,49 +1,3 @@
-const DISPLAY_NAME = 'FT.com';
-const DOMAIN_NAME = 'www.ft.com';
-
-const MERCHANT_ID = 'merchant.com.ft';
-const MERCHANT_VALIDATION_URL = 'https://api.ft.com/idm/v1/apple-merchant-validation/validate';
-const PAYMENT_METHODS = [{
-	supportedMethods: 'https://apple.com/apple-pay',
-	data: {
-		version: 1,
-		merchantIdentifier: MERCHANT_ID,
-		merchantCapabilities: ['supports3DS'],
-		supportedNetworks: ['amex', 'discover', 'masterCard', 'visa'],
-		countryCode: 'GB',
-	}
-}];
-
-const TEST_MERCHANT_ID = 'merchant.test.env.apple.pay';
-const TEST_MERCHANT_VALIDATION_URL = 'https://api-t.ft.com/idm/v1/apple-merchant-validation/validate';
-const TEST_PAYMENT_METHODS = [{
-	supportedMethods: 'https://apple.com/apple-pay',
-	data: {
-		version: 1,
-		merchantIdentifier: TEST_MERCHANT_ID,
-		merchantCapabilities: ['supports3DS'],
-		supportedNetworks: ['amex', 'discover', 'masterCard', 'visa'],
-		countryCode: 'GB',
-	}
-}];
-
-const PAYMENT_DETAILS = {
-	total: {
-		label: DISPLAY_NAME,
-		amount: {
-			value: 0.01,
-			currency: 'GBP'
-		},
-	}
-};
-
-const PAYMENT_OPTIONS = {
-	requestPayerName: false,
-	requestPayerEmail: false,
-	requestPayerPhone: false,
-	requestShipping: false
-};
-
 /**
  * Light weight wrapper around PaymentRequest API for ApplePay
  * @example
@@ -84,7 +38,7 @@ class ApplePay {
 	 * @param {object} options PaymentRequest API payment options object
 	 * @throws If browser doesn't support PaymentRequest API
 	 */
-	constructor (window, methods = PAYMENT_METHODS, details = PAYMENT_DETAILS, options = PAYMENT_OPTIONS) {
+	constructor (window, methods = ApplePay.PAYMENT_METHODS, details = ApplePay.PAYMENT_DETAILS, options = ApplePay.PAYMENT_OPTIONS) {
 		if (!window.PaymentRequest) {
 			throw new Error('Browser does not support PaymentRequest API');
 		}
@@ -129,8 +83,8 @@ class ApplePay {
 		const url = ApplePay.getMerchantValidationUrl(merchantId);
 		const data = {
 			validationUrl: event.validationURL,
-			displayName: DISPLAY_NAME,
-			domainName: DOMAIN_NAME,
+			displayName: 'FT.com',
+			domainName: 'www.ft.com',
 			merchantId
 		};
 		try {
@@ -157,7 +111,7 @@ class ApplePay {
 	 */
 	static getMerchantId (methods = []) {
 		const method = methods[0] || {};
-		return method.data && method.data.merchantIdentifier || MERCHANT_ID;
+		return method.data && method.data.merchantIdentifier || ApplePay.MERCHANT_ID;
 	}
 
 	/**
@@ -166,10 +120,10 @@ class ApplePay {
 	 * @return {String}
 	 */
 	static getMerchantValidationUrl (merchantId) {
-		if (merchantId === TEST_MERCHANT_ID) {
-			return TEST_MERCHANT_VALIDATION_URL;
+		if (merchantId === ApplePay.TEST_MERCHANT_ID) {
+			return ApplePay.TEST_MERCHANT_VALIDATION_URL;
 		}
-		return MERCHANT_VALIDATION_URL;
+		return ApplePay.MERCHANT_VALIDATION_URL;
 	}
 
 	/**
@@ -179,15 +133,11 @@ class ApplePay {
 	 * @param {string} label Product name
 	 */
 	static getPaymentDetails (value, currency, label) {
-		return {
-			total: {
-				label,
-				amount: {
-					value,
-					currency
-				}
-			}
-		};
+		const details = ApplePay.PAYMENT_DETAILS;
+		details.total.label = label;
+		details.total.amount.value = value;
+		details.total.amount.currency = currency;
+		return details;
 	}
 
 	/**
@@ -195,7 +145,7 @@ class ApplePay {
 	 * @return {string}
 	 */
 	static get MERCHANT_ID () {
-		return MERCHANT_ID;
+		return 'merchant.com.ft';
 	}
 
 	/**
@@ -203,7 +153,7 @@ class ApplePay {
 	 * @return {string}
 	 */
 	static get MERCHANT_VALIDATION_URL () {
-		return MERCHANT_VALIDATION_URL;
+		return 'https://api.ft.com/idm/v1/apple-merchant-validation/validate';
 	}
 
 	/**
@@ -211,7 +161,37 @@ class ApplePay {
 	 * @return {string}
 	 */
 	static get PAYMENT_METHODS () {
-		return PAYMENT_METHODS;
+		return [{
+			supportedMethods: 'https://apple.com/apple-pay',
+			data: {
+				version: 1,
+				merchantIdentifier: ApplePay.MERCHANT_ID,
+				merchantCapabilities: ['supports3DS'],
+				supportedNetworks: ['amex', 'discover', 'masterCard', 'visa'],
+				countryCode: 'GB',
+			}
+		}];
+	}
+
+	static get PAYMENT_DETAILS () {
+		return {
+			total: {
+				label: 'FT.com',
+				amount: {
+					value: 0.01,
+					currency: 'GBP'
+				},
+			}
+		};
+	};
+
+	static get PAYMENT_OPTIONS () {
+		return {
+			requestPayerName: false,
+			requestPayerEmail: false,
+			requestPayerPhone: false,
+			requestShipping: false
+		};
 	}
 
 	/**
@@ -219,7 +199,7 @@ class ApplePay {
 	 * @return {string}
 	 */
 	static get TEST_MERCHANT_ID () {
-		return TEST_MERCHANT_ID;
+		return 'merchant.test.env.apple.pay';
 	}
 
 	/**
@@ -227,7 +207,7 @@ class ApplePay {
 	 * @return {string}
 	 */
 	static get TEST_MERCHANT_VALIDATION_URL () {
-		return TEST_MERCHANT_VALIDATION_URL;
+		return 'https://api-t.ft.com/idm/v1/apple-merchant-validation/validate';
 	}
 
 	/**
@@ -235,7 +215,16 @@ class ApplePay {
 	 * @return {string}
 	 */
 	static get TEST_PAYMENT_METHODS () {
-		return TEST_PAYMENT_METHODS;
+		return [{
+			supportedMethods: 'https://apple.com/apple-pay',
+			data: {
+				version: 1,
+				merchantIdentifier: ApplePay.TEST_MERCHANT_ID,
+				merchantCapabilities: ['supports3DS'],
+				supportedNetworks: ['amex', 'discover', 'masterCard', 'visa'],
+				countryCode: 'GB',
+			}
+		}];
 	}
 }
 
