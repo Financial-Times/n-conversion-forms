@@ -85,6 +85,10 @@ class ApplePay {
 	 * @throws If browser doesn't support PaymentRequest API
 	 */
 	constructor (window, methods = PAYMENT_METHODS, details = PAYMENT_DETAILS, options = PAYMENT_OPTIONS) {
+		if (!window.PaymentRequest) {
+			throw new Error('Browser does not support PaymentRequest API');
+		}
+
 		this.window = window;
 		this.methods = methods;
 		this.details = details;
