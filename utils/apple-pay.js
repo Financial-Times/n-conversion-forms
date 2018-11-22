@@ -173,6 +173,10 @@ class ApplePay {
 		}];
 	}
 
+	/**
+	 * Default payment details
+	 * @return {object}
+	 */
 	static get PAYMENT_DETAILS () {
 		return {
 			total: {
@@ -185,6 +189,10 @@ class ApplePay {
 		};
 	};
 
+	/**
+	 * Default payment options
+	 * @return {object}
+	 */
 	static get PAYMENT_OPTIONS () {
 		return {
 			requestPayerName: false,
