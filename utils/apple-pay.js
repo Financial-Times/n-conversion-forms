@@ -47,7 +47,7 @@ class ApplePay {
 		this.methods = methods;
 		this.details = details;
 		this.options = options;
-		this.request = new this.window.PaymentRequest(this.method, this.details, this.options);
+		this.request = new this.window.PaymentRequest(this.methods, this.details, this.options);
 	}
 
 	/**
@@ -68,7 +68,7 @@ class ApplePay {
 		// browsers as it seems not to be supported, regenerates PaymentRequest
 		if (paymentDetails) {
 			this.details = paymentDetails;
-			this.request = new this.window.PaymentRequest(this.method, this.details, this.options);
+			this.request = new this.window.PaymentRequest(this.methods, this.details, this.options);
 		}
 		this.request.onmerchantvalidation = event => this.handleMerchantValidation(event);
 		return this.request.show();
@@ -165,7 +165,7 @@ class ApplePay {
 			supportedMethods: 'https://apple.com/apple-pay',
 			data: {
 				version: 1,
-				merchantIdentifier: 'merchant.com.ft',
+				merchantIdentifier: ApplePay.MERCHANT_ID,
 				merchantCapabilities: ['supports3DS'],
 				supportedNetworks: ['amex', 'discover', 'masterCard', 'visa'],
 				countryCode: 'GB',
@@ -227,7 +227,7 @@ class ApplePay {
 			supportedMethods: 'https://apple.com/apple-pay',
 			data: {
 				version: 1,
-				merchantIdentifier: 'merchant.test.env.apple.pay',
+				merchantIdentifier: ApplePay.TEST_MERCHANT_ID,
 				merchantCapabilities: ['supports3DS'],
 				supportedNetworks: ['amex', 'discover', 'masterCard', 'visa'],
 				countryCode: 'GB',

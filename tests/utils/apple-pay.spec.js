@@ -2,7 +2,7 @@ const ApplePay = require('../../utils/apple-pay');
 const expect = require('chai').expect;
 const sinon = require('sinon');
 
-describe('Apple Pay', () => {
+describe.only('Apple Pay', () => {
 	let request;
 	let window;
 	let event;
@@ -34,6 +34,17 @@ describe('Apple Pay', () => {
 					new ApplePay(window);
 				}).to.throw();
 			});
+
+			it('should create the PaymentRequest with the defaults', () => {
+				new ApplePay(window);
+				expect(
+					window.PaymentRequest.calledOnceWith(
+						ApplePay.PAYMENT_METHODS,
+						ApplePay.PAYMENT_DETAILS,
+						ApplePay.PAYMENT_OPTIONS
+					)
+				).to.be.true;
+			});
 		});
 
 		describe('canMakePayment', () => {
@@ -63,6 +74,18 @@ describe('Apple Pay', () => {
 				expect(window.PaymentRequest.callCount).to.equal(2);
 			});
 
+			it('should create new request with right parameters', () => {
+				applePay = new ApplePay(window);
+				applePay.show({ total: { label: 'new' }});
+				expect(
+					window.PaymentRequest.calledWith(
+						applePay.methods,
+						applePay.details,
+						applePay.options
+					)
+				).to.be.true;
+			});
+
 			it('should setup onmerchantvalidation method', () => {
 				delete request.onmerchantvalidation;
 				applePay = new ApplePay(window);
@@ -75,13 +98,13 @@ describe('Apple Pay', () => {
 			it('should use the production merchant validation URL by default', () => {
 				applePay = new ApplePay(window);
 				applePay.handleMerchantValidation(event);
-				expect(window.fetch.calledOnceWith(ApplePay.MERCHANT_VALIDATION_URL));
+				expect(window.fetch.calledOnceWith(ApplePay.MERCHANT_VALIDATION_URL)).to.be.true;
 			});
 
 			it('should use the test merchant validation URL', () => {
 				applePay = new ApplePay(window, ApplePay.TEST_PAYMENT_METHODS);
 				applePay.handleMerchantValidation(event);
-				expect(window.fetch.calledOnceWith(ApplePay.MERCHANT_VALIDATION_URL));
+				expect(window.fetch.calledOnceWith(ApplePay.MERCHANT_VALIDATION_URL)).to.be.true;
 			});
 
 			it('should call event.complete with response', async () => {
