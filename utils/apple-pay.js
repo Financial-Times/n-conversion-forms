@@ -165,7 +165,7 @@ class ApplePay {
 			supportedMethods: 'https://apple.com/apple-pay',
 			data: {
 				version: 1,
-				merchantIdentifier: ApplePay.MERCHANT_ID,
+				merchantIdentifier: 'merchant.com.ft',
 				merchantCapabilities: ['supports3DS'],
 				supportedNetworks: ['amex', 'discover', 'masterCard', 'visa'],
 				countryCode: 'GB',
@@ -227,7 +227,7 @@ class ApplePay {
 			supportedMethods: 'https://apple.com/apple-pay',
 			data: {
 				version: 1,
-				merchantIdentifier: ApplePay.TEST_MERCHANT_ID,
+				merchantIdentifier: 'merchant.test.env.apple.pay',
 				merchantCapabilities: ['supports3DS'],
 				supportedNetworks: ['amex', 'discover', 'masterCard', 'visa'],
 				countryCode: 'GB',
