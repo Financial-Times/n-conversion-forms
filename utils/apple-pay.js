@@ -32,10 +32,10 @@
 class ApplePay {
 	/**
 	 * Setup a Payment Request API request with Apple Pay defaults
-	 * @param {object} window Browser window object
-	 * @param {array} methods PaymentRequest API payment methods array
-	 * @param {object} details PaymentRequest API payment details object
-	 * @param {object} options PaymentRequest API payment options object
+	 * @param {Window} window Browser window object
+	 * @param {Array} methods PaymentRequest API payment methods array
+	 * @param {Object} details PaymentRequest API payment details object
+	 * @param {Object} options PaymentRequest API payment options object
 	 * @throws If browser doesn't support PaymentRequest API
 	 */
 	constructor (window, methods = ApplePay.PAYMENT_METHODS, details = ApplePay.PAYMENT_DETAILS, options = ApplePay.PAYMENT_OPTIONS) {
@@ -52,7 +52,7 @@ class ApplePay {
 
 	/**
 	 * Proxy call through to the request
-	 * @return {promise<boolean>}
+	 * @return {Promise<Boolean>}
 	 */
 	canMakePayment () {
 		return this.request.canMakePayment();
@@ -60,8 +60,8 @@ class ApplePay {
 
 	/**
 	 * Display the payment screen to the user
-	 * @param {object} paymentDetails Optional payment details object for update
-	 * @return {promise<object>} Response object from apple pay
+	 * @param {Object} paymentDetails Optional payment details object for update
+	 * @return {Promise<Object>} Response object from apple pay
 	 */
 	show (paymentDetails) {
 		// Work around to enable the update of payment details for safari
@@ -76,7 +76,7 @@ class ApplePay {
 
 	/**
 	 * Validate ourselves via membership
-	 * @param {object} event
+	 * @param {Object} event
 	 */
 	async handleMerchantValidation (event) {
 		const merchantId = ApplePay.getMerchantId(this.method);
@@ -106,8 +106,8 @@ class ApplePay {
 
 	/**
 	 * Return merchant id from methods or default to production id
-	 * @param {array} methods
-	 * @return {string}
+	 * @param {Array} methods
+	 * @return {String}
 	 */
 	static getMerchantId (methods = []) {
 		const method = methods[0] || {};
@@ -116,7 +116,7 @@ class ApplePay {
 
 	/**
 	 * Return merchant validation URL based on the merchant ID
-	 * @param {string} merchantId
+	 * @param {String} merchantId
 	 * @return {String}
 	 */
 	static getMerchantValidationUrl (merchantId) {
@@ -128,9 +128,9 @@ class ApplePay {
 
 	/**
 	 * Helper method to format payment details correctly
-	 * @param {number} value Cost in 2 digit decimal number
-	 * @param {string} currency ISO 3 digit currency code
-	 * @param {string} label Product name
+	 * @param {Number} value Cost in 2 digit decimal number
+	 * @param {String} currency ISO 3 digit currency code
+	 * @param {String} label Product name
 	 */
 	static getPaymentDetails (value, currency, label) {
 		const details = ApplePay.PAYMENT_DETAILS;
@@ -142,7 +142,7 @@ class ApplePay {
 
 	/**
 	 * Expose the production merchant id
-	 * @return {string}
+	 * @return {String}
 	 */
 	static get MERCHANT_ID () {
 		return 'merchant.com.ft';
@@ -150,7 +150,7 @@ class ApplePay {
 
 	/**
 	 * Expose the production merchant validation url
-	 * @return {string}
+	 * @return {String}
 	 */
 	static get MERCHANT_VALIDATION_URL () {
 		return 'https://api.ft.com/idm/v1/apple-merchant-validation/validate';
@@ -158,7 +158,7 @@ class ApplePay {
 
 	/**
 	 * Expose production payment methods
-	 * @return {string}
+	 * @return {Array}
 	 */
 	static get PAYMENT_METHODS () {
 		return [{
@@ -175,7 +175,7 @@ class ApplePay {
 
 	/**
 	 * Default payment details
-	 * @return {object}
+	 * @return {Object}
 	 */
 	static get PAYMENT_DETAILS () {
 		return {
@@ -191,7 +191,7 @@ class ApplePay {
 
 	/**
 	 * Default payment options
-	 * @return {object}
+	 * @return {Object}
 	 */
 	static get PAYMENT_OPTIONS () {
 		return {
@@ -204,7 +204,7 @@ class ApplePay {
 
 	/**
 	 * Expose the test merchant id
-	 * @return {string}
+	 * @return {String}
 	 */
 	static get TEST_MERCHANT_ID () {
 		return 'merchant.test.env.apple.pay';
@@ -212,7 +212,7 @@ class ApplePay {
 
 	/**
 	 * Expose the test merchant validation url
-	 * @return {string}
+	 * @return {String}
 	 */
 	static get TEST_MERCHANT_VALIDATION_URL () {
 		return 'https://api-t.ft.com/idm/v1/apple-merchant-validation/validate';
@@ -220,7 +220,7 @@ class ApplePay {
 
 	/**
 	 * Expose the test payment methods
-	 * @return {string}
+	 * @return {Array}
 	 */
 	static get TEST_PAYMENT_METHODS () {
 		return [{

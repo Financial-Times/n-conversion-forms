@@ -1,11 +1,15 @@
-const imageUrl = 'https://spoor-api.ft.com/px.gif';
-const eventName = 'oTracking.event';
-
+/**
+ * Tracking helper to either fire a oTracking event or image
+ * @example
+ * const tracking = new Tracking(window, document.body);
+ * tracking.dispatch('test', 'test', { example: 'data' });
+ */
 class Tracking {
 	/**
 	 * Construct with window and element
 	 * @param {Window} window Window object to access Image and CustomEvent on
 	 * @param {Element} element HTML element to dispatch event on, normally document.body
+	 * @throws If the window or element is not supplied
 	 */
 	constructor (window, element) {
 		if (!window || !element) {
@@ -19,10 +23,11 @@ class Tracking {
 
 	/**
 	 * Dispatch a standard tracking event, falls back to dispacting tracking pixel
-	 * @param {string} category
-	 * @param {string} action
-	 * @param {object} data
-	 * @returns {number} Amount of events dispatched
+	 * @param {String} category
+	 * @param {String} action
+	 * @param {Object} data
+	 * @returns {Number} Amount of events dispatched
+	 * @throws If the category or action is not supplied
 	 */
 	dispatch (category, action, data = {}) {
 		if (!category || !action) {
@@ -40,11 +45,11 @@ class Tracking {
 
 	/**
 	 * Fire a CustomEvent on the given element with tracking data
-	 * @param {object} data
-	 * @returns {number} Amount of events dispatched
+	 * @param {Object} data
+	 * @returns {Number} Amount of events dispatched
 	 */
 	dispatchCustomEvent (data = {}) {
-		const event = new this.window.CustomEvent(eventName, {
+		const event = new this.window.CustomEvent('oTracking.event', {
 			bubbles: true,
 			cancelable: true,
 			detail: data
@@ -56,20 +61,20 @@ class Tracking {
 
 	/**
 	 * Load a tracking pixel with encoded tracking data
-	 * @param {object} data
-	 * @returns {number} Amount of events dispatched
+	 * @param {Object} data
+	 * @returns {Number} Amount of events dispatched
 	 */
 	dispatchImage (data = {}) {
 		const image = new this.window.Image();
 		const encodedData = encodeURIComponent(JSON.stringify(data));
 
-		image.src = `${imageUrl}?data=${encodedData}`;
+		image.src = `https://spoor-api.ft.com/px.gif?data=${encodedData}`;
 		return this.addDebugData(data);
 	}
 
 	/**
 	 * Initalise debug data array
-	 * @returns {array}
+	 * @returns {Array}
 	 */
 	initDebugData () {
 		return this.window.debugTracking = this.window.debugTracking || [];
@@ -77,8 +82,8 @@ class Tracking {
 
 	/**
 	 * Add a new debug message
-	 * @param {object} data
-	 * @returns {number} Number of debug messages
+	 * @param {Object} data
+	 * @returns {Number} Number of debug messages
 	 */
 	addDebugData (data = {}) {
 		return this.window.debugTracking.push({ time: new this.window.Date(), data });
@@ -86,7 +91,7 @@ class Tracking {
 
 	/**
 	 * Return all the debug data
-	 * @returns {array}
+	 * @returns {Array}
 	 */
 	getDebugData () {
 		return this.window.debugTracking || [];

@@ -1,36 +1,38 @@
+/**
+ * Utility for the `n-conversion-forms/partial/password.html` partial
+ * @example
+ * const password = new Password(document);
+ *
+ * // Manaully toggle the mask
+ * password.toggleMask(true);
+ */
 class Password {
 	/**
 	 * Initalise the Password utility
+	 * @param {Element} element Usually the window.document
+	 * @throws If the document not passed
+	 * @throws When the password element not found
 	 */
-	constructor (document) {
-		if (!document) {
-			throw new Error('Please supply the document object');
+	constructor (element) {
+		if (!element) {
+			throw new Error('Please supply a DOM element');
 		}
 
-		this.$password = document.querySelector('.ncf #password');
-		this.$checkbox = document.querySelector('.ncf #showPassword');
+		this.$password = element.querySelector('.ncf #password');
+		this.$checkbox = element.querySelector('.ncf #showPassword');
 
-		if (!this.$password) {
+		if (!this.$password || !this.$checkbox) {
 			throw new Error('Please include the password partial on the page');
 		}
 
-		this.registerMaskCheckbox();
-	}
-
-	/**
-	 * Setup checkbox to toggle password visibility
-	 */
-	registerMaskCheckbox () {
-		if (this.$checkbox) {
-			this.$checkbox.addEventListener('change', () => {
-				this.toggleMask(!this.$checkbox.checked);
-			});
-		}
+		this.$checkbox.addEventListener('change', () => {
+			this.toggleMask(!this.$checkbox.checked);
+		});
 	}
 
 	/**
 	 * Toggle whether the password is shown in plain text or not
-	 * @param {Boolean} mask Pass true to show plain text
+	 * @param {Boolean} mask Pass false to show plain text
 	 */
 	toggleMask (mask) {
 		this.$password.type = mask ? 'password' : 'text';

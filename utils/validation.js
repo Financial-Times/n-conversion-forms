@@ -4,7 +4,7 @@ class Validation {
 
 	/**
 	 * Set up the Validation utility
-	 * @param {boolean} mutePromptBeforeLeaving (default: false) Whether to prompt the user before leaving if there have been changes in any of the fields.
+	 * @param {Boolean} mutePromptBeforeLeaving (default: false) Whether to prompt the user before leaving if there have been changes in any of the fields.
 	 */
 	constructor ({ mutePromptBeforeLeaving } = {}) {
 		this.$form = document.querySelector('form.ncf');
