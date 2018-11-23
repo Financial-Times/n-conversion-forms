@@ -1,5 +1,5 @@
 /**
- * Tracking helper to either fire a oTracking event or image
+ * Tracking helper to either fire an oTracking event or image
  * @example
  * const tracking = new Tracking(window, document.body);
  * tracking.dispatch('test', 'test', { example: 'data' });
