@@ -2,7 +2,7 @@ const ApplePay = require('../../utils/apple-pay');
 const expect = require('chai').expect;
 const sinon = require('sinon');
 
-describe.only('Apple Pay', () => {
+describe('Apple Pay', () => {
 	let request;
 	let window;
 	let event;
