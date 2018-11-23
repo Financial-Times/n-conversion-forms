@@ -3,7 +3,7 @@
  * @example
  * const password = new Password(document);
  *
- * // Manaully toggle the mask
+ * // Manually toggle the mask
  * password.toggleMask(true);
  */
 class Password {
