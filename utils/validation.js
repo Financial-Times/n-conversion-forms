@@ -44,6 +44,8 @@ class Validation {
 				return this.formChanged && !this.formSubmit || null;
 			};
 		}
+
+		this.validateOnInit();
 	}
 
 	/**
@@ -57,6 +59,17 @@ class Validation {
 			this.formValid = false;
 			this.$submit.disabled = true;
 		}
+	}
+
+	/**
+	 * Check for validity on init.
+	 */
+	validateOnInit () {
+		this.$requiredEls.map($el => {
+			$el.checkValidity();
+		});
+
+		this.checkFormValidity();
 	}
 
 	/**
