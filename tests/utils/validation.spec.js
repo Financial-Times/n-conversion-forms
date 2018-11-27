@@ -44,9 +44,6 @@ describe('Validation', () => {
 		]);
 
 		validation = new Validation(document);
-
-		sandbox.spy(validation, 'validateOnInit');
-		sandbox.spy(validation, 'checkFormValidity');
 		validation.init();
 	});
 
@@ -65,7 +62,7 @@ describe('Validation', () => {
 		});
 
 		it('should check validation status on init', () => {
-			expect(validation.validateOnInit.called).to.be.true;
+			expect(checkValidityStub.called).to.be.true;
 		});
 	});
 
@@ -125,16 +122,6 @@ describe('Validation', () => {
 
 			expect(validation.formValid).to.be.true;
 			expect(validation.$submit.disabled).to.be.false;
-		});
-	});
-
-	describe('validateOnInit', () => {
-		it('checks the validity of the form elements', () => {
-			expect(checkValidityStub.called).to.be.true;
-		});
-
-		it('calls checkFormValidity to enable/disable submit button as appropriate', () => {
-			expect(validation.checkFormValidity.called).to.be.true;
 		});
 	});
 
