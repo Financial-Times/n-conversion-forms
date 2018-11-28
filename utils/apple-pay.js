@@ -123,7 +123,6 @@ class ApplePay {
 		if (merchantId === ApplePay.TEST_MERCHANT_ID) {
 			return ApplePay.TEST_MERCHANT_VALIDATION_URL;
 		}
-
 		return ApplePay.MERCHANT_VALIDATION_URL;
 	}
 

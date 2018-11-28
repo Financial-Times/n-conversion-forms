@@ -104,7 +104,7 @@ describe('Apple Pay', () => {
 			it('should use the test merchant validation URL', () => {
 				applePay = new ApplePay(window, ApplePay.TEST_PAYMENT_METHODS);
 				applePay.handleMerchantValidation(event);
-				expect(window.fetch.calledOnceWith(ApplePay.MERCHANT_VALIDATION_URL)).to.be.true;
+				expect(window.fetch.calledOnceWith(ApplePay.TEST_MERCHANT_VALIDATION_URL)).to.be.true;
 			});
 
 			it('should call event.complete with response', async () => {
