@@ -79,7 +79,7 @@ class ApplePay {
 	 * @param {Object} event
 	 */
 	async handleMerchantValidation (event) {
-		const merchantId = ApplePay.getMerchantId(this.method);
+		const merchantId = ApplePay.getMerchantId(this.methods);
 		const url = ApplePay.getMerchantValidationUrl(merchantId);
 		const data = {
 			validationUrl: event.validationURL,
@@ -123,6 +123,7 @@ class ApplePay {
 		if (merchantId === ApplePay.TEST_MERCHANT_ID) {
 			return ApplePay.TEST_MERCHANT_VALIDATION_URL;
 		}
+
 		return ApplePay.MERCHANT_VALIDATION_URL;
 	}
 
