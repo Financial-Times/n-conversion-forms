@@ -25,7 +25,7 @@ i.e `{{> n-conversion-forms/partials/message isError=true message=flash.message 
 
 ### Title:
 
-* messageTitle: string - messageTitle='The title of the message'. Optional.
+* messageTitle: string - messageTitle="The title of the message". Optional.
 
 ### Message:
 
