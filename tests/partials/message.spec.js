@@ -102,7 +102,7 @@ describe('message template', () => {
 	});
 
 	it('should display a title if specified', () => {
-		const $ = context.template({ title: 'Foo' });
+		const $ = context.template({ messageTitle: 'Foo' });
 		const $title = $(SELECTOR_TITLE);
 
 		expect($title.length).to.equal(1);
