@@ -6,7 +6,7 @@
 
 ## Message
 
-Displays a message on the page using [o-message](https://registry.origami.ft.com/components/o-message@3.0.1).
+Displays a message on the page using [o-message](https://registry.origami.ft.com/components/o-message).
 
 i.e `{{> n-conversion-forms/partials/message isError=true message=flash.message }}`
 
@@ -39,11 +39,14 @@ i.e `{{> n-conversion-forms/partials/message isError=true message=flash.message 
 
 ### Actions
 
-Allows for a links to be added to the message
+Allows for two types of styles:
 
-* actions: array. Optional
+* button-style: o-message__actions__primary
+* link-style: o-message__actions__secondary
+
+* actions: Optional. Array of objects containing the following properties:
 
 Required if you have actions.
 * link: url=https://ft.com.
 * text: string=FT.com.
-* isSecondary: boolean. If there is more than one action.
+* isSecondary: boolean.
