@@ -1,9 +1,9 @@
 const { expect } = require('chai');
 const { fetchPartial } = require('../helpers');
 
-const CLASS_COMPLETE = 'ncf__progress__item--complete';
-const CLASS_CURRENT = 'ncf__progress__item--current';
-const CLASS_PROGRESS_ITEM = 'ncf__progress__item';
+const CLASS_COMPLETE = 'o-stepped-progress__step--complete';
+const CLASS_CURRENT = 'o-stepped-progress__step--current';
+const CLASS_PROGRESS_ITEM = 'o-stepped-progress__step';
 
 let context = {};
 
