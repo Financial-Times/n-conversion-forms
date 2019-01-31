@@ -124,6 +124,12 @@
 		}
 	}
 
+	&__icon--inline-edit {
+		@include oIconsGetIcon('edit', oColorsGetPaletteColor('black'), 20);
+		border: none;
+		vertical-align: middle;
+	}
+
 	&__icon--large {
 		width: 40px;
 		height: 40px;
