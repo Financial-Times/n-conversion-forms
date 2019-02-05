@@ -11,6 +11,7 @@
 
 @include oFormsBaseFeatures();
 @include oFormsRadioCheckboxFeatures();
+@include oFormsRadioButtonsStyledFeature();
 @include oFormsSuffixFeature();
 @include oFormsSectionFeature();
 @include oFormsWideFeature();
@@ -210,6 +211,10 @@
 	}
 
 	@include ncfPaymentApplePay();
+
+	.o-normalise-visually-hidden {
+		@include oNormaliseVisuallyHidden;
+	}
 
 	// Override o-forms padding set at certain screen sizes
 	// This should be removed when Origami remove this from o-forms
