@@ -21,6 +21,12 @@
       "value": "bar"
     }]
   },
+  "payment-type": {
+    "enableCreditcard": true,
+    "enableDirectdebit": true,
+    "enablePaypal": true,
+    "enableApplepay": true
+  },
   "email": {
     "showConfirm": true
   },
