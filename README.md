@@ -86,6 +86,29 @@ const password = new Password(document);
 
 This utility's sole purpose (currently) is to enable the functionality behind the `Show password` checkbox that toggles whether the password is masked or not.
 
+### PaymentType
+
+```js
+const paymentType = new PaymentType(document);
+
+// Show payment type
+paymentType.show(PaymentType.APPLEPAY);
+
+// Hide payment type
+paymentType.hide(PaymentType.CREDITCARD);
+```
+
+Allows the control of which payment types are shown to the user. It relies on the `{{> payment-type }}` partial being used and has `show` and `hide` methods.
+
+The following payment types are allowed:
+
+```js
+PaymentType.CREDITCARD
+PaymentType.DIRECTDEBIT
+PaymentType.PAYPAL
+PaymentType.APPLEPAY
+```
+
 ### Tracking
 
 ```js
