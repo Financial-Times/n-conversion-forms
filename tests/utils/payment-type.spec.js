@@ -25,8 +25,6 @@ describe('PaymentType', () => {
 			}
 		};
 		paymentType = new PaymentType(document);
-		sandbox.spy(paymentType, 'show');
-		sandbox.spy(paymentType, 'hide');
 		sandbox.spy(paymentTypeField, 'append');
 		sandbox.spy(paymentTypeField, 'querySelector');
 		sandbox.spy(element, 'remove');
@@ -49,18 +47,6 @@ describe('PaymentType', () => {
 				document.querySelector = () => false;
 				new PaymentType(document);
 			}).to.throw();
-		});
-	});
-
-	describe('toggle', () => {
-		it('should call show if true passed', () => {
-			paymentType.toggle(PaymentType.CREDITCARD, true);
-			expect(paymentType.show.calledOnce).to.be.true;
-		});
-
-		it('should call hide if false passed', () => {
-			paymentType.toggle(PaymentType.DIRECTDEBIT, false);
-			expect(paymentType.hide.calledOnce).to.be.true;
 		});
 	});
 

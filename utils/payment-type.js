@@ -3,8 +3,11 @@
  * @example
  * const paymentType = new PaymentType(document);
  *
- * // Toggle the payment type
- * paymentType.togglePaymentType(PaymentType.APPLEPAY, true);
+ * // Show payment type
+ * paymentType.show(PaymentType.APPLEPAY);
+ *
+ * // Hide payment type
+ * paymentType.hide(PaymentType.CREDITCARD);
  */
 class PaymentType {
 	/**
@@ -23,19 +26,6 @@ class PaymentType {
 
 		if (!this.$paymentType) {
 			throw new Error('Please include the payment type partial on the page');
-		}
-	}
-
-	/**
-	 * Helper method for toggling the payment methods
-	 * @param {String} type Payment type to toggle
-	 * @param {Boolean} show Pass true to show
-	 */
-	toggle (type, show) {
-		if (show) {
-			return this.show(type);
-		} else {
-			return this.hide(type);
 		}
 	}
 
