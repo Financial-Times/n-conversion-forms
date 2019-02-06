@@ -4,16 +4,23 @@
 	<script type="text/javascript" src="https://seal.websecurity.norton.com/getseal?host_name=www.ft.com&amp;size=XS&amp;use_flash=NO&amp;use_transparent=Yes&amp;lang=en"></script> Secure payment details
 </div> -->
 
-<fieldset id="paymentTypeField" class="o-forms o-forms o-forms--wide ncf__field">
-	<legend class="o-forms__label o-normalise-visually-hidden">Payment Type</legend>
+<div id="paymentTypeField" class="o-forms o-forms o-forms--wide ncf__field">
 	<div class="o-forms__group o-forms__group--inline-together">
+		{{#if enableCreditcard }}
 		<input type="radio" name="paymentType" value="creditcard" class="o-forms__radio-button" id="creditcard"{{#ifEquals value "creditcard"}} checked="checked"{{/ifEquals}}>
 		<label for="creditcard" class="o-forms__label">Credit / Debit Card</label>
+		{{/if}}
+		{{#if enablePaypal }}
 		<input type="radio" name="paymentType" value="paypal" class="o-forms__radio-button" id="paypal"{{#ifEquals value "paypal"}} checked="checked"{{/ifEquals}}>
 		<label for="paypal" class="o-forms__label">Paypal</label>
+		{{/if}}
+		{{#if enableDirectdebit }}
 		<input type="radio" name="paymentType" value="directdebit" class="o-forms__radio-button" id="directdebit"{{#ifEquals value "directdebit"}} checked="checked"{{/ifEquals}}>
 		<label for="directdebit" class="o-forms__label">Direct Debit</label>
+		{{/if}}
+		{{#if enableApplepay }}
 		<input type="radio" name="paymentType" value="applepay" class="o-forms__radio-button" id="applepay"{{#ifEquals value "applepay"}} checked="checked"{{/ifEquals}}>
 		<label for="applepay" class="o-forms__label">Apple Pay</label>
+		{{/if}}
 	</div>
-</fieldset>
+</div>
