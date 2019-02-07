@@ -29,9 +29,10 @@
 	}
 
 	&__fieldset {
-		padding: 0;
-		margin: 0 0 20px;
 		border: 0;
+		margin: 0 0 20px;
+		min-inline-size: auto;
+		padding: 0;
 	}
 
 	&__field {
