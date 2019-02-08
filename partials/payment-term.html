@@ -1,0 +1,17 @@
+<div id="paymentTermField" class="o-forms__group ncf__payment-term">
+	{{#each options}}
+	<input type="radio" id="{{this.value}}" name="paymentTerm" value="{{this.value}}" class="o-forms__radio o-forms__radio--right ncf__payment-term__input o-forms__radio-button--my-custom-theme" {{#if this.selected}} checked="checked" {{/if}}>
+	<label for="{{this.value}}" class="o-forms__label ncf__payment-term__label">
+		<strong class="ncf__payment-term__label--title">{{this.name}}</strong>
+		<div class="ncf__payment-term__label--description">
+			{{{this.description}}}
+		</div>
+	</label>
+	{{/each}}
+	<div class="ncf__payment-term__legal">
+		With all subscription types, we will automatically renew your subscription using the payment method provided unless you
+		cancel before your renewal date. We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next
+		renewal. Find out more about our cancellation policy in our
+		<a href="https://help.ft.com/help/legal-privacy/terms-conditions/" title="FT Legal Terms and Conditions help page">Terms &amp; Conditions</a>.
+	</div>
+</div>

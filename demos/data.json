@@ -21,6 +21,20 @@
       "value": "bar"
     }]
   },
+  "payment-term": {
+    "options": [
+      {
+        "name": "Test",
+        "value": "Test",
+        "description": "The quick brown fox jumped over the lazy hare."
+      }, {
+        "name": "Test 1",
+        "value": "Test 1",
+        "description": "The <strong>quick</strong> brown fox<br />jumped over the lazy <a href=\"#\">hare</a>.",
+        "selected": true
+      }
+    ]
+  },
   "payment-type": {
     "enableCreditcard": true,
     "enableDirectdebit": true,
