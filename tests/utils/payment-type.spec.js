@@ -3,32 +3,22 @@ const expect = require('chai').expect;
 const sandbox = require('sinon').createSandbox();
 
 describe('PaymentType', () => {
-	let element;
-	let paymentTypeField;
 	let paymentType;
-	let document;
+	let documentStub;
+	let elementStub;
 
 	beforeEach(() => {
-		paymentTypeField = {
-			querySelector: () => element,
-			append: () => {}
+		elementStub = {
+			remove: sandbox.stub(),
+			append: sandbox.stub(),
+			cloneNode: sandbox.stub(),
+			setAttribute: sandbox.stub(),
+			getAttribute: sandbox.stub(),
+			querySelector: sandbox.stub()
 		};
-		element = {
-			remove: () => {},
-			cloneNode: () => element,
-			setAttribute: () => {},
-			parentElement: paymentTypeField
+		documentStub = {
+			querySelector: sandbox.stub()
 		};
-		document = {
-			querySelector: () => {
-				return paymentTypeField;
-			}
-		};
-		paymentType = new PaymentType(document);
-		sandbox.spy(paymentTypeField, 'append');
-		sandbox.spy(paymentTypeField, 'querySelector');
-		sandbox.spy(element, 'remove');
-		sandbox.spy(element, 'setAttribute');
 	});
 
 	afterEach(() => {
@@ -36,56 +26,83 @@ describe('PaymentType', () => {
 	});
 
 	describe('constructor', () => {
-		it('should throw an error if window not passed', () => {
+		it('should throw an error if nothing passed', () => {
 			expect(() => {
 				new PaymentType();
 			}).to.throw();
 		});
 
-		it('should throw an error if element not passed', () => {
+		it('should throw an error if field not present', () => {
 			expect(() => {
-				document.querySelector = () => false;
-				new PaymentType(document);
+				documentStub.querySelector.returns(false);
+				new PaymentType(documentStub);
 			}).to.throw();
 		});
 	});
 
-	describe('show', () => {
-		it('should append two new elements', () => {
-			paymentType.show(PaymentType.CREDITCARD);
-			expect(paymentTypeField.append.callCount).to.equal(2);
+	describe('constructed', () => {
+		beforeEach(() => {
+			documentStub.querySelector.returns(elementStub);
+			elementStub.querySelector.returns(elementStub);
+			paymentType = new PaymentType(documentStub);
 		});
 
-		it('should set the correct id', () => {
-			paymentType.show(PaymentType.CREDITCARD);
-			expect(element.setAttribute.calledWith('id', PaymentType.CREDITCARD)).to.be.true;
+		describe('show', () => {
+			beforeEach(() => {
+				elementStub.parentElement = elementStub;
+				elementStub.cloneNode.returns(elementStub);
+			});
+
+			it('should append two new elements', () => {
+				paymentType.show(PaymentType.CREDITCARD);
+				expect(elementStub.append.callCount).to.equal(2);
+			});
+
+			it('should set the correct id', () => {
+				paymentType.show(PaymentType.CREDITCARD);
+				expect(elementStub.setAttribute.calledWith('id', PaymentType.CREDITCARD)).to.be.true;
+			});
+
+			it('should set the correct value', () => {
+				paymentType.show(PaymentType.CREDITCARD);
+				expect(elementStub.setAttribute.calledWith('value', PaymentType.CREDITCARD)).to.be.true;
+			});
+
+			it('should set the correct for', () => {
+				paymentType.show(PaymentType.CREDITCARD);
+				expect(elementStub.setAttribute.calledWith('for', PaymentType.CREDITCARD)).to.be.true;
+			});
+
+			it('should set the correct label', () => {
+				paymentType.show(PaymentType.CREDITCARD);
+				expect(elementStub.innerText).to.equal(PaymentType.LABELS[PaymentType.CREDITCARD]);
+			});
 		});
 
-		it('should set the correct value', () => {
-			paymentType.show(PaymentType.CREDITCARD);
-			expect(element.setAttribute.calledWith('value', PaymentType.CREDITCARD)).to.be.true;
+		describe('hide', () => {
+			it('should remove two elements', () => {
+				paymentType.hide(PaymentType.PAYPAL);
+				expect(elementStub.remove.callCount).to.equal(2);
+			});
+
+			it('should use the correct selector', () => {
+				paymentType.hide(PaymentType.PAYPAL);
+				expect(elementStub.querySelector.calledWithMatch(PaymentType.PAYPAL)).to.be.true;
+			});
 		});
 
-		it('should set the correct for', () => {
-			paymentType.show(PaymentType.CREDITCARD);
-			expect(element.setAttribute.calledWith('for', PaymentType.CREDITCARD)).to.be.true;
-		});
+		describe('getSelected', () => {
+			it('should throw an error if nothing selected', () => {
+				elementStub.querySelector.returns(false);
+				expect(() => {
+					paymentType.getSelected();
+				}).to.throw();
+			});
 
-		it('should set the correct label', () => {
-			paymentType.show(PaymentType.CREDITCARD);
-			expect(element.innerText).to.equal(PaymentType.LABELS[PaymentType.CREDITCARD]);
-		});
-	});
-
-	describe('hide', () => {
-		it('should remove two elements', () => {
-			paymentType.hide(PaymentType.PAYPAL);
-			expect(element.remove.callCount).to.equal(2);
-		});
-
-		it('should use the correct selector', () => {
-			paymentType.hide(PaymentType.PAYPAL);
-			expect(paymentTypeField.querySelector.calledWithMatch(PaymentType.PAYPAL)).to.be.true;
+			it('should return the value of the selected term', () => {
+				paymentType.getSelected();
+				expect(elementStub.getAttribute.calledWith('value')).to.be.true;
+			});
 		});
 	});
 });

@@ -63,6 +63,19 @@ class PaymentType {
 		container.append(label);
 	}
 
+	/**
+	 * Returns the value of the currently selected item
+	 * @return {String}
+	 * @throws If nothing has been selected
+	 */
+	getSelected () {
+		const checked = this.$paymentType.querySelector('input[checked]');
+		if (!checked) {
+			throw new Error('No payment type has been selected');
+		}
+		return checked.getAttribute('value');
+	}
+
 	static get LABELS () {
 		const labels = {};
 
