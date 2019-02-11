@@ -89,6 +89,11 @@ describe('PaymentType', () => {
 				paymentType.hide(PaymentType.PAYPAL);
 				expect(elementStub.querySelector.calledWithMatch(PaymentType.PAYPAL)).to.be.true;
 			});
+
+			it('should fail silently if the element doesn\'t exist', () => {
+				elementStub.querySelector.returns(null);
+				expect(() => { paymentType.hide(PaymentType.PAYPAL); }).not.to.throw();
+			});
 		});
 
 		describe('getSelected', () => {

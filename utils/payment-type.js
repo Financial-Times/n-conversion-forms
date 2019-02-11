@@ -37,8 +37,12 @@ class PaymentType {
 		const input = this.$paymentType.querySelector(`#${type}`);
 		const label = this.$paymentType.querySelector(`label[for=${type}]`);
 
-		input.remove();
-		label.remove();
+		if (input) {
+			input.remove();
+		}
+		if (label) {
+			label.remove();
+		}
 	}
 
 	/**
