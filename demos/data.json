@@ -1,6 +1,7 @@
 {
   "country": {
-    "filterList": ["GBR", "JPN", "USA", "FRA"]
+    "filterList": ["GBR", "JPN", "USA", "FRA"],
+    "value": "USA"
   },
   "message": {
     "isError": true,
