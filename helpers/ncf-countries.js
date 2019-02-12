@@ -1,39 +1,63 @@
 const { countries } = require('n-common-static-data').billingCountries;
 
-const MINIMUM_TO_SPLIT = 50;
-const MINIMUM_TO_SHOW_SPLIT = 2;
+const MINIMUM_TO_GROUP = 50;
+const MINIMUM_TO_SHOW_GROUPS = 2;
 
 module.exports = function ({ hash = {}, fn }) {
-	const data = Array.isArray(hash.filterList) ? countries.filter(countryInFilterList(hash.filterList)) : countries;
-	const newContext = data.length >= MINIMUM_TO_SPLIT ? splitIntoUsage(data) : { countries: data };
-	const context = Object.assign(newContext, this);
+	const filter = Array.isArray(hash.filterList) ? hash.filterList : false;
+	const value = hash.value;
+
+	let data = countries;
+
+	// Only show countries in the filter
+	if (filter) {
+		data = data.filter(item => filter.includes(item.code));
+	}
+
+	// Select the country
+	if (value) {
+		data = data.map(item => {
+			item.selected = item.code === value;
+			return item;
+		});
+	}
+
+	// Group countries
+	if (data.length >= MINIMUM_TO_GROUP) {
+		data = groupCountries(data);
+	}
+
+	const context = Object.assign({ countries: data }, this);
 	return fn(context);
 };
 
-function countryInFilterList (filterList) {
-	return item => filterList.includes(item.code);
-}
+/**
+ * Produce a frequently used option group
+ * @param {Array} countries
+ * @return {Array}
+ */
+function groupCountries (countries) {
+	const frequentlyUsed = ['GBR', 'USA', 'JPN', 'FRA', 'CAN'];
 
-function splitIntoUsage (countries) {
-	const frequentCountries = ['GBR', 'USA', 'JPN', 'FRA', 'CAN'];
-	let foundFrequent = countries.map((item) => {
-		return frequentCountries.includes(item.code) && item;
-	}).filter(Boolean);
+	const frequentlyUsedCountries = countries
+		.filter(item => frequentlyUsed.includes(item.code))
+		.map(item => Object.assign({}, item))
+		.sort((a, b) => frequentlyUsed.indexOf(a.code) - frequentlyUsed.indexOf(b.code));
 
-	if (foundFrequent.length < MINIMUM_TO_SHOW_SPLIT) {
-		// Not worth showing the split version, just return the original
-		return { countries };
+	// Not worth showing return standard countries list
+	if (frequentlyUsedCountries.length < MINIMUM_TO_SHOW_GROUPS) {
+		return countries;
 	}
 
-	// Sort the frequently used countries into the usage metrics order (as defined on L#19)
-	foundFrequent = foundFrequent.sort((a, b) => {
-		return frequentCountries.indexOf(a.code) - frequentCountries.indexOf(b.code);
-	});
+	// If selected country is in frequently used only leave that one selected
+	// otherwise the user is shown the lowest selected option
+	const selected = frequentlyUsedCountries.find(item => item.selected);
+	if (selected) {
+		countries.forEach(item => item.selected = false);
+	}
 
-	return {
-		ncfCountryGroups: [
-			{ label: 'Frequently Used', countries: foundFrequent },
-			{ label: 'Alphabetical', countries }
-		]
-	};
+	return [
+		{ label: 'Frequently Used', countries: frequentlyUsedCountries },
+		{ label: 'Alphabetical', countries }
+	];
 }
