@@ -2,12 +2,12 @@ const Country = require('../../utils/country');
 const expect = require('chai').expect;
 const sandbox = require('sinon').createSandbox();
 
- describe('Country', () => {
+describe('Country', () => {
 	let country;
 	let documentStub;
 	let elementStub;
 
- 	beforeEach(() => {
+	beforeEach(() => {
 		elementStub = {
 			addEventListener: sandbox.stub(),
 			selectedIndex: 1,
@@ -18,18 +18,18 @@ const sandbox = require('sinon').createSandbox();
 		};
 	});
 
- 	afterEach(() => {
+	afterEach(() => {
 		sandbox.restore();
 	});
 
- 	describe('constructor', () => {
+	describe('constructor', () => {
 		it('should throw an error if nothing passed', () => {
 			expect(() => {
 				new Country();
 			}).to.throw();
 		});
 
- 		it('should throw an error if field not present', () => {
+		it('should throw an error if field not present', () => {
 			expect(() => {
 				documentStub.querySelector.returns(false);
 				new Country(documentStub);
@@ -83,4 +83,4 @@ const sandbox = require('sinon').createSandbox();
 			});
 		});
 	});
- });
+});

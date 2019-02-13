@@ -13,7 +13,7 @@ const helper = proxyquire('../../helpers/ncf-common-data', {
 	'n-common-static-data': mockCommonModule
 });
 
-describe('NCF Common Data', () => {
+describe('ncf-common-data', () => {
 
 	let stub;
 
