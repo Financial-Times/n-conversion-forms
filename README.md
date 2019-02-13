@@ -55,6 +55,20 @@ import MyModule from 'n-conversion-forms/utils/my-module';
 
 ## Utilities
 
+### Country
+
+```js
+const country = new Country(document);
+
+// Get the value on change
+country.onChange(() => {
+  const selected = country.getSelected();
+});
+```
+
+Adds listener for country changes and retrieve the currently selected value.
+
+
 ### Email
 
 ```js
