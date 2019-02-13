@@ -73,7 +73,7 @@ class PaymentType {
 	 * @throws If nothing has been selected
 	 */
 	getSelected () {
-		const checked = this.$paymentType.querySelector('input[checked]');
+		const checked = this.$paymentType.querySelector('input:checked');
 		if (!checked) {
 			throw new Error('No payment type has been selected');
 		}

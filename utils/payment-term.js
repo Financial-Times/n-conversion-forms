@@ -35,7 +35,7 @@ class PaymentTerm {
 	 * @throws If nothing has been selected
 	 */
 	getSelected () {
-		const checked = this.$paymentTerm.querySelector('input[checked]');
+		const checked = this.$paymentTerm.querySelector('input:checked');
 		if (!checked) {
 			throw new Error('No payment term has been selected');
 		}
