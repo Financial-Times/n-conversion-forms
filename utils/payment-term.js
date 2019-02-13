@@ -3,11 +3,16 @@
  * @example
  * const paymentTerm = new PaymentTerm(document);
  *
- * // Show payment type
- * paymentType.show(PaymentType.APPLEPAY);
+ * // Return the currently selected payment term
+ * paymentTerm.getSelected();
  *
- * // Hide payment type
- * paymentType.hide(PaymentType.CREDITCARD);
+ * // Update the payment term options displayed
+ * const options = [{
+ * 	name: 'Name of term',
+ * 	value: 'Value to send',
+ * 	description: 'Can contain <strong>HTML</strong>'
+ * }];
+ * paymentTerm.updateOptions(options);
  */
 
 const LABEL_TITLE_CLASS = '.ncf__payment-term__label--title';
