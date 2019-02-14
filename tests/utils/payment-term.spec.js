@@ -10,7 +10,13 @@ describe('PaymentTerm', () => {
 	beforeEach(() => {
 		elementStub = {
 			querySelector: sandbox.stub(),
-			getAttribute: sandbox.stub()
+			querySelectorAll: sandbox.stub(),
+			getAttribute: sandbox.stub(),
+			setAttribute: sandbox.stub(),
+			cloneNode: sandbox.stub(),
+			remove: sandbox.stub(),
+			insertBefore: sandbox.stub(),
+			parentElement: elementStub
 		};
 		documentStub = {
 			querySelector: sandbox.stub()
@@ -54,6 +60,58 @@ describe('PaymentTerm', () => {
 				elementStub.querySelector.returns(elementStub);
 				paymentTerm.getSelected();
 				expect(elementStub.getAttribute.calledWith('value')).to.be.true;
+			});
+		});
+
+		describe('updateOptions', () => {
+			beforeEach(() => {
+				paymentTerm.getSelected = sandbox.stub().returns(true);
+				elementStub.querySelector.returns(elementStub);
+				elementStub.cloneNode.returns(elementStub);
+				elementStub.querySelectorAll.returns([elementStub]);
+			});
+
+			it('should throw if no options given', () => {
+				expect(() => {
+					paymentTerm.updateOptions();
+				}).to.throw();
+			});
+
+			it('should throw if options not array', () => {
+				expect(() => {
+					paymentTerm.updateOptions('test');
+				}).to.throw();
+			});
+
+			it('should clone two nodes for each option', () => {
+				const options = [{}, {}];
+				paymentTerm.updateOptions(options);
+
+				expect(elementStub.cloneNode.callCount).to.equal(options.length * 2);
+			});
+
+			it('should set the value for each input', () => {
+				const options = [{ value: 1 }, { value: 2 }];
+				paymentTerm.updateOptions(options);
+
+				expect(elementStub.setAttribute.calledWith('value', options[0].value)).to.be.true;
+				expect(elementStub.setAttribute.calledWith('value', options[1].value)).to.be.true;
+			});
+
+			it('should set the id for each input', () => {
+				const options = [{ value: 1 }, { value: 2 }];
+				paymentTerm.updateOptions(options);
+
+				expect(elementStub.setAttribute.calledWith('id', options[0].value)).to.be.true;
+				expect(elementStub.setAttribute.calledWith('id', options[1].value)).to.be.true;
+			});
+
+			it('should set the for for each label', () => {
+				const options = [{ value: 1 }, { value: 2 }];
+				paymentTerm.updateOptions(options);
+
+				expect(elementStub.setAttribute.calledWith('for', options[0].value)).to.be.true;
+				expect(elementStub.setAttribute.calledWith('for', options[1].value)).to.be.true;
 			});
 		});
 	});
