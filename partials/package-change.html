@@ -3,10 +3,7 @@
 		<div class="o-message__content">
 			<p class="o-message__content-main">You have chosen <strong>{{currentPackage}}</strong></p>
 			<div class="o-message__actions">
-				<form action="{{changePackageUrl}}" method="POST">
-					{{#each formData}}<input type="hidden" name="{{name}}" value="{{value}}" />{{/each}}
-					<button class="ncf__button ncf__button--mono" data-trackable="change" type="submit">Change</button>
-				</form>
+				<a href="{{changePackageUrl}}" class="ncf__button ncf__button--mono" data-trackable="change">Change</a>
 			</div>
 		</div>
 	</div>

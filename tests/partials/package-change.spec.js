@@ -10,32 +10,17 @@ describe('package-change template', () => {
 		context.template = await fetchPartial('package-change.html');
 	});
 
-	it('should set the form up correctly', () => {
+	it('should set the link correctly', () => {
 		const data = { changePackageUrl: '/foo' };
 		const $ = context.template(data);
 
-		expect($('form').attr('action')).to.equal('/foo');
-		expect($('form [type=submit]').length).to.equal(1);
+		expect($('a').attr('href')).to.equal('/foo');
 	});
 
 	it('should display package name and price when passed', () => {
-		const data = {
-			currentPackage: 'Digital'
-		};
+		const data = { currentPackage: 'Digital' };
 		const $ = context.template(data);
 
 		expect($('.ncf__center').text()).to.contain(data.currentPackage);
-	});
-
-	it('should display package name and price when passed', () => {
-		const data = {
-			formData: [{
-				name: 'foo',
-				value: 'bar'
-			}]
-		};
-		const $ = context.template(data);
-
-		expect($('form input[name="foo"][value="bar"]').length).to.equal(1);
 	});
 });
