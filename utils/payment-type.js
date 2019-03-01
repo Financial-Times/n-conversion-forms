@@ -68,6 +68,20 @@ class PaymentType {
 	}
 
 	/**
+	 * Display an error message on the paymentType
+	 */
+	displayError () {
+		this.$paymentType.classList.add('o-forms--error');
+	}
+
+	/**
+	 * Remove an error from display
+	 */
+	removeError () {
+		this.$paymentType.classList.remove('o-forms--error');
+	}
+
+	/**
 	 * Returns the value of the currently selected item
 	 * @return {String}
 	 * @throws If nothing has been selected

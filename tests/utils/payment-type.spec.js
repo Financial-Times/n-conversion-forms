@@ -14,7 +14,11 @@ describe('PaymentType', () => {
 			cloneNode: sandbox.stub(),
 			setAttribute: sandbox.stub(),
 			getAttribute: sandbox.stub(),
-			querySelector: sandbox.stub()
+			querySelector: sandbox.stub(),
+			classList: {
+				add: sandbox.stub(),
+				remove: sandbox.stub()
+			}
 		};
 		documentStub = {
 			querySelector: sandbox.stub()
@@ -93,6 +97,20 @@ describe('PaymentType', () => {
 			it('should fail silently if the element doesn\'t exist', () => {
 				elementStub.querySelector.returns(null);
 				expect(() => { paymentType.hide(PaymentType.PAYPAL); }).not.to.throw();
+			});
+		});
+
+		describe('displayError', () => {
+			it('should add a class to the paymentType element', () => {
+				paymentType.displayError();
+				expect(elementStub.classList.add.called).to.be.true;
+			});
+		});
+
+		describe('removeError', () => {
+			it('should remove a class to the paymentType element', () => {
+				paymentType.removeError();
+				expect(elementStub.classList.remove.called).to.be.true;
 			});
 		});
 
