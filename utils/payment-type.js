@@ -110,7 +110,7 @@ class PaymentType {
 	}
 
 	static get DIRECTDEBIT () {
-		return 'applepay';
+		return 'directdebit';
 	}
 
 	static get PAYPAL () {
