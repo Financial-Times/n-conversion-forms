@@ -9,7 +9,9 @@
 @import 'o-stepped-progress/main';
 @import './styles/payment';
 @import './styles/payment-term';
+@import 'o-fonts/main';
 
+@include oFonts();
 @include oFormsBaseFeatures();
 @include oFormsRadioCheckboxFeatures();
 @include oFormsRadioButtonsStyledFeature();
