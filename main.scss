@@ -9,6 +9,7 @@
 @import 'o-stepped-progress/main';
 @import './styles/payment';
 @import './styles/payment-term';
+@import './styles/debug';
 
 @include oFormsBaseFeatures();
 @include oFormsRadioCheckboxFeatures();
@@ -166,6 +167,8 @@
 	@include ncfPaymentTerm();
 
 	@include ncfPaymentApplePay();
+
+	@include ncfDebug();
 
 	.o-normalise-visually-hidden {
 		@include oNormaliseVisuallyHidden;

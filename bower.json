@@ -42,6 +42,7 @@
     "o-message": "^2.4.1",
     "o-colors": "^4.7.10",
     "o-icons": "^5.9.0",
-    "o-stepped-progress": "^1.0.0"
+    "o-stepped-progress": "^1.0.0",
+    "o-labels": "^4.2.2"
   }
 }

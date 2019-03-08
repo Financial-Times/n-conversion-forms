@@ -1,0 +1,48 @@
+{{!-- Debug Panel for working with Conversion Forms --}}
+{{#ifSome isTest showHelpers}}
+<div class="ncf__debug-panel">
+	<div class="ncf__debug-environment">
+		{{#if isTest}}
+		<span class="o-labels o-labels--big o-labels--test"><strong>TEST</strong> Relax you are using the test API</span>
+		{{else}}
+		<span class="o-labels o-labels--big o-labels--premium"><strong>PRODUCTION</strong> Careful you are using the production API</span>
+		{{/if}}
+	</div>
+
+	{{#if showHelpers}}
+	<div class="ncf__debug-helpers">
+		<button class="ncf__debug-button" onclick="fillForm();">Fill out form</button>
+		<button class="ncf__debug-button" onclick="fillForm(); submitForm();">Fill out and submit</button>
+		<button class="ncf__debug-button" onclick="copyToClipboard('ukVisa');">Copy UK Visa</button>
+		<button class="ncf__debug-button" onclick="copyToClipboard('usVisa');">Copy US Visa</button>
+		<button class="ncf__debug-button" onclick="copyToClipboard('usAmex');">Copy US Amex</button>
+	</div>
+	{{/if}}
+</div>
+<script>
+	var debugData = {
+		ukVisa: '4111111111111111',
+		usVisa: '4112344112344113',
+		usAmex: '378282246310005',
+
+	};
+
+	function fillForm () {
+		// @todo Fill out every field with generic values using the debugData
+	}
+
+	function submitForm () {
+		document.querySelector('form.ncf').submit();
+	}
+
+	function copyToClipboard (name) {
+		var string = debugData[name];
+		var textarea = document.createElement('textarea');
+		textarea.value = string;
+		document.body.appendChild(textarea);
+		textarea.select();
+		document.execCommand('copy');
+		document.body.removeChild(textarea);
+	}
+</script>
+{{/ifSome}}
