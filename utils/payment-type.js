@@ -59,6 +59,7 @@ class PaymentType {
 
 		input.setAttribute('id', type);
 		input.setAttribute('value', type);
+		input.removeAttribute('checked');
 
 		label.setAttribute('for', type);
 		label.innerText = PaymentType.LABELS[type];

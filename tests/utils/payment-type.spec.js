@@ -13,6 +13,7 @@ describe('PaymentType', () => {
 			append: sandbox.stub(),
 			cloneNode: sandbox.stub(),
 			setAttribute: sandbox.stub(),
+			removeAttribute: sandbox.stub(),
 			getAttribute: sandbox.stub(),
 			querySelector: sandbox.stub(),
 			classList: {
@@ -70,6 +71,11 @@ describe('PaymentType', () => {
 			it('should set the correct value', () => {
 				paymentType.show(PaymentType.CREDITCARD);
 				expect(elementStub.setAttribute.calledWith('value', PaymentType.CREDITCARD)).to.be.true;
+			});
+
+			it('should not be selected by default', () => {
+				paymentType.show(PaymentType.CREDITCARD);
+				expect(elementStub.removeAttribute.calledWith('checked')).to.be.true;
 			});
 
 			it('should set the correct for', () => {
