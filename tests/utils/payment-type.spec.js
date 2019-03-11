@@ -16,6 +16,7 @@ describe('PaymentType', () => {
 			removeAttribute: sandbox.stub(),
 			getAttribute: sandbox.stub(),
 			querySelector: sandbox.stub(),
+			addEventListener: sandbox.stub(),
 			classList: {
 				add: sandbox.stub(),
 				remove: sandbox.stub()
@@ -117,6 +118,20 @@ describe('PaymentType', () => {
 			it('should remove a class to the paymentType element', () => {
 				paymentType.removeError();
 				expect(elementStub.classList.remove.called).to.be.true;
+			});
+		});
+
+		describe('onChange', () => {
+			it('should add an event listener on change', () => {
+				paymentType.onChange();
+				expect(elementStub.addEventListener.calledWith('change')).to.be.true;
+			});
+
+			it('should call the callback', () => {
+				const callback = sandbox.stub();
+				elementStub.addEventListener = (type, callback) => callback();
+				paymentType.onChange(callback);
+				expect(callback.called).to.be.true;
 			});
 		});
 

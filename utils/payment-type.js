@@ -83,6 +83,14 @@ class PaymentType {
 	}
 
 	/**
+	 * Register on change an event listener
+	 * @param {Function} callback Called with event when changed
+	 */
+	onChange (callback=()=>{}) {
+		return this.$paymentType.addEventListener('change', callback);
+	}
+
+	/**
 	 * Returns the value of the currently selected item
 	 * @return {String}
 	 * @throws If nothing has been selected
