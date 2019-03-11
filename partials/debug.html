@@ -44,6 +44,10 @@
 			var value = debugData[input.name];
 			input.value = value;
 		});
+		var checkboxes = document.querySelectorAll(FORM_SELECTOR + ' input[type="checkbox"]');
+		checkboxes.forEach(function (checkbox) {
+			checkbox.checked = true;
+		});
 	}
 
 	function submitForm () {
