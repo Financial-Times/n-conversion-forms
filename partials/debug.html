@@ -1,23 +1,24 @@
 {{!-- Debug Panel for working with Conversion Forms --}}
+{{!-- Style and scripts are inline to reduce the impact on production files --}}
 {{#ifSome isTest showHelpers}}
 <div class="ncf__debug-panel">
-	<div class="ncf__debug-environment">
+	<span class="ncf__debug-environment">
 		{{#if isTest}}
-		<span class="o-labels o-labels--big o-labels--test"><strong>TEST</strong> Relax you are using the test API</span>
+		<span class="ncf__debug-label ncf__debug-label--test"><strong>TEST</strong> relax you are using the test API</span>
 		{{else}}
-		<span class="o-labels o-labels--big o-labels--premium"><strong>PRODUCTION</strong> Careful you are using the production API</span>
+		<span class="ncf__debug-label ncf__debug-label--production"><strong>PRODUCTION</strong> careful you are using the production API</span>
 		{{/if}}
-	</div>
-
+	</span>
 	{{#if showHelpers}}
-	<div class="ncf__debug-helpers">
-		<button class="ncf__debug-button" onclick="fillForm();">Fill</button>
-		<button class="ncf__debug-button" onclick="fillForm(); submitForm();">Fill & Submit</button>
-		<button class="ncf__debug-button" onclick="copyToClipboard('ukVisa');">Copy UK Visa</button>
-		<button class="ncf__debug-button" onclick="copyToClipboard('usVisa');">Copy US Visa</button>
-		<button class="ncf__debug-button" onclick="copyToClipboard('usAmex');">Copy US Amex</button>
-	</div>
+	<span class="ncf__debug-helpers">
+		<button class="ncf__button ncf__button--inverse" onclick="fillForm();" title="Fill form with debug data">Fill</button>
+		<button class="ncf__button ncf__button--inverse" onclick="fillForm(); submitForm();" title="Fill form with debug data and submit">Fill & Submit</button>
+		<button class="ncf__button ncf__button--inverse" onclick="copyToClipboard('ukVisa');" title="Copy UK Visa card number to clipboard">UK Visa</button>
+		<button class="ncf__button ncf__button--inverse" onclick="copyToClipboard('usVisa');" title="Copy US Visa card number to clipboard">US Visa</button>
+		<button class="ncf__button ncf__button--inverse" onclick="copyToClipboard('usAmex');" title="Copy US Amex card number to clipboard">US Amex</button>
+	</span>
 	{{/if}}
+
 </div>
 <script>
 	var FORM_SELECTOR = 'form.ncf';
@@ -58,4 +59,39 @@
 		document.body.removeChild(textarea);
 	}
 </script>
+<style>
+	.ncf__debug-panel {
+		position: absolute;
+		background-color: #262a33;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 10px;
+	}
+	.ncf__debug-environment {
+		color: #ffffff;
+	}
+	.ncf__debug-label {
+		font-size: 14px;
+		line-height: 1em;
+		font-weight: 500;
+		text-align: center;
+		display: inline-block;
+		box-sizing: border-box;
+		vertical-align: middle;
+		margin: 0;
+		padding: 12px;
+	}
+	.ncf__debug-label--test {
+		color: #ffffff;
+		background-color: #008040;
+	}
+	.ncf__debug-label--production {
+		color: #ffffff;
+		background-color: #990000;
+	}
+	.ncf__debug-helpers {
+		color: #ffffff;
+	}
+</style>
 {{/ifSome}}

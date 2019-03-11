@@ -86,7 +86,7 @@
     ]
   },
   "debug": {
-    "isTest": false,
+    "isTest": true,
     "showHelpers": true
   }
 }
