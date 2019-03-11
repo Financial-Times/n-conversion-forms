@@ -11,8 +11,8 @@
 
 	{{#if showHelpers}}
 	<div class="ncf__debug-helpers">
-		<button class="ncf__debug-button" onclick="fillForm();">Fill out form</button>
-		<button class="ncf__debug-button" onclick="fillForm(); submitForm();">Fill out and submit</button>
+		<button class="ncf__debug-button" onclick="fillForm();">Fill</button>
+		<button class="ncf__debug-button" onclick="fillForm(); submitForm();">Fill & Submit</button>
 		<button class="ncf__debug-button" onclick="copyToClipboard('ukVisa');">Copy UK Visa</button>
 		<button class="ncf__debug-button" onclick="copyToClipboard('usVisa');">Copy US Visa</button>
 		<button class="ncf__debug-button" onclick="copyToClipboard('usAmex');">Copy US Amex</button>
@@ -20,19 +20,32 @@
 	{{/if}}
 </div>
 <script>
+	var FORM_SELECTOR = 'form.ncf';
 	var debugData = {
 		ukVisa: '4111111111111111',
 		usVisa: '4112344112344113',
 		usAmex: '378282246310005',
-
+		email: Date.now() + '@ftqa.org',
+		password: 'password123',
+		firstName: 'Test',
+		lastName: 'Test',
+		primaryTelephone: '0987654321',
+		country: 'GBR',
+		industry: 'DEF',
+		responsibility: 'ADL',
+		position: 'AS'
 	};
 
 	function fillForm () {
-		// @todo Fill out every field with generic values using the debugData
+		var inputs = document.querySelectorAll(FORM_SELECTOR + ' input, ' + FORM_SELECTOR + ' select');
+		inputs.forEach(function (input) {
+			var value = debugData[input.name];
+			input.value = value;
+		});
 	}
 
 	function submitForm () {
-		document.querySelector('form.ncf').submit();
+		document.querySelector(FORM_SELECTOR).submit();
 	}
 
 	function copyToClipboard (name) {
