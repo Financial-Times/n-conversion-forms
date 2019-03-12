@@ -44,3 +44,16 @@
 		}
 	}
 }
+
+#paymentTypeField {
+	label img {
+		height: 15px;
+	}
+	.ncf__payment-type__pp img {
+		filter: grayscale(100%);
+	}
+
+	.ncf__payment-type__pp[aria-selected=true] img {
+		filter: grayscale(0);
+	}
+}

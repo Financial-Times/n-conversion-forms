@@ -8,19 +8,23 @@
 	<div class="o-forms__group o-forms__group--inline-together">
 		{{#if enableCreditcard }}
 		<input type="radio" name="paymentType" value="creditcard" class="o-forms__radio-button" id="creditcard"{{#ifEquals value "creditcard"}} checked="checked"{{/ifEquals}}>
-		<label for="creditcard" class="o-forms__label">Credit / Debit Card</label>
+		<label for="creditcard" class="o-forms__label ncf__payment-type__cc">Credit / Debit Card</label>
 		{{/if}}
 		{{#if enablePaypal }}
 		<input type="radio" name="paymentType" value="paypal" class="o-forms__radio-button" id="paypal"{{#ifEquals value "paypal"}} checked="checked"{{/ifEquals}}>
-		<label for="paypal" class="o-forms__label">Paypal</label>
+		<label for="paypal" class="o-forms__label ncf__payment-type__pp" aria-label="Pay using Paypal">
+			<img src="https://www.ft.com/__assets/creatives/third-party/pp-logo-100px.png" alt="paypal">
+		</label>
 		{{/if}}
 		{{#if enableDirectdebit }}
 		<input type="radio" name="paymentType" value="directdebit" class="o-forms__radio-button" id="directdebit"{{#ifEquals value "directdebit"}} checked="checked"{{/ifEquals}}>
-		<label for="directdebit" class="o-forms__label">Direct Debit</label>
+		<label for="directdebit" class="o-forms__label ncf__payment-type__dd" aria-label="Pay using Direct Debit">
+			<img src="https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2Fthird-party%2Fdirect-debit-transparent.png?width=300&amp;source=next&amp;fit=scale-down" alt="Direct Debit">
+		</label>
 		{{/if}}
 		{{#if enableApplepay }}
 		<input type="radio" name="paymentType" value="applepay" class="o-forms__radio-button" id="applepay"{{#ifEquals value "applepay"}} checked="checked"{{/ifEquals}}>
-		<label for="applepay" class="o-forms__label">Apple Pay</label>
+		<label for="applepay" class="o-forms__label ncf__payment-type__apple">Apple Pay</label>
 		{{/if}}
 	</div>
 
