@@ -97,7 +97,6 @@ function compilePartial (partial) {
 <html>
 	<head>
 		<link rel="stylesheet" href="/public/component.css">
-		<link rel="stylesheet" href="/public/main.css">
 	</head>
 	<body style="background-color:#fff1e5;">
 
