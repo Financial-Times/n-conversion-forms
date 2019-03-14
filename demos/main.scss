@@ -1,4 +1,7 @@
 @import 'o-techdocs/main';
+@import 'o-fonts/main';
+
+@include oFonts();
 
 body {
 	margin: 0;
