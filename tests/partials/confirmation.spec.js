@@ -37,4 +37,15 @@ describe('confirmation template', () => {
 
 		expect($('dl dt').length).to.equal(2);
 	});
+
+
+	it('should display redirect to MMA', () => {
+		const details = [];
+		const $ = context.template({
+			details
+		});
+
+		expect($('dl dt').length).to.equal(0);
+		expect($.text()).to.contain('You can view details on your account page');
+	});
 });

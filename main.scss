@@ -31,6 +31,17 @@
 		padding: 50px;
 	}
 
+  &__paragraph {
+	@include oTypographySans(1);
+	padding: oTypographySpacingSize(5) 0;
+	margin: 0;
+
+	&--reduced-padding {
+	  @include oTypographySans(1);
+	  padding: oTypographySpacingSize(-2) 0;
+	}
+  }
+
 	&__fieldset {
 		border: 0;
 		margin: 0 0 20px;
@@ -61,6 +72,18 @@
 			@include oTypographySerif($scale: 4);
 		}
 	}
+
+  &__header2--afterline {
+	@include oTypographyProductHeadingLevel5;
+
+	&:after {
+	  @include oTypographyPadding($top: 3, $bottom: 0);
+	  content: '';
+	  display: block;
+	  width: 110px;
+	  border-bottom: oTypographySpacingSize(1) solid oColorsGetPaletteColor('black');
+	}
+  }
 
 	&__link--external {
 		@include oTypographyLinkExternal;
@@ -149,7 +172,7 @@
 	}
 
 	&__list {
-
+	  @include oTypographySans($scale: 0);
 		&-title,
 		&-data {
 			width: calc(50% - 10px);
