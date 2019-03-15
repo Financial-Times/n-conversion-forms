@@ -46,6 +46,6 @@ describe('confirmation template', () => {
 		});
 
 		expect($('dl dt').length).to.equal(0);
-		expect($.text()).to.contain('You can view details on your account page');
+		expect($.text()).to.contain('You can view details on your');
 	});
 });
