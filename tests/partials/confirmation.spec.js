@@ -46,6 +46,6 @@ describe('confirmation template', () => {
 		});
 
 		expect($('dl dt').length).to.equal(0);
-		expect(Array.from($('a')).filter(elem => elem.attribs.href.includes('https://myaccount.ft.com/details/core/view')).length).to.equal(1);
+		expect(Array.from($('a')).filter(elem => elem.attribs['data-trackable'] && elem.attribs['data-trackable'].includes('yourAccount')).length).to.equal(1);
 	});
 });
