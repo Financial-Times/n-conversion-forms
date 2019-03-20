@@ -37,6 +37,7 @@
 	margin: 0;
 
 	&--reduced-padding {
+	  @include oTypographySans(1);
 	  padding: oTypographySpacingSize(0) 0;
 	}
   }
