@@ -1,35 +1,32 @@
 <div class="ncf__wrapper">
 	<div class="ncf__center">
 		<div class="ncf__icon ncf__icon--tick ncf__icon--large"></div>
-		<p class="ncf__paragraph">You are now subscribed to:</p>
+		<p class="ncf__paragraph--reduced-padding">You are now subscribed to:</p>
 		<h1 class="ncf__header ncf__header--confirmation">{{offer}}</h1>
 	</div>
 
-	<p class="ncf__paragraph">
+	<p class="ncf__paragraph--reduced-padding">
 		We've sent confirmation of your new subscription to {{#if email}}{{email}}{{else}}your email{{/if}}.
 		Here's a summary of your {{offer}} subscription:
 	</p>
 
 
 	{{#if details}}
-	<h2 class="ncf__header2--afterline">Your billing details</h2>
+	<h3 class="ncf__header2--afterline">Your billing details</h3>
 	<dl class="ncf__list">
 		{{#each details as |detail|}}
 		<dt class="ncf__list-title">{{detail.title}}</dt>
 		<dd class="ncf__list-data">{{detail.data}}</dd>
 		{{/each}}
 	</dl>
-
-	{{else}}
-	<p class="ncf__paragraph">You can view details on <a class="ncf__link--external"
-														 href="https://myaccount.ft.com/details/core/view"
-														 target="_blank" rel="noopener" data-trackable="yourAccount">your
-		account</a> page</p>
 	{{/if}}
 
-	<h2>Something not right?</h2>
+	<h5 class="ncf__header2">Something not right?</h5>
 	<p class="ncf__paragraph--reduced-padding">
-		Go to your account settings to edit your account.
+		Go to your <a class="ncf__link"
+					  href="https://myaccount.ft.com/details/core/view"
+					  target="_blank" rel="noopener" data-trackable="yourAccount">account settings</a> to view or edit
+		your account.
 		If you need to get in touch call us on <a href="tel:+442077556248" class="ncf__link--external">+44 (0) 207 755 6248</a>.
 		Or contact us for additional support.
 	</p>

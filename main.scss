@@ -33,12 +33,12 @@
 
   &__paragraph {
 	@include oTypographySans(1);
-	padding: oTypographySpacingSize(5) 0;
+	padding: oTypographySpacingSize(4) 0;
 	margin: 0;
 
 	&--reduced-padding {
 	  @include oTypographySans(1);
-	  padding: oTypographySpacingSize(-2) 0;
+	  padding: oTypographySpacingSize(0) 0;
 	}
   }
 
@@ -73,15 +73,23 @@
 		}
 	}
 
-  &__header2--afterline {
-	@include oTypographyProductHeadingLevel5;
+  &__header2 {
+	@include oTypographyProductHeadingLevel7;
 
-	&:after {
-	  @include oTypographyPadding($top: 3, $bottom: 0);
-	  content: '';
-	  display: block;
-	  width: 110px;
-	  border-bottom: oTypographySpacingSize(1) solid oColorsGetPaletteColor('black');
+	&&--reduced-size {
+	  padding: oTypographySpacingSize(0) 0;
+	  font-size: 19px;
+	  margin: 0 0 -10px;
+	}
+
+	&&--afterline {
+	  &:after {
+		@include oTypographyPadding($top: 3, $bottom: 0);
+		content: '';
+		display: block;
+		width: 110px;
+		border-bottom: oTypographySpacingSize(1) solid oColorsGetPaletteColor('black');
+	  }
 	}
   }
 
