@@ -179,7 +179,7 @@
 	}
 
 	&__list {
-	  @include oTypographySans($scale: 0);
+
 		&-title,
 		&-data {
 			width: calc(50% - 10px);
