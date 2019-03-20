@@ -55,6 +55,18 @@ import MyModule from 'n-conversion-forms/utils/my-module';
 
 ## Utilities
 
+### Table of contents
+
+* [Country](#country)
+* [Email](#email)
+* [Event Notifier](#event-notifier)
+* [Password](#password)
+* [Payment Term](#payment-term)
+* [Payment Type](#payment-type)
+* [Tracking](#tracking)
+* [Validation](#validation)
+* [Zuora](#zuora)
+
 ### Country
 
 ```js
@@ -163,12 +175,44 @@ This utility will set up the form for client side validation using [`o-forms`](h
 
 One useful property made available is the main form DOM element via `validation.$form`. Use this for scoping `querySelector` calls to find elements within your form.
 
-## Contributing
+### Zuora
 
-To contribute to this project, clone this repository locally and commit your code to a seperate branch. Please write unit tests for your code and run the linter before opening a pull-request.
+The Zuora utility aims to wrap the Zuora client side library to make it more user friendly.
 
-```bash
-make test # runs linter and unit tests
+Requirements:
+
++ `{{> n-conversion-forms/partials/zuora }}` - Place this where you want the form to render. This partial also includes the Zuora client side library.
+
+```js
+const zuora = new Zuora(window);
+
+// Will render the 3rd party Zuora iframe with client side validation and custom error messages.
+// Returns a Promise that resolves ONLY once the form has loaded.
+zuora.render({ params, prePopulatedFields, hostedPaymentPageCallback });
+
+// Will attempt to submit the 3rd party Zuora iframe form and reject if there are client side
+// validation errors or if the user refuses the DD mandate confirmation.
+zuora.submit(mandateRequired);
+
+// Small promise wrapper around the validate function.
+zuora.validatePaymentForm();
+
+// Small wrapper around the prepopulate function.
+zuora.populateFields({ firstName: 'John', lastName: 'Doe' });
+
+// Call a provided function upon the value of the direct debit agreement checkbox changing
+// (inside the 3rd party Zuora iframe).
+// @param {boolean} checked - whether the box was checked or not
+zuora.onAgreementCheckboxChange(({ checked }) => {});
+
+// Call a provided function upon the confirmation or cancellation of the direct debit mandate
+// (inside the 3rd party Zuora iframe).
+// @param {boolean} confirmed - whether confirmed or not
+zuora.onDDConfirmation(({ confirmed }) => {});
+
+// Call a provided function upon the confirmation popup appearing inside the 3rd party Zuora iframe.
+// @param {boolean} popupActive - Whether the confirm dialog is visible or not.
+zuora.onDDConfirmationPopup(({ popupActive }) => {});
 ```
 
 ### Passing data to the demo components
