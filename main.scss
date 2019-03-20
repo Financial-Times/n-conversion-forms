@@ -37,7 +37,6 @@
 	margin: 0;
 
 	&--reduced-padding {
-	  @include oTypographySans(1);
 	  padding: oTypographySpacingSize(0) 0;
 	}
   }
@@ -76,13 +75,13 @@
   &__header2 {
 	@include oTypographyProductHeadingLevel7;
 
-	&&--reduced-size {
+	&--reduced-size {
 	  padding: oTypographySpacingSize(0) 0;
 	  font-size: 19px;
 	  margin: 0 0 -10px;
 	}
 
-	&&--afterline {
+	&--afterline {
 	  &:after {
 		@include oTypographyPadding($top: 3, $bottom: 0);
 		content: '';
