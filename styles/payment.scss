@@ -77,3 +77,19 @@
 		color: oColorsGetPaletteColor('teal');
 	}
 }
+
+#zuora_payment { // The zuora iframe.
+	position: relative;
+	z-index: 2;
+}
+.ncf-zuora-blur-overlay {
+	background-color: rgba(0,0,0,0.15);
+	bottom: 0;
+	height: 100vh;
+	left: 0;
+	position: fixed;
+	right: 0;
+	text-align: center;
+	top: 0;
+	z-index: 1;
+}
