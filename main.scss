@@ -69,20 +69,20 @@
 		@include oTypographyProductHeadingLevel5;
 
 		&--confirmation {
-			@include oTypographySerif($scale: 4);
+		  @include oTypographySerif($scale: 4);
+		  margin-top: -8px;
 		}
 	}
 
   &__header2 {
-	@include oTypographyProductHeadingLevel7;
-
 	&--reduced-size {
+	  @include oTypographySerif($scale: 0);
 	  padding: oTypographySpacingSize(0) 0;
-	  font-size: 19px;
-	  margin: 0 0 -10px;
+	  margin: 22px 0 -10px;
 	}
 
 	&--afterline {
+	  @include oTypographySerif($scale: 1);
 	  &:after {
 		@include oTypographyPadding($top: 3, $bottom: 0);
 		content: '';
