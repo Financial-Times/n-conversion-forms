@@ -38,6 +38,23 @@ describe('confirmation template', () => {
 		expect($('dl dt').length).to.equal(2);
 	});
 
+	it('should display dd mandate link', () => {
+		const ddMandateUrl = 'www.ft.com';
+		const $ = context.template({
+			ddMandateUrl
+		});
+
+		expect($('dl dt').length).to.equal(0);
+		expect(Array.from($('a')).filter(elem => elem.attribs['data-trackable'] && elem.attribs['data-trackable'].includes('dd-mandate-link')).length).to.equal(1);
+	});
+
+	it('should NOT display dd mandate link if link is not present', () => {
+		const $ = context.template({});
+
+		expect($('dl dt').length).to.equal(0);
+		expect(Array.from($('a')).filter(elem => elem.attribs['data-trackable'] && elem.attribs['data-trackable'].includes('dd-mandate-link')).length).to.equal(0);
+	});
+
 
 	it('should display redirect to MMA', () => {
 		const details = [];
