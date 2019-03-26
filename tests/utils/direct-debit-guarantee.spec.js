@@ -1,13 +1,13 @@
 const expect = require('chai').expect;
 const proxyquire = require('proxyquire').noCallThru();
-const sinon = require('sinon');
+const sandbox = require('sinon').createSandbox();
 
 let expanderInstance = 'expanderInstance';
-let initStub = sinon.stub().returns(expanderInstance);
+let initStub = sandbox.stub().returns(expanderInstance);
 let OExpanderStub = {
 	init: initStub
 };
-let FormElementStub = sinon.stub();
+let FormElementStub = sandbox.stub();
 
 const DirectDebitGuarantee = proxyquire('../../utils/direct-debit-guarantee', {
 	'./form-element': FormElementStub,
@@ -19,7 +19,6 @@ describe('DirectDebitGuarantee', () => {
 	let directDebitGuarantee;
 
 	beforeEach(() => {
-		sandbox = sinon.createSandbox();
 		directDebitGuarantee = new DirectDebitGuarantee(document);
 	});
 

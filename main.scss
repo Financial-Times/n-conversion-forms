@@ -31,6 +31,7 @@
 		padding: 50px;
 	}
 
+<<<<<<< HEAD
   &__paragraph {
 	@include oTypographySans(1);
 	padding: oTypographySpacingSize(4) 0;
@@ -39,8 +40,18 @@
 	&--reduced-padding {
 	  @include oTypographySans(1);
 	  padding: oTypographySpacingSize(0) 0;
+=======
+	&__paragraph {
+		@include oTypographySans(1);
+		padding: oTypographySpacingSize(5) 0;
+		margin: 0;
+
+		&--reduced-padding {
+			@include oTypographySans(1);
+			padding: oTypographySpacingSize(-2) 0;
+		}
+>>>>>>> Fix linting in serveral payment files
 	}
-  }
 
 	&__fieldset {
 		border: 0;
@@ -74,6 +85,7 @@
 		}
 	}
 
+<<<<<<< HEAD
   &__header2 {
 	&--reduced-size {
 	  @include oTypographySerif($scale: 0);
@@ -90,8 +102,19 @@
 		width: 110px;
 		border-bottom: oTypographySpacingSize(1) solid oColorsGetPaletteColor('black');
 	  }
+=======
+	&__header2--afterline {
+		@include oTypographyProductHeadingLevel5;
+
+		&:after {
+			@include oTypographyPadding($top: 3, $bottom: 0);
+			content: '';
+			display: block;
+			width: 110px;
+			border-bottom: oTypographySpacingSize(1) solid oColorsGetPaletteColor('black');
+		}
+>>>>>>> Fix linting in serveral payment files
 	}
-  }
 
 	&__link--external {
 		@include oTypographyLinkExternal;
@@ -180,7 +203,6 @@
 	}
 
 	&__list {
-
 		&-title,
 		&-data {
 			width: calc(50% - 10px);

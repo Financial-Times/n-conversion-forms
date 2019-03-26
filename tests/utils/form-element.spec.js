@@ -3,64 +3,62 @@ const expect = require('chai').expect;
 const sinon = require('sinon');
 
 describe('FormElement', () => {
-  let formElement;
-  let document;
-  let sandbox;
-  let addStub;
-  let removeStub;
+	let formElement;
+	let document;
+	let sandbox;
+	let addStub;
+	let removeStub;
 
-  beforeEach(() => {
-    $formElement = { type: '' };
-    checkboxElement = { addEventListener: () => { }, checked: false };
-    addStub = sinon.stub();
-    removeStub = sinon.stub();
-    document = {
-      querySelector: (selector) => {
-        return {
-          classList: {
-            add: addStub,
-            remove: removeStub
-          }
-        };
-      }
-    };
-    formElement = new FormElement(document);
-    sandbox = sinon.createSandbox();
-  });
+	beforeEach(() => {
+		addStub = sinon.stub();
+		removeStub = sinon.stub();
+		document = {
+			querySelector: () => {
+				return {
+					classList: {
+						add: addStub,
+						remove: removeStub
+					}
+				};
+			}
+		};
+		formElement = new FormElement(document);
+		sandbox = sinon.createSandbox();
+	});
 
-  afterEach(() => {
-    sandbox.restore();
-  });
+	afterEach(() => {
+		sandbox.restore();
+	});
 
-  describe('constructor', () => {
-    it('should throw an error if document element isn\'t passed in.', () => {
-      expect(() => {
-        new FormElement();
-      }).to.throw();
-    });
+	describe('constructor', () => {
+		it('should throw an error if document element isn\'t passed in.', () => {
+			expect(() => {
+				new FormElement();
+			}).to.throw();
+		});
 
-    it('should throw an error if form element does not exist on the page', () => {
-      expect(() => {
-        document.querySelector = () => { };
-        new FormElement(document);
-      }).to.throw();
-    });
-  });
+		it('should throw an error if form element does not exist on the page', () => {
+			expect(() => {
+				document.querySelector = () => { };
+				new FormElement(document);
+			}).to.throw();
+		});
+	});
 
-  describe('hide', () => {
-    it('should add the n-ui-hide class', () => {
-      formElement.hide();
+	describe('hide', () => {
+		it('should add the n-ui-hide class', () => {
+			formElement.hide();
 
-      expect(addStub.getCall(0).args[0]).to.equal('n-ui-hide');
-    });
-  });
+			expect(addStub.getCall(0).args[0]).to.equal('n-ui-hide');
+		});
+	});
 
-  describe('show', () => {
-    it('should remove the n-ui-hide class', () => {
-      formElement.show();
+	describe('show', () => {
+		it('should remove the n-ui-hide class', () => {
+			formElement.show();
 
-      expect(removeStub.getCall(0).args[0]).to.equal('n-ui-hide');
-    });
-  });
+			expect(removeStub.getCall(0).args[0]).to.equal('n-ui-hide');
+		});
+	});
 
 });
