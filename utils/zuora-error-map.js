@@ -52,50 +52,6 @@ const _cc_codes = {
 	4: _messages['InvalidFormat'] //004: Invalid CVV number
 };
 
-const regexp = {
-	fields: [
-		{
-			regexp: /card(.)*number/ig, // matches 'card' AND 'number' seperated by anything
-			value: 'creditCardNumber'
-		},
-		{
-			regexp: /expiry/ig, // matches 'expiry' anywhere case insensitive
-			value: 'creditCardExpirationYear'
-		},
-		{
-			regexp: /security(.)*code/ig, // matches 'security' AND 'code' seperated by anything
-			value: 'cardSecurityCode'
-		}
-	],
-	errors: [
-		{
-			regexp: /invalid/ig, // matches 'invalid' anywhere case insensitive
-			value: 'InvalidFormat'
-		},
-		{
-			regexp: /null|required/ig, // matches 'null' or 'required' anywhere case insensitive
-			value: 'NullValue'
-		}
-	]
-};
-
-/**
- * Tests a string against a range of regexes.
- *
- * @param {String} string The string to test for match.
- * @param {Array} regexArray An array of regexes to test against the string.
- */
-function testRegexArrayForMatch (string, regexArray) {
-	let match;
-	for (let _case of regexArray) {
-		if (_case.regexp.test(string)) {
-			match = _case.value;
-			break;
-		}
-	};
-	return match;
-}
-
 /**
  * Retrieves the string representation of a Zuora field name,
  *
@@ -177,24 +133,7 @@ function generateCustomErrorMessage (key, code, message) {
 	return `${field} ${reason}`;
 }
 
-/**
- * Extracts a user friendly error message from a Zuora error string.
- *
- * @param {String} string The string to extract the error from.
- */
-function extractFieldAndErrorFromString (string) {
-	const field = testRegexArrayForMatch(string, regexp.fields);
-	const message = testRegexArrayForMatch(string, regexp.errors);
-
-	// always return an then check for values before rendering
-	return {
-		key: field,
-		message: generateCustomErrorMessage(field, null, message)
-	};
-}
-
 module.exports = {
-	extractFieldAndErrorFromString,
 	generateCustomErrorMessage,
 	getReasonByCode
 };

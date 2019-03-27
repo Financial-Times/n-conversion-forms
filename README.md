@@ -191,28 +191,35 @@ const zuora = new Zuora(window);
 zuora.render({ params, prePopulatedFields, hostedPaymentPageCallback });
 
 // Will attempt to submit the 3rd party Zuora iframe form and reject if there are client side
-// validation errors or if the user refuses the DD mandate confirmation.
-zuora.submit(mandateRequired);
-
-// Small promise wrapper around the validate function.
-zuora.validatePaymentForm();
-
-// Small wrapper around the prepopulate function.
-zuora.populateFields({ firstName: 'John', lastName: 'Doe' });
+// validation errors or if the user refuses the Direct Debit mandate confirmation.
+zuora.submit(paymentType);
 
 // Call a provided function upon the value of the direct debit agreement checkbox changing
 // (inside the 3rd party Zuora iframe).
 // @param {boolean} checked - whether the box was checked or not
-zuora.onAgreementCheckboxChange(({ checked }) => {});
+zuora.onAgreementCheckboxChange(checked => {});
 
 // Call a provided function upon the confirmation or cancellation of the direct debit mandate
 // (inside the 3rd party Zuora iframe).
 // @param {boolean} confirmed - whether confirmed or not
-zuora.onDDConfirmation(({ confirmed }) => {});
+zuora.onDirectDebitConfirmation(confirmed => {});
 
-// Call a provided function upon the confirmation popup appearing inside the 3rd party Zuora iframe.
-// @param {boolean} popupActive - Whether the confirm dialog is visible or not.
-zuora.onDDConfirmationPopup(({ popupActive }) => {});
+// Example implementation on form submission
+try {
+  await this.zuora.submit('directdebit');
+} catch (error) {
+  if (error instanceof Zuora.ZuoraErrorValidation) {
+    // Validation messages will be shown on HPM fields
+    // Put other functionality on validation failure here
+  } else if (error instanceof Zuora.ZuoraErrorMandateCancel) {
+    // Fail silently, the direct debit mandate has been cancelled
+  } else if (error instanceof Zuora.ZuoraErrorInvalidPaymentType) {
+    // Invalid payment type
+  } else {
+    // General payment failure
+  }
+}
+
 ```
 
 ### Passing data to the demo components
