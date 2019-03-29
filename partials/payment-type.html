@@ -4,51 +4,66 @@
 	<script type="text/javascript" src="https://seal.websecurity.norton.com/getseal?host_name=www.ft.com&amp;size=XS&amp;use_flash=NO&amp;use_transparent=Yes&amp;lang=en"></script> Secure payment details
 </div> -->
 
-<div id="paymentTypeField" class="o-forms o-forms o-forms--wide ncf__field">
-	<div class="o-forms__group o-forms__group--inline-together">
-		{{#if enableCreditcard }}
-		<input type="radio" name="paymentType" value="creditcard" class="o-forms__radio-button" id="creditcard"{{#ifEquals value "creditcard"}} checked="checked"{{/ifEquals}}>
-		<label for="creditcard" class="o-forms__label ncf__payment-type__cc">Credit / Debit Card</label>
-		{{/if}}
-		{{#if enablePaypal }}
-		<input type="radio" name="paymentType" value="paypal" class="o-forms__radio-button" id="paypal"{{#ifEquals value "paypal"}} checked="checked"{{/ifEquals}}>
-		<label for="paypal" class="o-forms__label ncf__payment-type__pp" aria-label="Pay using Paypal">
-			<img src="https://www.ft.com/__assets/creatives/third-party/pp-logo-100px.png" alt="paypal">
-		</label>
-		{{/if}}
-		{{#if enableDirectdebit }}
-		<input type="radio" name="paymentType" value="directdebit" class="o-forms__radio-button" id="directdebit"{{#ifEquals value "directdebit"}} checked="checked"{{/ifEquals}}>
-		<label for="directdebit" class="o-forms__label ncf__payment-type__dd" aria-label="Pay using Direct Debit">
-			<img src="https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2Fthird-party%2Fdirect-debit-transparent.png?width=300&amp;source=next&amp;fit=scale-down" alt="Direct Debit">
-		</label>
-		{{/if}}
-		{{#if enableApplepay }}
-		<input type="radio" name="paymentType" value="applepay" class="o-forms__radio-button" id="applepay"{{#ifEquals value "applepay"}} checked="checked"{{/ifEquals}}>
-		<label for="applepay" class="o-forms__label ncf__payment-type__apple">Apple Pay</label>
-		{{/if}}
+<div id="paymentTypeField" class="o-forms o-forms--wide ncf__field">
+	<div class="ncf__payment-type-selector">
+		<div class="ncf__payment-type ncf__payment-type--creditcard{{#unless enableCreditcard }} n-ui-hide{{/unless}}">
+			<input type="radio" name="paymentType" value="creditcard" class="o-forms__radio-button" id="creditcard"{{#ifEquals value "creditcard"}} checked="checked"{{/ifEquals}}>
+			<label for="creditcard" class="o-forms__label">Credit / Debit Card</label>
+		</div>
+		<div class="ncf__payment-type ncf__payment-type--paypal{{#unless enablePaypal }} n-ui-hide{{/unless}}">
+			<input type="radio" name="paymentType" value="paypal" class="o-forms__radio-button" id="paypal"{{#ifEquals value "paypal"}} checked="checked"{{/ifEquals}}>
+			<label for="paypal" class="o-forms__label" aria-label="Pay using Paypal">
+				<img src="https://www.ft.com/__assets/creatives/third-party/pp-logo-100px.png" alt="paypal">
+			</label>
+		</div>
+		<div class="ncf__payment-type ncf__payment-type--directdebit{{#unless enableDirectdebit }} n-ui-hide{{/unless}}">
+			<input type="radio" name="paymentType" value="directdebit" class="o-forms__radio-button" id="directdebit"{{#ifEquals value "directdebit"}} checked="checked"{{/ifEquals}}>
+			<label for="directdebit" class="o-forms__label" aria-label="Pay using Direct Debit">
+				<img src="https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2Fthird-party%2Fdirect-debit-transparent.png?width=300&amp;source=next&amp;fit=scale-down" alt="Direct Debit">
+			</label>
+		</div>
+		<div class="ncf__payment-type ncf__payment-type--applepay{{#unless enableApplepay }} n-ui-hide{{/unless}}">
+			<input type="radio" name="paymentType" value="applepay" class="o-forms__radio-button" id="applepay"{{#ifEquals value "applepay"}} checked="checked"{{/ifEquals}}>
+			<label for="applepay" class="o-forms__label">Apple Pay</label>
+		</div>
 	</div>
 
 	<div class="o-forms__errortext">Please enter a valid payment type</div>
-</div>
 
-{{#if enableDirectdebit }}
-	<div id="dd-guarantee" class="n-ui-hide" data-o-component="o-expander" data-o-expander-shrink-to="hidden" data-o-expander-expanded-toggle-text="guarantee" data-o-expander-collapsed-toggle-text="guarantee" role="tabpanel">
-		<p>Direct Debit is only supported in the UK</p>
-		<p>Your payments are protected by the Direct Debit
-			<button type="button" class="dd-guarantee__toggle">guarantee</button>
-		</p>
-		<ul class="dd-guarantee__list">
-			<li class="dd-guarantee__list-item">This Guarantee is offered by all banks and building societies that accept instructions to pay Direct Debits.</li>
-			<li class="dd-guarantee__list-item">If there are any changes to the amount, date or frequency of your Direct Debit GoCardless re: The Financial Times will
-				notify you 3 working days in advance of your account being debited or as otherwise agreed. If you request GoCardless
-				Ltd re: The Financial Times to collect a payment, confirmation of the amount and date will be given to you at the time
-				of the request.</li>
-			<li class="dd-guarantee__list-item">If an error is made in the payment of your Direct Debit, by GoCardless Ltd re: The Financial Times or your bank or building
-				society, you are entitled to a full and immediate refund of the amount paid from your bank or building society.</li>
-			<li class="dd-guarantee__list-item">If you receive a refund you are not entitled to, you must pay it back when GoCardless Ltd re: The Financial Times asks
-				you to.</li>
-			<li class="dd-guarantee__list-item">You can cancel a Direct Debit at any time by simply contacting your bank or building society. Written confirmation may
-				be required. Please also notify us.</li>
-		</ul>
+	{{#if enableDirectdebit}}
+	<div class="ncf__payment-type-panel ncf__payment-type-panel--directdebit n-ui-hide">
+		<div id="directDebitGuarantee" class="ncf__directdebit-guarantee" data-o-component="o-expander" data-o-expander-shrink-to="hidden" data-o-expander-expanded-toggle-text="guarantee" data-o-expander-collapsed-toggle-text="guarantee" role="tabpanel">
+			<p>Direct Debit is only supported in the UK</p>
+			<p>Your payments are protected by the Direct Debit
+				<button type="button" class="ncf__directdebit-guarantee-toggle">guarantee</button>
+			</p>
+			<ul class="ncf__directdebit-guarantee-list">
+				<li>This Guarantee is offered by all banks and building societies that accept instructions to pay Direct Debits.</li>
+				<li>If there are any changes to the amount, date or frequency of your Direct Debit GoCardless re: The Financial Times will
+					notify you 3 working days in advance of your account being debited or as otherwise agreed. If you request GoCardless
+					Ltd re: The Financial Times to collect a payment, confirmation of the amount and date will be given to you at the time
+					of the request.</li>
+				<li>If an error is made in the payment of your Direct Debit, by GoCardless Ltd re: The Financial Times or your bank or building
+					society, you are entitled to a full and immediate refund of the amount paid from your bank or building society.</li>
+				<li>If you receive a refund you are not entitled to, you must pay it back when GoCardless Ltd re: The Financial Times asks
+					you to.</li>
+				<li>You can cancel a Direct Debit at any time by simply contacting your bank or building society. Written confirmation may
+					be required. Please also notify us.</li>
+			</ul>
+		</div>
 	</div>
-{{/if}}
+	{{/if}}
+	{{#ifSome enableCreditcard enableDirectdebit }}
+	<div class="ncf__payment-type-panel ncf__payment-type-panel--creditcard ncf__payment-type-panel--directdebit n-ui-hide">
+		<div class="ncf__zuora-payment-overlay n-ui-hide"></div>
+		<!-- The Zuora payment interface used for credit card and direct debit -->
+		<!-- ID "zuora_payment" is used by Zuora to target the iframe -->
+		<div id="zuora_payment">
+			<iframe id="z_hppm_iframe" overflow="visible" scrolling="no" frameborder="0" allowtransparency="true"
+				class="z_hppm_iframe" style="display: block;">
+			</iframe>
+		</div>
+		<script src="https://static.zuora.com/Resources/libs/hosted/1.3.1/zuora-min.js"></script>
+	</div>
+	{{/ifSome}}
+</div>

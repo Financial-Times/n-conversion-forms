@@ -84,18 +84,19 @@ describe('payment-type', () => {
 });
 
 function expectPaymentType (context, { creditcard=false, directdebit=false, paypal=false, applepay=false }={}) {
+	const hiddenContainer = 'span.n-ui-hide';
 	const $ = context.template({
 		enableCreditcard: creditcard,
 		enableDirectdebit: directdebit,
 		enablePaypal: paypal,
 		enableApplepay: applepay
 	});
-	expect($('input[value="creditcard"]').length === 1).to.equal(creditcard);
-	expect($('label[for="creditcard"]').length === 1).to.equal(creditcard);
-	expect($('input[value="directdebit"]').length === 1).to.equal(directdebit);
-	expect($('label[for="directdebit"]').length === 1).to.equal(directdebit);
-	expect($('input[value="paypal"]').length === 1).to.equal(paypal);
-	expect($('label[for="paypal"]').length === 1).to.equal(paypal);
-	expect($('input[value="applepay"]').length === 1).to.equal(applepay);
-	expect($('label[for="applepay"]').length === 1).to.equal(applepay);
+	expect($(`${hiddenContainer} input[value="creditcard"]`).length === 0).to.equal(creditcard);
+	expect($(`${hiddenContainer} label[for="creditcard"]`).length === 0).to.equal(creditcard);
+	expect($(`${hiddenContainer} input[value="directdebit"]`).length === 0).to.equal(directdebit);
+	expect($(`${hiddenContainer} label[for="directdebit"]`).length === 0).to.equal(directdebit);
+	expect($(`${hiddenContainer} input[value="paypal"]`).length === 0).to.equal(paypal);
+	expect($(`${hiddenContainer} label[for="paypal"]`).length === 0).to.equal(paypal);
+	expect($(`${hiddenContainer} input[value="applepay"]`).length === 0).to.equal(applepay);
+	expect($(`${hiddenContainer} label[for="applepay"]`).length === 0).to.equal(applepay);
 }

@@ -1,3 +1,5 @@
+const expander = require('o-expander');
+
 /**
  * Utility for the `n-conversion-forms/partial/payment-type.html` partial
  * @example
@@ -23,6 +25,15 @@ class PaymentType {
 
 		this.element = element;
 		this.$paymentType = element.querySelector('.ncf #paymentTypeField');
+		this.$directDebitGuarantee = this.$paymentType.querySelector('.ncf #directDebitGuarantee');
+		this.expander = expander.init(this.$directDebitGuarantee, {
+			contentClassName: 'ncf__directdebit-guarantee-list',
+			toggleSelector: '.ncf__directdebit-guarantee-toggle'
+		});
+
+		// Set up change handler to show panel and initialise the current panel
+		this.onChange(this.showPanel.bind(this));
+		this.showPanel();
 
 		if (!this.$paymentType) {
 			throw new Error('Please include the payment type partial on the page');
@@ -34,15 +45,8 @@ class PaymentType {
 	 * @param {String} type Payment type to hide
 	 */
 	hide (type) {
-		const input = this.$paymentType.querySelector(`#${type}`);
-		const label = this.$paymentType.querySelector(`label[for=${type}]`);
-
-		if (input) {
-			input.remove();
-		}
-		if (label) {
-			label.remove();
-		}
+		const container = this.$paymentType.querySelector(`#${type}`).parentElement;
+		container.classList.add('n-ui-hide');
 	}
 
 	/**
@@ -51,21 +55,8 @@ class PaymentType {
 	 * @param {String} type Payment type to show
 	 */
 	show (type) {
-		const inputToCopy = this.$paymentType.querySelector('input');
-		const labelToCopy = this.$paymentType.querySelector('label');
-		const container = inputToCopy.parentElement;
-		const input = inputToCopy.cloneNode();
-		const label = labelToCopy.cloneNode();
-
-		input.setAttribute('id', type);
-		input.setAttribute('value', type);
-		input.removeAttribute('checked');
-
-		label.setAttribute('for', type);
-		label.innerText = PaymentType.LABELS[type];
-
-		container.append(input);
-		container.append(label);
+		const container = this.$paymentType.querySelector(`#${type}`).parentElement;
+		container.classList.remove('n-ui-hide');
 	}
 
 	/**
@@ -103,15 +94,19 @@ class PaymentType {
 		return checked.getAttribute('value');
 	}
 
-	static get LABELS () {
-		const labels = {};
-
-		labels[this.CREDITCARD] = 'Credit / Debit Card';
-		labels[this.DIRECTDEBIT] = 'Direct debit';
-		labels[this.PAYPAL] = 'Paypal';
-		labels[this.APPLEPAY] = 'Apple Pay';
-
-		return labels;
+	/**
+	 * Show the payment types panel
+	 */
+	showPanel () {
+		const type = this.getSelected();
+		const content = this.$paymentType.querySelectorAll('.ncf__payment-type-panel');
+		content.forEach(element => {
+			if (element.classList.contains(`ncf__payment-type-panel--${type}`)) {
+				element.classList.remove('n-ui-hide');
+			} else {
+				element.classList.add('n-ui-hide');
+			}
+		});
 	}
 
 	static get CREDITCARD () {

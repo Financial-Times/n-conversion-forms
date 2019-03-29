@@ -1,0 +1,51 @@
+@mixin ncfPaymentType() {
+	&__payment-type {
+		grid-row: 1;
+
+		img {
+			height: 15px;
+		}
+
+		label {
+			height: 15px;
+			width: calc(100% - 5px);;
+		}
+
+		&-selector {
+			display: inline-grid;
+			width: 100%;
+		}
+	}
+
+	&__directdebit-guarantee {
+		@include oTypographySans($scale: -1);
+		text-align: center;
+
+		&-list {
+			@include oExpanderContent;
+			text-align: left;
+		}
+
+		&-toggle {
+			@include oExpanderToggle;
+			color: oColorsGetPaletteColor('teal');
+		}
+	}
+
+	&__zuora-payment {
+		position: relative;
+		z-index: 2;
+
+		&-overlay {
+			background-color: rgba(0, 0, 0, 0.15);
+			bottom: 0;
+			height: 100vh;
+			left: 0;
+			position: fixed;
+			right: 0;
+			text-align: center;
+			top: 0;
+			z-index: 1;
+		}
+	}
+}

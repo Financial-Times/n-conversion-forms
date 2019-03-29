@@ -9,6 +9,7 @@
 @import 'o-stepped-progress/main';
 @import './styles/payment';
 @import './styles/payment-term';
+@import './styles/payment-type';
 @import 'o-fonts/main';
 
 @include oFonts();
@@ -200,6 +201,7 @@
 	}
 
 	@include ncfPaymentTerm();
+	@include ncfPaymentType();
 
 	@include ncfPaymentApplePay();
 

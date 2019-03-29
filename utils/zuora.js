@@ -23,7 +23,7 @@ class Zuora {
 		this.Z = window.Z;
 
 		// `blur_mode_(enabled|disabled)` are for the DD confirmation dialog.
-		this.overlay = new FormElement(window.document, '.ncf-zuora-blur-overlay');
+		this.overlay = new FormElement(window.document, '.ncf__zuora-payment-overlay');
 		this.Z.setEventHandler('blur_mode_enabled', () => { this.overlay.show(); });
 		this.Z.setEventHandler('blur_mode_disabled', () => { this.overlay.hide(); });
 	}
@@ -35,7 +35,7 @@ class Zuora {
 	 * @param {Object} prePopulatedFields Parameters with field ids and values to be pre-populated on the form
 	 * @param {Function} hostedPaymentPageCallback Handles only the error responses in Payment Page request from the Z.renderWithErrorHandler function
 	 */
-	render ({ params, prePopulatedFields, hostedPaymentPageCallback }) {
+	render ({ params, prePopulatedFields={}, hostedPaymentPageCallback=()=>{} }) {
 		/**
 		 * Z.renderWithErrorHandler - Zuora 3rd party method
 		 * @param {Object}    params - see parent function
