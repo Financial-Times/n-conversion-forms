@@ -25,17 +25,23 @@ describe('PaymentType', () => {
 		};
 		elementStub = {
 			querySelector: sandbox.stub(),
+			querySelectorAll: sandbox.stub(),
 			getAttribute: sandbox.stub(),
 			addEventListener: sandbox.stub(),
 			parentElement: parentStub,
 			classList: {
 				add: sandbox.stub(),
-				remove: sandbox.stub()
+				remove: sandbox.stub(),
+				contains: sandbox.stub()
 			}
 		};
 		documentStub = {
 			querySelector: sandbox.stub()
 		};
+
+		documentStub.querySelector.returns(elementStub);
+		elementStub.querySelector.returns(elementStub);
+		elementStub.querySelectorAll.returns([elementStub]);
 	});
 
 	afterEach(() => {
@@ -57,6 +63,7 @@ describe('PaymentType', () => {
 		});
 
 		it('should call initialise the expander', () => {
+			new PaymentType(documentStub);
 			expect(initStub.called).to.be.true;
 		});
 
@@ -68,8 +75,6 @@ describe('PaymentType', () => {
 
 	describe('constructed', () => {
 		beforeEach(() => {
-			documentStub.querySelector.returns(elementStub);
-			elementStub.querySelector.returns(elementStub);
 			paymentType = new PaymentType(documentStub);
 		});
 
