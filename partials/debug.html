@@ -13,9 +13,11 @@
 	<span class="ncf__debug-helpers">
 		<button class="ncf__button ncf__button--inverse" onclick="fillForm();" title="Fill form with debug data">Fill</button>
 		<button class="ncf__button ncf__button--inverse" onclick="fillForm(); submitForm();" title="Fill form with debug data and submit">Fill & Submit</button>
-		<button class="ncf__button ncf__button--inverse" onclick="copyToClipboard('ukVisa');" title="Copy UK Visa card number to clipboard">UK Visa</button>
-		<button class="ncf__button ncf__button--inverse" onclick="copyToClipboard('usVisa');" title="Copy US Visa card number to clipboard">US Visa</button>
-		<button class="ncf__button ncf__button--inverse" onclick="copyToClipboard('usAmex');" title="Copy US Amex card number to clipboard">US Amex</button>
+		{{#if isTest}}
+			<button class="ncf__button ncf__button--inverse" onclick="copyToClipboard('ukVisa');" title="Copy UK Visa card number to clipboard">UK Visa</button>
+			<button class="ncf__button ncf__button--inverse" onclick="copyToClipboard('usVisa');" title="Copy US Visa card number to clipboard">US Visa</button>
+			<button class="ncf__button ncf__button--inverse" onclick="copyToClipboard('usAmex');" title="Copy US Amex card number to clipboard">US Amex</button>
+		{{/if}}
 	</span>
 	{{/if}}
 
