@@ -3,6 +3,7 @@
 Contains HTML and CSS that's used within the conversion forms
 
 [![CircleCI](https://circleci.com/gh/Financial-Times/n-conversion-forms.svg?style=svg)](https://circleci.com/gh/Financial-Times/n-conversion-forms)
+[![Known Vulnerabilities](https://snyk.io/test/github/Financial-Times/n-conversion-forms/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Financial-Times/n-conversion-forms?targetFile=package.json)
 
 ```bash
 make install # install all dependencies
