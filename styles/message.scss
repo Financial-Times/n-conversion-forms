@@ -1,0 +1,23 @@
+@mixin ncfMessage() {
+	&__message {
+		p + p {
+			margin-top: 0;
+		}
+	}
+
+	// Change the colour of messages inside the wrapper
+	// to look better with a white background
+	.ncf__wrapper & &__message {
+		.o-message--error {
+			color: oColorsGetPaletteColor(crimson);
+			background-color: oColorsMix(crimson, white, 10);
+
+			.o-message__actions__primary {
+				background-color: oColorsMix(crimson, white, 10);
+				&:hover {
+					background-color: oColorsMix(crimson, white, 20);
+				}
+			}
+		}
+	}
+}

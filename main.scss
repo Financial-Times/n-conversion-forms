@@ -10,6 +10,7 @@
 @import './styles/payment';
 @import './styles/payment-term';
 @import './styles/payment-type';
+@import './styles/message';
 @import 'o-fonts/main';
 
 @include oFonts();
@@ -194,12 +195,7 @@
 		}
 	}
 
-	&__message {
-		p + p {
-			margin-top: 0;
-		}
-	}
-
+	@include ncfMessage();
 	@include ncfPaymentTerm();
 	@include ncfPaymentType();
 
