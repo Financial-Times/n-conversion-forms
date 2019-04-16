@@ -63,6 +63,7 @@ import MyModule from 'n-conversion-forms/utils/my-module';
 * [Password](#password)
 * [Payment Term](#payment-term)
 * [Payment Type](#payment-type)
+* [Submit](#submit)
 * [Tracking](#tracking)
 * [Validation](#validation)
 * [Zuora](#zuora)
@@ -153,7 +154,14 @@ PaymentType.DIRECTDEBIT
 PaymentType.PAYPAL
 PaymentType.APPLEPAY
 ```
+### Submit
 
+```js
+const submit = new Submit(document);
+
+// Update the button text
+submit.updateText('Pay with Apple Pay');
+```
 ### Tracking
 
 ```js
