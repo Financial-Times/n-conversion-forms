@@ -14,7 +14,9 @@ const SELECTOR_ADDITIONAL = '.o-message__content--additional';
 const SELECTOR_MESSAGE = '.o-message__content-main';
 const SELECTOR_MESSAGE_CONTENT = '.o-message__content-detail';
 const SELECTOR_CONTAINER = '.o-message';
+const SELECTOR_MESSAGE_CONTAINER = '.ncf__message';
 const SELECTOR_TITLE = '.o-message__content-highlight';
+const HIDDEN_CLASS = 'n-ui-hide';
 
 let context = {};
 
@@ -163,5 +165,25 @@ describe('message template', () => {
 		const $ = context.template({ actions: [{ link: '#', text: 'Foo', isSecondary: true }] });
 
 		expect($(`${SELECTOR_ACTIONS} a`).attr('class')).to.contain(CLASS_ACTIONS_SECONDARY);
+	});
+
+	it('should have no name by default', () => {
+		const $ = context.template({ message: 'Foo' });
+		expect($(SELECTOR_MESSAGE_CONTAINER).attr('data-message-name')).to.be.undefined;
+	});
+
+	it('should have a message-name if passed', () => {
+		const $ = context.template({ message: 'Foo', name: 'Test' });
+		expect($(SELECTOR_MESSAGE_CONTAINER).attr('data-message-name')).to.equal('Test');
+	});
+
+	it('should be shown by default', () => {
+		const $ = context.template({ message: 'Foo' });
+		expect($(SELECTOR_MESSAGE_CONTAINER).attr('class')).to.not.contain(HIDDEN_CLASS);
+	});
+
+	it('should apply a hidden class if marked hidden', () => {
+		const $ = context.template({ message: 'Foo', isHidden: true });
+		expect($(SELECTOR_MESSAGE_CONTAINER).attr('class')).to.contain(HIDDEN_CLASS);
 	});
 });

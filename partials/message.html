@@ -1,4 +1,4 @@
-<div class="ncf__message o-forms o-forms--wide">
+<div class="ncf__message o-forms o-forms--wide{{#if isHidden}} n-ui-hide{{/if}}"{{#if name}} data-message-name="{{name}}"{{/if}}>
 	<div class="o-message {{#if isNotice}}o-message--notice-inner{{else}}o-message--alert-inner{{/if}}{{#if isError}} o-message--error{{else if isSuccess}} o-message--success{{else if isInform}} o-message--inform{{else}} o-message--neutral{{/if}}" data-o-component="o-message">
 		<div class="o-message__container">
 			<div class="o-message__content">
