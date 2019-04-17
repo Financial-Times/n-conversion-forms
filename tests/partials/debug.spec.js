@@ -51,4 +51,10 @@ describe('debug template', () => {
 		expect($('#ncf-copy-us-visa').length).to.equal(1);
 		expect($('#ncf-copy-us-amex').length).to.equal(1);
 	});
+
+	it('should append links to the helpers if passed', () => {
+		const $ = context.template({ showHelpers: true, links: { test: 'test', test1: 'test1' } });
+
+		expect($('.ncf__link').length).to.equal(2);
+	});
 });

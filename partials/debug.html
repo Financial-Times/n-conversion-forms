@@ -18,6 +18,11 @@
 			<button id="ncf-copy-us-visa" class="ncf__button ncf__button--inverse" onclick="copyToClipboard('usVisa');" title="Copy US Visa card number to clipboard">US Visa</button>
 			<button id="ncf-copy-us-amex" class="ncf__button ncf__button--inverse" onclick="copyToClipboard('usAmex');" title="Copy US Amex card number to clipboard">US Amex</button>
 		{{/if}}
+		{{#if links}}
+			{{#each links}}
+			<a class="ncf__button ncf__button--inverse ncf__link" href="{{this}}">{{@key}}</a>
+			{{/each}}
+		{{/if}}
 	</span>
 	{{/if}}
 

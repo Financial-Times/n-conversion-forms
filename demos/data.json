@@ -87,6 +87,9 @@
   },
   "debug": {
     "isTest": true,
-    "showHelpers": true
+    "showHelpers": true,
+    "links": {
+      "Google": "https://www.google.com"
+    }
   }
 }
