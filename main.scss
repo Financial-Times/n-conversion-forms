@@ -38,11 +38,11 @@
 		margin: 0;
 
 		&--reduced-padding {
-			padding: 0 0;
+			padding: 0;
 		}
 
 		&--reduced-padding-custom-margin {
-			padding: 0 0;
+			padding: 0;
 			margin: oTypographySpacingSize(4) 0 oTypographySpacingSize(2);
 		}
 	}
@@ -80,7 +80,7 @@
 
 	&__header2 {
 		&--reduced-size {
-			padding: 0 0;
+			padding: 0;
 			margin: 0 0 oTypographySpacingSize(2);
 		}
 
