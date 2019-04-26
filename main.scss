@@ -41,8 +41,7 @@
 			padding: 0;
 		}
 
-		&--reduced-padding-custom-margin {
-			padding: 0;
+		&--subscription-confirmation {
 			margin: oTypographySpacingSize(4) 0 oTypographySpacingSize(2);
 		}
 	}
@@ -78,19 +77,26 @@
 		}
 	}
 
-	&__header2 {
-		&--reduced-size {
+	&__headed-paragraph {
+		.ncf__header {
+			@include oTypographySize(2);
 			padding: 0;
-			margin: 0 0 oTypographySpacingSize(2);
+			margin: 0 0 oTypographySpacingSize(1);
 		}
 
+		.ncf__paragraph {
+			padding: 0;
+		}
+	}
+
+	&__header2 {
 		&--afterline {
 			@include oTypographySize(1);
 			&:after {
 				@include oTypographyPadding($top: 3, $bottom: 0);
 				content: '';
 				display: block;
-				width: 110px;
+				width: 90px;
 				border-bottom: oTypographySpacingSize(1) solid oColorsGetPaletteColor('black');
 			}
 		}
