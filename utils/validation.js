@@ -8,7 +8,6 @@ class Validation {
 	 */
 	constructor ({ mutePromptBeforeLeaving } = {}) {
 		this.$form = document.querySelector('form.ncf');
-		this.$submit = this.$form.querySelector('[type="submit"]');
 		this.oForms = new OForms(this.$form);
 		this.$formFields = this.oForms.findInputs().filter($el => $el.type !== 'hidden');
 		this.$requiredEls = this.$formFields.filter($el => $el.required);
@@ -23,8 +22,6 @@ class Validation {
 	 */
 	init () {
 		if (!this.$form.length) return;
-
-		this.$submit.disabled = true;
 
 		for (const $el of this.$requiredEls) {
 			$el.addEventListener('blur', this.checkFormValidity.bind(this), false);
@@ -49,15 +46,21 @@ class Validation {
 	}
 
 	/**
+	 * Proxy method for oForms validateForm
+	 * @param {Event} event DOM event
+	 */
+	validateForm (event) {
+		this.oForms.validateForm(event);
+	}
+
+	/**
 	 * Update the state of the form to reflect form validity.
 	 */
 	checkFormValidity () {
 		if (this.getInvalidEls().length === 0) {
 			this.formValid = true;
-			this.$submit.disabled = false;
 		} else {
 			this.formValid = false;
-			this.$submit.disabled = true;
 		}
 	}
 

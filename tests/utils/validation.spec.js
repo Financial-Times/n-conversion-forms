@@ -18,17 +18,14 @@ describe('Validation', () => {
 	let document;
 	let formElement;
 	let requiredElListener;
-	let submitElement;
 	let sandbox;
 	let checkValidityStub;
 	let validation;
 
 	beforeEach(() => {
-		submitElement = {};
 		formElement = {
 			length: 1,
-			addEventListener: () => {},
-			querySelector: () => submitElement
+			addEventListener: () => {}
 		};
 		global.document.querySelector = () => formElement;
 		requiredElListener = sinon.stub();
@@ -67,9 +64,6 @@ describe('Validation', () => {
 	});
 
 	describe('init', () => {
-		it('should disable the submit button', () => {
-			expect(validation.$submit.disabled).to.be.true;
-		});
 
 		it('should add an event listener to all required elements', () => {
 			expect(requiredElListener.calledTwice).to.be.true;
@@ -102,26 +96,22 @@ describe('Validation', () => {
 	});
 
 	describe('checkFormValidity', () => {
-		it('should disable the submit button and set the form as invalid if there are invalid elements.', () => {
+		it('should set the form as invalid if there are invalid elements.', () => {
 			validation.formValid = true;
-			validation.$submit.disabled = false;
 
 			checkValidityStub.returns(false);
 			validation.checkFormValidity();
 
 			expect(validation.formValid).to.be.false;
-			expect(validation.$submit.disabled).to.be.true;
 		});
 
-		it('should enable the submit button and set the form as valid if there are invalid elements.', () => {
+		it('should set the form as valid if there are invalid elements.', () => {
 			validation.formValid = false;
-			validation.$submit.disabled = true;
 
 			checkValidityStub.returns(true);
 			validation.checkFormValidity();
 
 			expect(validation.formValid).to.be.true;
-			expect(validation.$submit.disabled).to.be.false;
 		});
 	});
 
