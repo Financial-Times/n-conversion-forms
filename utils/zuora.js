@@ -36,9 +36,12 @@ class Zuora {
 	 * @param {Function} renderCallback A function that gets called after the form is rendered.
 	 */
 	render ({ params, prePopulatedFields = {}, renderCallback=()=>{} }) {
-		// This will be called from within the iframe after it has been rendered. For some reason, this seemingly
-		//  breaks their normal convention of using post message.
+		// Using an undocumented Zuora method to attach a render callback for the iframe.
+		// This method is called once when the iframe is rendered but gets removed for subsequent renderings.
+		// In the Zuora code https://static.zuora.com/Resources/libs/hosted/1.3.1/zuora.js
+		// it's used for handling errors but is currently not used anywhere within their code for this.
 		this.Z.runAfterRender(renderCallback.bind(this));
+
 		/**
 		 * Z.renderWithErrorHandler - Zuora 3rd party method
 		 * @param {Object}    params - see parent function
