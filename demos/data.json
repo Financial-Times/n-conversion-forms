@@ -6,8 +6,11 @@
     }
   },
   "fieldset": {
+    "legend": "The legend is great",
+    "isHeader": true,
+    "descriptor": "The descriptor is also here",
     "partials": {
-      "fields": "Inline content here."
+      "fields": "<div class=o-forms__group>Testing</div>"
     }
   },
   "form": {

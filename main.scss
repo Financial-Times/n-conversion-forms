@@ -52,6 +52,14 @@
 		margin: 0 0 20px;
 		min-inline-size: auto;
 		padding: 0;
+
+		.ncf__header {
+			margin: 0;
+		}
+	}
+
+	&__fieldset-descriptor {
+		margin: 0;
 	}
 
 	&__field {
