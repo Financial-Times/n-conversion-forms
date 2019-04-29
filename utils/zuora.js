@@ -151,8 +151,23 @@ class Zuora {
 /**
  * Error classes
  */
-class ZuoraErrorValidation extends Error {};
-class ZuoraErrorMandateCancel extends Error {};
-class ZuoraErrorInvalidPaymentType extends Error {};
+class ZuoraErrorValidation extends Error {
+	constructor (message) {
+		super(message);
+		Object.setPrototypeOf(this, ZuoraErrorValidation.prototype);
+	}
+};
+class ZuoraErrorMandateCancel extends Error {
+	constructor (message) {
+		super(message);
+		Object.setPrototypeOf(this, ZuoraErrorMandateCancel.prototype);
+	}
+};
+class ZuoraErrorInvalidPaymentType extends Error {
+	constructor (message) {
+		super(message);
+		Object.setPrototypeOf(this, ZuoraErrorInvalidPaymentType.prototype);
+	}
+};
 
 module.exports = Zuora;
