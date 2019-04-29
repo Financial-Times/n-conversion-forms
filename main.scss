@@ -154,6 +154,10 @@
 		text-align: center;
 	}
 
+	&__strong {
+		font-weight: oFontsWeight('semibold');
+	}
+
 	&__icon {
 		background: oColorsGetPaletteColor('paper');
 		border: 2px solid oColorsGetPaletteColor('black-40');
