@@ -60,7 +60,7 @@ describe('submit template', () => {
 
 	it('should have an id of submit by default', () => {
 		const $ = context.template();
-		expect($('#submit').length).to.equal(1);
+		expect($('#submitButton').length).to.equal(1);
 	});
 
 	it('should take an id given too it', () => {
@@ -68,6 +68,6 @@ describe('submit template', () => {
 			id: 'test'
 		});
 		expect($('#test').length).to.equal(1);
-		expect($('#submit').length).to.equal(0);
+		expect($('#submitButton').length).to.equal(0);
 	});
 });
