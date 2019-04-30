@@ -60,6 +60,7 @@
 
 	&__fieldset-descriptor {
 		margin: 0;
+		@include oTypographySize(-1);
 	}
 
 	&__field {
