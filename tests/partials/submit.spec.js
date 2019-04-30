@@ -57,4 +57,17 @@ describe('submit template', () => {
 		// Forms can be embedded within an iframe so ensure the back button will affect the parent frame
 		expect($(SELECTOR_BACK_BUTTON).attr('target')).to.equal('_parent');
 	});
+
+	it('should have an id of submit by default', () => {
+		const $ = context.template();
+		expect($('#submit').length).to.equal(1);
+	});
+
+	it('should take an id given too it', () => {
+		const $ = context.template({
+			id: 'test'
+		});
+		expect($('#test').length).to.equal(1);
+		expect($('#submit').length).to.equal(0);
+	});
 });
