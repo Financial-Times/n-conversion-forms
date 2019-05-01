@@ -40,10 +40,6 @@
 			@include oTypographySans($scale: 2);
 		}
 
-		&__price {
-			font-weight: oFontsWeight('semibold');
-		}
-
 		&__label--description {
 			padding-top: 18px;
 		}
