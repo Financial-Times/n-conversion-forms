@@ -2,7 +2,7 @@
 	{{#each options}}
 	<input type="radio" id="{{this.value}}" name="paymentTerm" value="{{this.value}}" class="o-forms__radio o-forms__radio--right ncf__payment-term__input o-forms__radio-button--my-custom-theme" {{#if this.selected}} checked="checked" {{/if}}>
 	<label for="{{this.value}}" class="o-forms__label ncf__payment-term__label">
-		<strong class="ncf__payment-term__label--title">{{this.name}}</strong>
+		<span class="ncf__payment-term__label--title">{{this.name}}</span>
 		<div class="ncf__payment-term__label--description">
 			{{{this.description}}}
 		</div>

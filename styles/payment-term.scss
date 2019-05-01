@@ -36,7 +36,12 @@
 		}
 
 		&__label--title {
+			font-weight: oFontsWeight('semibold');
 			@include oTypographySans($scale: 2);
+		}
+
+		&__price {
+			font-weight: oFontsWeight('semibold');
 		}
 
 		&__label--description {
