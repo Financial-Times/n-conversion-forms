@@ -63,7 +63,7 @@ describe('submit template', () => {
 		expect($('#submitButton').length).to.equal(1);
 	});
 
-	it('should take an id given too it', () => {
+	it('should take an id given to it', () => {
 		const $ = context.template({
 			id: 'test'
 		});
