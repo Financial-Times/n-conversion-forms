@@ -16,7 +16,8 @@ describe('PaymentTerm', () => {
 			cloneNode: sandbox.stub(),
 			remove: sandbox.stub(),
 			insertBefore: sandbox.stub(),
-			parentElement: elementStub
+			parentElement: elementStub,
+			addEventListener: sandbox.stub()
 		};
 		documentStub = {
 			querySelector: sandbox.stub()
@@ -60,6 +61,20 @@ describe('PaymentTerm', () => {
 				elementStub.querySelector.returns(elementStub);
 				paymentTerm.getSelected();
 				expect(elementStub.getAttribute.calledWith('value')).to.be.true;
+			});
+		});
+
+		describe('onChange', () => {
+			it('should add an event listener on change', () => {
+				paymentTerm.onChange();
+				expect(elementStub.addEventListener.calledWith('change')).to.be.true;
+			});
+
+			it('should call the callback', () => {
+				const callback = sandbox.stub();
+				elementStub.addEventListener = (type, callback) => callback();
+				paymentTerm.onChange(callback);
+				expect(callback.called).to.be.true;
 			});
 		});
 

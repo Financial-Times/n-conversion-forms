@@ -52,6 +52,14 @@ class PaymentTerm {
 	}
 
 	/**
+	 * Register on change an event listener
+	 * @param {Function} callback Called with event when changed
+	 */
+	onChange (callback=()=>{}) {
+		return this.$paymentTerm.addEventListener('change', callback);
+	}
+
+	/**
 	 * Update the payment term options
 	 * @param {Array} options Array of objects contain terms information
 	 */
