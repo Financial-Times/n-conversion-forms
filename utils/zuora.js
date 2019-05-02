@@ -1,5 +1,4 @@
 const customiseZuoraError = require('./zuora-error-map');
-const FormElement = require('./form-element');
 const PaymentType = require('./payment-type');
 /**
  * Wrapper for the 3rd party Zuora library
@@ -21,11 +20,6 @@ const PaymentType = require('./payment-type');
 class Zuora {
 	constructor (window) {
 		this.Z = window.Z;
-
-		// `blur_mode_(enabled|disabled)` are for the DD confirmation dialog.
-		this.overlay = new FormElement(window.document, '.ncf__zuora-payment-overlay');
-		this.Z.setEventHandler('blur_mode_enabled', () => { this.overlay.show(); });
-		this.Z.setEventHandler('blur_mode_disabled', () => { this.overlay.hide(); });
 	}
 
 	/**
@@ -67,7 +61,7 @@ class Zuora {
 	 * @param {String} paymentType Type of payment being used
 	 * @returns {Promise} Resolves when the submission has occurred, rejects if there was an error.
 	 */
-	submit (paymentType) {
+	submit (paymentType, showLoader) {
 		return new Promise((resolve, reject) => {
 			// Only handle credit card and direct debit payments
 			if (paymentType !== PaymentType.CREDITCARD && paymentType !== PaymentType.DIRECTDEBIT) {
@@ -86,15 +80,19 @@ class Zuora {
 				if (paymentType === PaymentType.DIRECTDEBIT) {
 					// Wait for the direct debit confirmation before resolving
 					this.onDirectDebitConfirmation(result => {
-						if (result === true) {
+						if (result) {
+							showLoader();
 							resolve(true);
 						} else {
 							reject(new ZuoraErrorMandateCancel());
 						}
 					});
 				} else {
+					showLoader();
 					resolve(true);
 				}
+
+
 			});
 		});
 	}
