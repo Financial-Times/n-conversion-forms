@@ -134,6 +134,14 @@ loader.show();
 loader.hide();
 ```
 
+or
+
+To show loader:
+
+```handlebars
+{{> n-conversion-forms/partials/loader showLoader=true title="Hooray!" }}
+```
+
 You can optionally pass in content when showing the loader:
 
 ```js
