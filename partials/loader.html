@@ -1,8 +1,8 @@
-<div class="ncf__loader n-ui-hide">
+<div class="ncf__loader {{#if showLoader}}is-visible{{else}}n-ui-hide{{/if}}">
 	<div class="ncf__loader__content">
 		{{#if title}}
 			<div class="ncf__loader__content__title">
-				{{ title }}
+				{{title}}
 			</div>
 		{{/if}}
 		<div class="ncf__loader__content__main">
