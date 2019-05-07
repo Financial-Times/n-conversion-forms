@@ -36,4 +36,18 @@ describe('loader template', () => {
 		expect($('.ncf__loader__content__main').html().trim()).to.equal('<div>Foo Bar</div>');
 	});
 
+	it('should show loader when showLoader is set to true', () => {
+		const $ = context.template({ showLoader: true });
+
+		expect($('.is-visible').length).to.equal(1);
+		expect($('.n-ui-hide').length).to.equal(0);
+	});
+
+	it('should hide loader when showLoader is not set', () => {
+		const $ = context.template();
+
+		expect($('.is-visible').length).to.equal(0);
+		expect($('.n-ui-hide').length).to.equal(1);
+	});
+
 });
