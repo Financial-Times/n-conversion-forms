@@ -4,11 +4,11 @@ const {
 	shouldError
 } = require('../helpers');
 
-const SELECTOR_STANDARD_TERMS = 'label p#terms-default';
+const SELECTOR_STANDARD_TERMS = 'label p.terms-default';
 const SELECTOR_PRINT_TERMS = 'label p.terms-print';
 const SELECTOR_SIGNUP_TERMS = 'label p.terms-signup';
-const SELECTOR_SPECIAL_TERMS = 'label p#terms-special';
-const SELECTOR_B2B_TERMS = 'label p#terms-b2b';
+const SELECTOR_SPECIAL_TERMS = 'label p.terms-special';
+const SELECTOR_B2B_TERMS = 'label p.terms-b2b';
 const SELECTOR_CORP_TERMS = 'label p.terms-corp-signup';
 const SELECTOR_ACCEPT_TERMS_FIELD = '#acceptTermsField';
 const SELECTOR_CHECKBOX = 'input';
@@ -51,7 +51,7 @@ describe('accept-terms template', () => {
 		it('should have default terms and nothing else', () => {
 			const $ = context.template(params);
 
-			expectTerms($, {standard: 1});
+			expectTerms($, {standard: 2});
 		});
 	});
 
@@ -69,7 +69,7 @@ describe('accept-terms template', () => {
 		it('should have default terms', () => {
 			const $ = context.template(params);
 
-			expectTerms($, {standard: 1});
+			expectTerms($, {standard: 2});
 		});
 	});
 
@@ -87,7 +87,7 @@ describe('accept-terms template', () => {
 		it('should have default and signup terms by default', () => {
 			const $ = context.template(params);
 
-			expectTerms($, {standard:1, signup:3});
+			expectTerms($, {standard:2, signup:3});
 		});
 
 		it('should have print related copy if a print product', () => {
@@ -96,7 +96,7 @@ describe('accept-terms template', () => {
 				isPrintProduct: true
 			});
 
-			expectTerms($, {standard:1, print:2});
+			expectTerms($, {standard:2, print:2});
 		});
 
 		it('should have special terms copy if supplied', () => {
@@ -107,7 +107,7 @@ describe('accept-terms template', () => {
 			});
 
 			expect($(SELECTOR_SPECIAL_TERMS).text().trim()).to.contain(specialTerms);
-			expectTerms($, {standard:1, signup:3, special:1});
+			expectTerms($, {standard:2, signup:3, special:1});
 		});
 	});
 
@@ -130,7 +130,7 @@ describe('accept-terms template', () => {
 
 		it('should have default and corp-signup terms', () => {
 			const $ = context.template(params);
-			expectTerms($, { standard: 1, corp: 3 });
+			expectTerms($, { standard: 2, corp: 3 });
 		});
 	});
 
