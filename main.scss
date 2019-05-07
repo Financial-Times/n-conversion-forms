@@ -31,7 +31,11 @@
 
 	&__wrapper {
 		background: oColorsGetPaletteColor('white');
-		padding: 50px;
+		padding: 20px;
+
+		@include oGridRespondTo($from: S) {
+			padding: 50px;
+		}
 	}
 
 	&__stepped-progress {
