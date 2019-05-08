@@ -1,0 +1,20 @@
+
+<div id="provinceField" class="o-forms o-forms--wide su-field js-field{{#if hasError}} o-forms--error{{/if}}" data-validate="required">
+
+	<label for="state" class="o-forms__label">State</label>
+
+	{{#ncf-common-data export='states' import='americanStates.states' }}
+	<select id="state" class="o-forms__select js-field__input js-item__value" aria-required="true" required
+		name="state"
+		data-trackable="field-state"
+		{{#if isDisabled}}disabled{{/if}}>
+
+		<option disabled selected value>Please select a state</option>
+		{{#each states as |option|}}
+		<option value="{{option.code}}" {{#if option.isSelected}}selected{{/if}} {{#if option.isDisabled}}disabled{{/if}}>{{option.name}}</option>
+		{{/each}}
+	</select>
+	{{/ncf-common-data }}
+
+	<div class="o-forms__errortext">Please select your state</div>
+</div>
