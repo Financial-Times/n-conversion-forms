@@ -77,7 +77,7 @@ function fetchPartials (dir) {
 function compilePartial (partial) {
 	let parameters = '';
 	let examplePartials = '';
-	const partialData = data[partial];
+	const partialData = data[partial] || {};
 	const handlebars = Handlebars();
 
 	if (partialData) {
