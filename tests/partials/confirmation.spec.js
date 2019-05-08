@@ -38,6 +38,17 @@ describe('confirmation template', () => {
 		expect($('dl dt').length).to.equal(2);
 	});
 
+	it('should display a description', () => {
+		const details = [
+			{ title: 'test1', data: 'test1', description: 'test1' }
+		];
+		const $ = context.template({
+			details
+		});
+
+		expect($('dl dd').length).to.equal(2);
+	});
+
 	it('should display dd mandate link', () => {
 		const directDebitMandateUrl = 'www.ft.com';
 		const $ = context.template({

@@ -114,6 +114,8 @@
 	&__header2 {
 		&--afterline {
 			@include oTypographySize(1);
+			font-weight: oFontsWeight('semibold');
+
 			&:after {
 				@include oTypographyPadding($top: 3, $bottom: 0);
 				content: '';
@@ -232,9 +234,13 @@
 			display: inline-block;
 			vertical-align: middle;
 		}
+		&-description {
+			margin: 0 0 10px;
+			@include oTypographySize(-1);
+		}
 
 		&-title {
-			font-weight: bold;
+			font-weight: oFontsWeight('semibold');
 		}
 	}
 

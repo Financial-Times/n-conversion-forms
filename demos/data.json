@@ -108,6 +108,15 @@
       "email": "test@example.com",
       "details": [
         {
+          "title": "Trial charge",
+          "data": "£XXXX"
+        },
+        {
+          "title": "Trial end date",
+          "data": "June 11th, 2019",
+          "description": "You'll be billed per month from this date"
+        },
+        {
           "title": "Annual payment",
           "data": "£XXXX"
         },
