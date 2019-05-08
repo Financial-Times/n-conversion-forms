@@ -1,0 +1,20 @@
+<div id="provinceField" class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}" data-ui-item="form-field" data-ui-item-name="province" data-validate="required">
+
+	<label for="province" class="o-forms__label">Province</label>
+
+	{{#ncf-common-data export='provinces' import='canadianProvinces.provinces' }}
+	<select id="province" class="o-forms__select js-field__input js-item__value" aria-required="true" required
+		name="province"
+		data-trackable="field-province"
+		{{#if isDisabled}}disabled{{/if}}>
+
+		<option disabled selected value>Please select a province</option>
+		{{#each provinces as |province|}}
+		<option value="{{province.code}}"{{#if selected}} selected{{/if}}>{{province.name}}</option>
+		{{/each}}
+	</select>
+	{{/ncf-common-data}}
+
+	<div class="o-forms__errortext">Please select your province.</div>
+
+</div>
