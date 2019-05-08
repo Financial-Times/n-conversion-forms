@@ -83,7 +83,8 @@ function compilePartial (partial) {
 	if (partialData) {
 		if (partialData.params) {
 			parameters = Object.keys(partialData.params).map(key => {
-				return `${key}='${JSON.stringify(partialData.params[key])}'`;
+				// Use the key of the param as this will available on the template scope
+				return `${key}=${key}`;
 			}).join(' ');
 		}
 		if (partialData.partials) {
@@ -112,7 +113,7 @@ function compilePartial (partial) {
 		template = `{{> ${partial} ${parameters} }}`;
 	}
 
-	const rendered = handlebars.compile(template)(partialData);
+	const rendered = handlebars.compile(template)(partialData.params);
 
 	const html = `<!doctype html>
 <html>
