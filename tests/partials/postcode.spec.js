@@ -3,6 +3,7 @@ const { expect } = require('chai');
 const {
 	fetchPartial,
 	shouldBeDisableable,
+	shouldBeHiddable,
 	shouldBeRequired,
 	shouldPopulateValue,
 	shouldError
@@ -17,14 +18,14 @@ describe('postcode template', () => {
 
 	it('should be post code by default', () => {
 		const $ = context.template({});
-		expect($('label').text()).to.contain('Post code');
+		expect($('label').text()).to.contain('Post Code');
 	});
 
 	it('should render zip code if asked', () => {
 		const $ = context.template({
 			isZipCode: true
 		});
-		expect($('label').text()).to.contain('Zip code');
+		expect($('label').text()).to.contain('Zip Code');
 	});
 
 	it('should be not be billing by default', () => {
@@ -46,4 +47,6 @@ describe('postcode template', () => {
 	shouldError(context);
 
 	shouldBeDisableable(context, 'input');
+
+	shouldBeHiddable(context, '#postCodeField');
 });

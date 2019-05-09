@@ -5,6 +5,7 @@ const {
 	registerHelper,
 	unregisterHelper,
 	shouldBeDisableable,
+	shouldBeHiddable,
 	shouldBeRequired,
 	shouldError
 } = require('../helpers');
@@ -69,4 +70,5 @@ describe('state template', () => {
 
 	shouldBeDisableable(context, 'select');
 
+	shouldBeHiddable(context, '#stateField');
 });

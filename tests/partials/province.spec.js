@@ -69,4 +69,6 @@ describe('province template', () => {
 	shouldError(context);
 
 	shouldBeDisableable(context, 'select');
+
+	shouldBeHiddable(context, '#provinceField');
 });
