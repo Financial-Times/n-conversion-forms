@@ -1,17 +1,21 @@
 
 <div id="provinceField" class="o-forms o-forms--wide su-field js-field{{#if hasError}} o-forms--error{{/if}}" data-validate="required">
 
-	<label for="state" class="o-forms__label">State</label>
+	<label for="state" class="o-forms__label">{{#if isBillingState}}Billing {{/if}}State</label>
 
 	{{#ncf-common-data export='states' import='americanStates.states' }}
 	<select id="state" class="o-forms__select js-field__input js-item__value" aria-required="true" required
+		{{#if isBillingState}}
+		name="billingState"
+		{{else}}
 		name="state"
+		{{/if}}
 		data-trackable="field-state"
 		{{#if isDisabled}}disabled{{/if}}>
 
 		<option disabled selected value>Please select a state</option>
 		{{#each states as |option|}}
-		<option value="{{option.code}}" {{#if option.isSelected}}selected{{/if}} {{#if option.isDisabled}}disabled{{/if}}>{{option.name}}</option>
+		<option value="{{option.code}}" {{#ifEquals ../value option.code}} selected{{/ifEquals}}>{{option.name}}</option>
 		{{/each}}
 	</select>
 	{{/ncf-common-data }}

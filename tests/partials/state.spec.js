@@ -51,6 +51,18 @@ describe('state template', () => {
 		});
 	});
 
+	it('should be not be billing by default', () => {
+		const $ = context.template({});
+		expect($('select').attr('name')).to.contain('state');
+	});
+
+	it('should be be billing if asked', () => {
+		const $ = context.template({
+			isBillingState: true
+		});
+		expect($('select').attr('name')).to.contain('billingState');
+	});
+
 	shouldBeRequired(context, 'select');
 
 	shouldError(context);

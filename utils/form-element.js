@@ -23,6 +23,8 @@ class FormElement {
 		if (!this.$el) {
 			throw new Error('Please include the DOM element for this component on the page');
 		}
+
+		this.inputs = this.$el.querySelectorAll('input,select');
 	}
 
 	/**
@@ -38,6 +40,20 @@ class FormElement {
 	 */
 	show () {
 		this.$el.classList.remove('n-ui-hide');
+	}
+
+	/**
+	 * Disable any inputs or selects inside form element
+	 */
+	disable () {
+		this.inputs.forEach(input => input.disabled = true);
+	}
+
+	/**
+	 * Enable any inputs or selects inside form element
+	 */
+	enable () {
+		this.inputs.forEach(input => input.disabled = false);
 	}
 
 }

@@ -5,6 +5,7 @@ const {
 	registerHelper,
 	unregisterHelper,
 	shouldBeDisableable,
+	shouldBeHiddable,
 	shouldBeRequired,
 	shouldError
 } = require('../helpers');
@@ -51,10 +52,21 @@ describe('province template', () => {
 		});
 	});
 
+	it('should be not be billing by default', () => {
+		const $ = context.template({});
+		expect($('select').attr('name')).to.contain('province');
+	});
+
+	it('should be be billing if asked', () => {
+		const $ = context.template({
+			isBillingProvince: true
+		});
+		expect($('select').attr('name')).to.contain('billingProvince');
+	});
+
 	shouldBeRequired(context, 'select');
 
 	shouldError(context);
 
 	shouldBeDisableable(context, 'select');
-
 });

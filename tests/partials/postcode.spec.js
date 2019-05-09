@@ -27,6 +27,18 @@ describe('postcode template', () => {
 		expect($('label').text()).to.contain('Zip code');
 	});
 
+	it('should be not be billing by default', () => {
+		const $ = context.template({});
+		expect($('input').attr('name')).to.contain('postCode');
+	});
+
+	it('should be be billing if asked', () => {
+		const $ = context.template({
+			isBillingPostcode: true
+		});
+		expect($('input').attr('name')).to.contain('billingPostcode');
+	});
+
 	shouldPopulateValue(context);
 
 	shouldBeRequired(context, 'input');

@@ -15,6 +15,7 @@ describe('FormElement', () => {
 		document = {
 			querySelector: () => {
 				return {
+					querySelectorAll: () => {},
 					classList: {
 						add: addStub,
 						remove: removeStub
@@ -60,5 +61,4 @@ describe('FormElement', () => {
 			expect(removeStub.getCall(0).args[0]).to.equal('n-ui-hide');
 		});
 	});
-
 });
