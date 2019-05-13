@@ -36,6 +36,15 @@ class Tracking {
 
 		const eventData = Object.assign({}, data, { action, category });
 
+		// Clean eventData of empty properties
+		for (const property in eventData) {
+			if (eventData[property] === undefined ||
+				eventData[property] === null ||
+				eventData[property] === '') {
+				delete eventData[property];
+			}
+		}
+
 		try {
 			return this.dispatchCustomEvent(eventData);
 		} catch (e) {

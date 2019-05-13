@@ -81,6 +81,41 @@ describe('Tracking', () => {
 				expect(tracking.dispatchCustomEvent.getCall(0).args[0]).to.not.include({ action: 'bad', category: 'bad' });
 			});
 		});
+
+		describe('empty properties', () => {
+			const data = {
+				testUndefined: undefined,
+				testNull: null,
+				testEmptyString: '',
+				testZero: 0,
+				testFalse: false
+			};
+
+			it('should not send undefined properties', () => {
+				tracking.dispatch('test', 'test', data);
+				expect(tracking.dispatchCustomEvent.getCall(0).args[0]).to.not.include({ testUndefined: undefined });
+			});
+
+			it('should not send null properties', () => {
+				tracking.dispatch('test', 'test', data);
+				expect(tracking.dispatchCustomEvent.getCall(0).args[0]).to.not.include({ testNull: null });
+			});
+
+			it('should not send empty string properties', () => {
+				tracking.dispatch('test', 'test', data);
+				expect(tracking.dispatchCustomEvent.getCall(0).args[0]).to.not.include({ testEmptyString: '' });
+			});
+
+			it('should send zero properties', () => {
+				tracking.dispatch('test', 'test', data);
+				expect(tracking.dispatchCustomEvent.getCall(0).args[0]).to.include({ testZero: 0 });
+			});
+
+			it('should send false properties', () => {
+				tracking.dispatch('test', 'test', data);
+				expect(tracking.dispatchCustomEvent.getCall(0).args[0]).to.include({ testFalse: false });
+			});
+		});
 	});
 
 	describe('dispatchCustomEvent', () => {
