@@ -168,6 +168,22 @@ const shouldBeRequired = function (context, selector) {
 	});
 };
 
+const shouldAllowPattern = function (context, selector) {
+	it('should not have a pattern by default', () => {
+		const $ = context.template({});
+
+		expect($(selector).attr('pattern')).to.be.undefined;
+	});
+
+	it('should not have a pattern if passed', () => {
+		const $ = context.template({
+			pattern: 'test'
+		});
+
+		expect($(selector).attr('pattern')).to.equal('test');
+	});
+};
+
 const shouldContainPartials = function (context, partials) {
 	it('should contain partials', () => {
 		partials.forEach(({id, partial}) => registerPartial(partial, `<div id="${id}"></div>`));
@@ -207,6 +223,7 @@ module.exports = {
 	shouldBeDisableable,
 	shouldBeHiddable,
 	shouldBeRequired,
+	shouldAllowPattern,
 	shouldContainPartials,
 	shouldError
 };

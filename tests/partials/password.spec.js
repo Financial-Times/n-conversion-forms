@@ -3,6 +3,7 @@ const {
 	fetchPartial,
 	shouldBeDisableable,
 	shouldBeRequired,
+	shouldAllowPattern,
 	shouldError
 } = require('../helpers');
 
@@ -43,4 +44,6 @@ describe('password template', () => {
 	shouldError(context);
 
 	shouldBeDisableable(context, 'input');
+
+	shouldAllowPattern(context, 'input');
 });
