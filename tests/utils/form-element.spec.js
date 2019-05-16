@@ -16,6 +16,11 @@ describe('FormElement', () => {
 			querySelector: () => {
 				return {
 					querySelectorAll: () => {},
+					querySelector: () => {
+						return {
+							value: 'test'
+						};
+					},
 					classList: {
 						add: addStub,
 						remove: removeStub
@@ -59,6 +64,12 @@ describe('FormElement', () => {
 			formElement.show();
 
 			expect(removeStub.getCall(0).args[0]).to.equal('n-ui-hide');
+		});
+	});
+
+	describe('value', () => {
+		it('should return the value', () => {
+			expect(formElement.value()).to.equal('test');
 		});
 	});
 });

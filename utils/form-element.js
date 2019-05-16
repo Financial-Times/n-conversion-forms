@@ -56,6 +56,13 @@ class FormElement {
 		this.inputs.forEach(input => input.disabled = false);
 	}
 
+	/**
+	 * Get the value of the form element
+	 * Assumes the first input or select is what's required
+	 */
+	value () {
+		return this.$el.querySelector('input,select').value;
+	}
 }
 
 module.exports = FormElement;
