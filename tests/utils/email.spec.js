@@ -151,6 +151,7 @@ describe('Email', () => {
 			expect(fetchMock.called(url)).to.be.true;
 			expect(fetchMock.lastOptions(url)).to.deep.equal({
 				method: 'POST',
+				credentials: 'include',
 				headers: {
 					'Content-Type': 'application/json'
 				},
