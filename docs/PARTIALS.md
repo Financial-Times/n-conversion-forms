@@ -33,6 +33,18 @@ The form fields to be displayed in this fieldset.
   {{/inline}}
 {{/ n-conversion-forms/partials/fieldset }}
 ```
+#### firstname
+
+A form field for adding a user's first name.
+
+##### Options
+
++ `value`: string - Text to pre-populate the `firstname` field.
++ `hasError`: boolean - true - adds `o-forms--error` class
+
+{{> n-conversion-forms/partials/firstname value=John }}
+
+[firstname image](/docs/form-fields/firstname.png)
 
 #### lastname
 
@@ -102,4 +114,3 @@ i.e `{{> n-conversion-forms/partials/message isError=true message=flash.message 
   + `link`: string - The link to go to when clicking the button.
   + `isSecondary`: boolean - Whether to render this button using secondary styling from [o-buttons](https://registry.origami.ft.com/components/o-buttons).
   + `text`: string - The text the user will see on the button.
-
