@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "precommit": "node_modules/.bin/secret-squirrel",
     "commitmsg": "node_modules/.bin/secret-squirrel-commitmsg",
-    "prepush": "make verify -j3"
+    "prepush": "make verify -j3",
+    "prepare": "npx snyk protect || npx snyk protect -d || true"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
     "postcss-cli": "^5.0.1",
     "proxyquire": "^2.1.0",
     "sinon": "^6.3.5",
+    "snyk": "^1.167.2",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2"
   }
