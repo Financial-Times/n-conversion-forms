@@ -3,6 +3,8 @@
 ## Content
 
 * [Fieldset](#fieldset)
+* [Lastname](#lastname)
+* [Header](#header)
 * [Loader](#loader)
 * [Message](#message)
 
@@ -20,7 +22,7 @@ Renders a fieldset.
 
 ### Inline Partials
 
-#### fields
+#### fieldset
 
 The form fields to be displayed in this fieldset.
 
@@ -30,6 +32,20 @@ The form fields to be displayed in this fieldset.
     {{> n-conversion-forms/partials/email value='test@example.com' }}
   {{/inline}}
 {{/ n-conversion-forms/partials/fieldset }}
+```
+
+#### lastname
+
+A form field for adding a user's last name.
+
+##### Options
+
++ `value`: string - Text to pre-populate the `lastname` field.
++ `hasError`: boolean - true - adds `o-forms--error` class
++ `isDisabled`: boolean - true - disables the field
+
+```handlebars
+{{> n-conversion-forms/partials/lastname value=Smith hasError=true isDisabled=true }}
 ```
 
 #### header
