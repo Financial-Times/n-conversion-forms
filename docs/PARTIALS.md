@@ -45,8 +45,6 @@ A form field for adding a user's first name.
 
 {{> n-conversion-forms/partials/firstname value=John }}
 
-[firstname image](/docs/form-fields/firstname.png)
-
 #### lastname
 
 A form field for adding a user's last name.
