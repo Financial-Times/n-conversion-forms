@@ -43,7 +43,10 @@ A form field for adding a user's first name.
 + `value`: string - Text to pre-populate the `firstname` field.
 + `hasError`: boolean - true - adds `o-forms--error` class
 + `isDisabled`: boolean - true - disables the form field
+
+```handlebars
 {{> n-conversion-forms/partials/firstname value=John }}
+```
 
 #### lastname
 
