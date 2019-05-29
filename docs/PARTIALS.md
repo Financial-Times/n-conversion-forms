@@ -8,6 +8,7 @@
 * [Header](#header)
 * [Loader](#loader)
 * [Message](#message)
+* [Phone](#phone)
 
 ## Fieldset
 
@@ -116,3 +117,19 @@ i.e `{{> n-conversion-forms/partials/message isError=true message=flash.message 
   + `link`: string - The link to go to when clicking the button.
   + `isSecondary`: boolean - Whether to render this button using secondary styling from [o-buttons](https://registry.origami.ft.com/components/o-buttons).
   + `text`: string - The text the user will see on the button.
+
+## Phone
+
+Displays a phone field with o-forms styling and the name and id `primaryTelephone`
+
+```handlebars
+{{> n-conversion-forms/partials/phone hasError=true isB2b=true }}
+```
+
+### Options
+
++ `value`: string - Text to pre-populate the `lastname` field.
++ `hasError`: boolean - true - adds `o-forms--error` class.
++ `isDisabled`: boolean - true - disables the field.
++ `isB2b`: boolean - true - displays work email copy.
++ `pattern`: string - Pattern to be used for validation.
