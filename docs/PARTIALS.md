@@ -133,3 +133,18 @@ Displays a phone field with o-forms styling and the name and id `primaryTelephon
 + `isDisabled`: boolean - true - disables the field.
 + `isB2b`: boolean - true - displays work email copy.
 + `pattern`: string - Pattern to be used for validation.
+
+## Submit
+
+A form submit button with o-button styling
+
+```
+{{> n-conversion-forms/partials/submit isCentered=true label="Submit" }}
+```
+
+### Options
+
++ `isCentered`: boolean - true - centers the button
++ `backButtonUrl`: string - URL of a back button to add next to the button
++ `id`: string - The ID of the button defaults to "submitButton"
++ `label`: string - Label to use for the button defaults to "Continue"
