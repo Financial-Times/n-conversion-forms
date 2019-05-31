@@ -139,5 +139,10 @@
         "Google": "https://www.google.com"
       }
     }
+  },
+  "decision-maker": {
+    "params": {
+      "value": "yes"
+    }
   }
 }

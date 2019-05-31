@@ -1,0 +1,13 @@
+<fieldset id="decisionMakerField" class="o-forms o-forms--wide o-forms--inline ncf__field js-field{{#if hasError}} o-forms--error{{/if}}" data-ui-item="form-field" data-ui-item-name="decisionMaker" data-validate="required">
+	<div class="o-forms__inline-container">
+		<legend class="o-forms__label">Are you a manager with direct reports?</legend>
+		<div class="o-forms__group o-forms__group--inline-together">
+			<input id="decisionMakerYes" type="radio" name="decisionMaker" value="yes" class="o-forms__radio-button"{{#ifEquals value "yes"}} checked{{/ifEquals}}>
+			<label for="decisionMakerYes" class="o-forms__label">Yes</label>
+			<input id="decisionMakerNo" type="radio" name="decisionMaker" value="no" class="o-forms__radio-button o-forms__radio-button--negative"{{#ifEquals value "no"}} checked{{/ifEquals}}>
+			<label for="decisionMakerNo" class="o-forms__label">No</label>
+		</div>
+	</div>
+
+	<div class="o-forms__errortext">Please select an option</div>
+</fieldset>

@@ -2,6 +2,7 @@
 
 ## Content
 
+* [Decision Maker](#decision-maker)
 * [Fieldset](#fieldset)
 * [Firstname](#firstname)
 * [Lastname](#lastname)
@@ -9,6 +10,18 @@
 * [Loader](#loader)
 * [Message](#message)
 * [Phone](#phone)
+
+## Decision Maker
+
+Renders an inline yes / no radio group for users to enter if they are a decision maker in their company.
+
+```handlebars
+{{> n-conversion-forms/partials/decision-maker value=yes hasError=true }}
+```
+
+### Options
++ `value`: string - Pass 'yes' or 'no' to check an option, default is unchecked.
++ `hasError`: boolean - if true it adds `o-forms--error` class to display error.
 
 ## Fieldset
 
@@ -24,7 +37,7 @@ Renders a fieldset.
 
 ### Inline Partials
 
-#### fieldset
+#### fields
 
 The form fields to be displayed in this fieldset.
 
@@ -35,11 +48,11 @@ The form fields to be displayed in this fieldset.
   {{/inline}}
 {{/ n-conversion-forms/partials/fieldset }}
 ```
-#### firstname
+## firstname
 
 A form field for adding a user's first name.
 
-##### Options
+### Options
 
 + `value`: string - Text to pre-populate the `firstname` field.
 + `hasError`: boolean - true - adds `o-forms--error` class
@@ -49,11 +62,11 @@ A form field for adding a user's first name.
 {{> n-conversion-forms/partials/firstname value=John }}
 ```
 
-#### lastname
+## lastname
 
 A form field for adding a user's last name.
 
-##### Options
+### Options
 
 + `value`: string - Text to pre-populate the `lastname` field.
 + `hasError`: boolean - true - adds `o-forms--error` class
@@ -63,7 +76,7 @@ A form field for adding a user's last name.
 {{> n-conversion-forms/partials/lastname value=Smith hasError=true isDisabled=true }}
 ```
 
-#### header
+## header
 
 This is useful for cases where you'd want to pass in markup to use within the header element. For example, you may want to specify a more accessibility friendly header as follows:
 
