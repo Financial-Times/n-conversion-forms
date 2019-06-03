@@ -44,7 +44,7 @@ This is useful for cases where you'd want to pass in markup to use within the he
 ```handlebars
 {{#> n-conversion-forms/partials/fieldset headingLevel="h1" legend="Details" hideLegend="true" }}
   {{#*inline "header"}}
-    <span class="o-normalise-visually-hidden"></span>Details<span class="o-normalise-visually-hidden"> (page 1 of 3)</span>
+    Details<span class="o-normalise-visually-hidden"> (page 1 of 3)</span>
   {{/inline}}
 {{/ n-conversion-forms/partials/fieldset }}
 ```
