@@ -40,4 +40,18 @@ describe('licence-confirmation template', () => {
 
 		expect($.text()).to.contain(duration);
 	});
+
+	it('should not have links with any target attribute', () => {
+		const $ = context.template({});
+
+		expect($('a[target]').length).to.equal(0);
+	});
+
+	it('should add target top to links when the form is embedded', () => {
+		const $ = context.template({
+			isEmbedded: true
+		});
+
+		expect($('a[target="_top"]').length).to.be.greaterThan(0);
+	});
 });

@@ -97,6 +97,7 @@ Confirmation page for subscribing to a company licence.
 
 ### Options
 
++ `isEmbedded`: boolean - Sets links to reference top frame when embedded
 + `isTrial`: boolean - Is the licence a trial or not
 + `duration`: string - How long the licence will last for
 

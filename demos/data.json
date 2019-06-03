@@ -144,5 +144,11 @@
     "params": {
       "value": "yes"
     }
+  },
+  "licence-confirmation": {
+    "params": {
+      "isTrial": true,
+      "duration": "30 day"
+    }
   }
 }
