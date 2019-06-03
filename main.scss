@@ -131,6 +131,10 @@
 		}
 	}
 
+	&__link {
+		@include oTypographyLink;
+	}
+
 	&__link--external {
 		@include oTypographyLinkExternal;
 	}

@@ -37,6 +37,20 @@ Renders a fieldset.
 
 ### Inline Partials
 
+#### header
+
+This is useful for cases where you'd want to pass in markup to use within the header element. For example, you may want to specify a more accessibility friendly header as follows:
+
+```handlebars
+{{#> n-conversion-forms/partials/fieldset headingLevel="h1" legend="Details" hideLegend="true" }}
+  {{#*inline "header"}}
+    <span class="o-normalise-visually-hidden"></span>Details<span class="o-normalise-visually-hidden"> (page 1 of 3)</span>
+  {{/inline}}
+{{/ n-conversion-forms/partials/fieldset }}
+```
+
+*NB*: The `headingLevel` option is required in order for this to work.
+
 #### fields
 
 The form fields to be displayed in this fieldset.
@@ -48,6 +62,7 @@ The form fields to be displayed in this fieldset.
   {{/inline}}
 {{/ n-conversion-forms/partials/fieldset }}
 ```
+
 ## firstname
 
 A form field for adding a user's first name.
@@ -76,19 +91,18 @@ A form field for adding a user's last name.
 {{> n-conversion-forms/partials/lastname value=Smith hasError=true isDisabled=true }}
 ```
 
-## header
+## licence-confirmation
 
-This is useful for cases where you'd want to pass in markup to use within the header element. For example, you may want to specify a more accessibility friendly header as follows:
+Confirmation page for subscribing to a company licence.
+
+### Options
+
++ `isTrial`: boolean - Is the licence a trial or not
++ `duration`: string - How long the licence will last for
 
 ```handlebars
-{{#> n-conversion-forms/partials/fieldset headingLevel="h1" legend="Details" hideLegend="true" }}
-  {{#*inline "header"}}
-    <span class="o-normalise-visually-hidden"></span>Details<span class="o-normalise-visually-hidden"> (page 1 of 3)</span>
-  {{/inline}}
-{{/ n-conversion-forms/partials/fieldset }}
+{{> n-conversion-forms/partials/licence-confirmation isTrial=true }}
 ```
-
-*NB*: The `headingLevel` option is required in order for this to work.
 
 ## Loader
 
