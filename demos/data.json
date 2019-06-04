@@ -150,5 +150,11 @@
       "isTrial": true,
       "duration": "30 day"
     }
+  },
+  "continue-reading": {
+    "params": {
+      "quote": "The quick brown fox jumped over the lazy hare",
+      "link": "https://google.com"
+    }
   }
 }

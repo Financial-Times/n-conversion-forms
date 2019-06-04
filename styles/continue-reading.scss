@@ -1,0 +1,38 @@
+@mixin ncfContinueReading() {
+	&__continue-reading-wrapper {
+		padding: 14px;
+		background-color: oColorsGetPaletteColor('paper');
+	}
+
+	&__continue-reading-title {
+		@include oTypographySans($scale: -1);
+		padding: 0;
+		margin: 0 0 14px;
+	}
+
+	&__continue-reading-quote {
+		@include oTypographyDisplay($scale: 1, $line-height: 23px);
+		font-weight: oFontsWeight('semibold');
+		margin: 0;
+		padding: 0 12px;
+		position: relative;
+		z-index: 1;
+
+		&::after,
+		&::before {
+			z-index: -1;
+			content: '';
+			position: absolute;
+			margin-left: -15px;
+		}
+
+		&::before {
+			@include oIconsGetIcon('speech-left', oColorsGetPaletteColor('black-10'), 30);
+			top: -8px;
+		}
+
+		&::after {
+			@include oIconsGetIcon('speech-right', oColorsGetPaletteColor('black-10'), 30);
+		}
+	}
+}

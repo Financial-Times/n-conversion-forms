@@ -2,6 +2,7 @@
 
 ## Content
 
+* [Continue Reading](#continue-reading)
 * [Decision Maker](#decision-maker)
 * [Fieldset](#fieldset)
 * [Firstname](#firstname)
@@ -10,6 +11,19 @@
 * [Loader](#loader)
 * [Message](#message)
 * [Phone](#phone)
+
+## Continue Reading
+
+A message to inform the user they can read an article once they've subscribed.
+
+```handlebars
+{{> n-conversion-forms/partials/continue-reading  }}
+```
+
+### Options
++ `isEmbedded`: boolean - Sets links to reference top frame when embedded.
++ `quote`: string - Title displayed between the quote marks.
++ `link`: string - Location of the continue reading button.
 
 ## Decision Maker
 
