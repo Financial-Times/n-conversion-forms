@@ -1,0 +1,53 @@
+@mixin ncfAppBanner() {
+	&__app-banner {
+		background: oColorsGetPaletteColor('wheat');
+		border-top: 1px solid oColorsGetPaletteColor('black-10');
+		border-bottom: 1px solid oColorsGetPaletteColor('black-10');
+
+		&-inner {
+			display: grid;
+			grid-template-columns: 100px 1fr;
+			grid-template-rows: 1fr 1fr;
+			column-gap: 14px;
+			overflow: hidden;
+			max-width: 700px;
+			align-items: center;
+			margin: 0 auto;
+			padding: 10px;
+
+			@include oGridRespondTo($from: M) {
+				grid-template-columns: 100px 1fr 240px;
+				grid-template-rows: 140px;
+			}
+		}
+
+		&-image {
+
+			img {
+				width: 100px;
+			}
+
+			@include oGridRespondTo($until: M) {
+				grid-row: span 2;
+			}
+		}
+
+		&-strong {
+			font-weight: oFontsWeight('semibold');
+		}
+
+		&-header {
+			@include oTypographySize(0);
+			font-weight: oFontsWeight('semibold');
+			margin: 0 0 4px;
+		}
+
+		&-action {
+			display: inline-block;
+
+			a {
+				border: 0;
+			}
+		}
+	}
+}

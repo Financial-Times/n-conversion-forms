@@ -2,6 +2,7 @@
 
 ## Content
 
+* [App Banner](#app-banner)
 * [Continue Reading](#continue-reading)
 * [Decision Maker](#decision-maker)
 * [Fieldset](#fieldset)
@@ -11,6 +12,14 @@
 * [Loader](#loader)
 * [Message](#message)
 * [Phone](#phone)
+
+## App Banner
+
+Banner that appears on confirmation pages to inform the user of our App
+
+```handlebars
+{{> n-conversion-forms/partials/app-banner }}
+```
 
 ## Continue Reading
 

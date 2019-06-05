@@ -58,6 +58,7 @@ import MyModule from 'n-conversion-forms/utils/my-module';
 
 ### Table of contents
 
+* [AppBanner](#app-banner)
 * [Country](#country)
 * [Email](#email)
 * [Event Notifier](#event-notifier)
@@ -69,6 +70,14 @@ import MyModule from 'n-conversion-forms/utils/my-module';
 * [Tracking](#tracking)
 * [Validation](#validation)
 * [Zuora](#zuora)
+
+### AppBanner
+
+```js
+new AppBanner(window);
+```
+
+Simple utility to use in conjunction with the `app-banner` partial that performs user agent sniffing. It will remove the App Store or Play Store link which ever is not relevant for the platform the user is on.
 
 ### Country
 

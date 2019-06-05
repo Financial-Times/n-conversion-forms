@@ -13,6 +13,7 @@
 @import './styles/loader';
 @import './styles/message';
 @import './styles/continue-reading';
+@import './styles/app-banner';
 @import 'o-fonts/main';
 
 @include oFonts();
@@ -259,6 +260,7 @@
 	@include ncfPaymentType();
 	@include ncfLoader();
 	@include ncfContinueReading();
+	@include ncfAppBanner();
 
 	@include ncfPaymentApplePay();
 
