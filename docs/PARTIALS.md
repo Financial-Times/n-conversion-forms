@@ -11,7 +11,9 @@
 * [Header](#header)
 * [Loader](#loader)
 * [Message](#message)
+* [Payment Term](#payment-term)
 * [Phone](#phone)
+* [Submit](#submit)
 
 ## App Banner
 
@@ -168,6 +170,22 @@ i.e `{{> n-conversion-forms/partials/message isError=true message=flash.message 
   + `link`: string - The link to go to when clicking the button.
   + `isSecondary`: boolean - Whether to render this button using secondary styling from [o-buttons](https://registry.origami.ft.com/components/o-buttons).
   + `text`: string - The text the user will see on the button.
+
+## Payment term
+
+Display payment terms for an offer with radio buttons for users to choose between them.
+
+```handlebars
+{{> n-conversion-forms/partials/payment-term options=options }}
+```
+### Options
+
++ `options`: array - An array of objects that can have the following properties
+  + `value`: string - Value to send when selected
+  + `name`: string - Title of the payment term
+  + `description`: string - Extra information about the term
+  + `discount`: string - Displays a sale label on the term
+  + `selected`: boolean - Set to true for the term to be selected
 
 ## Phone
 
