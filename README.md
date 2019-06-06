@@ -59,6 +59,7 @@ import MyModule from 'n-conversion-forms/utils/my-module';
 ### Table of contents
 
 * [AppBanner](#app-banner)
+* [TrialBanner](#trial-banner)
 * [Country](#country)
 * [Email](#email)
 * [Event Notifier](#event-notifier)
@@ -78,6 +79,11 @@ new AppBanner(window);
 ```
 
 Simple utility to use in conjunction with the `app-banner` partial that performs user agent sniffing. It will remove the App Store or Play Store link which ever is not relevant for the platform the user is on.
+
+### TrialBanner
+
+Displays banner for trial only. Designed to take in dynamic period `trialDuration`. If period is not present, then default 30 day period would be used  
+
 
 ### Country
 

@@ -1,4 +1,26 @@
 @mixin ncfAppBanner() {
+
+	&__trial-banner {
+		@include oTypographySerif($scale: 0);
+		background-color: #262A33;
+		color: white;
+		text-align: center;
+		line-height: 40px;
+
+		&-img {
+			vertical-align: middle;
+			margin: 0 0 0 30px;
+
+			@include oGridRespondTo($until: S) {
+				display: none;
+			}
+		}
+
+		&-no-margin {
+			margin: 0;
+		}
+	}
+
 	&__app-banner {
 		background: oColorsGetPaletteColor('wheat');
 		border-top: 1px solid oColorsGetPaletteColor('black-10');
