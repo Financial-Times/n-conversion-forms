@@ -173,7 +173,7 @@ i.e `{{> n-conversion-forms/partials/message isError=true message=flash.message 
 
 ## Payment term
 
-Display payment terms for an offer with radio buttons for users to choose between them.
+Display payment terms for an offer with radio buttons for users to choose between.
 
 ```handlebars
 {{> n-conversion-forms/partials/payment-term options=options }}
