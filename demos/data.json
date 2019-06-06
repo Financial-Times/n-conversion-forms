@@ -61,6 +61,11 @@
           "value": "Test 1",
           "description": "The <strong>quick</strong> brown fox<br />jumped over the lazy <a href=\"#\">hare</a>.",
           "selected": true
+        }, {
+          "name": "Test 2",
+          "value": "Test 2",
+          "description": "The <strong>quick</strong> brown fox<br />jumped over the lazy <a href=\"#\">hare</a>.",
+          "discount": "25%"
         }
       ]
     }

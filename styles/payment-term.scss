@@ -35,13 +35,43 @@
 			}
 		}
 
-		&__label--title {
+		&__item {
+			margin-bottom: 10px;
+
+			&--discount {
+				margin-top: 26px;
+			}
+		}
+
+		&__title {
 			font-weight: oFontsWeight('semibold');
 			@include oTypographySans($scale: 2);
 		}
 
-		&__label--description {
+		&__description {
 			padding-top: 14px;
+		}
+
+		&__discount {
+			background-color: oColorsGetPaletteColor('black');
+			color: oColorsGetPaletteColor('white');
+			position: absolute;
+			padding: 8px 16px;
+			right: -11px;
+			top: -21px;
+
+			&::after {
+				content: '';
+				width: 0;
+				height: 0;
+				border-top: 6px solid transparent;
+				border-bottom: 6px solid transparent;
+				border-right: 6px solid oColorsGetPaletteColor('black-70');
+				transform: rotate(45deg);
+				position: absolute;
+				bottom: -8px;
+				right: 4px;
+			}
 		}
 
 		&__legal {

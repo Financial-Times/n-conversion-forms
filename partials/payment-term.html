@@ -1,12 +1,17 @@
 <div id="paymentTermField" class="o-forms__group ncf__payment-term">
 	{{#each options}}
-	<input type="radio" id="{{this.value}}" name="paymentTerm" value="{{this.value}}" class="o-forms__radio o-forms__radio--right ncf__payment-term__input o-forms__radio-button--my-custom-theme" {{#if this.selected}} checked="checked" {{/if}}>
-	<label for="{{this.value}}" class="o-forms__label ncf__payment-term__label">
-		<span class="ncf__payment-term__label--title">{{this.name}}</span>
-		<div class="ncf__payment-term__label--description">
-			{{{this.description}}}
-		</div>
-	</label>
+	<div class="ncf__payment-term__item{{#if discount}} ncf__payment-term__item--discount{{/if}}">
+		<input type="radio" id="{{this.value}}" name="paymentTerm" value="{{this.value}}" class="o-forms__radio o-forms__radio--right ncf__payment-term__input o-forms__radio-button--my-custom-theme" {{#if this.selected}} checked="checked" {{/if}}>
+		<label for="{{this.value}}" class="o-forms__label ncf__payment-term__label">
+			{{#if discount}}
+			<span class="ncf__payment-term__discount">Save {{this.discount}}</span>
+			{{/if}}
+			<span class="ncf__payment-term__title">{{this.name}}</span>
+			<div class="ncf__payment-term__description">
+				{{{this.description}}}
+			</div>
+		</label>
+	</div>
 	{{/each}}
 	<div class="ncf__payment-term__legal">
 		<p>
