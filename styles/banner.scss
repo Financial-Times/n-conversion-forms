@@ -1,4 +1,4 @@
-@mixin ncfAppBanner() {
+@mixin ncfBanner() {
 
 	&__trial-banner {
 		@include oTypographySerif($scale: 0);
@@ -16,7 +16,7 @@
 			}
 		}
 
-		&-no-margin {
+		&-content {
 			margin: 0;
 		}
 	}

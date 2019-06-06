@@ -13,4 +13,12 @@ describe('trial-banner template', () => {
 			context.template({});
 		}).to.not.throw();
 	});
+
+	it('should check the yes input if yes passed as value', () => {
+		const $ = context.template({
+			trialDuration: '999 day'
+		});
+
+		expect($.text()).to.contain('Your free 999 day FT.com trial');
+	});
 });
