@@ -4,6 +4,8 @@ const {
 } = require('../helpers');
 
 let context = {};
+const TITLE_SELECTOR = '.ncf__payment-term__title';
+const DESCRIPTION_SELECTOR = '.ncf__payment-term__description';
 
 describe('payment-term', () => {
 	before(async () => {
@@ -25,22 +27,114 @@ describe('payment-term', () => {
 		expect($('input').length).to.equal(3);
 	});
 
-	it('should populate the name', () => {
-		const name = 'Test';
-		const $ = context.template({ options: [{ name }]});
-		expect($('.ncf__payment-term__title').text()).to.equal(name);
+	describe('trial', () => {
+		it('should show the correct title copy', () => {
+			const name = 'trial';
+			const $ = context.template({ options: [{
+				name
+			}]});
+			expect($(TITLE_SELECTOR).text()).to.equal('Try the FT');
+		});
+
+		it('should show the price', () => {
+			const name = 'trial';
+			const price = '£1.01';
+			const $ = context.template({ options: [{
+				name,
+				price
+			}]});
+			expect($(DESCRIPTION_SELECTOR).text()).to.contain(price);
+		});
+
+		it('should show the trial price', () => {
+			const name = 'trial';
+			const price = '£1.01';
+			const trialPrice = '£2.01';
+			const $ = context.template({ options: [{
+				name,
+				price,
+				trialPrice
+			}]});
+			expect($(DESCRIPTION_SELECTOR).text()).to.contain(trialPrice);
+		});
 	});
 
-	it('should populate the description', () => {
-		const description = 'Test';
-		const $ = context.template({ options: [{ description }]});
-		expect($('.ncf__payment-term__description').text()).to.contain(description);
+	describe('annual', () => {
+		it('should show the correct title copy', () => {
+			const name = 'annual';
+			const $ = context.template({ options: [{
+				name
+			}]});
+			expect($(TITLE_SELECTOR).text()).to.contain('annually');
+		});
+
+		it('should show the price', () => {
+			const name = 'annual';
+			const price = '£1.01';
+			const $ = context.template({ options: [{
+				name,
+				price
+			}]});
+			expect($(DESCRIPTION_SELECTOR).text()).to.contain(price);
+		});
+
+		it('should show discount copy if not discounted', () => {
+			const name = 'annual';
+			const $ = context.template({ options: [{
+				name
+			}]});
+			expect($(DESCRIPTION_SELECTOR).text()).to.contain('Save up to');
+		});
+
+		it('should not show discount copy if discounted', () => {
+			const name = 'annual';
+			const discount = '25%';
+			const $ = context.template({ options: [{
+				name,
+				discount
+			}]});
+			expect($(DESCRIPTION_SELECTOR).text()).to.not.contain('Save up to');
+		});
 	});
 
-	it('should allow HTML in the description', () => {
-		const description = 'Test with an <a>anchor</a>';
-		const $ = context.template({ options: [{ description }]});
-		expect($('.ncf__payment-term__description a').length).to.equal(1);
+	describe('quarterly', () => {
+		it('should show the correct title copy', () => {
+			const name = 'quarterly';
+			const $ = context.template({ options: [{
+				name
+			}]});
+			expect($(TITLE_SELECTOR).text()).to.contain('quarterly');
+		});
+
+		it('should show the price', () => {
+			const name = 'quarterly';
+			const price = '£1.01';
+			const $ = context.template({ options: [{
+				name,
+				price
+			}]});
+			expect($(DESCRIPTION_SELECTOR).text()).to.contain(price);
+		});
+	});
+
+	describe('monthly', () => {
+		it('should show the correct title copy', () => {
+			const name = 'monthly';
+			const $ = context.template({ options: [{
+				name
+			}]});
+			expect($(TITLE_SELECTOR).text()).to.contain('monthly');
+		});
+
+		it('should show the price', () => {
+			const name = 'monthly';
+			const price = '£1.01';
+			const $ = context.template({ options: [{
+				name,
+				price
+			}]});
+			expect($(DESCRIPTION_SELECTOR).text()).to.contain(price);
+		});
 	});
 
 	it('should populate the value', () => {

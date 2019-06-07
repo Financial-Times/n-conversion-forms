@@ -1,15 +1,40 @@
 <div id="paymentTermField" class="o-forms__group ncf__payment-term">
 	{{#each options}}
 	<div class="ncf__payment-term__item{{#if discount}} ncf__payment-term__item--discount{{/if}}">
-		<input type="radio" id="{{this.value}}" name="paymentTerm" value="{{this.value}}" class="o-forms__radio o-forms__radio--right ncf__payment-term__input o-forms__radio-button--my-custom-theme" {{#if this.selected}} checked="checked" {{/if}}>
+		<input type="radio" id="{{this.value}}" name="paymentTerm" value="{{this.value}}" class="o-forms__radio o-forms__radio--right ncf__payment-term__input o-forms__radio-button--my-custom-theme"{{#if this.selected}} checked="checked"{{/if}}>
 		<label for="{{this.value}}" class="o-forms__label ncf__payment-term__label">
 			{{#if discount}}
 			<span class="ncf__payment-term__discount">Save {{this.discount}}</span>
 			{{/if}}
-			<span class="ncf__payment-term__title">{{this.name}}</span>
+
+			{{#ifEquals this.name 'trial'}}
+			<span class="ncf__payment-term__title">Try the FT</span>
 			<div class="ncf__payment-term__description">
-				{{{this.description}}}
+				4 weeks for {{trialPrice}}<br />unless you cancel during your trial you will be billed {{price}} per month after the trial period
 			</div>
+			{{/ifEquals}}
+
+			{{#ifEquals this.name 'annual'}}
+			<span class="ncf__payment-term__title">Pay annually</span>
+			<div class="ncf__payment-term__description">
+				Single <span class="ncf__strong">{{price}}</span> payment
+				{{#unless discount}}<br />Save up to 25% when you pay annually{{/unless}}
+			</div>
+			{{/ifEquals}}
+
+			{{#ifEquals this.name 'quarterly'}}
+			<span class="ncf__payment-term__title">Pay quarterly</span>
+			<div class="ncf__payment-term__description">
+				{{price}} per quarter
+			</div>
+			{{/ifEquals}}
+
+			{{#ifEquals this.name 'monthly'}}
+			<span class="ncf__payment-term__title">Pay monthly</span>
+			<div class="ncf__payment-term__description">
+				{{price}} per month
+			</div>
+			{{/ifEquals}}
 		</label>
 	</div>
 	{{/each}}
