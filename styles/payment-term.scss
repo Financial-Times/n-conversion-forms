@@ -56,9 +56,10 @@
 			background-color: oColorsGetPaletteColor('black');
 			color: oColorsGetPaletteColor('white');
 			position: absolute;
-			padding: 8px 16px;
+			padding: 6px 16px;
 			right: -11px;
-			top: -21px;
+			top: -17px;
+			@include oTypographySize($scale: -1);
 
 			&::after {
 				content: '';
