@@ -11,6 +11,7 @@
 	</span>
 	{{#if showHelpers}}
 	<span class="ncf__debug-helpers">
+		<button class="ncf__button ncf__button--inverse" onclick="logout();" title="Logout and refresh">Logout</button>
 		<button class="ncf__button ncf__button--inverse" onclick="fillForm();" title="Fill form with debug data">Fill</button>
 		<button class="ncf__button ncf__button--inverse" onclick="fillForm(); submitForm();" title="Fill form with debug data and submit">Fill & Submit</button>
 		{{#if isTest}}
@@ -44,6 +45,16 @@
 		responsibility: 'ADL',
 		position: 'AS'
 	};
+
+	function logout () {
+		const options = {
+			mode: 'no-cors',
+			credentials: 'include'
+		};
+		fetch('https://www.ft.com/logout', options).then(function () {
+			window.location.reload();
+		});
+	}
 
 	function fillForm () {
 		var inputs = document.querySelectorAll(FORM_SELECTOR + ' input, ' + FORM_SELECTOR + ' select');
