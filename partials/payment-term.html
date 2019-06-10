@@ -10,14 +10,15 @@
 			{{#ifEquals this.name 'trial'}}
 			<span class="ncf__payment-term__title">Try the FT</span>
 			<div class="ncf__payment-term__description">
-				4 weeks for {{trialPrice}}<br />unless you cancel during your trial you will be billed {{price}} per month after the trial period
+				4 weeks for <span class="ncf__payment-term__trial-price">{{trialPrice}}</span><br />
+				unless you cancel during your trial you will be billed <span class="ncf__payment-term__price">{{price}}</span> per month after the trial period
 			</div>
 			{{/ifEquals}}
 
 			{{#ifEquals this.name 'annual'}}
 			<span class="ncf__payment-term__title">Pay annually</span>
 			<div class="ncf__payment-term__description">
-				Single <span class="ncf__strong">{{price}}</span> payment
+				Single <span class="ncf__payment-term__price ncf__strong">{{price}}</span> payment
 				{{#unless discount}}<br />Save up to 25% when you pay annually{{/unless}}
 			</div>
 			{{/ifEquals}}
@@ -25,14 +26,14 @@
 			{{#ifEquals this.name 'quarterly'}}
 			<span class="ncf__payment-term__title">Pay quarterly</span>
 			<div class="ncf__payment-term__description">
-				{{price}} per quarter
+				<span class="ncf__payment-term__price">{{price}}</span> per quarter
 			</div>
 			{{/ifEquals}}
 
 			{{#ifEquals this.name 'monthly'}}
 			<span class="ncf__payment-term__title">Pay monthly</span>
 			<div class="ncf__payment-term__description">
-				{{price}} per month
+				<span class="ncf__payment-term__price">{{price}}</span> per month
 			</div>
 			{{/ifEquals}}
 		</label>

@@ -15,8 +15,10 @@
  * paymentTerm.updateOptions(options);
  */
 
-const LABEL_TITLE_CLASS = '.ncf__payment-term__label--title';
-const LABEL_DESCRIPTION_CLASS = '.ncf__payment-term__label--description';
+const ITEM_CLASS = '.ncf__payment-term__item';
+const VALUE_CLASS = '.ncf__payment-term__item input';
+const PRICE_CLASS = '.ncf__payment-term__price';
+const TRIAL_PRICE_CLASS = '.ncf__payment-term__trial-price';
 
 class PaymentTerm {
 	/**
@@ -64,34 +66,25 @@ class PaymentTerm {
 	 * @param {Array} options Array of objects contain terms information
 	 */
 	updateOptions (options) {
-		const selected = this.getSelected();
-		const inputToCopy = this.$paymentTerm.querySelector('input');
-		const labelToCopy = this.$paymentTerm.querySelector('label');
-		const container = inputToCopy.parentElement;
+		const terms = this.$paymentTerm.querySelectorAll(ITEM_CLASS);
+		terms.forEach(term => {
+			const value = term.querySelector(VALUE_CLASS).value;
+			const price = term.querySelector(PRICE_CLASS);
+			const trialPrice = term.querySelector(TRIAL_PRICE_CLASS);
+			const update = options.find(option => option.value === value);
 
-		// Reduce to create an array of new input and label elements
-		const newElements = options.reduce((acc, option) => {
-			const input = inputToCopy.cloneNode();
-			input.setAttribute('id', option.value);
-			input.setAttribute('value', option.value);
-			input.checked = option.value === selected;
+			if (!update) {
+				throw new Error(`Payment term update not found for "${value}"`);
+			}
 
-			const label = labelToCopy.cloneNode(true);
-			label.setAttribute('for', option.value);
-			label.querySelector(LABEL_TITLE_CLASS).innerText = option.name;
-			label.querySelector(LABEL_DESCRIPTION_CLASS).innerHTML = option.description;
-
-			return acc.concat([input, label]);
-		}, []);
-
-		// Remove existing
-		this.$paymentTerm
-			.querySelectorAll('input,label')
-			.forEach(element => element.remove());
-
-		// Add new elements
-		newElements
-			.forEach(element => container.insertBefore(element, container.lastElementChild));
+			// Update prices if they are found in the term
+			if (price) {
+				price.innerHTML = update.price;
+			}
+			if (trialPrice) {
+				trialPrice.innerHTML = update.trialPrice;
+			}
+		});
 	}
 }
 

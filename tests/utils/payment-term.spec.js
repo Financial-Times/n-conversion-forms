@@ -17,7 +17,8 @@ describe('PaymentTerm', () => {
 			remove: sandbox.stub(),
 			insertBefore: sandbox.stub(),
 			parentElement: elementStub,
-			addEventListener: sandbox.stub()
+			addEventListener: sandbox.stub(),
+			value: 'test'
 		};
 		documentStub = {
 			querySelector: sandbox.stub()
@@ -86,47 +87,30 @@ describe('PaymentTerm', () => {
 				elementStub.querySelectorAll.returns([elementStub]);
 			});
 
-			it('should throw if no options given', () => {
+			it('should throw an error if not all terms have an update', () => {
 				expect(() => {
-					paymentTerm.updateOptions();
+					paymentTerm.updateOptions([]);
 				}).to.throw();
 			});
 
-			it('should throw if options not array', () => {
-				expect(() => {
-					paymentTerm.updateOptions('test');
-				}).to.throw();
+			it('should replace the price with the correct updated price', () => {
+				const priceStub = {};
+				elementStub.querySelector.withArgs('.ncf__payment-term__price').returns(priceStub);
+				paymentTerm.updateOptions([{
+					value: 'test',
+					price: '£1.01'
+				}]);
+				expect(priceStub.innerHTML).to.equal('£1.01');
 			});
 
-			it('should clone two nodes for each option', () => {
-				const options = [{}, {}];
-				paymentTerm.updateOptions(options);
-
-				expect(elementStub.cloneNode.callCount).to.equal(options.length * 2);
-			});
-
-			it('should set the value for each input', () => {
-				const options = [{ value: 1 }, { value: 2 }];
-				paymentTerm.updateOptions(options);
-
-				expect(elementStub.setAttribute.calledWith('value', options[0].value)).to.be.true;
-				expect(elementStub.setAttribute.calledWith('value', options[1].value)).to.be.true;
-			});
-
-			it('should set the id for each input', () => {
-				const options = [{ value: 1 }, { value: 2 }];
-				paymentTerm.updateOptions(options);
-
-				expect(elementStub.setAttribute.calledWith('id', options[0].value)).to.be.true;
-				expect(elementStub.setAttribute.calledWith('id', options[1].value)).to.be.true;
-			});
-
-			it('should set the for for each label', () => {
-				const options = [{ value: 1 }, { value: 2 }];
-				paymentTerm.updateOptions(options);
-
-				expect(elementStub.setAttribute.calledWith('for', options[0].value)).to.be.true;
-				expect(elementStub.setAttribute.calledWith('for', options[1].value)).to.be.true;
+			it('should replace the trial price with the correct updated trial price', () => {
+				const trialPriceStub = {};
+				elementStub.querySelector.withArgs('.ncf__payment-term__trial-price').returns(trialPriceStub);
+				paymentTerm.updateOptions([{
+					value: 'test',
+					trialPrice: '£1.01'
+				}]);
+				expect(trialPriceStub.innerHTML).to.equal('£1.01');
 			});
 		});
 	});
