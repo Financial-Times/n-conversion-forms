@@ -1,9 +1,61 @@
-<div class="ncf__center o-message o-message--notice-bleed o-message--inform" data-o-component="o-message">
-	<div class="o-message__container">
-		<div class="o-message__content">
-			<p class="o-message__content-main">You have chosen <span class="ncf__strong">{{currentPackage}}</span></p>
-			<div class="o-message__actions">
-				<a href="{{changePackageUrl}}" class="ncf__button ncf__button--mono ncf__button--baseline" data-trackable="change">Change</a>
+<div class="ncf__package-change">
+	<div class="o-grid-container o-grid-container--bleed">
+		<div class="o-grid-row">
+			<div data-o-grid-colspan="12 S10 M8 L6 XL5 center">
+				<div class="ncf__package-change__package">
+					<p class="ncf__package-change__content">You have chosen <span class="ncf__strong">{{currentPackage}}</span></p>
+					<div class="ncf__package-change__actions">
+						<a href="{{changePackageUrl}}" class="ncf__button ncf__button--mono ncf__button--baseline" data-trackable="change">Change</a>
+					</div>
+				</div>
+				{{#if terms}}
+				<div class="ncf__package-change__terms">
+					{{#each terms}}
+					<div class="ncf__package-change__term">
+						{{#ifEquals this.name 'trial'}}
+						<span class="ncf__package-change__title">Try the FT</span>
+						<div class="ncf__package-change__description">
+							4 weeks for <span class="ncf__package-change__trial-price">{{trialPrice}}</span>
+						</div>
+						{{/ifEquals}}
+
+						{{#ifEquals this.name 'annual'}}
+						<span class="ncf__package-change__title">Pay annually</span>
+						<div class="ncf__package-change__description">
+							Single <span class="ncf__package-change__price">{{price}}</span> payment*
+						</div>
+						{{/ifEquals}}
+
+						{{#ifEquals this.name 'quarterly'}}
+						<span class="ncf__package-change__title">Pay quarterly</span>
+						<div class="ncf__package-change__description">
+							<span class="ncf__package-change__price">{{price}}</span> per quarter
+						</div>
+						{{/ifEquals}}
+
+						{{#ifEquals this.name 'monthly'}}
+						<span class="ncf__package-change__title">Pay monthly</span>
+						<div class="ncf__package-change__description">
+							<span class="ncf__package-change__price">{{price}}</span> per month
+						</div>
+						{{/ifEquals}}
+
+						{{#if this.discount}}
+						<div class="ncf__package-change__discount">Save {{this.discount}}</div>
+						{{/if}}
+					</div>
+					{{/each}}
+					{{#each terms}}
+					{{#unless this.discount}}
+					{{#ifEquals this.name 'annual'}}
+					<div class="ncf__package-change__annual-copy">
+						* Save up to 25% when you pay annually. Discount varies across member states and across our subscription packages.
+					</div>
+					{{/ifEquals}}
+					{{/unless}}
+					{{/each}}
+				</div>
+				{{/if}}
 			</div>
 		</div>
 	</div>

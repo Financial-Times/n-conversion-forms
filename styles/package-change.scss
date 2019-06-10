@@ -1,0 +1,50 @@
+@include oGridGenerate;
+
+@mixin ncfPackageChange() {
+	&__package-change {
+		@include oTypographySans($scale: 0);
+		background-color: oColorsGetPaletteColor('wheat');
+		padding: 0 20px;
+
+		@include oGridRespondTo($from: S) {
+			padding: 0;
+		}
+
+		&__package {
+			display: grid;
+			grid-template-columns: 1fr min-content;
+			align-items: center;
+		}
+
+		&__terms {
+			margin-bottom: 20px;
+		}
+
+		&__term {
+			border-top: 1px solid oColorsGetPaletteColor('black-20');
+			padding: 8px 0;
+			display: grid;
+			grid-template-columns: 2fr 2fr 1fr;
+
+			@include oGridRespondTo($until: S) {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+
+		&__title {
+			font-weight: oFontsWeight('semibold');
+
+			@include oGridRespondTo($until: S) {
+				grid-column: span 2;
+			}
+		}
+
+		&__discount {
+			justify-self: end;
+		}
+
+		&__annual-copy {
+			@include oTypographySize($scale: -1);
+		}
+	}
+}

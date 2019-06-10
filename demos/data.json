@@ -42,11 +42,25 @@
     "params": {
       "changePackageUrl": "/foo",
       "currentPackage": "Digital",
-      "class": "extra-css-classes-here space-separated",
-      "formData": [{
-        "name": "foo",
-        "value": "bar"
-      }]
+      "terms": [
+        {
+          "name": "annual",
+          "price": "£1000"
+        },
+        {
+          "name": "quarterly",
+          "price": "£100"
+        },
+        {
+          "name": "monthly",
+          "price": "£10",
+          "discount": "25%"
+        },
+        {
+          "name": "trial",
+          "trialPrice": "£1"
+        }
+      ]
     }
   },
   "payment-term": {
