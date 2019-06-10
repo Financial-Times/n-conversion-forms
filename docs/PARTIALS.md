@@ -11,6 +11,7 @@
 * [Header](#header)
 * [Loader](#loader)
 * [Message](#message)
+* [Package Change](#package-change)
 * [Payment Term](#payment-term)
 * [Phone](#phone)
 * [Submit](#submit)
@@ -170,6 +171,20 @@ i.e `{{> n-conversion-forms/partials/message isError=true message=flash.message 
   + `link`: string - The link to go to when clicking the button.
   + `isSecondary`: boolean - Whether to render this button using secondary styling from [o-buttons](https://registry.origami.ft.com/components/o-buttons).
   + `text`: string - The text the user will see on the button.
+
+## Package Change
+
+Displays a link for users to click to change their currently selected package. If payment terms are supplied these will also be displayed.
+
+### Options
+
++ `currentPackage`: string - Package name
++ `changePackageUrl`: string - Link to a place to change the package
++ `terms`: array - An array of objects that can have the following properties
+  + `name`: string - Payment term name i.e. "annual"
+  + `price`: string - Price of the payment term
+  + `trialPrice`: string - Trial price of the term if applicable
+  + `discount`: string - Displays a sale label on the term
 
 ## Payment term
 
