@@ -4,9 +4,9 @@
 <div class="ncf__debug-panel">
 	<span class="ncf__debug-environment">
 		{{#if isTest}}
-		<span class="ncf__debug-label ncf__debug-label--test"><strong>TEST</strong> relax you are using the test API</span>
+		<a class="ncf__button ncf__button--inverse ncf__debug-button--test" onclick="setTestEnvironment('off');"><strong>TEST</strong> relax you are using the test API</a>
 		{{else}}
-		<span class="ncf__debug-label ncf__debug-label--production"><strong>PRODUCTION</strong> careful you are using the production API</span>
+		<a class="ncf__button ncf__button--inverse ncf__debug-button--production" onclick="setTestEnvironment('on');"><strong>PRODUCTION</strong> careful you are using the production API</a>
 		{{/if}}
 	</span>
 	{{#if showHelpers}}
@@ -81,6 +81,16 @@
 		document.execCommand('copy');
 		document.body.removeChild(textarea);
 	}
+
+	function setTestEnvironment (state) {
+		var flags = document.cookie.match('(^|[^;]+)\\s*next-flags\\s*=\\s*([^;]+)').pop();
+		var flag = 'conversionSandbox%3A';
+		flags = flags.replace(flag + 'on', '');
+		flags = flags.replace(flag + 'off', '');
+		document.cookie = 'next-flags=' + flags + '%2C' + flag + state + '; path=/;';
+		window.location.reload();
+	}
+
 </script>
 <style>
 	.ncf__debug-panel {
@@ -95,21 +105,10 @@
 		z-index: 1000;
 		opacity: 0.8;
 	}
-	.ncf__debug-label {
-		font-size: 14px;
-		line-height: 1em;
-		font-weight: 500;
-		text-align: center;
-		display: inline-block;
-		box-sizing: border-box;
-		vertical-align: middle;
-		margin: 0 5px 0 0;
-		padding: 12px;
-	}
-	.ncf__debug-label--test {
+	.ncf__debug-button--test {
 		background-color: #008040;
 	}
-	.ncf__debug-label--production {
+	.ncf__debug-button--production {
 		background-color: #990000;
 	}
 </style>

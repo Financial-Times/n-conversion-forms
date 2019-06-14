@@ -29,13 +29,13 @@ describe('debug template', () => {
 	it('should show the appropriate notice when using TEST apis', () => {
 		const $ = context.template({ isTest: true, showHelpers: true });
 
-		expect($('.ncf__debug-label').text()).to.contain('TEST');
+		expect($('.ncf__debug-environment').text()).to.contain('TEST');
 	});
 
 	it('should show the appropriate notice when using PROD apis', () => {
 		const $ = context.template({ isTest: false, showHelpers: true });
 
-		expect($('.ncf__debug-label').text()).to.contain('PROD');
+		expect($('.ncf__debug-environment').text()).to.contain('PROD');
 	});
 
 	it('should show helpers if showHelpers=true', () => {
