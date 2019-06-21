@@ -14,6 +14,8 @@
 	<input type="tel" id="primaryTelephone" name="primaryTelephone" value="{{value}}" placeholder="Enter your phone number"
 				autocomplete="tel"
 				class="o-forms__text js-field__input js-item__value"
+				data-min="5" {{!-- Used by o-forms validation --}}
+				data-max="15" {{!-- Used by o-forms validation --}}
 				minLength="5"
 				maxLength="15"
 				data-trackable="field-phone"
