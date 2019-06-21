@@ -40,6 +40,18 @@ describe('phone template', () => {
 		expect($('label').text().trim()).to.equal(label);
 	});
 
+	it('should have a data-min attribute for o-forms validation', () => {
+		const $ = context.template({});
+
+		expect($('input').attr('data-min')).to.equal('5');
+	});
+
+	it('should have a data-max attribute for o-forms validation', () => {
+		const $ = context.template({});
+
+		expect($('input').attr('data-max')).to.equal('15');
+	});
+
 	shouldError(context);
 
 	shouldBeDisableable(context, 'input');
