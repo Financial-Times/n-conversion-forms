@@ -89,7 +89,7 @@
 		var flag = 'conversionSandbox%3A';
 		flags = flags.replace(flag + 'on', '');
 		flags = flags.replace(flag + 'off', '');
-		document.cookie = 'next-flags=' + flags + '%2C' + flag + state + '; path=/;';
+		document.cookie = 'next-flags=' + flags + '%2C' + flag + state + '; path=/; domain=.ft.com;';
 		window.location.reload();
 	}
 
