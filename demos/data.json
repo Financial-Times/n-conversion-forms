@@ -171,6 +171,13 @@
       "duration": "30 day"
     }
   },
+  "licence-header": {
+    "params": {
+      "displayName": "Company",
+      "isTrial": true,
+      "welcomeText": "The quick brown fox jumped over the lazy hare"
+    }
+  },
   "continue-reading": {
     "params": {
       "quote": "The quick brown fox jumped over the lazy hare",

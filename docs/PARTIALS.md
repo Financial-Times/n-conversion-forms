@@ -8,7 +8,8 @@
 * [Fieldset](#fieldset)
 * [Firstname](#firstname)
 * [Lastname](#lastname)
-* [Header](#header)
+* [Licence Confirmation](#licence-confirmation)
+* [Licence Header](#licence-header)
 * [Loader](#loader)
 * [Message](#message)
 * [Package Change](#package-change)
@@ -129,6 +130,20 @@ Confirmation page for subscribing to a company licence.
 
 ```handlebars
 {{> n-conversion-forms/partials/licence-confirmation isTrial=true }}
+```
+
+## licence-header
+
+Header copy for licence pages.
+
+### Options
+
++ `isTrial`: boolean - Is the licence a trial or not
++ `displayName`: string - Name of the company licence is for
++ `welcomeText`: string - Form welcome text
+
+```handlebars
+{{> n-conversion-forms/partials/licence-header isTrial=false displayName="IBM" welcomeText="Join our FT.com licence" }}
 ```
 
 ## Loader
