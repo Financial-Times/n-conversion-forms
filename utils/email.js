@@ -56,7 +56,7 @@ class Email {
 	 */
 	registerEmailExistsCheck (url, onFound, onNotFound) {
 		const handler = () => {
-			this.handleEmailExistsChange(url, onFound, onNotFound);
+			this.handleEmailValidatorChange(url, onFound, onNotFound);
 		};
 
 		this.$email.addEventListener('change', handler);
@@ -65,13 +65,31 @@ class Email {
 	}
 
 	/**
-	 * Calls the membership service to check the email
+	 * Register the email domain allowed call.
+	 * **NB** It's recommended you have a hidden #csrfToken input element that you validate the request with in your backend service.
+	 *
+	 * @param {String} url URL to the email domain allowed endpoint
+	 * @param {Function} onAllowed Callback function to run if the email is allowed
+	 * @param {Function} onNotAllowed Callback function to run if the email is not allowed
+	 */
+	emailDomainAllowedCheck (url, onAllowed, onNotAllowed) {
+		const handler = () => {
+			this.handleEmailValidatorChange(url, onAllowed, onNotAllowed);
+		};
+
+		this.$email.addEventListener('change', handler);
+
+		return handler;
+	}
+
+	/**
+	 * Calls the membership service to check the email against an endpoint
 	 * @param {String} url URL of email checking service
-	 * @param {Function} onFound Function to call when email found
-	 * @param {Function} onNotFound Function to call when not found
+	 * @param {Function} success Function to call when returns true
+	 * @param {Function} failure Function to call when returns false
 	 * @return {Promise}
 	 */
-	handleEmailExistsChange (url, onFound, onNotFound) {
+	handleEmailValidatorChange (url, success, failure) {
 		if (this.$email.value) {
 			return fetch(url, {
 				method: 'POST',
@@ -87,14 +105,14 @@ class Email {
 				.then(fetchres.json)
 				.then(response => {
 					if (response === true) {
-						onFound();
+						success();
 					} else {
-						onNotFound();
+						failure();
 					}
 				})
-				.catch(onNotFound);
+				.catch(failure);
 		} else {
-			onNotFound();
+			failure();
 		}
 	};
 
