@@ -21,29 +21,36 @@
 		}
 
 		&__term {
-			border-top: 1px solid oColorsGetPaletteColor('black-20');
-			padding: 8px 0;
+			padding: 4px 0;
 			display: grid;
-			grid-template-columns: 2fr 2fr 1fr;
-
-			@include oGridRespondTo($until: S) {
-				grid-template-columns: 1fr 1fr;
+			grid-template-columns: max-content 1fr;
+			&--discounted {
+				grid-template-columns: max-content max-content 1fr;
 			}
 		}
 
 		&__title {
 			font-weight: oFontsWeight('semibold');
-
-			@include oGridRespondTo($until: S) {
-				grid-column: span 2;
-			}
+			padding-right: 10px;
 		}
 
-		&__discount {
+		&__description {
 			justify-self: end;
 		}
 
+		&__discount {
+			color: oColorsGetPaletteColor('claret-70');
+		}
+
+		&__weekly-price {
+			justify-self: end;
+			grid-column: span 3;
+			@include oTypographySize($scale: -1);
+			color: oColorsGetPaletteColor('black-60');
+		}
+
 		&__annual-copy {
+			padding-top: 8px;
 			@include oTypographySize($scale: -1);
 		}
 	}

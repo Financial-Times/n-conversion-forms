@@ -19,3 +19,14 @@ body {
 		z-index: 1001;
 	}
 }
+
+.o-techdocs-card {
+	resize: both;
+	overflow: auto;
+	max-width: none;
+	height: 300px;
+}
+
+.o-techdocs-card__content {
+	height: 100%;
+}

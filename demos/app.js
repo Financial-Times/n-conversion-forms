@@ -77,14 +77,24 @@ function fetchPartials (dir) {
 function compilePartial (partial) {
 	let parameters = '';
 	let examplePartials = '';
+	let exampleVars = '';
+
 	const partialData = data[partial] || {};
 	const handlebars = Handlebars();
 
 	if (partialData) {
 		if (partialData.params) {
 			parameters = Object.keys(partialData.params).map(key => {
+				let value = partialData.params[key];
+
+				if (typeof value !== 'string') {
+					exampleVars = `let ${key} = ${JSON.stringify(value, null, 2)};\n`;
+					value = `${key}`;
+				} else {
+					value = `"${value}"`;
+				}
 				// Use the key of the param as this will available on the template scope
-				return `${key}=${key}`;
+				return `${key}=${value}`;
 			}).join(' ');
 		}
 		if (partialData.partials) {
@@ -128,7 +138,7 @@ function compilePartial (partial) {
 			${rendered}
 		</div>
 
-		<textarea id="example-code" style="width:100%" readonly>${template}</textarea>
+		<textarea id="example-code" style="width:100%" readonly>${exampleVars}${template}</textarea>
 
 		<script type="text/javascript" src="/public/main.js"></script>
 	</body>

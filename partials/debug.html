@@ -40,8 +40,10 @@
 		lastName: 'Test',
 		jobTitle: 'CEO'
 		primaryTelephone: '0987654321',
+		postCode: 'SE1 9HL',
 		country: 'GBR',
 		billingCountry: 'GBR',
+		postCode: 'EC4M 9JA',
 		industry: 'DEF',
 		responsibility: 'ADL',
 		position: 'AS'
@@ -60,8 +62,10 @@
 	function fillForm () {
 		var inputs = document.querySelectorAll(FORM_SELECTOR + ' input, ' + FORM_SELECTOR + ' select');
 		inputs.forEach(function (input) {
-			var value = debugData[input.name];
-			input.value = value;
+			if (!/hidden/i.test(input.type)) {
+				var value = debugData[input.name];
+				input.value = value;
+			}
 		});
 		var checkboxes = document.querySelectorAll(FORM_SELECTOR + ' input[type="checkbox"]');
 		checkboxes.forEach(function (checkbox) {
@@ -88,7 +92,7 @@
 		var flag = 'conversionSandbox%3A';
 		flags = flags.replace(flag + 'on', '');
 		flags = flags.replace(flag + 'off', '');
-		document.cookie = 'next-flags=' + flags + '%2C' + flag + state + '; path=/;';
+		document.cookie = 'next-flags=' + flags + '%2C' + flag + state + '; path=/; domain=.ft.com;';
 		window.location.reload();
 	}
 

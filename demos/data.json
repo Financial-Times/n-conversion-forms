@@ -1,8 +1,105 @@
 {
+  "city-town": {
+    "params": {
+      "value": "Bath"
+    }
+  },
+  "confirmation": {
+    "params": {
+      "isPrintOnly": false,
+      "offer": "Premium Digital & Print",
+      "email": "test@example.com",
+      "details": [
+        {
+          "title": "Trial charge",
+          "data": "£XXXX"
+        },
+        {
+          "title": "Trial end date",
+          "data": "June 11th, 2019",
+          "description": "You'll be billed per month from this date"
+        },
+        {
+          "title": "Annual payment",
+          "data": "£XXXX"
+        },
+        {
+          "title": "Renewal date",
+          "data": "June 11th, 2019"
+        },
+        {
+          "title": "Payment method",
+          "data": "Credit Card"
+        }
+      ]
+    }
+  },
+  "continue-reading": {
+    "params": {
+      "quote": "The quick brown fox jumped over the lazy hare",
+      "link": "https://google.com"
+    }
+  },
+  "county": {
+    "params": {
+      "value": "Somerset"
+    }
+  },
   "country": {
     "params": {
       "filterList": ["GBR", "JPN", "USA", "FRA"],
       "value": "USA"
+    }
+  },
+  "debug": {
+    "params": {
+      "isTest": true,
+      "showHelpers": true,
+      "links": {
+        "Google": "https://www.google.com"
+      }
+    }
+  },
+  "decision-maker": {
+    "params": {
+      "value": "yes"
+    }
+  },
+  "delivery-address": {
+    "params": {
+      "values": ["10 Elm Street", "Apartment 1"]
+    }
+  },
+  "delivery-instructions": {
+    "params": {
+      "maxlength": "200",
+      "rows": "5",
+      "value": "Foo bar baz"
+    }
+  },
+  "delivery-option": {
+    "params": {
+      "isSingle": true,
+      "options": [
+        {
+          "value": "PV"
+        },
+        {
+          "value": "HD",
+          "isSelected": true
+        },
+        {
+          "value": "EV"
+        }
+      ]
+    }
+  },
+  "delivery-start-date": {
+    "params": {
+      "date": "16th February 2019",
+      "min": "2019-02-16",
+      "max": "2019-04-13",
+      "value": "2019-02-16"
     }
   },
   "fieldset": {
@@ -16,6 +113,19 @@
   "form": {
     "partials": {
       "fields": "Inline content here."
+    }
+  },
+  "licence-confirmation": {
+    "params": {
+      "isTrial": true,
+      "duration": "30 day"
+    }
+  },
+  "licence-header": {
+    "params": {
+      "displayName": "Company",
+      "isTrial": true,
+      "welcomeText": "The quick brown fox jumped over the lazy hare"
     }
   },
   "loader": {
@@ -45,7 +155,8 @@
       "terms": [
         {
           "name": "annual",
-          "price": "£1000"
+          "price": "£1000",
+          "weeklyPrice": "£4.5"
         },
         {
           "name": "quarterly",
@@ -67,19 +178,23 @@
     "params": {
       "options": [
         {
-          "name": "Test",
+          "name": "trial",
           "value": "Test",
           "description": "The quick brown fox jumped over the lazy hare."
         }, {
-          "name": "Test 1",
+          "name": "annual",
           "value": "Test 1",
           "description": "The <strong>quick</strong> brown fox<br />jumped over the lazy <a href=\"#\">hare</a>.",
           "selected": true
         }, {
-          "name": "Test 2",
+          "name": "quarterly",
           "value": "Test 2",
           "description": "The <strong>quick</strong> brown fox<br />jumped over the lazy <a href=\"#\">hare</a>.",
           "discount": "25%"
+        }, {
+          "name": "monthly",
+          "value": "Test 3",
+          "description": "The <strong>quick</strong> brown fox<br />jumped over the lazy <a href=\"#\">hare</a>."
         }
       ]
     }
@@ -119,61 +234,6 @@
         "name": "Payment",
         "url": "#payment"
       }]
-    }
-  },
-  "confirmation": {
-    "params": {
-      "offer": "Premium Digital & Print",
-      "email": "test@example.com",
-      "details": [
-        {
-          "title": "Trial charge",
-          "data": "£XXXX"
-        },
-        {
-          "title": "Trial end date",
-          "data": "June 11th, 2019",
-          "description": "You'll be billed per month from this date"
-        },
-        {
-          "title": "Annual payment",
-          "data": "£XXXX"
-        },
-        {
-          "title": "Renewal date",
-          "data": "June 11th, 2019"
-        },
-        {
-          "title": "Payment method",
-          "data": "Credit Card"
-        }
-      ]
-    }
-  },
-  "debug": {
-    "params": {
-      "isTest": true,
-      "showHelpers": true,
-      "links": {
-        "Google": "https://www.google.com"
-      }
-    }
-  },
-  "decision-maker": {
-    "params": {
-      "value": "yes"
-    }
-  },
-  "licence-confirmation": {
-    "params": {
-      "isTrial": true,
-      "duration": "30 day"
-    }
-  },
-  "continue-reading": {
-    "params": {
-      "quote": "The quick brown fox jumped over the lazy hare",
-      "link": "https://google.com"
     }
   }
 }

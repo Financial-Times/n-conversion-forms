@@ -57,7 +57,7 @@ describe('package-change template', () => {
 			const $ = context.template({ terms: [{
 				name
 			}]});
-			expect($(TITLE_SELECTOR).text()).to.contain('annually');
+			expect($(TITLE_SELECTOR).text()).to.contain('Annually');
 		});
 
 		it('should show the price', () => {
@@ -95,7 +95,7 @@ describe('package-change template', () => {
 			const $ = context.template({ terms: [{
 				name
 			}]});
-			expect($(TITLE_SELECTOR).text()).to.contain('quarterly');
+			expect($(TITLE_SELECTOR).text()).to.contain('Quarterly');
 		});
 
 		it('should show the price', () => {
@@ -115,7 +115,7 @@ describe('package-change template', () => {
 			const $ = context.template({ terms: [{
 				name
 			}]});
-			expect($(TITLE_SELECTOR).text()).to.contain('monthly');
+			expect($(TITLE_SELECTOR).text()).to.contain('Monthly');
 		});
 
 		it('should show the price', () => {
@@ -130,15 +130,15 @@ describe('package-change template', () => {
 	});
 
 	it('should not have discount text by default', () => {
-		const option1 = { value: 'option1' };
-		const option2 = { value: 'option2', selected: true };
+		const option1 = { name: 'quarterly', price: '£10' };
+		const option2 = { name: 'monthly', price: '£20' };
 		const $ = context.template({ terms: [option1, option2]});
 		expect($(DISCOUNT_SELECTOR).length).to.equal(0);
 	});
 
 	it('should have discount text if a discount is passed', () => {
-		const option1 = { value: 'option1', discount: '25%' };
-		const option2 = { value: 'option2', selected: true };
+		const option1 = { name: 'quarterly', discount: '25%', price: '£10' };
+		const option2 = { name: 'monthly', price: '£20' };
 		const $ = context.template({ terms: [option1, option2]});
 		expect($(DISCOUNT_SELECTOR).length).to.equal(1);
 	});

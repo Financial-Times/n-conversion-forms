@@ -67,6 +67,7 @@ import MyModule from 'n-conversion-forms/utils/my-module';
 * [Password](#password)
 * [Payment Term](#payment-term)
 * [Payment Type](#payment-type)
+* [Salesforce](#salesforce)
 * [Submit](#submit)
 * [Tracking](#tracking)
 * [Validation](#validation)
@@ -231,6 +232,19 @@ PaymentType.DIRECTDEBIT
 PaymentType.PAYPAL
 PaymentType.APPLEPAY
 ```
+
+### Salesforce
+
+Utility for converting salesforce country names to ISO country codes.
+
+```js
+// isoCode will equal GBR
+const isoCode = salesforceNameToIsoCode('United Kingdom');
+
+// salesfoceName will equal United Kingdom
+const salesforceName = isoCodeToSalesforceName('GBR');
+```
+
 ### Submit
 
 ```js

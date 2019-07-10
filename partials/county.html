@@ -1,0 +1,15 @@
+<div id="countyField"
+		class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}"
+		data-ui-item="form-field"
+		data-ui-item-name="county"
+		data-validate="required">
+
+	<label for="county" class="o-forms__label">County <small>(optional)</small></label>
+	<input type="text" id="county" name="county" value="{{value}}"
+				class="o-forms__text js-field__input js-item__value"
+				data-trackable="field-county"
+				autocomplete="address-level3"
+				placeholder="e.g. Somerset"
+				{{#if isDisabled}}disabled{{/if}}>
+
+</div>

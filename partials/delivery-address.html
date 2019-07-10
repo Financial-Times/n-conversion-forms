@@ -1,0 +1,35 @@
+<div id="deliveryAddressFields"
+		class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}"
+		data-ui-item="form-field"
+		data-ui-item-name="deliveryAddress"
+		data-validate="required">
+
+	<p>
+		<label for="addressLine1" class="o-forms__label">Address line 1</label>
+		<input type="text" id="addressLine1" name="addressLine1" value="{{values.[0]}}"
+					class="o-forms__text js-field__input js-item__value"
+					data-trackable="field-addressLine1"
+					autocomplete="address-line1"
+					placeholder="e.g. 10 Elm Street"
+					aria-required="true" required
+					{{#if isDisabled}}disabled{{/if}}>
+	</p>
+	<p>
+		<label for="addressLine2" class="o-forms__label">Address line 2 <small>(optional)</small></label>
+		<input type="text" id="addressLine2" name="addressLine2" value="{{values.[1]}}"
+					class="o-forms__text js-field__input js-item__value"
+					data-trackable="field-addressLine2"
+					autocomplete="address-line2"
+					placeholder="e.g. Apartment 1"
+					{{#if isDisabled}}disabled{{/if}}>
+	</p>
+	<p>
+		<label for="addressLine3" class="o-forms__label">Address line 3 <small>(optional)</small></label>
+		<input type="text" id="addressLine3" name="addressLine3" value="{{values.[2]}}"
+					class="o-forms__text js-field__input js-item__value"
+					data-trackable="field-addressLine3"
+					autocomplete="address-line3"
+					placeholder="Enter address line 3"
+					{{#if isDisabled}}disabled{{/if}}>
+	</p>
+</div>

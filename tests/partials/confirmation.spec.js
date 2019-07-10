@@ -76,4 +76,24 @@ describe('confirmation template', () => {
 		expect($('dl dt').length).to.equal(0);
 		expect(Array.from($('a')).filter(elem => elem.attribs['data-trackable'] && elem.attribs['data-trackable'].includes('yourAccount')).length).to.equal(1);
 	});
+
+	it('should display correct button label for print only offer', () => {
+		const isPrintOnly = true;
+		const $ = context.template({
+			isPrintOnly
+		});
+
+		const buttonText = 'Explore our E-Paper';
+		expect($.text()).to.contain(buttonText);
+	});
+
+	it('should display correct button label for non print only offer', () => {
+		const isPrintOnly = false;
+		const $ = context.template({
+			isPrintOnly
+		});
+
+		const buttonText = 'Start exploring';
+		expect($.text()).to.contain(buttonText);
+	});
 });

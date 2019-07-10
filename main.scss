@@ -92,6 +92,11 @@
 		&--min-content {
 			grid-template-columns: 1fr min-content min-content;
 		}
+
+		label small {
+			color: oColorsMix(black, white, 50);
+			font-weight: normal;
+		}
 	}
 
 	&__terms {
@@ -253,6 +258,17 @@
 
 		&-title {
 			font-weight: oFontsWeight('semibold');
+		}
+	}
+
+	@include bigRadioButton($className: '.ncf__delivery-option');
+	&__delivery-option--single {
+		.ncf__delivery-option__label {
+			// We need to hide the radio button if this the sole delivery option
+			&::after,
+			&::before {
+				display: none;
+			}
 		}
 	}
 

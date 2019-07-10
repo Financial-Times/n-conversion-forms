@@ -1,0 +1,29 @@
+<div id="deliveryStartDateField"
+		class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}"
+		data-ui-item="form-field"
+		data-ui-item-name="deliveryStartDate"
+		data-validate="required">
+
+	<label for="deliveryStartDate" class="o-forms__label">
+		Delivery start date<br />
+		<small>Earliest available delivery date: {{date}}</small>
+	</label>
+
+	<input type="date" id="deliveryStartDate" name="deliveryStartDate" value="{{value}}"
+				{{#if min}}min={{min}}{{/if}}
+				{{#if max}}max={{max}}{{/if}}
+				class="o-forms__text js-field__input js-item__value"
+				data-trackable="field-deliveryStartDate"
+				aria-required="true" required
+				{{#if isDisabled}}disabled{{/if}}>
+
+	<div class="o-forms__errortext">Please select a valid start date</div>
+
+	<p>Your subscription will start from: <strong>{{date}}</strong></p>
+
+	<p>
+		NB. This will  be the closest date we can supply your newspaper based on your selected
+		date e.g. if you select a Sunday then we can start your supply on the Monday.
+	</p>
+
+</div>

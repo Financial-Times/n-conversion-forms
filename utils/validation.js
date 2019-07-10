@@ -135,9 +135,19 @@ class Validation {
 	 * @returns {Boolean} whether or not the custom validation passed.
 	 */
 	checkCustomValidation () {
-		this.customValidation.forEach((validator) => {
-			validator();
-		});
+		// Debounce this to prevent custom validation running again straight away
+		// through the checkFormValidity function below.
+		if (!this.debounceCustomValidation) {
+			this.debounceCustomValidation = true;
+
+			this.customValidation.forEach((validator) => {
+				validator();
+			});
+
+			setTimeout(() => {
+				delete this.debounceCustomValidation;
+			}, 100);
+		}
 
 		return !document.querySelector('.ncf__custom-validation-error');
 	}

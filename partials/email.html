@@ -16,6 +16,7 @@
 	</small>
 
 	<input type="email" id="email" name="email" value="{{value}}" placeholder="Enter your email address"
+				autocomplete="email"
 				class="no-mouseflow o-forms__text js-field__input js-item__value{{#if readonly}} o-forms__field-disabled{{/if}}"
 				data-trackable="field-email"
 				aria-describedby="email-description"
@@ -33,6 +34,7 @@
 	</label>
 
 	<input type="email" id="emailConfirm" name="emailConfirm" placeholder="Confirm your email address"
+				autocomplete="email"
 				class="no-mouseflow o-forms__text js-field__input js-item__value{{#if readonly}} o-forms__field-disabled{{/if}}"
 				data-trackable="field-emailConfrm"
 				aria-required="true" required

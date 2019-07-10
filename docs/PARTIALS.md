@@ -3,12 +3,20 @@
 ## Content
 
 * [App Banner](#app-banner)
+* [City/town](#city-town)
+* [Confirmation](#confirmation)
 * [Continue Reading](#continue-reading)
+* [County](#county)
 * [Decision Maker](#decision-maker)
+* [Delivery Address](#delivery-address)
+* [Delivery Information](#delivery-information)
+* [Delivery Option](#delivery-option)
+* [Delivery Start Date](#delivery-start-date)
 * [Fieldset](#fieldset)
 * [Firstname](#firstname)
 * [Lastname](#lastname)
-* [Header](#header)
+* [Licence Confirmation](#licence-confirmation)
+* [Licence Header](#licence-header)
 * [Loader](#loader)
 * [Message](#message)
 * [Package Change](#package-change)
@@ -23,6 +31,38 @@ Banner that appears on confirmation pages to inform the user of our App
 ```handlebars
 {{> n-conversion-forms/partials/app-banner }}
 ```
+## City/town
+
+Renders the city/town field.
+
+```handlebars
+{{> n-conversion-forms/partials/city-town value="Bath" hasError=true isDisabled=true }}
+```
+
+### Options
+
++ `value`: string - The name of the city or town.
++ `isDisabled`: boolean - Whether the field is disabled or not.
++ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
+
+## Confirmation
+
+Renders the subscription confirmation page.
+Displayed cta and link are different for print only offers.
+
+```handlebars
+{{> n-conversion-forms/partials/confirmation isPrintOnly=true offer="Premium Digital & Print" email="test@example.com" details=details }}
+```
+
+### Options
+
++ `isPrintOnly`: boolean - is this offer a print only offer or not.
++ `offer`: string - offer display name.
++ `email`: email - user email.
++ `details`: array - objects with the following properties.
+  + `title`: string
+  + `data`: string
+  + `description`: string
 
 ## Continue Reading
 
@@ -37,6 +77,20 @@ A message to inform the user they can read an article once they've subscribed.
 + `quote`: string - Title displayed between the quote marks.
 + `link`: string - Location of the continue reading button.
 
+## County
+
+Renders the county field.
+
+```handlebars
+{{> n-conversion-forms/partials/county value="Somerset" hasError=true isDisabled=true }}
+```
+
+### Options
+
++ `value`: string - The name of the county.
++ `isDisabled`: boolean - Whether the field is disabled or not.
++ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
+
 ## Decision Maker
 
 Renders an inline yes / no radio group for users to enter if they are a decision maker in their company.
@@ -48,6 +102,68 @@ Renders an inline yes / no radio group for users to enter if they are a decision
 ### Options
 + `value`: string - Pass 'yes' or 'no' to check an option, default is unchecked.
 + `hasError`: boolean - if true it adds `o-forms--error` class to display error.
+
+## Delivery Address
+
+Renders the 3 delivery address fields (line 1/2/3).
+
+```handlebars
+{{> n-conversion-forms/partials/delivery-address values="['10 Elm Street', 'Apartment 1']" hasError=true isDisabled=true }}
+```
+
+### Options
+
++ `values`: Array - An array containing the 3 lines of the address.
++ `isDisabled`: boolean - Whether the field is disabled or not.
++ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
+
+## Delivery Instructions
+
+Renders the delivery instructions text area.
+
+```handlebars
+{{> n-conversion-forms/partials/delivery-instructions value="Leave on the front porch." hasError=true isDisabled=true }}
+```
+
+### Options
+
++ `maxlength`: string - The maximum number of characters to allow in this field.
++ `rows`: string - The number of rows to render this textarea with.
++ `value`: string - The delivery instructions.
++ `isDisabled`: boolean - Whether the field is disabled or not.
++ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
+
+## Delivery Option
+
+Display delivery options with radio buttons for users to choose between.
+
+```handlebars
+{{> n-conversion-forms/partials/delivery-option options=options }}
+```
+
+### Options
+
++ `isSingle`: boolean - Whether there is only one single option being presented.
++ `options`: array - An array of objects that can have the following properties.
+  + `value`: string - Value to send when selected.
+  + `isSelected`: boolean - Set to true for the term to be selected.
+
+## Delivery Start Date
+
+Renders a date field with a given start date (and accompanying copy).
+
+```handlebars
+{{> n-conversion-forms/partials/delivery-start-date value="2019-02-16" date="Saturday 16th February 2019" hasError=true isDisabled=true }}
+```
+
+### Options
+
++ `value`: string - The date in `YYYY-MM-DD` format.
++ `min`: string - The earliest start date in `YYYY-MM-DD` format.
++ `max`: string - The latest start date in `YYYY-MM-DD` format.
++ `date`: string - The date in `dddd Do MMMM YYYY` format.
++ `isDisabled`: boolean - Whether the field is disabled or not.
++ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
 
 ## Fieldset
 
@@ -129,6 +245,20 @@ Confirmation page for subscribing to a company licence.
 
 ```handlebars
 {{> n-conversion-forms/partials/licence-confirmation isTrial=true }}
+```
+
+## licence-header
+
+Header copy for licence pages.
+
+### Options
+
++ `isTrial`: boolean - Is the licence a trial or not
++ `displayName`: string - Name of the company licence is for
++ `welcomeText`: string - Form welcome text
+
+```handlebars
+{{> n-conversion-forms/partials/licence-header isTrial=false displayName="IBM" welcomeText="Join our FT.com licence" }}
 ```
 
 ## Loader

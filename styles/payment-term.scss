@@ -1,57 +1,8 @@
+@import './shared';
+
 @mixin ncfPaymentTerm() {
+	@include bigRadioButton($className: '.ncf__payment-term');
 	&__payment-term {
-
-		.o-forms__radio + .o-forms__label {
-			padding: 14px 20px;
-			min-height: 110px;
-			border: 2px solid oColorsGetPaletteColor('teal');
-			text-align: left;
-			margin: 8px 0;
-
-			// radio button styling
-			&::before {
-				border: 2px solid oColorsGetPaletteColor('teal');
-				top: 43px;
-				right: 14px;
-			}
-
-			&::after {
-				top: 43px;
-				right: 14px;
-			}
-		}
-
-		.o-forms__radio:checked + .o-forms__label {
-			background-color: oColorsGetPaletteColor('teal');
-			color: oColorsGetPaletteColor('white');
-
-			// radio button styling
-			&::before {
-				border: 2px solid oColorsGetPaletteColor('white');
-			}
-
-			&::after {
-				background-color: oColorsGetPaletteColor('white');
-			}
-		}
-
-		&__item {
-			margin-bottom: 10px;
-
-			&--discount {
-				margin-top: 26px;
-			}
-		}
-
-		&__title {
-			font-weight: oFontsWeight('semibold');
-			@include oTypographySans($scale: 2);
-		}
-
-		&__description {
-			padding-top: 14px;
-		}
-
 		&__discount {
 			background-color: oColorsGetPaletteColor('black');
 			color: oColorsGetPaletteColor('white');
