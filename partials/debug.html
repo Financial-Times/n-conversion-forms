@@ -47,12 +47,7 @@
 		industry: 'DEF',
 		responsibility: 'ADL',
 		position: 'AS',
-		'lbi-enhancement-byEmail': 'yes',
-		'lbi-enhancement-byPhoneCall': 'yes',
-		'lbi-enhancement-byPost': 'yes',
-		'lbi-marketing-byEmail': 'yes',
-		'lbi-marketing-byPhoneCall': 'yes',
-		'lbi-marketing-byPost': 'yes'
+		decisionMaker: 'no',
 	};
 
 	function logout () {
@@ -76,7 +71,6 @@
 		var checkboxes = document.querySelectorAll(FORM_SELECTOR + ' input[type="checkbox"]');
 		checkboxes.forEach(function (checkbox) {
 			checkbox.checked = true;
-			checkbox.value = true
 		});
 	}
 
