@@ -8,7 +8,7 @@
 			data-trackable="field-billing-country"
 			{{#if isDisabled}}disabled{{/if}}>
 
-		<option value>Please select a country</option>
+		<option value disabled>Please select a country</option>
 		{{#each countries as |country|}}
 			{{#if this.label}}
 			<optgroup label="{{country.label}}">
