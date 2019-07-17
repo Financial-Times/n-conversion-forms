@@ -11,34 +11,28 @@ const {
 
 let context = {};
 
-describe('postcode template', () => {
+describe('billing postcode template', () => {
 	before(async () => {
-		context.template = await fetchPartial('postcode.html');
+		context.template = await fetchPartial('billing-postcode.html');
+	});
+
+	it('should be billing', () => {
+		const $ = context.template({});
+		expect($('label').text()).to.contain('Billing');
 	});
 
 	it('should be post code by default', () => {
 		const $ = context.template({});
-		expect($('label').text()).to.contain('Post Code');
+		expect($.text()).to.contain('Post code');
 	});
 
 	it('should render zip code if asked', () => {
 		const $ = context.template({
 			isZipCode: true
 		});
-		expect($('label').text()).to.contain('Zip Code');
+		expect($.text()).to.contain('Zip code');
 	});
 
-	it('should be not be billing by default', () => {
-		const $ = context.template({});
-		expect($('input').attr('name')).to.contain('postCode');
-	});
-
-	it('should be billing if asked', () => {
-		const $ = context.template({
-			isBillingPostcode: true
-		});
-		expect($('label').text()).to.contain('Billing');
-	});
 
 	shouldPopulateValue(context);
 
@@ -48,5 +42,5 @@ describe('postcode template', () => {
 
 	shouldBeDisableable(context, 'input');
 
-	shouldBeHiddable(context, '#postCodeField');
+	shouldBeHiddable(context, '#billingPostcodeField');
 });

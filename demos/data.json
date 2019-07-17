@@ -1,7 +1,14 @@
 {
-  "city-town": {
+  "billing-country": {
     "params": {
-      "value": "Bath"
+      "filterList": ["GBR", "JPN", "USA", "FRA"],
+      "value": "USA"
+    }
+  },
+  "billing-postcode": {
+    "params": {
+      "value": "EC4M9BT",
+      "isZipCode": true
     }
   },
   "confirmation": {
@@ -40,11 +47,6 @@
       "link": "https://google.com"
     }
   },
-  "county": {
-    "params": {
-      "value": "Somerset"
-    }
-  },
   "country": {
     "params": {
       "filterList": ["GBR", "JPN", "USA", "FRA"],
@@ -67,7 +69,18 @@
   },
   "delivery-address": {
     "params": {
-      "values": ["10 Elm Street", "Apartment 1"]
+      "line1": "20 Elm Street",
+      "line2": "Apartment 2"
+    }
+  },
+  "delivery-city-town": {
+    "params": {
+      "value": "Bath"
+    }
+  },
+  "delivery-county": {
+    "params": {
+      "value": "Somerset"
     }
   },
   "delivery-instructions": {
@@ -94,12 +107,23 @@
       ]
     }
   },
+  "delivery-postcode": {
+    "params": {
+      "value": "EC4M9BT",
+      "isZipCode": true
+    }
+  },
   "delivery-start-date": {
     "params": {
       "date": "16th February 2019",
       "min": "2019-02-16",
       "max": "2019-04-13",
       "value": "2019-02-16"
+    }
+  },
+  "email": {
+    "params": {
+      "showConfirm": true
     }
   },
   "fieldset": {
@@ -207,9 +231,11 @@
       "enableApplepay": true
     }
   },
-  "email": {
+  "postcode": {
     "params": {
-      "showConfirm": true
+      "value": "EC4M9BT",
+      "isBillingPostcode": true,
+      "isZipCode": false
     }
   },
   "progress-indicator": {

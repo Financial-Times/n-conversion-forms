@@ -11,9 +11,9 @@ const {
 
 let context = {};
 
-describe('country template', () => {
+describe('billing country template', () => {
 	before(async () => {
-		context.template = await fetchPartial('country.html');
+		context.template = await fetchPartial('billing-country.html');
 	});
 
 	beforeEach(() => {
@@ -24,19 +24,11 @@ describe('country template', () => {
 		unregisterHelper('ncf-countries');
 	});
 
-	/* isBillingCountry is deprecated, use billing-country partial instead */
-	describe('isBillingCountry', () => {
-		it('should be have the name country by default', () => {
-			const $ = context.template({});
-			expect($('select').attr('name')).to.equal('country');
+	it('should have billing label', () => {
+		const $ = context.template({
+			isBillingCountry: true
 		});
-
-		it('should be have the name billingCountry if isBillingCountry', () => {
-			const $ = context.template({
-				isBillingCountry: true
-			});
-			expect($('select').attr('name')).to.equal('billingCountry');
-		});
+		expect($('label').text()).to.equal('Billing Country');
 	});
 
 	describe('selection', () => {

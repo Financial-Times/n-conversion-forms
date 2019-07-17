@@ -1,3 +1,7 @@
+{{!--
+	isBillingCountry is now deprecated
+	use billing-country instead
+--}}
 <div id="countryField" class="o-forms o-forms--wide ncf__field js-field js-unknown-user-field{{#if hasError}} o-forms--error{{/if}}" data-ui-item="select" data-ui-item-name="{{#if isBillingCountry}}billingCountry{{else}}country{{/if}}" data-ui-item-store-previous="true" data-validate="required">
 
 	<label for="country" class="o-forms__label">{{#if isBillingCountry}}Billing Country{{else}}Country{{/if}}</label>

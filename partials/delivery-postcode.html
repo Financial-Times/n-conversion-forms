@@ -1,0 +1,28 @@
+{{#*inline "postcodeLabel"}}
+{{#if isZipCode}}Zip code{{else}}Post code{{/if}}
+{{/inline}}
+<div id="deliveryPostcodeField"
+		class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}{{#if isHidden}} n-ui-hide{{/if}}"
+		data-ui-item="form-field"
+		data-ui-item-name="deliveryPostcode"
+		data-validate="required">
+
+	<label for="deliveryPostcode" class="o-forms__label">
+		Delivery {{> postcodeLabel }}
+	</label>
+
+	<input type="text"
+			id="deliveryPostcode"
+			name="deliveryPostcode"
+			value="{{value}}"
+			placeholder="{{> postcodeLabel }}"
+			autocomplete="postal-code"
+			class="o-forms__text js-field__input js-item__value"
+			data-trackable="delivery-postcode"
+			aria-required="true" required
+			{{#if pattern}}pattern="{{pattern}}"{{/if}}
+			{{#if isDisabled}}disabled{{/if}}>
+
+	<div class="o-forms__errortext">Please enter a valid {{> postcodeLabel }}.</div>
+
+</div>

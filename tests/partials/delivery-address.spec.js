@@ -13,26 +13,28 @@ describe('delivery-address template', () => {
 		context.template = await fetchPartial('delivery-address.html');
 	});
 
-	it('should have a blank value if one isnt passed in', () => {
+	it('should have a blank value if one is not passed in', () => {
 		const $ = context.template({});
 
-		expect($('#addressLine1').val()).to.equal('');
-		expect($('#addressLine2').val()).to.equal('');
-		expect($('#addressLine3').val()).to.equal('');
+		expect($('#deliveryAddressLine1').val()).to.equal('');
+		expect($('#deliveryAddressLine2').val()).to.equal('');
+		expect($('#deliveryAddressLine3').val()).to.equal('');
 	});
 
 	it('should populate the correct value', () => {
-		const values = ['line 1', 'line 2', 'line 3'];
+		const line1 = 'line1';
+		const line2 = 'line2';
+		const line3 = 'line3';
 		const $ = context.template({
-			values
+			line1, line2, line3
 		});
 
-		expect($('#addressLine1').val()).to.equal(values[0]);
-		expect($('#addressLine2').val()).to.equal(values[1]);
-		expect($('#addressLine3').val()).to.equal(values[2]);
+		expect($('#deliveryAddressLine1').val()).to.equal(line1);
+		expect($('#deliveryAddressLine2').val()).to.equal(line2);
+		expect($('#deliveryAddressLine3').val()).to.equal(line3);
 	});
 
-	shouldBeRequired(context, '#addressLine1');
+	shouldBeRequired(context, '#deliveryAddressLine1');
 
 	shouldError(context);
 

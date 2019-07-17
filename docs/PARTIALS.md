@@ -3,12 +3,15 @@
 ## Content
 
 * [App Banner](#app-banner)
-* [City/town](#city-town)
+* [Billing Country](#billing-country)
+* [Billing Postcode](#billing-postcode)
 * [Confirmation](#confirmation)
 * [Continue Reading](#continue-reading)
+* [Country](#country)
 * [County](#county)
 * [Decision Maker](#decision-maker)
 * [Delivery Address](#delivery-address)
+* [Delivey City/town](#delivery-city-town)
 * [Delivery Information](#delivery-information)
 * [Delivery Option](#delivery-option)
 * [Delivery Start Date](#delivery-start-date)
@@ -31,19 +34,36 @@ Banner that appears on confirmation pages to inform the user of our App
 ```handlebars
 {{> n-conversion-forms/partials/app-banner }}
 ```
-## City/town
 
-Renders the city/town field.
+## Billing country
+
+Renders the billing country field.
 
 ```handlebars
-{{> n-conversion-forms/partials/city-town value="Bath" hasError=true isDisabled=true }}
+{{> n-conversion-forms/partials/billing-country value="USA" filterList=countrylist }}
 ```
 
 ### Options
 
-+ `value`: string - The name of the city or town.
++ `value`: string - The name of the county.
 + `isDisabled`: boolean - Whether the field is disabled or not.
 + `hasError`: boolean - If true it adds `o-forms--error` class to display error.
++ `filterList`: object - list of country objects: `label`, `name`, `code`
+
+## Billing postcode
+
+Displays a billing postal code field with o-forms styling.
+
+```handlebars
+{{> n-conversion-forms/partials/billing-postcode value="EC4M9BT" isZipCode=true }}
+```
+
+### Options
+
++ `isDisabled`: boolean - true - disables the field.
++ `isZipCode`: boolean - true - `zip code` label - false - `post code`.
++ `pattern`: string - Pattern to be used for validation.
++ `value`: string - Text to pre-populate the field.
 
 ## Confirmation
 
@@ -77,6 +97,23 @@ A message to inform the user they can read an article once they've subscribed.
 + `quote`: string - Title displayed between the quote marks.
 + `link`: string - Location of the continue reading button.
 
+## Country
+
+Renders the country field.
+NOTE: `isBillingCountry` flag is deprecated, use `billing-country` instead
+
+```handlebars
+{{> n-conversion-forms/partials/country value="USA" filterList=countrylist }}
+```
+
+### Options
+
++ `value`: string - The name of the county.
++ `isDisabled`: boolean - Whether the field is disabled or not.
++ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
++ `filterList`: object - list of country objects: `label`, `name`, `code`
++ `isBillingCountry`: boolean - DEPRECATED, use billing-country instead.
+
 ## County
 
 Renders the county field.
@@ -108,12 +145,26 @@ Renders an inline yes / no radio group for users to enter if they are a decision
 Renders the 3 delivery address fields (line 1/2/3).
 
 ```handlebars
-{{> n-conversion-forms/partials/delivery-address values="['10 Elm Street', 'Apartment 1']" hasError=true isDisabled=true }}
+{{> n-conversion-forms/partials/delivery-address line1="10 Elm Street" line2="Apartment 1" hasError=true isDisabled=true }}
 ```
 
 ### Options
 
 + `values`: Array - An array containing the 3 lines of the address.
++ `isDisabled`: boolean - Whether the field is disabled or not.
++ `hasError`: boolean - If true it adds `o-forms--error` class to display error.
+
+## Delivery City/town
+
+Renders the delivery city/town field.
+
+```handlebars
+{{> n-conversion-forms/partials/delivery-city-town value="Bath" hasError=true isDisabled=true }}
+```
+
+### Options
+
++ `value`: string - The name of the city or town.
 + `isDisabled`: boolean - Whether the field is disabled or not.
 + `hasError`: boolean - If true it adds `o-forms--error` class to display error.
 
@@ -147,6 +198,20 @@ Display delivery options with radio buttons for users to choose between.
 + `options`: array - An array of objects that can have the following properties.
   + `value`: string - Value to send when selected.
   + `isSelected`: boolean - Set to true for the term to be selected.
+
+## Delivery postcode
+
+Displays a post code field with o-forms styling.
+
+```handlebars
+{{> n-conversion-forms/partials/delivery-postcode value="EC4M9BT" isZipCode=true }}
+```
+### Options
+
++ `isDisabled`: boolean - true - disables the field.
++ `isZipCode`: boolean - true - `zip code` label - false - `post code`.
++ `pattern`: string - Pattern to be used for validation.
++ `value`: string - Text to pre-populate the field.
 
 ## Delivery Start Date
 
@@ -347,6 +412,26 @@ Displays a phone field with o-forms styling and the name and id `primaryTelephon
 + `isDisabled`: boolean - true - disables the field.
 + `isB2b`: boolean - true - displays work email copy.
 + `pattern`: string - Pattern to be used for validation.
+
+## Postcode (DEPRECATED)
+
+**This is deprecated and should no longer be used.  
+Please use `delivery-postcode`/`billing-postcode` instead.**  
+
+Displays a postal code field with o-forms styling.
+Form id/name/label can be overridden via options below.
+
+```handlebars
+{{> n-conversion-forms/partials/postcode value="EC4M9BT" formPrefix="delivery" }}
+```
+
+### Options
+
++ `isBillingPostcode`: boolean - true - adds `Billing` label.
++ `isDisabled`: boolean - true - disables the field.
++ `isZipCode`: boolean - true - `Zip code` label - false - `Post Code`.
++ `pattern`: string - Pattern to be used for validation.
++ `value`: string - Text to pre-populate the field.
 
 ## Submit
 

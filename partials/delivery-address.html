@@ -5,29 +5,29 @@
 		data-validate="required">
 
 	<p>
-		<label for="addressLine1" class="o-forms__label">Address line 1</label>
-		<input type="text" id="addressLine1" name="addressLine1" value="{{values.[0]}}"
-					class="o-forms__text js-field__input js-item__value"
-					data-trackable="field-addressLine1"
-					autocomplete="address-line1"
-					placeholder="e.g. 10 Elm Street"
-					aria-required="true" required
-					{{#if isDisabled}}disabled{{/if}}>
+		<label for="deliveryAddressLine1" class="o-forms__label">Address line 1</label>
+		<input type="text" id="deliveryAddressLine1" name="deliveryAddressLine1" value="{{line1}}"
+				class="o-forms__text js-field__input js-item__value"
+				data-trackable="field-deliveryAddressLine1"
+				autocomplete="address-line1"
+				placeholder="e.g. 10 Elm Street"
+				aria-required="true" required
+				{{#if isDisabled}}disabled{{/if}}>
 	</p>
 	<p>
-		<label for="addressLine2" class="o-forms__label">Address line 2 <small>(optional)</small></label>
-		<input type="text" id="addressLine2" name="addressLine2" value="{{values.[1]}}"
+		<label for="deliveryAddressLine2" class="o-forms__label">Address line 2 <small>(optional)</small></label>
+		<input type="text" id="deliveryAddressLine2" name="deliveryAddressLine2" value="{{line2}}"
 					class="o-forms__text js-field__input js-item__value"
-					data-trackable="field-addressLine2"
+					data-trackable="field-deliveryAddressLine2"
 					autocomplete="address-line2"
 					placeholder="e.g. Apartment 1"
 					{{#if isDisabled}}disabled{{/if}}>
 	</p>
 	<p>
-		<label for="addressLine3" class="o-forms__label">Address line 3 <small>(optional)</small></label>
-		<input type="text" id="addressLine3" name="addressLine3" value="{{values.[2]}}"
+		<label for="deliveryAddressLine3" class="o-forms__label">Address line 3 <small>(optional)</small></label>
+		<input type="text" id="deliveryAddressLine3" name="deliveryAddressLine3" value="{{line3}}"
 					class="o-forms__text js-field__input js-item__value"
-					data-trackable="field-addressLine3"
+					data-trackable="field-deliveryAddressLine3"
 					autocomplete="address-line3"
 					placeholder="Enter address line 3"
 					{{#if isDisabled}}disabled{{/if}}>

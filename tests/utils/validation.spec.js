@@ -1,6 +1,8 @@
 const expect = require('chai').expect;
 const proxyquire = require('proxyquire').noCallThru();
 const sinon = require('sinon');
+const jsdom = require('jsdom');
+const { JSDOM } = jsdom;
 
 const DomHelper = require('../helpers/dom');
 
@@ -15,12 +17,10 @@ const Validation = proxyquire('../../utils/validation', {
 	'o-forms': OFormsStub
 });
 
-global.window = {};
 
 let $form;
 let checkboxAddEventListener;
 let checkValidityStub;
-let cleanupJSDom;
 let insertBeforeStub;
 let removeChildStub;
 let requiredElListener;
@@ -40,8 +40,18 @@ const createElement = (config) => {
 
 describe('Validation', () => {
 
+	before(() => {
+		const dom = new JSDOM();
+		global.window = dom.window;
+		global.document = dom.window.document;
+	});
+
+	after(() => {
+		delete global.window;
+		delete global.document;
+	});
+
 	beforeEach(() => {
-		cleanupJSDom = require('jsdom-global')();
 		$form = document.createElement('form');
 		sandbox = sinon.createSandbox();
 
@@ -72,7 +82,6 @@ describe('Validation', () => {
 	});
 
 	afterEach(() => {
-		cleanupJSDom();
 		sandbox.restore();
 	});
 

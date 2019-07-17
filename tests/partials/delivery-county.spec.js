@@ -1,21 +1,18 @@
 const {
 	fetchPartial,
 	shouldBeDisableable,
-	shouldBeRequired,
 	shouldPopulateValue,
 	shouldError
 } = require('../helpers');
 
 let context = {};
 
-describe('city-town template', () => {
+describe('county template', () => {
 	before(async () => {
-		context.template = await fetchPartial('city-town.html');
+		context.template = await fetchPartial('delivery-county.html');
 	});
 
 	shouldPopulateValue(context);
-
-	shouldBeRequired(context, 'input');
 
 	shouldError(context);
 
