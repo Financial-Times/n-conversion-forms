@@ -11,30 +11,30 @@ class Tracking {
 	 * @param {Element} element HTML element to dispatch event on, normally document.body
 	 * @throws If the window or element is not supplied
 	 */
-	constructor (window, element) {
+	constructor (window, element, category) {
 		if (!window || !element) {
-			throw new Error('Please supply a window and element');
+			throw new Error('Please supply a window, element and category');
 		}
 
 		this.window = window;
 		this.element = element;
+		this.category = category;
 		this.initDebugData();
 	}
 
 	/**
 	 * Dispatch a standard tracking event, falls back to dispacting tracking pixel
-	 * @param {String} category
 	 * @param {String} action
 	 * @param {Object} data
 	 * @returns {Number} Amount of events dispatched
-	 * @throws If the category or action is not supplied
+	 * @throws If the action is not supplied
 	 */
-	dispatch (category, action, data = {}) {
-		if (!category || !action) {
-			throw new Error('Please supply a category and action');
+	dispatch (action, data = {}) {
+		if (!action) {
+			throw new Error('Please supply an action');
 		}
 
-		const eventData = Object.assign({}, data, { action, category });
+		const eventData = Object.assign({}, data, { action, category: this.category });
 
 		// Clean eventData of empty properties
 		for (const property in eventData) {

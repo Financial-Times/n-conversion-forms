@@ -11,7 +11,7 @@ describe('Tracking', () => {
 	beforeEach(() => {
 		element = { dispatchEvent: () => {} };
 		window = { CustomEvent: function () {}, Image: function () {}, Date: function () {} };
-		tracking = new Tracking(window, element);
+		tracking = new Tracking(window, element, 'test');
 
 		sandbox = sinon.createSandbox();
 		sandbox.spy(tracking, 'dispatchCustomEvent');
@@ -44,17 +44,11 @@ describe('Tracking', () => {
 					tracking.dispatch();
 				}).to.throw();
 			});
-
-			it('should throw an error if action is missing', () => {
-				expect(() => {
-					tracking.dispatch('test');
-				}).to.throw();
-			});
 		});
 
 		describe('dispatch events', () => {
 			it('should call dispatchEvent', () => {
-				tracking.dispatch('test', 'test');
+				tracking.dispatch('test');
 				expect(tracking.dispatchCustomEvent.calledOnce).to.be.true;
 			});
 
@@ -71,13 +65,13 @@ describe('Tracking', () => {
 		describe('extra data', () => {
 			it('should merge extra tracking data', () => {
 				const data = { extra: 'data' };
-				tracking.dispatch('test', 'test', data);
+				tracking.dispatch('test', data);
 				expect(tracking.dispatchCustomEvent.getCall(0).args[0]).to.include(data);
 			});
 
 			it('should not overwrite the given action and test', () => {
 				const data = { action: 'bad', category: 'bad' };
-				tracking.dispatch('test', 'test', data);
+				tracking.dispatch('test', data);
 				expect(tracking.dispatchCustomEvent.getCall(0).args[0]).to.not.include({ action: 'bad', category: 'bad' });
 			});
 		});
@@ -92,27 +86,27 @@ describe('Tracking', () => {
 			};
 
 			it('should not send undefined properties', () => {
-				tracking.dispatch('test', 'test', data);
+				tracking.dispatch('test', data);
 				expect(tracking.dispatchCustomEvent.getCall(0).args[0]).to.not.include({ testUndefined: undefined });
 			});
 
 			it('should not send null properties', () => {
-				tracking.dispatch('test', 'test', data);
+				tracking.dispatch('test', data);
 				expect(tracking.dispatchCustomEvent.getCall(0).args[0]).to.not.include({ testNull: null });
 			});
 
 			it('should not send empty string properties', () => {
-				tracking.dispatch('test', 'test', data);
+				tracking.dispatch('test', data);
 				expect(tracking.dispatchCustomEvent.getCall(0).args[0]).to.not.include({ testEmptyString: '' });
 			});
 
 			it('should send zero properties', () => {
-				tracking.dispatch('test', 'test', data);
+				tracking.dispatch('test', data);
 				expect(tracking.dispatchCustomEvent.getCall(0).args[0]).to.include({ testZero: 0 });
 			});
 
 			it('should send false properties', () => {
-				tracking.dispatch('test', 'test', data);
+				tracking.dispatch('test', data);
 				expect(tracking.dispatchCustomEvent.getCall(0).args[0]).to.include({ testFalse: false });
 			});
 		});
