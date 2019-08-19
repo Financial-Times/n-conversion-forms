@@ -1,6 +1,8 @@
 <fieldset id="decisionMakerField" class="o-forms o-forms--wide o-forms--inline ncf__field js-field{{#if hasError}} o-forms--error{{/if}}" data-ui-item="form-field" data-ui-item-name="decisionMaker" data-validate="required">
+	{{!-- Duplicate legend so it is the first element of a fieldset for A11Y --}}
+	<legend class="o-normalise-visually-hidden">Are you a manager with direct reports?</legend>
 	<div class="o-forms__inline-container ncf__field--min-content">
-		<legend class="o-forms__label">Are you a manager with direct reports?</legend>
+		<div class="o-forms__label">Are you a manager with direct reports?</div>
 		<div class="o-forms__group o-forms__group--inline-together">
 			<input id="decisionMakerYes" type="radio" name="decisionMaker" value="yes" class="o-forms__radio-button"{{#ifEquals value "yes"}} checked{{/ifEquals}}>
 			<label for="decisionMakerYes" class="o-forms__label">Yes</label>

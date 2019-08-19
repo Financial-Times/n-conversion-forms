@@ -127,16 +127,18 @@
     }
   },
   "fieldset": {
-    "legend": "The legend is great",
-    "isHeader": true,
-    "descriptor": "The descriptor is also here",
+    "params": {
+      "legend": "The legend is great",
+      "isHeader": true,
+      "descriptor": "The descriptor is also here"
+    },
     "partials": {
       "fields": "<div class=o-forms__group>Testing</div>"
     }
   },
   "form": {
     "partials": {
-      "fields": "Inline content here."
+      "fields": "<input value=\"Submit\" type=\"submit\" />"
     }
   },
   "licence-confirmation": {
@@ -247,18 +249,18 @@
       "items": [{
         "name": "Details",
         "isComplete": true,
-        "url": "#details"
+        "url": "https://www.example.com/details"
       }, {
         "name": "Preferences",
         "isComplete": true,
-        "url": "#preferences"
+        "url": "https://www.example.com/preferences"
       }, {
         "name": "Print",
         "isCurrent": true,
-        "url": "#print"
+        "url": "https://www.example.com/print"
       }, {
         "name": "Payment",
-        "url": "#payment"
+        "url": "https://www.example.com/payment"
       }]
     }
   }

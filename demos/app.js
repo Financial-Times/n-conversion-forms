@@ -126,8 +126,9 @@ function compilePartial (partial) {
 	const rendered = handlebars.compile(template)(partialData.params);
 
 	const html = `<!doctype html>
-<html>
+<html lang="en">
 	<head>
+		<title>${partial}</title>
 		<link rel="stylesheet" href="/public/main.css">
 		<link rel="stylesheet" href="/public/component.css">
 		<link rel="stylesheet" href="/public/main.css">
@@ -138,7 +139,10 @@ function compilePartial (partial) {
 			${rendered}
 		</div>
 
-		<textarea id="example-code" style="width:100%" readonly>${exampleVars}${template}</textarea>
+		<label>
+			Example code
+			<textarea id="example-code" style="width:100%" readonly>${exampleVars}${template}</textarea>
+		</label>
 
 		<script type="text/javascript" src="/public/main.js"></script>
 	</body>
