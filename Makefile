@@ -23,7 +23,7 @@ test: verify
 	make a11y-demo
 
 unit-test:
-	mocha --recursive --reporter spec tests
+	mocha --recursive --reporter spec test
 
 a11y-demo:
 	export TEST_URL=http://localhost:5005; \
