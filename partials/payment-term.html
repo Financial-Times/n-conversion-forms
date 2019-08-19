@@ -19,7 +19,9 @@
 			<span class="ncf__payment-term__title">Pay annually</span>
 			<div class="ncf__payment-term__description">
 				Single <span class="ncf__payment-term__price ncf__strong">{{price}}</span> payment
-				{{#unless discount}}<br />Save up to 25% when you pay annually{{/unless}}
+				{{#if weeklyPrice}}<br /><span class="ncf__payment-term__weekly-price">Just {{weeklyPrice}} per week</span>{{/if}}
+				{{!-- Remove this discount text temporarily in favour of weekly price --}}
+				<!-- {{#unless discount}}<br />Save up to 25% when you pay annually{{/unless}} -->
 			</div>
 			{{/ifEquals}}
 
