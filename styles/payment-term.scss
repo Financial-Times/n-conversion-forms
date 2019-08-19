@@ -4,7 +4,7 @@
 	@include bigRadioButton($className: '.ncf__payment-term');
 	&__payment-term {
 		&__discount {
-			background-color: oColorsGetPaletteColor('black');
+			background-color: oColorsGetPaletteColor('claret-60');
 			color: oColorsGetPaletteColor('white');
 			position: absolute;
 			padding: 6px 16px;
@@ -18,7 +18,7 @@
 				height: 0;
 				border-top: 6px solid transparent;
 				border-bottom: 6px solid transparent;
-				border-right: 6px solid oColorsGetPaletteColor('black-70');
+				border-right: 6px solid oColorsGetPaletteColor('claret-50');
 				transform: rotate(45deg);
 				position: absolute;
 				bottom: -8px;
