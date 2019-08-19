@@ -9,7 +9,6 @@
 @import 'o-stepped-progress/main';
 @import 'o-fonts/main';
 @import './styles/package-change';
-@import './styles/payment';
 @import './styles/payment-term';
 @import './styles/payment-type';
 @import './styles/loader';
@@ -279,8 +278,6 @@
 	@include ncfLoader();
 	@include ncfContinueReading();
 	@include ncfBanner();
-
-	@include ncfPaymentApplePay();
 
 	.o-normalise-visually-hidden {
 		@include oNormaliseVisuallyHidden;
