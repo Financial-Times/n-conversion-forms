@@ -65,7 +65,7 @@ describe('payment-term', () => {
 			const $ = context.template({ options: [{
 				name
 			}]});
-			expect($(TITLE_SELECTOR).text()).to.contain('annually');
+			expect($(TITLE_SELECTOR).text()).to.contain('Annual');
 		});
 
 		it('should show the price', () => {
@@ -122,7 +122,7 @@ describe('payment-term', () => {
 			const $ = context.template({ options: [{
 				name
 			}]});
-			expect($(TITLE_SELECTOR).text()).to.contain('quarterly');
+			expect($(TITLE_SELECTOR).text()).to.contain('Quarterly');
 		});
 
 		it('should show the price', () => {
@@ -142,7 +142,7 @@ describe('payment-term', () => {
 			const $ = context.template({ options: [{
 				name
 			}]});
-			expect($(TITLE_SELECTOR).text()).to.contain('monthly');
+			expect($(TITLE_SELECTOR).text()).to.contain('Monthly');
 		});
 
 		it('should show the price', () => {

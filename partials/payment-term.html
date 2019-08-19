@@ -16,7 +16,7 @@
 			{{/ifEquals}}
 
 			{{#ifEquals this.name 'annual'}}
-			<span class="ncf__payment-term__title">Pay annually</span>
+			<span class="ncf__payment-term__title">Annual</span>
 			<div class="ncf__payment-term__description">
 				Single <span class="ncf__payment-term__price ncf__strong">{{price}}</span> payment
 				{{#if weeklyPrice}}<br /><span class="ncf__payment-term__weekly-price">Just {{weeklyPrice}} per week</span>{{/if}}
@@ -26,14 +26,14 @@
 			{{/ifEquals}}
 
 			{{#ifEquals this.name 'quarterly'}}
-			<span class="ncf__payment-term__title">Pay quarterly</span>
+			<span class="ncf__payment-term__title">Quarterly</span>
 			<div class="ncf__payment-term__description">
 				<span class="ncf__payment-term__price">{{price}}</span> per quarter
 			</div>
 			{{/ifEquals}}
 
 			{{#ifEquals this.name 'monthly'}}
-			<span class="ncf__payment-term__title">Pay monthly</span>
+			<span class="ncf__payment-term__title">Monthly</span>
 			<div class="ncf__payment-term__description">
 				<span class="ncf__payment-term__price">{{price}}</span> per month
 			</div>
