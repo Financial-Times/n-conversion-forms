@@ -26,6 +26,12 @@
 			width: 100%;
 		}
 
+		// Being overly specific to override a specific o-forms styles
+		// this fixes a 3px misalignment in the payment types
+		.o-forms__label:first-of-type {
+			margin: 3px 0 3px 3px;
+		}
+
 		&--paypal {
 			.o-forms__label {
 				@include buttonImageOverriding();
