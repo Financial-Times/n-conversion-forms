@@ -107,6 +107,48 @@ class Loader {
 			event.preventDefault();
 		}
 	}
+
+	/**
+	 * Display a loader on top of the element passed
+	 * @param {DOMElement} element Show loader over this
+	 * @param {Object} content Content for the loader in standard format
+	 */
+	showOnElement (element, content) {
+		const loader = new DOMParser().parseFromString(this.template(content), 'text/html');
+		element.appendChild(loader.querySelector('.ncf__loader'));
+	}
+
+	/**
+	 * Remove loader from a given element
+	 * @param {DOMElement} element Loader inside
+	 */
+	removeFromElement (element) {
+		element.querySelector('.ncf__loader').remove();
+	}
+
+	/**
+	 * Return a string to be injected into the page
+	 * @param {String} title
+	 * @param {String} content
+	 */
+	template ({ title='Loading', content='' }) {
+		return `
+		<div class="ncf__loader is-visible ncf__loader--element"
+			role="dialog"
+			aria-labelledby="loader-aria-label"
+			aria-describedby="loader-aria-description"
+			aria-modal="true"
+			tabindex="1">
+			<div class="ncf__loader__content">
+				<div class="ncf__loader__content__title" id="loader-aria-label">
+					${title}
+				</div>
+				<div class="ncf__loader__content__main" id="loader-aria-description">
+					${content}
+				</div>
+			</div>
+		</div>`;
+	}
 };
 
 module.exports = Loader;

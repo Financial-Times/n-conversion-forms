@@ -15,6 +15,13 @@
 		align-items: center;
 		justify-content: center;
 
+		&--element {
+			height: auto;
+			position: absolute;
+			// Hack to cover all input fields
+			right: -1px;
+		}
+
 		&.is-visible {
 			display: flex;
 		}

@@ -76,6 +76,8 @@
 		margin-top: 15px;
 		position: relative;
 		z-index: 2;
+		// Minimum height of a payment iframe to stop page jumping
+		min-height: 385px;
 
 		&-overlay {
 			background-color: rgba(0, 0, 0, 0.15);
