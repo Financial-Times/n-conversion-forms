@@ -35,8 +35,6 @@
 					'theme': 'light',
 					'size': 'large'
 				));
-
-
 				content: '';
 				position: relative;
 				top: 50%;
@@ -46,8 +44,7 @@
 
 			&__title {
 				@include oTypographySize($scale: 2);
-				// No semi-bold so doing it manually.
-				font-weight: 500;
+				font-weight: oFontsWeight('semibold');
 			}
 		}
 	}
