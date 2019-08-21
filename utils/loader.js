@@ -135,15 +135,15 @@ class Loader {
 		return `
 		<div class="ncf__loader is-visible ncf__loader--element"
 			role="dialog"
-			aria-labelledby="loader-aria-label"
-			aria-describedby="loader-aria-description"
+			aria-labelledby="loader-aria-label-element"
+			aria-describedby="loader-aria-description-element"
 			aria-modal="true"
 			tabindex="1">
 			<div class="ncf__loader__content">
-				<div class="ncf__loader__content__title" id="loader-aria-label">
+				<div class="ncf__loader__content__title" id="loader-aria-label-element">
 					${title}
 				</div>
-				<div class="ncf__loader__content__main" id="loader-aria-description">
+				<div class="ncf__loader__content__main" id="loader-aria-description-element">
 					${content}
 				</div>
 			</div>
