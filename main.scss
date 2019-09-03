@@ -15,6 +15,7 @@
 @import './styles/message';
 @import './styles/continue-reading';
 @import './styles/banner';
+@import './styles/customer-care';
 
 @include oFonts();
 @include oFormsBaseFeatures();
@@ -221,6 +222,16 @@
 		}
 	}
 
+	&__icon--phone {
+		background: oColorsGetPaletteColor('teal');
+		border-color: oColorsGetPaletteColor('teal');
+		&::before {
+			@include oIconsGetIcon('phone', oColorsGetPaletteColor('white'), 20);
+			content: '';
+			color: oColorsGetPaletteColor('white');
+		}
+	}
+
 	&__icon--inline-edit {
 		@include oIconsGetIcon('edit', oColorsGetPaletteColor('black'), 20);
 		border: 0;
@@ -278,6 +289,7 @@
 	@include ncfLoader();
 	@include ncfContinueReading();
 	@include ncfBanner();
+	@include ncfCustomerCarePanel();
 
 	.o-normalise-visually-hidden {
 		@include oNormaliseVisuallyHidden;
