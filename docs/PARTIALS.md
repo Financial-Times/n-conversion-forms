@@ -9,6 +9,7 @@
 * [Continue Reading](#continue-reading)
 * [Country](#country)
 * [County](#county)
+* [Customer Care](#customer-care)
 * [Decision Maker](#decision-maker)
 * [Delivery Address](#delivery-address)
 * [Delivey City/town](#delivery-city-town)
@@ -128,6 +129,19 @@ Renders the county field.
 + `value`: string - The name of the county.
 + `isDisabled`: boolean - Whether the field is disabled or not.
 + `hasError`: boolean - If true it adds `o-forms--error` class to display error.
+
+## Customer Care
+
+Renders a "contact customer support" page.
+
+```handlebars
+{{> n-conversion-forms/partials/customer-care header="Some header text" message="Contact us for something" }}
+```
+
+### Options
++ `header`: string - Custom header text. Defaults to "Sorry, this is not available online".
++ `message`: string - Custom message text, defaults to "Speak now to our Customer Care team to discuss your options".
+
 
 ## Decision Maker
 
@@ -416,8 +430,8 @@ Displays a phone field with o-forms styling and the name and id `primaryTelephon
 
 ## Postcode (DEPRECATED)
 
-**This is deprecated and should no longer be used.  
-Please use `delivery-postcode`/`billing-postcode` instead.**  
+**This is deprecated and should no longer be used.
+Please use `delivery-postcode`/`billing-postcode` instead.**
 
 Displays a postal code field with o-forms styling.
 Form id/name/label can be overridden via options below.
