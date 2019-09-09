@@ -142,7 +142,6 @@ Renders a "contact customer support" page.
 + `header`: string - Custom header text. Defaults to "Sorry, this is not available online".
 + `message`: string - Custom message text, defaults to "Speak now to our Customer Care team to discuss your options".
 
-
 ## Decision Maker
 
 Renders an inline yes / no radio group for users to enter if they are a decision maker in their company.
@@ -244,6 +243,30 @@ Renders a date field with a given start date (and accompanying copy).
 + `date`: string - The date in `dddd Do MMMM YYYY` format.
 + `isDisabled`: boolean - Whether the field is disabled or not.
 + `hasError`: boolean - If true it adds `o-forms--error` class to display error.
+
+## Error Page
+
+Renders a generic "error" page.
+
+```handlebars
+{{#> n-conversion-forms/partials/error-page header="Some header text" message="Contact us for something" }}
+	Some content to be placed in the middle
+{{/ n-conversion-forms/partials/error-page}}
+```
+
+### Options
++ `header`: string - Custom header text. Defaults to "Sorry, this is not available online".
++ `message`: string - Custom message text, defaults to "Speak now to our Customer Care team to discuss your options".
+
+### Inline Partials
+
+You can pass in HTML using [partial block syntax](https://handlebarsjs.com/partials.html#partial-block) as follows:
+
+```handlebars
+{{> n-conversion-forms/partials/error-page}}
+  <p>Some additional content<p>
+{{/ n-conversion-forms/partials/error-page}}
+```
 
 ## Fieldset
 
