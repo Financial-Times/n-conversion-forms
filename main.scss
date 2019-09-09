@@ -232,6 +232,16 @@
 		}
 	}
 
+	&__icon--error {
+		background: oColorsGetPaletteColor('crimson');
+		border-color: oColorsGetPaletteColor('crimson');
+		&::before {
+			@include oIconsGetIcon('warning', oColorsGetPaletteColor('white'), 20);
+			content: '';
+			color: oColorsGetPaletteColor('white');
+		}
+	}
+
 	&__icon--inline-edit {
 		@include oIconsGetIcon('edit', oColorsGetPaletteColor('black'), 20);
 		border: 0;

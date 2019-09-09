@@ -53,6 +53,12 @@
       "value": "USA"
     }
   },
+  "customer-care": {
+    "params": {
+      "header": "We don't know what happened",
+      "message": "You should probably call us."
+    }
+  },
   "debug": {
     "params": {
       "isTest": true,
@@ -119,6 +125,15 @@
       "min": "2019-02-16",
       "max": "2019-04-13",
       "value": "2019-02-16"
+    }
+  },
+  "error-page": {
+    "params": {
+      "header": "Something went wrong",
+      "message": "Please call us and we can help."
+    },
+    "partials": {
+      "@partial-block": "<p>FIRE THE LIVECHAT CANNON!<div><img alt=\"Cannon GIF\" src=\"https://media.giphy.com/media/PisLH7dWInIs0/giphy.gif\" /></div></p>"
     }
   },
   "email": {

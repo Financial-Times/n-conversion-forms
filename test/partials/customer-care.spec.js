@@ -36,12 +36,12 @@ describe('customer care template', () => {
 
 	it('should display the international customer care number', () => {
 		const $ = context.template({});
-		expect($('a#customer-care-internation-number').text()).to.equal('+ 800 0705 6477');
+		expect($('a#customer-care-international-number').text()).to.equal('+ 800 0705 6477');
 	});
 
 	it('should set the international customer care number on the link', () => {
 		const $ = context.template({});
-		expect($('a#customer-care-internation-number').attr('href')).to.equal('tel:+80007056477');
+		expect($('a#customer-care-international-number').attr('href')).to.equal('tel:+80007056477');
 	});
 
 });
