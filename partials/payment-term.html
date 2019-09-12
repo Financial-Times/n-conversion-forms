@@ -10,7 +10,7 @@
 			{{#ifEquals this.name 'trial'}}
 			<span class="ncf__payment-term__title">Try the FT</span>
 			<div class="ncf__payment-term__description">
-				4 weeks for <span class="ncf__payment-term__trial-price">{{trialPrice}}</span><br />
+				{{#if trialDuration}}{{trialDuration}}{{else}}4 weeks{{/if}} for <span class="ncf__payment-term__trial-price">{{trialPrice}}</span><br />
 				unless you cancel during your trial you will be billed <span class="ncf__payment-term__price">{{price}}</span> per month after the trial period
 			</div>
 			{{/ifEquals}}

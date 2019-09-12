@@ -57,6 +57,33 @@ describe('payment-term', () => {
 			}]});
 			expect($(DESCRIPTION_SELECTOR).text()).to.contain(trialPrice);
 		});
+
+		it('should show 4 weeks by default', () => {
+			const name = 'trial';
+			const price = '£1.01';
+			const trialPrice = '£2.01';
+			const $ = context.template({ options: [{
+				name,
+				price,
+				trialPrice
+			}]});
+			expect($(DESCRIPTION_SELECTOR).text()).to.contain('4 weeks');
+		});
+
+		it('should show the passed trialDuration', () => {
+			const name = 'trial';
+			const price = '£1.01';
+			const trialPrice = '£2.01';
+			const trialDuration = 'TEST DURATION';
+			const $ = context.template({ options: [{
+				name,
+				price,
+				trialPrice,
+				trialDuration
+			}]});
+			expect($(DESCRIPTION_SELECTOR).text()).to.not.contain('4 weeks');
+			expect($(DESCRIPTION_SELECTOR).text()).to.contain(trialDuration);
+		});
 	});
 
 	describe('annual', () => {
