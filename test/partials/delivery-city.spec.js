@@ -10,7 +10,7 @@ let context = {};
 
 describe('delivery-city-town template', () => {
 	before(async () => {
-		context.template = await fetchPartial('delivery-city-town.html');
+		context.template = await fetchPartial('delivery-city.html');
 	});
 
 	shouldPopulateValue(context);
