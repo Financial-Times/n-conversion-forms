@@ -16,16 +16,16 @@ describe('delivery postcode template', () => {
 		context.template = await fetchPartial('delivery-postcode.html');
 	});
 
-	it('should be post code by default', () => {
+	it('should be Delivery', () => {
 		const $ = context.template({});
-		expect($.text()).to.contain('Post code');
+		expect($('label').text()).to.contain('Delivery');
 	});
 
-	it('should render zip code if asked', () => {
+	it('should be post code by default', () => {
 		const $ = context.template({
-			isZipCode: true
+			postcodeReference: 'postcode'
 		});
-		expect($.text()).to.contain('Zip code');
+		expect($.text()).to.contain('postcode');
 	});
 
 	shouldPopulateValue(context);

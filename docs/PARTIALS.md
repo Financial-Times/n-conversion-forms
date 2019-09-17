@@ -15,6 +15,7 @@
 * [Delivey City/town](#delivery-city-town)
 * [Delivery Information](#delivery-information)
 * [Delivery Option](#delivery-option)
+* [Delivery Postcode](#delivery-postcode)
 * [Delivery Start Date](#delivery-start-date)
 * [Fieldset](#fieldset)
 * [Firstname](#firstname)
@@ -56,8 +57,11 @@ Renders the billing country field.
 Displays a billing postal code field with o-forms styling.
 
 ```handlebars
-{{> n-conversion-forms/partials/billing-postcode value="EC4M9BT" isZipCode=true }}
+{{> n-conversion-forms/partials/billing-postcode value="EC4M9BT" postcodeReference='postcode' }}
 ```
+### Required
+
++ `postcodeReference`: required - string - this value should be determined by the country code. Use BillingPostcode.getPostcodeReferenceByCountry which extends [Postcode](../utils/postcode.js)
 
 ### Options
 
@@ -213,17 +217,21 @@ Display delivery options with radio buttons for users to choose between.
   + `value`: string - Value to send when selected.
   + `isSelected`: boolean - Set to true for the term to be selected.
 
-## Delivery postcode
+## Delivery Postcode
 
 Displays a post code field with o-forms styling.
 
 ```handlebars
-{{> n-conversion-forms/partials/delivery-postcode value="EC4M9BT" isZipCode=true }}
+{{> n-conversion-forms/partials/delivery-postcode value="EC4M9BT" postcodeReference="postcode" }}
 ```
+
+### Required
+
++ `postcodeReference`: required - string - this value should be determined by the country code. Use DeliveryPostcode.getPostcodeReferenceByCountry which extends [Postcode](../utils/postcode.js)
+
 ### Options
 
 + `isDisabled`: boolean - true - disables the field.
-+ `isZipCode`: boolean - true - `zip code` label - false - `post code`.
 + `pattern`: string - Pattern to be used for validation.
 + `value`: string - Text to pre-populate the field.
 

@@ -22,17 +22,11 @@ describe('billing postcode template', () => {
 	});
 
 	it('should be post code by default', () => {
-		const $ = context.template({});
-		expect($.text()).to.contain('Post code');
-	});
-
-	it('should render zip code if asked', () => {
 		const $ = context.template({
-			isZipCode: true
+			postcodeReference: 'postcode'
 		});
-		expect($.text()).to.contain('Zip code');
+		expect($.text()).to.contain('postcode');
 	});
-
 
 	shouldPopulateValue(context);
 

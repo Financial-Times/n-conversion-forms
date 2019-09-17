@@ -1,6 +1,6 @@
-const FormElement = require('./form-element');
+const Postcode= require('./postcode');
 
-class BillingPostcode extends FormElement {
+class BillingPostcode extends Postcode {
 	constructor (document) {
 		super(document, '.ncf #billingPostcodeField');
 	}
