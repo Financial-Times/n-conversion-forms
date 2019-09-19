@@ -10,6 +10,7 @@ const SELECTOR_SIGNUP_TERMS = 'label p.terms-signup';
 const SELECTOR_SPECIAL_TERMS = 'label p#terms-special';
 const SELECTOR_B2B_TERMS = 'label p#terms-b2b';
 const SELECTOR_CORP_TERMS = 'label p.terms-corp-signup';
+const SELECTOR_TRANSITION_TERMS = 'label p.terms-transition';
 const SELECTOR_ACCEPT_TERMS_FIELD = '#acceptTermsField';
 const SELECTOR_CHECKBOX = 'input';
 const SELECTOR_ANCHOR = 'a';
@@ -123,6 +124,27 @@ describe('accept-terms template', () => {
 		});
 	});
 
+	describe('transition', () => {
+		const params = {
+			isTransition: true
+		};
+
+		it('should have the default and transtion terms', () => {
+			const $ = context.template(params);
+			expectTerms($, { standard:1, transition: 3 });
+		});
+
+		it('should show immediate terms if transitionType immediate', () => {
+			const $ = context.template({...params, transitionType: 'immediate' });
+			expect($('label p.terms-transition--immediate').length).to.equal(1);
+		});
+
+		it('should show other terms if transitionType not immediate', () => {
+			const $ = context.template({...params, transitionType: 'endOfTerm' });
+			expect($('label p.terms-transition--other').length).to.equal(1);
+		});
+	});
+
 	describe('Corp Signup', () => {
 		const params = {
 			isCorpSignup: true
@@ -189,11 +211,12 @@ describe('accept-terms template', () => {
 	shouldError(context);
 });
 
-function expectTerms ($, { standard=0, print=0, signup=0, special=0, b2b=0, corp=0 }) {
+function expectTerms ($, { standard=0, print=0, signup=0, special=0, b2b=0, corp=0, transition=0 }) {
 	expect($(SELECTOR_STANDARD_TERMS).length).to.equal(standard);
 	expect($(SELECTOR_PRINT_TERMS).length).to.equal(print);
 	expect($(SELECTOR_SIGNUP_TERMS).length).to.equal(signup);
 	expect($(SELECTOR_SPECIAL_TERMS).length).to.equal(special);
 	expect($(SELECTOR_B2B_TERMS).length).to.equal(b2b);
 	expect($(SELECTOR_CORP_TERMS).length).to.equal(corp);
+	expect($(SELECTOR_TRANSITION_TERMS).length).to.equal(transition);
 }

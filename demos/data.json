@@ -1,4 +1,10 @@
 {
+  "accept-terms": {
+    "params": {
+      "isTransition": true,
+      "transitionType": "endOfTerm"
+    }
+  },
   "billing-country": {
     "params": {
       "filterList": ["GBR", "JPN", "USA", "FRA"],

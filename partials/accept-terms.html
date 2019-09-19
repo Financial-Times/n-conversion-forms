@@ -24,6 +24,18 @@
 			{{/if}}
 		{{/if}}
 
+		{{#if isTransition}}
+
+		<p class="terms-transition">I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting <a class="ncf__link--external" href="https://help.ft.com/help/contact-us/" target="_blank" rel="noopener">customer service through chat, phone or email</a>.</p>
+		{{#ifEquals transitionType 'immediate'}}
+		<p class="terms-transition terms-transition--immediate">By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.</p>
+		{{else}}
+		<p class="terms-transition  terms-transition--other">By placing my order, I acknowledge that my subscription will start on the date given above. Any cancellation notice received after that date will take effect at the end of my subscription term and previously paid amounts are non-refundable.</p>
+		{{/ifEquals}}
+		<p class="terms-transition">Find out more about our cancellation policy in our <a class="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</p>
+
+		{{/if}}
+
 		{{#if isSignup}}
 			{{#if isPrintProduct}}
 		<p class="terms-print">Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).</p>
