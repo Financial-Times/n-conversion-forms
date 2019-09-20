@@ -129,19 +129,19 @@ describe('accept-terms template', () => {
 			isTransition: true
 		};
 
-		it('should have the default and transtion terms', () => {
+		it('should have the default and transition terms', () => {
 			const $ = context.template(params);
 			expectTerms($, { standard:1, transition: 3 });
 		});
 
-		it('should show immediate terms if transitionType immediate', () => {
-			const $ = context.template({...params, transitionType: 'immediate' });
-			expect($('label p.terms-transition--immediate').length).to.equal(1);
+		it('should show immediate terms if transitionType is immediate', () => {
+			const $ = context.template({ ...params, transitionType: 'immediate' });
+			expect($('.terms-transition--immediate').length).to.equal(1);
 		});
 
-		it('should show other terms if transitionType not immediate', () => {
-			const $ = context.template({...params, transitionType: 'endOfTerm' });
-			expect($('label p.terms-transition--other').length).to.equal(1);
+		it('should show other terms if transitionType is not immediate', () => {
+			const $ = context.template({ ...params, transitionType: 'endOfTerm' });
+			expect($('.terms-transition--other').length).to.equal(1);
 		});
 	});
 
