@@ -3,7 +3,6 @@
 @mixin ncfPackageChange() {
 	&__package-change {
 		@include oTypographySans($scale: 0);
-		background-color: oColorsGetPaletteColor('wheat');
 		padding: 0 20px;
 
 		@include oGridRespondTo($from: S) {
