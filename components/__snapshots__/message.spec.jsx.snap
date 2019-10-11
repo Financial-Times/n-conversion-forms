@@ -1,0 +1,435 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Message can add a data attribute name 1`] = `
+<div class="ncf__message o-forms o-forms--wide"
+     data-message-name="The Police best album ever"
+>
+  <div class="o-message o-message--alert-inner o-message--neutral"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-detail">
+            My message in a bottle
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Message can add a data attribute name 2`] = `
+<div class="ncf__message o-forms o-forms--wide"
+     data-message-name="The Police best album ever"
+>
+  <div class="o-message o-message--alert-inner o-message--neutral"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-detail">
+            My message in a bottle
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Message can render a message as a Notice 1`] = `
+<div class="ncf__message o-forms o-forms--wide">
+  <div class="o-message o-message--notice-inner o-message--neutral"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-detail">
+            My message in a bottle
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Message can render a message as a Notice 2`] = `
+<div class="ncf__message o-forms o-forms--wide">
+  <div class="o-message o-message--notice-inner o-message--neutral"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-detail">
+            My message in a bottle
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Message can render a message as a Success 1`] = `
+<div class="ncf__message o-forms o-forms--wide">
+  <div class="o-message o-message--alert-inner o-message--success"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-detail">
+            My message in a bottle
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Message can render a message as a Success 2`] = `
+<div class="ncf__message o-forms o-forms--wide">
+  <div class="o-message o-message--alert-inner o-message--success"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-detail">
+            My message in a bottle
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Message can render a message as an Error 1`] = `
+<div class="ncf__message o-forms o-forms--wide">
+  <div class="o-message o-message--alert-inner o-message--error"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-detail">
+            My message in a bottle
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Message can render a message as an Error 2`] = `
+<div class="ncf__message o-forms o-forms--wide">
+  <div class="o-message o-message--alert-inner o-message--error"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-detail">
+            My message in a bottle
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Message can render a message as an Inform 1`] = `
+<div class="ncf__message o-forms o-forms--wide">
+  <div class="o-message o-message--alert-inner o-message--inform"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-detail">
+            My message in a bottle
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Message can render a message as an Inform 2`] = `
+<div class="ncf__message o-forms o-forms--wide">
+  <div class="o-message o-message--alert-inner o-message--inform"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-detail">
+            My message in a bottle
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Message can render a title 1`] = `
+<div class="ncf__message o-forms o-forms--wide">
+  <div class="o-message o-message--alert-inner o-message--neutral"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-highlight">
+            Reggatta de Blanc
+          </span>
+          <span class="o-message__content-detail">
+            My message in a bottle
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Message can render a title 2`] = `
+<div class="ncf__message o-forms o-forms--wide">
+  <div class="o-message o-message--alert-inner o-message--neutral"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-highlight">
+            Reggatta de Blanc
+          </span>
+          <span class="o-message__content-detail">
+            My message in a bottle
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Message can render additional information 1`] = `
+<div class="ncf__message o-forms o-forms--wide">
+  <div class="o-message o-message--alert-inner o-message--neutral"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-highlight">
+            Reggatta de Blanc
+          </span>
+          <span class="o-message__content-detail">
+            My message in a bottle
+          </span>
+        </p>
+        <p class="o-message__content--additional">
+          Sting
+        </p>
+        <p class="o-message__content--additional">
+          Steward Copeland
+        </p>
+        <p class="o-message__content--additional">
+          Andy Summers
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Message can render additional information 2`] = `
+<div class="ncf__message o-forms o-forms--wide">
+  <div class="o-message o-message--alert-inner o-message--neutral"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-highlight">
+            Reggatta de Blanc
+          </span>
+          <span class="o-message__content-detail">
+            My message in a bottle
+          </span>
+        </p>
+        <p class="o-message__content--additional">
+          Sting
+        </p>
+        <p class="o-message__content--additional">
+          Steward Copeland
+        </p>
+        <p class="o-message__content--additional">
+          Andy Summers
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Message can render some actions as primary 1`] = `
+<div class="ncf__message o-forms o-forms--wide">
+  <div class="o-message o-message--alert-inner o-message--neutral"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-highlight">
+            Reggatta de Blanc
+          </span>
+          <span class="o-message__content-detail">
+            My message in a bottle
+          </span>
+        </p>
+        <div class="o-message__actions">
+          <a href="https://open.spotify.com/album/2EpuND32cO7CX0gXZl2NB6"
+             class="o-message__actions__primary"
+          >
+            Listen on Spotify
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Message can render some actions as primary 2`] = `
+<div class="ncf__message o-forms o-forms--wide">
+  <div class="o-message o-message--alert-inner o-message--neutral"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-highlight">
+            Reggatta de Blanc
+          </span>
+          <span class="o-message__content-detail">
+            My message in a bottle
+          </span>
+        </p>
+        <div class="o-message__actions">
+          <a href="https://open.spotify.com/album/2EpuND32cO7CX0gXZl2NB6"
+             class="o-message__actions__primary"
+          >
+            Listen on Spotify
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Message can render some actions as secondary 1`] = `
+<div class="ncf__message o-forms o-forms--wide">
+  <div class="o-message o-message--alert-inner o-message--neutral"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-highlight">
+            Reggatta de Blanc
+          </span>
+          <span class="o-message__content-detail">
+            My message in a bottle
+          </span>
+        </p>
+        <div class="o-message__actions">
+          <a href="https://open.spotify.com/album/2EpuND32cO7CX0gXZl2NB6"
+             class="o-message__actions__secondary"
+          >
+            Listen on Spotify
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Message can render some actions as secondary 2`] = `
+<div class="ncf__message o-forms o-forms--wide">
+  <div class="o-message o-message--alert-inner o-message--neutral"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-highlight">
+            Reggatta de Blanc
+          </span>
+          <span class="o-message__content-detail">
+            My message in a bottle
+          </span>
+        </p>
+        <div class="o-message__actions">
+          <a href="https://open.spotify.com/album/2EpuND32cO7CX0gXZl2NB6"
+             class="o-message__actions__secondary"
+          >
+            Listen on Spotify
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Message render a message 1`] = `
+<div class="ncf__message o-forms o-forms--wide">
+  <div class="o-message o-message--alert-inner o-message--neutral"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-detail">
+            My message in a bottle
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Message render a message 2`] = `
+<div class="ncf__message o-forms o-forms--wide">
+  <div class="o-message o-message--alert-inner o-message--neutral"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-detail">
+            My message in a bottle
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
