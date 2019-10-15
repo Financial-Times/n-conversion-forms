@@ -31,7 +31,7 @@ export default function Password ({
 			data-validate="required,password"
 		>
 
-			<label htmlFor="password" className="o-forms__label">Password</label>
+			<label htmlFor={inputId} className="o-forms__label">Password</label>
 			<small id="password-description" className="o-forms__additional-info">
 				Use 8 or more characters with a mix of letters, numbers &amp; symbols
 			</small>
