@@ -70,16 +70,21 @@
 	}
 
 	function fillForm () {
+		var changeEvent = document.createEvent('HTMLEvents');
+		changeEvent.initEvent('change', false, true);
+
 		var inputs = document.querySelectorAll(INPUT_SELECTOR + ', ' + SELECT_SELECTOR);
 		inputs.forEach(function (input) {
 			if (!/hidden/i.test(input.type)) {
 				var value = debugData[input.name];
 				input.value = value;
+				input.dispatchEvent(changeEvent);
 			}
 		});
 		var checkboxes = document.querySelectorAll(CHECKBOX_SELECTOR + ', ' + RADIO_SELECTOR);
 		checkboxes.forEach(function (checkbox) {
 			checkbox.checked = true;
+			checkbox.dispatchEvent(changeEvent);
 		});
 	}
 
