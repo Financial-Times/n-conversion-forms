@@ -11,6 +11,9 @@ export default function Password ({
 	inputId = 'password',
 	inputName = 'password',
 }) {
+	// This is necessary to make this backward compatible with the Handlebars partial.
+	const showPasswordId = inputId === 'password' ? 'showPassword' : `${inputId}-showPassword`;
+	const showPasswordName = showPasswordId;
 
 	const PasswordFieldClassNames = classNames([
 		'o-forms o-forms--wide',
@@ -50,8 +53,8 @@ export default function Password ({
 					pattern={pattern}
 					disabled={isDisabled} />
 				<span className="o-forms__suffix">
-					<input type="checkbox" id="showPassword" name="showPassword" className="o-forms__checkbox js-show-password__checkbox" data-trackable="field-show-password" />
-					<label htmlFor="showPassword" className="o-forms__label">Show password</label>
+					<input type="checkbox" id={showPasswordId} name={showPasswordName} className="o-forms__checkbox js-show-password__checkbox" data-trackable="field-show-password" />
+					<label htmlFor={showPasswordId} className="o-forms__label">Show password</label>
 				</span>
 			</div>
 			<div className="o-forms__errortext">Please enter a valid password</div>
