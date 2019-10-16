@@ -64,9 +64,13 @@
 	};
 
 	function logout () {
-		document.cookie = 'FTSession=; path=/;';
-		document.cookie = 'FTSession_s=; path=/;';
-		window.location.reload();
+		const options = {
+			mode: 'no-cors',
+			credentials: 'include'
+		};
+		fetch('https://www.ft.com/logout', options).then(function () {
+			window.location.reload();
+		});
 	}
 
 	function fillForm () {
