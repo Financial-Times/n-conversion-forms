@@ -9,11 +9,13 @@ export default function Password ({
 	isDisabled = false,
 	fieldId = 'passwordField',
 	inputId = 'password',
-	inputName = 'password',
+	inputName,
 }) {
 	// This is necessary to make this backward compatible with the Handlebars partial.
 	const showPasswordId = inputId === 'password' ? 'showPassword' : `${inputId}-showPassword`;
 	const showPasswordName = showPasswordId;
+	// Use inputId if inputName is not explicitly passed.
+	inputName = inputName || inputId;
 
 	const PasswordFieldClassNames = classNames([
 		'o-forms o-forms--wide',
