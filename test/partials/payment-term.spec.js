@@ -174,6 +174,17 @@ describe('payment-term', () => {
 			expect($(TITLE_SELECTOR).text()).to.contain('Try the FT');
 		});
 
+		it('should not show Try the FT for print or bundle trials', () => {
+			const $ = context.template({
+				options: [{
+					name,
+					isTrial: true
+				}],
+				isPrintOrBundle: true
+			});
+			expect($(TITLE_SELECTOR).text()).to.not.contain('Try the FT');
+		});
+
 		it('should show the price', () => {
 			const price = '£1.01';
 			const $ = context.template({ options: [{
