@@ -6,15 +6,20 @@
 
 	<label for="deliveryInstructions" class="o-forms__label">
 		Delivery instructions <small>(optional)</small><br />
-		<small>Any instructions which will help us deliver your newspaper, i.e. door colour, letterbox location, as well as information on how you want us to deliver it i.e. post through the letter box, place in plastic bag etc. Please note that any specific delivery information will be printed onto your packaging. We do not recommend that you list any sensitive information (such as access codes) here, but if you do so, it is at your own risk.</small><br />
-		{{#if maxlength}}<small>Max. {{maxlength}} characters</small>{{/if}}
+		<small>
+			These may be printed on your newspaper. Don't add sensitive information like access codes.
+			If you do so, it is at your own risk. To provide additional secure information, login to your
+			account via FT.com.
+		</small>
 	</label>
 	<textarea type="text" id="deliveryInstructions" name="deliveryInstructions"
 				{{#if maxlength}}maxlength="{{maxlength}}"{{/if}}
 				{{#if rows}}rows="{{rows}}"{{/if}}
 				class="o-forms__text js-field__input js-item__value"
 				data-trackable="field-deliveryInstructions"
-				placeholder="Enter your delivery instructions"
+				placeholder="Enter instructions {{#if maxlength}}(Max. {{maxlength}} characters){{/if}}:&#10;- Door colour, letterbox location&#10;- Placement i.e. letterbox delivery&#10;- Special handling i.e. packer in plastic bag"
 				{{#if isDisabled}}disabled{{/if}}>{{value}}</textarea>
-
+	<p>
+		Please also note that we can only deliver to the ground floor level of your property.
+	</p>
 </div>
