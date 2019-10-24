@@ -1,4 +1,9 @@
-@import 'o-techdocs/main';
+$o-brand: 'internal';
+@import 'o-layout/main';
+@import 'o-header-services/main';
+
+@include oLayout();
+@include oHeaderServices();
 
 body {
 	margin: 0;
@@ -18,15 +23,4 @@ body {
 		position: relative;
 		z-index: 1001;
 	}
-}
-
-.o-techdocs-card {
-	resize: both;
-	overflow: auto;
-	max-width: none;
-	height: 300px;
-}
-
-.o-techdocs-card__content {
-	height: 100%;
 }
