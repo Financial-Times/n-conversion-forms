@@ -5,7 +5,7 @@ import { demographics } from 'n-common-static-data';
 const defaultOptions = demographics.industries.industries;
 
 export default function Industry ({
-	value = '',
+	value,
 	isDisabled = false,
 	hasError = false,
 	fieldId = 'industryField',
@@ -32,7 +32,7 @@ export default function Industry ({
 			disabled={isDisabled}
 			defaultValue={value}
 		>
-			<option>Please select an industry</option>
+			<option value="">Please select an industry</option>
 			{options.map(({ code, description }) => {
 				return <option key={code} value={code}>{description}</option>;
 			})}

@@ -20,7 +20,7 @@ exports[`Industry can render a disable select 1`] = `
           required
           disabled
   >
-    <option>
+    <option value>
       Please select an industry
     </option>
     <option value="ACC">
@@ -140,7 +140,7 @@ exports[`Industry can render a disable select 2`] = `
           required
           disabled
   >
-    <option>
+    <option value>
       Please select an industry
     </option>
     <option value="ACC">
@@ -259,7 +259,7 @@ exports[`Industry can render an error message 1`] = `
           aria-required="true"
           required
   >
-    <option>
+    <option value>
       Please select an industry
     </option>
     <option value="ACC">
@@ -378,7 +378,7 @@ exports[`Industry can render an error message 2`] = `
           aria-required="true"
           required
   >
-    <option>
+    <option value>
       Please select an industry
     </option>
     <option value="ACC">
@@ -497,7 +497,7 @@ exports[`Industry can render an initial selected value 1`] = `
           aria-required="true"
           required
   >
-    <option>
+    <option value>
       Please select an industry
     </option>
     <option value="ACC">
@@ -618,7 +618,7 @@ exports[`Industry can render an initial selected value 2`] = `
           aria-required="true"
           required
   >
-    <option>
+    <option value>
       Please select an industry
     </option>
     <option value="ACC">
@@ -739,7 +739,7 @@ exports[`Industry render a select with a label 1`] = `
           aria-required="true"
           required
   >
-    <option>
+    <option value>
       Please select an industry
     </option>
     <option value="ACC">
@@ -858,7 +858,7 @@ exports[`Industry render a select with a label 2`] = `
           aria-required="true"
           required
   >
-    <option>
+    <option value>
       Please select an industry
     </option>
     <option value="ACC">

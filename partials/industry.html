@@ -1,16 +1,16 @@
-<div id="industryField" class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}" data-ui-item="select" data-ui-item-name="industry" data-validate="required">
+<div id="industryField" class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}"
+	data-ui-item="select" data-ui-item-name="industry" data-validate="required">
 
 	<label for="industry" class="o-forms__label">In which industry do you work?</label>
 
 	{{#ncf-common-data import="demographics.industries.industries" export="options"}}
 
 	<select id="industry" name="industry" class="o-forms__select js-field__input js-item__value"
-					data-trackable="field-industry"
-					aria-required="true" required
-					{{#if isDisabled}}disabled{{/if}}>
-		<option value>Please select an industry</option>
+		data-trackable="field-industry" aria-required="true" required {{#if isDisabled}}disabled{{/if}}>
+		<option value="">Please select an industry</option>
 		{{#each options as |option|}}
-		<option value="{{option.code}}"{{#if ../value}}{{#ifEquals option.code ../value }} selected{{/ifEquals}}{{else}}{{/if}}>{{option.description}}</option>
+		<option {{#if ../value}}{{#ifEquals option.code ../value }} selected{{/ifEquals}}{{else}}{{/if}}
+			value="{{option.code}}">{{option.description}}</option>
 		{{/each}}
 	</select>
 

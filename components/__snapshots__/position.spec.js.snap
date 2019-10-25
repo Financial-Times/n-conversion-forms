@@ -20,7 +20,7 @@ exports[`Position can render a disable select 1`] = `
           required
           disabled
   >
-    <option>
+    <option value>
       Please select a job position
     </option>
     <option value="AN">
@@ -113,7 +113,7 @@ exports[`Position can render a disable select 2`] = `
           required
           disabled
   >
-    <option>
+    <option value>
       Please select a job position
     </option>
     <option value="AN">
@@ -205,7 +205,7 @@ exports[`Position can render an error message 1`] = `
           aria-required="true"
           required
   >
-    <option>
+    <option value>
       Please select a job position
     </option>
     <option value="AN">
@@ -297,7 +297,7 @@ exports[`Position can render an error message 2`] = `
           aria-required="true"
           required
   >
-    <option>
+    <option value>
       Please select a job position
     </option>
     <option value="AN">
@@ -389,7 +389,7 @@ exports[`Position can render an initial selected value 1`] = `
           aria-required="true"
           required
   >
-    <option>
+    <option value>
       Please select a job position
     </option>
     <option value="AN">
@@ -483,7 +483,7 @@ exports[`Position can render an initial selected value 2`] = `
           aria-required="true"
           required
   >
-    <option>
+    <option value>
       Please select a job position
     </option>
     <option value="AN">
@@ -577,7 +577,7 @@ exports[`Position render a select with a label 1`] = `
           aria-required="true"
           required
   >
-    <option>
+    <option value>
       Please select a job position
     </option>
     <option value="AN">
@@ -669,7 +669,7 @@ exports[`Position render a select with a label 2`] = `
           aria-required="true"
           required
   >
-    <option>
+    <option value>
       Please select a job position
     </option>
     <option value="AN">

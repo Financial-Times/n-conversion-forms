@@ -1,6 +1,6 @@
 <div id="positionField" class="o-forms o-forms--wide ncf__field js-field{{#if hasError}} o-forms--error{{/if}}" data-ui-item="select" data-ui-item-name="position" data-validate="required">
 
-	<label for="position" class="o-forms__label">What's your job position?</label>
+	<label for="position" class="o-forms__label">What&#x27;s your job position?</label>
 
 	{{#ncf-common-data import="demographics.positions.positions" export="options"}}
 
@@ -8,9 +8,9 @@
 					data-trackable="field-position"
 					aria-required="true" required
 					{{#if isDisabled}}disabled{{/if}}>
-		<option value>Please select a job position</option>
+		<option value="">Please select a job position</option>
 		{{#each options as |option|}}
-		<option value="{{option.code}}"{{#if ../value}}{{#ifEquals option.code ../value }} selected{{/ifEquals}}{{/if}}>{{option.description}}</option>
+		<option {{#if ../value}}{{#ifEquals option.code ../value }} selected{{/ifEquals}}{{/if}} value="{{option.code}}">{{option.description}}</option>
 		{{/each}}
 	</select>
 
