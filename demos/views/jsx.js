@@ -4,8 +4,8 @@ function main ({title}) {
 <html>
 	<head>
 		<title>${title}</title>
-		<link rel="stylesheet" href="/public/demo.css">
 		<link rel="stylesheet" href="/public/main.css">
+		<link rel="stylesheet" href="/public/component.css">
 	</head>
 
 	<body style="background-color:#fff1e5;" id="demo-page">
