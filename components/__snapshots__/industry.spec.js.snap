@@ -1,0 +1,959 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Industry can render a disable select 1`] = `
+<div id="industryField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="select"
+     data-ui-item-name="industry"
+     data-validate="required"
+>
+  <label for="industry"
+         class="o-forms__label"
+  >
+    In which industry do you work?
+  </label>
+  <select id="industry"
+          name="industry"
+          class="o-forms__select js-field__input js-item__value"
+          data-trackable="field-industry"
+          aria-required="true"
+          required
+          disabled
+  >
+    <option>
+      Please select an industry
+    </option>
+    <option value="ACC">
+      Accountancy &amp; tax advisory
+    </option>
+    <option value="DEF">
+      Aerospace &amp; defence
+    </option>
+    <option value="CAR">
+      Automobiles
+    </option>
+    <option value="BKG">
+      Banking
+    </option>
+    <option value="RES">
+      Basic resources/mining
+    </option>
+    <option value="PHC">
+      Chemicals
+    </option>
+    <option value="MAP">
+      Comms/Publishing/Media
+    </option>
+    <option value="BSE">
+      Consulting/business services
+    </option>
+    <option value="EDU">
+      Education/Academia
+    </option>
+    <option value="ENU">
+      Energy/utilities
+    </option>
+    <option value="ENC">
+      Engineering/construction
+    </option>
+    <option value="FSE">
+      Financial services
+    </option>
+    <option value="FOO">
+      Food &amp; beverages
+    </option>
+    <option value="FAM">
+      Fund/asset management
+    </option>
+    <option value="GPV">
+      Govt/public service/NGO
+    </option>
+    <option value="HEA">
+      Health &amp; pharmaceuticals
+    </option>
+    <option value="ITT">
+      IT/Tech/Telecoms
+    </option>
+    <option value="IT">
+      IT/computing
+    </option>
+    <option value="MAN">
+      Industrial goods &amp; services
+    </option>
+    <option value="INS">
+      Insurance
+    </option>
+    <option value="LAW">
+      Legal services
+    </option>
+    <option value="OTH">
+      N/A
+    </option>
+    <option value="OGM">
+      Oil/gas/mining
+    </option>
+    <option value="RET">
+      Personal &amp; household goods
+    </option>
+    <option value="REA">
+      Property
+    </option>
+    <option value="RTL">
+      Retail
+    </option>
+    <option value="TEL">
+      Telecommunications
+    </option>
+    <option value="TIE">
+      Trade/import/export
+    </option>
+    <option value="TRL">
+      Transport/logistics
+    </option>
+    <option value="TRV">
+      Travel &amp; leisure
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your company‘s industry
+  </div>
+</div>
+`;
+
+exports[`Industry can render a disable select 2`] = `
+<div id="industryField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="select"
+     data-ui-item-name="industry"
+     data-validate="required"
+>
+  <label for="industry"
+         class="o-forms__label"
+  >
+    In which industry do you work?
+  </label>
+  <select id="industry"
+          name="industry"
+          class="o-forms__select js-field__input js-item__value"
+          data-trackable="field-industry"
+          aria-required="true"
+          required
+          disabled
+  >
+    <option>
+      Please select an industry
+    </option>
+    <option value="ACC">
+      Accountancy &amp; tax advisory
+    </option>
+    <option value="DEF">
+      Aerospace &amp; defence
+    </option>
+    <option value="CAR">
+      Automobiles
+    </option>
+    <option value="BKG">
+      Banking
+    </option>
+    <option value="RES">
+      Basic resources/mining
+    </option>
+    <option value="PHC">
+      Chemicals
+    </option>
+    <option value="MAP">
+      Comms/Publishing/Media
+    </option>
+    <option value="BSE">
+      Consulting/business services
+    </option>
+    <option value="EDU">
+      Education/Academia
+    </option>
+    <option value="ENU">
+      Energy/utilities
+    </option>
+    <option value="ENC">
+      Engineering/construction
+    </option>
+    <option value="FSE">
+      Financial services
+    </option>
+    <option value="FOO">
+      Food &amp; beverages
+    </option>
+    <option value="FAM">
+      Fund/asset management
+    </option>
+    <option value="GPV">
+      Govt/public service/NGO
+    </option>
+    <option value="HEA">
+      Health &amp; pharmaceuticals
+    </option>
+    <option value="ITT">
+      IT/Tech/Telecoms
+    </option>
+    <option value="IT">
+      IT/computing
+    </option>
+    <option value="MAN">
+      Industrial goods &amp; services
+    </option>
+    <option value="INS">
+      Insurance
+    </option>
+    <option value="LAW">
+      Legal services
+    </option>
+    <option value="OTH">
+      N/A
+    </option>
+    <option value="OGM">
+      Oil/gas/mining
+    </option>
+    <option value="RET">
+      Personal &amp; household goods
+    </option>
+    <option value="REA">
+      Property
+    </option>
+    <option value="RTL">
+      Retail
+    </option>
+    <option value="TEL">
+      Telecommunications
+    </option>
+    <option value="TIE">
+      Trade/import/export
+    </option>
+    <option value="TRL">
+      Transport/logistics
+    </option>
+    <option value="TRV">
+      Travel &amp; leisure
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your company‘s industry
+  </div>
+</div>
+`;
+
+exports[`Industry can render an error message 1`] = `
+<div id="industryField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="select"
+     data-ui-item-name="industry"
+     data-validate="required"
+>
+  <label for="industry"
+         class="o-forms__label"
+  >
+    In which industry do you work?
+  </label>
+  <select id="industry"
+          name="industry"
+          class="o-forms__select js-field__input js-item__value"
+          data-trackable="field-industry"
+          aria-required="true"
+          required
+  >
+    <option>
+      Please select an industry
+    </option>
+    <option value="ACC">
+      Accountancy &amp; tax advisory
+    </option>
+    <option value="DEF">
+      Aerospace &amp; defence
+    </option>
+    <option value="CAR">
+      Automobiles
+    </option>
+    <option value="BKG">
+      Banking
+    </option>
+    <option value="RES">
+      Basic resources/mining
+    </option>
+    <option value="PHC">
+      Chemicals
+    </option>
+    <option value="MAP">
+      Comms/Publishing/Media
+    </option>
+    <option value="BSE">
+      Consulting/business services
+    </option>
+    <option value="EDU">
+      Education/Academia
+    </option>
+    <option value="ENU">
+      Energy/utilities
+    </option>
+    <option value="ENC">
+      Engineering/construction
+    </option>
+    <option value="FSE">
+      Financial services
+    </option>
+    <option value="FOO">
+      Food &amp; beverages
+    </option>
+    <option value="FAM">
+      Fund/asset management
+    </option>
+    <option value="GPV">
+      Govt/public service/NGO
+    </option>
+    <option value="HEA">
+      Health &amp; pharmaceuticals
+    </option>
+    <option value="ITT">
+      IT/Tech/Telecoms
+    </option>
+    <option value="IT">
+      IT/computing
+    </option>
+    <option value="MAN">
+      Industrial goods &amp; services
+    </option>
+    <option value="INS">
+      Insurance
+    </option>
+    <option value="LAW">
+      Legal services
+    </option>
+    <option value="OTH">
+      N/A
+    </option>
+    <option value="OGM">
+      Oil/gas/mining
+    </option>
+    <option value="RET">
+      Personal &amp; household goods
+    </option>
+    <option value="REA">
+      Property
+    </option>
+    <option value="RTL">
+      Retail
+    </option>
+    <option value="TEL">
+      Telecommunications
+    </option>
+    <option value="TIE">
+      Trade/import/export
+    </option>
+    <option value="TRL">
+      Transport/logistics
+    </option>
+    <option value="TRV">
+      Travel &amp; leisure
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your company‘s industry
+  </div>
+</div>
+`;
+
+exports[`Industry can render an error message 2`] = `
+<div id="industryField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="select"
+     data-ui-item-name="industry"
+     data-validate="required"
+>
+  <label for="industry"
+         class="o-forms__label"
+  >
+    In which industry do you work?
+  </label>
+  <select id="industry"
+          name="industry"
+          class="o-forms__select js-field__input js-item__value"
+          data-trackable="field-industry"
+          aria-required="true"
+          required
+  >
+    <option>
+      Please select an industry
+    </option>
+    <option value="ACC">
+      Accountancy &amp; tax advisory
+    </option>
+    <option value="DEF">
+      Aerospace &amp; defence
+    </option>
+    <option value="CAR">
+      Automobiles
+    </option>
+    <option value="BKG">
+      Banking
+    </option>
+    <option value="RES">
+      Basic resources/mining
+    </option>
+    <option value="PHC">
+      Chemicals
+    </option>
+    <option value="MAP">
+      Comms/Publishing/Media
+    </option>
+    <option value="BSE">
+      Consulting/business services
+    </option>
+    <option value="EDU">
+      Education/Academia
+    </option>
+    <option value="ENU">
+      Energy/utilities
+    </option>
+    <option value="ENC">
+      Engineering/construction
+    </option>
+    <option value="FSE">
+      Financial services
+    </option>
+    <option value="FOO">
+      Food &amp; beverages
+    </option>
+    <option value="FAM">
+      Fund/asset management
+    </option>
+    <option value="GPV">
+      Govt/public service/NGO
+    </option>
+    <option value="HEA">
+      Health &amp; pharmaceuticals
+    </option>
+    <option value="ITT">
+      IT/Tech/Telecoms
+    </option>
+    <option value="IT">
+      IT/computing
+    </option>
+    <option value="MAN">
+      Industrial goods &amp; services
+    </option>
+    <option value="INS">
+      Insurance
+    </option>
+    <option value="LAW">
+      Legal services
+    </option>
+    <option value="OTH">
+      N/A
+    </option>
+    <option value="OGM">
+      Oil/gas/mining
+    </option>
+    <option value="RET">
+      Personal &amp; household goods
+    </option>
+    <option value="REA">
+      Property
+    </option>
+    <option value="RTL">
+      Retail
+    </option>
+    <option value="TEL">
+      Telecommunications
+    </option>
+    <option value="TIE">
+      Trade/import/export
+    </option>
+    <option value="TRL">
+      Transport/logistics
+    </option>
+    <option value="TRV">
+      Travel &amp; leisure
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your company‘s industry
+  </div>
+</div>
+`;
+
+exports[`Industry can render an initial selected value 1`] = `
+<div id="industryField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="select"
+     data-ui-item-name="industry"
+     data-validate="required"
+>
+  <label for="industry"
+         class="o-forms__label"
+  >
+    In which industry do you work?
+  </label>
+  <select id="industry"
+          name="industry"
+          class="o-forms__select js-field__input js-item__value"
+          data-trackable="field-industry"
+          aria-required="true"
+          required
+  >
+    <option>
+      Please select an industry
+    </option>
+    <option value="ACC">
+      Accountancy &amp; tax advisory
+    </option>
+    <option selected
+            value="DEF"
+    >
+      Aerospace &amp; defence
+    </option>
+    <option value="CAR">
+      Automobiles
+    </option>
+    <option value="BKG">
+      Banking
+    </option>
+    <option value="RES">
+      Basic resources/mining
+    </option>
+    <option value="PHC">
+      Chemicals
+    </option>
+    <option value="MAP">
+      Comms/Publishing/Media
+    </option>
+    <option value="BSE">
+      Consulting/business services
+    </option>
+    <option value="EDU">
+      Education/Academia
+    </option>
+    <option value="ENU">
+      Energy/utilities
+    </option>
+    <option value="ENC">
+      Engineering/construction
+    </option>
+    <option value="FSE">
+      Financial services
+    </option>
+    <option value="FOO">
+      Food &amp; beverages
+    </option>
+    <option value="FAM">
+      Fund/asset management
+    </option>
+    <option value="GPV">
+      Govt/public service/NGO
+    </option>
+    <option value="HEA">
+      Health &amp; pharmaceuticals
+    </option>
+    <option value="ITT">
+      IT/Tech/Telecoms
+    </option>
+    <option value="IT">
+      IT/computing
+    </option>
+    <option value="MAN">
+      Industrial goods &amp; services
+    </option>
+    <option value="INS">
+      Insurance
+    </option>
+    <option value="LAW">
+      Legal services
+    </option>
+    <option value="OTH">
+      N/A
+    </option>
+    <option value="OGM">
+      Oil/gas/mining
+    </option>
+    <option value="RET">
+      Personal &amp; household goods
+    </option>
+    <option value="REA">
+      Property
+    </option>
+    <option value="RTL">
+      Retail
+    </option>
+    <option value="TEL">
+      Telecommunications
+    </option>
+    <option value="TIE">
+      Trade/import/export
+    </option>
+    <option value="TRL">
+      Transport/logistics
+    </option>
+    <option value="TRV">
+      Travel &amp; leisure
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your company‘s industry
+  </div>
+</div>
+`;
+
+exports[`Industry can render an initial selected value 2`] = `
+<div id="industryField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="select"
+     data-ui-item-name="industry"
+     data-validate="required"
+>
+  <label for="industry"
+         class="o-forms__label"
+  >
+    In which industry do you work?
+  </label>
+  <select id="industry"
+          name="industry"
+          class="o-forms__select js-field__input js-item__value"
+          data-trackable="field-industry"
+          aria-required="true"
+          required
+  >
+    <option>
+      Please select an industry
+    </option>
+    <option value="ACC">
+      Accountancy &amp; tax advisory
+    </option>
+    <option selected
+            value="DEF"
+    >
+      Aerospace &amp; defence
+    </option>
+    <option value="CAR">
+      Automobiles
+    </option>
+    <option value="BKG">
+      Banking
+    </option>
+    <option value="RES">
+      Basic resources/mining
+    </option>
+    <option value="PHC">
+      Chemicals
+    </option>
+    <option value="MAP">
+      Comms/Publishing/Media
+    </option>
+    <option value="BSE">
+      Consulting/business services
+    </option>
+    <option value="EDU">
+      Education/Academia
+    </option>
+    <option value="ENU">
+      Energy/utilities
+    </option>
+    <option value="ENC">
+      Engineering/construction
+    </option>
+    <option value="FSE">
+      Financial services
+    </option>
+    <option value="FOO">
+      Food &amp; beverages
+    </option>
+    <option value="FAM">
+      Fund/asset management
+    </option>
+    <option value="GPV">
+      Govt/public service/NGO
+    </option>
+    <option value="HEA">
+      Health &amp; pharmaceuticals
+    </option>
+    <option value="ITT">
+      IT/Tech/Telecoms
+    </option>
+    <option value="IT">
+      IT/computing
+    </option>
+    <option value="MAN">
+      Industrial goods &amp; services
+    </option>
+    <option value="INS">
+      Insurance
+    </option>
+    <option value="LAW">
+      Legal services
+    </option>
+    <option value="OTH">
+      N/A
+    </option>
+    <option value="OGM">
+      Oil/gas/mining
+    </option>
+    <option value="RET">
+      Personal &amp; household goods
+    </option>
+    <option value="REA">
+      Property
+    </option>
+    <option value="RTL">
+      Retail
+    </option>
+    <option value="TEL">
+      Telecommunications
+    </option>
+    <option value="TIE">
+      Trade/import/export
+    </option>
+    <option value="TRL">
+      Transport/logistics
+    </option>
+    <option value="TRV">
+      Travel &amp; leisure
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your company‘s industry
+  </div>
+</div>
+`;
+
+exports[`Industry render a select with a label 1`] = `
+<div id="industryField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="select"
+     data-ui-item-name="industry"
+     data-validate="required"
+>
+  <label for="industry"
+         class="o-forms__label"
+  >
+    In which industry do you work?
+  </label>
+  <select id="industry"
+          name="industry"
+          class="o-forms__select js-field__input js-item__value"
+          data-trackable="field-industry"
+          aria-required="true"
+          required
+  >
+    <option>
+      Please select an industry
+    </option>
+    <option value="ACC">
+      Accountancy &amp; tax advisory
+    </option>
+    <option value="DEF">
+      Aerospace &amp; defence
+    </option>
+    <option value="CAR">
+      Automobiles
+    </option>
+    <option value="BKG">
+      Banking
+    </option>
+    <option value="RES">
+      Basic resources/mining
+    </option>
+    <option value="PHC">
+      Chemicals
+    </option>
+    <option value="MAP">
+      Comms/Publishing/Media
+    </option>
+    <option value="BSE">
+      Consulting/business services
+    </option>
+    <option value="EDU">
+      Education/Academia
+    </option>
+    <option value="ENU">
+      Energy/utilities
+    </option>
+    <option value="ENC">
+      Engineering/construction
+    </option>
+    <option value="FSE">
+      Financial services
+    </option>
+    <option value="FOO">
+      Food &amp; beverages
+    </option>
+    <option value="FAM">
+      Fund/asset management
+    </option>
+    <option value="GPV">
+      Govt/public service/NGO
+    </option>
+    <option value="HEA">
+      Health &amp; pharmaceuticals
+    </option>
+    <option value="ITT">
+      IT/Tech/Telecoms
+    </option>
+    <option value="IT">
+      IT/computing
+    </option>
+    <option value="MAN">
+      Industrial goods &amp; services
+    </option>
+    <option value="INS">
+      Insurance
+    </option>
+    <option value="LAW">
+      Legal services
+    </option>
+    <option value="OTH">
+      N/A
+    </option>
+    <option value="OGM">
+      Oil/gas/mining
+    </option>
+    <option value="RET">
+      Personal &amp; household goods
+    </option>
+    <option value="REA">
+      Property
+    </option>
+    <option value="RTL">
+      Retail
+    </option>
+    <option value="TEL">
+      Telecommunications
+    </option>
+    <option value="TIE">
+      Trade/import/export
+    </option>
+    <option value="TRL">
+      Transport/logistics
+    </option>
+    <option value="TRV">
+      Travel &amp; leisure
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your company‘s industry
+  </div>
+</div>
+`;
+
+exports[`Industry render a select with a label 2`] = `
+<div id="industryField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="select"
+     data-ui-item-name="industry"
+     data-validate="required"
+>
+  <label for="industry"
+         class="o-forms__label"
+  >
+    In which industry do you work?
+  </label>
+  <select id="industry"
+          name="industry"
+          class="o-forms__select js-field__input js-item__value"
+          data-trackable="field-industry"
+          aria-required="true"
+          required
+  >
+    <option>
+      Please select an industry
+    </option>
+    <option value="ACC">
+      Accountancy &amp; tax advisory
+    </option>
+    <option value="DEF">
+      Aerospace &amp; defence
+    </option>
+    <option value="CAR">
+      Automobiles
+    </option>
+    <option value="BKG">
+      Banking
+    </option>
+    <option value="RES">
+      Basic resources/mining
+    </option>
+    <option value="PHC">
+      Chemicals
+    </option>
+    <option value="MAP">
+      Comms/Publishing/Media
+    </option>
+    <option value="BSE">
+      Consulting/business services
+    </option>
+    <option value="EDU">
+      Education/Academia
+    </option>
+    <option value="ENU">
+      Energy/utilities
+    </option>
+    <option value="ENC">
+      Engineering/construction
+    </option>
+    <option value="FSE">
+      Financial services
+    </option>
+    <option value="FOO">
+      Food &amp; beverages
+    </option>
+    <option value="FAM">
+      Fund/asset management
+    </option>
+    <option value="GPV">
+      Govt/public service/NGO
+    </option>
+    <option value="HEA">
+      Health &amp; pharmaceuticals
+    </option>
+    <option value="ITT">
+      IT/Tech/Telecoms
+    </option>
+    <option value="IT">
+      IT/computing
+    </option>
+    <option value="MAN">
+      Industrial goods &amp; services
+    </option>
+    <option value="INS">
+      Insurance
+    </option>
+    <option value="LAW">
+      Legal services
+    </option>
+    <option value="OTH">
+      N/A
+    </option>
+    <option value="OGM">
+      Oil/gas/mining
+    </option>
+    <option value="RET">
+      Personal &amp; household goods
+    </option>
+    <option value="REA">
+      Property
+    </option>
+    <option value="RTL">
+      Retail
+    </option>
+    <option value="TEL">
+      Telecommunications
+    </option>
+    <option value="TIE">
+      Trade/import/export
+    </option>
+    <option value="TRL">
+      Transport/logistics
+    </option>
+    <option value="TRV">
+      Travel &amp; leisure
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your company‘s industry
+  </div>
+</div>
+`;

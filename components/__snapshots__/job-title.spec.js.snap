@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JobTitle can render a disable input 1`] = `
+<div id="jobTitleField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="jobTitle"
+     data-validate="required"
+>
+  <label for="jobTitle"
+         class="o-forms__label"
+  >
+    Job title
+  </label>
+  <input type="text"
+         id="jobTitle"
+         name="jobTitle"
+         placeholder="Enter your job title"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="job-title"
+         aria-required="true"
+         required
+         disabled
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter your job title.
+  </div>
+</div>
+`;
+
+exports[`JobTitle can render a disable input 2`] = `
+<div id="jobTitleField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="jobTitle"
+     data-validate="required"
+>
+  <label for="jobTitle"
+         class="o-forms__label"
+  >
+    Job title
+  </label>
+  <input type="text"
+         id="jobTitle"
+         name="jobTitle"
+         placeholder="Enter your job title"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="job-title"
+         aria-required="true"
+         required
+         disabled
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter your job title.
+  </div>
+</div>
+`;
+
+exports[`JobTitle can render an error message 1`] = `
+<div id="jobTitleField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="jobTitle"
+     data-validate="required"
+>
+  <label for="jobTitle"
+         class="o-forms__label"
+  >
+    Job title
+  </label>
+  <input type="text"
+         id="jobTitle"
+         name="jobTitle"
+         placeholder="Enter your job title"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="job-title"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter your job title.
+  </div>
+</div>
+`;
+
+exports[`JobTitle can render an error message 2`] = `
+<div id="jobTitleField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="jobTitle"
+     data-validate="required"
+>
+  <label for="jobTitle"
+         class="o-forms__label"
+  >
+    Job title
+  </label>
+  <input type="text"
+         id="jobTitle"
+         name="jobTitle"
+         placeholder="Enter your job title"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="job-title"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter your job title.
+  </div>
+</div>
+`;
+
+exports[`JobTitle can render an initial selected value 1`] = `
+<div id="jobTitleField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="jobTitle"
+     data-validate="required"
+>
+  <label for="jobTitle"
+         class="o-forms__label"
+  >
+    Job title
+  </label>
+  <input type="text"
+         id="jobTitle"
+         name="jobTitle"
+         placeholder="Enter your job title"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="job-title"
+         aria-required="true"
+         required
+         value="Super hero"
+  >
+  <div class="o-forms__errortext">
+    Please enter your job title.
+  </div>
+</div>
+`;
+
+exports[`JobTitle can render an initial selected value 2`] = `
+<div id="jobTitleField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="jobTitle"
+     data-validate="required"
+>
+  <label for="jobTitle"
+         class="o-forms__label"
+  >
+    Job title
+  </label>
+  <input type="text"
+         id="jobTitle"
+         name="jobTitle"
+         placeholder="Enter your job title"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="job-title"
+         aria-required="true"
+         required
+         value="Super hero"
+  >
+  <div class="o-forms__errortext">
+    Please enter your job title.
+  </div>
+</div>
+`;
+
+exports[`JobTitle render a select with a label 1`] = `
+<div id="jobTitleField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="jobTitle"
+     data-validate="required"
+>
+  <label for="jobTitle"
+         class="o-forms__label"
+  >
+    Job title
+  </label>
+  <input type="text"
+         id="jobTitle"
+         name="jobTitle"
+         placeholder="Enter your job title"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="job-title"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter your job title.
+  </div>
+</div>
+`;
+
+exports[`JobTitle render a select with a label 2`] = `
+<div id="jobTitleField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="jobTitle"
+     data-validate="required"
+>
+  <label for="jobTitle"
+         class="o-forms__label"
+  >
+    Job title
+  </label>
+  <input type="text"
+         id="jobTitle"
+         name="jobTitle"
+         placeholder="Enter your job title"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="job-title"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter your job title.
+  </div>
+</div>
+`;
