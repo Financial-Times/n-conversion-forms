@@ -1,6 +1,6 @@
 const { countries } = require('n-common-static-data').billingCountries;
 
-const MINIMUM_TO_GROUP = 50;
+const MINIMUM_TO_GROUP = 20;
 const MINIMUM_TO_SHOW_GROUPS = 2;
 
 module.exports = function ({ hash = {}, fn }) {
