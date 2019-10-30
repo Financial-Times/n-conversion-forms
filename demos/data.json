@@ -225,22 +225,23 @@
     "params": {
       "options": [
         {
-          "name": "trial",
-          "value": "Test",
-          "description": "The quick brown fox jumped over the lazy hare."
-        }, {
           "name": "annual",
           "value": "Test 1",
           "description": "The <strong>quick</strong> brown fox<br />jumped over the lazy <a href=\"#\">hare</a>.",
-          "selected": true
+          "trialPrice": "£1.00",
+          "selected": true,
+          "isTrial": true
         }, {
           "name": "quarterly",
           "value": "Test 2",
           "description": "The <strong>quick</strong> brown fox<br />jumped over the lazy <a href=\"#\">hare</a>.",
-          "discount": "25%"
+          "discount": "25%",
+          "trialPrice": "£1.00",
+          "isTrial": true
         }, {
           "name": "monthly",
           "value": "Test 3",
+          "price": "$100.00",
           "description": "The <strong>quick</strong> brown fox<br />jumped over the lazy <a href=\"#\">hare</a>."
         }
       ]
