@@ -102,6 +102,10 @@
 	&__terms {
 		@include oTypographySans($scale: 0);
 		color: oColorsGetPaletteColor('black-80');
+
+		&--small {
+			@include oTypographySans($scale: -1);
+		}
 	}
 
 	&__header {
