@@ -43,11 +43,13 @@
 		We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
 		See our <a class="ncf__link ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="_top" rel="noopener">Terms &amp; Conditions</a> for details on how to cancel.
 	</p>
+	{{#unless hideCta}}
 	<p class="ncf__center">
-	{{#if isPrintOnly}}
-		<a href="/todaysnewspaper " class="ncf__button ncf__button--submit">Explore our E-Paper</a>
-	{{else}}
-		<a href="/" class="ncf__button ncf__button--submit">Start exploring</a>
-	{{/if}}
+		{{#if isPrintOnly}}
+			<a href="/todaysnewspaper " class="ncf__button ncf__button--submit">Explore our E-Paper</a>
+		{{else}}
+			<a href="/" class="ncf__button ncf__button--submit">Start exploring</a>
+		{{/if}}
 	</p>
+	{{/unless}}
 </div>

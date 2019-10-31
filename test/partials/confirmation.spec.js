@@ -97,6 +97,26 @@ describe('confirmation template', () => {
 		expect($.text()).to.contain(buttonText);
 	});
 
+	it('should not display a CTA if hideCta is set', () => {
+		const isPrintOnly = false;
+		const hideCta = true;
+		const $ = context.template({
+			isPrintOnly,
+			hideCta
+		});
+		expect($.text()).to.not.contain('ncf__button--submit');
+	});
+
+	it('should not display a CTA if isPrintOnly and hideCta is set', () => {
+		const isPrintOnly = true;
+		const hideCta = true;
+		const $ = context.template({
+			isPrintOnly,
+			hideCta
+		});
+		expect($.text()).to.not.contain('ncf__button--submit');
+	});
+
 	it('should add a data-signup-is-trial="true" attribute for floodlight pixel tracking', () => {
 		const $ = context.template({
 			isTrial: true
