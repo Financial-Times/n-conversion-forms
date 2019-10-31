@@ -6,6 +6,7 @@ import LastName from './last-name';
 import Message from './message';
 import Password from './password';
 import Phone from './phone';
+import Submit from './submit';
 
 export {
 	BillingPostcode,
@@ -16,4 +17,5 @@ export {
 	Message,
 	Password,
 	Phone,
+	Submit
 };

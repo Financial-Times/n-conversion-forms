@@ -16,6 +16,7 @@ function initDemo () {
 			<ncf.Message {...fixture['message'].params}/>
 			<ncf.Password />
 			<ncf.Phone />
+			<ncf.Submit />
 		</React.Fragment>
 	;
 	ReactDOM.render(element, container);

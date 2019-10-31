@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Submit renders a submit element with a back button link 1`] = `
+<div class="o-forms o-forms--wide ncf__field ncf__field--flex">
+  <a class="ncf__button"
+     href="http://bar.com"
+     target="_parent"
+     data-trackable="link"
+  >
+    Back
+  </a>
+  <button id="submitButton"
+          class="ncf__button ncf__button--submit"
+          data-trackable="submit"
+          type="submit"
+  >
+    Continue
+  </button>
+</div>
+`;
+
+exports[`Submit renders a submit element with a back button link 2`] = `
+<div class="o-forms o-forms--wide ncf__field ncf__field--flex">
+  <a class="ncf__button"
+     href="http://bar.com"
+     target="_parent"
+     data-trackable="link"
+  >
+    Back
+  </a>
+  <button id="submitButton"
+          class="ncf__button ncf__button--submit"
+          data-trackable="submit"
+          type="submit"
+  >
+    Continue
+  </button>
+</div>
+`;
+
+exports[`Submit renders a submit element with a custom button ID 1`] = `
+<div class="o-forms o-forms--wide ncf__field">
+  <button id="foo"
+          class="ncf__button ncf__button--submit"
+          data-trackable="submit"
+          type="submit"
+  >
+    Continue
+  </button>
+</div>
+`;
+
+exports[`Submit renders a submit element with a custom button ID 2`] = `
+<div class="o-forms o-forms--wide ncf__field">
+  <button id="foo"
+          class="ncf__button ncf__button--submit"
+          data-trackable="submit"
+          type="submit"
+  >
+    Continue
+  </button>
+</div>
+`;
+
+exports[`Submit renders a submit element with a custom button label 1`] = `
+<div class="o-forms o-forms--wide ncf__field">
+  <button id="submitButton"
+          class="ncf__button ncf__button--submit"
+          data-trackable="submit"
+          type="submit"
+  >
+    Baz
+  </button>
+</div>
+`;
+
+exports[`Submit renders a submit element with a custom button label 2`] = `
+<div class="o-forms o-forms--wide ncf__field">
+  <button id="submitButton"
+          class="ncf__button ncf__button--submit"
+          data-trackable="submit"
+          type="submit"
+  >
+    Baz
+  </button>
+</div>
+`;
+
+exports[`Submit renders a submit element with a disabled button 1`] = `
+<div class="o-forms o-forms--wide ncf__field">
+  <button id="submitButton"
+          class="ncf__button ncf__button--submit"
+          data-trackable="submit"
+          type="submit"
+          disabled
+  >
+    Continue
+  </button>
+</div>
+`;
+
+exports[`Submit renders a submit element with a disabled button 2`] = `
+<div class="o-forms o-forms--wide ncf__field">
+  <button id="submitButton"
+          class="ncf__button ncf__button--submit"
+          data-trackable="submit"
+          type="submit"
+          disabled
+  >
+    Continue
+  </button>
+</div>
+`;
+
+exports[`Submit renders a submit element with a style class to enable centre alignment 1`] = `
+<div class="o-forms o-forms--wide ncf__field ncf__field--center">
+  <button id="submitButton"
+          class="ncf__button ncf__button--submit"
+          data-trackable="submit"
+          type="submit"
+  >
+    Continue
+  </button>
+</div>
+`;
+
+exports[`Submit renders a submit element with a style class to enable centre alignment 2`] = `
+<div class="o-forms o-forms--wide ncf__field ncf__field--center">
+  <button id="submitButton"
+          class="ncf__button ncf__button--submit"
+          data-trackable="submit"
+          type="submit"
+  >
+    Continue
+  </button>
+</div>
+`;
+
+exports[`Submit renders a submit element with default props 1`] = `
+<div class="o-forms o-forms--wide ncf__field">
+  <button id="submitButton"
+          class="ncf__button ncf__button--submit"
+          data-trackable="submit"
+          type="submit"
+  >
+    Continue
+  </button>
+</div>
+`;
+
+exports[`Submit renders a submit element with default props 2`] = `
+<div class="o-forms o-forms--wide ncf__field">
+  <button id="submitButton"
+          class="ncf__button ncf__button--submit"
+          data-trackable="submit"
+          type="submit"
+  >
+    Continue
+  </button>
+</div>
+`;
