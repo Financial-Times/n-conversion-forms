@@ -15,7 +15,7 @@
 				Unless you cancel during your trial you will be billed <span class="ncf__payment-term__price">{{price}}</span> per year after the trial period.
 				{{else}}
 				Single <span class="ncf__payment-term__price ncf__strong">{{price}}</span> payment
-				{{#if weeklyPrice}}<br /><span class="ncf__payment-term__weekly-price">That's just {{weeklyPrice}} per week</span>{{/if}}
+				{{#if weeklyPrice}}<br />That's just <span class="ncf__payment-term__weekly-price">{{weeklyPrice}}</span> per week{{/if}}
 				{{!-- Remove this discount text temporarily in favour of weekly price --}}
 				<!-- {{#unless discount}}<br />Save up to 25% when you pay annually{{/unless}} -->
 				{{/if}}

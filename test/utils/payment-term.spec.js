@@ -112,6 +112,16 @@ describe('PaymentTerm', () => {
 				}]);
 				expect(trialPriceStub.innerHTML).to.equal('£1.01');
 			});
+
+			it('should replace the weekly price with the correct updated weekly price', () => {
+				const weeklyPriceStub = {};
+				elementStub.querySelector.withArgs('.ncf__payment-term__weekly-price').returns(weeklyPriceStub);
+				paymentTerm.updateOptions([{
+					value: 'test',
+					weeklyPrice: '£1.01'
+				}]);
+				expect(weeklyPriceStub.innerHTML).to.equal('£1.01');
+			});
 		});
 	});
 });
