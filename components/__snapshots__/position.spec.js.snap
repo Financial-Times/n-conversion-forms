@@ -10,7 +10,7 @@ exports[`Position can render a disable select 1`] = `
   <label for="position"
          class="o-forms__label"
   >
-    What&#x27;s your job position?
+    What’s your job position?
   </label>
   <select id="position"
           name="position"
@@ -103,7 +103,7 @@ exports[`Position can render a disable select 2`] = `
   <label for="position"
          class="o-forms__label"
   >
-    What&#x27;s your job position?
+    What’s your job position?
   </label>
   <select id="position"
           name="position"
@@ -196,7 +196,7 @@ exports[`Position can render an error message 1`] = `
   <label for="position"
          class="o-forms__label"
   >
-    What&#x27;s your job position?
+    What’s your job position?
   </label>
   <select id="position"
           name="position"
@@ -288,7 +288,7 @@ exports[`Position can render an error message 2`] = `
   <label for="position"
          class="o-forms__label"
   >
-    What&#x27;s your job position?
+    What’s your job position?
   </label>
   <select id="position"
           name="position"
@@ -380,7 +380,7 @@ exports[`Position can render an initial selected value 1`] = `
   <label for="position"
          class="o-forms__label"
   >
-    What&#x27;s your job position?
+    What’s your job position?
   </label>
   <select id="position"
           name="position"
@@ -474,7 +474,7 @@ exports[`Position can render an initial selected value 2`] = `
   <label for="position"
          class="o-forms__label"
   >
-    What&#x27;s your job position?
+    What’s your job position?
   </label>
   <select id="position"
           name="position"
@@ -568,7 +568,7 @@ exports[`Position render a select with a label 1`] = `
   <label for="position"
          class="o-forms__label"
   >
-    What&#x27;s your job position?
+    What’s your job position?
   </label>
   <select id="position"
           name="position"
@@ -660,7 +660,7 @@ exports[`Position render a select with a label 2`] = `
   <label for="position"
          class="o-forms__label"
   >
-    What&#x27;s your job position?
+    What’s your job position?
   </label>
   <select id="position"
           name="position"
