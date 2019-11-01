@@ -33,6 +33,7 @@ describe('position template', () => {
 		const $ = context.template({});
 		expect($('select').find('option').length).to.equal(1);
 
+		expect($('select option').first().attr('value')).to.equal('');
 		expect($('select option').first().text()).to.equal('Please select a job position');
 	});
 
