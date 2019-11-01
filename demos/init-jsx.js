@@ -12,10 +12,13 @@ function initDemo () {
 			<ncf.DeliveryPostcode postcodeReference={'delivery postcode'}/>
 			<ncf.Email />
 			<ncf.FirstName />
+			<ncf.Industry />
+			<ncf.JobTitle />
 			<ncf.LastName />
 			<ncf.Message {...fixture['message'].params}/>
 			<ncf.Password />
 			<ncf.Phone />
+			<ncf.Position />
 			<ncf.Submit />
 		</React.Fragment>
 	;
