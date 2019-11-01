@@ -14,6 +14,7 @@ function initDemo () {
 			<ncf.FirstName />
 			<ncf.Industry />
 			<ncf.JobTitle />
+			<ncf.Form />
 			<ncf.LastName />
 			<ncf.Message {...fixture['message'].params}/>
 			<ncf.Password />

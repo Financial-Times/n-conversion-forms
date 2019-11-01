@@ -4,6 +4,7 @@ import Email from './email';
 import FirstName from './first-name';
 import Industry from './industry';
 import JobTitle from './job-title';
+import Form from './form';
 import LastName from './last-name';
 import Message from './message';
 import Password from './password';
@@ -18,6 +19,7 @@ export {
 	FirstName,
 	Industry,
 	JobTitle,
+	Form,
 	LastName,
 	Message,
 	Password,

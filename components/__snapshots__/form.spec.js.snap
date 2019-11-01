@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form renders a form element with custom form action value 1`] = `
+<div class="ncf__wrapper">
+  <form class="ncf"
+        action="http://foo.com/search"
+        method="POST"
+        novalidate
+  >
+    <div id="fields_test">
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Form renders a form element with custom form action value 2`] = `
+<div class="ncf__wrapper">
+  <form class="ncf"
+        action="http://foo.com/search"
+        method="POST"
+        novalidate
+  >
+    <div id="fields_test">
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Form renders a form element with custom form method value 1`] = `
+<div class="ncf__wrapper">
+  <form class="ncf"
+        action
+        method="GET"
+        novalidate
+  >
+    <div id="fields_test">
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Form renders a form element with custom form method value 2`] = `
+<div class="ncf__wrapper">
+  <form class="ncf"
+        action
+        method="GET"
+        novalidate
+  >
+    <div id="fields_test">
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Form renders a form element with default props 1`] = `
+<div class="ncf__wrapper">
+  <form class="ncf"
+        action
+        method="POST"
+        novalidate
+  >
+    <div id="fields_test">
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Form renders a form element with default props 2`] = `
+<div class="ncf__wrapper">
+  <form class="ncf"
+        action
+        method="POST"
+        novalidate
+  >
+    <div id="fields_test">
+    </div>
+  </form>
+</div>
+`;
