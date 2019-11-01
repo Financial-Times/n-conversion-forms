@@ -33,6 +33,7 @@ function initDemo () {
 			<ncf.Phone />
 			<ncf.Position />
 			<ncf.RegistrationConfirmation />
+			<ncf.Responsibility />
 			<ncf.Submit />
 			<ncf.TrialBanner />
 		</React.Fragment>

@@ -10,7 +10,8 @@
 					{{#if isDisabled}}disabled{{/if}}>
 		<option value>Please select a job responsibility</option>
 		{{#each options as |option|}}
-		<option value="{{option.code}}"{{#if ../value}}{{#ifEquals option.code ../value }} selected{{/ifEquals}}{{/if}}>{{option.description}}</option>
+		<option {{#if ../value}}{{#ifEquals option.code ../value }} selected{{/ifEquals}}{{/if}}
+			value="{{option.code}}">{{option.description}}</option>
 		{{/each}}
 	</select>
 

@@ -23,6 +23,7 @@ import Password from './password';
 import Phone from './phone';
 import Position from './position';
 import RegistrationConfirmation from './registration-confirmation';
+import Responsibility from './responsibility';
 import Submit from './submit';
 import TrialBanner from './trial-banner';
 
@@ -52,6 +53,7 @@ export {
 	Phone,
 	Position,
 	RegistrationConfirmation,
+	Responsibility,
 	Submit,
 	TrialBanner
 };

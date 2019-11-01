@@ -1,0 +1,887 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Responsibility can render a disable select 1`] = `
+<div id="responsibilityField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="select"
+     data-ui-item-name="responsibility"
+     data-validate="required"
+>
+  <label for="responsibility"
+         class="o-forms__label"
+  >
+    Which best describes your job responsibility?
+  </label>
+  <select id="responsibility"
+          name="responsibility"
+          class="o-forms__select js-field__input js-item__value"
+          data-trackable="field-responsibility"
+          aria-required="true"
+          required
+          disabled
+  >
+    <option value>
+      Please select a job responsibility
+    </option>
+    <option value="FIN">
+      Accounting/finance
+    </option>
+    <option value="ADL">
+      Administration
+    </option>
+    <option value="RES">
+      Broker/trader
+    </option>
+    <option value="BUY">
+      Buying/procurement
+    </option>
+    <option value="EXP">
+      Export/international sales
+    </option>
+    <option value="CON">
+      General management
+    </option>
+    <option value="PAT">
+      HR/Training
+    </option>
+    <option value="IFA">
+      IFA/financial adviser
+    </option>
+    <option value="ITC">
+      IT/computing
+    </option>
+    <option value="TEC">
+      Information technology
+    </option>
+    <option value="INS">
+      Insurance
+    </option>
+    <option value="KNO">
+      Knowledge management
+    </option>
+    <option value="LEG">
+      Legal/company secretarial
+    </option>
+    <option value="MKT">
+      Marketing/communications/PR
+    </option>
+    <option value="MON">
+      Money/portfolio management
+    </option>
+    <option value="OTH">
+      N/A
+    </option>
+    <option value="NOT">
+      Not working
+    </option>
+    <option value="OPS">
+      Operations
+    </option>
+    <option value="PRI">
+      Private Investor
+    </option>
+    <option value="PRO">
+      Product mgmt/development
+    </option>
+    <option value="RAD">
+      Research/analysis
+    </option>
+    <option value="RET">
+      Retired
+    </option>
+    <option value="RSK">
+      Risk management/compliance
+    </option>
+    <option value="SAL">
+      Sales/business development
+    </option>
+    <option value="CPL">
+      Strategy/planning
+    </option>
+    <option value="STU">
+      Student
+    </option>
+    <option value="TEL">
+      Telecommunications
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your responsibility
+  </div>
+</div>
+`;
+
+exports[`Responsibility can render a disable select 2`] = `
+<div id="responsibilityField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="select"
+     data-ui-item-name="responsibility"
+     data-validate="required"
+>
+  <label for="responsibility"
+         class="o-forms__label"
+  >
+    Which best describes your job responsibility?
+  </label>
+  <select id="responsibility"
+          name="responsibility"
+          class="o-forms__select js-field__input js-item__value"
+          data-trackable="field-responsibility"
+          aria-required="true"
+          required
+          disabled
+  >
+    <option value>
+      Please select a job responsibility
+    </option>
+    <option value="FIN">
+      Accounting/finance
+    </option>
+    <option value="ADL">
+      Administration
+    </option>
+    <option value="RES">
+      Broker/trader
+    </option>
+    <option value="BUY">
+      Buying/procurement
+    </option>
+    <option value="EXP">
+      Export/international sales
+    </option>
+    <option value="CON">
+      General management
+    </option>
+    <option value="PAT">
+      HR/Training
+    </option>
+    <option value="IFA">
+      IFA/financial adviser
+    </option>
+    <option value="ITC">
+      IT/computing
+    </option>
+    <option value="TEC">
+      Information technology
+    </option>
+    <option value="INS">
+      Insurance
+    </option>
+    <option value="KNO">
+      Knowledge management
+    </option>
+    <option value="LEG">
+      Legal/company secretarial
+    </option>
+    <option value="MKT">
+      Marketing/communications/PR
+    </option>
+    <option value="MON">
+      Money/portfolio management
+    </option>
+    <option value="OTH">
+      N/A
+    </option>
+    <option value="NOT">
+      Not working
+    </option>
+    <option value="OPS">
+      Operations
+    </option>
+    <option value="PRI">
+      Private Investor
+    </option>
+    <option value="PRO">
+      Product mgmt/development
+    </option>
+    <option value="RAD">
+      Research/analysis
+    </option>
+    <option value="RET">
+      Retired
+    </option>
+    <option value="RSK">
+      Risk management/compliance
+    </option>
+    <option value="SAL">
+      Sales/business development
+    </option>
+    <option value="CPL">
+      Strategy/planning
+    </option>
+    <option value="STU">
+      Student
+    </option>
+    <option value="TEL">
+      Telecommunications
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your responsibility
+  </div>
+</div>
+`;
+
+exports[`Responsibility can render an error message 1`] = `
+<div id="responsibilityField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="select"
+     data-ui-item-name="responsibility"
+     data-validate="required"
+>
+  <label for="responsibility"
+         class="o-forms__label"
+  >
+    Which best describes your job responsibility?
+  </label>
+  <select id="responsibility"
+          name="responsibility"
+          class="o-forms__select js-field__input js-item__value"
+          data-trackable="field-responsibility"
+          aria-required="true"
+          required
+  >
+    <option value>
+      Please select a job responsibility
+    </option>
+    <option value="FIN">
+      Accounting/finance
+    </option>
+    <option value="ADL">
+      Administration
+    </option>
+    <option value="RES">
+      Broker/trader
+    </option>
+    <option value="BUY">
+      Buying/procurement
+    </option>
+    <option value="EXP">
+      Export/international sales
+    </option>
+    <option value="CON">
+      General management
+    </option>
+    <option value="PAT">
+      HR/Training
+    </option>
+    <option value="IFA">
+      IFA/financial adviser
+    </option>
+    <option value="ITC">
+      IT/computing
+    </option>
+    <option value="TEC">
+      Information technology
+    </option>
+    <option value="INS">
+      Insurance
+    </option>
+    <option value="KNO">
+      Knowledge management
+    </option>
+    <option value="LEG">
+      Legal/company secretarial
+    </option>
+    <option value="MKT">
+      Marketing/communications/PR
+    </option>
+    <option value="MON">
+      Money/portfolio management
+    </option>
+    <option value="OTH">
+      N/A
+    </option>
+    <option value="NOT">
+      Not working
+    </option>
+    <option value="OPS">
+      Operations
+    </option>
+    <option value="PRI">
+      Private Investor
+    </option>
+    <option value="PRO">
+      Product mgmt/development
+    </option>
+    <option value="RAD">
+      Research/analysis
+    </option>
+    <option value="RET">
+      Retired
+    </option>
+    <option value="RSK">
+      Risk management/compliance
+    </option>
+    <option value="SAL">
+      Sales/business development
+    </option>
+    <option value="CPL">
+      Strategy/planning
+    </option>
+    <option value="STU">
+      Student
+    </option>
+    <option value="TEL">
+      Telecommunications
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your responsibility
+  </div>
+</div>
+`;
+
+exports[`Responsibility can render an error message 2`] = `
+<div id="responsibilityField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="select"
+     data-ui-item-name="responsibility"
+     data-validate="required"
+>
+  <label for="responsibility"
+         class="o-forms__label"
+  >
+    Which best describes your job responsibility?
+  </label>
+  <select id="responsibility"
+          name="responsibility"
+          class="o-forms__select js-field__input js-item__value"
+          data-trackable="field-responsibility"
+          aria-required="true"
+          required
+  >
+    <option value>
+      Please select a job responsibility
+    </option>
+    <option value="FIN">
+      Accounting/finance
+    </option>
+    <option value="ADL">
+      Administration
+    </option>
+    <option value="RES">
+      Broker/trader
+    </option>
+    <option value="BUY">
+      Buying/procurement
+    </option>
+    <option value="EXP">
+      Export/international sales
+    </option>
+    <option value="CON">
+      General management
+    </option>
+    <option value="PAT">
+      HR/Training
+    </option>
+    <option value="IFA">
+      IFA/financial adviser
+    </option>
+    <option value="ITC">
+      IT/computing
+    </option>
+    <option value="TEC">
+      Information technology
+    </option>
+    <option value="INS">
+      Insurance
+    </option>
+    <option value="KNO">
+      Knowledge management
+    </option>
+    <option value="LEG">
+      Legal/company secretarial
+    </option>
+    <option value="MKT">
+      Marketing/communications/PR
+    </option>
+    <option value="MON">
+      Money/portfolio management
+    </option>
+    <option value="OTH">
+      N/A
+    </option>
+    <option value="NOT">
+      Not working
+    </option>
+    <option value="OPS">
+      Operations
+    </option>
+    <option value="PRI">
+      Private Investor
+    </option>
+    <option value="PRO">
+      Product mgmt/development
+    </option>
+    <option value="RAD">
+      Research/analysis
+    </option>
+    <option value="RET">
+      Retired
+    </option>
+    <option value="RSK">
+      Risk management/compliance
+    </option>
+    <option value="SAL">
+      Sales/business development
+    </option>
+    <option value="CPL">
+      Strategy/planning
+    </option>
+    <option value="STU">
+      Student
+    </option>
+    <option value="TEL">
+      Telecommunications
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your responsibility
+  </div>
+</div>
+`;
+
+exports[`Responsibility can render an initial selected value 1`] = `
+<div id="responsibilityField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="select"
+     data-ui-item-name="responsibility"
+     data-validate="required"
+>
+  <label for="responsibility"
+         class="o-forms__label"
+  >
+    Which best describes your job responsibility?
+  </label>
+  <select id="responsibility"
+          name="responsibility"
+          class="o-forms__select js-field__input js-item__value"
+          data-trackable="field-responsibility"
+          aria-required="true"
+          required
+  >
+    <option value>
+      Please select a job responsibility
+    </option>
+    <option selected
+            value="FIN"
+    >
+      Accounting/finance
+    </option>
+    <option value="ADL">
+      Administration
+    </option>
+    <option value="RES">
+      Broker/trader
+    </option>
+    <option value="BUY">
+      Buying/procurement
+    </option>
+    <option value="EXP">
+      Export/international sales
+    </option>
+    <option value="CON">
+      General management
+    </option>
+    <option value="PAT">
+      HR/Training
+    </option>
+    <option value="IFA">
+      IFA/financial adviser
+    </option>
+    <option value="ITC">
+      IT/computing
+    </option>
+    <option value="TEC">
+      Information technology
+    </option>
+    <option value="INS">
+      Insurance
+    </option>
+    <option value="KNO">
+      Knowledge management
+    </option>
+    <option value="LEG">
+      Legal/company secretarial
+    </option>
+    <option value="MKT">
+      Marketing/communications/PR
+    </option>
+    <option value="MON">
+      Money/portfolio management
+    </option>
+    <option value="OTH">
+      N/A
+    </option>
+    <option value="NOT">
+      Not working
+    </option>
+    <option value="OPS">
+      Operations
+    </option>
+    <option value="PRI">
+      Private Investor
+    </option>
+    <option value="PRO">
+      Product mgmt/development
+    </option>
+    <option value="RAD">
+      Research/analysis
+    </option>
+    <option value="RET">
+      Retired
+    </option>
+    <option value="RSK">
+      Risk management/compliance
+    </option>
+    <option value="SAL">
+      Sales/business development
+    </option>
+    <option value="CPL">
+      Strategy/planning
+    </option>
+    <option value="STU">
+      Student
+    </option>
+    <option value="TEL">
+      Telecommunications
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your responsibility
+  </div>
+</div>
+`;
+
+exports[`Responsibility can render an initial selected value 2`] = `
+<div id="responsibilityField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="select"
+     data-ui-item-name="responsibility"
+     data-validate="required"
+>
+  <label for="responsibility"
+         class="o-forms__label"
+  >
+    Which best describes your job responsibility?
+  </label>
+  <select id="responsibility"
+          name="responsibility"
+          class="o-forms__select js-field__input js-item__value"
+          data-trackable="field-responsibility"
+          aria-required="true"
+          required
+  >
+    <option value>
+      Please select a job responsibility
+    </option>
+    <option selected
+            value="FIN"
+    >
+      Accounting/finance
+    </option>
+    <option value="ADL">
+      Administration
+    </option>
+    <option value="RES">
+      Broker/trader
+    </option>
+    <option value="BUY">
+      Buying/procurement
+    </option>
+    <option value="EXP">
+      Export/international sales
+    </option>
+    <option value="CON">
+      General management
+    </option>
+    <option value="PAT">
+      HR/Training
+    </option>
+    <option value="IFA">
+      IFA/financial adviser
+    </option>
+    <option value="ITC">
+      IT/computing
+    </option>
+    <option value="TEC">
+      Information technology
+    </option>
+    <option value="INS">
+      Insurance
+    </option>
+    <option value="KNO">
+      Knowledge management
+    </option>
+    <option value="LEG">
+      Legal/company secretarial
+    </option>
+    <option value="MKT">
+      Marketing/communications/PR
+    </option>
+    <option value="MON">
+      Money/portfolio management
+    </option>
+    <option value="OTH">
+      N/A
+    </option>
+    <option value="NOT">
+      Not working
+    </option>
+    <option value="OPS">
+      Operations
+    </option>
+    <option value="PRI">
+      Private Investor
+    </option>
+    <option value="PRO">
+      Product mgmt/development
+    </option>
+    <option value="RAD">
+      Research/analysis
+    </option>
+    <option value="RET">
+      Retired
+    </option>
+    <option value="RSK">
+      Risk management/compliance
+    </option>
+    <option value="SAL">
+      Sales/business development
+    </option>
+    <option value="CPL">
+      Strategy/planning
+    </option>
+    <option value="STU">
+      Student
+    </option>
+    <option value="TEL">
+      Telecommunications
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your responsibility
+  </div>
+</div>
+`;
+
+exports[`Responsibility render a select with a label 1`] = `
+<div id="responsibilityField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="select"
+     data-ui-item-name="responsibility"
+     data-validate="required"
+>
+  <label for="responsibility"
+         class="o-forms__label"
+  >
+    Which best describes your job responsibility?
+  </label>
+  <select id="responsibility"
+          name="responsibility"
+          class="o-forms__select js-field__input js-item__value"
+          data-trackable="field-responsibility"
+          aria-required="true"
+          required
+  >
+    <option value>
+      Please select a job responsibility
+    </option>
+    <option value="FIN">
+      Accounting/finance
+    </option>
+    <option value="ADL">
+      Administration
+    </option>
+    <option value="RES">
+      Broker/trader
+    </option>
+    <option value="BUY">
+      Buying/procurement
+    </option>
+    <option value="EXP">
+      Export/international sales
+    </option>
+    <option value="CON">
+      General management
+    </option>
+    <option value="PAT">
+      HR/Training
+    </option>
+    <option value="IFA">
+      IFA/financial adviser
+    </option>
+    <option value="ITC">
+      IT/computing
+    </option>
+    <option value="TEC">
+      Information technology
+    </option>
+    <option value="INS">
+      Insurance
+    </option>
+    <option value="KNO">
+      Knowledge management
+    </option>
+    <option value="LEG">
+      Legal/company secretarial
+    </option>
+    <option value="MKT">
+      Marketing/communications/PR
+    </option>
+    <option value="MON">
+      Money/portfolio management
+    </option>
+    <option value="OTH">
+      N/A
+    </option>
+    <option value="NOT">
+      Not working
+    </option>
+    <option value="OPS">
+      Operations
+    </option>
+    <option value="PRI">
+      Private Investor
+    </option>
+    <option value="PRO">
+      Product mgmt/development
+    </option>
+    <option value="RAD">
+      Research/analysis
+    </option>
+    <option value="RET">
+      Retired
+    </option>
+    <option value="RSK">
+      Risk management/compliance
+    </option>
+    <option value="SAL">
+      Sales/business development
+    </option>
+    <option value="CPL">
+      Strategy/planning
+    </option>
+    <option value="STU">
+      Student
+    </option>
+    <option value="TEL">
+      Telecommunications
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your responsibility
+  </div>
+</div>
+`;
+
+exports[`Responsibility render a select with a label 2`] = `
+<div id="responsibilityField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="select"
+     data-ui-item-name="responsibility"
+     data-validate="required"
+>
+  <label for="responsibility"
+         class="o-forms__label"
+  >
+    Which best describes your job responsibility?
+  </label>
+  <select id="responsibility"
+          name="responsibility"
+          class="o-forms__select js-field__input js-item__value"
+          data-trackable="field-responsibility"
+          aria-required="true"
+          required
+  >
+    <option value>
+      Please select a job responsibility
+    </option>
+    <option value="FIN">
+      Accounting/finance
+    </option>
+    <option value="ADL">
+      Administration
+    </option>
+    <option value="RES">
+      Broker/trader
+    </option>
+    <option value="BUY">
+      Buying/procurement
+    </option>
+    <option value="EXP">
+      Export/international sales
+    </option>
+    <option value="CON">
+      General management
+    </option>
+    <option value="PAT">
+      HR/Training
+    </option>
+    <option value="IFA">
+      IFA/financial adviser
+    </option>
+    <option value="ITC">
+      IT/computing
+    </option>
+    <option value="TEC">
+      Information technology
+    </option>
+    <option value="INS">
+      Insurance
+    </option>
+    <option value="KNO">
+      Knowledge management
+    </option>
+    <option value="LEG">
+      Legal/company secretarial
+    </option>
+    <option value="MKT">
+      Marketing/communications/PR
+    </option>
+    <option value="MON">
+      Money/portfolio management
+    </option>
+    <option value="OTH">
+      N/A
+    </option>
+    <option value="NOT">
+      Not working
+    </option>
+    <option value="OPS">
+      Operations
+    </option>
+    <option value="PRI">
+      Private Investor
+    </option>
+    <option value="PRO">
+      Product mgmt/development
+    </option>
+    <option value="RAD">
+      Research/analysis
+    </option>
+    <option value="RET">
+      Retired
+    </option>
+    <option value="RSK">
+      Risk management/compliance
+    </option>
+    <option value="SAL">
+      Sales/business development
+    </option>
+    <option value="CPL">
+      Strategy/planning
+    </option>
+    <option value="STU">
+      Student
+    </option>
+    <option value="TEL">
+      Telecommunications
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your responsibility
+  </div>
+</div>
+`;
