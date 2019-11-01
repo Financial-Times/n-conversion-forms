@@ -25,7 +25,9 @@ export default function Position ({
 		data-ui-item="select"
 		data-ui-item-name="position"
 		data-validate="required">
-		<label htmlFor="position" className="o-forms__label">What&apos;s your job position?</label>
+		<label htmlFor="position" className="o-forms__label"
+		// eslint-disable-next-line react/no-unescaped-entities
+		>What's your job position?</label>
 		<select id={selectId} name={selectName} className="o-forms__select js-field__input js-item__value"
 			data-trackable="field-position"
 			aria-required="true" required
