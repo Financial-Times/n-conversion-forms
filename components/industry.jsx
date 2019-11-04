@@ -37,7 +37,7 @@ export default function Industry ({
 				return <option key={code} value={code}>{description}</option>;
 			})}
 		</select >
-		<div className="o-forms__errortext" >Please select your company‘s industry</div >
+		<div className="o-forms__errortext" >Please select your company’s industry</div >
 	</div >);
 
 }
