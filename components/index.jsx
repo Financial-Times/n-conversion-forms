@@ -1,3 +1,4 @@
+import AppBanner from './app-banner';
 import BillingPostcode from './billing-postcode';
 import DeliveryPostcode from './delivery-postcode';
 import Email from './email';
@@ -14,6 +15,7 @@ import Position from './position';
 import Submit from './submit';
 
 export {
+	AppBanner,
 	BillingPostcode,
 	DeliveryPostcode,
 	Email,
