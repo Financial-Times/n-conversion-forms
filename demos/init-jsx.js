@@ -10,6 +10,7 @@ function initDemo () {
 		<React.Fragment>
 			<ncf.BillingPostcode postcodeReference={'billing postcode'}/>
 			<ncf.ContinueReading />
+			<ncf.CustomerCare />
 			<ncf.DeliveryPostcode postcodeReference={'delivery postcode'}/>
 			<ncf.Email />
 			<ncf.Fieldset />

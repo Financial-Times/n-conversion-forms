@@ -1,5 +1,6 @@
 import BillingPostcode from './billing-postcode';
 import ContinueReading from './continue-reading';
+import CustomerCare from './customer-care';
 import DeliveryPostcode from './delivery-postcode';
 import Email from './email';
 import Fieldset from './fieldset';
@@ -17,6 +18,7 @@ import Submit from './submit';
 export {
 	BillingPostcode,
 	ContinueReading,
+	CustomerCare,
 	DeliveryPostcode,
 	Email,
 	Fieldset,
