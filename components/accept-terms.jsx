@@ -73,7 +73,7 @@ function AcceptTerms ({
 			<p className="terms-corp-signup">Your organisation’s administrator(s) may view basic usage and profile data about your account and have the ability to set up myFT topic follows on your behalf.</p>
 			<p className="terms-corp-signup">Basic usage and profile data about your account can include; for example, your job title and profile information, the date you last visited, volume of content consumed, etc.</p>
 			<p className="terms-corp-signup">myFT topics may be selected on your behalf by your company administrator or FT representative for you to follow. You can unfollow these topics or unsubscribe from the myFT digest through the Contact preferences section on myFT.</p>
-			{ isTrial && (<p className="terms-corp-signup">This trial is to demonstrate the value of a group subscription and we‘ll contact you during your trial.</p>) }
+			{ isTrial && (<p className="terms-corp-signup">This trial is to demonstrate the value of a group subscription and we’ll contact you during your trial.</p>) }
 		</React.Fragment>
 	);
 

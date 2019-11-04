@@ -1407,7 +1407,7 @@ exports[`AcceptTerms renders appropriately if is corporate signup and trial 1`] 
       myFT topics may be selected on your behalf by your company administrator or FT representative for you to follow. You can unfollow these topics or unsubscribe from the myFT digest through the Contact preferences section on myFT.
     </p>
     <p class="terms-corp-signup">
-      This trial is to demonstrate the value of a group subscription and we‘ll contact you during your trial.
+      This trial is to demonstrate the value of a group subscription and we’ll contact you during your trial.
     </p>
   </label>
   <div class="o-forms__errortext">
@@ -1457,7 +1457,7 @@ exports[`AcceptTerms renders appropriately if is corporate signup and trial 2`] 
       myFT topics may be selected on your behalf by your company administrator or FT representative for you to follow. You can unfollow these topics or unsubscribe from the myFT digest through the Contact preferences section on myFT.
     </p>
     <p class="terms-corp-signup">
-      This trial is to demonstrate the value of a group subscription and we‘ll contact you during your trial.
+      This trial is to demonstrate the value of a group subscription and we’ll contact you during your trial.
     </p>
   </label>
   <div class="o-forms__errortext">
