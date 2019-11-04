@@ -11,6 +11,7 @@ function initDemo () {
 			<ncf.AppBanner />
 			<ncf.AcceptTerms />
 			<ncf.BillingPostcode postcodeReference={'billing postcode'}/>
+			<ncf.CompanyName />
 			<ncf.ContinueReading />
 			<ncf.CustomerCare />
 			<ncf.DeliveryAddress />

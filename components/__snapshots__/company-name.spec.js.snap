@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CompanyName renders with a custom value 1`] = `
+<div id="companyNameField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="companyName"
+     data-validate="required"
+>
+  <label for="companyName"
+         class="o-forms__label"
+  >
+    Company name
+  </label>
+  <input type="text"
+         id="companyName"
+         name="company"
+         placeholder="Enter your company name"
+         autocomplete="organization"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="company-name"
+         aria-required="true"
+         required
+         value="foobar"
+  >
+  <div class="o-forms__errortext">
+    Please enter your company name.
+  </div>
+</div>
+`;
+
+exports[`CompanyName renders with a custom value 2`] = `
+<div id="companyNameField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="companyName"
+     data-validate="required"
+>
+  <label for="companyName"
+         class="o-forms__label"
+  >
+    Company name
+  </label>
+  <input type="text"
+         id="companyName"
+         name="company"
+         placeholder="Enter your company name"
+         autocomplete="organization"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="company-name"
+         aria-required="true"
+         required
+         value="foobar"
+  >
+  <div class="o-forms__errortext">
+    Please enter your company name.
+  </div>
+</div>
+`;
+
+exports[`CompanyName renders with an error 1`] = `
+<div id="companyNameField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="companyName"
+     data-validate="required"
+>
+  <label for="companyName"
+         class="o-forms__label"
+  >
+    Company name
+  </label>
+  <input type="text"
+         id="companyName"
+         name="company"
+         placeholder="Enter your company name"
+         autocomplete="organization"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="company-name"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter your company name.
+  </div>
+</div>
+`;
+
+exports[`CompanyName renders with an error 2`] = `
+<div id="companyNameField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="companyName"
+     data-validate="required"
+>
+  <label for="companyName"
+         class="o-forms__label"
+  >
+    Company name
+  </label>
+  <input type="text"
+         id="companyName"
+         name="company"
+         placeholder="Enter your company name"
+         autocomplete="organization"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="company-name"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter your company name.
+  </div>
+</div>
+`;
+
+exports[`CompanyName renders with default props 1`] = `
+<div id="companyNameField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="companyName"
+     data-validate="required"
+>
+  <label for="companyName"
+         class="o-forms__label"
+  >
+    Company name
+  </label>
+  <input type="text"
+         id="companyName"
+         name="company"
+         placeholder="Enter your company name"
+         autocomplete="organization"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="company-name"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter your company name.
+  </div>
+</div>
+`;
+
+exports[`CompanyName renders with default props 2`] = `
+<div id="companyNameField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="companyName"
+     data-validate="required"
+>
+  <label for="companyName"
+         class="o-forms__label"
+  >
+    Company name
+  </label>
+  <input type="text"
+         id="companyName"
+         name="company"
+         placeholder="Enter your company name"
+         autocomplete="organization"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="company-name"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter your company name.
+  </div>
+</div>
+`;
+
+exports[`CompanyName renders with disabled input 1`] = `
+<div id="companyNameField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="companyName"
+     data-validate="required"
+>
+  <label for="companyName"
+         class="o-forms__label"
+  >
+    Company name
+  </label>
+  <input type="text"
+         id="companyName"
+         name="company"
+         placeholder="Enter your company name"
+         autocomplete="organization"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="company-name"
+         aria-required="true"
+         required
+         disabled
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter your company name.
+  </div>
+</div>
+`;
+
+exports[`CompanyName renders with disabled input 2`] = `
+<div id="companyNameField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="companyName"
+     data-validate="required"
+>
+  <label for="companyName"
+         class="o-forms__label"
+  >
+    Company name
+  </label>
+  <input type="text"
+         id="companyName"
+         name="company"
+         placeholder="Enter your company name"
+         autocomplete="organization"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="company-name"
+         aria-required="true"
+         required
+         disabled
+         value
+  >
+  <div class="o-forms__errortext">
+    Please enter your company name.
+  </div>
+</div>
+`;

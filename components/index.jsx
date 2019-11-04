@@ -1,20 +1,21 @@
-import AppBanner from './app-banner';
 import AcceptTerms from './accept-terms';
+import AppBanner from './app-banner';
 import BillingPostcode from './billing-postcode';
+import CompanyName from './company-name';
 import ContinueReading from './continue-reading';
 import CustomerCare from './customer-care';
+import DecisionMaker from './decision-maker';
 import DeliveryAddress from './delivery-address';
 import DeliveryStartDate from './delivery-start-date';
 import DeliveryCity from './delivery-city';
 import DeliveryCounty from './delivery-county';
-import DecisionMaker from './decision-maker';
 import DeliveryPostcode from './delivery-postcode';
 import Email from './email';
 import Fieldset from './fieldset';
 import FirstName from './first-name';
+import Form from './form';
 import Industry from './industry';
 import JobTitle from './job-title';
-import Form from './form';
 import LastName from './last-name';
 import LicenceConfirmation from './licence-confirmation';
 import LicenceHeader from './licence-header';
@@ -28,23 +29,24 @@ import Submit from './submit';
 import TrialBanner from './trial-banner';
 
 export {
-	AppBanner,
 	AcceptTerms,
+	AppBanner,
 	BillingPostcode,
+	CompanyName,
 	ContinueReading,
 	CustomerCare,
+	DecisionMaker,
 	DeliveryAddress,
 	DeliveryCity,
 	DeliveryCounty,
-	DecisionMaker,
 	DeliveryPostcode,
 	DeliveryStartDate,
 	Email,
 	Fieldset,
 	FirstName,
+	Form,
 	Industry,
 	JobTitle,
-	Form,
 	LastName,
 	LicenceConfirmation,
 	LicenceHeader,

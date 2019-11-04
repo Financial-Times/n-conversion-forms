@@ -2,12 +2,13 @@
 
 	<label for="companyName" class="o-forms__label">Company name</label>
 
-	<input type="text" id="companyName" name="company" value="{{value}}" placeholder="Enter your company name"
+	<input type="text" id="companyName" name="company" placeholder="Enter your company name"
 				autocomplete="organization"
 				class="o-forms__text js-field__input js-item__value"
 				data-trackable="company-name"
 				aria-required="true" required
-				{{#if isDisabled}}disabled{{/if}}>
+				{{#if isDisabled}}disabled{{/if}}
+				value="{{value}}">
 
 	<div class="o-forms__errortext">Please enter your company name.</div>
 
