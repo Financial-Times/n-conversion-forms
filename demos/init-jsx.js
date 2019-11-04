@@ -9,6 +9,7 @@ function initDemo () {
 	const element =
 		<React.Fragment>
 			<ncf.AppBanner />
+			<ncf.AcceptTerms />
 			<ncf.BillingPostcode postcodeReference={'billing postcode'}/>
 			<ncf.ContinueReading />
 			<ncf.CustomerCare />

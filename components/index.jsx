@@ -1,4 +1,5 @@
 import AppBanner from './app-banner';
+import AcceptTerms from './accept-terms';
 import BillingPostcode from './billing-postcode';
 import ContinueReading from './continue-reading';
 import CustomerCare from './customer-care';
@@ -18,6 +19,7 @@ import Submit from './submit';
 
 export {
 	AppBanner,
+	AcceptTerms,
 	BillingPostcode,
 	ContinueReading,
 	CustomerCare,
