@@ -11,6 +11,7 @@ import DeliveryStartDate from './delivery-start-date';
 import DeliveryCity from './delivery-city';
 import DeliveryCounty from './delivery-county';
 import DeliveryOption from './delivery-option';
+import DeliveryInstructions from './delivery-instructions';
 import DeliveryPostcode from './delivery-postcode';
 import Email from './email';
 import Fieldset from './fieldset';
@@ -47,6 +48,7 @@ export {
 	DeliveryCity,
 	DeliveryCounty,
 	DeliveryOption,
+	DeliveryInstructions,
 	DeliveryPostcode,
 	DeliveryStartDate,
 	Email,
