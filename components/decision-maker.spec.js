@@ -18,7 +18,7 @@ describe('DecisionMaker', () => {
 	});
 
 	it('renders with an error', () => {
-		const props = { value: 'yes' };
+		const props = { value: 'yes', hasError: true };
 
 		expect(DecisionMaker).toRenderAs(context, props);
 	});

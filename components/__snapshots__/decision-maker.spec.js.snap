@@ -94,7 +94,7 @@ exports[`DecisionMaker renders with 'no' as default state for radio buttons 2`] 
 
 exports[`DecisionMaker renders with an error 1`] = `
 <fieldset id="decisionMakerField"
-          class="o-forms o-forms--wide o-forms--inline ncf__field js-field"
+          class="o-forms o-forms--wide o-forms--inline ncf__field js-field o-forms--error"
           data-ui-item="form-field"
           data-ui-item-name="decisionMaker"
           data-validate="required"
@@ -140,7 +140,7 @@ exports[`DecisionMaker renders with an error 1`] = `
 
 exports[`DecisionMaker renders with an error 2`] = `
 <fieldset id="decisionMakerField"
-          class="o-forms o-forms--wide o-forms--inline ncf__field js-field"
+          class="o-forms o-forms--wide o-forms--inline ncf__field js-field o-forms--error"
           data-ui-item="form-field"
           data-ui-item-name="decisionMaker"
           data-validate="required"
