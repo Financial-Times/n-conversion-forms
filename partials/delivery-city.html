@@ -5,12 +5,13 @@
 		data-validate="required">
 
 	<label for="deliveryCity" class="o-forms__label">City/town</label>
-	<input type="text" id="deliveryCity" name="deliveryCity" value="{{value}}"
+	<input type="text" id="deliveryCity" name="deliveryCity"
 				class="o-forms__text js-field__input js-item__value"
 				data-trackable="field-deliveryCity"
 				autocomplete="address-level2"
 				placeholder="e.g. Bath"
 				aria-required="true" required
-				{{#if isDisabled}}disabled{{/if}}>
+				{{#if isDisabled}}disabled{{/if}}
+				value="{{value}}">
 
 </div>

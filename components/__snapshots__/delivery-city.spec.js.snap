@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeliveryCity renders with a custom value 1`] = `
+<div id="deliveryCityField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryCity"
+     data-validate="required"
+>
+  <label for="deliveryCity"
+         class="o-forms__label"
+  >
+    City/town
+  </label>
+  <input type="text"
+         id="deliveryCity"
+         name="deliveryCity"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryCity"
+         autocomplete="address-level2"
+         placeholder="e.g. Bath"
+         aria-required="true"
+         required
+         value="foobar"
+  >
+</div>
+`;
+
+exports[`DeliveryCity renders with a custom value 2`] = `
+<div id="deliveryCityField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryCity"
+     data-validate="required"
+>
+  <label for="deliveryCity"
+         class="o-forms__label"
+  >
+    City/town
+  </label>
+  <input type="text"
+         id="deliveryCity"
+         name="deliveryCity"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryCity"
+         autocomplete="address-level2"
+         placeholder="e.g. Bath"
+         aria-required="true"
+         required
+         value="foobar"
+  >
+</div>
+`;
+
+exports[`DeliveryCity renders with a disabled input element 1`] = `
+<div id="deliveryCityField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryCity"
+     data-validate="required"
+>
+  <label for="deliveryCity"
+         class="o-forms__label"
+  >
+    City/town
+  </label>
+  <input type="text"
+         id="deliveryCity"
+         name="deliveryCity"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryCity"
+         autocomplete="address-level2"
+         placeholder="e.g. Bath"
+         aria-required="true"
+         required
+         disabled
+         value
+  >
+</div>
+`;
+
+exports[`DeliveryCity renders with a disabled input element 2`] = `
+<div id="deliveryCityField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryCity"
+     data-validate="required"
+>
+  <label for="deliveryCity"
+         class="o-forms__label"
+  >
+    City/town
+  </label>
+  <input type="text"
+         id="deliveryCity"
+         name="deliveryCity"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryCity"
+         autocomplete="address-level2"
+         placeholder="e.g. Bath"
+         aria-required="true"
+         required
+         disabled
+         value
+  >
+</div>
+`;
+
+exports[`DeliveryCity renders with an error 1`] = `
+<div id="deliveryCityField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryCity"
+     data-validate="required"
+>
+  <label for="deliveryCity"
+         class="o-forms__label"
+  >
+    City/town
+  </label>
+  <input type="text"
+         id="deliveryCity"
+         name="deliveryCity"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryCity"
+         autocomplete="address-level2"
+         placeholder="e.g. Bath"
+         aria-required="true"
+         required
+         value
+  >
+</div>
+`;
+
+exports[`DeliveryCity renders with an error 2`] = `
+<div id="deliveryCityField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryCity"
+     data-validate="required"
+>
+  <label for="deliveryCity"
+         class="o-forms__label"
+  >
+    City/town
+  </label>
+  <input type="text"
+         id="deliveryCity"
+         name="deliveryCity"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryCity"
+         autocomplete="address-level2"
+         placeholder="e.g. Bath"
+         aria-required="true"
+         required
+         value
+  >
+</div>
+`;
+
+exports[`DeliveryCity renders with default props 1`] = `
+<div id="deliveryCityField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryCity"
+     data-validate="required"
+>
+  <label for="deliveryCity"
+         class="o-forms__label"
+  >
+    City/town
+  </label>
+  <input type="text"
+         id="deliveryCity"
+         name="deliveryCity"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryCity"
+         autocomplete="address-level2"
+         placeholder="e.g. Bath"
+         aria-required="true"
+         required
+         value
+  >
+</div>
+`;
+
+exports[`DeliveryCity renders with default props 2`] = `
+<div id="deliveryCityField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryCity"
+     data-validate="required"
+>
+  <label for="deliveryCity"
+         class="o-forms__label"
+  >
+    City/town
+  </label>
+  <input type="text"
+         id="deliveryCity"
+         name="deliveryCity"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryCity"
+         autocomplete="address-level2"
+         placeholder="e.g. Bath"
+         aria-required="true"
+         required
+         value
+  >
+</div>
+`;
