@@ -6,30 +6,33 @@
 
 	<p>
 		<label for="deliveryAddressLine1" class="o-forms__label">Address line 1</label>
-		<input type="text" id="deliveryAddressLine1" name="deliveryAddressLine1" value="{{line1}}"
+		<input type="text" id="deliveryAddressLine1" name="deliveryAddressLine1"
 				class="o-forms__text js-field__input js-item__value"
 				data-trackable="field-deliveryAddressLine1"
 				autocomplete="address-line1"
 				placeholder="e.g. 10 Elm Street"
 				aria-required="true" required
-				{{#if isDisabled}}disabled{{/if}}>
+				{{#if isDisabled}}disabled{{/if}}
+				value="{{line1}}">
 	</p>
 	<p>
 		<label for="deliveryAddressLine2" class="o-forms__label">Address line 2 <small>(optional)</small></label>
-		<input type="text" id="deliveryAddressLine2" name="deliveryAddressLine2" value="{{line2}}"
+		<input type="text" id="deliveryAddressLine2" name="deliveryAddressLine2"
 					class="o-forms__text js-field__input js-item__value"
 					data-trackable="field-deliveryAddressLine2"
 					autocomplete="address-line2"
 					placeholder="e.g. Apartment 1"
-					{{#if isDisabled}}disabled{{/if}}>
+					{{#if isDisabled}}disabled{{/if}}
+					value="{{line2}}">
 	</p>
 	<p>
 		<label for="deliveryAddressLine3" class="o-forms__label">Address line 3 <small>(optional)</small></label>
-		<input type="text" id="deliveryAddressLine3" name="deliveryAddressLine3" value="{{line3}}"
+		<input type="text" id="deliveryAddressLine3" name="deliveryAddressLine3"
 					class="o-forms__text js-field__input js-item__value"
 					data-trackable="field-deliveryAddressLine3"
 					autocomplete="address-line3"
 					placeholder=""
-					{{#if isDisabled}}disabled{{/if}}>
+					{{#if isDisabled}}disabled{{/if}}
+					value="{{line3}}">
 	</p>
 </div>

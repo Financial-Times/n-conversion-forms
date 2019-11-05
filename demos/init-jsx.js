@@ -13,6 +13,7 @@ function initDemo () {
 			<ncf.BillingPostcode postcodeReference={'billing postcode'}/>
 			<ncf.ContinueReading />
 			<ncf.CustomerCare />
+			<ncf.DeliveryAddress />
 			<ncf.DeliveryPostcode postcodeReference={'delivery postcode'}/>
 			<ncf.Email />
 			<ncf.Fieldset />

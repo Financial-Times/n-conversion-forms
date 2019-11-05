@@ -1,0 +1,799 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeliveryAddress renders default props 1`] = `
+<div id="deliveryAddressFields"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryAddress"
+     data-validate="required"
+>
+  <p>
+    <label for="deliveryAddressLine1"
+           class="o-forms__label"
+    >
+      Address line 1
+    </label>
+    <input type="text"
+           id="deliveryAddressLine1"
+           name="deliveryAddressLine1"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine1"
+           autocomplete="address-line1"
+           placeholder="e.g. 10 Elm Street"
+           aria-required="true"
+           required
+           value
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine2"
+           class="o-forms__label"
+    >
+      Address line 2
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine2"
+           name="deliveryAddressLine2"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine2"
+           autocomplete="address-line2"
+           placeholder="e.g. Apartment 1"
+           value
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine3"
+           class="o-forms__label"
+    >
+      Address line 3
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine3"
+           name="deliveryAddressLine3"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine3"
+           autocomplete="address-line3"
+           placeholder
+           value
+    >
+  </p>
+</div>
+`;
+
+exports[`DeliveryAddress renders default props 2`] = `
+<div id="deliveryAddressFields"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryAddress"
+     data-validate="required"
+>
+  <p>
+    <label for="deliveryAddressLine1"
+           class="o-forms__label"
+    >
+      Address line 1
+    </label>
+    <input type="text"
+           id="deliveryAddressLine1"
+           name="deliveryAddressLine1"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine1"
+           autocomplete="address-line1"
+           placeholder="e.g. 10 Elm Street"
+           aria-required="true"
+           required
+           value
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine2"
+           class="o-forms__label"
+    >
+      Address line 2
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine2"
+           name="deliveryAddressLine2"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine2"
+           autocomplete="address-line2"
+           placeholder="e.g. Apartment 1"
+           value
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine3"
+           class="o-forms__label"
+    >
+      Address line 3
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine3"
+           name="deliveryAddressLine3"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine3"
+           autocomplete="address-line3"
+           placeholder
+           value
+    >
+  </p>
+</div>
+`;
+
+exports[`DeliveryAddress renders with an error 1`] = `
+<div id="deliveryAddressFields"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryAddress"
+     data-validate="required"
+>
+  <p>
+    <label for="deliveryAddressLine1"
+           class="o-forms__label"
+    >
+      Address line 1
+    </label>
+    <input type="text"
+           id="deliveryAddressLine1"
+           name="deliveryAddressLine1"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine1"
+           autocomplete="address-line1"
+           placeholder="e.g. 10 Elm Street"
+           aria-required="true"
+           required
+           value
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine2"
+           class="o-forms__label"
+    >
+      Address line 2
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine2"
+           name="deliveryAddressLine2"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine2"
+           autocomplete="address-line2"
+           placeholder="e.g. Apartment 1"
+           value
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine3"
+           class="o-forms__label"
+    >
+      Address line 3
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine3"
+           name="deliveryAddressLine3"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine3"
+           autocomplete="address-line3"
+           placeholder
+           value
+    >
+  </p>
+</div>
+`;
+
+exports[`DeliveryAddress renders with an error 2`] = `
+<div id="deliveryAddressFields"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryAddress"
+     data-validate="required"
+>
+  <p>
+    <label for="deliveryAddressLine1"
+           class="o-forms__label"
+    >
+      Address line 1
+    </label>
+    <input type="text"
+           id="deliveryAddressLine1"
+           name="deliveryAddressLine1"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine1"
+           autocomplete="address-line1"
+           placeholder="e.g. 10 Elm Street"
+           aria-required="true"
+           required
+           value
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine2"
+           class="o-forms__label"
+    >
+      Address line 2
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine2"
+           name="deliveryAddressLine2"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine2"
+           autocomplete="address-line2"
+           placeholder="e.g. Apartment 1"
+           value
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine3"
+           class="o-forms__label"
+    >
+      Address line 3
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine3"
+           name="deliveryAddressLine3"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine3"
+           autocomplete="address-line3"
+           placeholder
+           value
+    >
+  </p>
+</div>
+`;
+
+exports[`DeliveryAddress renders with custom line 1 value 1`] = `
+<div id="deliveryAddressFields"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryAddress"
+     data-validate="required"
+>
+  <p>
+    <label for="deliveryAddressLine1"
+           class="o-forms__label"
+    >
+      Address line 1
+    </label>
+    <input type="text"
+           id="deliveryAddressLine1"
+           name="deliveryAddressLine1"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine1"
+           autocomplete="address-line1"
+           placeholder="e.g. 10 Elm Street"
+           aria-required="true"
+           required
+           value="Line 1 text"
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine2"
+           class="o-forms__label"
+    >
+      Address line 2
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine2"
+           name="deliveryAddressLine2"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine2"
+           autocomplete="address-line2"
+           placeholder="e.g. Apartment 1"
+           value
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine3"
+           class="o-forms__label"
+    >
+      Address line 3
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine3"
+           name="deliveryAddressLine3"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine3"
+           autocomplete="address-line3"
+           placeholder
+           value
+    >
+  </p>
+</div>
+`;
+
+exports[`DeliveryAddress renders with custom line 1 value 2`] = `
+<div id="deliveryAddressFields"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryAddress"
+     data-validate="required"
+>
+  <p>
+    <label for="deliveryAddressLine1"
+           class="o-forms__label"
+    >
+      Address line 1
+    </label>
+    <input type="text"
+           id="deliveryAddressLine1"
+           name="deliveryAddressLine1"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine1"
+           autocomplete="address-line1"
+           placeholder="e.g. 10 Elm Street"
+           aria-required="true"
+           required
+           value="Line 1 text"
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine2"
+           class="o-forms__label"
+    >
+      Address line 2
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine2"
+           name="deliveryAddressLine2"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine2"
+           autocomplete="address-line2"
+           placeholder="e.g. Apartment 1"
+           value
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine3"
+           class="o-forms__label"
+    >
+      Address line 3
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine3"
+           name="deliveryAddressLine3"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine3"
+           autocomplete="address-line3"
+           placeholder
+           value
+    >
+  </p>
+</div>
+`;
+
+exports[`DeliveryAddress renders with custom line 2 value 1`] = `
+<div id="deliveryAddressFields"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryAddress"
+     data-validate="required"
+>
+  <p>
+    <label for="deliveryAddressLine1"
+           class="o-forms__label"
+    >
+      Address line 1
+    </label>
+    <input type="text"
+           id="deliveryAddressLine1"
+           name="deliveryAddressLine1"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine1"
+           autocomplete="address-line1"
+           placeholder="e.g. 10 Elm Street"
+           aria-required="true"
+           required
+           value
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine2"
+           class="o-forms__label"
+    >
+      Address line 2
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine2"
+           name="deliveryAddressLine2"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine2"
+           autocomplete="address-line2"
+           placeholder="e.g. Apartment 1"
+           value="Line 2 text"
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine3"
+           class="o-forms__label"
+    >
+      Address line 3
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine3"
+           name="deliveryAddressLine3"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine3"
+           autocomplete="address-line3"
+           placeholder
+           value
+    >
+  </p>
+</div>
+`;
+
+exports[`DeliveryAddress renders with custom line 2 value 2`] = `
+<div id="deliveryAddressFields"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryAddress"
+     data-validate="required"
+>
+  <p>
+    <label for="deliveryAddressLine1"
+           class="o-forms__label"
+    >
+      Address line 1
+    </label>
+    <input type="text"
+           id="deliveryAddressLine1"
+           name="deliveryAddressLine1"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine1"
+           autocomplete="address-line1"
+           placeholder="e.g. 10 Elm Street"
+           aria-required="true"
+           required
+           value
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine2"
+           class="o-forms__label"
+    >
+      Address line 2
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine2"
+           name="deliveryAddressLine2"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine2"
+           autocomplete="address-line2"
+           placeholder="e.g. Apartment 1"
+           value="Line 2 text"
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine3"
+           class="o-forms__label"
+    >
+      Address line 3
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine3"
+           name="deliveryAddressLine3"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine3"
+           autocomplete="address-line3"
+           placeholder
+           value
+    >
+  </p>
+</div>
+`;
+
+exports[`DeliveryAddress renders with custom line 3 value 1`] = `
+<div id="deliveryAddressFields"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryAddress"
+     data-validate="required"
+>
+  <p>
+    <label for="deliveryAddressLine1"
+           class="o-forms__label"
+    >
+      Address line 1
+    </label>
+    <input type="text"
+           id="deliveryAddressLine1"
+           name="deliveryAddressLine1"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine1"
+           autocomplete="address-line1"
+           placeholder="e.g. 10 Elm Street"
+           aria-required="true"
+           required
+           value
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine2"
+           class="o-forms__label"
+    >
+      Address line 2
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine2"
+           name="deliveryAddressLine2"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine2"
+           autocomplete="address-line2"
+           placeholder="e.g. Apartment 1"
+           value
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine3"
+           class="o-forms__label"
+    >
+      Address line 3
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine3"
+           name="deliveryAddressLine3"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine3"
+           autocomplete="address-line3"
+           placeholder
+           value="Line 3 text"
+    >
+  </p>
+</div>
+`;
+
+exports[`DeliveryAddress renders with custom line 3 value 2`] = `
+<div id="deliveryAddressFields"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryAddress"
+     data-validate="required"
+>
+  <p>
+    <label for="deliveryAddressLine1"
+           class="o-forms__label"
+    >
+      Address line 1
+    </label>
+    <input type="text"
+           id="deliveryAddressLine1"
+           name="deliveryAddressLine1"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine1"
+           autocomplete="address-line1"
+           placeholder="e.g. 10 Elm Street"
+           aria-required="true"
+           required
+           value
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine2"
+           class="o-forms__label"
+    >
+      Address line 2
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine2"
+           name="deliveryAddressLine2"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine2"
+           autocomplete="address-line2"
+           placeholder="e.g. Apartment 1"
+           value
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine3"
+           class="o-forms__label"
+    >
+      Address line 3
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine3"
+           name="deliveryAddressLine3"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine3"
+           autocomplete="address-line3"
+           placeholder
+           value="Line 3 text"
+    >
+  </p>
+</div>
+`;
+
+exports[`DeliveryAddress renders with disabled input elements 1`] = `
+<div id="deliveryAddressFields"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryAddress"
+     data-validate="required"
+>
+  <p>
+    <label for="deliveryAddressLine1"
+           class="o-forms__label"
+    >
+      Address line 1
+    </label>
+    <input type="text"
+           id="deliveryAddressLine1"
+           name="deliveryAddressLine1"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine1"
+           autocomplete="address-line1"
+           placeholder="e.g. 10 Elm Street"
+           aria-required="true"
+           required
+           disabled
+           value
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine2"
+           class="o-forms__label"
+    >
+      Address line 2
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine2"
+           name="deliveryAddressLine2"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine2"
+           autocomplete="address-line2"
+           placeholder="e.g. Apartment 1"
+           disabled
+           value
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine3"
+           class="o-forms__label"
+    >
+      Address line 3
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine3"
+           name="deliveryAddressLine3"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine3"
+           autocomplete="address-line3"
+           placeholder
+           disabled
+           value
+    >
+  </p>
+</div>
+`;
+
+exports[`DeliveryAddress renders with disabled input elements 2`] = `
+<div id="deliveryAddressFields"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryAddress"
+     data-validate="required"
+>
+  <p>
+    <label for="deliveryAddressLine1"
+           class="o-forms__label"
+    >
+      Address line 1
+    </label>
+    <input type="text"
+           id="deliveryAddressLine1"
+           name="deliveryAddressLine1"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine1"
+           autocomplete="address-line1"
+           placeholder="e.g. 10 Elm Street"
+           aria-required="true"
+           required
+           disabled
+           value
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine2"
+           class="o-forms__label"
+    >
+      Address line 2
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine2"
+           name="deliveryAddressLine2"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine2"
+           autocomplete="address-line2"
+           placeholder="e.g. Apartment 1"
+           disabled
+           value
+    >
+  </p>
+  <p>
+    <label for="deliveryAddressLine3"
+           class="o-forms__label"
+    >
+      Address line 3
+      <small>
+        (optional)
+      </small>
+    </label>
+    <input type="text"
+           id="deliveryAddressLine3"
+           name="deliveryAddressLine3"
+           class="o-forms__text js-field__input js-item__value"
+           data-trackable="field-deliveryAddressLine3"
+           autocomplete="address-line3"
+           placeholder
+           disabled
+           value
+    >
+  </p>
+</div>
+`;

@@ -3,6 +3,7 @@ import AcceptTerms from './accept-terms';
 import BillingPostcode from './billing-postcode';
 import ContinueReading from './continue-reading';
 import CustomerCare from './customer-care';
+import DeliveryAddress from './delivery-address';
 import DeliveryPostcode from './delivery-postcode';
 import Email from './email';
 import Fieldset from './fieldset';
@@ -23,6 +24,7 @@ export {
 	BillingPostcode,
 	ContinueReading,
 	CustomerCare,
+	DeliveryAddress,
 	DeliveryPostcode,
 	Email,
 	Fieldset,
