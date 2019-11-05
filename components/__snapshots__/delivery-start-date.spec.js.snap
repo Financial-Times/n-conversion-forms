@@ -1,0 +1,555 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeliveryStartDate renders with a custom date 1`] = `
+<div id="deliveryStartDateField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryStartDate"
+     data-validate="required"
+>
+  <label for="deliveryStartDate"
+         class="o-forms__label"
+  >
+    Delivery start date
+    <br>
+    <small>
+      Earliest available delivery date: 5th November 2019
+    </small>
+  </label>
+  <input type="date"
+         id="deliveryStartDate"
+         name="deliveryStartDate"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryStartDate"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please select a valid start date
+  </div>
+  <p>
+    Your print subscription will start from:
+    <strong class="js-start-date-text">
+      5th November 2019
+    </strong>
+  </p>
+  <p>
+    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+  </p>
+</div>
+`;
+
+exports[`DeliveryStartDate renders with a custom date 2`] = `
+<div id="deliveryStartDateField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryStartDate"
+     data-validate="required"
+>
+  <label for="deliveryStartDate"
+         class="o-forms__label"
+  >
+    Delivery start date
+    <br>
+    <small>
+      Earliest available delivery date: 5th November 2019
+    </small>
+  </label>
+  <input type="date"
+         id="deliveryStartDate"
+         name="deliveryStartDate"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryStartDate"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please select a valid start date
+  </div>
+  <p>
+    Your print subscription will start from:
+    <strong class="js-start-date-text">
+      5th November 2019
+    </strong>
+  </p>
+  <p>
+    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+  </p>
+</div>
+`;
+
+exports[`DeliveryStartDate renders with a custom input max value 1`] = `
+<div id="deliveryStartDateField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryStartDate"
+     data-validate="required"
+>
+  <label for="deliveryStartDate"
+         class="o-forms__label"
+  >
+    Delivery start date
+    <br>
+    <small>
+      Earliest available delivery date: 2
+    </small>
+  </label>
+  <input type="date"
+         id="deliveryStartDate"
+         name="deliveryStartDate"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryStartDate"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please select a valid start date
+  </div>
+  <p>
+    Your print subscription will start from:
+    <strong class="js-start-date-text">
+      2
+    </strong>
+  </p>
+  <p>
+    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+  </p>
+</div>
+`;
+
+exports[`DeliveryStartDate renders with a custom input max value 2`] = `
+<div id="deliveryStartDateField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryStartDate"
+     data-validate="required"
+>
+  <label for="deliveryStartDate"
+         class="o-forms__label"
+  >
+    Delivery start date
+    <br>
+    <small>
+      Earliest available delivery date: 2
+    </small>
+  </label>
+  <input type="date"
+         id="deliveryStartDate"
+         name="deliveryStartDate"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryStartDate"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please select a valid start date
+  </div>
+  <p>
+    Your print subscription will start from:
+    <strong class="js-start-date-text">
+      2
+    </strong>
+  </p>
+  <p>
+    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+  </p>
+</div>
+`;
+
+exports[`DeliveryStartDate renders with a custom input min value 1`] = `
+<div id="deliveryStartDateField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryStartDate"
+     data-validate="required"
+>
+  <label for="deliveryStartDate"
+         class="o-forms__label"
+  >
+    Delivery start date
+    <br>
+    <small>
+      Earliest available delivery date:
+    </small>
+  </label>
+  <input type="date"
+         id="deliveryStartDate"
+         name="deliveryStartDate"
+         min="1"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryStartDate"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please select a valid start date
+  </div>
+  <p>
+    Your print subscription will start from:
+    <strong class="js-start-date-text">
+    </strong>
+  </p>
+  <p>
+    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+  </p>
+</div>
+`;
+
+exports[`DeliveryStartDate renders with a custom input min value 2`] = `
+<div id="deliveryStartDateField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryStartDate"
+     data-validate="required"
+>
+  <label for="deliveryStartDate"
+         class="o-forms__label"
+  >
+    Delivery start date
+    <br>
+    <small>
+      Earliest available delivery date:
+    </small>
+  </label>
+  <input type="date"
+         id="deliveryStartDate"
+         name="deliveryStartDate"
+         min="1"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryStartDate"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please select a valid start date
+  </div>
+  <p>
+    Your print subscription will start from:
+    <strong class="js-start-date-text">
+    </strong>
+  </p>
+  <p>
+    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+  </p>
+</div>
+`;
+
+exports[`DeliveryStartDate renders with a custom input value 1`] = `
+<div id="deliveryStartDateField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryStartDate"
+     data-validate="required"
+>
+  <label for="deliveryStartDate"
+         class="o-forms__label"
+  >
+    Delivery start date
+    <br>
+    <small>
+      Earliest available delivery date:
+    </small>
+  </label>
+  <input type="date"
+         id="deliveryStartDate"
+         name="deliveryStartDate"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryStartDate"
+         aria-required="true"
+         required
+         value="Foobar"
+  >
+  <div class="o-forms__errortext">
+    Please select a valid start date
+  </div>
+  <p>
+    Your print subscription will start from:
+    <strong class="js-start-date-text">
+    </strong>
+  </p>
+  <p>
+    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+  </p>
+</div>
+`;
+
+exports[`DeliveryStartDate renders with a custom input value 2`] = `
+<div id="deliveryStartDateField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryStartDate"
+     data-validate="required"
+>
+  <label for="deliveryStartDate"
+         class="o-forms__label"
+  >
+    Delivery start date
+    <br>
+    <small>
+      Earliest available delivery date:
+    </small>
+  </label>
+  <input type="date"
+         id="deliveryStartDate"
+         name="deliveryStartDate"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryStartDate"
+         aria-required="true"
+         required
+         value="Foobar"
+  >
+  <div class="o-forms__errortext">
+    Please select a valid start date
+  </div>
+  <p>
+    Your print subscription will start from:
+    <strong class="js-start-date-text">
+    </strong>
+  </p>
+  <p>
+    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+  </p>
+</div>
+`;
+
+exports[`DeliveryStartDate renders with a disabled input 1`] = `
+<div id="deliveryStartDateField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryStartDate"
+     data-validate="required"
+>
+  <label for="deliveryStartDate"
+         class="o-forms__label"
+  >
+    Delivery start date
+    <br>
+    <small>
+      Earliest available delivery date:
+    </small>
+  </label>
+  <input type="date"
+         id="deliveryStartDate"
+         name="deliveryStartDate"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryStartDate"
+         aria-required="true"
+         required
+         disabled
+         value
+  >
+  <div class="o-forms__errortext">
+    Please select a valid start date
+  </div>
+  <p>
+    Your print subscription will start from:
+    <strong class="js-start-date-text">
+    </strong>
+  </p>
+  <p>
+    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+  </p>
+</div>
+`;
+
+exports[`DeliveryStartDate renders with a disabled input 2`] = `
+<div id="deliveryStartDateField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryStartDate"
+     data-validate="required"
+>
+  <label for="deliveryStartDate"
+         class="o-forms__label"
+  >
+    Delivery start date
+    <br>
+    <small>
+      Earliest available delivery date:
+    </small>
+  </label>
+  <input type="date"
+         id="deliveryStartDate"
+         name="deliveryStartDate"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryStartDate"
+         aria-required="true"
+         required
+         disabled
+         value
+  >
+  <div class="o-forms__errortext">
+    Please select a valid start date
+  </div>
+  <p>
+    Your print subscription will start from:
+    <strong class="js-start-date-text">
+    </strong>
+  </p>
+  <p>
+    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+  </p>
+</div>
+`;
+
+exports[`DeliveryStartDate renders with an error 1`] = `
+<div id="deliveryStartDateField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryStartDate"
+     data-validate="required"
+>
+  <label for="deliveryStartDate"
+         class="o-forms__label"
+  >
+    Delivery start date
+    <br>
+    <small>
+      Earliest available delivery date:
+    </small>
+  </label>
+  <input type="date"
+         id="deliveryStartDate"
+         name="deliveryStartDate"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryStartDate"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please select a valid start date
+  </div>
+  <p>
+    Your print subscription will start from:
+    <strong class="js-start-date-text">
+    </strong>
+  </p>
+  <p>
+    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+  </p>
+</div>
+`;
+
+exports[`DeliveryStartDate renders with an error 2`] = `
+<div id="deliveryStartDateField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryStartDate"
+     data-validate="required"
+>
+  <label for="deliveryStartDate"
+         class="o-forms__label"
+  >
+    Delivery start date
+    <br>
+    <small>
+      Earliest available delivery date:
+    </small>
+  </label>
+  <input type="date"
+         id="deliveryStartDate"
+         name="deliveryStartDate"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryStartDate"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please select a valid start date
+  </div>
+  <p>
+    Your print subscription will start from:
+    <strong class="js-start-date-text">
+    </strong>
+  </p>
+  <p>
+    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+  </p>
+</div>
+`;
+
+exports[`DeliveryStartDate renders with default props 1`] = `
+<div id="deliveryStartDateField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryStartDate"
+     data-validate="required"
+>
+  <label for="deliveryStartDate"
+         class="o-forms__label"
+  >
+    Delivery start date
+    <br>
+    <small>
+      Earliest available delivery date:
+    </small>
+  </label>
+  <input type="date"
+         id="deliveryStartDate"
+         name="deliveryStartDate"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryStartDate"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please select a valid start date
+  </div>
+  <p>
+    Your print subscription will start from:
+    <strong class="js-start-date-text">
+    </strong>
+  </p>
+  <p>
+    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+  </p>
+</div>
+`;
+
+exports[`DeliveryStartDate renders with default props 2`] = `
+<div id="deliveryStartDateField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryStartDate"
+     data-validate="required"
+>
+  <label for="deliveryStartDate"
+         class="o-forms__label"
+  >
+    Delivery start date
+    <br>
+    <small>
+      Earliest available delivery date:
+    </small>
+  </label>
+  <input type="date"
+         id="deliveryStartDate"
+         name="deliveryStartDate"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryStartDate"
+         aria-required="true"
+         required
+         value
+  >
+  <div class="o-forms__errortext">
+    Please select a valid start date
+  </div>
+  <p>
+    Your print subscription will start from:
+    <strong class="js-start-date-text">
+    </strong>
+  </p>
+  <p>
+    NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
+  </p>
+</div>
+`;

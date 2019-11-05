@@ -9,21 +9,21 @@
 		<small>Earliest available delivery date: {{date}}</small>
 	</label>
 
-	<input type="date" id="deliveryStartDate" name="deliveryStartDate" value="{{value}}"
+	<input type="date" id="deliveryStartDate" name="deliveryStartDate"
 				{{#if min}}min={{min}}{{/if}}
 				{{#if max}}max={{max}}{{/if}}
 				class="o-forms__text js-field__input js-item__value"
 				data-trackable="field-deliveryStartDate"
 				aria-required="true" required
-				{{#if isDisabled}}disabled{{/if}}>
+				{{#if isDisabled}}disabled{{/if}}
+				value="{{value}}">
 
 	<div class="o-forms__errortext">Please select a valid start date</div>
 
 	<p>Your print subscription will start from: <strong class="js-start-date-text">{{date}}</strong></p>
 
 	<p>
-		NB. This will  be the closest date we can supply your newspaper based on your selected
-		date e.g. if you select a Sunday then we can start your supply on the Monday.
+		NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. if you select a Sunday then we can start your supply on the Monday.
 	</p>
 
 </div>
