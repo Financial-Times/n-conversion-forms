@@ -1,0 +1,219 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeliveryCounty renders with a custom value 1`] = `
+<div id="deliveryCountyField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryCounty"
+     data-validate="required"
+>
+  <label for="deliveryCounty"
+         class="o-forms__label"
+  >
+    County
+    <small>
+      (optional)
+    </small>
+  </label>
+  <input type="text"
+         id="deliveryCounty"
+         name="deliveryCounty"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryCounty"
+         autocomplete="address-level3"
+         placeholder="e.g. Somerset"
+         value="foobar"
+  >
+</div>
+`;
+
+exports[`DeliveryCounty renders with a custom value 2`] = `
+<div id="deliveryCountyField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryCounty"
+     data-validate="required"
+>
+  <label for="deliveryCounty"
+         class="o-forms__label"
+  >
+    County
+    <small>
+      (optional)
+    </small>
+  </label>
+  <input type="text"
+         id="deliveryCounty"
+         name="deliveryCounty"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryCounty"
+         autocomplete="address-level3"
+         placeholder="e.g. Somerset"
+         value="foobar"
+  >
+</div>
+`;
+
+exports[`DeliveryCounty renders with a disabled input element 1`] = `
+<div id="deliveryCountyField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryCounty"
+     data-validate="required"
+>
+  <label for="deliveryCounty"
+         class="o-forms__label"
+  >
+    County
+    <small>
+      (optional)
+    </small>
+  </label>
+  <input type="text"
+         id="deliveryCounty"
+         name="deliveryCounty"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryCounty"
+         autocomplete="address-level3"
+         placeholder="e.g. Somerset"
+         disabled
+         value
+  >
+</div>
+`;
+
+exports[`DeliveryCounty renders with a disabled input element 2`] = `
+<div id="deliveryCountyField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryCounty"
+     data-validate="required"
+>
+  <label for="deliveryCounty"
+         class="o-forms__label"
+  >
+    County
+    <small>
+      (optional)
+    </small>
+  </label>
+  <input type="text"
+         id="deliveryCounty"
+         name="deliveryCounty"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryCounty"
+         autocomplete="address-level3"
+         placeholder="e.g. Somerset"
+         disabled
+         value
+  >
+</div>
+`;
+
+exports[`DeliveryCounty renders with an error 1`] = `
+<div id="deliveryCountyField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryCounty"
+     data-validate="required"
+>
+  <label for="deliveryCounty"
+         class="o-forms__label"
+  >
+    County
+    <small>
+      (optional)
+    </small>
+  </label>
+  <input type="text"
+         id="deliveryCounty"
+         name="deliveryCounty"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryCounty"
+         autocomplete="address-level3"
+         placeholder="e.g. Somerset"
+         value
+  >
+</div>
+`;
+
+exports[`DeliveryCounty renders with an error 2`] = `
+<div id="deliveryCountyField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryCounty"
+     data-validate="required"
+>
+  <label for="deliveryCounty"
+         class="o-forms__label"
+  >
+    County
+    <small>
+      (optional)
+    </small>
+  </label>
+  <input type="text"
+         id="deliveryCounty"
+         name="deliveryCounty"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryCounty"
+         autocomplete="address-level3"
+         placeholder="e.g. Somerset"
+         value
+  >
+</div>
+`;
+
+exports[`DeliveryCounty renders with default props 1`] = `
+<div id="deliveryCountyField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryCounty"
+     data-validate="required"
+>
+  <label for="deliveryCounty"
+         class="o-forms__label"
+  >
+    County
+    <small>
+      (optional)
+    </small>
+  </label>
+  <input type="text"
+         id="deliveryCounty"
+         name="deliveryCounty"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryCounty"
+         autocomplete="address-level3"
+         placeholder="e.g. Somerset"
+         value
+  >
+</div>
+`;
+
+exports[`DeliveryCounty renders with default props 2`] = `
+<div id="deliveryCountyField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryCounty"
+     data-validate="required"
+>
+  <label for="deliveryCounty"
+         class="o-forms__label"
+  >
+    County
+    <small>
+      (optional)
+    </small>
+  </label>
+  <input type="text"
+         id="deliveryCounty"
+         name="deliveryCounty"
+         class="o-forms__text js-field__input js-item__value"
+         data-trackable="field-deliveryCounty"
+         autocomplete="address-level3"
+         placeholder="e.g. Somerset"
+         value
+  >
+</div>
+`;

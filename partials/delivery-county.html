@@ -5,11 +5,12 @@
 		data-validate="required">
 
 	<label for="deliveryCounty" class="o-forms__label">County <small>(optional)</small></label>
-	<input type="text" id="deliveryCounty" name="deliveryCounty" value="{{value}}"
+	<input type="text" id="deliveryCounty" name="deliveryCounty"
 			class="o-forms__text js-field__input js-item__value"
 			data-trackable="field-deliveryCounty"
 			autocomplete="address-level3"
 			placeholder="e.g. Somerset"
-			{{#if isDisabled}}disabled{{/if}}>
+			{{#if isDisabled}}disabled{{/if}}
+			value="{{value}}">
 
 </div>
