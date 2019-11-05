@@ -1,0 +1,277 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DecisionMaker renders with 'no' as default state for radio buttons 1`] = `
+<fieldset id="decisionMakerField"
+          class="o-forms o-forms--wide o-forms--inline ncf__field js-field"
+          data-ui-item="form-field"
+          data-ui-item-name="decisionMaker"
+          data-validate="required"
+>
+  <legend class="o-normalise-visually-hidden">
+    Are you a manager with direct reports?
+  </legend>
+  <div class="o-forms__inline-container ncf__field--min-content">
+    <div class="o-forms__label">
+      Are you a manager with direct reports?
+    </div>
+    <div class="o-forms__group o-forms__group--inline-together">
+      <input type="radio"
+             id="decisionMakerYes"
+             name="decisionMaker"
+             value="yes"
+             class="o-forms__radio-button"
+      >
+      <label for="decisionMakerYes"
+             class="o-forms__label"
+      >
+        Yes
+      </label>
+      <input type="radio"
+             id="decisionMakerNo"
+             name="decisionMaker"
+             value="no"
+             class="o-forms__radio-button o-forms__radio-button--negative"
+             checked
+      >
+      <label for="decisionMakerNo"
+             class="o-forms__label"
+      >
+        No
+      </label>
+    </div>
+  </div>
+  <div class="o-forms__errortext">
+    Please select an option
+  </div>
+</fieldset>
+`;
+
+exports[`DecisionMaker renders with 'no' as default state for radio buttons 2`] = `
+<fieldset id="decisionMakerField"
+          class="o-forms o-forms--wide o-forms--inline ncf__field js-field"
+          data-ui-item="form-field"
+          data-ui-item-name="decisionMaker"
+          data-validate="required"
+>
+  <legend class="o-normalise-visually-hidden">
+    Are you a manager with direct reports?
+  </legend>
+  <div class="o-forms__inline-container ncf__field--min-content">
+    <div class="o-forms__label">
+      Are you a manager with direct reports?
+    </div>
+    <div class="o-forms__group o-forms__group--inline-together">
+      <input type="radio"
+             id="decisionMakerYes"
+             name="decisionMaker"
+             value="yes"
+             class="o-forms__radio-button"
+      >
+      <label for="decisionMakerYes"
+             class="o-forms__label"
+      >
+        Yes
+      </label>
+      <input type="radio"
+             id="decisionMakerNo"
+             name="decisionMaker"
+             value="no"
+             class="o-forms__radio-button o-forms__radio-button--negative"
+             checked
+      >
+      <label for="decisionMakerNo"
+             class="o-forms__label"
+      >
+        No
+      </label>
+    </div>
+  </div>
+  <div class="o-forms__errortext">
+    Please select an option
+  </div>
+</fieldset>
+`;
+
+exports[`DecisionMaker renders with an error 1`] = `
+<fieldset id="decisionMakerField"
+          class="o-forms o-forms--wide o-forms--inline ncf__field js-field"
+          data-ui-item="form-field"
+          data-ui-item-name="decisionMaker"
+          data-validate="required"
+>
+  <legend class="o-normalise-visually-hidden">
+    Are you a manager with direct reports?
+  </legend>
+  <div class="o-forms__inline-container ncf__field--min-content">
+    <div class="o-forms__label">
+      Are you a manager with direct reports?
+    </div>
+    <div class="o-forms__group o-forms__group--inline-together">
+      <input type="radio"
+             id="decisionMakerYes"
+             name="decisionMaker"
+             value="yes"
+             class="o-forms__radio-button"
+             checked
+      >
+      <label for="decisionMakerYes"
+             class="o-forms__label"
+      >
+        Yes
+      </label>
+      <input type="radio"
+             id="decisionMakerNo"
+             name="decisionMaker"
+             value="no"
+             class="o-forms__radio-button o-forms__radio-button--negative"
+      >
+      <label for="decisionMakerNo"
+             class="o-forms__label"
+      >
+        No
+      </label>
+    </div>
+  </div>
+  <div class="o-forms__errortext">
+    Please select an option
+  </div>
+</fieldset>
+`;
+
+exports[`DecisionMaker renders with an error 2`] = `
+<fieldset id="decisionMakerField"
+          class="o-forms o-forms--wide o-forms--inline ncf__field js-field"
+          data-ui-item="form-field"
+          data-ui-item-name="decisionMaker"
+          data-validate="required"
+>
+  <legend class="o-normalise-visually-hidden">
+    Are you a manager with direct reports?
+  </legend>
+  <div class="o-forms__inline-container ncf__field--min-content">
+    <div class="o-forms__label">
+      Are you a manager with direct reports?
+    </div>
+    <div class="o-forms__group o-forms__group--inline-together">
+      <input type="radio"
+             id="decisionMakerYes"
+             name="decisionMaker"
+             value="yes"
+             class="o-forms__radio-button"
+             checked
+      >
+      <label for="decisionMakerYes"
+             class="o-forms__label"
+      >
+        Yes
+      </label>
+      <input type="radio"
+             id="decisionMakerNo"
+             name="decisionMaker"
+             value="no"
+             class="o-forms__radio-button o-forms__radio-button--negative"
+      >
+      <label for="decisionMakerNo"
+             class="o-forms__label"
+      >
+        No
+      </label>
+    </div>
+  </div>
+  <div class="o-forms__errortext">
+    Please select an option
+  </div>
+</fieldset>
+`;
+
+exports[`DecisionMaker renders with default props 1`] = `
+<fieldset id="decisionMakerField"
+          class="o-forms o-forms--wide o-forms--inline ncf__field js-field"
+          data-ui-item="form-field"
+          data-ui-item-name="decisionMaker"
+          data-validate="required"
+>
+  <legend class="o-normalise-visually-hidden">
+    Are you a manager with direct reports?
+  </legend>
+  <div class="o-forms__inline-container ncf__field--min-content">
+    <div class="o-forms__label">
+      Are you a manager with direct reports?
+    </div>
+    <div class="o-forms__group o-forms__group--inline-together">
+      <input type="radio"
+             id="decisionMakerYes"
+             name="decisionMaker"
+             value="yes"
+             class="o-forms__radio-button"
+             checked
+      >
+      <label for="decisionMakerYes"
+             class="o-forms__label"
+      >
+        Yes
+      </label>
+      <input type="radio"
+             id="decisionMakerNo"
+             name="decisionMaker"
+             value="no"
+             class="o-forms__radio-button o-forms__radio-button--negative"
+      >
+      <label for="decisionMakerNo"
+             class="o-forms__label"
+      >
+        No
+      </label>
+    </div>
+  </div>
+  <div class="o-forms__errortext">
+    Please select an option
+  </div>
+</fieldset>
+`;
+
+exports[`DecisionMaker renders with default props 2`] = `
+<fieldset id="decisionMakerField"
+          class="o-forms o-forms--wide o-forms--inline ncf__field js-field"
+          data-ui-item="form-field"
+          data-ui-item-name="decisionMaker"
+          data-validate="required"
+>
+  <legend class="o-normalise-visually-hidden">
+    Are you a manager with direct reports?
+  </legend>
+  <div class="o-forms__inline-container ncf__field--min-content">
+    <div class="o-forms__label">
+      Are you a manager with direct reports?
+    </div>
+    <div class="o-forms__group o-forms__group--inline-together">
+      <input type="radio"
+             id="decisionMakerYes"
+             name="decisionMaker"
+             value="yes"
+             class="o-forms__radio-button"
+             checked
+      >
+      <label for="decisionMakerYes"
+             class="o-forms__label"
+      >
+        Yes
+      </label>
+      <input type="radio"
+             id="decisionMakerNo"
+             name="decisionMaker"
+             value="no"
+             class="o-forms__radio-button o-forms__radio-button--negative"
+      >
+      <label for="decisionMakerNo"
+             class="o-forms__label"
+      >
+        No
+      </label>
+    </div>
+  </div>
+  <div class="o-forms__errortext">
+    Please select an option
+  </div>
+</fieldset>
+`;
