@@ -9,6 +9,11 @@ import DeliveryAddress from './delivery-address';
 import DeliveryStartDate from './delivery-start-date';
 import DeliveryCity from './delivery-city';
 import DeliveryCounty from './delivery-county';
+<<<<<<< HEAD
+=======
+import DecisionMaker from './decision-maker';
+import DeliveryOption from './delivery-option';
+>>>>>>> Add Delivery Option JSX component 🐿 v2.12.5
 import DeliveryPostcode from './delivery-postcode';
 import Email from './email';
 import Fieldset from './fieldset';
@@ -39,6 +44,7 @@ export {
 	DeliveryAddress,
 	DeliveryCity,
 	DeliveryCounty,
+	DeliveryOption,
 	DeliveryPostcode,
 	DeliveryStartDate,
 	Email,

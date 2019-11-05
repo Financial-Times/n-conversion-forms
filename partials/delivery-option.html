@@ -1,7 +1,7 @@
 <div id="deliveryOptionField" class="o-forms__group ncf__delivery-option{{#if isSingle}} ncf__delivery-option--single{{/if}}">
 	{{#each options}}
 	<div class="ncf__delivery-option__item">
-		<input type="radio" id="{{this.value}}" name="deliveryOption" value="{{this.value}}" class="o-forms__radio o-forms__radio--right ncf__delivery-option__input"{{#if this.isSelected}} checked="checked"{{/if}}>
+		<input type="radio" id="{{this.value}}" name="deliveryOption" value="{{this.value}}" class="o-forms__radio o-forms__radio--right ncf__delivery-option__input"{{#if this.isSelected}} checked{{/if}}>
 		<label for="{{this.value}}" class="o-forms__label ncf__delivery-option__label">
 			{{#ifEquals this.value 'PV'}}
 			<span class="ncf__delivery-option__title">Paper vouchers</span>
