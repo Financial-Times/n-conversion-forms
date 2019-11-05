@@ -1,0 +1,1129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Confirmation renders Call To Action (CTA) for non-print-only 1`] = `
+<div class="ncf ncf__wrapper">
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <p class="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">
+      You are now subscribed to:
+    </p>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Offer text
+    </h1>
+  </div>
+  <p class="ncf__paragraph">
+    We’ve sent confirmation of your new subscription to your email. Here’s a summary of your Offer text subscription:
+  </p>
+  <div class="ncf__headed-paragraph">
+    <h3 class="ncf__header">
+      Something not right?
+    </h3>
+    <p class="ncf__paragraph">
+      Go to your
+      <a class="ncf__link ncf__link--external"
+         href="https://myaccount.ft.com/details/core/view"
+         target="_blank"
+         rel="noopener"
+         data-trackable="yourAccount"
+      >
+        account settings
+      </a>
+      to view or edit your account. If you need to get in touch call us on
+      <a href="tel:+442077556248"
+         class="ncf__link ncf__link--external"
+      >
+        +44 (0) 207 755 6248
+      </a>
+      . Or contact us for additional support.
+    </p>
+  </div>
+  <p class="ncf__paragraph">
+    We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. See our
+    <a class="ncf__link ncf__link--external"
+       href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+       target="_top"
+       rel="noopener"
+    >
+      Terms &amp; Conditions
+    </a>
+    for details on how to cancel.
+  </p>
+  <p class="ncf__center">
+    <a href="/"
+       class="ncf__button ncf__button--submit"
+    >
+      Start exploring
+    </a>
+  </p>
+</div>
+`;
+
+exports[`Confirmation renders Call To Action (CTA) for non-print-only 2`] = `
+<div class="ncf ncf__wrapper">
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <p class="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">
+      You are now subscribed to:
+    </p>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Offer text
+    </h1>
+  </div>
+  <p class="ncf__paragraph">
+    We’ve sent confirmation of your new subscription to your email. Here’s a summary of your Offer text subscription:
+  </p>
+  <div class="ncf__headed-paragraph">
+    <h3 class="ncf__header">
+      Something not right?
+    </h3>
+    <p class="ncf__paragraph">
+      Go to your
+      <a class="ncf__link ncf__link--external"
+         href="https://myaccount.ft.com/details/core/view"
+         target="_blank"
+         rel="noopener"
+         data-trackable="yourAccount"
+      >
+        account settings
+      </a>
+      to view or edit your account. If you need to get in touch call us on
+      <a href="tel:+442077556248"
+         class="ncf__link ncf__link--external"
+      >
+        +44 (0) 207 755 6248
+      </a>
+      . Or contact us for additional support.
+    </p>
+  </div>
+  <p class="ncf__paragraph">
+    We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. See our
+    <a class="ncf__link ncf__link--external"
+       href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+       target="_top"
+       rel="noopener"
+    >
+      Terms &amp; Conditions
+    </a>
+    for details on how to cancel.
+  </p>
+  <p class="ncf__center">
+    <a href="/"
+       class="ncf__button ncf__button--submit"
+    >
+      Start exploring
+    </a>
+  </p>
+</div>
+`;
+
+exports[`Confirmation renders Call To Action (CTA) for print-only 1`] = `
+<div class="ncf ncf__wrapper">
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <p class="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">
+      You are now subscribed to:
+    </p>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Offer text
+    </h1>
+  </div>
+  <p class="ncf__paragraph">
+    We’ve sent confirmation of your new subscription to your email. Here’s a summary of your Offer text subscription:
+  </p>
+  <div class="ncf__headed-paragraph">
+    <h3 class="ncf__header">
+      Something not right?
+    </h3>
+    <p class="ncf__paragraph">
+      Go to your
+      <a class="ncf__link ncf__link--external"
+         href="https://myaccount.ft.com/details/core/view"
+         target="_blank"
+         rel="noopener"
+         data-trackable="yourAccount"
+      >
+        account settings
+      </a>
+      to view or edit your account. If you need to get in touch call us on
+      <a href="tel:+442077556248"
+         class="ncf__link ncf__link--external"
+      >
+        +44 (0) 207 755 6248
+      </a>
+      . Or contact us for additional support.
+    </p>
+  </div>
+  <p class="ncf__paragraph">
+    We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. See our
+    <a class="ncf__link ncf__link--external"
+       href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+       target="_top"
+       rel="noopener"
+    >
+      Terms &amp; Conditions
+    </a>
+    for details on how to cancel.
+  </p>
+  <p class="ncf__center">
+    <a href="/todaysnewspaper "
+       class="ncf__button ncf__button--submit"
+    >
+      Explore our E-Paper
+    </a>
+  </p>
+</div>
+`;
+
+exports[`Confirmation renders Call To Action (CTA) for print-only 2`] = `
+<div class="ncf ncf__wrapper">
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <p class="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">
+      You are now subscribed to:
+    </p>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Offer text
+    </h1>
+  </div>
+  <p class="ncf__paragraph">
+    We’ve sent confirmation of your new subscription to your email. Here’s a summary of your Offer text subscription:
+  </p>
+  <div class="ncf__headed-paragraph">
+    <h3 class="ncf__header">
+      Something not right?
+    </h3>
+    <p class="ncf__paragraph">
+      Go to your
+      <a class="ncf__link ncf__link--external"
+         href="https://myaccount.ft.com/details/core/view"
+         target="_blank"
+         rel="noopener"
+         data-trackable="yourAccount"
+      >
+        account settings
+      </a>
+      to view or edit your account. If you need to get in touch call us on
+      <a href="tel:+442077556248"
+         class="ncf__link ncf__link--external"
+      >
+        +44 (0) 207 755 6248
+      </a>
+      . Or contact us for additional support.
+    </p>
+  </div>
+  <p class="ncf__paragraph">
+    We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. See our
+    <a class="ncf__link ncf__link--external"
+       href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+       target="_top"
+       rel="noopener"
+    >
+      Terms &amp; Conditions
+    </a>
+    for details on how to cancel.
+  </p>
+  <p class="ncf__center">
+    <a href="/todaysnewspaper "
+       class="ncf__button ncf__button--submit"
+    >
+      Explore our E-Paper
+    </a>
+  </p>
+</div>
+`;
+
+exports[`Confirmation renders appropriately if is trial 1`] = `
+<div class="ncf ncf__wrapper"
+     data-signup-is-trial="true"
+>
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <p class="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">
+      You are now subscribed to:
+    </p>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Offer text
+    </h1>
+  </div>
+  <p class="ncf__paragraph">
+    We’ve sent confirmation of your new subscription to your email. Here’s a summary of your Offer text subscription:
+  </p>
+  <div class="ncf__headed-paragraph">
+    <h3 class="ncf__header">
+      Something not right?
+    </h3>
+    <p class="ncf__paragraph">
+      Go to your
+      <a class="ncf__link ncf__link--external"
+         href="https://myaccount.ft.com/details/core/view"
+         target="_blank"
+         rel="noopener"
+         data-trackable="yourAccount"
+      >
+        account settings
+      </a>
+      to view or edit your account. If you need to get in touch call us on
+      <a href="tel:+442077556248"
+         class="ncf__link ncf__link--external"
+      >
+        +44 (0) 207 755 6248
+      </a>
+      . Or contact us for additional support.
+    </p>
+  </div>
+  <p class="ncf__paragraph">
+    We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. See our
+    <a class="ncf__link ncf__link--external"
+       href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+       target="_top"
+       rel="noopener"
+    >
+      Terms &amp; Conditions
+    </a>
+    for details on how to cancel.
+  </p>
+  <p class="ncf__center">
+    <a href="/"
+       class="ncf__button ncf__button--submit"
+    >
+      Start exploring
+    </a>
+  </p>
+</div>
+`;
+
+exports[`Confirmation renders appropriately if is trial 2`] = `
+<div class="ncf ncf__wrapper"
+     data-signup-is-trial="true"
+>
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <p class="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">
+      You are now subscribed to:
+    </p>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Offer text
+    </h1>
+  </div>
+  <p class="ncf__paragraph">
+    We’ve sent confirmation of your new subscription to your email. Here’s a summary of your Offer text subscription:
+  </p>
+  <div class="ncf__headed-paragraph">
+    <h3 class="ncf__header">
+      Something not right?
+    </h3>
+    <p class="ncf__paragraph">
+      Go to your
+      <a class="ncf__link ncf__link--external"
+         href="https://myaccount.ft.com/details/core/view"
+         target="_blank"
+         rel="noopener"
+         data-trackable="yourAccount"
+      >
+        account settings
+      </a>
+      to view or edit your account. If you need to get in touch call us on
+      <a href="tel:+442077556248"
+         class="ncf__link ncf__link--external"
+      >
+        +44 (0) 207 755 6248
+      </a>
+      . Or contact us for additional support.
+    </p>
+  </div>
+  <p class="ncf__paragraph">
+    We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. See our
+    <a class="ncf__link ncf__link--external"
+       href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+       target="_top"
+       rel="noopener"
+    >
+      Terms &amp; Conditions
+    </a>
+    for details on how to cancel.
+  </p>
+  <p class="ncf__center">
+    <a href="/"
+       class="ncf__button ncf__button--submit"
+    >
+      Start exploring
+    </a>
+  </p>
+</div>
+`;
+
+exports[`Confirmation renders with complete details 1`] = `
+<div class="ncf ncf__wrapper">
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <p class="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">
+      You are now subscribed to:
+    </p>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Offer text
+    </h1>
+  </div>
+  <p class="ncf__paragraph">
+    We’ve sent confirmation of your new subscription to your email. Here’s a summary of your Offer text subscription:
+  </p>
+  <h2 class="ncf__header2--afterline">
+    Your billing details
+  </h2>
+  <dl class="ncf__list">
+    <dt class="ncf__list-title">
+      Details title text
+    </dt>
+    <dd class="ncf__list-data">
+      Details title data
+    </dd>
+    <dd class="ncf__list-description">
+      Details title description
+    </dd>
+  </dl>
+  <div class="ncf__headed-paragraph">
+    <h3 class="ncf__header">
+      Something not right?
+    </h3>
+    <p class="ncf__paragraph">
+      Go to your
+      <a class="ncf__link ncf__link--external"
+         href="https://myaccount.ft.com/details/core/view"
+         target="_blank"
+         rel="noopener"
+         data-trackable="yourAccount"
+      >
+        account settings
+      </a>
+      to view or edit your account. If you need to get in touch call us on
+      <a href="tel:+442077556248"
+         class="ncf__link ncf__link--external"
+      >
+        +44 (0) 207 755 6248
+      </a>
+      . Or contact us for additional support.
+    </p>
+  </div>
+  <p class="ncf__paragraph">
+    We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. See our
+    <a class="ncf__link ncf__link--external"
+       href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+       target="_top"
+       rel="noopener"
+    >
+      Terms &amp; Conditions
+    </a>
+    for details on how to cancel.
+  </p>
+  <p class="ncf__center">
+    <a href="/"
+       class="ncf__button ncf__button--submit"
+    >
+      Start exploring
+    </a>
+  </p>
+</div>
+`;
+
+exports[`Confirmation renders with complete details 2`] = `
+<div class="ncf ncf__wrapper">
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <p class="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">
+      You are now subscribed to:
+    </p>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Offer text
+    </h1>
+  </div>
+  <p class="ncf__paragraph">
+    We’ve sent confirmation of your new subscription to your email. Here’s a summary of your Offer text subscription:
+  </p>
+  <h2 class="ncf__header2--afterline">
+    Your billing details
+  </h2>
+  <dl class="ncf__list">
+    <dt class="ncf__list-title">
+      Details title text
+    </dt>
+    <dd class="ncf__list-data">
+      Details title data
+    </dd>
+    <dd class="ncf__list-description">
+      Details title description
+    </dd>
+  </dl>
+  <div class="ncf__headed-paragraph">
+    <h3 class="ncf__header">
+      Something not right?
+    </h3>
+    <p class="ncf__paragraph">
+      Go to your
+      <a class="ncf__link ncf__link--external"
+         href="https://myaccount.ft.com/details/core/view"
+         target="_blank"
+         rel="noopener"
+         data-trackable="yourAccount"
+      >
+        account settings
+      </a>
+      to view or edit your account. If you need to get in touch call us on
+      <a href="tel:+442077556248"
+         class="ncf__link ncf__link--external"
+      >
+        +44 (0) 207 755 6248
+      </a>
+      . Or contact us for additional support.
+    </p>
+  </div>
+  <p class="ncf__paragraph">
+    We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. See our
+    <a class="ncf__link ncf__link--external"
+       href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+       target="_top"
+       rel="noopener"
+    >
+      Terms &amp; Conditions
+    </a>
+    for details on how to cancel.
+  </p>
+  <p class="ncf__center">
+    <a href="/"
+       class="ncf__button ncf__button--submit"
+    >
+      Start exploring
+    </a>
+  </p>
+</div>
+`;
+
+exports[`Confirmation renders with custom email 1`] = `
+<div class="ncf ncf__wrapper">
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <p class="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">
+      You are now subscribed to:
+    </p>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Offer text
+    </h1>
+  </div>
+  <p class="ncf__paragraph">
+    We’ve sent confirmation of your new subscription to test@example.com. Here’s a summary of your Offer text subscription:
+  </p>
+  <div class="ncf__headed-paragraph">
+    <h3 class="ncf__header">
+      Something not right?
+    </h3>
+    <p class="ncf__paragraph">
+      Go to your
+      <a class="ncf__link ncf__link--external"
+         href="https://myaccount.ft.com/details/core/view"
+         target="_blank"
+         rel="noopener"
+         data-trackable="yourAccount"
+      >
+        account settings
+      </a>
+      to view or edit your account. If you need to get in touch call us on
+      <a href="tel:+442077556248"
+         class="ncf__link ncf__link--external"
+      >
+        +44 (0) 207 755 6248
+      </a>
+      . Or contact us for additional support.
+    </p>
+  </div>
+  <p class="ncf__paragraph">
+    We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. See our
+    <a class="ncf__link ncf__link--external"
+       href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+       target="_top"
+       rel="noopener"
+    >
+      Terms &amp; Conditions
+    </a>
+    for details on how to cancel.
+  </p>
+  <p class="ncf__center">
+    <a href="/"
+       class="ncf__button ncf__button--submit"
+    >
+      Start exploring
+    </a>
+  </p>
+</div>
+`;
+
+exports[`Confirmation renders with custom email 2`] = `
+<div class="ncf ncf__wrapper">
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <p class="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">
+      You are now subscribed to:
+    </p>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Offer text
+    </h1>
+  </div>
+  <p class="ncf__paragraph">
+    We’ve sent confirmation of your new subscription to test@example.com. Here’s a summary of your Offer text subscription:
+  </p>
+  <div class="ncf__headed-paragraph">
+    <h3 class="ncf__header">
+      Something not right?
+    </h3>
+    <p class="ncf__paragraph">
+      Go to your
+      <a class="ncf__link ncf__link--external"
+         href="https://myaccount.ft.com/details/core/view"
+         target="_blank"
+         rel="noopener"
+         data-trackable="yourAccount"
+      >
+        account settings
+      </a>
+      to view or edit your account. If you need to get in touch call us on
+      <a href="tel:+442077556248"
+         class="ncf__link ncf__link--external"
+      >
+        +44 (0) 207 755 6248
+      </a>
+      . Or contact us for additional support.
+    </p>
+  </div>
+  <p class="ncf__paragraph">
+    We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. See our
+    <a class="ncf__link ncf__link--external"
+       href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+       target="_top"
+       rel="noopener"
+    >
+      Terms &amp; Conditions
+    </a>
+    for details on how to cancel.
+  </p>
+  <p class="ncf__center">
+    <a href="/"
+       class="ncf__button ncf__button--submit"
+    >
+      Start exploring
+    </a>
+  </p>
+</div>
+`;
+
+exports[`Confirmation renders with default props 1`] = `
+<div class="ncf ncf__wrapper">
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <p class="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">
+      You are now subscribed to:
+    </p>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Offer text
+    </h1>
+  </div>
+  <p class="ncf__paragraph">
+    We’ve sent confirmation of your new subscription to your email. Here’s a summary of your Offer text subscription:
+  </p>
+  <div class="ncf__headed-paragraph">
+    <h3 class="ncf__header">
+      Something not right?
+    </h3>
+    <p class="ncf__paragraph">
+      Go to your
+      <a class="ncf__link ncf__link--external"
+         href="https://myaccount.ft.com/details/core/view"
+         target="_blank"
+         rel="noopener"
+         data-trackable="yourAccount"
+      >
+        account settings
+      </a>
+      to view or edit your account. If you need to get in touch call us on
+      <a href="tel:+442077556248"
+         class="ncf__link ncf__link--external"
+      >
+        +44 (0) 207 755 6248
+      </a>
+      . Or contact us for additional support.
+    </p>
+  </div>
+  <p class="ncf__paragraph">
+    We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. See our
+    <a class="ncf__link ncf__link--external"
+       href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+       target="_top"
+       rel="noopener"
+    >
+      Terms &amp; Conditions
+    </a>
+    for details on how to cancel.
+  </p>
+  <p class="ncf__center">
+    <a href="/"
+       class="ncf__button ncf__button--submit"
+    >
+      Start exploring
+    </a>
+  </p>
+</div>
+`;
+
+exports[`Confirmation renders with default props 2`] = `
+<div class="ncf ncf__wrapper">
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <p class="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">
+      You are now subscribed to:
+    </p>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Offer text
+    </h1>
+  </div>
+  <p class="ncf__paragraph">
+    We’ve sent confirmation of your new subscription to your email. Here’s a summary of your Offer text subscription:
+  </p>
+  <div class="ncf__headed-paragraph">
+    <h3 class="ncf__header">
+      Something not right?
+    </h3>
+    <p class="ncf__paragraph">
+      Go to your
+      <a class="ncf__link ncf__link--external"
+         href="https://myaccount.ft.com/details/core/view"
+         target="_blank"
+         rel="noopener"
+         data-trackable="yourAccount"
+      >
+        account settings
+      </a>
+      to view or edit your account. If you need to get in touch call us on
+      <a href="tel:+442077556248"
+         class="ncf__link ncf__link--external"
+      >
+        +44 (0) 207 755 6248
+      </a>
+      . Or contact us for additional support.
+    </p>
+  </div>
+  <p class="ncf__paragraph">
+    We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. See our
+    <a class="ncf__link ncf__link--external"
+       href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+       target="_top"
+       rel="noopener"
+    >
+      Terms &amp; Conditions
+    </a>
+    for details on how to cancel.
+  </p>
+  <p class="ncf__center">
+    <a href="/"
+       class="ncf__button ncf__button--submit"
+    >
+      Start exploring
+    </a>
+  </p>
+</div>
+`;
+
+exports[`Confirmation renders with details missing a description 1`] = `
+<div class="ncf ncf__wrapper">
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <p class="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">
+      You are now subscribed to:
+    </p>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Offer text
+    </h1>
+  </div>
+  <p class="ncf__paragraph">
+    We’ve sent confirmation of your new subscription to your email. Here’s a summary of your Offer text subscription:
+  </p>
+  <h2 class="ncf__header2--afterline">
+    Your billing details
+  </h2>
+  <dl class="ncf__list">
+    <dt class="ncf__list-title">
+      Details title text
+    </dt>
+    <dd class="ncf__list-data">
+      Details title data
+    </dd>
+  </dl>
+  <div class="ncf__headed-paragraph">
+    <h3 class="ncf__header">
+      Something not right?
+    </h3>
+    <p class="ncf__paragraph">
+      Go to your
+      <a class="ncf__link ncf__link--external"
+         href="https://myaccount.ft.com/details/core/view"
+         target="_blank"
+         rel="noopener"
+         data-trackable="yourAccount"
+      >
+        account settings
+      </a>
+      to view or edit your account. If you need to get in touch call us on
+      <a href="tel:+442077556248"
+         class="ncf__link ncf__link--external"
+      >
+        +44 (0) 207 755 6248
+      </a>
+      . Or contact us for additional support.
+    </p>
+  </div>
+  <p class="ncf__paragraph">
+    We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. See our
+    <a class="ncf__link ncf__link--external"
+       href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+       target="_top"
+       rel="noopener"
+    >
+      Terms &amp; Conditions
+    </a>
+    for details on how to cancel.
+  </p>
+  <p class="ncf__center">
+    <a href="/"
+       class="ncf__button ncf__button--submit"
+    >
+      Start exploring
+    </a>
+  </p>
+</div>
+`;
+
+exports[`Confirmation renders with details missing a description 2`] = `
+<div class="ncf ncf__wrapper">
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <p class="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">
+      You are now subscribed to:
+    </p>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Offer text
+    </h1>
+  </div>
+  <p class="ncf__paragraph">
+    We’ve sent confirmation of your new subscription to your email. Here’s a summary of your Offer text subscription:
+  </p>
+  <h2 class="ncf__header2--afterline">
+    Your billing details
+  </h2>
+  <dl class="ncf__list">
+    <dt class="ncf__list-title">
+      Details title text
+    </dt>
+    <dd class="ncf__list-data">
+      Details title data
+    </dd>
+  </dl>
+  <div class="ncf__headed-paragraph">
+    <h3 class="ncf__header">
+      Something not right?
+    </h3>
+    <p class="ncf__paragraph">
+      Go to your
+      <a class="ncf__link ncf__link--external"
+         href="https://myaccount.ft.com/details/core/view"
+         target="_blank"
+         rel="noopener"
+         data-trackable="yourAccount"
+      >
+        account settings
+      </a>
+      to view or edit your account. If you need to get in touch call us on
+      <a href="tel:+442077556248"
+         class="ncf__link ncf__link--external"
+      >
+        +44 (0) 207 755 6248
+      </a>
+      . Or contact us for additional support.
+    </p>
+  </div>
+  <p class="ncf__paragraph">
+    We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. See our
+    <a class="ncf__link ncf__link--external"
+       href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+       target="_top"
+       rel="noopener"
+    >
+      Terms &amp; Conditions
+    </a>
+    for details on how to cancel.
+  </p>
+  <p class="ncf__center">
+    <a href="/"
+       class="ncf__button ncf__button--submit"
+    >
+      Start exploring
+    </a>
+  </p>
+</div>
+`;
+
+exports[`Confirmation renders with direct debit mandate URL 1`] = `
+<div class="ncf ncf__wrapper">
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <p class="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">
+      You are now subscribed to:
+    </p>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Offer text
+    </h1>
+  </div>
+  <p class="ncf__paragraph">
+    We’ve sent confirmation of your new subscription to your email. Here’s a summary of your Offer text subscription:
+  </p>
+  <div>
+    <p class="ncf__paragraph--reduced-padding">
+      Download your
+      <a href="https://foo.com"
+         data-trackable="dd-mandate-link"
+         id="encryptedMandateLink"
+      >
+        direct debit mandate
+      </a>
+      <i class="ncf__icon-download">
+      </i>
+    </p>
+  </div>
+  <div class="ncf__headed-paragraph">
+    <h3 class="ncf__header">
+      Something not right?
+    </h3>
+    <p class="ncf__paragraph">
+      Go to your
+      <a class="ncf__link ncf__link--external"
+         href="https://myaccount.ft.com/details/core/view"
+         target="_blank"
+         rel="noopener"
+         data-trackable="yourAccount"
+      >
+        account settings
+      </a>
+      to view or edit your account. If you need to get in touch call us on
+      <a href="tel:+442077556248"
+         class="ncf__link ncf__link--external"
+      >
+        +44 (0) 207 755 6248
+      </a>
+      . Or contact us for additional support.
+    </p>
+  </div>
+  <p class="ncf__paragraph">
+    We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. See our
+    <a class="ncf__link ncf__link--external"
+       href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+       target="_top"
+       rel="noopener"
+    >
+      Terms &amp; Conditions
+    </a>
+    for details on how to cancel.
+  </p>
+  <p class="ncf__center">
+    <a href="/"
+       class="ncf__button ncf__button--submit"
+    >
+      Start exploring
+    </a>
+  </p>
+</div>
+`;
+
+exports[`Confirmation renders with direct debit mandate URL 2`] = `
+<div class="ncf ncf__wrapper">
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <p class="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">
+      You are now subscribed to:
+    </p>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Offer text
+    </h1>
+  </div>
+  <p class="ncf__paragraph">
+    We’ve sent confirmation of your new subscription to your email. Here’s a summary of your Offer text subscription:
+  </p>
+  <div>
+    <p class="ncf__paragraph--reduced-padding">
+      Download your
+      <a href="https://foo.com"
+         data-trackable="dd-mandate-link"
+         id="encryptedMandateLink"
+      >
+        direct debit mandate
+      </a>
+      <i class="ncf__icon-download">
+      </i>
+    </p>
+  </div>
+  <div class="ncf__headed-paragraph">
+    <h3 class="ncf__header">
+      Something not right?
+    </h3>
+    <p class="ncf__paragraph">
+      Go to your
+      <a class="ncf__link ncf__link--external"
+         href="https://myaccount.ft.com/details/core/view"
+         target="_blank"
+         rel="noopener"
+         data-trackable="yourAccount"
+      >
+        account settings
+      </a>
+      to view or edit your account. If you need to get in touch call us on
+      <a href="tel:+442077556248"
+         class="ncf__link ncf__link--external"
+      >
+        +44 (0) 207 755 6248
+      </a>
+      . Or contact us for additional support.
+    </p>
+  </div>
+  <p class="ncf__paragraph">
+    We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. See our
+    <a class="ncf__link ncf__link--external"
+       href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+       target="_top"
+       rel="noopener"
+    >
+      Terms &amp; Conditions
+    </a>
+    for details on how to cancel.
+  </p>
+  <p class="ncf__center">
+    <a href="/"
+       class="ncf__button ncf__button--submit"
+    >
+      Start exploring
+    </a>
+  </p>
+</div>
+`;
+
+exports[`Confirmation renders with hidden Call To Action (CTA) 1`] = `
+<div class="ncf ncf__wrapper">
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <p class="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">
+      You are now subscribed to:
+    </p>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Offer text
+    </h1>
+  </div>
+  <p class="ncf__paragraph">
+    We’ve sent confirmation of your new subscription to your email. Here’s a summary of your Offer text subscription:
+  </p>
+  <div class="ncf__headed-paragraph">
+    <h3 class="ncf__header">
+      Something not right?
+    </h3>
+    <p class="ncf__paragraph">
+      Go to your
+      <a class="ncf__link ncf__link--external"
+         href="https://myaccount.ft.com/details/core/view"
+         target="_blank"
+         rel="noopener"
+         data-trackable="yourAccount"
+      >
+        account settings
+      </a>
+      to view or edit your account. If you need to get in touch call us on
+      <a href="tel:+442077556248"
+         class="ncf__link ncf__link--external"
+      >
+        +44 (0) 207 755 6248
+      </a>
+      . Or contact us for additional support.
+    </p>
+  </div>
+  <p class="ncf__paragraph">
+    We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. See our
+    <a class="ncf__link ncf__link--external"
+       href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+       target="_top"
+       rel="noopener"
+    >
+      Terms &amp; Conditions
+    </a>
+    for details on how to cancel.
+  </p>
+</div>
+`;
+
+exports[`Confirmation renders with hidden Call To Action (CTA) 2`] = `
+<div class="ncf ncf__wrapper">
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <p class="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">
+      You are now subscribed to:
+    </p>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Offer text
+    </h1>
+  </div>
+  <p class="ncf__paragraph">
+    We’ve sent confirmation of your new subscription to your email. Here’s a summary of your Offer text subscription:
+  </p>
+  <div class="ncf__headed-paragraph">
+    <h3 class="ncf__header">
+      Something not right?
+    </h3>
+    <p class="ncf__paragraph">
+      Go to your
+      <a class="ncf__link ncf__link--external"
+         href="https://myaccount.ft.com/details/core/view"
+         target="_blank"
+         rel="noopener"
+         data-trackable="yourAccount"
+      >
+        account settings
+      </a>
+      to view or edit your account. If you need to get in touch call us on
+      <a href="tel:+442077556248"
+         class="ncf__link ncf__link--external"
+      >
+        +44 (0) 207 755 6248
+      </a>
+      . Or contact us for additional support.
+    </p>
+  </div>
+  <p class="ncf__paragraph">
+    We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. See our
+    <a class="ncf__link ncf__link--external"
+       href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+       target="_top"
+       rel="noopener"
+    >
+      Terms &amp; Conditions
+    </a>
+    for details on how to cancel.
+  </p>
+</div>
+`;

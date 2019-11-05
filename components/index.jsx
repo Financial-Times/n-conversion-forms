@@ -2,6 +2,7 @@ import AcceptTerms from './accept-terms';
 import AppBanner from './app-banner';
 import BillingPostcode from './billing-postcode';
 import CompanyName from './company-name';
+import Confirmation from './confirmation';
 import ContinueReading from './continue-reading';
 import CustomerCare from './customer-care';
 import DecisionMaker from './decision-maker';
@@ -33,6 +34,7 @@ export {
 	AppBanner,
 	BillingPostcode,
 	CompanyName,
+	Confirmation,
 	ContinueReading,
 	CustomerCare,
 	DecisionMaker,

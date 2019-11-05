@@ -12,6 +12,7 @@ function initDemo () {
 			<ncf.AcceptTerms />
 			<ncf.BillingPostcode postcodeReference={'billing postcode'}/>
 			<ncf.CompanyName />
+			<ncf.Confirmation />
 			<ncf.ContinueReading />
 			<ncf.CustomerCare />
 			<ncf.DeliveryAddress />
