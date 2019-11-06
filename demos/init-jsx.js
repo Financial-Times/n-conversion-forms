@@ -26,6 +26,7 @@ function initDemo () {
 			<ncf.JobTitle />
 			<ncf.Form />
 			<ncf.LastName />
+			<ncf.LicenceConfirmation />
 			<ncf.Message {...fixture['message'].params}/>
 			<ncf.Password />
 			<ncf.Phone />

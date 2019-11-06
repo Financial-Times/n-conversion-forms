@@ -16,6 +16,7 @@ import Industry from './industry';
 import JobTitle from './job-title';
 import Form from './form';
 import LastName from './last-name';
+import LicenceConfirmation from './licence-confirmation';
 import Message from './message';
 import Password from './password';
 import Phone from './phone';
@@ -41,6 +42,7 @@ export {
 	JobTitle,
 	Form,
 	LastName,
+	LicenceConfirmation,
 	Message,
 	Password,
 	Phone,
