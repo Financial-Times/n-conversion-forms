@@ -25,6 +25,7 @@ import Password from './password';
 import Phone from './phone';
 import Position from './position';
 import Province from './province';
+import ProgressIndicator from './progress-indicator';
 import RegistrationConfirmation from './registration-confirmation';
 import Responsibility from './responsibility';
 import Submit from './submit';
@@ -58,6 +59,7 @@ export {
 	Phone,
 	Position,
 	Province,
+	ProgressIndicator,
 	RegistrationConfirmation,
 	Responsibility,
 	Submit,

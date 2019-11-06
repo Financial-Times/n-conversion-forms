@@ -35,6 +35,7 @@ function initDemo () {
 			<ncf.Phone />
 			<ncf.Position />
 			<ncf.Province />
+			<ncf.ProgressIndicator />
 			<ncf.RegistrationConfirmation />
 			<ncf.Responsibility />
 			<ncf.Submit />
