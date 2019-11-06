@@ -27,6 +27,7 @@ import Position from './position';
 import Province from './province';
 import RegistrationConfirmation from './registration-confirmation';
 import Responsibility from './responsibility';
+import State from './state';
 import Submit from './submit';
 import TrialBanner from './trial-banner';
 
@@ -60,6 +61,7 @@ export {
 	Province,
 	RegistrationConfirmation,
 	Responsibility,
+	State,
 	Submit,
 	TrialBanner
 };

@@ -13,9 +13,9 @@
 		data-trackable="field-state"
 		{{#if isDisabled}}disabled{{/if}}>
 
-		<option disabled selected value>Please select a state</option>
+		<option disabled value="">Please select a state</option>
 		{{#each states as |option|}}
-		<option value="{{option.code}}" {{#ifEquals ../value option.code}} selected{{/ifEquals}}>{{option.name}}</option>
+		<option {{#ifEquals ../value option.code}} selected{{/ifEquals}} value="{{option.code}}">{{option.name}}</option>
 		{{/each}}
 	</select>
 	{{/ncf-common-data }}
