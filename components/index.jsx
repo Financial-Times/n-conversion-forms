@@ -17,6 +17,7 @@ import JobTitle from './job-title';
 import Form from './form';
 import LastName from './last-name';
 import LicenceConfirmation from './licence-confirmation';
+import LicenceHeader from './licence-header';
 import Message from './message';
 import Password from './password';
 import Phone from './phone';
@@ -43,6 +44,7 @@ export {
 	Form,
 	LastName,
 	LicenceConfirmation,
+	LicenceHeader,
 	Message,
 	Password,
 	Phone,

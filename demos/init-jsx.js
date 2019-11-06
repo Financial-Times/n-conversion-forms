@@ -27,6 +27,7 @@ function initDemo () {
 			<ncf.Form />
 			<ncf.LastName />
 			<ncf.LicenceConfirmation />
+			<ncf.LicenceHeader />
 			<ncf.Message {...fixture['message'].params}/>
 			<ncf.Password />
 			<ncf.Phone />
