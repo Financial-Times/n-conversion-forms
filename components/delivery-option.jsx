@@ -12,6 +12,21 @@ function DeliveryOption ({
 		{ 'ncf__delivery-option--single': isSingle }
 	]);
 
+	const deliveryOptions = {
+		PV: {
+			title: 'Paper vouchers',
+			description: '13-week voucher pack delivered quarterly and redeemable at retailers nationwide.'
+		},
+		HD: {
+			title: 'Home delivery',
+			description: 'Free delivery to your home or office before 7am.'
+		},
+		EV: {
+			title: 'Electronic vouchers',
+			description: 'Delivered via email and card, redeemable at retailers nationwide.'
+		}
+	};
+
 	return (
 		<div
 			id="deliveryOptionField"
@@ -28,39 +43,17 @@ function DeliveryOption ({
 						...(option.isSelected && { defaultChecked: true })
 					};
 
+					const deliveryOptionValue = deliveryOptions[option.value];
+
 					return (
 						<div key={index} className="ncf__delivery-option__item">
 							<input {...inputProps} />
 							<label htmlFor={option.value} className="o-forms__label ncf__delivery-option__label">
 								{
-									(option.value === 'PV') && (
+									deliveryOptionValue && (
 										<React.Fragment>
-											<span className="ncf__delivery-option__title">Paper vouchers</span>
-											<div className="ncf__delivery-option__description">
-												13-week voucher pack delivered quarterly and redeemable at retailers nationwide.
-											</div>
-										</React.Fragment>
-									)
-								}
-
-								{
-									(option.value === 'HD') && (
-										<React.Fragment>
-											<span className="ncf__delivery-option__title">Home delivery</span>
-											<div className="ncf__delivery-option__description">
-												Free delivery to your home or office before 7am.
-											</div>
-										</React.Fragment>
-									)
-								}
-
-								{
-									(option.value === 'EV') && (
-										<React.Fragment>
-											<span className="ncf__delivery-option__title">Electronic vouchers</span>
-											<div className="ncf__delivery-option__description">
-												Delivered via email and card, redeemable at retailers nationwide.
-											</div>
+											<span className="ncf__delivery-option__title">{deliveryOptionValue.title}</span>
+											<div className="ncf__delivery-option__description">{deliveryOptionValue.description}</div>
 										</React.Fragment>
 									)
 								}
