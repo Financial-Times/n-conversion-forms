@@ -247,3 +247,151 @@ exports[`DeliveryOption renders with minimum mandatory props 2`] = `
   </div>
 </div>
 `;
+
+exports[`DeliveryOption renders without unrecognised delivery options 1`] = `
+<div id="deliveryOptionField"
+     class="o-forms__group ncf__delivery-option"
+>
+  <div class="ncf__delivery-option__item">
+    <input type="radio"
+           id="PV"
+           name="deliveryOption"
+           value="PV"
+           class="o-forms__radio o-forms__radio--right ncf__delivery-option__input"
+           checked
+    >
+    <label for="PV"
+           class="o-forms__label ncf__delivery-option__label"
+    >
+      <span class="ncf__delivery-option__title">
+        Paper vouchers
+      </span>
+      <div class="ncf__delivery-option__description">
+        13-week voucher pack delivered quarterly and redeemable at retailers nationwide.
+      </div>
+    </label>
+  </div>
+  <div class="ncf__delivery-option__item">
+    <input type="radio"
+           id="HD"
+           name="deliveryOption"
+           value="HD"
+           class="o-forms__radio o-forms__radio--right ncf__delivery-option__input"
+    >
+    <label for="HD"
+           class="o-forms__label ncf__delivery-option__label"
+    >
+      <span class="ncf__delivery-option__title">
+        Home delivery
+      </span>
+      <div class="ncf__delivery-option__description">
+        Free delivery to your home or office before 7am.
+      </div>
+    </label>
+  </div>
+  <div class="ncf__delivery-option__item">
+    <input type="radio"
+           id="FOOBAR"
+           name="deliveryOption"
+           value="FOOBAR"
+           class="o-forms__radio o-forms__radio--right ncf__delivery-option__input"
+    >
+    <label for="FOOBAR"
+           class="o-forms__label ncf__delivery-option__label"
+    >
+    </label>
+  </div>
+  <div class="ncf__delivery-option__item">
+    <input type="radio"
+           id="EV"
+           name="deliveryOption"
+           value="EV"
+           class="o-forms__radio o-forms__radio--right ncf__delivery-option__input"
+    >
+    <label for="EV"
+           class="o-forms__label ncf__delivery-option__label"
+    >
+      <span class="ncf__delivery-option__title">
+        Electronic vouchers
+      </span>
+      <div class="ncf__delivery-option__description">
+        Delivered via email and card, redeemable at retailers nationwide.
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`DeliveryOption renders without unrecognised delivery options 2`] = `
+<div id="deliveryOptionField"
+     class="o-forms__group ncf__delivery-option"
+>
+  <div class="ncf__delivery-option__item">
+    <input type="radio"
+           id="PV"
+           name="deliveryOption"
+           value="PV"
+           class="o-forms__radio o-forms__radio--right ncf__delivery-option__input"
+           checked
+    >
+    <label for="PV"
+           class="o-forms__label ncf__delivery-option__label"
+    >
+      <span class="ncf__delivery-option__title">
+        Paper vouchers
+      </span>
+      <div class="ncf__delivery-option__description">
+        13-week voucher pack delivered quarterly and redeemable at retailers nationwide.
+      </div>
+    </label>
+  </div>
+  <div class="ncf__delivery-option__item">
+    <input type="radio"
+           id="HD"
+           name="deliveryOption"
+           value="HD"
+           class="o-forms__radio o-forms__radio--right ncf__delivery-option__input"
+    >
+    <label for="HD"
+           class="o-forms__label ncf__delivery-option__label"
+    >
+      <span class="ncf__delivery-option__title">
+        Home delivery
+      </span>
+      <div class="ncf__delivery-option__description">
+        Free delivery to your home or office before 7am.
+      </div>
+    </label>
+  </div>
+  <div class="ncf__delivery-option__item">
+    <input type="radio"
+           id="FOOBAR"
+           name="deliveryOption"
+           value="FOOBAR"
+           class="o-forms__radio o-forms__radio--right ncf__delivery-option__input"
+    >
+    <label for="FOOBAR"
+           class="o-forms__label ncf__delivery-option__label"
+    >
+    </label>
+  </div>
+  <div class="ncf__delivery-option__item">
+    <input type="radio"
+           id="EV"
+           name="deliveryOption"
+           value="EV"
+           class="o-forms__radio o-forms__radio--right ncf__delivery-option__input"
+    >
+    <label for="EV"
+           class="o-forms__label ncf__delivery-option__label"
+    >
+      <span class="ncf__delivery-option__title">
+        Electronic vouchers
+      </span>
+      <div class="ncf__delivery-option__description">
+        Delivered via email and card, redeemable at retailers nationwide.
+      </div>
+    </label>
+  </div>
+</div>
+`;

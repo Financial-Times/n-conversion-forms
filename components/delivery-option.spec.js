@@ -53,4 +53,29 @@ describe('DeliveryOption', () => {
 
 		expect(DeliveryOption).toRenderAs(context, props);
 	});
+
+	it('renders without unrecognised delivery options', () => {
+		const props = {
+			options: [
+				{
+					value: 'PV',
+					isSelected: true
+				},
+				{
+					value: 'HD',
+					isSelected: false
+				},
+				{
+					value: 'FOOBAR',
+					isSelected: false
+				},
+				{
+					value: 'EV',
+					isSelected: false
+				}
+			]
+		};
+
+		expect(DeliveryOption).toRenderAs(context, props);
+	});
 });
