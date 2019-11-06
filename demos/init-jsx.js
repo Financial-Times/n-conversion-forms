@@ -31,6 +31,7 @@ function initDemo () {
 			<ncf.Password />
 			<ncf.Phone />
 			<ncf.Position />
+			<ncf.RegistrationConfirmation />
 			<ncf.Submit />
 		</React.Fragment>
 	;

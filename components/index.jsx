@@ -21,6 +21,7 @@ import Message from './message';
 import Password from './password';
 import Phone from './phone';
 import Position from './position';
+import RegistrationConfirmation from './registration-confirmation';
 import Submit from './submit';
 
 export {
@@ -47,5 +48,6 @@ export {
 	Password,
 	Phone,
 	Position,
+	RegistrationConfirmation,
 	Submit
 };
