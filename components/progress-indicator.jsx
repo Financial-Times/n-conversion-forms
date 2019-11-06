@@ -56,7 +56,12 @@ function ProgressIndicator ({
 }
 
 ProgressIndicator.PropTypes = {
-	items: PropTypes.array
+	items: PropTypes.arrayOf(PropTypes.shape({
+	    isComplete: PropTypes.bool,
+	    isCurrent: PropTypes.bool,
+	    name: PropTypes.string,
+	    url: PropTypes.string,
+	}))
 }
 
 export default ProgressIndicator;
