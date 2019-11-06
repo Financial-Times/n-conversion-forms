@@ -24,6 +24,7 @@ import Phone from './phone';
 import Position from './position';
 import RegistrationConfirmation from './registration-confirmation';
 import Submit from './submit';
+import TrialBanner from './trial-banner';
 
 export {
 	AppBanner,
@@ -51,5 +52,6 @@ export {
 	Phone,
 	Position,
 	RegistrationConfirmation,
-	Submit
+	Submit,
+	TrialBanner
 };

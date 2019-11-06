@@ -34,6 +34,7 @@ function initDemo () {
 			<ncf.Position />
 			<ncf.RegistrationConfirmation />
 			<ncf.Submit />
+			<ncf.TrialBanner />
 		</React.Fragment>
 	;
 	ReactDOM.render(element, container);
