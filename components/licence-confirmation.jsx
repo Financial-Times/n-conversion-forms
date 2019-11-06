@@ -53,7 +53,7 @@ function LicenceConfirmation ({
 LicenceConfirmation.PropTypes = {
 	isTrial: PropTypes.bool,
 	isEmbedded: PropTypes.bool,
-	string: PropTypes.string
+	duration: PropTypes.string
 }
 
 export default LicenceConfirmation;
