@@ -33,6 +33,7 @@ function initDemo () {
 			<ncf.Password />
 			<ncf.Phone />
 			<ncf.Position />
+			<ncf.Province />
 			<ncf.RegistrationConfirmation />
 			<ncf.Responsibility />
 			<ncf.Submit />

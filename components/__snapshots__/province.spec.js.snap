@@ -1,0 +1,707 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Province can apply class to hide the component 1`] = `
+<div id="provinceField"
+     class="o-forms o-forms--wide ncf__field js-field n-ui-hide"
+     data-ui-item="form-field"
+     data-ui-item-name="province"
+     data-validate="required"
+>
+  <label for="province"
+         class="o-forms__label"
+  >
+    Province
+  </label>
+  <select id="province"
+          class="o-forms__select js-field__input js-item__value"
+          aria-required="true"
+          required
+          name="province"
+          data-trackable="field-province"
+  >
+    <option disabled
+            value
+    >
+      Please select a province
+    </option>
+    <option value="AB">
+      Alberta
+    </option>
+    <option value="BC">
+      British Columbia
+    </option>
+    <option value="MB">
+      Manitoba
+    </option>
+    <option value="NB">
+      New Brunswick
+    </option>
+    <option value="NL">
+      Newfoundland And Labrador
+    </option>
+    <option value="NT">
+      Northwest Territories
+    </option>
+    <option value="NS">
+      Nova Scotia
+    </option>
+    <option value="NU">
+      Nunavut
+    </option>
+    <option value="ON">
+      Ontario
+    </option>
+    <option value="PE">
+      Prince Edward Island
+    </option>
+    <option value="QC">
+      Quebec
+    </option>
+    <option value="SK">
+      Saskatchewan
+    </option>
+    <option value="YT">
+      Yukon Territory
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your province.
+  </div>
+</div>
+`;
+
+exports[`Province can apply class to hide the component 2`] = `
+<div id="provinceField"
+     class="o-forms o-forms--wide ncf__field js-field n-ui-hide"
+     data-ui-item="form-field"
+     data-ui-item-name="province"
+     data-validate="required"
+>
+  <label for="province"
+         class="o-forms__label"
+  >
+    Province
+  </label>
+  <select id="province"
+          class="o-forms__select js-field__input js-item__value"
+          aria-required="true"
+          required
+          name="province"
+          data-trackable="field-province"
+  >
+    <option disabled
+            value
+    >
+      Please select a province
+    </option>
+    <option value="AB">
+      Alberta
+    </option>
+    <option value="BC">
+      British Columbia
+    </option>
+    <option value="MB">
+      Manitoba
+    </option>
+    <option value="NB">
+      New Brunswick
+    </option>
+    <option value="NL">
+      Newfoundland And Labrador
+    </option>
+    <option value="NT">
+      Northwest Territories
+    </option>
+    <option value="NS">
+      Nova Scotia
+    </option>
+    <option value="NU">
+      Nunavut
+    </option>
+    <option value="ON">
+      Ontario
+    </option>
+    <option value="PE">
+      Prince Edward Island
+    </option>
+    <option value="QC">
+      Quebec
+    </option>
+    <option value="SK">
+      Saskatchewan
+    </option>
+    <option value="YT">
+      Yukon Territory
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your province.
+  </div>
+</div>
+`;
+
+exports[`Province can render a disabled select 1`] = `
+<div id="provinceField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="province"
+     data-validate="required"
+>
+  <label for="province"
+         class="o-forms__label"
+  >
+    Province
+  </label>
+  <select id="province"
+          class="o-forms__select js-field__input js-item__value"
+          aria-required="true"
+          required
+          name="province"
+          data-trackable="field-province"
+          disabled
+  >
+    <option disabled
+            value
+    >
+      Please select a province
+    </option>
+    <option value="AB">
+      Alberta
+    </option>
+    <option value="BC">
+      British Columbia
+    </option>
+    <option value="MB">
+      Manitoba
+    </option>
+    <option value="NB">
+      New Brunswick
+    </option>
+    <option value="NL">
+      Newfoundland And Labrador
+    </option>
+    <option value="NT">
+      Northwest Territories
+    </option>
+    <option value="NS">
+      Nova Scotia
+    </option>
+    <option value="NU">
+      Nunavut
+    </option>
+    <option value="ON">
+      Ontario
+    </option>
+    <option value="PE">
+      Prince Edward Island
+    </option>
+    <option value="QC">
+      Quebec
+    </option>
+    <option value="SK">
+      Saskatchewan
+    </option>
+    <option value="YT">
+      Yukon Territory
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your province.
+  </div>
+</div>
+`;
+
+exports[`Province can render a disabled select 2`] = `
+<div id="provinceField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="province"
+     data-validate="required"
+>
+  <label for="province"
+         class="o-forms__label"
+  >
+    Province
+  </label>
+  <select id="province"
+          class="o-forms__select js-field__input js-item__value"
+          aria-required="true"
+          required
+          name="province"
+          data-trackable="field-province"
+          disabled
+  >
+    <option disabled
+            value
+    >
+      Please select a province
+    </option>
+    <option value="AB">
+      Alberta
+    </option>
+    <option value="BC">
+      British Columbia
+    </option>
+    <option value="MB">
+      Manitoba
+    </option>
+    <option value="NB">
+      New Brunswick
+    </option>
+    <option value="NL">
+      Newfoundland And Labrador
+    </option>
+    <option value="NT">
+      Northwest Territories
+    </option>
+    <option value="NS">
+      Nova Scotia
+    </option>
+    <option value="NU">
+      Nunavut
+    </option>
+    <option value="ON">
+      Ontario
+    </option>
+    <option value="PE">
+      Prince Edward Island
+    </option>
+    <option value="QC">
+      Quebec
+    </option>
+    <option value="SK">
+      Saskatchewan
+    </option>
+    <option value="YT">
+      Yukon Territory
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your province.
+  </div>
+</div>
+`;
+
+exports[`Province can render an error message 1`] = `
+<div id="provinceField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="province"
+     data-validate="required"
+>
+  <label for="province"
+         class="o-forms__label"
+  >
+    Province
+  </label>
+  <select id="province"
+          class="o-forms__select js-field__input js-item__value"
+          aria-required="true"
+          required
+          name="province"
+          data-trackable="field-province"
+  >
+    <option disabled
+            value
+    >
+      Please select a province
+    </option>
+    <option value="AB">
+      Alberta
+    </option>
+    <option value="BC">
+      British Columbia
+    </option>
+    <option value="MB">
+      Manitoba
+    </option>
+    <option value="NB">
+      New Brunswick
+    </option>
+    <option value="NL">
+      Newfoundland And Labrador
+    </option>
+    <option value="NT">
+      Northwest Territories
+    </option>
+    <option value="NS">
+      Nova Scotia
+    </option>
+    <option value="NU">
+      Nunavut
+    </option>
+    <option value="ON">
+      Ontario
+    </option>
+    <option value="PE">
+      Prince Edward Island
+    </option>
+    <option value="QC">
+      Quebec
+    </option>
+    <option value="SK">
+      Saskatchewan
+    </option>
+    <option value="YT">
+      Yukon Territory
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your province.
+  </div>
+</div>
+`;
+
+exports[`Province can render an error message 2`] = `
+<div id="provinceField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="province"
+     data-validate="required"
+>
+  <label for="province"
+         class="o-forms__label"
+  >
+    Province
+  </label>
+  <select id="province"
+          class="o-forms__select js-field__input js-item__value"
+          aria-required="true"
+          required
+          name="province"
+          data-trackable="field-province"
+  >
+    <option disabled
+            value
+    >
+      Please select a province
+    </option>
+    <option value="AB">
+      Alberta
+    </option>
+    <option value="BC">
+      British Columbia
+    </option>
+    <option value="MB">
+      Manitoba
+    </option>
+    <option value="NB">
+      New Brunswick
+    </option>
+    <option value="NL">
+      Newfoundland And Labrador
+    </option>
+    <option value="NT">
+      Northwest Territories
+    </option>
+    <option value="NS">
+      Nova Scotia
+    </option>
+    <option value="NU">
+      Nunavut
+    </option>
+    <option value="ON">
+      Ontario
+    </option>
+    <option value="PE">
+      Prince Edward Island
+    </option>
+    <option value="QC">
+      Quebec
+    </option>
+    <option value="SK">
+      Saskatchewan
+    </option>
+    <option value="YT">
+      Yukon Territory
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your province.
+  </div>
+</div>
+`;
+
+exports[`Province can render an initial selected value 1`] = `
+<div id="provinceField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="province"
+     data-validate="required"
+>
+  <label for="province"
+         class="o-forms__label"
+  >
+    Province
+  </label>
+  <select id="province"
+          class="o-forms__select js-field__input js-item__value"
+          aria-required="true"
+          required
+          name="province"
+          data-trackable="field-province"
+  >
+    <option disabled
+            value
+    >
+      Please select a province
+    </option>
+    <option selected
+            value="AB"
+    >
+      Alberta
+    </option>
+    <option value="BC">
+      British Columbia
+    </option>
+    <option value="MB">
+      Manitoba
+    </option>
+    <option value="NB">
+      New Brunswick
+    </option>
+    <option value="NL">
+      Newfoundland And Labrador
+    </option>
+    <option value="NT">
+      Northwest Territories
+    </option>
+    <option value="NS">
+      Nova Scotia
+    </option>
+    <option value="NU">
+      Nunavut
+    </option>
+    <option value="ON">
+      Ontario
+    </option>
+    <option value="PE">
+      Prince Edward Island
+    </option>
+    <option value="QC">
+      Quebec
+    </option>
+    <option value="SK">
+      Saskatchewan
+    </option>
+    <option value="YT">
+      Yukon Territory
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your province.
+  </div>
+</div>
+`;
+
+exports[`Province can render an initial selected value 2`] = `
+<div id="provinceField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="province"
+     data-validate="required"
+>
+  <label for="province"
+         class="o-forms__label"
+  >
+    Province
+  </label>
+  <select id="province"
+          class="o-forms__select js-field__input js-item__value"
+          aria-required="true"
+          required
+          name="province"
+          data-trackable="field-province"
+  >
+    <option disabled
+            value
+    >
+      Please select a province
+    </option>
+    <option selected
+            value="AB"
+    >
+      Alberta
+    </option>
+    <option value="BC">
+      British Columbia
+    </option>
+    <option value="MB">
+      Manitoba
+    </option>
+    <option value="NB">
+      New Brunswick
+    </option>
+    <option value="NL">
+      Newfoundland And Labrador
+    </option>
+    <option value="NT">
+      Northwest Territories
+    </option>
+    <option value="NS">
+      Nova Scotia
+    </option>
+    <option value="NU">
+      Nunavut
+    </option>
+    <option value="ON">
+      Ontario
+    </option>
+    <option value="PE">
+      Prince Edward Island
+    </option>
+    <option value="QC">
+      Quebec
+    </option>
+    <option value="SK">
+      Saskatchewan
+    </option>
+    <option value="YT">
+      Yukon Territory
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your province.
+  </div>
+</div>
+`;
+
+exports[`Province render a select with a label 1`] = `
+<div id="provinceField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="province"
+     data-validate="required"
+>
+  <label for="province"
+         class="o-forms__label"
+  >
+    Province
+  </label>
+  <select id="province"
+          class="o-forms__select js-field__input js-item__value"
+          aria-required="true"
+          required
+          name="province"
+          data-trackable="field-province"
+  >
+    <option disabled
+            value
+    >
+      Please select a province
+    </option>
+    <option value="AB">
+      Alberta
+    </option>
+    <option value="BC">
+      British Columbia
+    </option>
+    <option value="MB">
+      Manitoba
+    </option>
+    <option value="NB">
+      New Brunswick
+    </option>
+    <option value="NL">
+      Newfoundland And Labrador
+    </option>
+    <option value="NT">
+      Northwest Territories
+    </option>
+    <option value="NS">
+      Nova Scotia
+    </option>
+    <option value="NU">
+      Nunavut
+    </option>
+    <option value="ON">
+      Ontario
+    </option>
+    <option value="PE">
+      Prince Edward Island
+    </option>
+    <option value="QC">
+      Quebec
+    </option>
+    <option value="SK">
+      Saskatchewan
+    </option>
+    <option value="YT">
+      Yukon Territory
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your province.
+  </div>
+</div>
+`;
+
+exports[`Province render a select with a label 2`] = `
+<div id="provinceField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="province"
+     data-validate="required"
+>
+  <label for="province"
+         class="o-forms__label"
+  >
+    Province
+  </label>
+  <select id="province"
+          class="o-forms__select js-field__input js-item__value"
+          aria-required="true"
+          required
+          name="province"
+          data-trackable="field-province"
+  >
+    <option disabled
+            value
+    >
+      Please select a province
+    </option>
+    <option value="AB">
+      Alberta
+    </option>
+    <option value="BC">
+      British Columbia
+    </option>
+    <option value="MB">
+      Manitoba
+    </option>
+    <option value="NB">
+      New Brunswick
+    </option>
+    <option value="NL">
+      Newfoundland And Labrador
+    </option>
+    <option value="NT">
+      Northwest Territories
+    </option>
+    <option value="NS">
+      Nova Scotia
+    </option>
+    <option value="NU">
+      Nunavut
+    </option>
+    <option value="ON">
+      Ontario
+    </option>
+    <option value="PE">
+      Prince Edward Island
+    </option>
+    <option value="QC">
+      Quebec
+    </option>
+    <option value="SK">
+      Saskatchewan
+    </option>
+    <option value="YT">
+      Yukon Territory
+    </option>
+  </select>
+  <div class="o-forms__errortext">
+    Please select your province.
+  </div>
+</div>
+`;

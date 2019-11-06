@@ -23,6 +23,7 @@ import Message from './message';
 import Password from './password';
 import Phone from './phone';
 import Position from './position';
+import Province from './province';
 import RegistrationConfirmation from './registration-confirmation';
 import Responsibility from './responsibility';
 import Submit from './submit';
@@ -54,6 +55,7 @@ export {
 	Password,
 	Phone,
 	Position,
+	Province,
 	RegistrationConfirmation,
 	Responsibility,
 	Submit,
