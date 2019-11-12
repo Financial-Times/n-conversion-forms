@@ -89,10 +89,14 @@ Confirmation.PropTypes = {
 	isTrial: PropTypes.bool,
 	offer: PropTypes.string.isRequired,
 	email: PropTypes.string,
-	details: PropTypes.array,
+	details: PropTypes.arrayOf(PropTypes.shape({
+		title: PropTypes.string.isRequired,
+		data: PropTypes.string.isRequired,
+		description: PropTypes.string
+	})),
 	directDebitMandateUrl: PropTypes.string,
 	hideCta: PropTypes.bool,
 	isPrintOnly: PropTypes.bool
-}
+};
 
 export default Confirmation;
