@@ -103,13 +103,14 @@ class PaymentType {
 	showPanel () {
 		const type = this.getSelected();
 		const content = this.$paymentType.querySelectorAll('.ncf__payment-type-panel');
-		content.forEach(element => {
+		for (let i = 0; i < content.length; i++) {
+			const element = content[i];
 			if (element.classList.contains(`ncf__payment-type-panel--${type}`)) {
 				element.classList.remove('n-ui-hide');
 			} else {
 				element.classList.add('n-ui-hide');
 			}
-		});
+		}
 	}
 
 	static get CREDITCARD () {

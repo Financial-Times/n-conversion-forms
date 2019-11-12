@@ -68,7 +68,8 @@ class PaymentTerm {
 	 */
 	updateOptions (options) {
 		const terms = this.$paymentTerm.querySelectorAll(ITEM_CLASS);
-		terms.forEach(term => {
+		for (let i = 0; i < terms.length; i++) {
+			const term = terms[i];
 			const value = term.querySelector(VALUE_CLASS).value;
 			const price = term.querySelector(PRICE_CLASS);
 			const trialPrice = term.querySelector(TRIAL_PRICE_CLASS);
@@ -89,7 +90,7 @@ class PaymentTerm {
 			if (weeklyPrice) {
 				weeklyPrice.innerHTML = update.weeklyPrice;
 			}
-		});
+		}
 	}
 }
 

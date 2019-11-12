@@ -46,14 +46,18 @@ class FormElement {
 	 * Disable any inputs or selects inside form element
 	 */
 	disable () {
-		this.inputs.forEach(input => input.disabled = true);
+		for (let i = 0; i < this.inputs.length; i++) {
+			this.inputs[i].disabled = true;
+		}
 	}
 
 	/**
 	 * Enable any inputs or selects inside form element
 	 */
 	enable () {
-		this.inputs.forEach(input => input.disabled = false);
+		for (let i = 0; i < this.inputs.length; i++) {
+			this.inputs[i].disabled = false;
+		}
 	}
 
 	/**

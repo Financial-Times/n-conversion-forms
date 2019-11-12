@@ -8,7 +8,9 @@ class Postcode extends FormElement {
 	set changePostcodeReferenceForCountry (countryCode) {
 		const name = Postcode.getPostcodeReferenceByCountry(countryCode);
 		this.reference = this.$el.querySelectorAll('[data-reference=postcode]');
-		this.reference.forEach(reference => reference.innerHTML = name);
+		for (let i = 0; i < this.reference.length; i++) {
+			this.reference[i].innerHTML = name;
+		}
 		this.postcodeInput = this.$el.querySelector('input');
 		this.postcodeInput.placeholder = 'Enter your ' + name;
 	}
