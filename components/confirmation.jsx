@@ -85,7 +85,7 @@ function Confirmation ({
 	);
 }
 
-Confirmation.PropTypes = {
+Confirmation.propTypes = {
 	isTrial: PropTypes.bool,
 	offer: PropTypes.string.isRequired,
 	email: PropTypes.string,
