@@ -67,7 +67,10 @@ function DeliveryOption ({
 }
 
 DeliveryOption.propTypes = {
-	options: PropTypes.array.isRequired,
+	options: PropTypes.arrayOf(PropTypes.shape({
+		value: PropTypes.string,
+		isSelected: PropTypes.boolean
+	})),
 	isSingle: PropTypes.boolean
 };
 
