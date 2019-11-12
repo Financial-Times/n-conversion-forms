@@ -59,16 +59,16 @@ function DeliveryOption ({
 								}
 							</label>
 						</div>
-					)
+					);
 				})
 			}
 		</div>
 	);
 }
 
-DeliveryOption.PropTypes = {
+DeliveryOption.propTypes = {
 	options: PropTypes.array.isRequired,
 	isSingle: PropTypes.boolean
-}
+};
 
 export default DeliveryOption;
