@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Section ({
-	children = null,
+	children
 }) {
 	return (
 		<div className="o-forms-section o-forms-section--wide">
@@ -14,7 +14,10 @@ function Section ({
 }
 
 Section.propTypes = {
-	children: PropTypes.children,
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node
+	]).isRequired
 };
 
 export default Section;
