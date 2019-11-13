@@ -16,7 +16,7 @@ function ProgressIndicator ({
 					{item.name}<i className="ncf__icon ncf__icon--inline-edit"></i> <span className="o-stepped-progress__status">(completed)</span>
 				</span>
 			</a>
-		)
+		);
 	};
 
 	function getElementsForNonComplete (item) {
@@ -31,7 +31,7 @@ function ProgressIndicator ({
 					{item.name} { item.isCurrent && (<span className="o-stepped-progress__status">(current step)</span>) }
 				</span>
 			</div>
-		)
+		);
 	};
 
 	return (
@@ -47,7 +47,7 @@ function ProgressIndicator ({
 										: (getElementsForNonComplete(item))
 								}
 							</li>
-						)
+						);
 					})
 				}
 			</ol>
@@ -55,13 +55,13 @@ function ProgressIndicator ({
 	);
 }
 
-ProgressIndicator.PropTypes = {
+ProgressIndicator.propTypes = {
 	items: PropTypes.arrayOf(PropTypes.shape({
 	    isComplete: PropTypes.bool,
 	    isCurrent: PropTypes.bool,
 	    name: PropTypes.string,
 	    url: PropTypes.string,
 	}))
-}
+};
 
 export default ProgressIndicator;
