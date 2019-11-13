@@ -58,8 +58,8 @@ function DeliveryInstructions ({
 
 DeliveryInstructions.propTypes = {
 	hasError: PropTypes.bool,
-	maxlength: PropTypes.string,
-	rows: PropTypes.string,
+	maxlength: PropTypes.number,
+	rows: PropTypes.number,
 	isDisabled: PropTypes.bool,
 	value: PropTypes.string
 };
