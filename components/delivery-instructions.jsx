@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 function DeliveryInstructions ({
+	fieldId = 'deliveryInstructionsField',
 	hasError = false,
+	inputId = 'deliveryInstructions',
 	maxlength = null,
 	rows = null,
 	isDisabled = false,
@@ -22,8 +24,8 @@ function DeliveryInstructions ({
 
 	const textAreaProps = {
 		type: 'text',
-		id: 'deliveryInstructions',
-		name: 'deliveryInstructions',
+		id: inputId,
+		name: inputId,
 		...(maxlength && { maxLength: maxlength }),
 		...(rows && { rows }),
 		className: 'o-forms__text js-field__input js-item__value',
@@ -35,7 +37,7 @@ function DeliveryInstructions ({
 
 	return (
 		<div
-			id="deliveryInstructionsField"
+			id={fieldId}
 			className={divClassName}
 			data-ui-item="form-field"
 			data-ui-item-name="deliveryInstructions"
