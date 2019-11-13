@@ -37,6 +37,7 @@ function initDemo () {
 			<ncf.Province />
 			<ncf.RegistrationConfirmation />
 			<ncf.Responsibility />
+			<ncf.Section />
 			<ncf.State />
 			<ncf.Submit />
 			<ncf.TrialBanner />
