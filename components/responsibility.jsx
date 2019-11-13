@@ -21,7 +21,7 @@ export default function Responsibility ({
 		{ 'o-forms--error': hasError }
 	]);
 
-    return (
+	return (
 		<div
 			id={fieldId}
 			className={fieldClassName}

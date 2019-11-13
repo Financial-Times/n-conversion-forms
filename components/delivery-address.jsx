@@ -73,12 +73,12 @@ function DeliveryAddress ({
 	);
 }
 
-DeliveryAddress.PropTypes = {
+DeliveryAddress.propTypes = {
 	hasError: PropTypes.bool,
 	line1: PropTypes.string,
 	line2: PropTypes.string,
 	line3: PropTypes.string,
 	isDisabled: PropTypes.bool
-}
+};
 
 export default DeliveryAddress;

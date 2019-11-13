@@ -33,8 +33,8 @@ function RegistrationConfirmation ({
 	);
 }
 
-RegistrationConfirmation.PropTypes = {
+RegistrationConfirmation.propTypes = {
 	email: PropTypes.string
-}
+};
 
 export default RegistrationConfirmation;

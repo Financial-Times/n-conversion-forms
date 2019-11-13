@@ -45,12 +45,12 @@ function Submit ({
 	);
 }
 
-Submit.PropTypes = {
+Submit.propTypes = {
 	id: PropTypes.string,
 	isCentered: PropTypes.boolean,
 	isDisabled: PropTypes.boolean,
 	backButtonUrl: PropTypes.string,
 	label: PropTypes.string
-}
+};
 
 export default Submit;

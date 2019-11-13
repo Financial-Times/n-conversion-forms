@@ -55,7 +55,7 @@ function State ({
 	);
 }
 
-State.PropTypes = {
+State.propTypes = {
 	value: PropTypes.string,
 	fieldId: PropTypes.string,
 	selectId: PropTypes.string,

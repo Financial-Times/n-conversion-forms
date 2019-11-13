@@ -42,10 +42,10 @@ function DeliveryCity ({
 	);
 }
 
-DeliveryCity.PropTypes = {
+DeliveryCity.propTypes = {
 	hasError: PropTypes.bool,
 	value: PropTypes.string,
 	isDisabled: PropTypes.bool
-}
+};
 
 export default DeliveryCity;

@@ -58,7 +58,7 @@ function Province ({
 	);
 }
 
-Province.PropTypes = {
+Province.propTypes = {
 	value: PropTypes.string,
 	fieldId: PropTypes.string,
 	selectId: PropTypes.string,

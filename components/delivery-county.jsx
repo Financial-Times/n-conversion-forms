@@ -41,10 +41,10 @@ function DeliveryCounty ({
 	);
 }
 
-DeliveryCounty.PropTypes = {
+DeliveryCounty.propTypes = {
 	hasError: PropTypes.bool,
 	value: PropTypes.string,
 	isDisabled: PropTypes.bool
-}
+};
 
 export default DeliveryCounty;

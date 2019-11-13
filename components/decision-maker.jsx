@@ -59,9 +59,9 @@ function DecisionMaker ({
 	);
 }
 
-DecisionMaker.PropTypes = {
+DecisionMaker.propTypes = {
 	hasError: PropTypes.bool,
 	value: PropTypes.string
-}
+};
 
 export default DecisionMaker;

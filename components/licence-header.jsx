@@ -27,10 +27,10 @@ function LicenceHeader ({
 	);
 }
 
-LicenceHeader.PropTypes = {
+LicenceHeader.propTypes = {
 	displayName: PropTypes.string,
 	isTrial: PropTypes.bool,
 	welcomeText: PropTypes.string
-}
+};
 
 export default LicenceHeader;

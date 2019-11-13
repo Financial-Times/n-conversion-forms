@@ -56,13 +56,13 @@ function DeliveryStartDate ({
 	);
 }
 
-DeliveryStartDate.PropTypes = {
+DeliveryStartDate.propTypes = {
 	hasError: PropTypes.boolean,
 	date: PropTypes.string,
 	value: PropTypes.string,
 	min: PropTypes.string,
 	max: PropTypes.string,
 	isDisabled: PropTypes.bool
-}
+};
 
 export default DeliveryStartDate;

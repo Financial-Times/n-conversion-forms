@@ -135,7 +135,7 @@ function AcceptTerms ({
 	);
 }
 
-AcceptTerms.PropTypes = {
+AcceptTerms.propTypes = {
 	hasError: PropTypes.bool,
 	isSignup: PropTypes.bool,
 	isRegister: PropTypes.bool,

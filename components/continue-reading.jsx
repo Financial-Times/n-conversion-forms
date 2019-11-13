@@ -33,10 +33,10 @@ function ContinueReading ({
 	);
 }
 
-ContinueReading.PropTypes = {
+ContinueReading.propTypes = {
 	link: PropTypes.string,
 	quote: PropTypes.string,
 	isEmbedded: PropTypes.bool
-}
+};
 
 export default ContinueReading;

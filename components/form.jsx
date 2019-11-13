@@ -17,13 +17,13 @@ function Form ({
 				{ children }
 			</form>
 		</div>
-	)
+	);
 }
 
-Form.PropTypes = {
+Form.propTypes = {
 	children: PropTypes.children,
 	action: PropTypes.string,
 	method: PropTypes.string
-}
+};
 
 export default Form;
