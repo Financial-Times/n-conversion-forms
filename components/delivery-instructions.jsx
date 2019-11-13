@@ -18,13 +18,13 @@ function DeliveryInstructions ({
 	]);
 
 	const maxLengthText = maxlength ? `(Max. ${maxlength} characters)` : '';
-	const placeholder = `Enter instructions ${maxLengthText}:\n- Door colour, letterbox location\n- Placement i.e. letterbox delivery\n- Special handling i.e. place in plastic bag`;
+	const placeholder = `Enter instructions ${maxLengthText}:\u000a- Door colour, letterbox location\u000a- Placement i.e. letterbox delivery\u000a- Special handling i.e. place in plastic bag`;
 
 	const textAreaProps = {
 		type: 'text',
 		id: 'deliveryInstructions',
 		name: 'deliveryInstructions',
-		...(maxlength && { maxlength }),
+		...(maxlength && { maxLength: maxlength }),
 		...(rows && { rows }),
 		className: 'o-forms__text js-field__input js-item__value',
 		'data-trackable': 'field-deliveryInstructions',
@@ -54,12 +54,12 @@ function DeliveryInstructions ({
 	);
 }
 
-DeliveryInstructions.PropTypes = {
+DeliveryInstructions.propTypes = {
 	hasError: PropTypes.bool,
 	maxlength: PropTypes.string,
 	rows: PropTypes.string,
 	isDisabled: PropTypes.bool,
 	value: PropTypes.string
-}
+};
 
 export default DeliveryInstructions;

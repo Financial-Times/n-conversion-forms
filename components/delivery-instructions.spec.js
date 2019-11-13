@@ -16,4 +16,34 @@ describe('DeliveryInstructions', () => {
 
 		expect(DeliveryInstructions).toRenderAs(context, props);
 	});
+
+	it('renders with an error', () => {
+		const props = { hasError: true };
+
+		expect(DeliveryInstructions).toRenderAs(context, props);
+	});
+
+	it('renders with maxlength', () => {
+		const props = { maxlength: 200 };
+
+		expect(DeliveryInstructions).toRenderAs(context, props);
+	});
+
+	it('renders with rows', () => {
+		const props = { rows: 20 };
+
+		expect(DeliveryInstructions).toRenderAs(context, props);
+	});
+
+	it('renders with a custom value', () => {
+		const props = { value: 'foobar' };
+
+		expect(DeliveryInstructions).toRenderAs(context, props);
+	});
+
+	it('renders with a disabled input element', () => {
+		const props = { isDisabled: true };
+
+		expect(DeliveryInstructions).toRenderAs(context, props);
+	});
 });

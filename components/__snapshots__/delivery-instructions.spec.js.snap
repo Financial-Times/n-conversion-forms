@@ -1,0 +1,429 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeliveryInstructions renders with a custom value 1`] = `
+<div id="deliveryInstructionsField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryInstructions"
+     data-validate="required"
+>
+  <label for="deliveryInstructions"
+         class="o-forms__label"
+  >
+    Delivery instructions
+    <small>
+      (optional)
+    </small>
+  </label>
+  <div class="ncf__terms ncf__terms--small">
+    These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+  </div>
+  <textarea type="text"
+            id="deliveryInstructions"
+            name="deliveryInstructions"
+            class="o-forms__text js-field__input js-item__value"
+            data-trackable="field-deliveryInstructions"
+            placeholder="Enter instructions :
+- Door colour, letterbox location
+- Placement i.e. letterbox delivery
+- Special handling i.e. place in plastic bag"
+  >
+    foobar
+  </textarea>
+  <p>
+    Please note that we can only deliver to the ground floor level of your property.
+  </p>
+</div>
+`;
+
+exports[`DeliveryInstructions renders with a custom value 2`] = `
+<div id="deliveryInstructionsField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryInstructions"
+     data-validate="required"
+>
+  <label for="deliveryInstructions"
+         class="o-forms__label"
+  >
+    Delivery instructions
+    <small>
+      (optional)
+    </small>
+  </label>
+  <div class="ncf__terms ncf__terms--small">
+    These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+  </div>
+  <textarea type="text"
+            id="deliveryInstructions"
+            name="deliveryInstructions"
+            class="o-forms__text js-field__input js-item__value"
+            data-trackable="field-deliveryInstructions"
+            placeholder="Enter instructions :
+- Door colour, letterbox location
+- Placement i.e. letterbox delivery
+- Special handling i.e. place in plastic bag"
+  >
+    foobar
+  </textarea>
+  <p>
+    Please note that we can only deliver to the ground floor level of your property.
+  </p>
+</div>
+`;
+
+exports[`DeliveryInstructions renders with a disabled input element 1`] = `
+<div id="deliveryInstructionsField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryInstructions"
+     data-validate="required"
+>
+  <label for="deliveryInstructions"
+         class="o-forms__label"
+  >
+    Delivery instructions
+    <small>
+      (optional)
+    </small>
+  </label>
+  <div class="ncf__terms ncf__terms--small">
+    These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+  </div>
+  <textarea type="text"
+            id="deliveryInstructions"
+            name="deliveryInstructions"
+            class="o-forms__text js-field__input js-item__value"
+            data-trackable="field-deliveryInstructions"
+            placeholder="Enter instructions :
+- Door colour, letterbox location
+- Placement i.e. letterbox delivery
+- Special handling i.e. place in plastic bag"
+            disabled
+  >
+  </textarea>
+  <p>
+    Please note that we can only deliver to the ground floor level of your property.
+  </p>
+</div>
+`;
+
+exports[`DeliveryInstructions renders with a disabled input element 2`] = `
+<div id="deliveryInstructionsField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryInstructions"
+     data-validate="required"
+>
+  <label for="deliveryInstructions"
+         class="o-forms__label"
+  >
+    Delivery instructions
+    <small>
+      (optional)
+    </small>
+  </label>
+  <div class="ncf__terms ncf__terms--small">
+    These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+  </div>
+  <textarea type="text"
+            id="deliveryInstructions"
+            name="deliveryInstructions"
+            class="o-forms__text js-field__input js-item__value"
+            data-trackable="field-deliveryInstructions"
+            placeholder="Enter instructions :
+- Door colour, letterbox location
+- Placement i.e. letterbox delivery
+- Special handling i.e. place in plastic bag"
+            disabled
+  >
+  </textarea>
+  <p>
+    Please note that we can only deliver to the ground floor level of your property.
+  </p>
+</div>
+`;
+
+exports[`DeliveryInstructions renders with an error 1`] = `
+<div id="deliveryInstructionsField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryInstructions"
+     data-validate="required"
+>
+  <label for="deliveryInstructions"
+         class="o-forms__label"
+  >
+    Delivery instructions
+    <small>
+      (optional)
+    </small>
+  </label>
+  <div class="ncf__terms ncf__terms--small">
+    These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+  </div>
+  <textarea type="text"
+            id="deliveryInstructions"
+            name="deliveryInstructions"
+            class="o-forms__text js-field__input js-item__value"
+            data-trackable="field-deliveryInstructions"
+            placeholder="Enter instructions :
+- Door colour, letterbox location
+- Placement i.e. letterbox delivery
+- Special handling i.e. place in plastic bag"
+  >
+  </textarea>
+  <p>
+    Please note that we can only deliver to the ground floor level of your property.
+  </p>
+</div>
+`;
+
+exports[`DeliveryInstructions renders with an error 2`] = `
+<div id="deliveryInstructionsField"
+     class="o-forms o-forms--wide ncf__field js-field o-forms--error"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryInstructions"
+     data-validate="required"
+>
+  <label for="deliveryInstructions"
+         class="o-forms__label"
+  >
+    Delivery instructions
+    <small>
+      (optional)
+    </small>
+  </label>
+  <div class="ncf__terms ncf__terms--small">
+    These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+  </div>
+  <textarea type="text"
+            id="deliveryInstructions"
+            name="deliveryInstructions"
+            class="o-forms__text js-field__input js-item__value"
+            data-trackable="field-deliveryInstructions"
+            placeholder="Enter instructions :
+- Door colour, letterbox location
+- Placement i.e. letterbox delivery
+- Special handling i.e. place in plastic bag"
+  >
+  </textarea>
+  <p>
+    Please note that we can only deliver to the ground floor level of your property.
+  </p>
+</div>
+`;
+
+exports[`DeliveryInstructions renders with default props 1`] = `
+<div id="deliveryInstructionsField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryInstructions"
+     data-validate="required"
+>
+  <label for="deliveryInstructions"
+         class="o-forms__label"
+  >
+    Delivery instructions
+    <small>
+      (optional)
+    </small>
+  </label>
+  <div class="ncf__terms ncf__terms--small">
+    These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+  </div>
+  <textarea type="text"
+            id="deliveryInstructions"
+            name="deliveryInstructions"
+            class="o-forms__text js-field__input js-item__value"
+            data-trackable="field-deliveryInstructions"
+            placeholder="Enter instructions :
+- Door colour, letterbox location
+- Placement i.e. letterbox delivery
+- Special handling i.e. place in plastic bag"
+  >
+  </textarea>
+  <p>
+    Please note that we can only deliver to the ground floor level of your property.
+  </p>
+</div>
+`;
+
+exports[`DeliveryInstructions renders with default props 2`] = `
+<div id="deliveryInstructionsField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryInstructions"
+     data-validate="required"
+>
+  <label for="deliveryInstructions"
+         class="o-forms__label"
+  >
+    Delivery instructions
+    <small>
+      (optional)
+    </small>
+  </label>
+  <div class="ncf__terms ncf__terms--small">
+    These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+  </div>
+  <textarea type="text"
+            id="deliveryInstructions"
+            name="deliveryInstructions"
+            class="o-forms__text js-field__input js-item__value"
+            data-trackable="field-deliveryInstructions"
+            placeholder="Enter instructions :
+- Door colour, letterbox location
+- Placement i.e. letterbox delivery
+- Special handling i.e. place in plastic bag"
+  >
+  </textarea>
+  <p>
+    Please note that we can only deliver to the ground floor level of your property.
+  </p>
+</div>
+`;
+
+exports[`DeliveryInstructions renders with maxlength 1`] = `
+<div id="deliveryInstructionsField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryInstructions"
+     data-validate="required"
+>
+  <label for="deliveryInstructions"
+         class="o-forms__label"
+  >
+    Delivery instructions
+    <small>
+      (optional)
+    </small>
+  </label>
+  <div class="ncf__terms ncf__terms--small">
+    These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+  </div>
+  <textarea type="text"
+            id="deliveryInstructions"
+            name="deliveryInstructions"
+            maxlength="200"
+            class="o-forms__text js-field__input js-item__value"
+            data-trackable="field-deliveryInstructions"
+            placeholder="Enter instructions (Max. 200 characters):
+- Door colour, letterbox location
+- Placement i.e. letterbox delivery
+- Special handling i.e. place in plastic bag"
+  >
+  </textarea>
+  <p>
+    Please note that we can only deliver to the ground floor level of your property.
+  </p>
+</div>
+`;
+
+exports[`DeliveryInstructions renders with maxlength 2`] = `
+<div id="deliveryInstructionsField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryInstructions"
+     data-validate="required"
+>
+  <label for="deliveryInstructions"
+         class="o-forms__label"
+  >
+    Delivery instructions
+    <small>
+      (optional)
+    </small>
+  </label>
+  <div class="ncf__terms ncf__terms--small">
+    These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+  </div>
+  <textarea type="text"
+            id="deliveryInstructions"
+            name="deliveryInstructions"
+            maxlength="200"
+            class="o-forms__text js-field__input js-item__value"
+            data-trackable="field-deliveryInstructions"
+            placeholder="Enter instructions (Max. 200 characters):
+- Door colour, letterbox location
+- Placement i.e. letterbox delivery
+- Special handling i.e. place in plastic bag"
+  >
+  </textarea>
+  <p>
+    Please note that we can only deliver to the ground floor level of your property.
+  </p>
+</div>
+`;
+
+exports[`DeliveryInstructions renders with rows 1`] = `
+<div id="deliveryInstructionsField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryInstructions"
+     data-validate="required"
+>
+  <label for="deliveryInstructions"
+         class="o-forms__label"
+  >
+    Delivery instructions
+    <small>
+      (optional)
+    </small>
+  </label>
+  <div class="ncf__terms ncf__terms--small">
+    These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+  </div>
+  <textarea type="text"
+            id="deliveryInstructions"
+            name="deliveryInstructions"
+            rows="20"
+            class="o-forms__text js-field__input js-item__value"
+            data-trackable="field-deliveryInstructions"
+            placeholder="Enter instructions :
+- Door colour, letterbox location
+- Placement i.e. letterbox delivery
+- Special handling i.e. place in plastic bag"
+  >
+  </textarea>
+  <p>
+    Please note that we can only deliver to the ground floor level of your property.
+  </p>
+</div>
+`;
+
+exports[`DeliveryInstructions renders with rows 2`] = `
+<div id="deliveryInstructionsField"
+     class="o-forms o-forms--wide ncf__field js-field"
+     data-ui-item="form-field"
+     data-ui-item-name="deliveryInstructions"
+     data-validate="required"
+>
+  <label for="deliveryInstructions"
+         class="o-forms__label"
+  >
+    Delivery instructions
+    <small>
+      (optional)
+    </small>
+  </label>
+  <div class="ncf__terms ncf__terms--small">
+    These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
+  </div>
+  <textarea type="text"
+            id="deliveryInstructions"
+            name="deliveryInstructions"
+            rows="20"
+            class="o-forms__text js-field__input js-item__value"
+            data-trackable="field-deliveryInstructions"
+            placeholder="Enter instructions :
+- Door colour, letterbox location
+- Placement i.e. letterbox delivery
+- Special handling i.e. place in plastic bag"
+  >
+  </textarea>
+  <p>
+    Please note that we can only deliver to the ground floor level of your property.
+  </p>
+</div>
+`;
