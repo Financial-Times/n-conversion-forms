@@ -34,6 +34,7 @@ function initDemo () {
 			<ncf.LicenceHeader />
 			<ncf.Message {...fixture['message'].params}/>
 			<ncf.Password />
+			<ncf.PaymentType />
 			<ncf.Phone />
 			<ncf.Position />
 			<ncf.Province />

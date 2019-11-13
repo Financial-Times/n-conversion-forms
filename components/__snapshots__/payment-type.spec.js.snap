@@ -1,0 +1,953 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaymentType render with default props 1`] = `
+<div class="ncf__security-seal">
+</div>
+<div id="paymentTypeField"
+     class="o-forms o-forms--wide ncf__field"
+>
+  <div class="ncf__payment-type-selector">
+    <div class="ncf__payment-type ncf__payment-type--creditcard n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="creditcard"
+             class="o-forms__radio-button"
+             id="creditcard"
+      >
+      <label for="creditcard"
+             class="o-forms__label"
+      >
+        Credit / Debit Card
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--paypal n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="paypal"
+             class="o-forms__radio-button"
+             id="paypal"
+      >
+      <label for="paypal"
+             class="o-forms__label"
+      >
+        PayPal
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--directdebit n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="directdebit"
+             class="o-forms__radio-button"
+             id="directdebit"
+      >
+      <label for="directdebit"
+             class="o-forms__label"
+      >
+        Direct Debit
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--applepay n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="applepay"
+             class="o-forms__radio-button"
+             id="applepay"
+      >
+      <label for="applepay"
+             class="o-forms__label"
+      >
+        Apple Pay
+      </label>
+    </div>
+  </div>
+  <div class="o-forms__errortext">
+    Please enter a valid payment type
+  </div>
+</div>
+`;
+
+exports[`PaymentType render with default props 2`] = `
+<div class="ncf__security-seal">
+</div>
+<div id="paymentTypeField"
+     class="o-forms o-forms--wide ncf__field"
+>
+  <div class="ncf__payment-type-selector">
+    <div class="ncf__payment-type ncf__payment-type--creditcard n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="creditcard"
+             class="o-forms__radio-button"
+             id="creditcard"
+      >
+      <label for="creditcard"
+             class="o-forms__label"
+      >
+        Credit / Debit Card
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--paypal n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="paypal"
+             class="o-forms__radio-button"
+             id="paypal"
+      >
+      <label for="paypal"
+             class="o-forms__label"
+      >
+        PayPal
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--directdebit n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="directdebit"
+             class="o-forms__radio-button"
+             id="directdebit"
+      >
+      <label for="directdebit"
+             class="o-forms__label"
+      >
+        Direct Debit
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--applepay n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="applepay"
+             class="o-forms__radio-button"
+             id="applepay"
+      >
+      <label for="applepay"
+             class="o-forms__label"
+      >
+        Apple Pay
+      </label>
+    </div>
+  </div>
+  <div class="o-forms__errortext">
+    Please enter a valid payment type
+  </div>
+</div>
+`;
+
+exports[`PaymentType render with enableApplepay 1`] = `
+<div class="ncf__security-seal">
+</div>
+<div id="paymentTypeField"
+     class="o-forms o-forms--wide ncf__field"
+>
+  <div class="ncf__payment-type-selector">
+    <div class="ncf__payment-type ncf__payment-type--creditcard n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="creditcard"
+             class="o-forms__radio-button"
+             id="creditcard"
+      >
+      <label for="creditcard"
+             class="o-forms__label"
+      >
+        Credit / Debit Card
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--paypal n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="paypal"
+             class="o-forms__radio-button"
+             id="paypal"
+      >
+      <label for="paypal"
+             class="o-forms__label"
+      >
+        PayPal
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--directdebit n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="directdebit"
+             class="o-forms__radio-button"
+             id="directdebit"
+      >
+      <label for="directdebit"
+             class="o-forms__label"
+      >
+        Direct Debit
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--applepay">
+      <input type="radio"
+             name="paymentType"
+             value="applepay"
+             class="o-forms__radio-button"
+             id="applepay"
+      >
+      <label for="applepay"
+             class="o-forms__label"
+      >
+        Apple Pay
+      </label>
+    </div>
+  </div>
+  <div class="o-forms__errortext">
+    Please enter a valid payment type
+  </div>
+</div>
+`;
+
+exports[`PaymentType render with enableApplepay 2`] = `
+<div class="ncf__security-seal">
+</div>
+<div id="paymentTypeField"
+     class="o-forms o-forms--wide ncf__field"
+>
+  <div class="ncf__payment-type-selector">
+    <div class="ncf__payment-type ncf__payment-type--creditcard n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="creditcard"
+             class="o-forms__radio-button"
+             id="creditcard"
+      >
+      <label for="creditcard"
+             class="o-forms__label"
+      >
+        Credit / Debit Card
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--paypal n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="paypal"
+             class="o-forms__radio-button"
+             id="paypal"
+      >
+      <label for="paypal"
+             class="o-forms__label"
+      >
+        PayPal
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--directdebit n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="directdebit"
+             class="o-forms__radio-button"
+             id="directdebit"
+      >
+      <label for="directdebit"
+             class="o-forms__label"
+      >
+        Direct Debit
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--applepay">
+      <input type="radio"
+             name="paymentType"
+             value="applepay"
+             class="o-forms__radio-button"
+             id="applepay"
+      >
+      <label for="applepay"
+             class="o-forms__label"
+      >
+        Apple Pay
+      </label>
+    </div>
+  </div>
+  <div class="o-forms__errortext">
+    Please enter a valid payment type
+  </div>
+</div>
+`;
+
+exports[`PaymentType render with enableCreditcard 1`] = `
+<div class="ncf__security-seal">
+</div>
+<div id="paymentTypeField"
+     class="o-forms o-forms--wide ncf__field"
+>
+  <div class="ncf__payment-type-selector">
+    <div class="ncf__payment-type ncf__payment-type--creditcard">
+      <input type="radio"
+             name="paymentType"
+             value="creditcard"
+             class="o-forms__radio-button"
+             id="creditcard"
+      >
+      <label for="creditcard"
+             class="o-forms__label"
+      >
+        Credit / Debit Card
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--paypal n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="paypal"
+             class="o-forms__radio-button"
+             id="paypal"
+      >
+      <label for="paypal"
+             class="o-forms__label"
+      >
+        PayPal
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--directdebit n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="directdebit"
+             class="o-forms__radio-button"
+             id="directdebit"
+      >
+      <label for="directdebit"
+             class="o-forms__label"
+      >
+        Direct Debit
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--applepay n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="applepay"
+             class="o-forms__radio-button"
+             id="applepay"
+      >
+      <label for="applepay"
+             class="o-forms__label"
+      >
+        Apple Pay
+      </label>
+    </div>
+  </div>
+  <div class="o-forms__errortext">
+    Please enter a valid payment type
+  </div>
+  <div class="ncf__payment-type-panel ncf__payment-type-panel--creditcard ncf__payment-type-panel--directdebit n-ui-hide">
+    <div class="ncf__zuora-payment-overlay n-ui-hide">
+    </div>
+    <div id="zuora_payment"
+         class="ncf__zuora-payment"
+    >
+      <iframe id="z_hppm_iframe"
+              title="Zuora Payment"
+              overflow="visible"
+              scrolling="no"
+              frameborder="0"
+              allowtransparency="true"
+              class="z_hppm_iframe"
+              style="display:block"
+      >
+      </iframe>
+    </div>
+    <script src="https://static.zuora.com/Resources/libs/hosted/1.3.1/zuora-min.js">
+    </script>
+  </div>
+</div>
+`;
+
+exports[`PaymentType render with enableCreditcard 2`] = `
+<div class="ncf__security-seal">
+</div>
+<div id="paymentTypeField"
+     class="o-forms o-forms--wide ncf__field"
+>
+  <div class="ncf__payment-type-selector">
+    <div class="ncf__payment-type ncf__payment-type--creditcard">
+      <input type="radio"
+             name="paymentType"
+             value="creditcard"
+             class="o-forms__radio-button"
+             id="creditcard"
+      >
+      <label for="creditcard"
+             class="o-forms__label"
+      >
+        Credit / Debit Card
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--paypal n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="paypal"
+             class="o-forms__radio-button"
+             id="paypal"
+      >
+      <label for="paypal"
+             class="o-forms__label"
+      >
+        PayPal
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--directdebit n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="directdebit"
+             class="o-forms__radio-button"
+             id="directdebit"
+      >
+      <label for="directdebit"
+             class="o-forms__label"
+      >
+        Direct Debit
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--applepay n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="applepay"
+             class="o-forms__radio-button"
+             id="applepay"
+      >
+      <label for="applepay"
+             class="o-forms__label"
+      >
+        Apple Pay
+      </label>
+    </div>
+  </div>
+  <div class="o-forms__errortext">
+    Please enter a valid payment type
+  </div>
+  <div class="ncf__payment-type-panel ncf__payment-type-panel--creditcard ncf__payment-type-panel--directdebit n-ui-hide">
+    <div class="ncf__zuora-payment-overlay n-ui-hide">
+    </div>
+    <div id="zuora_payment"
+         class="ncf__zuora-payment"
+    >
+      <iframe id="z_hppm_iframe"
+              title="Zuora Payment"
+              overflow="visible"
+              scrolling="no"
+              frameborder="0"
+              allowtransparency="true"
+              class="z_hppm_iframe"
+              style="display:block"
+      >
+      </iframe>
+    </div>
+    <script src="https://static.zuora.com/Resources/libs/hosted/1.3.1/zuora-min.js">
+    </script>
+  </div>
+</div>
+`;
+
+exports[`PaymentType render with enableDirectdebit 1`] = `
+<div class="ncf__security-seal">
+</div>
+<div id="paymentTypeField"
+     class="o-forms o-forms--wide ncf__field"
+>
+  <div class="ncf__payment-type-selector">
+    <div class="ncf__payment-type ncf__payment-type--creditcard n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="creditcard"
+             class="o-forms__radio-button"
+             id="creditcard"
+      >
+      <label for="creditcard"
+             class="o-forms__label"
+      >
+        Credit / Debit Card
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--paypal n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="paypal"
+             class="o-forms__radio-button"
+             id="paypal"
+      >
+      <label for="paypal"
+             class="o-forms__label"
+      >
+        PayPal
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--directdebit">
+      <input type="radio"
+             name="paymentType"
+             value="directdebit"
+             class="o-forms__radio-button"
+             id="directdebit"
+      >
+      <label for="directdebit"
+             class="o-forms__label"
+      >
+        Direct Debit
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--applepay n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="applepay"
+             class="o-forms__radio-button"
+             id="applepay"
+      >
+      <label for="applepay"
+             class="o-forms__label"
+      >
+        Apple Pay
+      </label>
+    </div>
+  </div>
+  <div class="o-forms__errortext">
+    Please enter a valid payment type
+  </div>
+  <div class="ncf__payment-type-panel ncf__payment-type-panel--directdebit n-ui-hide">
+    <div id="directDebitGuarantee"
+         class="ncf__directdebit-guarantee"
+         data-o-component="o-expander"
+         data-o-expander-shrink-to="hidden"
+         data-o-expander-expanded-toggle-text="guarantee"
+         data-o-expander-collapsed-toggle-text="guarantee"
+         role="tabpanel"
+    >
+      <p>
+        Direct Debit is only supported in the UK
+      </p>
+      <p>
+        Your payments are protected by the Direct Debit
+        <button type="button"
+                class="ncf__directdebit-guarantee-toggle"
+        >
+          guarantee
+        </button>
+      </p>
+      <ul class="ncf__directdebit-guarantee-list">
+        <li>
+          This Guarantee is offered by all banks and building societies that accept instructions to pay Direct Debits.
+        </li>
+        <li>
+          If there are any changes to the amount, date or frequency of your Direct Debit GoCardless re: The Financial Times will notify you 3 working days in advance of your account being debited or as otherwise agreed. If you request GoCardless Ltd re: The Financial Times to collect a payment, confirmation of the amount and date will be given to you at the time of the request.
+        </li>
+        <li>
+          If an error is made in the payment of your Direct Debit, by GoCardless Ltd re: The Financial Times or your bank or building society, you are entitled to a full and immediate refund of the amount paid from your bank or building society.
+        </li>
+        <li>
+          If you receive a refund you are not entitled to, you must pay it back when GoCardless Ltd re: The Financial Times asks you to.
+        </li>
+        <li>
+          You can cancel a Direct Debit at any time by simply contacting your bank or building society. Written confirmation may be required. Please also notify us.
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="ncf__payment-type-panel ncf__payment-type-panel--creditcard ncf__payment-type-panel--directdebit n-ui-hide">
+    <div class="ncf__zuora-payment-overlay n-ui-hide">
+    </div>
+    <div id="zuora_payment"
+         class="ncf__zuora-payment"
+    >
+      <iframe id="z_hppm_iframe"
+              title="Zuora Payment"
+              overflow="visible"
+              scrolling="no"
+              frameborder="0"
+              allowtransparency="true"
+              class="z_hppm_iframe"
+              style="display:block"
+      >
+      </iframe>
+    </div>
+    <script src="https://static.zuora.com/Resources/libs/hosted/1.3.1/zuora-min.js">
+    </script>
+  </div>
+</div>
+`;
+
+exports[`PaymentType render with enableDirectdebit 2`] = `
+<div class="ncf__security-seal">
+</div>
+<div id="paymentTypeField"
+     class="o-forms o-forms--wide ncf__field"
+>
+  <div class="ncf__payment-type-selector">
+    <div class="ncf__payment-type ncf__payment-type--creditcard n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="creditcard"
+             class="o-forms__radio-button"
+             id="creditcard"
+      >
+      <label for="creditcard"
+             class="o-forms__label"
+      >
+        Credit / Debit Card
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--paypal n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="paypal"
+             class="o-forms__radio-button"
+             id="paypal"
+      >
+      <label for="paypal"
+             class="o-forms__label"
+      >
+        PayPal
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--directdebit">
+      <input type="radio"
+             name="paymentType"
+             value="directdebit"
+             class="o-forms__radio-button"
+             id="directdebit"
+      >
+      <label for="directdebit"
+             class="o-forms__label"
+      >
+        Direct Debit
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--applepay n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="applepay"
+             class="o-forms__radio-button"
+             id="applepay"
+      >
+      <label for="applepay"
+             class="o-forms__label"
+      >
+        Apple Pay
+      </label>
+    </div>
+  </div>
+  <div class="o-forms__errortext">
+    Please enter a valid payment type
+  </div>
+  <div class="ncf__payment-type-panel ncf__payment-type-panel--directdebit n-ui-hide">
+    <div id="directDebitGuarantee"
+         class="ncf__directdebit-guarantee"
+         data-o-component="o-expander"
+         data-o-expander-shrink-to="hidden"
+         data-o-expander-expanded-toggle-text="guarantee"
+         data-o-expander-collapsed-toggle-text="guarantee"
+         role="tabpanel"
+    >
+      <p>
+        Direct Debit is only supported in the UK
+      </p>
+      <p>
+        Your payments are protected by the Direct Debit
+        <button type="button"
+                class="ncf__directdebit-guarantee-toggle"
+        >
+          guarantee
+        </button>
+      </p>
+      <ul class="ncf__directdebit-guarantee-list">
+        <li>
+          This Guarantee is offered by all banks and building societies that accept instructions to pay Direct Debits.
+        </li>
+        <li>
+          If there are any changes to the amount, date or frequency of your Direct Debit GoCardless re: The Financial Times will notify you 3 working days in advance of your account being debited or as otherwise agreed. If you request GoCardless Ltd re: The Financial Times to collect a payment, confirmation of the amount and date will be given to you at the time of the request.
+        </li>
+        <li>
+          If an error is made in the payment of your Direct Debit, by GoCardless Ltd re: The Financial Times or your bank or building society, you are entitled to a full and immediate refund of the amount paid from your bank or building society.
+        </li>
+        <li>
+          If you receive a refund you are not entitled to, you must pay it back when GoCardless Ltd re: The Financial Times asks you to.
+        </li>
+        <li>
+          You can cancel a Direct Debit at any time by simply contacting your bank or building society. Written confirmation may be required. Please also notify us.
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="ncf__payment-type-panel ncf__payment-type-panel--creditcard ncf__payment-type-panel--directdebit n-ui-hide">
+    <div class="ncf__zuora-payment-overlay n-ui-hide">
+    </div>
+    <div id="zuora_payment"
+         class="ncf__zuora-payment"
+    >
+      <iframe id="z_hppm_iframe"
+              title="Zuora Payment"
+              overflow="visible"
+              scrolling="no"
+              frameborder="0"
+              allowtransparency="true"
+              class="z_hppm_iframe"
+              style="display:block"
+      >
+      </iframe>
+    </div>
+    <script src="https://static.zuora.com/Resources/libs/hosted/1.3.1/zuora-min.js">
+    </script>
+  </div>
+</div>
+`;
+
+exports[`PaymentType render with enablePaypal 1`] = `
+<div class="ncf__security-seal">
+</div>
+<div id="paymentTypeField"
+     class="o-forms o-forms--wide ncf__field"
+>
+  <div class="ncf__payment-type-selector">
+    <div class="ncf__payment-type ncf__payment-type--creditcard n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="creditcard"
+             class="o-forms__radio-button"
+             id="creditcard"
+      >
+      <label for="creditcard"
+             class="o-forms__label"
+      >
+        Credit / Debit Card
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--paypal">
+      <input type="radio"
+             name="paymentType"
+             value="paypal"
+             class="o-forms__radio-button"
+             id="paypal"
+      >
+      <label for="paypal"
+             class="o-forms__label"
+      >
+        PayPal
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--directdebit n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="directdebit"
+             class="o-forms__radio-button"
+             id="directdebit"
+      >
+      <label for="directdebit"
+             class="o-forms__label"
+      >
+        Direct Debit
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--applepay n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="applepay"
+             class="o-forms__radio-button"
+             id="applepay"
+      >
+      <label for="applepay"
+             class="o-forms__label"
+      >
+        Apple Pay
+      </label>
+    </div>
+  </div>
+  <div class="o-forms__errortext">
+    Please enter a valid payment type
+  </div>
+</div>
+`;
+
+exports[`PaymentType render with enablePaypal 2`] = `
+<div class="ncf__security-seal">
+</div>
+<div id="paymentTypeField"
+     class="o-forms o-forms--wide ncf__field"
+>
+  <div class="ncf__payment-type-selector">
+    <div class="ncf__payment-type ncf__payment-type--creditcard n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="creditcard"
+             class="o-forms__radio-button"
+             id="creditcard"
+      >
+      <label for="creditcard"
+             class="o-forms__label"
+      >
+        Credit / Debit Card
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--paypal">
+      <input type="radio"
+             name="paymentType"
+             value="paypal"
+             class="o-forms__radio-button"
+             id="paypal"
+      >
+      <label for="paypal"
+             class="o-forms__label"
+      >
+        PayPal
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--directdebit n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="directdebit"
+             class="o-forms__radio-button"
+             id="directdebit"
+      >
+      <label for="directdebit"
+             class="o-forms__label"
+      >
+        Direct Debit
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--applepay n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="applepay"
+             class="o-forms__radio-button"
+             id="applepay"
+      >
+      <label for="applepay"
+             class="o-forms__label"
+      >
+        Apple Pay
+      </label>
+    </div>
+  </div>
+  <div class="o-forms__errortext">
+    Please enter a valid payment type
+  </div>
+</div>
+`;
+
+exports[`PaymentType render with value 1`] = `
+<div class="ncf__security-seal">
+</div>
+<div id="paymentTypeField"
+     class="o-forms o-forms--wide ncf__field"
+>
+  <div class="ncf__payment-type-selector">
+    <div class="ncf__payment-type ncf__payment-type--creditcard n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="creditcard"
+             class="o-forms__radio-button"
+             id="creditcard"
+      >
+      <label for="creditcard"
+             class="o-forms__label"
+      >
+        Credit / Debit Card
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--paypal n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="paypal"
+             class="o-forms__radio-button"
+             id="paypal"
+             checked
+      >
+      <label for="paypal"
+             class="o-forms__label"
+      >
+        PayPal
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--directdebit n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="directdebit"
+             class="o-forms__radio-button"
+             id="directdebit"
+      >
+      <label for="directdebit"
+             class="o-forms__label"
+      >
+        Direct Debit
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--applepay n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="applepay"
+             class="o-forms__radio-button"
+             id="applepay"
+      >
+      <label for="applepay"
+             class="o-forms__label"
+      >
+        Apple Pay
+      </label>
+    </div>
+  </div>
+  <div class="o-forms__errortext">
+    Please enter a valid payment type
+  </div>
+</div>
+`;
+
+exports[`PaymentType render with value 2`] = `
+<div class="ncf__security-seal">
+</div>
+<div id="paymentTypeField"
+     class="o-forms o-forms--wide ncf__field"
+>
+  <div class="ncf__payment-type-selector">
+    <div class="ncf__payment-type ncf__payment-type--creditcard n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="creditcard"
+             class="o-forms__radio-button"
+             id="creditcard"
+      >
+      <label for="creditcard"
+             class="o-forms__label"
+      >
+        Credit / Debit Card
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--paypal n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="paypal"
+             class="o-forms__radio-button"
+             id="paypal"
+             checked
+      >
+      <label for="paypal"
+             class="o-forms__label"
+      >
+        PayPal
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--directdebit n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="directdebit"
+             class="o-forms__radio-button"
+             id="directdebit"
+      >
+      <label for="directdebit"
+             class="o-forms__label"
+      >
+        Direct Debit
+      </label>
+    </div>
+    <div class="ncf__payment-type ncf__payment-type--applepay n-ui-hide">
+      <input type="radio"
+             name="paymentType"
+             value="applepay"
+             class="o-forms__radio-button"
+             id="applepay"
+      >
+      <label for="applepay"
+             class="o-forms__label"
+      >
+        Apple Pay
+      </label>
+    </div>
+  </div>
+  <div class="o-forms__errortext">
+    Please enter a valid payment type
+  </div>
+</div>
+`;
