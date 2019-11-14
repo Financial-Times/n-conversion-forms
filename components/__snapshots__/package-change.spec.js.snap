@@ -1,0 +1,313 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PackageChange annual render with defaults 1`] = `
+<div class="ncf__package-change">
+  <div class="ncf__package-change__package">
+    <p class="ncf__package-change__content">
+      You have chosen
+      <span class="ncf__strong">
+        Trial
+      </span>
+    </p>
+    <div class="ncf__package-change__actions">
+      <a href="https://www.ft.com"
+         class="ncf__button ncf__button--mono ncf__button--baseline"
+         data-trackable="change"
+      >
+        Change
+      </a>
+    </div>
+  </div>
+  <div class="ncf__package-change__terms">
+    <div class="ncf__package-change__term">
+      <span class="ncf__package-change__title">
+        Annually
+      </span>
+      <div class="ncf__package-change__description">
+        Single
+        <span class="ncf__package-change__price">
+          £1.00
+        </span>
+        payment*
+      </div>
+      <div class="ncf__package-change__weekly-price">
+        Just
+        <span class="ncf__package-change__price">
+          £1.00
+        </span>
+        per week
+      </div>
+    </div>
+    <div class="ncf__package-change__annual-copy">
+      * Save up to 25% when you pay annually. Discount varies across member states and across our subscription packages.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PackageChange annual render with defaults 2`] = `
+<div class="ncf__package-change">
+  <div class="ncf__package-change__package">
+    <p class="ncf__package-change__content">
+      You have chosen
+      <span class="ncf__strong">
+        Trial
+      </span>
+    </p>
+    <div class="ncf__package-change__actions">
+      <a href="https://www.ft.com"
+         class="ncf__button ncf__button--mono ncf__button--baseline"
+         data-trackable="change"
+      >
+        Change
+      </a>
+    </div>
+  </div>
+  <div class="ncf__package-change__terms">
+    <div class="ncf__package-change__term">
+      <span class="ncf__package-change__title">
+        Annually
+      </span>
+      <div class="ncf__package-change__description">
+        Single
+        <span class="ncf__package-change__price">
+          £1.00
+        </span>
+        payment*
+      </div>
+      <div class="ncf__package-change__weekly-price">
+        Just
+        <span class="ncf__package-change__price">
+          £1.00
+        </span>
+        per week
+      </div>
+    </div>
+    <div class="ncf__package-change__annual-copy">
+      * Save up to 25% when you pay annually. Discount varies across member states and across our subscription packages.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PackageChange annual render with discount 1`] = `
+<div class="ncf__package-change">
+  <div class="ncf__package-change__package">
+    <p class="ncf__package-change__content">
+      You have chosen
+      <span class="ncf__strong">
+        Trial
+      </span>
+    </p>
+    <div class="ncf__package-change__actions">
+      <a href="https://www.ft.com"
+         class="ncf__button ncf__button--mono ncf__button--baseline"
+         data-trackable="change"
+      >
+        Change
+      </a>
+    </div>
+  </div>
+  <div class="ncf__package-change__terms">
+    <div class="ncf__package-change__term ncf__package-change__term--discounted">
+      <span class="ncf__package-change__title">
+        Annually
+      </span>
+      <span class="ncf__package-change__discount">
+        Save 25%
+      </span>
+      <div class="ncf__package-change__description">
+        Single
+        <span class="ncf__package-change__price">
+          £1.00
+        </span>
+        payment*
+      </div>
+      <div class="ncf__package-change__weekly-price">
+        Just
+        <span class="ncf__package-change__price">
+          £1.00
+        </span>
+        per week
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PackageChange annual render with discount 2`] = `
+<div class="ncf__package-change">
+  <div class="ncf__package-change__package">
+    <p class="ncf__package-change__content">
+      You have chosen
+      <span class="ncf__strong">
+        Trial
+      </span>
+    </p>
+    <div class="ncf__package-change__actions">
+      <a href="https://www.ft.com"
+         class="ncf__button ncf__button--mono ncf__button--baseline"
+         data-trackable="change"
+      >
+        Change
+      </a>
+    </div>
+  </div>
+  <div class="ncf__package-change__terms">
+    <div class="ncf__package-change__term ncf__package-change__term--discounted">
+      <span class="ncf__package-change__title">
+        Annually
+      </span>
+      <span class="ncf__package-change__discount">
+        Save 25%
+      </span>
+      <div class="ncf__package-change__description">
+        Single
+        <span class="ncf__package-change__price">
+          £1.00
+        </span>
+        payment*
+      </div>
+      <div class="ncf__package-change__weekly-price">
+        Just
+        <span class="ncf__package-change__price">
+          £1.00
+        </span>
+        per week
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PackageChange annual render with trialPrice 1`] = `
+<div class="ncf__package-change">
+  <div class="ncf__package-change__package">
+    <p class="ncf__package-change__content">
+      You have chosen
+      <span class="ncf__strong">
+        Trial
+      </span>
+    </p>
+    <div class="ncf__package-change__actions">
+      <a href="https://www.ft.com"
+         class="ncf__button ncf__button--mono ncf__button--baseline"
+         data-trackable="change"
+      >
+        Change
+      </a>
+    </div>
+  </div>
+  <div class="ncf__package-change__terms">
+    <div class="ncf__package-change__term">
+      <span class="ncf__package-change__title">
+        Annually
+      </span>
+      <div class="ncf__package-change__description">
+        Single
+        <span class="ncf__package-change__price">
+          £1.00
+        </span>
+        payment*
+      </div>
+      <div class="ncf__package-change__weekly-price">
+        Just
+        <span class="ncf__package-change__price">
+          £1.00
+        </span>
+        per week
+      </div>
+    </div>
+    <div class="ncf__package-change__annual-copy">
+      * Save up to 25% when you pay annually. Discount varies across member states and across our subscription packages.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PackageChange annual render with trialPrice 2`] = `
+<div class="ncf__package-change">
+  <div class="ncf__package-change__package">
+    <p class="ncf__package-change__content">
+      You have chosen
+      <span class="ncf__strong">
+        Trial
+      </span>
+    </p>
+    <div class="ncf__package-change__actions">
+      <a href="https://www.ft.com"
+         class="ncf__button ncf__button--mono ncf__button--baseline"
+         data-trackable="change"
+      >
+        Change
+      </a>
+    </div>
+  </div>
+  <div class="ncf__package-change__terms">
+    <div class="ncf__package-change__term">
+      <span class="ncf__package-change__title">
+        Annually
+      </span>
+      <div class="ncf__package-change__description">
+        Single
+        <span class="ncf__package-change__price">
+          £1.00
+        </span>
+        payment*
+      </div>
+      <div class="ncf__package-change__weekly-price">
+        Just
+        <span class="ncf__package-change__price">
+          £1.00
+        </span>
+        per week
+      </div>
+    </div>
+    <div class="ncf__package-change__annual-copy">
+      * Save up to 25% when you pay annually. Discount varies across member states and across our subscription packages.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PackageChange render with defaults 1`] = `
+<div class="ncf__package-change">
+  <div class="ncf__package-change__package">
+    <p class="ncf__package-change__content">
+      You have chosen
+      <span class="ncf__strong">
+        Trial
+      </span>
+    </p>
+    <div class="ncf__package-change__actions">
+      <a href="https://www.ft.com"
+         class="ncf__button ncf__button--mono ncf__button--baseline"
+         data-trackable="change"
+      >
+        Change
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PackageChange render with defaults 2`] = `
+<div class="ncf__package-change">
+  <div class="ncf__package-change__package">
+    <p class="ncf__package-change__content">
+      You have chosen
+      <span class="ncf__strong">
+        Trial
+      </span>
+    </p>
+    <div class="ncf__package-change__actions">
+      <a href="https://www.ft.com"
+         class="ncf__button ncf__button--mono ncf__button--baseline"
+         data-trackable="change"
+      >
+        Change
+      </a>
+    </div>
+  </div>
+</div>
+`;

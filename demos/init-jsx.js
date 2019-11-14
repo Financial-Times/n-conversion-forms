@@ -8,37 +8,38 @@ function initDemo () {
 
 	const element =
 		<React.Fragment>
-			<ncf.AppBanner />
 			<ncf.AcceptTerms />
+			<ncf.AppBanner />
 			<ncf.BillingPostcode postcodeReference={'billing postcode'}/>
 			<ncf.CompanyName />
 			<ncf.Confirmation />
 			<ncf.ContinueReading />
 			<ncf.CustomerCare />
+			<ncf.DecisionMaker />
 			<ncf.DeliveryAddress />
 			<ncf.DeliveryCity />
 			<ncf.DeliveryCounty />
-			<ncf.DecisionMaker />
-			<ncf.DeliveryOption />
 			<ncf.DeliveryInstructions />
+			<ncf.DeliveryOption />
 			<ncf.DeliveryPostcode postcodeReference={'delivery postcode'}/>
 			<ncf.DeliveryStartDate />
 			<ncf.Email />
 			<ncf.Fieldset />
 			<ncf.FirstName />
+			<ncf.Form />
 			<ncf.Industry />
 			<ncf.JobTitle />
-			<ncf.Form />
 			<ncf.LastName />
 			<ncf.LicenceConfirmation />
 			<ncf.LicenceHeader />
 			<ncf.Message {...fixture['message'].params}/>
+			<ncf.PackageChange />
 			<ncf.Password />
 			<ncf.PaymentType />
 			<ncf.Phone />
 			<ncf.Position />
-			<ncf.Province />
 			<ncf.ProgressIndicator />
+			<ncf.Province />
 			<ncf.RegistrationConfirmation />
 			<ncf.Responsibility />
 			<ncf.Section />
