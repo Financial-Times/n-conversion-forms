@@ -25,6 +25,7 @@ export * from './licence-header';
 export * from './message';
 export * from './password';
 export * from './payment-type';
+export * from './payment-term';
 export * from './phone';
 export * from './position';
 export * from './progress-indicator';
