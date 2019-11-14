@@ -14,6 +14,7 @@ export * from './delivery-option';
 export * from './delivery-postcode';
 export * from './delivery-start-date';
 export * from './email';
+export * from './error-page';
 export * from './fieldset';
 export * from './first-name';
 export * from './form';
