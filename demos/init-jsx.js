@@ -32,6 +32,7 @@ function initDemo () {
 			<ncf.LastName />
 			<ncf.LicenceConfirmation />
 			<ncf.LicenceHeader />
+			<ncf.Loader />
 			<ncf.Message {...fixture['message'].params}/>
 			<ncf.Password />
 			<ncf.PaymentType />

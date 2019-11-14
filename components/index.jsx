@@ -22,6 +22,7 @@ export * from './job-title';
 export * from './last-name';
 export * from './licence-confirmation';
 export * from './licence-header';
+export * from './loader';
 export * from './message';
 export * from './password';
 export * from './payment-type';
