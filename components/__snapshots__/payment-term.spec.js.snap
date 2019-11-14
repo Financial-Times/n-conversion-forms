@@ -1,0 +1,1827 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaymentTerm annual option render option 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="annual"
+           name="paymentTerm"
+           value="annual"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="annual"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Annual
+      </span>
+      <div class="ncf__payment-term__description">
+        Single
+        <span class="ncf__payment-term__price ncf__strong">
+          £20.00
+        </span>
+        payment
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm annual option render option 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="annual"
+           name="paymentTerm"
+           value="annual"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="annual"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Annual
+      </span>
+      <div class="ncf__payment-term__description">
+        Single
+        <span class="ncf__payment-term__price ncf__strong">
+          £20.00
+        </span>
+        payment
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm annual option render option with discount 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item ncf__payment-term__item--discount">
+    <input type="radio"
+           id="annual"
+           name="paymentTerm"
+           value="annual"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="annual"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__discount">
+        Save 25% off
+      </span>
+      <span class="ncf__payment-term__title">
+        Annual
+      </span>
+      <div class="ncf__payment-term__description">
+        Single
+        <span class="ncf__payment-term__price ncf__strong">
+          £20.00
+        </span>
+        payment
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm annual option render option with discount 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item ncf__payment-term__item--discount">
+    <input type="radio"
+           id="annual"
+           name="paymentTerm"
+           value="annual"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="annual"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__discount">
+        Save 25% off
+      </span>
+      <span class="ncf__payment-term__title">
+        Annual
+      </span>
+      <div class="ncf__payment-term__description">
+        Single
+        <span class="ncf__payment-term__price ncf__strong">
+          £20.00
+        </span>
+        payment
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm annual option render option with isTrial 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="annual"
+           name="paymentTerm"
+           value="annual"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="annual"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Try the FT - Annual
+      </span>
+      <div class="ncf__payment-term__description">
+        4 weeks for
+        <span class="ncf__payment-term__trial-price">
+        </span>
+        <br>
+        Unless you cancel during your trial you will be billed
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per year after the trial period.
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm annual option render option with isTrial 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="annual"
+           name="paymentTerm"
+           value="annual"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="annual"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Try the FT - Annual
+      </span>
+      <div class="ncf__payment-term__description">
+        4 weeks for
+        <span class="ncf__payment-term__trial-price">
+        </span>
+        <br>
+        Unless you cancel during your trial you will be billed
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per year after the trial period.
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm annual option render option with selected 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="annual"
+           name="paymentTerm"
+           value="annual"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           checked
+    >
+    <label for="annual"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Annual
+      </span>
+      <div class="ncf__payment-term__description">
+        Single
+        <span class="ncf__payment-term__price ncf__strong">
+          £20.00
+        </span>
+        payment
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm annual option render option with selected 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="annual"
+           name="paymentTerm"
+           value="annual"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           checked
+    >
+    <label for="annual"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Annual
+      </span>
+      <div class="ncf__payment-term__description">
+        Single
+        <span class="ncf__payment-term__price ncf__strong">
+          £20.00
+        </span>
+        payment
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm annual option render option with trial 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="annual"
+           name="paymentTerm"
+           value="annual"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="annual"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Try the FT - Annual
+      </span>
+      <div class="ncf__payment-term__description">
+        6 weeks for
+        <span class="ncf__payment-term__trial-price">
+          £1.00
+        </span>
+        <br>
+        Unless you cancel during your trial you will be billed
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per year after the trial period.
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm annual option render option with trial 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="annual"
+           name="paymentTerm"
+           value="annual"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="annual"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Try the FT - Annual
+      </span>
+      <div class="ncf__payment-term__description">
+        6 weeks for
+        <span class="ncf__payment-term__trial-price">
+          £1.00
+        </span>
+        <br>
+        Unless you cancel during your trial you will be billed
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per year after the trial period.
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm annual option render option with weeklyPrice 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="annual"
+           name="paymentTerm"
+           value="annual"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="annual"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Annual
+      </span>
+      <div class="ncf__payment-term__description">
+        Single
+        <span class="ncf__payment-term__price ncf__strong">
+          £20.00
+        </span>
+        payment
+        <br>
+        That’s just
+        <span class="ncf__payment-term__weekly-price">
+          0.50p
+        </span>
+        per week
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm annual option render option with weeklyPrice 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="annual"
+           name="paymentTerm"
+           value="annual"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="annual"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Annual
+      </span>
+      <div class="ncf__payment-term__description">
+        Single
+        <span class="ncf__payment-term__price ncf__strong">
+          £20.00
+        </span>
+        payment
+        <br>
+        That’s just
+        <span class="ncf__payment-term__weekly-price">
+          0.50p
+        </span>
+        per week
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm monthly option render option 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="monthly"
+           name="paymentTerm"
+           value="monthly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="monthly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Monthly
+      </span>
+      <div class="ncf__payment-term__description">
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per month
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm monthly option render option 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="monthly"
+           name="paymentTerm"
+           value="monthly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="monthly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Monthly
+      </span>
+      <div class="ncf__payment-term__description">
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per month
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm monthly option render option with discount 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item ncf__payment-term__item--discount">
+    <input type="radio"
+           id="monthly"
+           name="paymentTerm"
+           value="monthly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="monthly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__discount">
+        Save 25% off
+      </span>
+      <span class="ncf__payment-term__title">
+        Monthly
+      </span>
+      <div class="ncf__payment-term__description">
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per month
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm monthly option render option with discount 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item ncf__payment-term__item--discount">
+    <input type="radio"
+           id="monthly"
+           name="paymentTerm"
+           value="monthly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="monthly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__discount">
+        Save 25% off
+      </span>
+      <span class="ncf__payment-term__title">
+        Monthly
+      </span>
+      <div class="ncf__payment-term__description">
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per month
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm monthly option render option with isTrial 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="monthly"
+           name="paymentTerm"
+           value="monthly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="monthly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Try the FT - Monthly
+      </span>
+      <div class="ncf__payment-term__description">
+        4 weeks for
+        <span class="ncf__payment-term__trial-price">
+        </span>
+        <br>
+        Unless you cancel during your trial you will be billed
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per month after the trial period.
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm monthly option render option with isTrial 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="monthly"
+           name="paymentTerm"
+           value="monthly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="monthly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Try the FT - Monthly
+      </span>
+      <div class="ncf__payment-term__description">
+        4 weeks for
+        <span class="ncf__payment-term__trial-price">
+        </span>
+        <br>
+        Unless you cancel during your trial you will be billed
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per month after the trial period.
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm monthly option render option with selected 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="monthly"
+           name="paymentTerm"
+           value="monthly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           checked
+    >
+    <label for="monthly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Monthly
+      </span>
+      <div class="ncf__payment-term__description">
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per month
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm monthly option render option with selected 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="monthly"
+           name="paymentTerm"
+           value="monthly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           checked
+    >
+    <label for="monthly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Monthly
+      </span>
+      <div class="ncf__payment-term__description">
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per month
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm monthly option render option with trial 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="monthly"
+           name="paymentTerm"
+           value="monthly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="monthly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Try the FT - Monthly
+      </span>
+      <div class="ncf__payment-term__description">
+        6 weeks for
+        <span class="ncf__payment-term__trial-price">
+          £1.00
+        </span>
+        <br>
+        Unless you cancel during your trial you will be billed
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per month after the trial period.
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm monthly option render option with trial 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="monthly"
+           name="paymentTerm"
+           value="monthly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="monthly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Try the FT - Monthly
+      </span>
+      <div class="ncf__payment-term__description">
+        6 weeks for
+        <span class="ncf__payment-term__trial-price">
+          £1.00
+        </span>
+        <br>
+        Unless you cancel during your trial you will be billed
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per month after the trial period.
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm monthly option render option with weeklyPrice 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="monthly"
+           name="paymentTerm"
+           value="monthly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="monthly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Monthly
+      </span>
+      <div class="ncf__payment-term__description">
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per month
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm monthly option render option with weeklyPrice 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="monthly"
+           name="paymentTerm"
+           value="monthly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="monthly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Monthly
+      </span>
+      <div class="ncf__payment-term__description">
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per month
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm quarterly option render option 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="quarterly"
+           name="paymentTerm"
+           value="quarterly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="quarterly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Quarterly
+      </span>
+      <div class="ncf__payment-term__description">
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per quarter
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm quarterly option render option 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="quarterly"
+           name="paymentTerm"
+           value="quarterly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="quarterly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Quarterly
+      </span>
+      <div class="ncf__payment-term__description">
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per quarter
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm quarterly option render option with discount 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item ncf__payment-term__item--discount">
+    <input type="radio"
+           id="quarterly"
+           name="paymentTerm"
+           value="quarterly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="quarterly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__discount">
+        Save 25% off
+      </span>
+      <span class="ncf__payment-term__title">
+        Quarterly
+      </span>
+      <div class="ncf__payment-term__description">
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per quarter
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm quarterly option render option with discount 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item ncf__payment-term__item--discount">
+    <input type="radio"
+           id="quarterly"
+           name="paymentTerm"
+           value="quarterly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="quarterly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__discount">
+        Save 25% off
+      </span>
+      <span class="ncf__payment-term__title">
+        Quarterly
+      </span>
+      <div class="ncf__payment-term__description">
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per quarter
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm quarterly option render option with isTrial 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="quarterly"
+           name="paymentTerm"
+           value="quarterly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="quarterly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Try the FT - Quarterly
+      </span>
+      <div class="ncf__payment-term__description">
+        4 weeks for
+        <span class="ncf__payment-term__trial-price">
+        </span>
+        <br>
+        Unless you cancel during your trial you will be billed
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per quarter after the trial period.
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm quarterly option render option with isTrial 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="quarterly"
+           name="paymentTerm"
+           value="quarterly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="quarterly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Try the FT - Quarterly
+      </span>
+      <div class="ncf__payment-term__description">
+        4 weeks for
+        <span class="ncf__payment-term__trial-price">
+        </span>
+        <br>
+        Unless you cancel during your trial you will be billed
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per quarter after the trial period.
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm quarterly option render option with selected 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="quarterly"
+           name="paymentTerm"
+           value="quarterly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           checked
+    >
+    <label for="quarterly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Quarterly
+      </span>
+      <div class="ncf__payment-term__description">
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per quarter
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm quarterly option render option with selected 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="quarterly"
+           name="paymentTerm"
+           value="quarterly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+           checked
+    >
+    <label for="quarterly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Quarterly
+      </span>
+      <div class="ncf__payment-term__description">
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per quarter
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm quarterly option render option with trial 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="quarterly"
+           name="paymentTerm"
+           value="quarterly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="quarterly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Try the FT - Quarterly
+      </span>
+      <div class="ncf__payment-term__description">
+        6 weeks for
+        <span class="ncf__payment-term__trial-price">
+          £1.00
+        </span>
+        <br>
+        Unless you cancel during your trial you will be billed
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per quarter after the trial period.
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm quarterly option render option with trial 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="quarterly"
+           name="paymentTerm"
+           value="quarterly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="quarterly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Try the FT - Quarterly
+      </span>
+      <div class="ncf__payment-term__description">
+        6 weeks for
+        <span class="ncf__payment-term__trial-price">
+          £1.00
+        </span>
+        <br>
+        Unless you cancel during your trial you will be billed
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per quarter after the trial period.
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm quarterly option render option with weeklyPrice 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="quarterly"
+           name="paymentTerm"
+           value="quarterly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="quarterly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Quarterly
+      </span>
+      <div class="ncf__payment-term__description">
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per quarter
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm quarterly option render option with weeklyPrice 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__item">
+    <input type="radio"
+           id="quarterly"
+           name="paymentTerm"
+           value="quarterly"
+           class="o-forms__radio o-forms__radio--right ncf__payment-term__input"
+    >
+    <label for="quarterly"
+           class="o-forms__label ncf__payment-term__label"
+    >
+      <span class="ncf__payment-term__title">
+        Quarterly
+      </span>
+      <div class="ncf__payment-term__description">
+        <span class="ncf__payment-term__price">
+          £20.00
+        </span>
+        per quarter
+      </div>
+    </label>
+  </div>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm render with defaults 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm render with defaults 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm render with isPrintOrBundle 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`PaymentTerm render with isPrintOrBundle 2`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__legal">
+    <p>
+      With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+    </p>
+    <p>
+      We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our
+      <a class="ncf__link--external"
+         href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+         title="FT Legal Terms and Conditions help page"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;

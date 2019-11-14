@@ -1,7 +1,7 @@
 <div id="paymentTermField" class="o-forms__group ncf__payment-term">
 	{{#each options}}
 	<div class="ncf__payment-term__item{{#if discount}} ncf__payment-term__item--discount{{/if}}">
-		<input type="radio" id="{{this.value}}" name="paymentTerm" value="{{this.value}}" class="o-forms__radio o-forms__radio--right ncf__payment-term__input"{{#if this.selected}} checked="checked"{{/if}}>
+		<input type="radio" id="{{this.value}}" name="paymentTerm" value="{{this.value}}" class="o-forms__radio o-forms__radio--right ncf__payment-term__input"{{#if this.selected}} checked{{/if}}>
 		<label for="{{this.value}}" class="o-forms__label ncf__payment-term__label">
 			{{#if discount}}
 			<span class="ncf__payment-term__discount">Save {{this.discount}}</span>
@@ -15,7 +15,7 @@
 				Unless you cancel during your trial you will be billed <span class="ncf__payment-term__price">{{price}}</span> per year after the trial period.
 				{{else}}
 				Single <span class="ncf__payment-term__price ncf__strong">{{price}}</span> payment
-				{{#if weeklyPrice}}<br />That's just <span class="ncf__payment-term__weekly-price">{{weeklyPrice}}</span> per week{{/if}}
+				{{#if weeklyPrice}}<br />That’s just <span class="ncf__payment-term__weekly-price">{{weeklyPrice}}</span> per week{{/if}}
 				{{!-- Remove this discount text temporarily in favour of weekly price --}}
 				<!-- {{#unless discount}}<br />Save up to 25% when you pay annually{{/unless}} -->
 				{{/if}}
@@ -50,13 +50,10 @@
 	{{/each}}
 	<div class="ncf__payment-term__legal">
 		<p>
-			With all subscription types, we will automatically renew your subscription using the payment
-			method provided unless you cancel before your renewal date.
+			With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
 		</p>
 		<p>
-			We will notify you at least 14 days in advance of any changes to the price in your subscription
-			that would apply upon next renewal. Find out more about our cancellation policy in our
-			<a class="ncf__link--external" href="https://help.ft.com/help/legal-privacy/terms-conditions/" title="FT Legal Terms and Conditions help page" target="_blank" rel="noopener">Terms &amp; Conditions</a>.
+			We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our <a class="ncf__link--external" href="https://help.ft.com/help/legal-privacy/terms-conditions/" title="FT Legal Terms and Conditions help page" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>.
 		</p>
 	</div>
 </div>
