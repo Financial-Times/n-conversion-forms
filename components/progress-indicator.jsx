@@ -57,10 +57,10 @@ function ProgressIndicator ({
 
 ProgressIndicator.propTypes = {
 	items: PropTypes.arrayOf(PropTypes.shape({
-	    isComplete: PropTypes.bool,
-	    isCurrent: PropTypes.bool,
-	    name: PropTypes.string,
-	    url: PropTypes.string,
+		isComplete: PropTypes.bool,
+		isCurrent: PropTypes.bool,
+		name: PropTypes.string,
+		url: PropTypes.string,
 	}))
 };
 
