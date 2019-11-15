@@ -10,6 +10,7 @@ function initDemo () {
 		<React.Fragment>
 			<ncf.AcceptTerms />
 			<ncf.AppBanner />
+			<ncf.BillingCountry></ncf.BillingCountry>
 			<ncf.BillingPostcode postcodeReference={'billing postcode'}/>
 			<ncf.CompanyName />
 			<ncf.Confirmation />

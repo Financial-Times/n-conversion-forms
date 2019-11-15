@@ -1,5 +1,6 @@
 export { AcceptTerms } from'./accept-terms';
 export { AppBanner } from'./app-banner';
+export { BillingCountry } from './billing-country';
 export { BillingPostcode } from'./billing-postcode';
 export { CompanyName } from'./company-name';
 export { Confirmation } from'./confirmation';
