@@ -15,6 +15,7 @@ function initDemo () {
 			<ncf.Confirmation />
 			<ncf.ContinueReading />
 			<ncf.CustomerCare />
+			<ncf.Debug />
 			<ncf.DecisionMaker />
 			<ncf.DeliveryAddress />
 			<ncf.DeliveryCity />

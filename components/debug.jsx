@@ -1,34 +1,43 @@
-{{!-- Debug Panel for working with Conversion Forms --}}
-{{!-- Style and scripts are inline to reduce the impact on production files --}}
-{{#ifSome isTest showHelpers}}
-<div class="ncf__debug-panel">
-	<span class="ncf__debug-environment">
-		{{#if isTest}}
-		<a class="ncf__button ncf__button--inverse ncf__debug-button--test" onclick="setTestEnvironment('off');"><strong>TEST</strong> relax you are using the test API</a>
-		{{else}}
-		<a class="ncf__button ncf__button--inverse ncf__debug-button--production" onclick="setTestEnvironment('on');"><strong>PRODUCTION</strong> careful you are using the production API</a>
-		{{/if}}
-	</span>
-	{{#if showHelpers}}
-	<span class="ncf__debug-helpers">
-		<button class="ncf__button ncf__button--inverse" onclick="logout();" title="Logout and refresh">Logout</button>
-		<button class="ncf__button ncf__button--inverse" onclick="fillForm();" title="Fill form with debug data">Fill</button>
-		<button class="ncf__button ncf__button--inverse" onclick="fillForm(); submitForm();" title="Fill form with debug data and submit">Fill &amp; Submit</button>
-		{{#if isTest}}
-			<button id="ncf-copy-uk-visa" class="ncf__button ncf__button--inverse" onclick="copyToClipboard('ukVisa');" title="Copy UK Visa card number to clipboard">UK Visa</button>
-			<button id="ncf-copy-us-visa" class="ncf__button ncf__button--inverse" onclick="copyToClipboard('usVisa');" title="Copy US Visa card number to clipboard">US Visa</button>
-			<button id="ncf-copy-us-amex" class="ncf__button ncf__button--inverse" onclick="copyToClipboard('usAmex');" title="Copy US Amex card number to clipboard">US Amex</button>
-		{{/if}}
-		{{#if links}}
-			{{#each links}}
-			<a class="ncf__button ncf__button--inverse ncf__link" href="{{this}}">{{@key}}</a>
-			{{/each}}
-		{{/if}}
-	</span>
-	{{/if}}
 
-</div>
-<script>
+import React from 'react';
+import PropTypes from 'prop-types';
+
+export function Debug ({
+	isTest = false,
+	showHelpers = false,
+	links = {}
+}) {
+	// Strings are used rather than JSX as this component is injected into HTML
+	// along with onclick handlers, styles and javascript. JSX will escape and
+	// modify the HTML which we do not want. Once our applications are on JSX
+	// entirely this component should be rethought.
+	const testEnvironment = `
+		<span class="ncf__debug-environment">
+			<a class="ncf__button ncf__button--inverse ncf__debug-button--test" onclick="setTestEnvironment('off');"><strong>TEST</strong> relax you are using the test API</a>
+		</span>
+	`;
+	const productionEnvironment = `
+		<span class="ncf__debug-environment">
+			<a class="ncf__button ncf__button--inverse ncf__debug-button--production" onclick="setTestEnvironment('on');"><strong>PRODUCTION</strong> careful you are using the production API</a>
+		</span>
+	`;
+	const testCards = `
+		<button id="ncf-copy-uk-visa" class="ncf__button ncf__button--inverse" onclick="copyToClipboard('ukVisa');" title="Copy UK Visa card number to clipboard">UK Visa</button>
+		<button id="ncf-copy-us-visa" class="ncf__button ncf__button--inverse" onclick="copyToClipboard('usVisa');" title="Copy US Visa card number to clipboard">US Visa</button>
+		<button id="ncf-copy-us-amex" class="ncf__button ncf__button--inverse" onclick="copyToClipboard('usAmex');" title="Copy US Amex card number to clipboard">US Amex</button>
+	`;
+	const linksString = Object.keys(links).map(link => `<a key=${link} class="ncf__button ncf__button--inverse ncf__link" href="${links[link]}">${link}</a>`);
+	const helpers = `
+		<span class="ncf__debug-helpers">
+			<button class="ncf__button ncf__button--inverse" onclick="logout();" title="Logout and refresh">Logout</button>
+			<button class="ncf__button ncf__button--inverse" onclick="fillForm();" title="Fill form with debug data">Fill</button>
+			<button class="ncf__button ncf__button--inverse" onclick="fillForm(); submitForm();" title="Fill form with debug data and submit">Fill &amp; Submit</button>
+			${isTest ? testCards : ''}
+			${links.length ? linksString : ''}
+		</span>
+	`;
+	const html = {__html: `${isTest ? testEnvironment : productionEnvironment}${showHelpers ? helpers : ''}`};
+	const javascript = {__html: `
 	var FORM_SELECTOR = 'form.ncf';
 	var INPUT_SELECTOR = FORM_SELECTOR + ' input:not([type="checkbox"]):not([type="radio"])';
 	var SELECT_SELECTOR = FORM_SELECTOR + ' select';
@@ -107,16 +116,15 @@
 	}
 
 	function setTestEnvironment (state) {
-		var flags = document.cookie.match('(^|[^;]+)\\s*next-flags\\s*=\\s*([^;]+)').pop();
+		var flags = document.cookie.match('(^|[^;]+)\\\\s*next-flags\\\\s*=\\\\s*([^;]+)').pop();
 		var flag = 'conversionSandbox%3A';
 		flags = flags.replace(flag + 'on', '');
 		flags = flags.replace(flag + 'off', '');
 		document.cookie = 'next-flags=' + flags + '%2C' + flag + state + '; path=/; domain=.ft.com;';
 		window.location.reload();
 	}
-
-</script>
-<style>
+	`};
+	const style = {__html: `
 	.ncf__debug-panel {
 		position: absolute;
 		background-color: #262a33;
@@ -135,5 +143,21 @@
 	.ncf__debug-button--production {
 		background-color: #990000;
 	}
-</style>
-{{/ifSome}}
+	`};
+
+	return (isTest || showHelpers) && (
+		<React.Fragment>
+			{/* Debug Panel for working with Conversion Forms */}
+			{/* Style and scripts are inline to reduce the impact on production files */}
+			<div className="ncf__debug-panel" dangerouslySetInnerHTML={html}></div>
+			<script dangerouslySetInnerHTML={javascript}></script>
+			<style dangerouslySetInnerHTML={style}></style>
+		</React.Fragment>
+	);
+}
+
+Debug.propTypes = {
+	isTest: PropTypes.bool,
+	showHelpers: PropTypes.bool,
+	links: PropTypes.object
+};

@@ -1,0 +1,537 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Debug renders with default props 1`] = `""`;
+
+exports[`Debug renders with default props 2`] = `""`;
+
+exports[`Debug renders with isTest 1`] = `
+<div class="ncf__debug-panel">
+  <span class="ncf__debug-environment">
+    <a class="ncf__button ncf__button--inverse ncf__debug-button--test"
+       onclick="setTestEnvironment('off');"
+    >
+      <strong>
+        TEST
+      </strong>
+      relax you are using the test API
+    </a>
+  </span>
+</div>
+<script>
+  var FORM_SELECTOR = 'form.ncf';
+	var INPUT_SELECTOR = FORM_SELECTOR + ' input:not([type="checkbox"]):not([type="radio"])';
+	var SELECT_SELECTOR = FORM_SELECTOR + ' select';
+	var CHECKBOX_SELECTOR = FORM_SELECTOR + ' input[type="checkbox"]';
+	var RADIO_SELECTOR = FORM_SELECTOR + ' input[type="radio"]';
+	// This env var gets set in production. We use this when creating email addresses in case any
+	// get into production so Membership know who to come to about deleting them.
+	var SYSTEM_CODE = document.documentElement.getAttribute('data-next-app') || 'n-conversion-forms';
+
+	var debugData = {
+		billingCountry: 'GBR',
+		billingPostcode: 'EC4M9BT',
+		country: 'GBR',
+		deliveryAddressLine1: 'delivery test1',
+		deliveryAddressLine2: 'delivery test2',
+		deliveryAddressLine3: 'delivery test3',
+		deliveryCity: 'delivery city',
+		deliveryCounty: 'delivery county',
+		deliveryPostcode: 'EC4M9BT',
+		email: SYSTEM_CODE + '-' + Date.now() + '@ftqa.org',
+		firstName: 'Test',
+		industry: 'DEF',
+		lastName: 'Test',
+		jobTitle: 'CEO',
+		password: 'password123',
+		position: 'AS',
+		postCode: 'EC4M9BT',
+		primaryTelephone: '0987654321',
+		responsibility: 'ADL',
+		ukVisa: '4111111111111111',
+		usAmex: '378282246310005',
+		usVisa: '4112344112344113'
+	};
+
+	function logout () {
+		const options = {
+			mode: 'no-cors',
+			credentials: 'include'
+		};
+		fetch('https://www.ft.com/logout', options).then(function () {
+			window.location.reload();
+		});
+	}
+
+	function fillForm () {
+		var changeEvent = document.createEvent('HTMLEvents');
+		changeEvent.initEvent('change', false, true);
+
+		var inputs = document.querySelectorAll(INPUT_SELECTOR + ', ' + SELECT_SELECTOR);
+		inputs.forEach(function (input) {
+			if (!/hidden/i.test(input.type)) {
+				var value = debugData[input.name];
+				input.value = value;
+				input.dispatchEvent(changeEvent);
+			}
+		});
+		var checkboxes = document.querySelectorAll(CHECKBOX_SELECTOR + ', ' + RADIO_SELECTOR);
+		checkboxes.forEach(function (checkbox) {
+			checkbox.checked = true;
+			checkbox.dispatchEvent(changeEvent);
+		});
+	}
+
+	function submitForm () {
+		document.querySelector(FORM_SELECTOR).submit();
+	}
+
+	function copyToClipboard (name) {
+		var string = debugData[name];
+		var textarea = document.createElement('textarea');
+		textarea.value = string;
+		document.body.appendChild(textarea);
+		textarea.select();
+		document.execCommand('copy');
+		document.body.removeChild(textarea);
+	}
+
+	function setTestEnvironment (state) {
+		var flags = document.cookie.match('(^|[^;]+)\\\\s*next-flags\\\\s*=\\\\s*([^;]+)').pop();
+		var flag = 'conversionSandbox%3A';
+		flags = flags.replace(flag + 'on', '');
+		flags = flags.replace(flag + 'off', '');
+		document.cookie = 'next-flags=' + flags + '%2C' + flag + state + '; path=/; domain=.ft.com;';
+		window.location.reload();
+	}
+</script>
+<style>
+  .ncf__debug-panel {
+		position: absolute;
+		background-color: #262a33;
+		color: #ffffff;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 10px;
+		position: fixed;
+		z-index: 1000;
+		opacity: 0.8;
+	}
+	.ncf__debug-button--test {
+		background-color: #008040;
+	}
+	.ncf__debug-button--production {
+		background-color: #990000;
+	}
+</style>
+`;
+
+exports[`Debug renders with isTest 2`] = `
+<div class="ncf__debug-panel">
+  <span class="ncf__debug-environment">
+    <a class="ncf__button ncf__button--inverse ncf__debug-button--test"
+       onclick="setTestEnvironment('off');"
+    >
+      <strong>
+        TEST
+      </strong>
+      relax you are using the test API
+    </a>
+  </span>
+</div>
+<script>
+  var FORM_SELECTOR = 'form.ncf';
+	var INPUT_SELECTOR = FORM_SELECTOR + ' input:not([type="checkbox"]):not([type="radio"])';
+	var SELECT_SELECTOR = FORM_SELECTOR + ' select';
+	var CHECKBOX_SELECTOR = FORM_SELECTOR + ' input[type="checkbox"]';
+	var RADIO_SELECTOR = FORM_SELECTOR + ' input[type="radio"]';
+	// This env var gets set in production. We use this when creating email addresses in case any
+	// get into production so Membership know who to come to about deleting them.
+	var SYSTEM_CODE = document.documentElement.getAttribute('data-next-app') || 'n-conversion-forms';
+
+	var debugData = {
+		billingCountry: 'GBR',
+		billingPostcode: 'EC4M9BT',
+		country: 'GBR',
+		deliveryAddressLine1: 'delivery test1',
+		deliveryAddressLine2: 'delivery test2',
+		deliveryAddressLine3: 'delivery test3',
+		deliveryCity: 'delivery city',
+		deliveryCounty: 'delivery county',
+		deliveryPostcode: 'EC4M9BT',
+		email: SYSTEM_CODE + '-' + Date.now() + '@ftqa.org',
+		firstName: 'Test',
+		industry: 'DEF',
+		lastName: 'Test',
+		jobTitle: 'CEO',
+		password: 'password123',
+		position: 'AS',
+		postCode: 'EC4M9BT',
+		primaryTelephone: '0987654321',
+		responsibility: 'ADL',
+		ukVisa: '4111111111111111',
+		usAmex: '378282246310005',
+		usVisa: '4112344112344113'
+	};
+
+	function logout () {
+		const options = {
+			mode: 'no-cors',
+			credentials: 'include'
+		};
+		fetch('https://www.ft.com/logout', options).then(function () {
+			window.location.reload();
+		});
+	}
+
+	function fillForm () {
+		var changeEvent = document.createEvent('HTMLEvents');
+		changeEvent.initEvent('change', false, true);
+
+		var inputs = document.querySelectorAll(INPUT_SELECTOR + ', ' + SELECT_SELECTOR);
+		inputs.forEach(function (input) {
+			if (!/hidden/i.test(input.type)) {
+				var value = debugData[input.name];
+				input.value = value;
+				input.dispatchEvent(changeEvent);
+			}
+		});
+		var checkboxes = document.querySelectorAll(CHECKBOX_SELECTOR + ', ' + RADIO_SELECTOR);
+		checkboxes.forEach(function (checkbox) {
+			checkbox.checked = true;
+			checkbox.dispatchEvent(changeEvent);
+		});
+	}
+
+	function submitForm () {
+		document.querySelector(FORM_SELECTOR).submit();
+	}
+
+	function copyToClipboard (name) {
+		var string = debugData[name];
+		var textarea = document.createElement('textarea');
+		textarea.value = string;
+		document.body.appendChild(textarea);
+		textarea.select();
+		document.execCommand('copy');
+		document.body.removeChild(textarea);
+	}
+
+	function setTestEnvironment (state) {
+		var flags = document.cookie.match('(^|[^;]+)\\\\s*next-flags\\\\s*=\\\\s*([^;]+)').pop();
+		var flag = 'conversionSandbox%3A';
+		flags = flags.replace(flag + 'on', '');
+		flags = flags.replace(flag + 'off', '');
+		document.cookie = 'next-flags=' + flags + '%2C' + flag + state + '; path=/; domain=.ft.com;';
+		window.location.reload();
+	}
+</script>
+<style>
+  .ncf__debug-panel {
+		position: absolute;
+		background-color: #262a33;
+		color: #ffffff;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 10px;
+		position: fixed;
+		z-index: 1000;
+		opacity: 0.8;
+	}
+	.ncf__debug-button--test {
+		background-color: #008040;
+	}
+	.ncf__debug-button--production {
+		background-color: #990000;
+	}
+</style>
+`;
+
+exports[`Debug renders with links 1`] = `""`;
+
+exports[`Debug renders with links 2`] = `""`;
+
+exports[`Debug renders with showHelpers 1`] = `
+<div class="ncf__debug-panel">
+  <span class="ncf__debug-environment">
+    <a class="ncf__button ncf__button--inverse ncf__debug-button--production"
+       onclick="setTestEnvironment('on');"
+    >
+      <strong>
+        PRODUCTION
+      </strong>
+      careful you are using the production API
+    </a>
+  </span>
+  <span class="ncf__debug-helpers">
+    <button class="ncf__button ncf__button--inverse"
+            onclick="logout();"
+            title="Logout and refresh"
+    >
+      Logout
+    </button>
+    <button class="ncf__button ncf__button--inverse"
+            onclick="fillForm();"
+            title="Fill form with debug data"
+    >
+      Fill
+    </button>
+    <button class="ncf__button ncf__button--inverse"
+            onclick="fillForm(); submitForm();"
+            title="Fill form with debug data and submit"
+    >
+      Fill &amp; Submit
+    </button>
+  </span>
+</div>
+<script>
+  var FORM_SELECTOR = 'form.ncf';
+	var INPUT_SELECTOR = FORM_SELECTOR + ' input:not([type="checkbox"]):not([type="radio"])';
+	var SELECT_SELECTOR = FORM_SELECTOR + ' select';
+	var CHECKBOX_SELECTOR = FORM_SELECTOR + ' input[type="checkbox"]';
+	var RADIO_SELECTOR = FORM_SELECTOR + ' input[type="radio"]';
+	// This env var gets set in production. We use this when creating email addresses in case any
+	// get into production so Membership know who to come to about deleting them.
+	var SYSTEM_CODE = document.documentElement.getAttribute('data-next-app') || 'n-conversion-forms';
+
+	var debugData = {
+		billingCountry: 'GBR',
+		billingPostcode: 'EC4M9BT',
+		country: 'GBR',
+		deliveryAddressLine1: 'delivery test1',
+		deliveryAddressLine2: 'delivery test2',
+		deliveryAddressLine3: 'delivery test3',
+		deliveryCity: 'delivery city',
+		deliveryCounty: 'delivery county',
+		deliveryPostcode: 'EC4M9BT',
+		email: SYSTEM_CODE + '-' + Date.now() + '@ftqa.org',
+		firstName: 'Test',
+		industry: 'DEF',
+		lastName: 'Test',
+		jobTitle: 'CEO',
+		password: 'password123',
+		position: 'AS',
+		postCode: 'EC4M9BT',
+		primaryTelephone: '0987654321',
+		responsibility: 'ADL',
+		ukVisa: '4111111111111111',
+		usAmex: '378282246310005',
+		usVisa: '4112344112344113'
+	};
+
+	function logout () {
+		const options = {
+			mode: 'no-cors',
+			credentials: 'include'
+		};
+		fetch('https://www.ft.com/logout', options).then(function () {
+			window.location.reload();
+		});
+	}
+
+	function fillForm () {
+		var changeEvent = document.createEvent('HTMLEvents');
+		changeEvent.initEvent('change', false, true);
+
+		var inputs = document.querySelectorAll(INPUT_SELECTOR + ', ' + SELECT_SELECTOR);
+		inputs.forEach(function (input) {
+			if (!/hidden/i.test(input.type)) {
+				var value = debugData[input.name];
+				input.value = value;
+				input.dispatchEvent(changeEvent);
+			}
+		});
+		var checkboxes = document.querySelectorAll(CHECKBOX_SELECTOR + ', ' + RADIO_SELECTOR);
+		checkboxes.forEach(function (checkbox) {
+			checkbox.checked = true;
+			checkbox.dispatchEvent(changeEvent);
+		});
+	}
+
+	function submitForm () {
+		document.querySelector(FORM_SELECTOR).submit();
+	}
+
+	function copyToClipboard (name) {
+		var string = debugData[name];
+		var textarea = document.createElement('textarea');
+		textarea.value = string;
+		document.body.appendChild(textarea);
+		textarea.select();
+		document.execCommand('copy');
+		document.body.removeChild(textarea);
+	}
+
+	function setTestEnvironment (state) {
+		var flags = document.cookie.match('(^|[^;]+)\\\\s*next-flags\\\\s*=\\\\s*([^;]+)').pop();
+		var flag = 'conversionSandbox%3A';
+		flags = flags.replace(flag + 'on', '');
+		flags = flags.replace(flag + 'off', '');
+		document.cookie = 'next-flags=' + flags + '%2C' + flag + state + '; path=/; domain=.ft.com;';
+		window.location.reload();
+	}
+</script>
+<style>
+  .ncf__debug-panel {
+		position: absolute;
+		background-color: #262a33;
+		color: #ffffff;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 10px;
+		position: fixed;
+		z-index: 1000;
+		opacity: 0.8;
+	}
+	.ncf__debug-button--test {
+		background-color: #008040;
+	}
+	.ncf__debug-button--production {
+		background-color: #990000;
+	}
+</style>
+`;
+
+exports[`Debug renders with showHelpers 2`] = `
+<div class="ncf__debug-panel">
+  <span class="ncf__debug-environment">
+    <a class="ncf__button ncf__button--inverse ncf__debug-button--production"
+       onclick="setTestEnvironment('on');"
+    >
+      <strong>
+        PRODUCTION
+      </strong>
+      careful you are using the production API
+    </a>
+  </span>
+  <span class="ncf__debug-helpers">
+    <button class="ncf__button ncf__button--inverse"
+            onclick="logout();"
+            title="Logout and refresh"
+    >
+      Logout
+    </button>
+    <button class="ncf__button ncf__button--inverse"
+            onclick="fillForm();"
+            title="Fill form with debug data"
+    >
+      Fill
+    </button>
+    <button class="ncf__button ncf__button--inverse"
+            onclick="fillForm(); submitForm();"
+            title="Fill form with debug data and submit"
+    >
+      Fill &amp; Submit
+    </button>
+  </span>
+</div>
+<script>
+  var FORM_SELECTOR = 'form.ncf';
+	var INPUT_SELECTOR = FORM_SELECTOR + ' input:not([type="checkbox"]):not([type="radio"])';
+	var SELECT_SELECTOR = FORM_SELECTOR + ' select';
+	var CHECKBOX_SELECTOR = FORM_SELECTOR + ' input[type="checkbox"]';
+	var RADIO_SELECTOR = FORM_SELECTOR + ' input[type="radio"]';
+	// This env var gets set in production. We use this when creating email addresses in case any
+	// get into production so Membership know who to come to about deleting them.
+	var SYSTEM_CODE = document.documentElement.getAttribute('data-next-app') || 'n-conversion-forms';
+
+	var debugData = {
+		billingCountry: 'GBR',
+		billingPostcode: 'EC4M9BT',
+		country: 'GBR',
+		deliveryAddressLine1: 'delivery test1',
+		deliveryAddressLine2: 'delivery test2',
+		deliveryAddressLine3: 'delivery test3',
+		deliveryCity: 'delivery city',
+		deliveryCounty: 'delivery county',
+		deliveryPostcode: 'EC4M9BT',
+		email: SYSTEM_CODE + '-' + Date.now() + '@ftqa.org',
+		firstName: 'Test',
+		industry: 'DEF',
+		lastName: 'Test',
+		jobTitle: 'CEO',
+		password: 'password123',
+		position: 'AS',
+		postCode: 'EC4M9BT',
+		primaryTelephone: '0987654321',
+		responsibility: 'ADL',
+		ukVisa: '4111111111111111',
+		usAmex: '378282246310005',
+		usVisa: '4112344112344113'
+	};
+
+	function logout () {
+		const options = {
+			mode: 'no-cors',
+			credentials: 'include'
+		};
+		fetch('https://www.ft.com/logout', options).then(function () {
+			window.location.reload();
+		});
+	}
+
+	function fillForm () {
+		var changeEvent = document.createEvent('HTMLEvents');
+		changeEvent.initEvent('change', false, true);
+
+		var inputs = document.querySelectorAll(INPUT_SELECTOR + ', ' + SELECT_SELECTOR);
+		inputs.forEach(function (input) {
+			if (!/hidden/i.test(input.type)) {
+				var value = debugData[input.name];
+				input.value = value;
+				input.dispatchEvent(changeEvent);
+			}
+		});
+		var checkboxes = document.querySelectorAll(CHECKBOX_SELECTOR + ', ' + RADIO_SELECTOR);
+		checkboxes.forEach(function (checkbox) {
+			checkbox.checked = true;
+			checkbox.dispatchEvent(changeEvent);
+		});
+	}
+
+	function submitForm () {
+		document.querySelector(FORM_SELECTOR).submit();
+	}
+
+	function copyToClipboard (name) {
+		var string = debugData[name];
+		var textarea = document.createElement('textarea');
+		textarea.value = string;
+		document.body.appendChild(textarea);
+		textarea.select();
+		document.execCommand('copy');
+		document.body.removeChild(textarea);
+	}
+
+	function setTestEnvironment (state) {
+		var flags = document.cookie.match('(^|[^;]+)\\\\s*next-flags\\\\s*=\\\\s*([^;]+)').pop();
+		var flag = 'conversionSandbox%3A';
+		flags = flags.replace(flag + 'on', '');
+		flags = flags.replace(flag + 'off', '');
+		document.cookie = 'next-flags=' + flags + '%2C' + flag + state + '; path=/; domain=.ft.com;';
+		window.location.reload();
+	}
+</script>
+<style>
+  .ncf__debug-panel {
+		position: absolute;
+		background-color: #262a33;
+		color: #ffffff;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 10px;
+		position: fixed;
+		z-index: 1000;
+		opacity: 0.8;
+	}
+	.ncf__debug-button--test {
+		background-color: #008040;
+	}
+	.ncf__debug-button--production {
+		background-color: #990000;
+	}
+</style>
+`;

@@ -5,6 +5,7 @@ export { CompanyName } from'./company-name';
 export { Confirmation } from'./confirmation';
 export { ContinueReading } from'./continue-reading';
 export { CustomerCare } from'./customer-care';
+export { Debug } from './debug';
 export { DecisionMaker } from'./decision-maker';
 export { DeliveryAddress } from'./delivery-address';
 export { DeliveryCity } from'./delivery-city';
