@@ -14,6 +14,7 @@ function initDemo () {
 			<ncf.CompanyName />
 			<ncf.Confirmation />
 			<ncf.ContinueReading />
+			<ncf.Country />
 			<ncf.CustomerCare />
 			<ncf.DecisionMaker />
 			<ncf.DeliveryAddress />

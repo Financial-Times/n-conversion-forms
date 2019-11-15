@@ -11,9 +11,11 @@ describe('ncf-countries', () => {
 		stub = sandbox.stub();
 		mockCountries = generateCountryArray(4, { includeAllFrequent: false });
 		helper = proxyquire('../../helpers/ncf-countries', {
-			'n-common-static-data': {
-				billingCountries: { countries: mockCountries }
-			}
+			'../utils/countries': proxyquire('../../utils/countries', {
+				'n-common-static-data': {
+					billingCountries: { countries: mockCountries }
+				}
+			})
 		});
 	});
 
@@ -78,18 +80,22 @@ describe('ncf-countries', () => {
 		beforeEach(() => {
 			mockCountries = generateCountryArray(100, { includeAllFrequent: true });
 			helper = proxyquire('../../helpers/ncf-countries', {
-				'n-common-static-data': {
-					billingCountries: { countries: mockCountries }
-				}
+				'../utils/countries': proxyquire('../../utils/countries', {
+					'n-common-static-data': {
+						billingCountries: { countries: mockCountries }
+					}
+				})
 			});
 		});
 
 		it('should not group countries under limit', () => {
 			mockCountries = generateCountryArray(10, { includeAllFrequent: true });
 			helper = proxyquire('../../helpers/ncf-countries', {
-				'n-common-static-data': {
-					billingCountries: { countries: mockCountries }
-				}
+				'../utils/countries': proxyquire('../../utils/countries', {
+					'n-common-static-data': {
+						billingCountries: { countries: mockCountries }
+					}
+				})
 			});
 			helper({ hash: { }, fn: stub });
 			const context = stub.getCall(0).args[0];

@@ -4,6 +4,7 @@ export { BillingPostcode } from'./billing-postcode';
 export { CompanyName } from'./company-name';
 export { Confirmation } from'./confirmation';
 export { ContinueReading } from'./continue-reading';
+export { Country } from './country';
 export { CustomerCare } from'./customer-care';
 export { DecisionMaker } from'./decision-maker';
 export { DeliveryAddress } from'./delivery-address';
