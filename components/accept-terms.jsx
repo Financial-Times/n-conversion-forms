@@ -35,19 +35,19 @@ export function AcceptTerms ({
 		'data-validate': 'required,checked',
 		...(isSignup && { 'data-trackable': 'sign-up-terms' }),
 		...(isRegister && { 'data-trackable': 'register-up-terms' })
-	}
+	};
 
 	const inputProps = {
-		id: "termsAcceptance",
-		type: "checkbox",
-		name: "termsAcceptance",
-		value: "true",
-		className: "o-forms__checkbox js-item__value js-field__input",
-		'data-trackable': "field-terms",
-		'aria-required': "true",
+		id: 'termsAcceptance',
+		type: 'checkbox',
+		name: 'termsAcceptance',
+		value: 'true',
+		className: 'o-forms__checkbox js-item__value js-field__input',
+		'data-trackable': 'field-terms',
+		'aria-required': 'true',
 		required: true,
 		...(isChecked && { defaultChecked: true })
-	}
+	};
 
 	const b2bTerms = isB2b && (
 		<p id="terms-b2b">
@@ -149,5 +149,4 @@ AcceptTerms.propTypes = {
 	transitionType: PropTypes.string,
 	isPrintProduct: PropTypes.bool,
 	specialTerms: PropTypes.string
-}
-
+};

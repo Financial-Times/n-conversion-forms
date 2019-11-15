@@ -98,4 +98,3 @@ Confirmation.propTypes = {
 	hideCta: PropTypes.bool,
 	isPrintOnly: PropTypes.bool
 };
-

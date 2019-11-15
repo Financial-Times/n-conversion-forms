@@ -63,4 +63,3 @@ ProgressIndicator.propTypes = {
 		url: PropTypes.string,
 	}))
 };
-
