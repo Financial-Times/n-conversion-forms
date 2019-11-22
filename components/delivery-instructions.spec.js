@@ -12,37 +12,37 @@ describe('DeliveryInstructions', () => {
 	});
 
 	it('renders with default props', () => {
-		const props = {};
+		const props = { placeholder: 'test' };
 
 		expect(DeliveryInstructions).toRenderAs(context, props);
 	});
 
 	it('renders with an error', () => {
-		const props = { hasError: true };
+		const props = { placeholder: 'test', hasError: true };
 
 		expect(DeliveryInstructions).toRenderAs(context, props);
 	});
 
 	it('renders with maxlength', () => {
-		const props = { maxlength: 200 };
+		const props = { placeholder: 'test', maxlength: 200 };
 
 		expect(DeliveryInstructions).toRenderAs(context, props);
 	});
 
 	it('renders with rows', () => {
-		const props = { rows: 20 };
+		const props = { placeholder: 'test', rows: 20 };
 
 		expect(DeliveryInstructions).toRenderAs(context, props);
 	});
 
 	it('renders with a custom value', () => {
-		const props = { value: 'foobar' };
+		const props = { placeholder: 'test', value: 'foobar' };
 
 		expect(DeliveryInstructions).toRenderAs(context, props);
 	});
 
 	it('renders with a disabled input element', () => {
-		const props = { isDisabled: true };
+		const props = { placeholder: 'test', isDisabled: true };
 
 		expect(DeliveryInstructions).toRenderAs(context, props);
 	});

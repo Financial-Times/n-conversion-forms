@@ -15,10 +15,7 @@
 				{{#if rows}}rows="{{rows}}"{{/if}}
 				class="o-forms__text js-field__input js-item__value"
 				data-trackable="field-deliveryInstructions"
-				placeholder="Enter instructions {{#if maxlength}}(Max. {{maxlength}} characters){{/if}}:
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+				placeholder="{{#if placeholder}}{{placeholder}}{{else}}Enter instructions {{#if maxlength}}(Max. {{maxlength}} characters){{/if}}:&#x0a;- Door colour, letterbox location&#x0a;- Placement i.e. letterbox delivery&#x0a;- Special handling i.e. place in plastic bag{{/if}}"
 				{{#if isDisabled}}disabled{{/if}}>{{value}}</textarea>
 	<p>
 		Please note that we can only deliver to the ground floor level of your property.

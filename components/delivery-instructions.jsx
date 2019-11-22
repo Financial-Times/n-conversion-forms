@@ -9,6 +9,7 @@ export function DeliveryInstructions ({
 	maxlength = null,
 	rows = null,
 	isDisabled = false,
+	placeholder = '',
 	value = ''
 }) {
 	const divClassName = classNames([
@@ -20,7 +21,7 @@ export function DeliveryInstructions ({
 	]);
 
 	const maxLengthText = maxlength ? `(Max. ${maxlength} characters)` : '';
-	const placeholder = `Enter instructions ${maxLengthText}:\u000a- Door colour, letterbox location\u000a- Placement i.e. letterbox delivery\u000a- Special handling i.e. place in plastic bag`;
+	const defaultPlaceholder = `Enter instructions ${maxLengthText}:\u000a- Door colour, letterbox location\u000a- Placement i.e. letterbox delivery\u000a- Special handling i.e. place in plastic bag`;
 
 	const textAreaProps = {
 		type: 'text',
@@ -30,10 +31,12 @@ export function DeliveryInstructions ({
 		...(rows && { rows }),
 		className: 'o-forms__text js-field__input js-item__value',
 		'data-trackable': 'field-deliveryInstructions',
-		placeholder,
+		placeholder: placeholder ? placeholder : defaultPlaceholder,
 		disabled: isDisabled,
 		defaultValue: value
 	};
+
+	const textarea = React.createElement('textarea', textAreaProps);
 
 	return (
 		<div
@@ -49,7 +52,7 @@ export function DeliveryInstructions ({
 				These may be printed on your newspaper. Don’t add sensitive information like access codes. If you do so, it is at your own risk. To provide additional secure information, login to your account via FT.com.
 			</div>
 
-			<textarea {...textAreaProps} />
+			{textarea}
 
 			<p>Please note that we can only deliver to the ground floor level of your property.</p>
 		</div>

@@ -23,10 +23,7 @@ exports[`DeliveryInstructions renders with a custom value 1`] = `
             name="deliveryInstructions"
             class="o-forms__text js-field__input js-item__value"
             data-trackable="field-deliveryInstructions"
-            placeholder="Enter instructions :
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+            placeholder="test"
   >
     foobar
   </textarea>
@@ -59,10 +56,7 @@ exports[`DeliveryInstructions renders with a custom value 2`] = `
             name="deliveryInstructions"
             class="o-forms__text js-field__input js-item__value"
             data-trackable="field-deliveryInstructions"
-            placeholder="Enter instructions :
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+            placeholder="test"
   >
     foobar
   </textarea>
@@ -95,10 +89,7 @@ exports[`DeliveryInstructions renders with a disabled input element 1`] = `
             name="deliveryInstructions"
             class="o-forms__text js-field__input js-item__value"
             data-trackable="field-deliveryInstructions"
-            placeholder="Enter instructions :
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+            placeholder="test"
             disabled
   >
   </textarea>
@@ -131,10 +122,7 @@ exports[`DeliveryInstructions renders with a disabled input element 2`] = `
             name="deliveryInstructions"
             class="o-forms__text js-field__input js-item__value"
             data-trackable="field-deliveryInstructions"
-            placeholder="Enter instructions :
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+            placeholder="test"
             disabled
   >
   </textarea>
@@ -167,10 +155,7 @@ exports[`DeliveryInstructions renders with an error 1`] = `
             name="deliveryInstructions"
             class="o-forms__text js-field__input js-item__value"
             data-trackable="field-deliveryInstructions"
-            placeholder="Enter instructions :
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+            placeholder="test"
   >
   </textarea>
   <p>
@@ -202,10 +187,7 @@ exports[`DeliveryInstructions renders with an error 2`] = `
             name="deliveryInstructions"
             class="o-forms__text js-field__input js-item__value"
             data-trackable="field-deliveryInstructions"
-            placeholder="Enter instructions :
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+            placeholder="test"
   >
   </textarea>
   <p>
@@ -237,10 +219,7 @@ exports[`DeliveryInstructions renders with default props 1`] = `
             name="deliveryInstructions"
             class="o-forms__text js-field__input js-item__value"
             data-trackable="field-deliveryInstructions"
-            placeholder="Enter instructions :
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+            placeholder="test"
   >
   </textarea>
   <p>
@@ -272,10 +251,7 @@ exports[`DeliveryInstructions renders with default props 2`] = `
             name="deliveryInstructions"
             class="o-forms__text js-field__input js-item__value"
             data-trackable="field-deliveryInstructions"
-            placeholder="Enter instructions :
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+            placeholder="test"
   >
   </textarea>
   <p>
@@ -308,10 +284,7 @@ exports[`DeliveryInstructions renders with maxlength 1`] = `
             maxlength="200"
             class="o-forms__text js-field__input js-item__value"
             data-trackable="field-deliveryInstructions"
-            placeholder="Enter instructions (Max. 200 characters):
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+            placeholder="test"
   >
   </textarea>
   <p>
@@ -344,10 +317,7 @@ exports[`DeliveryInstructions renders with maxlength 2`] = `
             maxlength="200"
             class="o-forms__text js-field__input js-item__value"
             data-trackable="field-deliveryInstructions"
-            placeholder="Enter instructions (Max. 200 characters):
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+            placeholder="test"
   >
   </textarea>
   <p>
@@ -380,10 +350,7 @@ exports[`DeliveryInstructions renders with rows 1`] = `
             rows="20"
             class="o-forms__text js-field__input js-item__value"
             data-trackable="field-deliveryInstructions"
-            placeholder="Enter instructions :
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+            placeholder="test"
   >
   </textarea>
   <p>
@@ -416,10 +383,7 @@ exports[`DeliveryInstructions renders with rows 2`] = `
             rows="20"
             class="o-forms__text js-field__input js-item__value"
             data-trackable="field-deliveryInstructions"
-            placeholder="Enter instructions :
-- Door colour, letterbox location
-- Placement i.e. letterbox delivery
-- Special handling i.e. place in plastic bag"
+            placeholder="test"
   >
   </textarea>
   <p>
