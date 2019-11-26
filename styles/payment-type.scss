@@ -62,12 +62,12 @@
 		text-align: center;
 
 		&-list {
-			@include oExpanderContent;
+			@include oExpander;
 			text-align: left;
 		}
 
 		&-toggle {
-			@include oExpanderToggle;
+			@include oExpander;
 			color: oColorsByName('teal');
 		}
 	}
