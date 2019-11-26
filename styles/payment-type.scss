@@ -10,7 +10,7 @@
 @mixin ncfPaymentType() {
 	&__payment-type {
 		grid-row: 1;
-		padding: oTypographySpacingSize(2) 0;
+		padding: oSpacingByName('s2') 0;
 
 		img {
 			height: 15px;

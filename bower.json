@@ -46,7 +46,8 @@
     "o-stepped-progress": "^1.0.0",
     "o-expander": "^4.7.0",
     "o-loading": "^3.1.2",
-    "o-grid": "^4.5.2"
+    "o-grid": "^4.5.2",
+    "o-typography": "^6.1.0"
   },
   "resolutions": {
     "ftdomdelegate": "^3.0.0"

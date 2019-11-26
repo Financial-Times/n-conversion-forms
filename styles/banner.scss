@@ -59,7 +59,7 @@
 		}
 
 		&-header {
-			@include oTypographySize(0);
+			@include oTypographySerif($scale: 0, $include-font-family: false);
 			font-weight: oFontsWeight('semibold');
 			margin: 0 0 4px;
 		}
