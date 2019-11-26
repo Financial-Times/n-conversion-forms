@@ -10,7 +10,7 @@
 			padding: 6px 16px;
 			right: -11px;
 			top: -17px;
-			@include oTypographySize($scale: -1);
+			@include oTypographySans($scale: -1, $include-font-family: false);
 
 			&::after {
 				content: '';

@@ -51,7 +51,7 @@
 	}
 
 	&__paragraph {
-		padding: oTypographySpacingSize(4) 0;
+		padding: oSpacingByName('s4') 0;
 		margin: 0;
 
 		&--reduced-padding {
@@ -59,7 +59,7 @@
 		}
 
 		&--subscription-confirmation {
-			margin: oTypographySpacingSize(4) 0 oTypographySpacingSize(2);
+			margin: oSpacingByName('s4') 0 oSpacingByName('s2');
 		}
 	}
 
@@ -76,7 +76,7 @@
 
 	&__fieldset-descriptor {
 		margin: 0;
-		@include oTypographySize(-1);
+		@include oTypographySans($scale: -1, $include-font-family: false);
 	}
 
 	&__field {
@@ -124,7 +124,7 @@
 	}
 
 	&__header {
-		@include oTypographyProductHeadingLevel5;
+		@include oTypographyHeading($level: 5);
 
 		&--confirmation {
 			@include oTypographySerif($scale: 3);
@@ -133,9 +133,9 @@
 
 	&__headed-paragraph {
 		.ncf__header {
-			@include oTypographySize(2);
+			@include oTypographySans($scale: 2, $include-font-family: false);
 			padding: 0;
-			margin: 0 0 oTypographySpacingSize(1);
+			margin: 0 0 oSpacingByName('s1');
 		}
 
 		.ncf__paragraph {
@@ -145,15 +145,15 @@
 
 	&__header2 {
 		&--afterline {
-			@include oTypographySize(1);
-			font-weight: oFontsWeight('semibold');
+			@include oTypographySans($scale: 1, $include-font-family: false, $weight: 'semibold');
 
 			&:after {
-				@include oTypographyPadding($top: 3, $bottom: 0);
+				padding-top: oSpacingByName('s3');
+				padding-bottom: oSpacingByName('s0');
 				content: '';
 				display: block;
 				width: 90px;
-				border-bottom: oTypographySpacingSize(1) solid oColorsByName('black');
+				border-bottom: oSpacingByName('s1') solid oColorsByName('black');
 			}
 		}
 	}
@@ -163,7 +163,7 @@
 	}
 
 	&__link--external {
-		@include oTypographyLinkExternal;
+		@include oTypographyLink($external: true);
 	}
 
 	&__button {
@@ -306,7 +306,7 @@
 		}
 		&-description {
 			margin: 0 0 10px;
-			@include oTypographySize(-1);
+			@include oTypographySans($scale: -1, $include-font-family: false);
 		}
 
 		&-title {

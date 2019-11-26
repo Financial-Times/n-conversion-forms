@@ -44,13 +44,13 @@
 		&__weekly-price {
 			justify-self: end;
 			grid-column: span 3;
-			@include oTypographySize($scale: -1);
+			@include oTypographySans($scale: -1, $include-font-family: false);
 			color: oColorsByName('black-60');
 		}
 
 		&__annual-copy {
 			padding-top: 8px;
-			@include oTypographySize($scale: -1);
+			@include oTypographySans($scale: -1, $include-font-family: false);
 		}
 	}
 }

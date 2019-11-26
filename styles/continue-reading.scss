@@ -11,8 +11,7 @@
 	}
 
 	&__continue-reading-quote {
-		@include oTypographyDisplay($scale: 1, $line-height: 23px);
-		font-weight: oFontsWeight('semibold');
+		@include oTypographyDisplay($scale: 1, $line-height: 23px, $weight: 'semi-bold');
 		margin: 0;
 		padding: 0 12px;
 		position: relative;
