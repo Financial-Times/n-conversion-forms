@@ -45,7 +45,7 @@
     "o-icons": "^6.0.0",
     "o-stepped-progress": "^1.0.0",
     "o-expander": "^4.7.0",
-    "o-loading": "^3.1.2",
+    "o-loading": "^4.0.0",
     "o-grid": "^4.5.2"
   },
   "resolutions": {
