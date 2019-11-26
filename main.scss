@@ -167,32 +167,39 @@
 	}
 
 	&__button {
-		@include oButtons;
-		@include oButtonsSize('big');
+		@include oButtons($opts: (
+			'sizes': ('big'),
+		));
 
 		&--submit {
-			@include oButtonsTheme('primary');
+			@include oButtonsContents($opts: (
+				'theme': 'primary'
+			));
 		}
 
 		&--mono {
-			@include oButtonsSize('default');
-			@include oButtonsTheme('mono');
+			@include oButtonsContents($opts: (
+				'theme': 'mono',
+				'type': 'default'
+			));
 		}
 
 		&--inverse {
-			@include oButtonsTheme('inverse');
+			@include oButtonsContents($opts: (
+				'theme': 'inverse'
+			));
 		}
 
 		&--secondary {
-			@include oButtonsTheme('secondary');
-		}
-
-		&--baseline {
-			vertical-align: baseline;
+			@include oButtonsContents($opts: (
+				'theme': 'secondary'
+			));
 		}
 
 		&--google {
-			@include oButtonsTheme('secondary');
+			@include oButtonsContents($opts: (
+				'theme': 'secondary'
+			));
 			background-color: oColorsByName('white');
 			padding-left: 40px;
 
@@ -204,6 +211,10 @@
 				width: 18px;
 				height: 18px;
 			}
+		}
+
+		&--baseline {
+			vertical-align: baseline;
 		}
 	}
 
