@@ -167,38 +167,38 @@
 	}
 
 	&__button {
-		@include oButtons($opts: (
-			'sizes': ('big'),
-		));
 
 		&--submit {
-			@include oButtonsContents($opts: (
-				'theme': 'primary'
+			@include oButtonsContent($opts: (
+				'size': 'big',
+				'type': 'primary'
 			));
 		}
 
 		&--mono {
-			@include oButtonsContents($opts: (
+			@include oButtonsContent($opts: (
 				'theme': 'mono',
-				'type': 'default'
 			));
 		}
 
 		&--inverse {
-			@include oButtonsContents($opts: (
+			@include oButtonsContent($opts: (
+				'size': 'big',
 				'theme': 'inverse'
 			));
 		}
 
 		&--secondary {
-			@include oButtonsContents($opts: (
-				'theme': 'secondary'
+			@include oButtonsContent($opts: (
+				'size': 'big',
+				'types': 'secondary'
 			));
 		}
 
 		&--google {
-			@include oButtonsContents($opts: (
-				'theme': 'secondary'
+			@include oButtonsContent($opts: (
+				'size': 'big',
+				'types': 'secondary'
 			));
 			background-color: oColorsByName('white');
 			padding-left: 40px;
