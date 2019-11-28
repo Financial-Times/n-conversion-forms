@@ -191,14 +191,14 @@
 		&--secondary {
 			@include oButtonsContent($opts: (
 				'size': 'big',
-				'types': 'secondary'
+				'type': 'secondary'
 			));
 		}
 
 		&--google {
 			@include oButtonsContent($opts: (
 				'size': 'big',
-				'types': 'secondary'
+				'type': 'secondary'
 			));
 			background-color: oColorsByName('white');
 			padding-left: 40px;
