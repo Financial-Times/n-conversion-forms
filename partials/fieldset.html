@@ -1,9 +1,14 @@
 <fieldset {{#if name}}name="{{name}}" {{/if}}class="ncf__fieldset">
 
+	<div class="ncf__legend">
 		{{#if legend}}
-			<legend class="ncf__legend {{#if hideLegend}} o-normalise-visually-hidden{{/if}}">{{legend}}</legend>
+			<legend class="{{#if hideLegend}} o-normalise-visually-hidden{{/if}}">{{legend}}</legend>
 		{{/if}}
+		{{#if descriptor}}
+			<p class="ncf__fieldset-descriptor">{{descriptor}}</p>
+		{{/if}}
+	</div>
 
-		{{> fields }}
+	{{> fields }}
 
 </fieldset>
