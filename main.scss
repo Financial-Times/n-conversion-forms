@@ -85,17 +85,17 @@
 	}
 
 	&__legend {
-		margin-bottom: oSpacingByName('s3');
-
-		legend {
-			@include oTypographySans($weight: 'semibold', $include-font-family: false);
-			padding: 0;
-		}
+		@include oTypographySans($weight: 'semibold', $include-font-family: false);
+		padding: 0;
 	}
 
 	&__fieldset-descriptor {
 		margin: 0;
 		@include oTypographySans($scale: -1, $include-font-family: false);
+	}
+
+	&__fields:not(:first-child) {
+		margin-top: oSpacingByName('s3');
 	}
 
 	&__field {
