@@ -40,3 +40,6 @@ a11y-demo:
 
 smoke:
 	n-test smoke --host http://localhost:5005
+
+test-update-snapshots:
+	NODE_ENV=test jest --updateSnapshot
