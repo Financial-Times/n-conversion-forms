@@ -4,6 +4,11 @@
 		{{#if legend}}
 			<legend class="{{#if hideLegend}} o-normalise-visually-hidden{{/if}}">{{legend}}</legend>
 		{{/if}}
+		{{#if headingLevel}}
+			<{{headingLevel}} class="ncf__header">
+				{{> header }}
+			</{{headingLevel}}>
+		{{/if}}
 		{{#if descriptor}}
 			<p class="ncf__fieldset-descriptor">{{descriptor}}</p>
 		{{/if}}
