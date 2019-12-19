@@ -12,9 +12,41 @@ describe('Delivery Postcode', () => {
 		context.template = await fetchPartialAsString('delivery-postcode.html');
 	});
 
-	it('render a postcode input with a label', () => {
+	it('render a postcode input with a label set as postcode', () => {
 		const props = {
-			postcodeReference: 'ZipCode',
+			postcodeReference: 'postcode',
+			pattern: 'whatever',
+		};
+
+		expect(DeliveryPostcode).toRenderAs(context, props);
+
+	});
+
+	it('render a postcode input with a label set as Zip Code', () => {
+		const props = {
+			country: 'USA',
+			postcodeReference: 'Zip Code',
+			pattern: 'whatever',
+		};
+
+		expect(DeliveryPostcode).toRenderAs(context, props);
+
+	});
+
+	it('render a postcode input with a label set as postal code', () => {
+		const props = {
+			country: 'CAN',
+			postcodeReference: 'postal code',
+			pattern: 'whatever',
+		};
+
+		expect(DeliveryPostcode).toRenderAs(context, props);
+
+	});
+
+	it('render a postcode input with default label', () => {
+		const props = {
+			postcodeReference: 'postcode',
 			pattern: 'whatever',
 		};
 
@@ -24,7 +56,7 @@ describe('Delivery Postcode', () => {
 
 	it('render a disable input', () => {
 		const props = {
-			postcodeReference: 'ZipCode',
+			postcodeReference: 'postcode',
 			pattern: 'whatever',
 			isDisabled: true,
 		};
@@ -35,7 +67,7 @@ describe('Delivery Postcode', () => {
 
 	it('render different styles', () => {
 		const props = {
-			postcodeReference: 'ZipCode',
+			postcodeReference: 'postcode',
 			pattern: 'whatever',
 			hasError: true,
 			isHidden: true,
