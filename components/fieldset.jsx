@@ -17,6 +17,7 @@ export function Fieldset ({
 	};
 
 	const legendClassName = classNames([
+		'ncf__legend',
 		{ 'o-normalise-visually-hidden': hideLegend }
 	]);
 
@@ -38,14 +39,15 @@ export function Fieldset ({
 
 	return (
 		<fieldset {...fieldsetProps}>
-			<div className="ncf__legend">
+
 				{ legendElement }
 
 				{ headingLevelElement }
 
 				{ descriptorElement }
+			<div className="ncf__fields">
+				{ children }
 			</div>
-			{ children }
 		</fieldset>
 	);
 }
