@@ -84,6 +84,12 @@
 		}
 	}
 
+	&__legend {
+		@include oTypographySans($weight: 'semibold', $include-font-family: false);
+		margin-bottom: oSpacingByName('s3');
+		padding: 0;
+	}
+
 	&__fieldset-descriptor {
 		margin: 0;
 		@include oTypographySans($scale: -1, $include-font-family: false);
