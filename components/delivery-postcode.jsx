@@ -14,14 +14,14 @@ const getPostcodeLabel = (country) => {
 
 export function DeliveryPostcode ({
 	value = '',
-	pattern = '',
-	country = null,
 	isDisabled = false,
 	hasError = false,
-	isHidden = false
+	isHidden = false,
+	pattern,
+	country,
+	additonalFieldInformation,
 }) {
 	const postcodeReference = getPostcodeLabel(country);
-
 
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
@@ -29,9 +29,14 @@ export function DeliveryPostcode ({
 		{ 'o-forms-input--invalid': hasError }
 	]);
 
-	let deliveryPostcodeFieldClassNames = classNames([
+	const deliveryPostcodeFieldClassNames = classNames([
 		'o-forms-field',
 		{ 'ncf__hidden': isHidden }
+	]);
+
+	const fieldErrorClassNames = classNames([
+		'o-forms-input__error',
+		{ 'additional-field-instructions__with-field-error': additonalFieldInformation }
 	]);
 
 	return (
@@ -57,12 +62,14 @@ export function DeliveryPostcode ({
 					data-trackable="delivery-postcode"
 					aria-required="true"
 					required
-					pattern={pattern}
 					disabled={isDisabled}
 				/>
-				<span className="o-forms-input__error">
+			<span className={fieldErrorClassNames}>
 					Please enter a valid <span data-reference="postcode">{postcodeReference}</span>.
 				</span>
+				{additonalFieldInformation ? (
+					<p className="additional-field-instructions">{additonalFieldInformation}</p>
+				) : null}
 			</span>
 		</label>
 	);
@@ -74,5 +81,6 @@ DeliveryPostcode.propTypes = {
 	pattern: PropTypes.string,
 	isDisabled: PropTypes.bool,
 	hasError: PropTypes.bool,
-	isHidden: PropTypes.bool
+	isHidden: PropTypes.bool,
+	additonalFieldInformation: PropTypes.string
 };

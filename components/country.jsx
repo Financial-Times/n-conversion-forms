@@ -10,7 +10,8 @@ export function Country ({
 	inputId = 'country',
 	isB2b = false,
 	isDisabled = false,
-	value
+	value,
+	additonalFieldInformation
 }) {
 	const selectWrapperClassName = classNames([
 		'o-forms-input',
@@ -44,6 +45,11 @@ export function Country ({
 		</select>
 	);
 
+	const fieldErrorClassNames = classNames([
+		'o-forms-input__error',
+		{ 'additional-field-instructions__with-field-error': additonalFieldInformation }
+	]);
+
 	return (
 		<label id={fieldId} className="o-forms-field js-unknown-user-field" data-validate="required">
 			<span className="o-forms-title">
@@ -51,7 +57,10 @@ export function Country ({
 			</span>
 			<span className={selectWrapperClassName}>
 				{createSelect(countries)}
-				<span className="o-forms-input__error">{error}</span>
+				<span className={fieldErrorClassNames}>{error}</span>
+					{additonalFieldInformation ? (
+						<p className="additional-field-instructions">{additonalFieldInformation}</p>
+					) : null}
 			</span>
 		</label>
 	);
@@ -68,5 +77,6 @@ Country.propTypes = {
 	inputId: PropTypes.string,
 	isB2b: PropTypes.bool,
 	isDisabled: PropTypes.bool,
-	value: PropTypes.string
+	value: PropTypes.string,
+	additonalFieldInformation: PropTypes.string
 };

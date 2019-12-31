@@ -1,0 +1,15 @@
+.additional-field-instructions {
+	margin-top: oSpacingByName('s2');
+	margin-bottom: 0;
+	@include oTypographySans($scale: -1);
+}
+
+.o-forms-input--invalid .o-forms-input__error.additional-field-instructions__with-field-error {
+	display: inherit;
+	position: inherit;
+	margin-top: oSpacingByName('s1');
+}
+
+.o-forms-input--invalid .additional-field-instructions {
+	margin-top: oSpacingByName('s2');
+}
