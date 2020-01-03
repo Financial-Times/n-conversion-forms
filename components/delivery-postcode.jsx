@@ -64,7 +64,7 @@ export function DeliveryPostcode ({
 					required
 					disabled={isDisabled}
 				/>
-			<span className={fieldErrorClassNames}>
+				<span className={fieldErrorClassNames}>
 					Please enter a valid <span data-reference="postcode">{postcodeReference}</span>.
 				</span>
 				{additonalFieldInformation ? (
