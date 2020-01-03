@@ -62,6 +62,7 @@ export function DeliveryPostcode ({
 					data-trackable="delivery-postcode"
 					aria-required="true"
 					required
+					pattern={pattern}
 					disabled={isDisabled}
 				/>
 				<span className={fieldErrorClassNames}>
