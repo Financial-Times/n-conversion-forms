@@ -146,6 +146,78 @@ exports[`Delivery Postcode render a postcode input with a label set as Zip Code 
 </label>
 `;
 
+exports[`Delivery Postcode render a postcode input with a label set as Zip Code with USA in lower case 1`] = `
+<label id="deliveryPostcodeField"
+       class="o-forms-field"
+       data-validate="required"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Delivery
+      <span data-reference="postcode">
+        Zip Code
+      </span>
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="text"
+           id="deliveryPostcode"
+           name="deliveryPostcode"
+           placeholder="Enter your Zip Code"
+           autocomplete="postal-code"
+           data-trackable="delivery-postcode"
+           aria-required="true"
+           required
+           pattern="whatever"
+           value
+    >
+    <span class="o-forms-input__error">
+      Please enter a valid
+      <span data-reference="postcode">
+        Zip Code
+      </span>
+      .
+    </span>
+  </span>
+</label>
+`;
+
+exports[`Delivery Postcode render a postcode input with a label set as Zip Code with USA in lower case 2`] = `
+<label id="deliveryPostcodeField"
+       class="o-forms-field"
+       data-validate="required"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Delivery
+      <span data-reference="postcode">
+        Zip Code
+      </span>
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="text"
+           id="deliveryPostcode"
+           name="deliveryPostcode"
+           placeholder="Enter your Zip Code"
+           autocomplete="postal-code"
+           data-trackable="delivery-postcode"
+           aria-required="true"
+           required
+           pattern="whatever"
+           value
+    >
+    <span class="o-forms-input__error">
+      Please enter a valid
+      <span data-reference="postcode">
+        Zip Code
+      </span>
+      .
+    </span>
+  </span>
+</label>
+`;
+
 exports[`Delivery Postcode render a postcode input with a label set as postal code 1`] = `
 <label id="deliveryPostcodeField"
        class="o-forms-field"

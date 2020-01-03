@@ -2,26 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const getPostcodeLabel = (country) => {
-	if (country && country.toUpperCase() === 'USA') {
-		return 'Zip Code';
-	} else if (country && country.toUpperCase() === 'CAN') {
-		return 'postal code';
-	} else {
-		return 'postcode';
-	}
-};
+const postcodeLabel = {
+	USA: 'Zip Code',
+	CAN: 'postal code'
+}
 
 export function DeliveryPostcode ({
 	value = '',
+	country = '',
 	isDisabled = false,
 	hasError = false,
 	isHidden = false,
 	pattern,
-	country,
 	additonalFieldInformation,
 }) {
-	const postcodeReference = getPostcodeLabel(country);
+
+	const postcodeReference = postcodeLabel[country.toUpperCase()] || 'postcode';
 
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',

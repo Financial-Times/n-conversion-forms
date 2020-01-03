@@ -33,6 +33,17 @@ describe('Delivery Postcode', () => {
 
 	});
 
+	it('render a postcode input with a label set as Zip Code with USA in lower case', () => {
+		const props = {
+			country: 'usa',
+			postcodeReference: 'Zip Code',
+			pattern: 'whatever',
+		};
+
+		expect(DeliveryPostcode).toRenderAs(context, props);
+
+	});
+
 	it('render a postcode input with a label set as postal code', () => {
 		const props = {
 			country: 'CAN',
