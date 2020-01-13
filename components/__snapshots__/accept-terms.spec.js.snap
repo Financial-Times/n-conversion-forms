@@ -6,6 +6,11 @@ exports[`AcceptTerms renders appropriately if a registration 1`] = `
      data-validate="required,checked"
      data-trackable="register-up-terms"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -23,7 +28,7 @@ exports[`AcceptTerms renders appropriately if a registration 1`] = `
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -44,6 +49,11 @@ exports[`AcceptTerms renders appropriately if a registration 2`] = `
      data-validate="required,checked"
      data-trackable="register-up-terms"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -61,7 +71,7 @@ exports[`AcceptTerms renders appropriately if a registration 2`] = `
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -82,6 +92,11 @@ exports[`AcceptTerms renders appropriately if a signup 1`] = `
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -99,7 +114,7 @@ exports[`AcceptTerms renders appropriately if a signup 1`] = `
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -111,7 +126,7 @@ exports[`AcceptTerms renders appropriately if a signup 1`] = `
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           customer service through chat, phone or email
         </a>
@@ -125,7 +140,7 @@ exports[`AcceptTerms renders appropriately if a signup 1`] = `
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -145,6 +160,11 @@ exports[`AcceptTerms renders appropriately if a signup 2`] = `
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -162,7 +182,7 @@ exports[`AcceptTerms renders appropriately if a signup 2`] = `
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -174,7 +194,7 @@ exports[`AcceptTerms renders appropriately if a signup 2`] = `
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           customer service through chat, phone or email
         </a>
@@ -188,7 +208,7 @@ exports[`AcceptTerms renders appropriately if a signup 2`] = `
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -208,6 +228,11 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 1`]
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -225,7 +250,7 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 1`]
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -237,7 +262,7 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 1`]
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           customer service through chat, phone or email
         </a>
@@ -251,7 +276,7 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 1`]
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -276,6 +301,11 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 2`]
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -293,7 +323,7 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 2`]
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -305,7 +335,7 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 2`]
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           customer service through chat, phone or email
         </a>
@@ -319,7 +349,7 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 2`]
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -344,6 +374,11 @@ exports[`AcceptTerms renders appropriately if a signup for the print product 1`]
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -361,7 +396,7 @@ exports[`AcceptTerms renders appropriately if a signup for the print product 1`]
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -376,7 +411,7 @@ exports[`AcceptTerms renders appropriately if a signup for the print product 1`]
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -396,6 +431,11 @@ exports[`AcceptTerms renders appropriately if a signup for the print product 2`]
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -413,7 +453,7 @@ exports[`AcceptTerms renders appropriately if a signup for the print product 2`]
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -428,7 +468,7 @@ exports[`AcceptTerms renders appropriately if a signup for the print product 2`]
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -448,6 +488,11 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -465,7 +510,7 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_top"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -480,7 +525,7 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_top"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -500,6 +545,11 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -517,7 +567,7 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_top"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -532,7 +582,7 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_top"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -552,6 +602,11 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -569,7 +624,7 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -584,7 +639,7 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -604,6 +659,11 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -621,7 +681,7 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -636,7 +696,7 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -656,6 +716,11 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -673,7 +738,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -685,7 +750,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           customer service through chat, phone or email
         </a>
@@ -699,7 +764,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -719,6 +784,11 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -736,7 +806,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -748,7 +818,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           customer service through chat, phone or email
         </a>
@@ -762,7 +832,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -782,6 +852,11 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -799,7 +874,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_top"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -811,7 +886,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
            target="_top"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           customer service through chat, phone or email
         </a>
@@ -825,7 +900,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_top"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -845,6 +920,11 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -862,7 +942,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_top"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -874,7 +954,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
            target="_top"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           customer service through chat, phone or email
         </a>
@@ -888,7 +968,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_top"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -908,6 +988,11 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -925,7 +1010,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -937,7 +1022,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           customer service through chat, phone or email
         </a>
@@ -951,7 +1036,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -971,6 +1056,11 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -988,7 +1078,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1000,7 +1090,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           customer service through chat, phone or email
         </a>
@@ -1014,7 +1104,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -1033,6 +1123,11 @@ exports[`AcceptTerms renders appropriately if input is checked 1`] = `
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1051,7 +1146,7 @@ exports[`AcceptTerms renders appropriately if input is checked 1`] = `
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1071,6 +1166,11 @@ exports[`AcceptTerms renders appropriately if input is checked 2`] = `
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1089,7 +1189,7 @@ exports[`AcceptTerms renders appropriately if input is checked 2`] = `
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1109,6 +1209,11 @@ exports[`AcceptTerms renders appropriately if is B2B 1`] = `
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1137,6 +1242,11 @@ exports[`AcceptTerms renders appropriately if is B2B 2`] = `
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1165,6 +1275,11 @@ exports[`AcceptTerms renders appropriately if is corporate signup 1`] = `
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1182,7 +1297,7 @@ exports[`AcceptTerms renders appropriately if is corporate signup 1`] = `
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1211,6 +1326,11 @@ exports[`AcceptTerms renders appropriately if is corporate signup 2`] = `
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1228,7 +1348,7 @@ exports[`AcceptTerms renders appropriately if is corporate signup 2`] = `
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1257,6 +1377,11 @@ exports[`AcceptTerms renders appropriately if is corporate signup and not trial 
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1274,7 +1399,7 @@ exports[`AcceptTerms renders appropriately if is corporate signup and not trial 
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1303,6 +1428,11 @@ exports[`AcceptTerms renders appropriately if is corporate signup and not trial 
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1320,7 +1450,7 @@ exports[`AcceptTerms renders appropriately if is corporate signup and not trial 
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1349,6 +1479,11 @@ exports[`AcceptTerms renders appropriately if is corporate signup and trial 1`] 
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1366,7 +1501,7 @@ exports[`AcceptTerms renders appropriately if is corporate signup and trial 1`] 
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1398,6 +1533,11 @@ exports[`AcceptTerms renders appropriately if is corporate signup and trial 2`] 
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1415,7 +1555,7 @@ exports[`AcceptTerms renders appropriately if is corporate signup and trial 2`] 
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1447,6 +1587,11 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1464,7 +1609,7 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1484,6 +1629,11 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1501,7 +1651,7 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1521,6 +1671,11 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1538,7 +1693,7 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1558,6 +1713,11 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1575,7 +1735,7 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1595,6 +1755,11 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1612,7 +1777,7 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_top"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1632,6 +1797,11 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1649,7 +1819,7 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_top"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1669,6 +1839,11 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1686,7 +1861,7 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1706,6 +1881,11 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1723,7 +1903,7 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1743,6 +1923,11 @@ exports[`AcceptTerms renders appropriately if is transition 1`] = `
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1760,7 +1945,7 @@ exports[`AcceptTerms renders appropriately if is transition 1`] = `
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1772,7 +1957,7 @@ exports[`AcceptTerms renders appropriately if is transition 1`] = `
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           customer service through chat, phone or email
         </a>
@@ -1786,7 +1971,7 @@ exports[`AcceptTerms renders appropriately if is transition 1`] = `
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -1805,6 +1990,11 @@ exports[`AcceptTerms renders appropriately if is transition 2`] = `
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1822,7 +2012,7 @@ exports[`AcceptTerms renders appropriately if is transition 2`] = `
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1834,7 +2024,7 @@ exports[`AcceptTerms renders appropriately if is transition 2`] = `
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           customer service through chat, phone or email
         </a>
@@ -1848,7 +2038,7 @@ exports[`AcceptTerms renders appropriately if is transition 2`] = `
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -1867,6 +2057,11 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1884,7 +2079,7 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1896,7 +2091,7 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           customer service through chat, phone or email
         </a>
@@ -1910,7 +2105,7 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -1929,6 +2124,11 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -1946,7 +2146,7 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -1958,7 +2158,7 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           customer service through chat, phone or email
         </a>
@@ -1972,7 +2172,7 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -1991,6 +2191,11 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -2008,7 +2213,7 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -2020,7 +2225,7 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           customer service through chat, phone or email
         </a>
@@ -2034,7 +2239,7 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -2053,6 +2258,11 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -2070,7 +2280,7 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -2082,7 +2292,7 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
         <a class="ncf__link--external"
            href="https://help.ft.com/help/contact-us/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           customer service through chat, phone or email
         </a>
@@ -2096,7 +2306,7 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
         >
           Terms &amp; Conditions
         </a>
@@ -2115,6 +2325,11 @@ exports[`AcceptTerms renders with an error 1`] = `
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox o-forms-input--invalid">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -2132,7 +2347,7 @@ exports[`AcceptTerms renders with an error 1`] = `
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -2152,6 +2367,11 @@ exports[`AcceptTerms renders with an error 2`] = `
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox o-forms-input--invalid">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -2169,7 +2389,7 @@ exports[`AcceptTerms renders with an error 2`] = `
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -2189,6 +2409,11 @@ exports[`AcceptTerms renders with default props 1`] = `
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -2206,7 +2431,7 @@ exports[`AcceptTerms renders with default props 1`] = `
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions
@@ -2226,6 +2451,11 @@ exports[`AcceptTerms renders with default props 2`] = `
      class="o-forms-field"
      data-validate="required,checked"
 >
+  <span class="o-forms-title n-ui-hide">
+    <span class="o-forms-title__main">
+      Terms
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--checkbox">
     <label for="termsAcceptance">
       <input type="checkbox"
@@ -2243,7 +2473,7 @@ exports[`AcceptTerms renders with default props 2`] = `
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
-           rel="noopener"
+           rel="noopener noreferrer"
            data-trackable="terms-and-conditions"
         >
           Terms &amp; Conditions

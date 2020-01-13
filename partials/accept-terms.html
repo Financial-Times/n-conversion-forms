@@ -1,4 +1,7 @@
 <div id="acceptTermsField" class="o-forms-field" data-validate="required,checked" {{#if isSignup}}data-trackable="sign-up-terms"{{/if}}{{#if isRegister}}data-trackable="register-up-terms"{{/if}}>
+	<span class="o-forms-title n-ui-hide">
+		<span class="o-forms-title__main">Terms</span>
+	</span>
 	<span class="o-forms-input o-forms-input--checkbox{{#if hasError}} o-forms-input--invalid{{/if}}">
 		<label for="termsAcceptance">
 			<input type="checkbox" id="termsAcceptance" name="termsAcceptance" value="true" data-trackable="field-terms" aria-required="true" required {{#if isChecked}}checked{{/if}} />
@@ -9,7 +12,7 @@
 			{{else}}
 			<span id="terms-default" class="o-forms-input__label">
 				I confirm I am {{#if ageRestriction}}{{ageRestriction}}{{else}}16{{/if}} years or older and have read and agree to the
-				<a class="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}" rel="noopener" data-trackable="terms-and-conditions">Terms &amp; Conditions</a>.
+				<a class="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}" rel="noopener noreferrer" data-trackable="terms-and-conditions">Terms &amp; Conditions</a>.
 			</span>
 			{{/if}}
 
@@ -24,23 +27,23 @@
 			{{/if}}
 
 			{{#if isTransition}}
-			<span class="terms-transition o-forms-input__label">I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting <a class="ncf__link--external" href="https://help.ft.com/help/contact-us/" target="_blank" rel="noopener">customer service through chat, phone or email</a>.</span>
+			<span class="terms-transition o-forms-input__label">I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting <a class="ncf__link--external" href="https://help.ft.com/help/contact-us/" target="_blank" rel="noopener noreferrer">customer service through chat, phone or email</a>.</span>
 			{{#ifEquals transitionType 'immediate'}}
 			<span class="terms-transition terms-transition--immediate o-forms-input__label">By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.</span>
 			{{else}}
 			<span class="terms-transition terms-transition--other o-forms-input__label">By placing my order, I acknowledge that my subscription will start on the date given above. Any cancellation notice received after that date will take effect at the end of my subscription term and previously paid amounts are non-refundable.</span>
 			{{/ifEquals}}
-			<span class="terms-transition o-forms-input__label">Find out more about our cancellation policy in our <a class="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</span>
+			<span class="terms-transition o-forms-input__label">Find out more about our cancellation policy in our <a class="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>.</span>
 			{{/if}}
 
 			{{#if isSignup}}
 				{{#if isPrintProduct}}
 			<span class="terms-print o-forms-input__label">Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).</span>
-			<span class="terms-print o-forms-input__label">Find out more about your delivery start date in our <a class="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}" rel="noopener">Terms &amp; Conditions</a>.</span>
+			<span class="terms-print o-forms-input__label">Find out more about your delivery start date in our <a class="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}" rel="noopener noreferrer">Terms &amp; Conditions</a>.</span>
 				{{else}}
-			<span class="terms-signup o-forms-input__label">I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting <a class="ncf__link--external" href="https://help.ft.com/help/contact-us/" target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}" rel="noopener">customer service through chat, phone or email</a>.</span>
+			<span class="terms-signup o-forms-input__label">I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting <a class="ncf__link--external" href="https://help.ft.com/help/contact-us/" target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}" rel="noopener noreferrer">customer service through chat, phone or email</a>.</span>
 			<span class="terms-signup o-forms-input__label">By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.</span>
-			<span class="terms-signup o-forms-input__label">Find out more about our cancellation policy in our <a class="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}" rel="noopener">Terms &amp; Conditions</a>.</span>
+			<span class="terms-signup o-forms-input__label">Find out more about our cancellation policy in our <a class="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="{{#if isEmbedded}}_top{{else}}_blank{{/if}}" rel="noopener noreferrer">Terms &amp; Conditions</a>.</span>
 				{{/if}}
 				{{#if specialTerms}}
 			<span id="terms-special" class="o-forms-input__label">{{specialTerms}}</span>

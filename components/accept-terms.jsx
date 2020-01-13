@@ -57,7 +57,7 @@ export function AcceptTerms ({
 				className="ncf__link--external"
 				href="http://help.ft.com/help/legal-privacy/terms-conditions/"
 				target={ isEmbedded ? '_top' : '_blank' }
-				rel="noopener"
+				rel="noopener noreferrer"
 				data-trackable="terms-and-conditions"
 			>Terms &amp; Conditions</a>.
 		</span>
@@ -74,13 +74,13 @@ export function AcceptTerms ({
 
 	const transitionTerms = isTransition && (
 		<React.Fragment>
-			<span className="terms-transition o-forms-input__label">I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting <a className="ncf__link--external" href="https://help.ft.com/help/contact-us/" target="_blank" rel="noopener">customer service through chat, phone or email</a>.</span>
+			<span className="terms-transition o-forms-input__label">I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting <a className="ncf__link--external" href="https://help.ft.com/help/contact-us/" target="_blank" rel="noopener noreferrer">customer service through chat, phone or email</a>.</span>
 			{
 				transitionType === 'immediate'
 					? (<span className="terms-transition terms-transition--immediate o-forms-input__label">By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.</span>)
 					: (<span className="terms-transition terms-transition--other o-forms-input__label">By placing my order, I acknowledge that my subscription will start on the date given above. Any cancellation notice received after that date will take effect at the end of my subscription term and previously paid amounts are non-refundable.</span>)
 			}
-			<span className="terms-transition o-forms-input__label">Find out more about our cancellation policy in our <a className="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</span>
+			<span className="terms-transition o-forms-input__label">Find out more about our cancellation policy in our <a className="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>.</span>
 		</React.Fragment>
 	);
 
@@ -91,14 +91,14 @@ export function AcceptTerms ({
 					? (
 						<React.Fragment>
 							<span className="terms-print o-forms-input__label">Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).</span>
-							<span className="terms-print o-forms-input__label">Find out more about your delivery start date in our <a className="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target={ isEmbedded ? '_top' : '_blank' } rel="noopener">Terms &amp; Conditions</a>.</span>
+							<span className="terms-print o-forms-input__label">Find out more about your delivery start date in our <a className="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target={ isEmbedded ? '_top' : '_blank' } rel="noopener noreferrer">Terms &amp; Conditions</a>.</span>
 						</React.Fragment>
 					)
 					: (
 						<React.Fragment>
-							<span className="terms-signup o-forms-input__label">I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting <a className="ncf__link--external" href="https://help.ft.com/help/contact-us/" target={ isEmbedded ? '_top' : '_blank' } rel="noopener">customer service through chat, phone or email</a>.</span>
+							<span className="terms-signup o-forms-input__label">I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting <a className="ncf__link--external" href="https://help.ft.com/help/contact-us/" target={ isEmbedded ? '_top' : '_blank' } rel="noopener noreferrer">customer service through chat, phone or email</a>.</span>
 							<span className="terms-signup o-forms-input__label">By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.</span>
-							<span className="terms-signup o-forms-input__label">Find out more about our cancellation policy in our <a className="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target={ isEmbedded ? '_top' : '_blank' } rel="noopener">Terms &amp; Conditions</a>.</span>
+							<span className="terms-signup o-forms-input__label">Find out more about our cancellation policy in our <a className="ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target={ isEmbedded ? '_top' : '_blank' } rel="noopener noreferrer">Terms &amp; Conditions</a>.</span>
 						</React.Fragment>
 					)
 			}
@@ -109,6 +109,9 @@ export function AcceptTerms ({
 
 	return (
 		<div {...divProps}>
+			<span className="o-forms-title n-ui-hide">
+				<span className="o-forms-title__main">Terms</span>
+			</span>
 			<span className={inputWrapperClassName}>
 				<label htmlFor={inputProps.id}>
 					<input {...inputProps} />
