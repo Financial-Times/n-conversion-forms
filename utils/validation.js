@@ -1,5 +1,5 @@
 const OForms = require('o-forms').default;
-const Input = require('o-forms/src/js/input');
+const Input = require('o-forms/src/js/input').default;
 
 class Validation {
 
@@ -25,10 +25,10 @@ class Validation {
 	init () {
 		if (!this.$form) return;
 		for (const $el of this.$requiredEls) {
-			if (/(checkbox)/gi.test($el.type)) {
-				$el.addEventListener('change', this.checkElementValidity.bind(this, $el), false);
+			if (/(checkbox)/gi.test($el.input.type)) {
+				$el.input.addEventListener('change', this.checkElementValidity.bind(this, $el.input), false);
 			} else {
-				$el.addEventListener('blur', this.checkFormValidity.bind(this), false);
+				$el.input.addEventListener('blur', this.checkFormValidity.bind(this), false);
 			}
 		}
 
