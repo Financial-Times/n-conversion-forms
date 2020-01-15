@@ -32,7 +32,7 @@ export function DeliveryPostcode ({
 
 	const fieldErrorClassNames = classNames([
 		'o-forms-input__error',
-		{ 'additional-field-instructions__with-field-error': additonalFieldInformation }
+		{ 'additional-field-information__with-field-error': additonalFieldInformation }
 	]);
 
 	return (
@@ -65,7 +65,7 @@ export function DeliveryPostcode ({
 					Please enter a valid <span data-reference="postcode">{postcodeReference}</span>.
 				</span>
 				{additonalFieldInformation ? (
-					<p className="additional-field-instructions">{additonalFieldInformation}</p>
+					<p className="additional-field-information">{additonalFieldInformation}</p>
 				) : null}
 			</span>
 		</label>
