@@ -154,6 +154,7 @@ exports[`Delivery Postcode render a postcode input with a label set as Zip Code 
 <label id="deliveryPostcodeField"
        class="o-forms-field"
        data-validate="required"
+       for="deliveryPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -190,6 +191,7 @@ exports[`Delivery Postcode render a postcode input with a label set as Zip Code 
 <label id="deliveryPostcodeField"
        class="o-forms-field"
        data-validate="required"
+       for="deliveryPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -226,6 +228,7 @@ exports[`Delivery Postcode render a postcode input with a label set as postal co
 <label id="deliveryPostcodeField"
        class="o-forms-field"
        data-validate="required"
+       for="deliveryPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -262,6 +265,7 @@ exports[`Delivery Postcode render a postcode input with a label set as postal co
 <label id="deliveryPostcodeField"
        class="o-forms-field"
        data-validate="required"
+       for="deliveryPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -298,6 +302,7 @@ exports[`Delivery Postcode render a postcode input with a label set as postcode 
 <label id="deliveryPostcodeField"
        class="o-forms-field"
        data-validate="required"
+       for="deliveryPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -334,6 +339,7 @@ exports[`Delivery Postcode render a postcode input with a label set as postcode 
 <label id="deliveryPostcodeField"
        class="o-forms-field"
        data-validate="required"
+       for="deliveryPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -370,6 +376,7 @@ exports[`Delivery Postcode render a postcode input with default label 1`] = `
 <label id="deliveryPostcodeField"
        class="o-forms-field"
        data-validate="required"
+       for="deliveryPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -406,6 +413,7 @@ exports[`Delivery Postcode render a postcode input with default label 2`] = `
 <label id="deliveryPostcodeField"
        class="o-forms-field"
        data-validate="required"
+       for="deliveryPostcode"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
