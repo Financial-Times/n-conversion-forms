@@ -19,6 +19,9 @@ module.exports = {
 			}
 		]
 	},
+	performance: {
+		hints: false
+	},
 	resolve: {
 		extensions: ['.js', '.jsx', '.es6']
 	},
