@@ -16,7 +16,7 @@ make run # build and start documentation app at http://local.ft.com:5005/
 * [Usage](#usage)
 * [Utilities](#utilities)
 * [Contributing](CONTRIBUTING.md)
-* [Partials](docs/PARTIALS.md)
+* [Components](docs/COMPONENTS.md)
 
 ## Requirements
 
@@ -29,18 +29,6 @@ For installing dependencies, running the build process and the documentation app
 ## Usage
 
 This repository contains HTML and CSS that can be used in your projects.
-
-### HTML
-
-The `partials` directory contains [Handlebars](https://handlebarsjs.com/) template files. Use these as partials within your templates by looping over the files in the directory and register them with Handlebars
-
-```js
-Handlebars.registerPartial(fileName, fileContents);
-```
-
-#### Autocomplete attributes
-Autocomplete fields documentation is available here:  
-https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute
  
 ### CSS
 
@@ -388,3 +376,9 @@ try {
 ### Passing data to the demo components
 
 Add any component properties under the key of the template you're adding/working on to [demos/data.json].
+
+### Additional Notes
+
+#### Autocomplete attributes
+Autocomplete fields documentation is available here:  
+https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute

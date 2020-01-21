@@ -2,11 +2,11 @@ const path = require('path');
 
 module.exports = {
 	entry: {
-		demo: './demos/init-jsx.js'
+		demo: './demos/init.js'
 	},
 	output: {
 		path: path.resolve(__dirname, '../public'),
-		filename: '[name]-jsx.js'
+		filename: '[name].js'
 	},
 	module: {
 		rules: [

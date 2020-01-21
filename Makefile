@@ -9,7 +9,6 @@ build:
 
 build-demo:
 	make build
-	webpack --config demos/webpack.config.js
 	webpack --config demos/webpack.jsx.config.js
 	node-sass demos/main.scss public/main.css --include-path bower_components
 	node-sass demos/components.scss public/component.css --include-path bower_components

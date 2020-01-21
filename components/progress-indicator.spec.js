@@ -1,16 +1,9 @@
 import { ProgressIndicator } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
-const context = {};
-
-expect.extend(expectToRenderAs);
+expect.extend(expectToRenderCorrectly);
 
 describe('ProgressIndicator', () => {
-	beforeAll(async () => {
-		context.template = await fetchPartialAsString('progress-indicator.html');
-	});
-
 	it('renders with default props', () => {
 		const props = {
 			items: [
@@ -21,7 +14,7 @@ describe('ProgressIndicator', () => {
 			]
 		};
 
-		expect(ProgressIndicator).toRenderAs(context, props);
+		expect(ProgressIndicator).toRenderCorrectly(props);
 	});
 
 	it('renders items that are complete', () => {
@@ -36,7 +29,7 @@ describe('ProgressIndicator', () => {
 			]
 		};
 
-		expect(ProgressIndicator).toRenderAs(context, props);
+		expect(ProgressIndicator).toRenderCorrectly(props);
 	});
 
 	it('renders items that are not complete and not current', () => {
@@ -51,7 +44,7 @@ describe('ProgressIndicator', () => {
 			]
 		};
 
-		expect(ProgressIndicator).toRenderAs(context, props);
+		expect(ProgressIndicator).toRenderCorrectly(props);
 	});
 
 	it('renders items that are not complete and current', () => {
@@ -66,6 +59,6 @@ describe('ProgressIndicator', () => {
 			]
 		};
 
-		expect(ProgressIndicator).toRenderAs(context, props);
+		expect(ProgressIndicator).toRenderCorrectly(props);
 	});
 });

@@ -1,37 +1,21 @@
-import { mount } from 'enzyme';
 import { Position } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 import { demographics } from 'n-common-static-data';
 const defaultOptions = demographics.positions.positions;
 
-const context = {};
-expect.extend(expectToRenderAs);
+import Enzyme, { mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+Enzyme.configure({ adapter: new Adapter() });
 
-const {
-	registerHelper,
-	unregisterHelper,
-} = require('../test/helpers');
+expect.extend(expectToRenderCorrectly);
 
 describe('Position', () => {
-	let options;
-	beforeAll(async () => {
-		registerHelper('ncf-common-data', function ({ fn }) {
-			return fn(Object.assign({}, { options }, this));
-		});
-		context.template = await fetchPartialAsString('position.html');
-	});
-
-	afterAll(() => {
-		unregisterHelper('ncf-common-data');
-	});
-
 	it('render a select with a label', () => {
 		const props = {
 			options: defaultOptions
 		};
 
-		expect(Position).toRenderAs(context, props);
+		expect(Position).toRenderCorrectly(props);
 	});
 
 	it('can render an initial selected value', () => {
@@ -40,7 +24,7 @@ describe('Position', () => {
 			value: 'CP',
 		};
 
-		expect(Position).toRenderAs(context, props);
+		expect(Position).toRenderCorrectly(props);
 	});
 
 	it('can render a disable select', () => {
@@ -49,7 +33,7 @@ describe('Position', () => {
 			isDisabled: true
 		};
 
-		expect(Position).toRenderAs(context, props);
+		expect(Position).toRenderCorrectly(props);
 	});
 
 	it('can render an error message', () => {
@@ -58,7 +42,7 @@ describe('Position', () => {
 			hasError: true,
 		};
 
-		expect(Position).toRenderAs(context, props);
+		expect(Position).toRenderCorrectly(props);
 	});
 
 	it('can override ids and name for field and select', () => {

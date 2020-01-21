@@ -1,21 +1,17 @@
-import { mount } from 'enzyme';
 import { CompanyName } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
-const context = {};
+import Enzyme, { mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+Enzyme.configure({ adapter: new Adapter() });
 
-expect.extend(expectToRenderAs);
+expect.extend(expectToRenderCorrectly);
 
 describe('CompanyName', () => {
-	beforeAll(async () => {
-		context.template = await fetchPartialAsString('company-name.html');
-	});
-
 	it('renders with default props', () => {
 		const props = {};
 
-		expect(CompanyName).toRenderAs(context, props);
+		expect(CompanyName).toRenderCorrectly(props);
 	});
 
 	it('renders a field with custom field id', () => {
@@ -31,7 +27,7 @@ describe('CompanyName', () => {
 	it('renders with an error', () => {
 		const props = { hasError: true };
 
-		expect(CompanyName).toRenderAs(context, props);
+		expect(CompanyName).toRenderCorrectly(props);
 	});
 
 	it('renders a field with custom input id', () => {
@@ -59,13 +55,13 @@ describe('CompanyName', () => {
 	it('renders with a custom value', () => {
 		const props = { value: 'foobar' };
 
-		expect(CompanyName).toRenderAs(context, props);
+		expect(CompanyName).toRenderCorrectly(props);
 	});
 
 	it('renders with disabled input', () => {
 		const props = { isDisabled: true };
 
-		expect(CompanyName).toRenderAs(context, props);
+		expect(CompanyName).toRenderCorrectly(props);
 	});
 
 	it('renders with default label wording', () => {

@@ -34,75 +34,7 @@ exports[`LicenceConfirmation renders if content id 1`] = `
 </div>
 `;
 
-exports[`LicenceConfirmation renders if content id 2`] = `
-<div class="ncf ncf__wrapper">
-  <div class="ncf__center">
-    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
-    </div>
-    <div class="ncf__paragraph">
-      <h1 class="ncf__header ncf__header--confirmation">
-        Great news, you have joined your company licence
-      </h1>
-    </div>
-  </div>
-  <p class="ncf__paragraph">
-    Go to myFT to personalise your feed &amp; follow topics &amp; articles of interest to you. Set this up now or later.
-  </p>
-  <p class="ncf__paragraph">
-    Explore the homepage &amp; enjoy your unlimited access &amp; exclusive content.
-  </p>
-  <p class="ncf__paragraph ncf__center">
-    <a href="/myft"
-       class="ncf__button ncf__button--submit"
-    >
-      Go to myFT
-    </a>
-  </p>
-  <p class="ncf__paragraph ncf__center">
-    <a href="/content/d19dc7a6-c33b-4931-9a7e-4a74674da29a"
-       class="ncf__link"
-    >
-      Start reading
-    </a>
-  </p>
-</div>
-`;
-
 exports[`LicenceConfirmation renders if educational licence 1`] = `
-<div class="ncf ncf__wrapper">
-  <div class="ncf__center">
-    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
-    </div>
-    <div class="ncf__paragraph">
-      <h1 class="ncf__header ncf__header--confirmation">
-        Great news, you have joined your school licence
-      </h1>
-    </div>
-  </div>
-  <p class="ncf__paragraph">
-    Go to myFT to personalise your feed &amp; follow topics &amp; articles of interest to you. Set this up now or later.
-  </p>
-  <p class="ncf__paragraph">
-    Explore the homepage &amp; enjoy your unlimited access &amp; exclusive content.
-  </p>
-  <p class="ncf__paragraph ncf__center">
-    <a href="/myft"
-       class="ncf__button ncf__button--submit"
-    >
-      Go to myFT
-    </a>
-  </p>
-  <p class="ncf__paragraph ncf__center">
-    <a href="/"
-       class="ncf__link"
-    >
-      Start reading
-    </a>
-  </p>
-</div>
-`;
-
-exports[`LicenceConfirmation renders if educational licence 2`] = `
 <div class="ncf ncf__wrapper">
   <div class="ncf__center">
     <div class="ncf__icon ncf__icon--tick ncf__icon--large">
@@ -172,77 +104,7 @@ exports[`LicenceConfirmation renders if is embedded 1`] = `
 </div>
 `;
 
-exports[`LicenceConfirmation renders if is embedded 2`] = `
-<div class="ncf ncf__wrapper">
-  <div class="ncf__center">
-    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
-    </div>
-    <div class="ncf__paragraph">
-      <h1 class="ncf__header ncf__header--confirmation">
-        Great news, you have joined your company licence
-      </h1>
-    </div>
-  </div>
-  <p class="ncf__paragraph">
-    Go to myFT to personalise your feed &amp; follow topics &amp; articles of interest to you. Set this up now or later.
-  </p>
-  <p class="ncf__paragraph">
-    Explore the homepage &amp; enjoy your unlimited access &amp; exclusive content.
-  </p>
-  <p class="ncf__paragraph ncf__center">
-    <a href="/myft"
-       class="ncf__button ncf__button--submit"
-       target="_top"
-    >
-      Go to myFT
-    </a>
-  </p>
-  <p class="ncf__paragraph ncf__center">
-    <a href="/"
-       class="ncf__link"
-       target="_top"
-    >
-      Start reading
-    </a>
-  </p>
-</div>
-`;
-
 exports[`LicenceConfirmation renders if is trial 1`] = `
-<div class="ncf ncf__wrapper">
-  <div class="ncf__center">
-    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
-    </div>
-    <div class="ncf__paragraph">
-      <h1 class="ncf__header ncf__header--confirmation">
-        Your trial has started
-      </h1>
-    </div>
-  </div>
-  <p class="ncf__paragraph">
-    Go to myFT to personalise your feed &amp; follow topics &amp; articles of interest to you. Set this up now or later.
-  </p>
-  <p class="ncf__paragraph">
-    Explore the homepage &amp; enjoy your unlimited access &amp; exclusive content.
-  </p>
-  <p class="ncf__paragraph ncf__center">
-    <a href="/myft"
-       class="ncf__button ncf__button--submit"
-    >
-      Go to myFT
-    </a>
-  </p>
-  <p class="ncf__paragraph ncf__center">
-    <a href="/"
-       class="ncf__link"
-    >
-      Start reading
-    </a>
-  </p>
-</div>
-`;
-
-exports[`LicenceConfirmation renders if is trial 2`] = `
 <div class="ncf ncf__wrapper">
   <div class="ncf__center">
     <div class="ncf__icon ncf__icon--tick ncf__icon--large">
@@ -310,75 +172,7 @@ exports[`LicenceConfirmation renders with custom duration value 1`] = `
 </div>
 `;
 
-exports[`LicenceConfirmation renders with custom duration value 2`] = `
-<div class="ncf ncf__wrapper">
-  <div class="ncf__center">
-    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
-    </div>
-    <div class="ncf__paragraph">
-      <h1 class="ncf__header ncf__header--confirmation">
-        Great news, you have joined your company licence
-      </h1>
-    </div>
-  </div>
-  <p class="ncf__paragraph">
-    Go to myFT to personalise your feed &amp; follow topics &amp; articles of interest to you. Set this up now or later.
-  </p>
-  <p class="ncf__paragraph">
-    Explore the homepage &amp; enjoy your unlimited access &amp; exclusive content.
-  </p>
-  <p class="ncf__paragraph ncf__center">
-    <a href="/myft"
-       class="ncf__button ncf__button--submit"
-    >
-      Go to myFT
-    </a>
-  </p>
-  <p class="ncf__paragraph ncf__center">
-    <a href="/"
-       class="ncf__link"
-    >
-      Start reading
-    </a>
-  </p>
-</div>
-`;
-
 exports[`LicenceConfirmation renders with default props 1`] = `
-<div class="ncf ncf__wrapper">
-  <div class="ncf__center">
-    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
-    </div>
-    <div class="ncf__paragraph">
-      <h1 class="ncf__header ncf__header--confirmation">
-        Great news, you have joined your company licence
-      </h1>
-    </div>
-  </div>
-  <p class="ncf__paragraph">
-    Go to myFT to personalise your feed &amp; follow topics &amp; articles of interest to you. Set this up now or later.
-  </p>
-  <p class="ncf__paragraph">
-    Explore the homepage &amp; enjoy your unlimited access &amp; exclusive content.
-  </p>
-  <p class="ncf__paragraph ncf__center">
-    <a href="/myft"
-       class="ncf__button ncf__button--submit"
-    >
-      Go to myFT
-    </a>
-  </p>
-  <p class="ncf__paragraph ncf__center">
-    <a href="/"
-       class="ncf__link"
-    >
-      Start reading
-    </a>
-  </p>
-</div>
-`;
-
-exports[`LicenceConfirmation renders with default props 2`] = `
 <div class="ncf ncf__wrapper">
   <div class="ncf__center">
     <div class="ncf__icon ncf__icon--tick ncf__icon--large">

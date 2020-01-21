@@ -1,37 +1,30 @@
 import { DeliveryCity } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
-const context = {};
-
-expect.extend(expectToRenderAs);
+expect.extend(expectToRenderCorrectly);
 
 describe('DeliveryCity', () => {
-	beforeAll(async () => {
-		context.template = await fetchPartialAsString('delivery-city.html');
-	});
-
 	it('renders with default props', () => {
 		const props = {};
 
-		expect(DeliveryCity).toRenderAs(context, props);
+		expect(DeliveryCity).toRenderCorrectly(props);
 	});
 
 	it('renders with an error', () => {
 		const props = { hasError: true };
 
-		expect(DeliveryCity).toRenderAs(context, props);
+		expect(DeliveryCity).toRenderCorrectly(props);
 	});
 
 	it('renders with a custom value', () => {
 		const props = { value: 'foobar' };
 
-		expect(DeliveryCity).toRenderAs(context, props);
+		expect(DeliveryCity).toRenderCorrectly(props);
 	});
 
 	it('renders with a disabled input element', () => {
 		const props = { isDisabled: true };
 
-		expect(DeliveryCity).toRenderAs(context, props);
+		expect(DeliveryCity).toRenderCorrectly(props);
 	});
 });

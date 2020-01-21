@@ -1,37 +1,19 @@
 import React from 'react';
 import { Fieldset } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
-
-const {
-	registerPartial,
-	unregisterPartial,
-} = require('../test/helpers');
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
 const HEADER_TEXT = 'Header text';
 const TEST_FIELDS_ID = 'fields_test';
 
-const context = {};
-
-expect.extend(expectToRenderAs);
+expect.extend(expectToRenderCorrectly);
 
 describe('Fieldset', () => {
-	beforeAll(async () => {
-		context.template = await fetchPartialAsString('fieldset.html');
-		registerPartial('header', `<div>${HEADER_TEXT}</div>`);
-		registerPartial('fields', `<div id="${TEST_FIELDS_ID}"></div>`);
-	});
-
-	afterAll(() => {
-		unregisterPartial('fields');
-	});
-
 	it('renders a fieldset element with default props', () => {
 		const props = {
 			children: (<div id={TEST_FIELDS_ID}></div>)
 		};
 
-		expect(Fieldset).toRenderAs(context, props);
+		expect(Fieldset).toRenderCorrectly(props);
 	});
 
 	it('renders a fieldset element with a custom name value', () => {
@@ -40,7 +22,7 @@ describe('Fieldset', () => {
 			name: 'customise-experience'
 		};
 
-		expect(Fieldset).toRenderAs(context, props);
+		expect(Fieldset).toRenderCorrectly(props);
 	});
 
 	it('renders a custom legend', () => {
@@ -49,7 +31,7 @@ describe('Fieldset', () => {
 			legend: 'Customise your experience'
 		};
 
-		expect(Fieldset).toRenderAs(context, props);
+		expect(Fieldset).toRenderCorrectly(props);
 	});
 
 	it('renders a custom legend which is visually hidden', () => {
@@ -59,7 +41,7 @@ describe('Fieldset', () => {
 			hideLegend: true
 		};
 
-		expect(Fieldset).toRenderAs(context, props);
+		expect(Fieldset).toRenderCorrectly(props);
 	});
 
 	it('renders a custom header in specific heading level tags', () => {
@@ -69,7 +51,7 @@ describe('Fieldset', () => {
 			header: (<div>{HEADER_TEXT}</div>)
 		};
 
-		expect(Fieldset).toRenderAs(context, props);
+		expect(Fieldset).toRenderCorrectly(props);
 	});
 
 	it('renders a custom descriptor paragraph', () => {
@@ -78,20 +60,6 @@ describe('Fieldset', () => {
 			descriptor: 'Descriptor text'
 		};
 
-		expect(Fieldset).toRenderAs(context, props);
-	});
-
-	it('renders a custom header containing markup', () => {
-		unregisterPartial('header');
-
-		registerPartial('header', `<div>${HEADER_TEXT}<span class="test">Test</span></div>`);
-
-		const props = {
-			children: (<div id={TEST_FIELDS_ID}></div>),
-			headingLevel: 'h2',
-			header: (<div>{HEADER_TEXT}<span className="test">Test</span></div>)
-		};
-
-		expect(Fieldset).toRenderAs(context, props);
+		expect(Fieldset).toRenderCorrectly(props);
 	});
 });

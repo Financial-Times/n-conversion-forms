@@ -1,15 +1,17 @@
 const resolve = require('path').resolve;
 const fs = require('fs');
-const PARTIALS_DIR = resolve(__dirname, '../partials');
-const partials = fs.readdirSync(PARTIALS_DIR);
+const COMPONENTS_DIR = resolve(__dirname, '../components');
+const components = fs.readdirSync(COMPONENTS_DIR);
 
-module.exports = partials.map(partial => {
-	return {
-		name: partial,
-		urls: {
-			[`/partial/${partial.replace('.html', '')}`]: {
-				status: 200
+module.exports = components
+	.filter(component => /\.jsx$/.test(component))
+	.map(component => {
+		return {
+			name: component,
+			urls: {
+				[`/component/${component.replace('.jsx', '')}`]: {
+					status: 200
+				}
 			}
-		}
-	};
-});
+		};
+	});

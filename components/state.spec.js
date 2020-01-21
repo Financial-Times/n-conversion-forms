@@ -1,37 +1,21 @@
-import { mount } from 'enzyme';
 import { State } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 import { americanStates } from 'n-common-static-data';
 const defaultStates = americanStates.states;
 
-const context = {};
-expect.extend(expectToRenderAs);
+import Enzyme, { mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+Enzyme.configure({ adapter: new Adapter() });
 
-const {
-	registerHelper,
-	unregisterHelper,
-} = require('../test/helpers');
+expect.extend(expectToRenderCorrectly);
 
 describe('State', () => {
-	let states;
-	beforeAll(async () => {
-		registerHelper('ncf-common-data', function ({ fn }) {
-			return fn(Object.assign({}, { states }, this));
-		});
-		context.template = await fetchPartialAsString('state.html');
-	});
-
-	afterAll(() => {
-		unregisterHelper('ncf-common-data');
-	});
-
 	it('render a select with a label', () => {
 		const props = {
 			states: defaultStates
 		};
 
-		expect(State).toRenderAs(context, props);
+		expect(State).toRenderCorrectly(props);
 
 	});
 
@@ -41,7 +25,7 @@ describe('State', () => {
 			value: 'AL',
 		};
 
-		expect(State).toRenderAs(context, props);
+		expect(State).toRenderCorrectly(props);
 	});
 
 	it('can render a disabled select', () => {
@@ -50,7 +34,7 @@ describe('State', () => {
 			isDisabled: true
 		};
 
-		expect(State).toRenderAs(context, props);
+		expect(State).toRenderCorrectly(props);
 	});
 
 	it('can render an error message', () => {
@@ -59,7 +43,7 @@ describe('State', () => {
 			hasError: true,
 		};
 
-		expect(State).toRenderAs(context, props);
+		expect(State).toRenderCorrectly(props);
 	});
 
 	it('can apply class to hide the component', () => {
@@ -68,7 +52,7 @@ describe('State', () => {
 			isHidden: true,
 		};
 
-		expect(State).toRenderAs(context, props);
+		expect(State).toRenderCorrectly(props);
 	});
 
 	it('can override ID for field', () => {

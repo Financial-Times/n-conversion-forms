@@ -32,38 +32,6 @@ exports[`Email with confirmation render a email input for B2B 1`] = `
 </label>
 `;
 
-exports[`Email with confirmation render a email input for B2B 2`] = `
-<label id="emailField"
-       class="o-forms-field ncf__validation-error"
-       data-validate="required,email"
-       for="email"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Work email address
-    </span>
-    <span class="o-forms-title__prompt">
-      Please enter an email address
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="email"
-           id="email"
-           name="email"
-           placeholder="Enter your email address"
-           autocomplete="email"
-           data-trackable="field-email"
-           aria-required="true"
-           required
-           value
-    >
-    <span class="o-forms-input__error">
-      This email address is not valid
-    </span>
-  </span>
-</label>
-`;
-
 exports[`Email with confirmation render a email input with default params 1`] = `
 <label id="emailField"
        class="o-forms-field ncf__validation-error"
@@ -96,71 +64,7 @@ exports[`Email with confirmation render a email input with default params 1`] = 
 </label>
 `;
 
-exports[`Email with confirmation render a email input with default params 2`] = `
-<label id="emailField"
-       class="o-forms-field ncf__validation-error"
-       data-validate="required,email"
-       for="email"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Email address
-    </span>
-    <span class="o-forms-title__prompt">
-      Please enter an email address
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="email"
-           id="email"
-           name="email"
-           placeholder="Enter your email address"
-           autocomplete="email"
-           data-trackable="field-email"
-           aria-required="true"
-           required
-           value
-    >
-    <span class="o-forms-input__error">
-      This email address is not valid
-    </span>
-  </span>
-</label>
-`;
-
 exports[`Email with confirmation render a email input with default value 1`] = `
-<label id="emailField"
-       class="o-forms-field ncf__validation-error"
-       data-validate="required,email"
-       for="email"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Email address
-    </span>
-    <span class="o-forms-title__prompt">
-      Please enter an email address
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="email"
-           id="email"
-           name="email"
-           placeholder="Enter your email address"
-           autocomplete="email"
-           data-trackable="field-email"
-           aria-required="true"
-           required
-           value="test@example.com"
-    >
-    <span class="o-forms-input__error">
-      This email address is not valid
-    </span>
-  </span>
-</label>
-`;
-
-exports[`Email with confirmation render a email input with default value 2`] = `
 <label id="emailField"
        class="o-forms-field ncf__validation-error"
        data-validate="required,email"
@@ -225,72 +129,7 @@ exports[`Email with confirmation render a email input with disabled fields 1`] =
 </label>
 `;
 
-exports[`Email with confirmation render a email input with disabled fields 2`] = `
-<label id="emailField"
-       class="o-forms-field ncf__validation-error"
-       data-validate="required,email"
-       for="email"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Email address
-    </span>
-    <span class="o-forms-title__prompt">
-      Please enter an email address
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="email"
-           id="email"
-           name="email"
-           placeholder="Enter your email address"
-           autocomplete="email"
-           data-trackable="field-email"
-           aria-required="true"
-           required
-           disabled
-           value
-    >
-    <span class="o-forms-input__error">
-      This email address is not valid
-    </span>
-  </span>
-</label>
-`;
-
 exports[`Email with confirmation render a email input with email error 1`] = `
-<label id="emailField"
-       class="o-forms-field ncf__validation-error"
-       data-validate="required,email"
-       for="email"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Email address
-    </span>
-    <span class="o-forms-title__prompt">
-      Please enter an email address
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
-    <input type="email"
-           id="email"
-           name="email"
-           placeholder="Enter your email address"
-           autocomplete="email"
-           data-trackable="field-email"
-           aria-required="true"
-           required
-           value
-    >
-    <span class="o-forms-input__error">
-      This email address is not valid
-    </span>
-  </span>
-</label>
-`;
-
-exports[`Email with confirmation render a email input with email error 2`] = `
 <label id="emailField"
        class="o-forms-field ncf__validation-error"
        data-validate="required,email"
@@ -354,71 +193,7 @@ exports[`Email with confirmation render a email input with given description 1`]
 </label>
 `;
 
-exports[`Email with confirmation render a email input with given description 2`] = `
-<label id="emailField"
-       class="o-forms-field ncf__validation-error"
-       data-validate="required,email"
-       for="email"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Email address
-    </span>
-    <span class="o-forms-title__prompt">
-      some description
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="email"
-           id="email"
-           name="email"
-           placeholder="Enter your email address"
-           autocomplete="email"
-           data-trackable="field-email"
-           aria-required="true"
-           required
-           value
-    >
-    <span class="o-forms-input__error">
-      This email address is not valid
-    </span>
-  </span>
-</label>
-`;
-
 exports[`Email with confirmation render a email input with read only fields 1`] = `
-<label id="emailField"
-       class="o-forms-field ncf__validation-error"
-       data-validate="required,email"
-       for="email"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Email address
-    </span>
-    <span class="o-forms-title__prompt">
-      Please enter an email address
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="email"
-           id="email"
-           name="email"
-           placeholder="Enter your email address"
-           autocomplete="email"
-           data-trackable="field-email"
-           aria-required="true"
-           required
-           value
-    >
-    <span class="o-forms-input__error">
-      This email address is not valid
-    </span>
-  </span>
-</label>
-`;
-
-exports[`Email with confirmation render a email input with read only fields 2`] = `
 <label id="emailField"
        class="o-forms-field ncf__validation-error"
        data-validate="required,email"
@@ -458,70 +233,6 @@ exports[`Email with confirmation render default label if B2B and educational lic
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
-      Work email address
-    </span>
-    <span class="o-forms-title__prompt">
-      Please enter an email address
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="email"
-           id="email"
-           name="email"
-           placeholder="Enter your email address"
-           autocomplete="email"
-           data-trackable="field-email"
-           aria-required="true"
-           required
-           value
-    >
-    <span class="o-forms-input__error">
-      This email address is not valid
-    </span>
-  </span>
-</label>
-`;
-
-exports[`Email with confirmation render default label if B2B and educational licence 2`] = `
-<label id="emailField"
-       class="o-forms-field ncf__validation-error"
-       data-validate="required,email"
-       for="email"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Work email address
-    </span>
-    <span class="o-forms-title__prompt">
-      Please enter an email address
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="email"
-           id="email"
-           name="email"
-           placeholder="Enter your email address"
-           autocomplete="email"
-           data-trackable="field-email"
-           aria-required="true"
-           required
-           value
-    >
-    <span class="o-forms-input__error">
-      This email address is not valid
-    </span>
-  </span>
-</label>
-`;
-
-exports[`Email with confirmation render default label if isB2cPartnershipLicence 1`] = `
-<label id="emailField"
-       class="o-forms-field ncf__validation-error"
-       data-validate="required,email"
-       for="email"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
       Email address
     </span>
     <span class="o-forms-title__prompt">
@@ -546,7 +257,7 @@ exports[`Email with confirmation render default label if isB2cPartnershipLicence
 </label>
 `;
 
-exports[`Email with confirmation render default label if isB2cPartnershipLicence 2`] = `
+exports[`Email with confirmation render default label if isB2cPartnershipLicence 1`] = `
 <label id="emailField"
        class="o-forms-field ncf__validation-error"
        data-validate="required,email"

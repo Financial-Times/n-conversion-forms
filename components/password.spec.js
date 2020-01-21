@@ -1,20 +1,17 @@
-import { mount } from 'enzyme';
 import { Password } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
+import Enzyme, { mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
-const context = {};
-expect.extend(expectToRenderAs);
+Enzyme.configure({ adapter: new Adapter() });
+
+expect.extend(expectToRenderCorrectly);
 
 describe('Password', () => {
-	beforeAll(async () => {
-		context.template = await fetchPartialAsString('password.html');
-	});
-
 	it('render a password input with a label where input ID and Name are the same', () => {
 		const props = {};
 
-		expect(Password).toRenderAs(context, props);
+		expect(Password).toRenderCorrectly(props);
 
 		const renderedPassword = mount(Password(props));
 		const inputElement = renderedPassword.find('#password');
@@ -62,7 +59,7 @@ describe('Password', () => {
 			isDisabled: true,
 		};
 
-		expect(Password).toRenderAs(context, props);
+		expect(Password).toRenderCorrectly(props);
 
 	});
 
@@ -71,7 +68,7 @@ describe('Password', () => {
 			pattern: 'Whatever'
 		};
 
-		expect(Password).toRenderAs(context, props);
+		expect(Password).toRenderCorrectly(props);
 
 	});
 
@@ -80,7 +77,7 @@ describe('Password', () => {
 			hasError: true,
 		};
 
-		expect(Password).toRenderAs(context, props);
+		expect(Password).toRenderCorrectly(props);
 	});
 
 	it('can render as an Unknown user', () => {
@@ -88,7 +85,7 @@ describe('Password', () => {
 			unknownUser: true,
 		};
 
-		expect(Password).toRenderAs(context, props);
+		expect(Password).toRenderCorrectly(props);
 	});
 
 	it('can have different description text', () => {

@@ -1,23 +1,15 @@
 import { Phone } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
-const context = {
-};
-
-expect.extend(expectToRenderAs);
+expect.extend(expectToRenderCorrectly);
 
 describe('Phone', () => {
-	beforeAll(async () => {
-		context.template = await fetchPartialAsString('phone.html');
-	});
-
 	it('render a phone input with a label', () => {
 		const props = {
 			pattern: 'whatever',
 		};
 
-		expect(Phone).toRenderAs(context, props);
+		expect(Phone).toRenderCorrectly(props);
 	});
 
 	it('render a phone input with a label for B2B', () => {
@@ -26,7 +18,7 @@ describe('Phone', () => {
 			isB2b: true,
 		};
 
-		expect(Phone).toRenderAs(context, props);
+		expect(Phone).toRenderCorrectly(props);
 	});
 
 	it('render default label if B2B and educational licence', () => {
@@ -36,7 +28,7 @@ describe('Phone', () => {
 			educationalLicence: true,
 		};
 
-		expect(Phone).toRenderAs(context, props);
+		expect(Phone).toRenderCorrectly({}, props);
 	});
 
 	it('render a disabled phone input', () => {
@@ -45,7 +37,7 @@ describe('Phone', () => {
 			isDisabled: true,
 		};
 
-		expect(Phone).toRenderAs(context, props);
+		expect(Phone).toRenderCorrectly(props);
 	});
 
 	it('render a phone input with error styling', () => {
@@ -54,6 +46,6 @@ describe('Phone', () => {
 			hasError: true,
 		};
 
-		expect(Phone).toRenderAs(context, props);
+		expect(Phone).toRenderCorrectly(props);
 	});
 });

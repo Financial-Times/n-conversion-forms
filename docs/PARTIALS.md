@@ -60,16 +60,18 @@ Renders the appropriate terms and conditions, based on the form that is shown to
 
 Banner that appears on confirmation pages to inform the user of our App
 
-```handlebars
-{{> n-conversion-forms/partials/app-banner }}
+```jsx
+const { AppBanner } = require('@financial-times/n-conversion-forms/components');
+<AppBanner />
 ```
 
 ## Billing country
 
 Renders the billing country field.
 
-```handlebars
-{{> n-conversion-forms/partials/billing-country value="USA" filterList=countrylist }}
+```jsx
+const { BillingCountry } = require('@financial-times/n-conversion-forms/components');
+<BillingCountry value="USA" filterList=countrylist />
 ```
 
 ### Options
@@ -83,8 +85,9 @@ Renders the billing country field.
 
 Displays a billing postal code field with o-forms styling.
 
-```handlebars
-{{> n-conversion-forms/partials/billing-postcode value="EC4M9BT" postcodeReference='postcode' }}
+```jsx
+const { BillingPostcode } = require('@financial-times/n-conversion-forms/components');
+<BillingPostcode value="EC4M9BT" postcodeReference='postcode' />
 ```
 ### Required
 
@@ -102,8 +105,9 @@ Displays a billing postal code field with o-forms styling.
 Renders the subscription confirmation page.
 Displayed cta and link are different for print only offers.
 
-```handlebars
-{{> n-conversion-forms/partials/confirmation isPrintOnly=true isTrial=true offer="Premium Digital & Print" email="test@example.com" details=details }}
+```jsx
+const { Confirmation } = require('@financial-times/n-conversion-forms/components');
+<Confirmation isPrintOnly=true isTrial=true offer="Premium Digital & Print" email="test@example.com" details=details />
 ```
 
 ### Options
@@ -121,8 +125,9 @@ Displayed cta and link are different for print only offers.
 
 A message to inform the user they can read an article once they've subscribed.
 
-```handlebars
-{{> n-conversion-forms/partials/continue-reading  }}
+```jsx
+const { ContinueReading } = require('@financial-times/n-conversion-forms/components');
+<ContinueReading />
 ```
 
 ### Options
@@ -135,8 +140,9 @@ A message to inform the user they can read an article once they've subscribed.
 Renders the country field.
 NOTE: `isBillingCountry` flag is deprecated, use `billing-country` instead
 
-```handlebars
-{{> n-conversion-forms/partials/country value="USA" filterList=countrylist }}
+```jsx
+const { Country } = require('@financial-times/n-conversion-forms/components');
+<Country value="USA" filterList=countrylist />
 ```
 
 ### Options
@@ -151,8 +157,9 @@ NOTE: `isBillingCountry` flag is deprecated, use `billing-country` instead
 
 Renders the county field.
 
-```handlebars
-{{> n-conversion-forms/partials/county value="Somerset" hasError=true isDisabled=true }}
+```jsx
+const { County } = require('@financial-times/n-conversion-forms/components');
+<County value="Somerset" hasError=true isDisabled=true />
 ```
 
 ### Options
@@ -165,8 +172,9 @@ Renders the county field.
 
 Renders a "contact customer support" page.
 
-```handlebars
-{{> n-conversion-forms/partials/customer-care header="Some header text" message="Contact us for something" }}
+```jsx
+const { CustomerCare } = require('@financial-times/n-conversion-forms/components');
+<CustomerCare header="Some header text" message="Contact us for something" />
 ```
 
 ### Options
@@ -178,8 +186,9 @@ Renders a "contact customer support" page.
 
 Renders an inline yes / no radio group for users to enter if they are a decision maker in their company.
 
-```handlebars
-{{> n-conversion-forms/partials/decision-maker value=yes hasError=true }}
+```jsx
+const { DecisionMaker } = require('@financial-times/n-conversion-forms/components');
+<DecisionMaker value=yes hasError=true />
 ```
 
 ### Options
@@ -190,8 +199,9 @@ Renders an inline yes / no radio group for users to enter if they are a decision
 
 Renders the 3 delivery address fields (line 1/2/3).
 
-```handlebars
-{{> n-conversion-forms/partials/delivery-address line1="10 Elm Street" line2="Apartment 1" hasError=true isDisabled=true }}
+```jsx
+const { DeliveryAddress } = require('@financial-times/n-conversion-forms/components');
+<DeliveryAddress line1="10 Elm Street" line2="Apartment 1" hasError=true isDisabled=true />
 ```
 
 ### Options
@@ -204,8 +214,9 @@ Renders the 3 delivery address fields (line 1/2/3).
 
 Renders the delivery city/town field.
 
-```handlebars
-{{> n-conversion-forms/partials/delivery-city-town value="Bath" hasError=true isDisabled=true }}
+```jsx
+const { DeliveryCity } = require('@financial-times/n-conversion-forms/components');
+<DeliveryCity value="Bath" hasError=true isDisabled=true />
 ```
 
 ### Options
@@ -218,8 +229,9 @@ Renders the delivery city/town field.
 
 Renders the delivery instructions text area.
 
-```handlebars
-{{> n-conversion-forms/partials/delivery-instructions value="Leave on the front porch." hasError=true isDisabled=true }}
+```jsx
+const { DeliveryInstructions } = require('@financial-times/n-conversion-forms/components');
+<DeliveryInstructions value="Leave on the front porch." hasError=true isDisabled=true />
 ```
 
 ### Options
@@ -234,8 +246,9 @@ Renders the delivery instructions text area.
 
 Display delivery options with radio buttons for users to choose between.
 
-```handlebars
-{{> n-conversion-forms/partials/delivery-option options=options }}
+```jsx
+const { DeliveryOption } = require('@financial-times/n-conversion-forms/components');
+<DeliveryOption options=options />
 ```
 
 ### Options
@@ -249,8 +262,9 @@ Display delivery options with radio buttons for users to choose between.
 
 Displays a post code field with o-forms styling.
 
-```handlebars
-{{> n-conversion-forms/partials/delivery-postcode value="EC4M9BT" postcodeReference="postcode" }}
+```jsx
+const { DeliveryPostCode } = require('@financial-times/n-conversion-forms/components');
+<DeliveryPostCode value="EC4M9BT" postcodeReference="postcode" />
 ```
 
 ### Required
@@ -267,8 +281,9 @@ Displays a post code field with o-forms styling.
 
 Renders a date field with a given start date (and accompanying copy).
 
-```handlebars
-{{> n-conversion-forms/partials/delivery-start-date value="2019-02-16" date="Saturday 16th February 2019" hasError=true isDisabled=true }}
+```jsx
+const { DeliveryStartDate } = require('@financial-times/n-conversion-forms/components');
+<DeliveryStartDate value="2019-02-16" date="Saturday 16th February 2019" hasError=true isDisabled=true />
 ```
 
 ### Options
@@ -299,65 +314,38 @@ A form field for adding a user's email.
 
 Renders a generic "error" page.
 
-```handlebars
-{{#> n-conversion-forms/partials/error-page header="Some header text" message="Contact us for something" }}
+```jsx
+const { ErrorPage } = require('@financial-times/n-conversion-forms/components');
+<ErrorPage header="Some header text" message="Contact us for something">
 	Some content to be placed in the middle
-{{/ n-conversion-forms/partials/error-page}}
+</ErrorPage>
 ```
 
 ### Options
 + `header`: string - Custom header text. Defaults to "Sorry, this is not available online".
 + `message`: string - Custom message text, defaults to "Speak now to our Customer Care team to discuss your options".
 
-### Inline Partials
-
-You can pass in HTML using [partial block syntax](https://handlebarsjs.com/partials.html#partial-block) as follows:
-
-```handlebars
-{{> n-conversion-forms/partials/error-page}}
-  <p>Some additional content<p>
-{{/ n-conversion-forms/partials/error-page}}
-```
-
 ## Fieldset
 
 Renders a fieldset.
+
+```jsx
+const { Fieldset } = require('@financial-times/n-conversion-forms/components');
+<Fieldset legend="Group of fields">
+  <!-- Form fields here -->
+</Fieldset>
+```
 
 ### Options
 
 + `descriptor`: string - Text used to describe this set of fields.
 + `legend`: string - Text to display in the `fieldset`'s `legend` element. Not passing this in won't render this element.
 + `hideLegend`: boolean - Whether to visibly show the `legend` or not.
++ `header`: string | markup - The heading level to use when the `header` inline partial (see below) is used.
 + `headingLevel`: string - The heading level to use when the `header` inline partial (see below) is used.
 + `name`: string - The value for the `fieldset`'s `name` attribute.
 
-### Inline Partials
-
-#### header
-
-This is useful for cases where you'd want to pass in markup to use within the header element. For example, you may want to specify a more accessibility friendly header as follows:
-
-```handlebars
-{{#> n-conversion-forms/partials/fieldset headingLevel="h1" legend="Details" hideLegend="true" }}
-  {{#*inline "header"}}
-    Details<span class="o-normalise-visually-hidden"> (page 1 of 3)</span>
-  {{/inline}}
-{{/ n-conversion-forms/partials/fieldset }}
-```
-
 *NB*: The `headingLevel` option is required in order for this to work.
-
-#### fields
-
-The form fields to be displayed in this fieldset.
-
-```handlebars
-{{#> n-conversion-forms/partials/fieldset }}
-  {{#*inline "fields"}}
-    {{> n-conversion-forms/partials/email value='test@example.com' }}
-  {{/inline}}
-{{/ n-conversion-forms/partials/fieldset }}
-```
 
 ## firstname
 
@@ -369,8 +357,9 @@ A form field for adding a user's first name.
 + `hasError`: boolean - true - adds `o-forms-input--invalid` class
 + `isDisabled`: boolean - true - disables the form field
 
-```handlebars
-{{> n-conversion-forms/partials/firstname value=John }}
+```jsx
+const { FirstName } = require('@financial-times/n-conversion-forms/components');
+<FirstName value=John />
 ```
 
 ## lastname
@@ -383,8 +372,9 @@ A form field for adding a user's last name.
 + `hasError`: boolean - true - adds `o-forms-input--invalid` class
 + `isDisabled`: boolean - true - disables the field
 
-```handlebars
-{{> n-conversion-forms/partials/lastname value=Smith hasError=true isDisabled=true }}
+```jsx
+const { LastName } = require('@financial-times/n-conversion-forms/components');
+<LastName value=Smith hasError=true isDisabled=true />
 ```
 
 ## licence-confirmation
@@ -397,8 +387,9 @@ Confirmation page for subscribing to a company licence.
 + `isTrial`: boolean - Is the licence a trial or not
 + `duration`: string - How long the licence will last for
 
-```handlebars
-{{> n-conversion-forms/partials/licence-confirmation isTrial=true }}
+```jsx
+const { LicenceConfirmation } = require('@financial-times/n-conversion-forms/components');
+<LicenceConfirmation isTrial=true />
 ```
 
 ## licence-header
@@ -412,8 +403,9 @@ Header copy for licence pages.
 + `displayName`: string - Name of the company licence is for
 + `welcomeText`: string - Form welcome text
 
-```handlebars
-{{> n-conversion-forms/partials/licence-header isTrial=false displayName="IBM" welcomeText="Join our FT.com licence" }}
+```jsx
+const { LicenceHeader } = require('@financial-times/n-conversion-forms/components');
+<LicenceHeader isTrial=false displayName="IBM" welcomeText="Join our FT.com licence" />
 ```
 
 ```handlebars
@@ -432,19 +424,23 @@ A full screen loading overlay.
 
 ### Inline Partials
 
-You can pass in HTML (additional to the `title`) using [partial block syntax](https://handlebarsjs.com/partials.html#partial-block) as follows:
+You can pass in HTML (additional to the `title`) as follows:
 
-```handlebars
-{{> n-conversion-forms/partials/loader}}
+```jsx
+const { Loader } = require('@financial-times/n-conversion-forms/components');
+<Loader title="Loading">
   <p>Some additional content<p>
-{{/ n-conversion-forms/partials/loader}}
+</Loader>
 ```
 
 ## Message
 
 Displays a message on the page using [o-message](https://registry.origami.ft.com/components/o-message).
 
-i.e `{{> n-conversion-forms/partials/message isError=true message=flash.message }}`
+```jsx
+const { Message } = require('@financial-times/n-conversion-forms/components');
+<Message isError=true message=flash.message />
+```
 
 ### Options
 
@@ -466,6 +462,11 @@ i.e `{{> n-conversion-forms/partials/message isError=true message=flash.message 
 
 Displays a link for users to click to change their currently selected package. If payment terms are supplied these will also be displayed.
 
+```jsx
+const { PackageChange } = require('@financial-times/n-conversion-forms/components');
+<PackageChange currentPackage="Digital Trial" changePackageUrl="https://www.ft.com/buy/subscription/premiumdigital" />
+```
+
 ### Options
 
 + `currentPackage`: string - Package name
@@ -480,8 +481,9 @@ Displays a link for users to click to change their currently selected package. I
 
 Display payment terms for an offer with radio buttons for users to choose between.
 
-```handlebars
-{{> n-conversion-forms/partials/payment-term options=options }}
+```jsx
+const { PaymentTerm } = require('@financial-times/n-conversion-forms/components');
+<PaymentTerm options=options />
 ```
 ### Options
 
@@ -496,8 +498,9 @@ Display payment terms for an offer with radio buttons for users to choose betwee
 
 Displays a phone field with o-forms styling and the name and id `primaryTelephone`
 
-```handlebars
-{{> n-conversion-forms/partials/phone hasError=true isB2b=true }}
+```jsx
+const { Phone } = require('@financial-times/n-conversion-forms/components');
+<Phone hasError=true isB2b=true />
 ```
 
 ### Options
@@ -508,32 +511,13 @@ Displays a phone field with o-forms styling and the name and id `primaryTelephon
 + `isB2b`: boolean - true - displays work email copy.
 + `pattern`: string - Pattern to be used for validation.
 
-## Postcode (DEPRECATED)
-
-**This is deprecated and should no longer be used.
-Please use `delivery-postcode`/`billing-postcode` instead.**
-
-Displays a postal code field with o-forms styling.
-Form id/name/label can be overridden via options below.
-
-```handlebars
-{{> n-conversion-forms/partials/postcode value="EC4M9BT" formPrefix="delivery" }}
-```
-
-### Options
-
-+ `isBillingPostcode`: boolean - true - adds `Billing` label.
-+ `isDisabled`: boolean - true - disables the field.
-+ `isZipCode`: boolean - true - `Zip code` label - false - `Post Code`.
-+ `pattern`: string - Pattern to be used for validation.
-+ `value`: string - Text to pre-populate the field.
-
 ## Submit
 
 A form submit button with o-button styling
 
-```
-{{> n-conversion-forms/partials/submit isCentered=true label="Submit" }}
+```jsx
+const { Submit } = require('@financial-times/n-conversion-forms/components');
+<Submit isCentered=true label="Submit" />
 ```
 
 ### Options

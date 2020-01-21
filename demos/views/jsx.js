@@ -12,7 +12,7 @@ function main ({title}) {
 		<div class="ncf" id="demoContent" />
 	</body>
 
-	<script type="text/javascript" src="/public/demo-jsx.js"></script>
+	<script type="text/javascript" src="/public/demo.js"></script>
 </html>
 `;
 }
