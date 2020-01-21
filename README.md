@@ -28,7 +28,7 @@ For installing dependencies, running the build process and the documentation app
 
 ## Usage
 
-This repository contains HTML and CSS that can be used in your projects.
+This repository contains JSX components and CSS that can be used in your projects.
  
 ### CSS
 
