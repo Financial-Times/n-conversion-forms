@@ -7,9 +7,9 @@ class Validation {
 	 * Set up the Validation utility
 	 * @param {Boolean} mutePromptBeforeLeaving (default: false) Whether to prompt the user before leaving if there have been changes in any of the fields.
 	 */
-	constructor ({ mutePromptBeforeLeaving } = {}) {
+	constructor ({ mutePromptBeforeLeaving, useBrowserValidation } = {}) {
 		this.$form = document.querySelector('form.ncf');
-		this.oForms = OForms.init(this.$form);
+		this.oForms = OForms.init(this.$form, { useBrowserValidation });
 		this.$requiredEls = this.oForms.formInputs
 			.filter(({input}) => input.type !== 'hidden' && input.required);
 		this.formValid = false;
