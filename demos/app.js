@@ -1,5 +1,6 @@
 require('sucrase/register');
 /* eslint no-console:0 */
+const chalk = require('chalk');
 const express = require('express');
 const { PageKitReactJSX } = require('@financial-times/dotcom-server-react-jsx');
 const renderer = new PageKitReactJSX();
@@ -32,6 +33,32 @@ app.get('/component/:name', async (req, res, next) => {
 });
 
 app.listen(PORT, () => {
-	/* eslint-disable-next-line no-console */
-	console.log(`demo server running on port ${PORT}`);
+	if (process.env.PA11Y === 'true') {
+		runPa11yTests();
+	} else {
+		/* eslint-disable-next-line no-console */
+		console.log(`demo server running on port ${PORT}`);
+	}
 });
+
+module.exports = app;
+
+function runPa11yTests () {
+	const { red: errorHighlight, green: highlight } = chalk.default.bold;
+	const spawn = require('child_process').spawn;
+	const pa11y = spawn('pa11y-ci');
+
+	pa11y.stdout.on('data', data => {
+		// tslint:disable-next-line
+		console.log(highlight(`${data}`)); // eslint-disable-line
+	});
+
+	pa11y.stderr.on('data', error => {
+		// tslint:disable-next-line
+		console.log(errorHighlight(`${error}`)); // eslint-disable-line
+	});
+
+	pa11y.on('close', code => {
+		process.exit(code);
+	});
+}
