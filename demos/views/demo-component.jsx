@@ -6,7 +6,7 @@ export function DemoComponent({ name, data }) {
 	let Component = component[componentName];
 
 	return (
-		<html>
+		<html lang="en">
 			<head>
 				<title>{componentName}</title>
 				<link rel="stylesheet" href="/public/main.css" />

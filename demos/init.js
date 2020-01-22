@@ -1,7 +1,7 @@
 import React from 'react';
 import * as ncf from '../dist/index';
 import ReactDOM from 'react-dom';
-import fixture from './data.json';
+import fixture from './data.jsx';
 
 function initDemo () {
 	const container = document.querySelector('#demoContent');
