@@ -5,8 +5,8 @@ import classNames from 'classnames';
 export function DeliveryCounty ({
 	hasError = false,
 	value = '',
-	isDisabled = false
-
+	isDisabled = false,
+	maxLength
 }) {
 	const inputWrapperClassName = classNames([
 		'o-forms-input',
@@ -32,6 +32,7 @@ export function DeliveryCounty ({
 					data-trackable="field-deliveryCounty"
 					autoComplete="address-level3"
 					placeholder="e.g. Somerset"
+					maxLength={maxLength}
 					disabled={isDisabled}
 					defaultValue={value}
 				/>

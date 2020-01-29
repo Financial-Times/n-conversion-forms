@@ -7,7 +7,8 @@ export function DeliveryAddress ({
 	line1 = '',
 	line2 = '',
 	line3 = '',
-	isDisabled = false
+	isDisabled = false,
+	maxLength
 }) {
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
@@ -30,6 +31,7 @@ export function DeliveryAddress ({
 						autoComplete="address-line1"
 						placeholder="e.g. 10 Elm Street"
 						aria-required="true"
+						maxLength={maxLength}
 						required
 						disabled={isDisabled}
 						defaultValue={line1}
@@ -48,6 +50,7 @@ export function DeliveryAddress ({
 						data-trackable="field-deliveryAddressLine2"
 						autoComplete="address-line2"
 						placeholder="e.g. Apartment 1"
+						maxLength={maxLength}
 						disabled={isDisabled}
 						defaultValue={line2}
 					/>
@@ -65,6 +68,7 @@ export function DeliveryAddress ({
 						data-trackable="field-deliveryAddressLine3"
 						autoComplete="address-line3"
 						placeholder=""
+						maxLength={maxLength}
 						disabled={isDisabled}
 						defaultValue={line3}
 					/>

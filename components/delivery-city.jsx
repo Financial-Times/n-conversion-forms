@@ -5,7 +5,8 @@ import classNames from 'classnames';
 export function DeliveryCity ({
 	hasError = false,
 	value = '',
-	isDisabled = false
+	isDisabled = false,
+	maxLength
 }) {
 	const inputWrapperClassName = classNames([
 		'o-forms-input',
@@ -32,6 +33,7 @@ export function DeliveryCity ({
 					autoComplete="address-level2"
 					placeholder="e.g. Bath"
 					aria-required="true"
+					maxLength={maxLength}
 					required
 					disabled={isDisabled}
 					defaultValue={value}
