@@ -1,12 +1,9 @@
+import { mount } from 'enzyme';
 import { Province } from './index';
 import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
 import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
 import { canadianProvinces } from 'n-common-static-data';
 const defaultProvinces = canadianProvinces.provinces;
-
-import Enzyme, { mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-Enzyme.configure({ adapter: new Adapter() });
 
 const context = {};
 expect.extend(expectToRenderAs);
