@@ -46,5 +46,6 @@ export function DeliveryCity ({
 DeliveryCity.propTypes = {
 	hasError: PropTypes.bool,
 	value: PropTypes.string,
-	isDisabled: PropTypes.bool
+	isDisabled: PropTypes.bool,
+	maxlength: PropTypes.number,
 };

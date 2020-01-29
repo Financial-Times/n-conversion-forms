@@ -83,5 +83,6 @@ DeliveryAddress.propTypes = {
 	line1: PropTypes.string,
 	line2: PropTypes.string,
 	line3: PropTypes.string,
-	isDisabled: PropTypes.bool
+	isDisabled: PropTypes.bool,
+	maxlength: PropTypes.number,
 };

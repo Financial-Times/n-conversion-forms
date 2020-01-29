@@ -44,5 +44,6 @@ export function DeliveryCounty ({
 DeliveryCounty.propTypes = {
 	hasError: PropTypes.bool,
 	value: PropTypes.string,
-	isDisabled: PropTypes.bool
+	isDisabled: PropTypes.bool,
+	maxlength: PropTypes.number,
 };
