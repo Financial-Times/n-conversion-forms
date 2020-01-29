@@ -15,6 +15,7 @@ export { DeliveryCounty } from'./delivery-county';
 export { DeliveryInstructions } from'./delivery-instructions';
 export { DeliveryOption } from'./delivery-option';
 export { DeliveryPostcode } from'./delivery-postcode';
+export { DeliverySecurityInstructions } from'./delivery-security-instructions';
 export { DeliveryStartDate } from'./delivery-start-date';
 export { Email } from'./email';
 export { ErrorPage } from'./error-page';
