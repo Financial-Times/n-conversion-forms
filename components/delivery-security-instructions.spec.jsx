@@ -98,11 +98,11 @@ describe('DeliverySecurityInstructions', () => {
 			);
 			const textAreaProps = wrapper.find('textarea').props();
 
-			it('sets id to deliverySecurityInstructions', () => {
+			it('sets id property', () => {
 				expect(textAreaProps.id).toBe('inputId');
 			});
 
-			it('sets name to deliverySecurityInstructions', () => {
+			it('sets name property', () => {
 				expect(textAreaProps.name).toBe('inputId');
 			});
 
