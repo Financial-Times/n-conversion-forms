@@ -119,8 +119,14 @@ class Loader {
 	 * @param {Object} content Content for the loader in standard format
 	 */
 	showOnElement (element, content) {
-		const loader = new DOMParser().parseFromString(this.template(content), 'text/html');
-		element.appendChild(loader.querySelector('.ncf__loader'));
+		const existingLoader = element.querySelector('.ncf__loader');
+		const loader = new DOMParser().parseFromString(this.template(content), 'text/html').querySelector('.ncf__loader');
+
+		if (!existingLoader) {
+			element.appendChild(loader);
+		} else {
+			existingLoader.innerHTML = loader;
+		}
 	}
 
 	/**

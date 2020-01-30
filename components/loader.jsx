@@ -6,6 +6,7 @@ export function Loader ({
 	children,
 	showLoader,
 	title,
+	inElement,
 }) {
 	const label = title ? (
 		<div className="ncf__loader__content__title" id="loader-aria-label">{title}</div>
@@ -15,7 +16,8 @@ export function Loader ({
 	const className = classNames([
 		'ncf__loader',
 		{ 'is-visible': showLoader },
-		{ 'ncf__hidden': !showLoader }
+		{ 'ncf__hidden': !showLoader },
+		{ 'ncf__loader--element': inElement }
 	]);
 	const props = {
 		className,
@@ -44,5 +46,6 @@ Loader.propTypes = {
 		PropTypes.node
 	]),
 	showLoader: PropTypes.bool,
-	title: PropTypes.string
+	title: PropTypes.string,
+	inElement: PropTypes.bool
 };

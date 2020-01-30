@@ -1,4 +1,4 @@
-<div class="ncf__loader {{#if showLoader}}is-visible{{else}}ncf__hidden{{/if}}"
+<div class="ncf__loader {{#if showLoader}}is-visible{{else}}ncf__hidden{{/if}}{{#if inElement}} ncf__loader--element{{/if}}"
 	role="dialog" aria-labelledby="loader-aria-label" aria-describedby="loader-aria-description"
 	aria-modal="true" {{#if showLoader}}tabindex="1"{{/if}}>
 	<div class="ncf__loader__content">

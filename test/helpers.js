@@ -32,13 +32,14 @@ const unregisterHelper = name => {
 	return handlebars.unregisterHelper(name);
 };
 
-const fetchPartial = async (name, returnString = false) => {
+const fetchPartial = async (name, returnString = false, partialBlockString = '') => {
 	let file = await readFile(PARTIAL_DIR + name, 'utf8');
 	// HACK ALERT: this is necessary to make testing @partial-block work. It does mean that any test where
 	//  a @partial-block helper isn't registered will blow up, but that will just have to be worked around
 	//  by always registering it - even with an empty value if necessary.
 	//  We need to use the `#if` around the partial block to make using that in a template optional.
 	file = file.replace(/{{#if @partial-block}}([\s\S]*){{\/if}}/gm, '$1');
+	file = file.replace(/{{> @partial-block\s?}}/gm, partialBlockString);
 	const template = handlebars.compile(file);
 	if (returnString) {
 		return (context) => template(context);

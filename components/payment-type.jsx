@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { Loader } from './loader';
 
 export function PaymentType ({
 	enableApplepay = false,
 	enableCreditcard = false,
 	enableDirectdebit = false,
 	enablePaypal = false,
+	showLoaderOnInit = false,
 	fieldId = 'paymentTypeField',
 	inputId = 'paymentType',
 	value
@@ -94,10 +96,17 @@ export function PaymentType ({
 		);
 	};
 
+	const createLoaderOnInit = () => {
+		return showLoaderOnInit && (
+			<Loader inElement={true} showLoader={true} title="Loading payment form..." />
+		);
+	}
+
 	return (
 		<React.Fragment>
 			{createSecuritySeal()}
 			<div id={fieldId} className="o-forms-field">
+				{createLoaderOnInit()}
 				<div className="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
 					{createPaymentTypes()}
 				</div>
@@ -117,6 +126,7 @@ PaymentType.propTypes = {
 	enableCreditcard: PropTypes.bool,
 	enableDirectdebit: PropTypes.bool,
 	enablePaypal: PropTypes.bool,
+	showLoaderOnInit: PropTypes.bool,
 	fieldId: PropTypes.string,
 	inputId: PropTypes.string,
 	value: PropTypes.string

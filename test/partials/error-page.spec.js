@@ -1,21 +1,12 @@
 const { expect } = require('chai');
-const {
-	registerPartial,
-	unregisterPartial,
-	fetchPartial,
-} = require('../helpers');
+const { fetchPartial } = require('../helpers');
 
 let context = {};
 
 describe('error page template', () => {
 
 	before(async () => {
-		registerPartial('@partial-block', '<div>Foo Bar</div>');
-		context.template = await fetchPartial('error-page.html');
-	});
-
-	after(() => {
-		unregisterPartial('@partial-block');
+		context.template = await fetchPartial('error-page.html', false, '<div>Foo Bar</div>');
 	});
 
 	it('should display an error icon', () => {
@@ -60,7 +51,7 @@ describe('error page template', () => {
 	});
 
 	it('should allow content in the partial', () => {
-		const $ = context.template();
+		const $ = context.template({});
 		expect($('.ncf__error-page__content').html().trim()).to.equal('<div>Foo Bar</div>');
 	});
 
