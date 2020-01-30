@@ -13,6 +13,9 @@
 </div>
 
 <div id="paymentTypeField" class="o-forms-field">
+	{{#if showLoaderOnInit}}
+		{{> n-conversion-forms/partials/loader inElement=true showLoader=true title="Loading payment form..." }}
+	{{/if}}
 	<div class="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
 		<div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--creditcard{{#unless enableCreditcard }} ncf__hidden{{/unless}}">
 			<label for="creditcard">

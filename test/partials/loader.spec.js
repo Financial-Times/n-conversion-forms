@@ -1,21 +1,12 @@
 const { expect } = require('chai');
-const {
-	registerPartial,
-	unregisterPartial,
-	fetchPartial,
-} = require('../helpers');
+const { fetchPartial } = require('../helpers');
 
 let context = {};
 
 describe('loader template', () => {
 
 	before(async () => {
-		registerPartial('@partial-block', '<div>Foo Bar</div>');
-		context.template = await fetchPartial('loader.html');
-	});
-
-	after(() => {
-		unregisterPartial('@partial-block');
+		context.template = await fetchPartial('loader.html', false, '<div>Foo Bar</div>');
 	});
 
 	it('should have the loader element', () => {

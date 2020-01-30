@@ -3,7 +3,6 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { ErrorPage } from './index';
 import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
 import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
-import { registerPartial, unregisterPartial } from '../test/helpers';
 
 const CHILDREN = <div id="children">Children</div>;
 const CHILDREN_STRING = renderToStaticMarkup(CHILDREN);
@@ -14,12 +13,7 @@ expect.extend(expectToRenderAs);
 
 describe('ErrorPage', () => {
 	beforeAll(async () => {
-		registerPartial('@partial-block', CHILDREN_STRING);
-		context.template = await fetchPartialAsString('error-page.html');
-	});
-
-	afterAll(() => {
-		unregisterPartial('@partial-block');
+		context.template = await fetchPartialAsString('error-page.html', CHILDREN_STRING);
 	});
 
 	it('renders with default props', () => {

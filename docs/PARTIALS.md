@@ -381,6 +381,7 @@ A full screen loading overlay.
 
 + `showLoader`: boolean - Whether to show the loader by default/on page load.
 + `title`: string - The title of the message shown underneath the loading spinner.
++ `inElement`: boolean - Whether to style this to be contained within an element.
 
 ### Inline Partials
 

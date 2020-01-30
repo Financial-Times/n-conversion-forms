@@ -57,4 +57,12 @@ describe('PaymentType', () => {
 
 		expect(PaymentType).toRenderAs(context, props);
 	});
+
+	it('can initialise with the loader visible', () => {
+		const props = {
+			showLoaderOnInit: true
+		};
+
+		expect(PaymentType).toRenderAs(context, props);
+	});
 });

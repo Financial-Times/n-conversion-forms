@@ -1,6 +1,5 @@
 import React from 'react';
 import { Loader } from './index';
-import { registerPartial, unregisterPartial } from '../test/helpers.js';
 import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
 import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
 
@@ -12,12 +11,7 @@ expect.extend(expectToRenderAs);
 
 describe('Loader', () => {
 	beforeAll(async () => {
-		registerPartial('@partial-block', CHILDREN_STRING);
-		context.template = await fetchPartialAsString('loader.html');
-	});
-
-	afterAll(() => {
-		unregisterPartial('@partial-block');
+		context.template = await fetchPartialAsString('loader.html', CHILDREN_STRING);
 	});
 
 	it('renders with default props', () => {

@@ -56,7 +56,7 @@ Fieldset.propTypes = {
 	children: PropTypes.children,
 	name: PropTypes.string,
 	legend: PropTypes.string,
-	hideLegend: PropTypes.boolean,
+	hideLegend: PropTypes.bool,
 	headingLevel: PropTypes.string,
 	header: PropTypes.elementType,
 	descriptor: PropTypes.string
