@@ -52,11 +52,11 @@ describe('DeliverySecurityInstructions', () => {
 			const wrapper = shallow(<DeliverySecurityInstructions />);
 			const textAreaProps = wrapper.find('textarea').props();
 
-			it('sets id to deliverySecurityInstructions', () => {
+			it('sets the `id` property to deliverySecurityInstructions', () => {
 				expect(textAreaProps.id).toBe('deliverySecurityInstructions');
 			});
 
-			it('sets name to deliverySecurityInstructions', () => {
+			it('sets the `name` property to deliverySecurityInstructions', () => {
 				expect(textAreaProps.name).toBe('deliverySecurityInstructions');
 			});
 
@@ -72,7 +72,7 @@ describe('DeliverySecurityInstructions', () => {
 				expect(textAreaProps['data-trackable']).toBe('field-deliverySecurityInstructions');
 			});
 
-			it('sets placeholder to: Please enter any secure information here, e.g. security gate access codes', () => {
+			it('sets the `placeholder` property to:', () => {
 				expect(textAreaProps.placeholder).toBe('Please enter any secure information here, e.g. security gate access codes');
 			});
 
