@@ -47,15 +47,18 @@ export function DeliverySecurityInstructions ({
 				<textarea {...textAreaProps} />
 			</span>
 
-			<span className='additional-field-information'>NB. Details supplied here will not appear on packaging</span>
+			<span className='additional-field-information'>NB. Details supplied here will not appear on packaging.</span>
 		</label>
 	);
 }
 
 DeliverySecurityInstructions.propTypes = {
+	fieldId : PropTypes.string,
 	hasError: PropTypes.bool,
+	inputId:  PropTypes.string,
 	maxlength: PropTypes.number,
 	rows: PropTypes.number,
 	isDisabled: PropTypes.bool,
-	value: PropTypes.string
+	value: PropTypes.string,
+	placeholder: PropTypes.string
 };
