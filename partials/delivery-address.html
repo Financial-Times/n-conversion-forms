@@ -10,7 +10,9 @@
 				placeholder="e.g. 10 Elm Street"
 				aria-required="true" required
 				{{#if isDisabled}}disabled{{/if}}
-				value="{{line1}}" />
+				value="{{line1}}"
+			/>
+			<span class="o-forms-input__error">Please enter a valid address</span>
 		</span>
 	</label>
 	<label class="o-forms-field o-forms-field--optional" for="deliveryAddressLine2">

@@ -38,6 +38,7 @@ export function DeliveryCity ({
 					disabled={isDisabled}
 					defaultValue={value}
 				/>
+			<span className="o-forms-input__error">Please enter a valid city or town</span>
 			</span>
 		</label>
 	);

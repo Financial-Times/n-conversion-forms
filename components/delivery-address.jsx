@@ -36,6 +36,7 @@ export function DeliveryAddress ({
 						disabled={isDisabled}
 						defaultValue={line1}
 					/>
+				<span className="o-forms-input__error">Please enter a valid address</span>
 				</span>
 			</label>
 			<label className="o-forms-field o-forms-field--optional" htmlFor="deliveryAddressLine2">

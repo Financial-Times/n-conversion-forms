@@ -23,6 +23,9 @@ exports[`DeliveryAddress renders default props 1`] = `
              required
              value
       >
+      <span class="o-forms-input__error">
+        Please enter a valid address
+      </span>
     </span>
   </label>
   <label class="o-forms-field o-forms-field--optional"
@@ -89,6 +92,9 @@ exports[`DeliveryAddress renders default props 2`] = `
              required
              value
       >
+      <span class="o-forms-input__error">
+        Please enter a valid address
+      </span>
     </span>
   </label>
   <label class="o-forms-field o-forms-field--optional"
@@ -155,6 +161,9 @@ exports[`DeliveryAddress renders with an error 1`] = `
              required
              value
       >
+      <span class="o-forms-input__error">
+        Please enter a valid address
+      </span>
     </span>
   </label>
   <label class="o-forms-field o-forms-field--optional"
@@ -221,6 +230,9 @@ exports[`DeliveryAddress renders with an error 2`] = `
              required
              value
       >
+      <span class="o-forms-input__error">
+        Please enter a valid address
+      </span>
     </span>
   </label>
   <label class="o-forms-field o-forms-field--optional"
@@ -287,6 +299,9 @@ exports[`DeliveryAddress renders with custom line 1 value 1`] = `
              required
              value="Line 1 text"
       >
+      <span class="o-forms-input__error">
+        Please enter a valid address
+      </span>
     </span>
   </label>
   <label class="o-forms-field o-forms-field--optional"
@@ -353,6 +368,9 @@ exports[`DeliveryAddress renders with custom line 1 value 2`] = `
              required
              value="Line 1 text"
       >
+      <span class="o-forms-input__error">
+        Please enter a valid address
+      </span>
     </span>
   </label>
   <label class="o-forms-field o-forms-field--optional"
@@ -419,6 +437,9 @@ exports[`DeliveryAddress renders with custom line 2 value 1`] = `
              required
              value
       >
+      <span class="o-forms-input__error">
+        Please enter a valid address
+      </span>
     </span>
   </label>
   <label class="o-forms-field o-forms-field--optional"
@@ -485,6 +506,9 @@ exports[`DeliveryAddress renders with custom line 2 value 2`] = `
              required
              value
       >
+      <span class="o-forms-input__error">
+        Please enter a valid address
+      </span>
     </span>
   </label>
   <label class="o-forms-field o-forms-field--optional"
@@ -551,6 +575,9 @@ exports[`DeliveryAddress renders with custom line 3 value 1`] = `
              required
              value
       >
+      <span class="o-forms-input__error">
+        Please enter a valid address
+      </span>
     </span>
   </label>
   <label class="o-forms-field o-forms-field--optional"
@@ -617,6 +644,9 @@ exports[`DeliveryAddress renders with custom line 3 value 2`] = `
              required
              value
       >
+      <span class="o-forms-input__error">
+        Please enter a valid address
+      </span>
     </span>
   </label>
   <label class="o-forms-field o-forms-field--optional"
@@ -684,6 +714,9 @@ exports[`DeliveryAddress renders with disabled input elements 1`] = `
              disabled
              value
       >
+      <span class="o-forms-input__error">
+        Please enter a valid address
+      </span>
     </span>
   </label>
   <label class="o-forms-field o-forms-field--optional"
@@ -753,6 +786,9 @@ exports[`DeliveryAddress renders with disabled input elements 2`] = `
              disabled
              value
       >
+      <span class="o-forms-input__error">
+        Please enter a valid address
+      </span>
     </span>
   </label>
   <label class="o-forms-field o-forms-field--optional"
