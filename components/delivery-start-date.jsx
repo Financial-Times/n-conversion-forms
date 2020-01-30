@@ -54,8 +54,8 @@ export function DeliveryStartDate ({
 }
 
 DeliveryStartDate.propTypes = {
-	hasError: PropTypes.boolean,
-	date: PropTypes.string,
+	hasError: PropTypes.bool,
+	date: PropTypes.node, // could be a string or a component that formats the string
 	value: PropTypes.string,
 	min: PropTypes.string,
 	max: PropTypes.string,

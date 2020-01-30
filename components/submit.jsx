@@ -46,8 +46,8 @@ export function Submit ({
 
 Submit.propTypes = {
 	id: PropTypes.string,
-	isCentered: PropTypes.boolean,
-	isDisabled: PropTypes.boolean,
+	isCentered: PropTypes.bool,
+	isDisabled: PropTypes.bool,
 	backButtonUrl: PropTypes.string,
 	label: PropTypes.string
 };

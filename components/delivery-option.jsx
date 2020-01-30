@@ -71,7 +71,7 @@ export function DeliveryOption ({
 DeliveryOption.propTypes = {
 	options: PropTypes.arrayOf(PropTypes.shape({
 		value: PropTypes.oneOf(['PV', 'HD', 'EV']),
-		isSelected: PropTypes.boolean
+		isSelected: PropTypes.bool
 	})),
-	isSingle: PropTypes.boolean
+	isSingle: PropTypes.bool
 };
