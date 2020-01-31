@@ -18,7 +18,7 @@ export function DeliveryAddress ({
 
 	return (
 		<div id="deliveryAddressFields" data-validate="required">
-			<label className="o-forms-field" htmlFor="deliveryAddressLine1">
+			<label className="o-forms-field ncf__validation-error" htmlFor="deliveryAddressLine1">
 				<span className="o-forms-title">
 					<span className="o-forms-title__main">Address line 1</span>
 				</span>

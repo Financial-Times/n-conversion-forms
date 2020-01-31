@@ -26,7 +26,7 @@ export function Phone ({
 		<label
 			id={fieldId}
 			htmlFor={inputId}
-			className="o-forms-field"
+			className="o-forms-field ncf__validation-error"
 			data-validate="required,number"
 		>
 			<span className="o-forms-title">

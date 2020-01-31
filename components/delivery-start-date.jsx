@@ -32,7 +32,7 @@ export function DeliveryStartDate ({
 	return (
 		<label
 			id="deliveryStartDateField"
-			className="o-forms-field"
+			className="o-forms-field ncf__validation-error"
 			data-validate="required"
 			htmlFor={inputProps.id}
 		>

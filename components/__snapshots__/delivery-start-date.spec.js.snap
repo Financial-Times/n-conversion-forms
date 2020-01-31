@@ -2,7 +2,7 @@
 
 exports[`DeliveryStartDate renders with a custom date 1`] = `
 <label id="deliveryStartDateField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="deliveryStartDate"
 >
@@ -41,7 +41,7 @@ exports[`DeliveryStartDate renders with a custom date 1`] = `
 
 exports[`DeliveryStartDate renders with a custom date 2`] = `
 <label id="deliveryStartDateField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="deliveryStartDate"
 >
@@ -80,7 +80,7 @@ exports[`DeliveryStartDate renders with a custom date 2`] = `
 
 exports[`DeliveryStartDate renders with a custom input max value 1`] = `
 <label id="deliveryStartDateField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="deliveryStartDate"
 >
@@ -119,7 +119,7 @@ exports[`DeliveryStartDate renders with a custom input max value 1`] = `
 
 exports[`DeliveryStartDate renders with a custom input max value 2`] = `
 <label id="deliveryStartDateField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="deliveryStartDate"
 >
@@ -158,7 +158,7 @@ exports[`DeliveryStartDate renders with a custom input max value 2`] = `
 
 exports[`DeliveryStartDate renders with a custom input min value 1`] = `
 <label id="deliveryStartDateField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="deliveryStartDate"
 >
@@ -197,7 +197,7 @@ exports[`DeliveryStartDate renders with a custom input min value 1`] = `
 
 exports[`DeliveryStartDate renders with a custom input min value 2`] = `
 <label id="deliveryStartDateField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="deliveryStartDate"
 >
@@ -236,7 +236,7 @@ exports[`DeliveryStartDate renders with a custom input min value 2`] = `
 
 exports[`DeliveryStartDate renders with a custom input value 1`] = `
 <label id="deliveryStartDateField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="deliveryStartDate"
 >
@@ -274,7 +274,7 @@ exports[`DeliveryStartDate renders with a custom input value 1`] = `
 
 exports[`DeliveryStartDate renders with a custom input value 2`] = `
 <label id="deliveryStartDateField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="deliveryStartDate"
 >
@@ -312,7 +312,7 @@ exports[`DeliveryStartDate renders with a custom input value 2`] = `
 
 exports[`DeliveryStartDate renders with a disabled input 1`] = `
 <label id="deliveryStartDateField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="deliveryStartDate"
 >
@@ -351,7 +351,7 @@ exports[`DeliveryStartDate renders with a disabled input 1`] = `
 
 exports[`DeliveryStartDate renders with a disabled input 2`] = `
 <label id="deliveryStartDateField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="deliveryStartDate"
 >
@@ -390,7 +390,7 @@ exports[`DeliveryStartDate renders with a disabled input 2`] = `
 
 exports[`DeliveryStartDate renders with an error 1`] = `
 <label id="deliveryStartDateField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="deliveryStartDate"
 >
@@ -428,7 +428,7 @@ exports[`DeliveryStartDate renders with an error 1`] = `
 
 exports[`DeliveryStartDate renders with an error 2`] = `
 <label id="deliveryStartDateField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="deliveryStartDate"
 >
@@ -466,7 +466,7 @@ exports[`DeliveryStartDate renders with an error 2`] = `
 
 exports[`DeliveryStartDate renders with default props 1`] = `
 <label id="deliveryStartDateField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="deliveryStartDate"
 >
@@ -504,7 +504,7 @@ exports[`DeliveryStartDate renders with default props 1`] = `
 
 exports[`DeliveryStartDate renders with default props 2`] = `
 <label id="deliveryStartDateField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="deliveryStartDate"
 >

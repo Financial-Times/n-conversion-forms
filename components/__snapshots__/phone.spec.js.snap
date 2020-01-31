@@ -3,7 +3,7 @@
 exports[`Phone render a disabled phone input 1`] = `
 <label id="primaryTelephoneField"
        for="primaryTelephone"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required,number"
 >
   <span class="o-forms-title">
@@ -40,7 +40,7 @@ exports[`Phone render a disabled phone input 1`] = `
 exports[`Phone render a disabled phone input 2`] = `
 <label id="primaryTelephoneField"
        for="primaryTelephone"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required,number"
 >
   <span class="o-forms-title">
@@ -77,7 +77,7 @@ exports[`Phone render a disabled phone input 2`] = `
 exports[`Phone render a phone input with a label 1`] = `
 <label id="primaryTelephoneField"
        for="primaryTelephone"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required,number"
 >
   <span class="o-forms-title">
@@ -113,7 +113,7 @@ exports[`Phone render a phone input with a label 1`] = `
 exports[`Phone render a phone input with a label 2`] = `
 <label id="primaryTelephoneField"
        for="primaryTelephone"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required,number"
 >
   <span class="o-forms-title">
@@ -149,7 +149,7 @@ exports[`Phone render a phone input with a label 2`] = `
 exports[`Phone render a phone input with a label for B2B 1`] = `
 <label id="primaryTelephoneField"
        for="primaryTelephone"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required,number"
 >
   <span class="o-forms-title">
@@ -185,7 +185,7 @@ exports[`Phone render a phone input with a label for B2B 1`] = `
 exports[`Phone render a phone input with a label for B2B 2`] = `
 <label id="primaryTelephoneField"
        for="primaryTelephone"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required,number"
 >
   <span class="o-forms-title">
@@ -221,7 +221,7 @@ exports[`Phone render a phone input with a label for B2B 2`] = `
 exports[`Phone render a phone input with error styling 1`] = `
 <label id="primaryTelephoneField"
        for="primaryTelephone"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required,number"
 >
   <span class="o-forms-title">
@@ -257,7 +257,7 @@ exports[`Phone render a phone input with error styling 1`] = `
 exports[`Phone render a phone input with error styling 2`] = `
 <label id="primaryTelephoneField"
        for="primaryTelephone"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required,number"
 >
   <span class="o-forms-title">
@@ -293,7 +293,7 @@ exports[`Phone render a phone input with error styling 2`] = `
 exports[`Phone render default label if B2B and educational licence 1`] = `
 <label id="primaryTelephoneField"
        for="primaryTelephone"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required,number"
 >
   <span class="o-forms-title">
@@ -329,7 +329,7 @@ exports[`Phone render default label if B2B and educational licence 1`] = `
 exports[`Phone render default label if B2B and educational licence 2`] = `
 <label id="primaryTelephoneField"
        for="primaryTelephone"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required,number"
 >
   <span class="o-forms-title">

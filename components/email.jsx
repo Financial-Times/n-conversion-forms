@@ -26,7 +26,7 @@ export function Email ({
 	return (
 		<label
 			id={fieldId}
-			className="o-forms-field"
+			className="o-forms-field ncf__validation-error"
 			data-validate="required,email"
 			htmlFor={inputId}
 		>

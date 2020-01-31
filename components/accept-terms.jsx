@@ -27,7 +27,7 @@ export function AcceptTerms ({
 
 	const divProps = {
 		id: 'acceptTermsField',
-		className: 'o-forms-field',
+		className: 'o-forms-field ncf__validation-error',
 		'data-validate': 'required,checked',
 		...(isSignup && { 'data-trackable': 'sign-up-terms' }),
 		...(isRegister && { 'data-trackable': 'register-up-terms' })

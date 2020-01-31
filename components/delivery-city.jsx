@@ -17,7 +17,7 @@ export function DeliveryCity ({
 	return (
 		<label
 			id="deliveryCityField"
-			className="o-forms-field"
+			className="o-forms-field ncf__validation-error"
 			data-validate="required"
 			htmlFor="deliveryCity"
 		>

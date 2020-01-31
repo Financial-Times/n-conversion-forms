@@ -25,6 +25,7 @@ export function Password ({
 	const fieldClassNames = classNames([
 		'o-forms-field',
 		'ncf__password-field',
+		'ncf__validation-error',
 		{
 			'js-unknown-user-field': unknownUser
 		}

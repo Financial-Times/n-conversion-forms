@@ -2,7 +2,7 @@
 
 exports[`AcceptTerms renders appropriately if a registration 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
      data-trackable="register-up-terms"
 >
@@ -45,7 +45,7 @@ exports[`AcceptTerms renders appropriately if a registration 1`] = `
 
 exports[`AcceptTerms renders appropriately if a registration 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
      data-trackable="register-up-terms"
 >
@@ -88,7 +88,7 @@ exports[`AcceptTerms renders appropriately if a registration 2`] = `
 
 exports[`AcceptTerms renders appropriately if a signup 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
@@ -156,7 +156,7 @@ exports[`AcceptTerms renders appropriately if a signup 1`] = `
 
 exports[`AcceptTerms renders appropriately if a signup 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
@@ -224,7 +224,7 @@ exports[`AcceptTerms renders appropriately if a signup 2`] = `
 
 exports[`AcceptTerms renders appropriately if a signup and has special terms 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
@@ -297,7 +297,7 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 1`]
 
 exports[`AcceptTerms renders appropriately if a signup and has special terms 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
@@ -370,7 +370,7 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 2`]
 
 exports[`AcceptTerms renders appropriately if a signup for the print product 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
@@ -427,7 +427,7 @@ exports[`AcceptTerms renders appropriately if a signup for the print product 1`]
 
 exports[`AcceptTerms renders appropriately if a signup for the print product 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
@@ -484,7 +484,7 @@ exports[`AcceptTerms renders appropriately if a signup for the print product 2`]
 
 exports[`AcceptTerms renders appropriately if a signup for the print product and is embedded 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
@@ -541,7 +541,7 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
 
 exports[`AcceptTerms renders appropriately if a signup for the print product and is embedded 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
@@ -598,7 +598,7 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
 
 exports[`AcceptTerms renders appropriately if a signup for the print product and is not embedded 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
@@ -655,7 +655,7 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
 
 exports[`AcceptTerms renders appropriately if a signup for the print product and is not embedded 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
@@ -712,7 +712,7 @@ exports[`AcceptTerms renders appropriately if a signup for the print product and
 
 exports[`AcceptTerms renders appropriately if a signup not for the print product 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
@@ -780,7 +780,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
 
 exports[`AcceptTerms renders appropriately if a signup not for the print product 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
@@ -848,7 +848,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
 
 exports[`AcceptTerms renders appropriately if a signup not for the print product and is embedded 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
@@ -916,7 +916,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
 
 exports[`AcceptTerms renders appropriately if a signup not for the print product and is embedded 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
@@ -984,7 +984,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
 
 exports[`AcceptTerms renders appropriately if a signup not for the print product and is not embedded 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
@@ -1052,7 +1052,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
 
 exports[`AcceptTerms renders appropriately if a signup not for the print product and is not embedded 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
      data-trackable="sign-up-terms"
 >
@@ -1120,7 +1120,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
 
 exports[`AcceptTerms renders appropriately if input is checked 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -1163,7 +1163,7 @@ exports[`AcceptTerms renders appropriately if input is checked 1`] = `
 
 exports[`AcceptTerms renders appropriately if input is checked 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -1206,7 +1206,7 @@ exports[`AcceptTerms renders appropriately if input is checked 2`] = `
 
 exports[`AcceptTerms renders appropriately if is B2B 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -1239,7 +1239,7 @@ exports[`AcceptTerms renders appropriately if is B2B 1`] = `
 
 exports[`AcceptTerms renders appropriately if is B2B 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -1272,7 +1272,7 @@ exports[`AcceptTerms renders appropriately if is B2B 2`] = `
 
 exports[`AcceptTerms renders appropriately if is corporate signup 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -1323,7 +1323,7 @@ exports[`AcceptTerms renders appropriately if is corporate signup 1`] = `
 
 exports[`AcceptTerms renders appropriately if is corporate signup 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -1374,7 +1374,7 @@ exports[`AcceptTerms renders appropriately if is corporate signup 2`] = `
 
 exports[`AcceptTerms renders appropriately if is corporate signup and not trial 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -1425,7 +1425,7 @@ exports[`AcceptTerms renders appropriately if is corporate signup and not trial 
 
 exports[`AcceptTerms renders appropriately if is corporate signup and not trial 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -1476,7 +1476,7 @@ exports[`AcceptTerms renders appropriately if is corporate signup and not trial 
 
 exports[`AcceptTerms renders appropriately if is corporate signup and trial 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -1530,7 +1530,7 @@ exports[`AcceptTerms renders appropriately if is corporate signup and trial 1`] 
 
 exports[`AcceptTerms renders appropriately if is corporate signup and trial 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -1584,7 +1584,7 @@ exports[`AcceptTerms renders appropriately if is corporate signup and trial 2`] 
 
 exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms display) 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -1626,7 +1626,7 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
 
 exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms display) 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -1668,7 +1668,7 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
 
 exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms display) and custom age restriction is provided 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -1710,7 +1710,7 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
 
 exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms display) and custom age restriction is provided 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -1752,7 +1752,7 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
 
 exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms display) and is embedded 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -1794,7 +1794,7 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
 
 exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms display) and is embedded 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -1836,7 +1836,7 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
 
 exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms display) and is not embedded 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -1878,7 +1878,7 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
 
 exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms display) and is not embedded 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -1920,7 +1920,7 @@ exports[`AcceptTerms renders appropriately if is not B2B (i.e. default terms dis
 
 exports[`AcceptTerms renders appropriately if is transition 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -1987,7 +1987,7 @@ exports[`AcceptTerms renders appropriately if is transition 1`] = `
 
 exports[`AcceptTerms renders appropriately if is transition 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -2054,7 +2054,7 @@ exports[`AcceptTerms renders appropriately if is transition 2`] = `
 
 exports[`AcceptTerms renders appropriately if is transition with transition type of immediate 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -2121,7 +2121,7 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
 
 exports[`AcceptTerms renders appropriately if is transition with transition type of immediate 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -2188,7 +2188,7 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
 
 exports[`AcceptTerms renders appropriately if is transition with transition type other than immediate 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -2255,7 +2255,7 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
 
 exports[`AcceptTerms renders appropriately if is transition with transition type other than immediate 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -2322,7 +2322,7 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
 
 exports[`AcceptTerms renders with an error 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -2364,7 +2364,7 @@ exports[`AcceptTerms renders with an error 1`] = `
 
 exports[`AcceptTerms renders with an error 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -2406,7 +2406,7 @@ exports[`AcceptTerms renders with an error 2`] = `
 
 exports[`AcceptTerms renders with default props 1`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">
@@ -2448,7 +2448,7 @@ exports[`AcceptTerms renders with default props 1`] = `
 
 exports[`AcceptTerms renders with default props 2`] = `
 <div id="acceptTermsField"
-     class="o-forms-field"
+     class="o-forms-field ncf__validation-error"
      data-validate="required,checked"
 >
   <span class="o-forms-title n-ui-hide">

@@ -2,7 +2,7 @@
 
 exports[`Position can render a disable select 1`] = `
 <label id="positionField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="position"
 >
@@ -95,7 +95,7 @@ exports[`Position can render a disable select 1`] = `
 
 exports[`Position can render a disable select 2`] = `
 <label id="positionField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="position"
 >
@@ -188,7 +188,7 @@ exports[`Position can render a disable select 2`] = `
 
 exports[`Position can render an error message 1`] = `
 <label id="positionField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="position"
 >
@@ -280,7 +280,7 @@ exports[`Position can render an error message 1`] = `
 
 exports[`Position can render an error message 2`] = `
 <label id="positionField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="position"
 >
@@ -372,7 +372,7 @@ exports[`Position can render an error message 2`] = `
 
 exports[`Position can render an initial selected value 1`] = `
 <label id="positionField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="position"
 >
@@ -466,7 +466,7 @@ exports[`Position can render an initial selected value 1`] = `
 
 exports[`Position can render an initial selected value 2`] = `
 <label id="positionField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="position"
 >
@@ -560,7 +560,7 @@ exports[`Position can render an initial selected value 2`] = `
 
 exports[`Position render a select with a label 1`] = `
 <label id="positionField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="position"
 >
@@ -652,7 +652,7 @@ exports[`Position render a select with a label 1`] = `
 
 exports[`Position render a select with a label 2`] = `
 <label id="positionField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="position"
 >

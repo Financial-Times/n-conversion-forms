@@ -53,7 +53,7 @@ export function Country ({
 	return (
 		<label
 			id={fieldId}
-			className="o-forms-field js-unknown-user-field"
+			className="o-forms-field js-unknown-user-field ncf__validation-error"
 			data-validate="required"
 			htmlFor={selectProps.id}
 		>
