@@ -18,6 +18,7 @@ exports[`DeliveryCounty renders with a custom value 1`] = `
            data-trackable="field-deliveryCounty"
            autocomplete="address-level3"
            placeholder="e.g. Somerset"
+           maxlength="40"
            value="foobar"
     >
   </span>
@@ -42,6 +43,7 @@ exports[`DeliveryCounty renders with a custom value 2`] = `
            data-trackable="field-deliveryCounty"
            autocomplete="address-level3"
            placeholder="e.g. Somerset"
+           maxlength="40"
            value="foobar"
     >
   </span>
@@ -66,6 +68,7 @@ exports[`DeliveryCounty renders with a disabled input element 1`] = `
            data-trackable="field-deliveryCounty"
            autocomplete="address-level3"
            placeholder="e.g. Somerset"
+           maxlength="40"
            disabled
            value
     >
@@ -91,6 +94,7 @@ exports[`DeliveryCounty renders with a disabled input element 2`] = `
            data-trackable="field-deliveryCounty"
            autocomplete="address-level3"
            placeholder="e.g. Somerset"
+           maxlength="40"
            disabled
            value
     >
@@ -116,6 +120,7 @@ exports[`DeliveryCounty renders with an error 1`] = `
            data-trackable="field-deliveryCounty"
            autocomplete="address-level3"
            placeholder="e.g. Somerset"
+           maxlength="40"
            value
     >
   </span>
@@ -140,6 +145,7 @@ exports[`DeliveryCounty renders with an error 2`] = `
            data-trackable="field-deliveryCounty"
            autocomplete="address-level3"
            placeholder="e.g. Somerset"
+           maxlength="40"
            value
     >
   </span>
@@ -164,6 +170,7 @@ exports[`DeliveryCounty renders with default props 1`] = `
            data-trackable="field-deliveryCounty"
            autocomplete="address-level3"
            placeholder="e.g. Somerset"
+           maxlength="40"
            value
     >
   </span>
@@ -188,6 +195,7 @@ exports[`DeliveryCounty renders with default props 2`] = `
            data-trackable="field-deliveryCounty"
            autocomplete="address-level3"
            placeholder="e.g. Somerset"
+           maxlength="40"
            value
     >
   </span>

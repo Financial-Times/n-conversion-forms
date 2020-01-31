@@ -5,8 +5,7 @@ import classNames from 'classnames';
 export function DeliveryCity ({
 	hasError = false,
 	value = '',
-	isDisabled = false,
-	maxLength
+	isDisabled = false
 }) {
 	const inputWrapperClassName = classNames([
 		'o-forms-input',
@@ -32,8 +31,8 @@ export function DeliveryCity ({
 					data-trackable="field-deliveryCity"
 					autoComplete="address-level2"
 					placeholder="e.g. Bath"
+					maxLength={40}
 					aria-required="true"
-					maxLength={maxLength}
 					required
 					disabled={isDisabled}
 					defaultValue={value}
@@ -47,5 +46,5 @@ DeliveryCity.propTypes = {
 	hasError: PropTypes.bool,
 	value: PropTypes.string,
 	isDisabled: PropTypes.bool,
-	maxlength: PropTypes.number,
+	maxlength: PropTypes.number
 };
