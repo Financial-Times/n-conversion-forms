@@ -14,7 +14,12 @@
 		>
 			<option {{#unless value}}selected{{/unless}} value="">Select your occupation</option>
 			<option {{#if value}}{{#ifEquals  value 'Faculty/Other' }} selected{{/ifEquals}}{{/if}}>Faculty/Other</option>
+			{{#if isUSContract}}
+			<option {{#if value}}{{#ifEquals value 'Graduate Student'}}selected{{/ifEquals}}{{/if}}>Graduate Student</option>
+			<option {{#if value}}{{#ifEquals value 'Undergraduate Student'}}selected{{/ifEquals}}{{/if}}>Undergraduate Student</option>
+			{{else}}
 			<option {{#if value}}{{#ifEquals  value 'Student' }} selected{{/ifEquals}}{{/if}}>Student</option>
+			{{/if}}
 		</select>
 		<span class="o-forms-input__error">Please enter your occupation.</span>
 	</span>

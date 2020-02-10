@@ -9,12 +9,17 @@ export function EducationJobTitle ({
 	fieldId = 'jobTitleField',
 	inputId = 'jobTitle',
 	inputName = 'jobTitle',
+	isUSContract = false,
 }) {
 	const inputWrapperClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--select',
 		{ 'o-forms-input--invalid': hasError }
 	]);
+
+	const availableJobTitles = ['Faculty/Other'].concat(
+		isUSContract ? ['Graduate Student', 'Undergraduate Student'] : ['Student']
+	);
 
 	return (
 		<label
@@ -38,8 +43,9 @@ export function EducationJobTitle ({
 					defaultValue={value}
 				>
 					<option value="">Select your occupation</option>
-					<option>Faculty/Other</option>
-					<option>Student</option>
+					{availableJobTitles.map((jobTitle, idx) => {
+						return <option key={idx}>{jobTitle}</option>;
+					})}
 				</select>
 				<span className="o-forms-input__error">Please enter your occupation.</span>
 			</span>
