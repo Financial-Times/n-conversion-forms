@@ -1,5 +1,5 @@
 <div class="ncf__message{{#if isHidden}} ncf__hidden{{/if}}"{{#if name}} data-message-name="{{name}}"{{/if}}>
-	<div class="o-message o-message--inner {{#if isNotice}}o-message--notice{{else}}o-message--alert{{/if}}{{#if isError}} o-message--error{{else if isSuccess}} o-message--success{{else if isInform}} o-message--inform{{else}} o-message--neutral{{/if}}" data-o-component="o-message">
+	<div class="o-message{{#unless isStaticMessage}} o-message--inner{{/unless}} {{#unless isStaticMessage}}{{#if isNotice}}o-message--notice{{else}}o-message--alert{{/if}}{{/unless}}{{#if isError}} o-message--error{{else if isSuccess}} o-message--success{{else if isInform}} o-message--inform{{else}} o-message--neutral{{/if}}" data-o-component="o-message">
 		<div class="o-message__container">
 			<div class="o-message__content">
 				<p class="o-message__content-main">
