@@ -43,8 +43,8 @@ export function EducationJobTitle ({
 					defaultValue={value}
 				>
 					<option value="">Select your occupation</option>
-					{availableJobTitles.map((jobTitle, idx) => {
-						return <option key={idx}>{jobTitle}</option>;
+					{availableJobTitles.map((jobTitle, index) => {
+						return <option key={index}>{jobTitle}</option>;
 					})}
 				</select>
 				<span className="o-forms-input__error">Please enter your occupation.</span>
