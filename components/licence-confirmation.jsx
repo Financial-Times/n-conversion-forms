@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 export function LicenceConfirmation ({
 	isTrial = false,
 	isEmbedded = false,
-	duration = null
+	duration = null,
+	isEducationalLicence = false,
 }) {
 	const myFtLinkProps = {
 		href: '/myft',
@@ -26,7 +27,7 @@ export function LicenceConfirmation ({
 					{
 						isTrial
 							? (<h1 className="ncf__header ncf__header--confirmation">Your{ duration ? ` ${duration}` : '' } trial has started</h1>)
-							: (<h1 className="ncf__header ncf__header--confirmation">Great news, you have joined your company licence</h1>)
+							: (<h1 className="ncf__header ncf__header--confirmation">Great news, you have joined your { isEducationalLicence ? 'school' : 'company'} licence</h1>)
 					}
 				</div>
 			</div>
@@ -53,5 +54,6 @@ export function LicenceConfirmation ({
 LicenceConfirmation.propTypes = {
 	isTrial: PropTypes.bool,
 	isEmbedded: PropTypes.bool,
-	duration: PropTypes.string
+	duration: PropTypes.string,
+	isEducationalLicence: PropTypes.bool,
 };

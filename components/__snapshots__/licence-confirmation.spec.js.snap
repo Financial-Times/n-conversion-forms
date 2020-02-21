@@ -1,5 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`LicenceConfirmation renders if educational licence 1`] = `
+<div class="ncf ncf__wrapper">
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <div class="ncf__paragraph">
+      <h1 class="ncf__header ncf__header--confirmation">
+        Great news, you have joined your school licence
+      </h1>
+    </div>
+  </div>
+  <p class="ncf__paragraph">
+    Go to myFT to personalise your feed &amp; follow topics &amp; articles of interest to you. Set this up now or later.
+  </p>
+  <p class="ncf__paragraph">
+    Explore the homepage &amp; enjoy your unlimited access &amp; exclusive content.
+  </p>
+  <p class="ncf__paragraph ncf__center">
+    <a href="/myft"
+       class="ncf__button ncf__button--submit"
+    >
+      Go to myFT
+    </a>
+  </p>
+  <p class="ncf__paragraph ncf__center">
+    <a href="/"
+       class="ncf__link"
+    >
+      Go to the homepage
+    </a>
+  </p>
+</div>
+`;
+
+exports[`LicenceConfirmation renders if educational licence 2`] = `
+<div class="ncf ncf__wrapper">
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <div class="ncf__paragraph">
+      <h1 class="ncf__header ncf__header--confirmation">
+        Great news, you have joined your school licence
+      </h1>
+    </div>
+  </div>
+  <p class="ncf__paragraph">
+    Go to myFT to personalise your feed &amp; follow topics &amp; articles of interest to you. Set this up now or later.
+  </p>
+  <p class="ncf__paragraph">
+    Explore the homepage &amp; enjoy your unlimited access &amp; exclusive content.
+  </p>
+  <p class="ncf__paragraph ncf__center">
+    <a href="/myft"
+       class="ncf__button ncf__button--submit"
+    >
+      Go to myFT
+    </a>
+  </p>
+  <p class="ncf__paragraph ncf__center">
+    <a href="/"
+       class="ncf__link"
+    >
+      Go to the homepage
+    </a>
+  </p>
+</div>
+`;
+
 exports[`LicenceConfirmation renders if is embedded 1`] = `
 <div class="ncf ncf__wrapper">
   <div class="ncf__center">

@@ -34,4 +34,9 @@ describe('LicenceConfirmation', () => {
 
 		expect(LicenceConfirmation).toRenderAs(context, props);
 	});
+
+	it('renders if educational licence', () => {
+		const props = { isEducationalLicence: true };
+		expect(LicenceConfirmation).toRenderAs(context, props);
+	});
 });
