@@ -25,3 +25,6 @@ smoke:
 
 test-update-snapshots:
 	NODE_ENV=test jest --updateSnapshot
+
+prettier:
+	npx prettier --config .prettierrc.js --write './**/*'
