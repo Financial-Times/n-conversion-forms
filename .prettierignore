@@ -3,10 +3,9 @@ package-lock.json
 /pa11y_screenCapture/*
 /public
 /partials
+/styles
 /tmp/
-/.idea/
-/.sass-cache/
-.DS_Store
+/dist
 
 bower_components
 node_modules
@@ -18,9 +17,6 @@ node_modules
 *.sh
 .*
 *.feature
-
-/docs/images
-/views
 
 CODEOWNERS
 Makefile
