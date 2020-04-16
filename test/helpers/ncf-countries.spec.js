@@ -148,11 +148,11 @@ function generateCountryArray (length, { includeAllFrequent = true } = {}) {
 		// prettier-ignore
 		includeAllFrequent
 			? [
-					{ code: 'JPN' },
-					{ code: 'FRA' },
-					{ code: 'USA' },
-					{ code: 'CAN' },
-					{ code: 'GBR' },
+				{ code: 'JPN' },
+				{ code: 'FRA' },
+				{ code: 'USA' },
+				{ code: 'CAN' },
+				{ code: 'GBR' },
 			]
 			: []
 	);
