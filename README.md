@@ -12,22 +12,23 @@ make run # build and start documentation app at http://local.ft.com:5005/
 
 ## Table of contents
 
-* [Requirements](#requirements)
-* [Usage](#usage)
-* [Utilities](#utilities)
-* [Contributing](CONTRIBUTING.md)
+- [Requirements](#requirements)
+- [Usage](#usage)
+- [Utilities](#utilities)
+- [Contributing](CONTRIBUTING.md)
 
 ## Requirements
 
 For installing dependencies, running the build process and the documentation app
 
-* [Node](https://nodejs.org/en/)
-* [NPM](https://www.npmjs.com/)
-* [Bower](https://bower.io/)
+- [Node](https://nodejs.org/en/)
+- [NPM](https://www.npmjs.com/)
+- [Bower](https://bower.io/)
 
 ## Usage
 
 This repository contains JSX components and CSS that can be used in your projects.
+
 ### CSS
 
 The styles can be used by including the `main.scss` file within your own SASS files.
@@ -48,22 +49,22 @@ import MyModule from 'n-conversion-forms/utils/my-module';
 
 ### Table of contents
 
-* [AppBanner](#app-banner)
-* [TrialBanner](#trial-banner)
-* [Country](#country)
-* [Delivery Option](#delivery-option)
-* [Delivery Start Date](#delivery-start-date)
-* [Email](#email)
-* [Event Notifier](#event-notifier)
-* [Loader](#loader)
-* [Password](#password)
-* [Payment Term](#payment-term)
-* [Payment Type](#payment-type)
-* [Salesforce](#salesforce)
-* [Submit](#submit)
-* [Tracking](#tracking)
-* [Validation](#validation)
-* [Zuora](#zuora)
+- [AppBanner](#app-banner)
+- [TrialBanner](#trial-banner)
+- [Country](#country)
+- [Delivery Option](#delivery-option)
+- [Delivery Start Date](#delivery-start-date)
+- [Email](#email)
+- [Event Notifier](#event-notifier)
+- [Loader](#loader)
+- [Password](#password)
+- [Payment Term](#payment-term)
+- [Payment Type](#payment-type)
+- [Salesforce](#salesforce)
+- [Submit](#submit)
+- [Tracking](#tracking)
+- [Validation](#validation)
+- [Zuora](#zuora)
 
 ### AppBanner
 
@@ -77,7 +78,6 @@ Simple utility to use in conjunction with the `app-banner` partial that performs
 
 Displays banner for trial only. Designed to take in dynamic period `trialDuration`. If period is not present, then default 30 day period would be used
 
-
 ### Country
 
 ```js
@@ -85,7 +85,7 @@ const country = new Country(document);
 
 // Get the value on change
 country.onChange(() => {
-  const selected = country.getSelected();
+	const selected = country.getSelected();
 });
 ```
 
@@ -101,7 +101,7 @@ This utility provides the ability to bind a callback that gets fired when the de
 
 ```js
 deliveryOption.handleDeliveryOptionChange(() => {
-  // your code here.
+	// your code here.
 });
 ```
 
@@ -111,7 +111,7 @@ This utility provides the ability to call a backend service that validates the s
 
 ```js
 deliveryStartDate.handleDeliveryStartDateChange('/api/path', () => {
-  // This function needs to return an object containing any extra data to send with the request.
+	// This function needs to return an object containing any extra data to send with the request.
 });
 ```
 
@@ -132,12 +132,16 @@ const email = new Email(document);
 
 This utility provides the following:
 
-+ If a confirm email field is present will validate to ensure the email addresses match and present the user with an error if not.
-+ Registering an email exists lookup as follows:
+- If a confirm email field is present will validate to ensure the email addresses match and present the user with an error if not.
+- Registering an email exists lookup as follows:
 
-    ```js
-    email.registerEmailExistsCheck(backendServiceUrl, onFoundCallback, onNotFoundCallback);
-    ```
+  ```js
+  email.registerEmailExistsCheck(
+  	backendServiceUrl,
+  	onFoundCallback,
+  	onNotFoundCallback
+  );
+  ```
 
   **NB** It's recommended you have a hidden `#csrfToken` input element that you validate the request with in your backend service to prevent having your service abused.
 
@@ -155,7 +159,7 @@ const loader = new Loader(document);
 
 Requirements:
 
-+ `{{> n-conversion-forms/partials/loader }}` - The element containing the overlay and loading message/spinner. Place this somewhere near the bottom of your document.
+- `{{> n-conversion-forms/partials/loader }}` - The element containing the overlay and loading message/spinner. Place this somewhere near the bottom of your document.
 
 If you want to define some content, this can be done as follows:
 
@@ -196,8 +200,8 @@ To dynamically set the message to be displayed (either of the properties are opt
 
 ```js
 loader.setContent({
-  content: '<p>Main content for the message can be defined in here</p>',
-  title: 'Hooray!'
+	content: '<p>Main content for the message can be defined in here</p>',
+	title: 'Hooray!',
 });
 ```
 
@@ -224,11 +228,13 @@ const paymentTerm = new PaymentTerm(document);
 paymentTerm.getSelected();
 
 // Update the payment term options displayed
-const options = [{
-  name: 'Name of term',
-  value: 'Value to send',
-  description: 'Can contain <strong>HTML</strong>'
-}];
+const options = [
+	{
+		name: 'Name of term',
+		value: 'Value to send',
+		description: 'Can contain <strong>HTML</strong>',
+	},
+];
 paymentTerm.updateOptions(options);
 ```
 
@@ -251,10 +257,10 @@ Allows the control of which payment types are shown to the user. It relies on th
 The following payment types are allowed:
 
 ```js
-PaymentType.CREDITCARD
-PaymentType.DIRECTDEBIT
-PaymentType.PAYPAL
-PaymentType.APPLEPAY
+PaymentType.CREDITCARD;
+PaymentType.DIRECTDEBIT;
+PaymentType.PAYPAL;
+PaymentType.APPLEPAY;
 ```
 
 ### Salesforce
@@ -285,8 +291,8 @@ submit.disable();
 
 // Whether or not the button is disabled.
 submit.isDisabled();
-
 ```
+
 ### Tracking
 
 ```js
@@ -314,11 +320,11 @@ You can add some custom validation functionality as follows:
 
 ```js
 validation.addCustomValidation({
-  errorMessage: 'Custom error message here.',
-  field: domElementToValidate,
-  validator: () => {
-    // Custom validation code here. *Must* return truthy or falsey.
-  }
+	errorMessage: 'Custom error message here.',
+	field: domElementToValidate,
+	validator: () => {
+		// Custom validation code here. *Must* return truthy or falsey.
+	},
 });
 ```
 
@@ -330,7 +336,7 @@ The Zuora utility aims to wrap the Zuora client side library to make it more use
 
 Requirements:
 
-+ `{{> n-conversion-forms/partials/zuora }}` - Place this where you want the form to render. This partial also includes the Zuora client side library.
+- `{{> n-conversion-forms/partials/zuora }}` - Place this where you want the form to render. This partial also includes the Zuora client side library.
 
 ```js
 const zuora = new Zuora(window);
@@ -346,33 +352,33 @@ zuora.submit(paymentType);
 // Call a provided function upon the value of the direct debit agreement checkbox changing
 // (inside the 3rd party Zuora iframe).
 // @param {boolean} checked - whether the box was checked or not
-zuora.onAgreementCheckboxChange(checked => {});
+zuora.onAgreementCheckboxChange((checked) => {});
 
 // Call a provided function upon the confirmation or cancellation of the direct debit mandate
 // (inside the 3rd party Zuora iframe).
 // @param {boolean} confirmed - whether confirmed or not
-zuora.onDirectDebitConfirmation(confirmed => {});
+zuora.onDirectDebitConfirmation((confirmed) => {});
 
 // Example implementation on form submission
 try {
-  await this.zuora.submit('directdebit');
+	await this.zuora.submit('directdebit');
 } catch (error) {
-  if (error instanceof Zuora.ZuoraErrorValidation) {
-    // Validation messages will be shown on HPM fields
-    // Put other functionality on validation failure here
-  } else if (error instanceof Zuora.ZuoraErrorMandateCancel) {
-    // Fail silently, the direct debit mandate has been cancelled
-  } else if (error instanceof Zuora.ZuoraErrorInvalidPaymentType) {
-    // Invalid payment type
-  } else {
-    // General payment failure
-  }
+	if (error instanceof Zuora.ZuoraErrorValidation) {
+		// Validation messages will be shown on HPM fields
+		// Put other functionality on validation failure here
+	} else if (error instanceof Zuora.ZuoraErrorMandateCancel) {
+		// Fail silently, the direct debit mandate has been cancelled
+	} else if (error instanceof Zuora.ZuoraErrorInvalidPaymentType) {
+		// Invalid payment type
+	} else {
+		// General payment failure
+	}
 }
-
 ```
 
 ### Additional Notes
 
 #### Autocomplete attributes
+
 Autocomplete fields documentation is available here:
 https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute

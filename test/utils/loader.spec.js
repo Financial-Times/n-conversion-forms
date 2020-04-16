@@ -14,16 +14,16 @@ describe('Loader', () => {
 		elementStub = {
 			classList: {
 				add: sandbox.stub(),
-				remove: sandbox.stub()
+				remove: sandbox.stub(),
 			},
 			focus: sandbox.stub(),
 			insertBefore: sandbox.stub(),
-			removeAttribute: sandbox.stub()
+			removeAttribute: sandbox.stub(),
 		};
 		documentStub = {
 			addEventListener: sandbox.stub(),
 			querySelector: sandbox.stub(),
-			removeEventListener: sandbox.stub()
+			removeEventListener: sandbox.stub(),
 		};
 		global.document.createElement = sandbox.stub().returns(elementStub);
 	});
@@ -64,15 +64,15 @@ describe('Loader', () => {
 		describe('setContent', () => {
 			it('should create the title element if it doesn\'t exist yet', () => {
 				loader.$loaderContentTitle = null;
-				loader.setContent({ title: 'Hooray!'});
+				loader.setContent({ title: 'Hooray!' });
 				expect(elementStub.insertBefore.calledWith(elementStub)).to.be.true;
 			});
 			it('should set the title of the partial', () => {
-				loader.setContent({ title: 'Hooray!'});
+				loader.setContent({ title: 'Hooray!' });
 				expect(elementStub.innerHTML).to.equal('Hooray!');
 			});
 			it('should set the content of the partial', () => {
-				loader.setContent({ content: '<div>Baz</div>'});
+				loader.setContent({ content: '<div>Baz</div>' });
 				expect(elementStub.innerHTML).to.equal('<div>Baz</div>');
 			});
 		});
@@ -80,8 +80,12 @@ describe('Loader', () => {
 		describe('show', () => {
 			it('should show the loader', () => {
 				loader.show();
-				expect(elementStub.classList.add.getCall(0).args[0]).to.equal(loader.VISIBLE_CLASS);
-				expect(elementStub.classList.remove.getCall(0).args[0]).to.equal(loader.HIDDEN_CLASS);
+				expect(elementStub.classList.add.getCall(0).args[0]).to.equal(
+					loader.VISIBLE_CLASS
+				);
+				expect(elementStub.classList.remove.getCall(0).args[0]).to.equal(
+					loader.HIDDEN_CLASS
+				);
 			});
 			it('should call setContent if content is passed', () => {
 				const content = { title: 'foo' };
@@ -95,8 +99,12 @@ describe('Loader', () => {
 		describe('hide', () => {
 			it('should hide the loader', () => {
 				loader.hide();
-				expect(elementStub.classList.add.getCall(0).args[0]).to.equal(loader.HIDDEN_CLASS);
-				expect(elementStub.classList.remove.getCall(0).args[0]).to.equal(loader.VISIBLE_CLASS);
+				expect(elementStub.classList.add.getCall(0).args[0]).to.equal(
+					loader.HIDDEN_CLASS
+				);
+				expect(elementStub.classList.remove.getCall(0).args[0]).to.equal(
+					loader.VISIBLE_CLASS
+				);
 			});
 		});
 	});
@@ -119,8 +127,12 @@ describe('Loader', () => {
 		describe('showAndPreventTabbing', () => {
 			it('should intercept tab keypresses to prevent tabbing to content underneath', () => {
 				loader.showAndPreventTabbing();
-				expect(documentStub.addEventListener.getCall(0).args[0]).to.equal('keydown');
-				expect(documentStub.addEventListener.getCall(0).args[1].name).to.equal('interceptTab');
+				expect(documentStub.addEventListener.getCall(0).args[0]).to.equal(
+					'keydown'
+				);
+				expect(documentStub.addEventListener.getCall(0).args[1].name).to.equal(
+					'interceptTab'
+				);
 			});
 		});
 
@@ -128,14 +140,20 @@ describe('Loader', () => {
 			it('should remove focus from the loader', () => {
 				loader.hide();
 
-				expect(elementStub.removeAttribute.getCall(0).args[0]).to.equal('tabindex');
+				expect(elementStub.removeAttribute.getCall(0).args[0]).to.equal(
+					'tabindex'
+				);
 			});
 
 			it('should stop intercepting tab keypresses', () => {
 				loader.hide();
 
-				expect(documentStub.removeEventListener.getCall(0).args[0]).to.equal('keydown');
-				expect(documentStub.removeEventListener.getCall(0).args[1].name).to.equal('interceptTab');
+				expect(documentStub.removeEventListener.getCall(0).args[0]).to.equal(
+					'keydown'
+				);
+				expect(
+					documentStub.removeEventListener.getCall(0).args[1].name
+				).to.equal('interceptTab');
 			});
 
 			it('should return focus to a previously focused element', () => {

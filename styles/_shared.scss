@@ -25,7 +25,9 @@
 
 	// Overrides o-forms styling for round radio buttons in the checked state.
 	/* stylelint-disable-next-line */
-	.o-forms-input--radio-round input[type=radio]:checked + .o-forms-input__label {
+	.o-forms-input--radio-round
+		input[type='radio']:checked
+		+ .o-forms-input__label {
 		background-color: oColorsByName('teal');
 		color: oColorsByName('white');
 		position: relative;

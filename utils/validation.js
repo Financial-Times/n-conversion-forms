@@ -2,7 +2,6 @@ const OForms = require('o-forms').default;
 const Input = require('o-forms/src/js/input').default;
 
 class Validation {
-
 	/**
 	 * Set up the Validation utility
 	 * @param {Boolean} mutePromptBeforeLeaving (default: false) Whether to prompt the user before leaving if there have been changes in any of the fields.
@@ -10,8 +9,9 @@ class Validation {
 	constructor ({ mutePromptBeforeLeaving, useBrowserValidation } = {}) {
 		this.$form = document.querySelector('form.ncf');
 		this.oForms = OForms.init(this.$form, { useBrowserValidation });
-		this.$requiredEls = this.oForms.formInputs
-			.filter(({input}) => input.type !== 'hidden' && input.required);
+		this.$requiredEls = this.oForms.formInputs.filter(
+			({ input }) => input.type !== 'hidden' && input.required
+		);
 		this.formValid = false;
 		this.formChanged = false;
 		this.formSubmit = false;
@@ -26,9 +26,17 @@ class Validation {
 		if (!this.$form) return;
 		for (const $el of this.$requiredEls) {
 			if (/(checkbox)/gi.test($el.input.type)) {
-				$el.input.addEventListener('change', this.checkElementValidity.bind(this, $el.input), false);
+				$el.input.addEventListener(
+					'change',
+					this.checkElementValidity.bind(this, $el.input),
+					false
+				);
 			} else {
-				$el.input.addEventListener('blur', this.checkFormValidity.bind(this), false);
+				$el.input.addEventListener(
+					'blur',
+					this.checkFormValidity.bind(this),
+					false
+				);
 			}
 		}
 
@@ -43,7 +51,7 @@ class Validation {
 		if (!this.mutePromptBeforeLeaving) {
 			window.onbeforeunload = () => {
 				// Prompt the user about leaving in case they have changes they might lose.
-				return this.formChanged && !this.formSubmit || null;
+				return (this.formChanged && !this.formSubmit) || null;
 			};
 		}
 		this.checkFormValidity();
@@ -65,7 +73,7 @@ class Validation {
 	 * @param {Function} validator The function that will be run to determine whether the field is valid (needs to return `true` or `false`).
 	 * @param {String} errorMessage The error message to display to the user should the validation fail.
 	 */
-	addCustomValidation ({ field, validator, errorMessage}) {
+	addCustomValidation ({ field, validator, errorMessage }) {
 		if (this.customValidation.get(field.name)) {
 			throw new Error(`Custom validation for ${field.name} already exists.`);
 		}
@@ -112,7 +120,12 @@ class Validation {
 			$parent.insertBefore($message, $field.nextSibling);
 		}
 
-		if ($oFormsErrorText && $oFormsErrorText.parentNode.className.indexOf('ncf__custom-validation-error') === -1) {
+		if (
+			$oFormsErrorText &&
+			$oFormsErrorText.parentNode.className.indexOf(
+				'ncf__custom-validation-error'
+			) === -1
+		) {
 			// If there's an oForms error we need to hide it so that we can use the `o-forms-input--invalid` class
 			//  on the container to highlight the field as invalid.
 			$oFormsErrorText.style.display = 'none';
@@ -126,8 +139,12 @@ class Validation {
 	 */
 	clearCustomFieldValidationError ($field) {
 		$field.setCustomValidity('');
-		const $message = this.$form.querySelector(`#custom-validation-for-${$field.name}`);
-		const $oFormsErrorText = $field.parentNode.querySelector('.o-forms-input__error');
+		const $message = this.$form.querySelector(
+			`#custom-validation-for-${$field.name}`
+		);
+		const $oFormsErrorText = $field.parentNode.querySelector(
+			'.o-forms-input__error'
+		);
 
 		if ($message) {
 			$message.parentNode.removeChild($message);
@@ -150,7 +167,7 @@ class Validation {
 		if (this.customValidation.size > 0 && !this.debounceCustomValidation) {
 			this.debounceCustomValidation = true;
 
-			this.customValidation.forEach(async validator => {
+			this.customValidation.forEach(async (validator) => {
 				await validator();
 			});
 
@@ -194,9 +211,10 @@ class Validation {
 	 * @returns {DOMElements} The array-like containing the invalid form elements.
 	 */
 	getInvalidEls () {
-		return this.$requiredEls.filter($el => !$el.input.checkValidity()).map($el => $el.input);
+		return this.$requiredEls
+			.filter(($el) => !$el.input.checkValidity())
+			.map(($el) => $el.input);
 	}
-
 }
 
 module.exports = Validation;

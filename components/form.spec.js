@@ -9,7 +9,7 @@ expect.extend(expectToRenderCorrectly);
 describe('Form', () => {
 	it('renders a form element with default props', () => {
 		const props = {
-			children: (<div id={TEST_FIELDS_ID}></div>)
+			children: <div id={TEST_FIELDS_ID}></div>,
 		};
 
 		expect(Form).toRenderCorrectly(props);
@@ -17,8 +17,8 @@ describe('Form', () => {
 
 	it('renders a form element with custom form action value', () => {
 		const props = {
-			children: (<div id={TEST_FIELDS_ID}></div>),
-			action: 'http://foo.com/search'
+			children: <div id={TEST_FIELDS_ID}></div>,
+			action: 'http://foo.com/search',
 		};
 
 		expect(Form).toRenderCorrectly(props);
@@ -26,8 +26,8 @@ describe('Form', () => {
 
 	it('renders a form element with custom form method value', () => {
 		const props = {
-			children: (<div id={TEST_FIELDS_ID}></div>),
-			method: 'GET'
+			children: <div id={TEST_FIELDS_ID}></div>,
+			method: 'GET',
 		};
 
 		expect(Form).toRenderCorrectly(props);

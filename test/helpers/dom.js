@@ -13,5 +13,5 @@ const createElement = (config, sandbox) => {
 };
 
 module.exports = {
-	createElement
+	createElement,
 };

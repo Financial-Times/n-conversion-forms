@@ -7,9 +7,7 @@ describe('DeliverySecurityInstructions', () => {
 		let wrapper;
 
 		beforeEach(() => {
-			wrapper = shallow(
-				<DeliverySecurityInstructions />
-			);
+			wrapper = shallow(<DeliverySecurityInstructions />);
 		});
 
 		test('contains textAreaProps id set to default: deliverySecurityInstructionsField ', () => {
@@ -17,9 +15,7 @@ describe('DeliverySecurityInstructions', () => {
 		});
 
 		test('contains id set to foo', () => {
-			wrapper = shallow(
-				<DeliverySecurityInstructions fieldId='foo'/>
-			);
+			wrapper = shallow(<DeliverySecurityInstructions fieldId="foo" />);
 			expect(wrapper.prop('id')).toBe('foo');
 		});
 
@@ -28,16 +24,12 @@ describe('DeliverySecurityInstructions', () => {
 		});
 
 		test('contains htmlFor set to foo', () => {
-			wrapper = shallow(
-				<DeliverySecurityInstructions inputId='foo'/>
-			);
+			wrapper = shallow(<DeliverySecurityInstructions inputId="foo" />);
 			expect(wrapper.prop('htmlFor')).toBe('foo');
 		});
 
 		test('containing o-forms-input--invalid when hasError is set to true', () => {
-			wrapper = shallow(
-				<DeliverySecurityInstructions hasError={true}/>
-			);
+			wrapper = shallow(<DeliverySecurityInstructions hasError={true} />);
 			const secondChildProps = wrapper.props().children[1].props;
 
 			expect(secondChildProps.className).toContain('o-forms-input--invalid');
@@ -45,7 +37,9 @@ describe('DeliverySecurityInstructions', () => {
 
 		test('does not contain o-forms-input--invalid when hasError is false', () => {
 			const secondChildProps = wrapper.props().children[1].props;
-			expect(secondChildProps.className).not.toContain('o-forms-input--invalid');
+			expect(secondChildProps.className).not.toContain(
+				'o-forms-input--invalid'
+			);
 		});
 
 		describe('sets default props for textarea', () => {
@@ -69,11 +63,15 @@ describe('DeliverySecurityInstructions', () => {
 			});
 
 			it('sets data-trackable to field-deliverySecurityInstructions', () => {
-				expect(textAreaProps['data-trackable']).toBe('field-deliverySecurityInstructions');
+				expect(textAreaProps['data-trackable']).toBe(
+					'field-deliverySecurityInstructions'
+				);
 			});
 
 			it('sets the `placeholder` property to:', () => {
-				expect(textAreaProps.placeholder).toBe('Please enter any secure information here, e.g. security gate access codes');
+				expect(textAreaProps.placeholder).toBe(
+					'Please enter any secure information here, e.g. security gate access codes'
+				);
 			});
 
 			it('sets disabled to false', () => {
@@ -88,11 +86,11 @@ describe('DeliverySecurityInstructions', () => {
 		describe('sets props for textarea based on values given', () => {
 			const wrapper = shallow(
 				<DeliverySecurityInstructions
-					inputId='inputId'
+					inputId="inputId"
 					maxlength={10}
 					rows={3}
 					isDisabled={true}
-					placeholder='placeholder'
+					placeholder="placeholder"
 					value={'value'}
 				/>
 			);

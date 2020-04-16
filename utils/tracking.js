@@ -38,9 +38,11 @@ class Tracking {
 
 		// Clean eventData of empty properties
 		for (const property in eventData) {
-			if (eventData[property] === undefined ||
+			if (
+				eventData[property] === undefined ||
 				eventData[property] === null ||
-				eventData[property] === '') {
+				eventData[property] === ''
+			) {
 				delete eventData[property];
 			}
 		}
@@ -61,7 +63,7 @@ class Tracking {
 		const event = new this.window.CustomEvent('oTracking.event', {
 			bubbles: true,
 			cancelable: true,
-			detail: data
+			detail: data,
 		});
 
 		this.element.dispatchEvent(event);
@@ -86,7 +88,7 @@ class Tracking {
 	 * @returns {Array}
 	 */
 	initDebugData () {
-		return this.window.debugTracking = this.window.debugTracking || [];
+		return (this.window.debugTracking = this.window.debugTracking || []);
 	}
 
 	/**
@@ -95,7 +97,10 @@ class Tracking {
 	 * @returns {Number} Number of debug messages
 	 */
 	addDebugData (data = {}) {
-		return this.window.debugTracking.push({ time: new this.window.Date(), data });
+		return this.window.debugTracking.push({
+			time: new this.window.Date(),
+			data,
+		});
 	}
 
 	/**
@@ -105,6 +110,6 @@ class Tracking {
 	getDebugData () {
 		return this.window.debugTracking || [];
 	}
-};
+}
 
 module.exports = Tracking;

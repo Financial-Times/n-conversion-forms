@@ -12,7 +12,7 @@ describe('PaymentType', () => {
 
 	it('render with enableApplepay', () => {
 		const props = {
-			enableApplepay: true
+			enableApplepay: true,
 		};
 
 		expect(PaymentType).toRenderCorrectly(props);
@@ -20,7 +20,7 @@ describe('PaymentType', () => {
 
 	it('render with enableCreditcard', () => {
 		const props = {
-			enableCreditcard: true
+			enableCreditcard: true,
 		};
 
 		expect(PaymentType).toRenderCorrectly(props);
@@ -28,7 +28,7 @@ describe('PaymentType', () => {
 
 	it('render with enableDirectdebit', () => {
 		const props = {
-			enableDirectdebit: true
+			enableDirectdebit: true,
 		};
 
 		expect(PaymentType).toRenderCorrectly(props);
@@ -36,7 +36,7 @@ describe('PaymentType', () => {
 
 	it('render with enablePaypal', () => {
 		const props = {
-			enablePaypal: true
+			enablePaypal: true,
 		};
 
 		expect(PaymentType).toRenderCorrectly(props);
@@ -44,7 +44,7 @@ describe('PaymentType', () => {
 
 	it('render with value', () => {
 		const props = {
-			value: 'paypal'
+			value: 'paypal',
 		};
 
 		expect(PaymentType).toRenderCorrectly(props);
@@ -52,7 +52,7 @@ describe('PaymentType', () => {
 
 	it('can initialise with the loader visible', () => {
 		const props = {
-			showLoaderOnInit: true
+			showLoaderOnInit: true,
 		};
 
 		expect(PaymentType).toRenderCorrectly({}, props);

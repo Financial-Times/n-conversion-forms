@@ -1,11 +1,10 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { canadianProvinces } from 'n-common-static-data';
 const defaultProvinces = canadianProvinces.provinces;
 
-export function Province ({
+export function Province({
 	value,
 	fieldId = 'provinceField',
 	selectId = 'province',
@@ -13,17 +12,17 @@ export function Province ({
 	isHidden = false,
 	isBillingProvince = false,
 	isDisabled = false,
-	provinces = defaultProvinces
+	provinces = defaultProvinces,
 }) {
 	const fieldClassNames = classNames([
 		'o-forms-field',
-		{ 'ncf__hidden': isHidden }
+		{ ncf__hidden: isHidden },
 	]);
 
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--select',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	return (
@@ -34,7 +33,9 @@ export function Province ({
 			htmlFor={selectId}
 		>
 			<span className="o-forms-title">
-				<span className="o-forms-title__main">{ isBillingProvince ? 'Billing ' : '' }Province</span>
+				<span className="o-forms-title__main">
+					{isBillingProvince ? 'Billing ' : ''}Province
+				</span>
 			</span>
 			<span className={inputWrapperClassNames}>
 				<select
@@ -46,15 +47,21 @@ export function Province ({
 					disabled={isDisabled}
 					defaultValue={value}
 				>
-					<option disabled value="">Please select a province</option>
+					<option disabled value="">
+						Please select a province
+					</option>
 
-					{
-						provinces.map(({ code, name }) => {
-							return (<option key={code} value={code}>{name}</option>);
-						})
-					}
+					{provinces.map(({ code, name }) => {
+						return (
+							<option key={code} value={code}>
+								{name}
+							</option>
+						);
+					})}
 				</select>
-				<span className="o-forms-input__error">Please select your province.</span>
+				<span className="o-forms-input__error">
+					Please select your province.
+				</span>
 			</span>
 		</label>
 	);
@@ -68,8 +75,10 @@ Province.propTypes = {
 	isHidden: PropTypes.bool,
 	isBillingProvince: PropTypes.bool,
 	isDisabled: PropTypes.bool,
-	provinces: PropTypes.arrayOf(PropTypes.shape({
-		code: PropTypes.string,
-		name: PropTypes.string,
-	}))
+	provinces: PropTypes.arrayOf(
+		PropTypes.shape({
+			code: PropTypes.string,
+			name: PropTypes.string,
+		})
+	),
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function EducationJobTitle ({
+export function EducationJobTitle({
 	value = '',
 	isDisabled = false,
 	hasError = false,
@@ -14,7 +14,7 @@ export function EducationJobTitle ({
 	const inputWrapperClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--select',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	const availableJobTitles = ['Faculty/Other'].concat(
@@ -47,11 +47,13 @@ export function EducationJobTitle ({
 						return <option key={index}>{jobTitle}</option>;
 					})}
 				</select>
-				<span className="o-forms-input__error">Please enter your occupation.</span>
+				<span className="o-forms-input__error">
+					Please enter your occupation.
+				</span>
 			</span>
 		</label>
 	);
-};
+}
 
 EducationJobTitle.propTypes = {
 	value: PropTypes.string,

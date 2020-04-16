@@ -9,7 +9,7 @@ expect.extend(expectToRenderCorrectly);
 describe('ErrorPage', () => {
 	it('renders with default props', () => {
 		const props = {
-			children: CHILDREN
+			children: CHILDREN,
 		};
 
 		expect(ErrorPage).toRenderCorrectly(props);
@@ -18,7 +18,7 @@ describe('ErrorPage', () => {
 	it('renders with header', () => {
 		const props = {
 			children: CHILDREN,
-			header: 'HEADER'
+			header: 'HEADER',
 		};
 
 		expect(ErrorPage).toRenderCorrectly(props);
@@ -27,7 +27,7 @@ describe('ErrorPage', () => {
 	it('renders with message', () => {
 		const props = {
 			children: CHILDREN,
-			message: 'MESSAGE'
+			message: 'MESSAGE',
 		};
 
 		expect(ErrorPage).toRenderCorrectly(props);

@@ -3,7 +3,7 @@ import { DeliveryAddress } from './delivery-address';
 
 export default {
 	title: 'Delivery Address',
-	component: DeliveryAddress
+	component: DeliveryAddress,
 };
 
 export const Basic = (args) => <DeliveryAddress {...args} />;

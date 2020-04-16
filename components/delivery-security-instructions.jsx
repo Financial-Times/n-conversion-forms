@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function DeliverySecurityInstructions ({
+export function DeliverySecurityInstructions({
 	fieldId = 'deliverySecurityInstructionsField',
 	hasError = false,
 	inputId = 'deliverySecurityInstructions',
@@ -10,16 +10,17 @@ export function DeliverySecurityInstructions ({
 	rows = null,
 	isDisabled = false,
 	placeholder = '',
-	value = ''
+	value = '',
 }) {
 	const textAreaWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--textarea',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	const maxLengthText = maxlength ? `(Max. ${maxlength} characters)` : '';
-	const defaultPlaceholder = 'Please enter any secure information here, e.g. security gate access codes';
+	const defaultPlaceholder =
+		'Please enter any secure information here, e.g. security gate access codes';
 
 	const textAreaProps = {
 		id: inputId,
@@ -29,7 +30,7 @@ export function DeliverySecurityInstructions ({
 		'data-trackable': 'field-deliverySecurityInstructions',
 		placeholder: placeholder ? placeholder : defaultPlaceholder,
 		disabled: isDisabled,
-		defaultValue: value
+		defaultValue: value,
 	};
 
 	return (
@@ -47,18 +48,20 @@ export function DeliverySecurityInstructions ({
 				<textarea {...textAreaProps} />
 			</span>
 
-			<span className='additional-field-information'>NB. Details supplied here will not appear on packaging.</span>
+			<span className="additional-field-information">
+				NB. Details supplied here will not appear on packaging.
+			</span>
 		</label>
 	);
 }
 
 DeliverySecurityInstructions.propTypes = {
-	fieldId : PropTypes.string,
+	fieldId: PropTypes.string,
 	hasError: PropTypes.bool,
-	inputId:  PropTypes.string,
+	inputId: PropTypes.string,
 	maxlength: PropTypes.number,
 	rows: PropTypes.number,
 	isDisabled: PropTypes.bool,
 	value: PropTypes.string,
-	placeholder: PropTypes.string
+	placeholder: PropTypes.string,
 };

@@ -1,12 +1,7 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function Debug ({
-	isTest = false,
-	showHelpers = false,
-	links = {}
-}) {
+export function Debug({ isTest = false, showHelpers = false, links = {} }) {
 	// Strings are used rather than JSX as this component is injected into HTML
 	// along with onclick handlers, styles and javascript. JSX will escape and
 	// modify the HTML which we do not want. Once our applications are on JSX
@@ -26,7 +21,10 @@ export function Debug ({
 		<button id="ncf-copy-us-visa" class="ncf__button ncf__button--inverse" onclick="copyToClipboard('usVisa');" title="Copy US Visa card number to clipboard">US Visa</button>
 		<button id="ncf-copy-us-amex" class="ncf__button ncf__button--inverse" onclick="copyToClipboard('usAmex');" title="Copy US Amex card number to clipboard">US Amex</button>
 	`;
-	const linksString = Object.keys(links).map(link => `<a key=${link} class="ncf__button ncf__button--inverse ncf__link" href="${links[link]}">${link}</a>`);
+	const linksString = Object.keys(links).map(
+		(link) =>
+			`<a key=${link} class="ncf__button ncf__button--inverse ncf__link" href="${links[link]}">${link}</a>`
+	);
 	const helpers = `
 		<span class="ncf__debug-helpers">
 			<button class="ncf__button ncf__button--inverse" onclick="logout();" title="Logout and refresh">Logout</button>
@@ -36,8 +34,13 @@ export function Debug ({
 			${links.length ? linksString : ''}
 		</span>
 	`;
-	const html = {__html: `${isTest ? testEnvironment : productionEnvironment}${showHelpers ? helpers : ''}`};
-	const javascript = {__html: `
+	const html = {
+		__html: `${isTest ? testEnvironment : productionEnvironment}${
+			showHelpers ? helpers : ''
+		}`,
+	};
+	const javascript = {
+		__html: `
 	var FORM_SELECTOR = 'form.ncf';
 	var INPUT_SELECTOR = FORM_SELECTOR + ' input:not([type="checkbox"]):not([type="radio"])';
 	var SELECT_SELECTOR = FORM_SELECTOR + ' select';
@@ -125,8 +128,10 @@ export function Debug ({
 		document.cookie = 'next-flags=' + flags + '%2C' + flag + state + '; path=/; domain=.ft.com;';
 		window.location.reload();
 	}
-	`};
-	const style = {__html: `
+	`,
+	};
+	const style = {
+		__html: `
 	.ncf__debug-panel {
 		position: absolute;
 		background-color: #262a33;
@@ -145,21 +150,24 @@ export function Debug ({
 	.ncf__debug-button--production {
 		background-color: #990000;
 	}
-	`};
+	`,
+	};
 
-	return (isTest || showHelpers) && (
-		<React.Fragment>
-			{/* Debug Panel for working with Conversion Forms */}
-			{/* Style and scripts are inline to reduce the impact on production files */}
-			<div className="ncf__debug-panel" dangerouslySetInnerHTML={html}></div>
-			<script dangerouslySetInnerHTML={javascript}></script>
-			<style dangerouslySetInnerHTML={style}></style>
-		</React.Fragment>
+	return (
+		(isTest || showHelpers) && (
+			<React.Fragment>
+				{/* Debug Panel for working with Conversion Forms */}
+				{/* Style and scripts are inline to reduce the impact on production files */}
+				<div className="ncf__debug-panel" dangerouslySetInnerHTML={html}></div>
+				<script dangerouslySetInnerHTML={javascript}></script>
+				<style dangerouslySetInnerHTML={style}></style>
+			</React.Fragment>
+		)
 	);
 }
 
 Debug.propTypes = {
 	isTest: PropTypes.bool,
 	showHelpers: PropTypes.bool,
-	links: PropTypes.object
+	links: PropTypes.object,
 };

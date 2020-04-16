@@ -1,7 +1,6 @@
 @import 'o-expander/main';
 
 @mixin ncfCustomerCarePanel() {
-
 	&__customer-care {
 		&__phone {
 			margin-bottom: 0;
@@ -22,5 +21,4 @@
 			}
 		}
 	}
-
 }

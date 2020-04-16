@@ -9,7 +9,7 @@ export default {
 export const Basic = (args) => <Industry {...args} />;
 Basic.args = {
 	options: [
-		{ code: 'AGR', description: 'Agriculture'},
-		{ code: 'COM', description: 'Computing'}
-	]
+		{ code: 'AGR', description: 'Agriculture' },
+		{ code: 'COM', description: 'Computing' },
+	],
 };

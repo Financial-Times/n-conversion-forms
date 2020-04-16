@@ -35,7 +35,7 @@ class Submit {
 	 */
 	updateText (newText) {
 		if (!newText) throw new Error('Please supply a new text value');
-		return this.$submit.innerHTML = newText;
+		return (this.$submit.innerHTML = newText);
 	}
 
 	/**

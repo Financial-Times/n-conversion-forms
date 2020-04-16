@@ -5,9 +5,12 @@ export default {
 	title: 'Basic Accept Terms',
 	component: AcceptTerms,
 	argTypes: {
-		transitionType: { control: {
-			type: 'inline-radio', options: ['immediate', 'endOfTerm']
-		} }
+		transitionType: {
+			control: {
+				type: 'inline-radio',
+				options: ['immediate', 'endOfTerm'],
+			},
+		},
 	},
 };
 

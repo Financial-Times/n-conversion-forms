@@ -9,7 +9,7 @@ expect.extend(expectToRenderCorrectly);
 describe('Loader', () => {
 	it('renders with default props', () => {
 		const props = {
-			children: CHILDREN
+			children: CHILDREN,
 		};
 
 		expect(Loader).toRenderCorrectly(props);
@@ -18,7 +18,7 @@ describe('Loader', () => {
 	it('renders with showLoader', () => {
 		const props = {
 			children: CHILDREN,
-			showLoader: true
+			showLoader: true,
 		};
 
 		expect(Loader).toRenderCorrectly(props);
@@ -27,7 +27,7 @@ describe('Loader', () => {
 	it('renders with title', () => {
 		const props = {
 			children: CHILDREN,
-			title: 'TITLE'
+			title: 'TITLE',
 		};
 
 		expect(Loader).toRenderCorrectly(props);

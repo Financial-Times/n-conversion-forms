@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function JobTitle ({
+export function JobTitle({
 	value = '',
 	isDisabled = false,
 	hasError = false,
@@ -10,11 +10,10 @@ export function JobTitle ({
 	inputId = 'jobTitle',
 	inputName = 'jobTitle',
 }) {
-
 	const inputWrapperClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	return (
@@ -28,17 +27,21 @@ export function JobTitle ({
 				<span className="o-forms-title__main">Job title</span>
 			</span>
 			<span className={inputWrapperClassName}>
-				<input type="text"
+				<input
+					type="text"
 					id={inputId}
 					name={inputName}
 					placeholder="Enter your job title"
 					autoComplete="organization-title"
 					data-trackable="job-title"
-					aria-required="true" required
+					aria-required="true"
+					required
 					disabled={isDisabled}
 					defaultValue={value}
 				/>
-				<span className="o-forms-input__error">Please enter your job title.</span>
+				<span className="o-forms-input__error">
+					Please enter your job title.
+				</span>
 			</span>
 		</label>
 	);

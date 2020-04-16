@@ -6,13 +6,16 @@ export default {
 	component: DeliveryPostcode,
 	argTypes: {
 		additionalFieldInformation: { control: 'text' },
-		country: { control: {
-			type: 'inline-radio', options: ['USA', 'CAN', 'Other']
-		} }
+		country: {
+			control: {
+				type: 'inline-radio',
+				options: ['USA', 'CAN', 'Other'],
+			},
+		},
 	},
 };
 
 export const Basic = (args) => <DeliveryPostcode {...args} />;
 Basic.args = {
-	additionalFieldInformation: 'Some extra information.'
+	additionalFieldInformation: 'Some extra information.',
 };

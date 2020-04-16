@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function CompanyName ({
+export function CompanyName({
 	fieldId = 'companyNameField',
 	hasError = false,
 	inputId = 'companyName',
@@ -10,12 +10,12 @@ export function CompanyName ({
 	value = '',
 	isDisabled = false,
 	fieldLabel = 'Company name',
-	placeHolder = 'Please enter your company name'
+	placeHolder = 'Please enter your company name',
 }) {
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	const inputProps = {
@@ -45,7 +45,9 @@ export function CompanyName ({
 
 			<span className={inputWrapperClassNames}>
 				<input {...inputProps} />
-				<span className="o-forms-input__error">Please enter your company name.</span>
+				<span className="o-forms-input__error">
+					Please enter your company name.
+				</span>
 			</span>
 		</label>
 	);
@@ -55,5 +57,5 @@ CompanyName.propTypes = {
 	hasError: PropTypes.bool,
 	value: PropTypes.string,
 	isDisabled: PropTypes.bool,
-	fieldLabel: PropTypes.string
+	fieldLabel: PropTypes.string,
 };

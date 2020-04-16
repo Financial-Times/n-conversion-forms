@@ -8,5 +8,5 @@ export default {
 
 export const Basic = (args) => <LicenceHeader {...args} />;
 Basic.args = {
-	displayName: 'Hello World'
+	displayName: 'Hello World',
 };

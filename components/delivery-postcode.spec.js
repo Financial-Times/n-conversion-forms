@@ -11,7 +11,6 @@ describe('Delivery Postcode', () => {
 		};
 
 		expect(DeliveryPostcode).toRenderCorrectly(props);
-
 	});
 
 	it('render a postcode input with a label set as Zip Code', () => {
@@ -22,7 +21,6 @@ describe('Delivery Postcode', () => {
 		};
 
 		expect(DeliveryPostcode).toRenderCorrectly(props);
-
 	});
 
 	it('render a postcode input with a label set as Zip Code with USA in lower case', () => {
@@ -33,7 +31,6 @@ describe('Delivery Postcode', () => {
 		};
 
 		expect(DeliveryPostcode).toRenderCorrectly(props);
-
 	});
 
 	it('render a postcode input with a label set as postal code', () => {
@@ -44,7 +41,6 @@ describe('Delivery Postcode', () => {
 		};
 
 		expect(DeliveryPostcode).toRenderCorrectly(props);
-
 	});
 
 	it('render a postcode input with default label', () => {
@@ -54,7 +50,6 @@ describe('Delivery Postcode', () => {
 		};
 
 		expect(DeliveryPostcode).toRenderCorrectly(props);
-
 	});
 
 	it('render a disable input', () => {
@@ -65,7 +60,6 @@ describe('Delivery Postcode', () => {
 		};
 
 		expect(DeliveryPostcode).toRenderCorrectly(props);
-
 	});
 
 	it('render different styles', () => {

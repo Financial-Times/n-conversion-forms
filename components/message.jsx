@@ -2,10 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function Message ({ title, message, additional = [], actions = null, name, isNotice, isError, isSuccess, isInform, isStaticMessage, isHidden }) {
-
+export function Message({
+	title,
+	message,
+	additional = [],
+	actions = null,
+	name,
+	isNotice,
+	isError,
+	isSuccess,
+	isInform,
+	isStaticMessage,
+	isHidden,
+}) {
 	const additionalMessages = additional.map((text, index) => {
-		return <p className="o-message__content--additional" key={index} dangerouslySetInnerHTML={{__html: text }}></p>;
+		return (
+			<p
+				className="o-message__content--additional"
+				key={index}
+				dangerouslySetInnerHTML={{ __html: text }}
+			></p>
+		);
 	});
 
 	const oMessageClassNames = classNames({
@@ -19,15 +36,24 @@ export function Message ({ title, message, additional = [], actions = null, name
 		'o-message--neutral': !isError && !isSuccess && !isInform,
 	});
 
-	const ncfClassNames = classNames(
-		'ncf__message',
-		{ 'ncf__hidden': isHidden }
-	);
+	const ncfClassNames = classNames('ncf__message', { ncf__hidden: isHidden });
 
 	const callToActionsList = actions ? (
 		<div className="o-message__actions">
 			{actions.map(({ link, isSecondary, text }, index) => {
-				return <a href={link} key={index} className={isSecondary ? 'o-message__actions__secondary' : 'o-message__actions__primary'}>{text}</a>;
+				return (
+					<a
+						href={link}
+						key={index}
+						className={
+							isSecondary
+								? 'o-message__actions__secondary'
+								: 'o-message__actions__primary'
+						}
+					>
+						{text}
+					</a>
+				);
 			})}
 		</div>
 	) : null;
@@ -35,25 +61,30 @@ export function Message ({ title, message, additional = [], actions = null, name
 	return (
 		<div className={ncfClassNames} data-message-name={name}>
 			<div className={oMessageClassNames} data-o-component="o-message">
-				<div className="o-message__container" >
+				<div className="o-message__container">
 					<div className="o-message__content">
 						<p className="o-message__content-main">
-							{title ? <span className="o-message__content-highlight">{title}</span> : null}
-							<span className="o-message__content-detail" dangerouslySetInnerHTML={{__html: message }}></span>
+							{title ? (
+								<span className="o-message__content-highlight">{title}</span>
+							) : null}
+							<span
+								className="o-message__content-detail"
+								dangerouslySetInnerHTML={{ __html: message }}
+							></span>
 						</p>
 						{additionalMessages}
 						{callToActionsList}
 					</div>
-				</div >
-			</div >
-		</div >
+				</div>
+			</div>
+		</div>
 	);
 }
 
 const actionType = PropTypes.shape({
 	link: PropTypes.string.isRequired,
 	isSecondary: PropTypes.bool,
-	text: PropTypes.string
+	text: PropTypes.string,
 });
 Message.propTypes = {
 	title: PropTypes.string,

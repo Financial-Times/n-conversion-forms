@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function DeliveryInstructions ({
+export function DeliveryInstructions({
 	fieldId = 'deliveryInstructionsField',
 	hasError = false,
 	inputId = 'deliveryInstructions',
@@ -16,7 +16,7 @@ export function DeliveryInstructions ({
 	const textAreaWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--textarea',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	const maxLengthText = maxlength ? `(Max. ${maxlength} characters)` : '';
@@ -30,15 +30,14 @@ export function DeliveryInstructions ({
 		'data-trackable': 'field-deliveryInstructions',
 		placeholder: placeholder ? placeholder : defaultPlaceholder,
 		disabled: isDisabled,
-		defaultValue: value
+		defaultValue: value,
 	};
 
 	const signupSecurityNote = hasSignupSecurityNote && (
 		<>
-			Either add them to the Security Notes section at{" "}
-			<a href="https://ft.com/myaccount">ft.com/myaccount</a>{" "}
-			after purchase, or contact{" "}
-			<a href="https://help.ft.com/contact/">FT Customer Care</a>.{" "}
+			Either add them to the Security Notes section at{' '}
+			<a href="https://ft.com/myaccount">ft.com/myaccount</a> after purchase, or
+			contact <a href="https://help.ft.com/contact/">FT Customer Care</a>.{' '}
 		</>
 	);
 
@@ -52,10 +51,17 @@ export function DeliveryInstructions ({
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">Delivery instructions</span>
 				<span className="o-forms-title__prompt">
-					For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
+					For newspaper delivery, we can only deliver to the ground floor, so if
+					you live in an apartment, we’ll leave the newspaper at reception or by
+					the entrance. We deliver in the early hours of the morning so our
+					drivers won’t be able to contact you or ring your doorbell.
 				</span>
 				<span className="o-forms-title__prompt">
-					If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. {signupSecurityNote}If you do add them here you do so at your own risk as these will appear on your label.
+					If your property requires security codes that will help our drivers
+					deliver your newspaper safely, please do not add them here as they may
+					be printed on your newspaper label. {signupSecurityNote}If you do add
+					them here you do so at your own risk as these will appear on your
+					label.
 				</span>
 			</span>
 
@@ -72,5 +78,5 @@ DeliveryInstructions.propTypes = {
 	rows: PropTypes.number,
 	isDisabled: PropTypes.bool,
 	hasSignupSecurityNote: PropTypes.bool,
-	value: PropTypes.string
+	value: PropTypes.string,
 };

@@ -1,9 +1,9 @@
 import React from 'react';
 
-export function B2CPartnershipConfirmation () {
+export function B2CPartnershipConfirmation() {
 	const myFtLinkProps = {
 		href: '/myft',
-		className: 'ncf__button ncf__button--submit'
+		className: 'ncf__button ncf__button--submit',
 	};
 
 	const readingLinkProps = {
@@ -13,16 +13,18 @@ export function B2CPartnershipConfirmation () {
 
 	const customerCareProps = {
 		href: 'https://help.ft.com/',
-		className: 'ncf__link'
+		className: 'ncf__link',
 	};
 
 	return (
 		<div className="ncf ncf__wrapper">
 			<div className="ncf__center">
-				<div className="ncf__icon ncf__icon--tick ncf__icon--large"/>
+				<div className="ncf__icon ncf__icon--tick ncf__icon--large" />
 				<div className="ncf__paragraph">
 					{
-						<h1 className="ncf__header ncf__header--confirmation">{'Welcome to your three months\' Premium access'}</h1>
+						<h1 className="ncf__header ncf__header--confirmation">
+							{"Welcome to your three months' Premium access"}
+						</h1>
 					}
 				</div>
 			</div>
@@ -32,7 +34,8 @@ export function B2CPartnershipConfirmation () {
 			</p>
 
 			<p className="ncf__paragraph">
-					Explore the homepage &amp; enjoy your unlimited access &amp; exclusive content.
+				Explore the homepage &amp; enjoy your unlimited access &amp; exclusive
+				content.
 			</p>
 
 			<p className="ncf__paragraph ncf__center">
@@ -45,7 +48,8 @@ export function B2CPartnershipConfirmation () {
 
 			<p className="ncf__paragraph">
 				<div className="ncf__strong">Can we help?</div>
-				For any queries about your Premium subscription please <a {...customerCareProps}>contact Customer Care</a>.
+				For any queries about your Premium subscription please{' '}
+				<a {...customerCareProps}>contact Customer Care</a>.
 			</p>
 		</div>
 	);

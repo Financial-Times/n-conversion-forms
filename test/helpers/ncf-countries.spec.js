@@ -13,9 +13,9 @@ describe('ncf-countries', () => {
 		helper = proxyquire('../../helpers/ncf-countries', {
 			'../utils/countries': proxyquire('../../utils/countries', {
 				'n-common-static-data': {
-					billingCountries: { countries: mockCountries }
-				}
-			})
+					billingCountries: { countries: mockCountries },
+				},
+			}),
 		});
 	});
 
@@ -42,17 +42,17 @@ describe('ncf-countries', () => {
 			helper({ hash: { filterList: ['C-1'] }, fn: stub });
 			const context = stub.getCall(0).args[0];
 
-			expect(context.countries).to.deep.equal([{ code: 'C-1'}]);
+			expect(context.countries).to.deep.equal([{ code: 'C-1' }]);
 		});
 	});
 
 	describe('select', () => {
 		it('should not mark any countries selected if no value passed', () => {
-			helper({ hash: { }, fn: stub });
+			helper({ hash: {}, fn: stub });
 			const context = stub.getCall(0).args[0];
 
-			context.countries.forEach(country => {
-				expect(country).to.not.include({'selected': true});
+			context.countries.forEach((country) => {
+				expect(country).to.not.include({ selected: true });
 			});
 		});
 
@@ -60,8 +60,8 @@ describe('ncf-countries', () => {
 			helper({ hash: { value: 'Test' }, fn: stub });
 			const context = stub.getCall(0).args[0];
 
-			context.countries.forEach(country => {
-				expect(country).to.not.include({'selected': true});
+			context.countries.forEach((country) => {
+				expect(country).to.not.include({ selected: true });
 			});
 		});
 
@@ -70,8 +70,8 @@ describe('ncf-countries', () => {
 			helper({ hash: { value }, fn: stub });
 			const context = stub.getCall(0).args[0];
 
-			context.countries.forEach(country => {
-				expect(country).to.include({'selected': country.code === value});
+			context.countries.forEach((country) => {
+				expect(country).to.include({ selected: country.code === value });
 			});
 		});
 	});
@@ -82,9 +82,9 @@ describe('ncf-countries', () => {
 			helper = proxyquire('../../helpers/ncf-countries', {
 				'../utils/countries': proxyquire('../../utils/countries', {
 					'n-common-static-data': {
-						billingCountries: { countries: mockCountries }
-					}
-				})
+						billingCountries: { countries: mockCountries },
+					},
+				}),
 			});
 		});
 
@@ -93,32 +93,32 @@ describe('ncf-countries', () => {
 			helper = proxyquire('../../helpers/ncf-countries', {
 				'../utils/countries': proxyquire('../../utils/countries', {
 					'n-common-static-data': {
-						billingCountries: { countries: mockCountries }
-					}
-				})
+						billingCountries: { countries: mockCountries },
+					},
+				}),
 			});
-			helper({ hash: { }, fn: stub });
+			helper({ hash: {}, fn: stub });
 			const context = stub.getCall(0).args[0];
 
 			expect(context.countries[0]).to.not.have.property('label');
 		});
 
 		it('should not group if frequently used countries under limit', () => {
-			helper({ hash: { filterList: ['CAN','FRA', 'JPN', 'USA'] }, fn: stub });
+			helper({ hash: { filterList: ['CAN', 'FRA', 'JPN', 'USA'] }, fn: stub });
 			const context = stub.getCall(0).args[0];
 
 			expect(context.countries[0]).to.not.have.property('label');
 		});
 
 		it('should group countries over limits', () => {
-			helper({ hash: { }, fn: stub });
+			helper({ hash: {}, fn: stub });
 			const context = stub.getCall(0).args[0];
 
 			expect(context.countries[0]).to.have.property('label');
 		});
 
 		it('should sort the group of frequently used countries', () => {
-			helper({ hash: { }, fn: stub });
+			helper({ hash: {}, fn: stub });
 			const context = stub.getCall(0).args[0];
 			const correctOrder = ['GBR', 'USA', 'JPN', 'FRA', 'CAN'];
 			const frequentlyUsed = context.countries[0].countries;
@@ -135,8 +135,12 @@ describe('ncf-countries', () => {
 			const frequentlyUsed = context.countries[0].countries;
 			const alphabetical = context.countries[1].countries;
 
-			expect(frequentlyUsed.find(item => item.code === value)).to.include({selected: true});
-			expect(alphabetical.find(item => item.code === value)).to.include({selected: false});
+			expect(frequentlyUsed.find((item) => item.code === value)).to.include({
+				selected: true,
+			});
+			expect(alphabetical.find((item) => item.code === value)).to.include({
+				selected: false,
+			});
 		});
 	});
 });
@@ -153,7 +157,7 @@ function generateCountryArray (length, { includeAllFrequent = true } = {}) {
 				{ code: 'USA' },
 				{ code: 'CAN' },
 				{ code: 'GBR' },
-			]
+			  ]
 			: []
 	);
 }

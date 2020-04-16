@@ -10,19 +10,19 @@ export const Basic = (args) => <Responsibility {...args} />;
 Basic.args = {
 	options: [
 		{
-			'code': 'FIN',
-			'active': true,
-			'description': 'Accounting/finance'
+			code: 'FIN',
+			active: true,
+			description: 'Accounting/finance',
 		},
 		{
-			'code': 'ADL',
-			'active': true,
-			'description': 'Administration'
+			code: 'ADL',
+			active: true,
+			description: 'Administration',
 		},
 		{
-			'code': 'RES',
-			'active': true,
-			'description': 'Broker/trader'
-		}
-	]
+			code: 'RES',
+			active: true,
+			description: 'Broker/trader',
+		},
+	],
 };

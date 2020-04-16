@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getCountries } from '../utils/countries';
 
-export function Country ({
+export function Country({
 	fieldId = 'countryField',
 	filterList = [],
 	hasError = false,
@@ -11,12 +11,12 @@ export function Country ({
 	isB2b = false,
 	isDisabled = false,
 	value,
-	additionalFieldInformation
+	additionalFieldInformation,
 }) {
 	const selectWrapperClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--select',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 	const label = `Country${isB2b ? '/Region' : ''}`;
 	const error = `Please select your country${isB2b ? '/region' : ''}`;
@@ -30,24 +30,30 @@ export function Country ({
 	};
 	const countries = getCountries({ filter: filterList, value });
 
-	const createOption = country => (
-		<option key={country.code} value={country.code} selected={country.selected}>{country.name}</option>
+	const createOption = (country) => (
+		<option key={country.code} value={country.code} selected={country.selected}>
+			{country.name}
+		</option>
 	);
-	const createOptGroup = country => (
+	const createOptGroup = (country) => (
 		<optgroup key={country.label} label={country.label}>
-			{country.countries.map(country => createOption(country))}
+			{country.countries.map((country) => createOption(country))}
 		</optgroup>
 	);
-	const createSelect = countries => (
+	const createSelect = (countries) => (
 		<select {...selectProps}>
 			<option value="">Please select a country{isB2b ? '/region' : ''}</option>
-			{countries.map(country => country.label ? createOptGroup(country) : createOption(country))}
+			{countries.map((country) =>
+				country.label ? createOptGroup(country) : createOption(country)
+			)}
 		</select>
 	);
 
 	const fieldErrorClassNames = classNames([
 		'o-forms-input__error',
-		{ 'additional-field-information__with-field-error': additionalFieldInformation }
+		{
+			'additional-field-information__with-field-error': additionalFieldInformation,
+		},
 	]);
 
 	return (
@@ -64,7 +70,9 @@ export function Country ({
 				{createSelect(countries)}
 				<span className={fieldErrorClassNames}>{error}</span>
 				{additionalFieldInformation ? (
-					<p className="additional-field-information">{additionalFieldInformation}</p>
+					<p className="additional-field-information">
+						{additionalFieldInformation}
+					</p>
 				) : null}
 			</span>
 		</label>
@@ -79,5 +87,5 @@ Country.propTypes = {
 	isB2b: PropTypes.bool,
 	isDisabled: PropTypes.bool,
 	value: PropTypes.string,
-	additionalFieldInformation: PropTypes.node
+	additionalFieldInformation: PropTypes.node,
 };

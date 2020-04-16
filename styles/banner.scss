@@ -1,8 +1,7 @@
 @mixin ncfBanner() {
-
 	&__trial-banner {
 		@include oTypographySerif($scale: 0);
-		background-color: #262A33;
+		background-color: #262a33;
 		color: white;
 		text-align: center;
 		line-height: 40px;
@@ -44,7 +43,6 @@
 		}
 
 		&-image {
-
 			img {
 				width: 100px;
 			}

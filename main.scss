@@ -24,24 +24,26 @@
 
 @include oTypography();
 @include oFonts();
-@include oForms($opts: (
-	'elements': (
-		'text',
-		'password',
-		'checkbox',
-		'select',
-		'radio-box',
-		'radio-round',
-		'textarea'
-	),
-	'features': (
-		'disabled',
-		'inline',
-		'right',
-		'suffix',
-		'error-summary'
+@include oForms(
+	$opts: (
+		'elements': (
+			'text',
+			'password',
+			'checkbox',
+			'select',
+			'radio-box',
+			'radio-round',
+			'textarea',
+		),
+		'features': (
+			'disabled',
+			'inline',
+			'right',
+			'suffix',
+			'error-summary',
+		),
 	)
-));
+);
 @include oMessage();
 @include oSteppedProgress();
 
@@ -181,7 +183,11 @@
 
 	&__header2 {
 		&--afterline {
-			@include oTypographySans($scale: 1, $include-font-family: false, $weight: 'semibold');
+			@include oTypographySans(
+				$scale: 1,
+				$include-font-family: false,
+				$weight: 'semibold'
+			);
 
 			&:after {
 				padding-top: oSpacingByName('s3');
@@ -203,47 +209,58 @@
 	}
 
 	&__button {
-
 		&--submit {
-			@include oButtonsContent($opts: (
-				'size': 'big',
-				'type': 'primary'
-			));
+			@include oButtonsContent(
+				$opts: (
+					'size': 'big',
+					'type': 'primary',
+				)
+			);
 		}
 
 		&--mono {
-			@include oButtonsContent($opts: (
-				'type': 'secondary',
-				'theme': 'mono',
-			));
+			@include oButtonsContent(
+				$opts: (
+					'type': 'secondary',
+					'theme': 'mono',
+				)
+			);
 		}
 
 		&--inverse {
-			@include oButtonsContent($opts: (
-				'size': 'big',
-				'theme': 'inverse',
-				'type': 'secondary'
-			));
+			@include oButtonsContent(
+				$opts: (
+					'size': 'big',
+					'theme': 'inverse',
+					'type': 'secondary',
+				)
+			);
 		}
 
 		&--secondary {
-			@include oButtonsContent($opts: (
-				'size': 'big',
-				'type': 'secondary'
-			));
+			@include oButtonsContent(
+				$opts: (
+					'size': 'big',
+					'type': 'secondary',
+				)
+			);
 		}
 
 		&--google {
-			@include oButtonsContent($opts: (
-				'size': 'big',
-				'type': 'secondary'
-			));
+			@include oButtonsContent(
+				$opts: (
+					'size': 'big',
+					'type': 'secondary',
+				)
+			);
 			background-color: oColorsByName('white');
 			padding-left: 40px;
 
 			&::before {
 				content: '';
-				background: transparent url('https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2FG_active_focused_pressed.svg?source=m-login&width=20&height=20&format=svg') no-repeat;
+				background: transparent
+					url('https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2FG_active_focused_pressed.svg?source=m-login&width=20&height=20&format=svg')
+					no-repeat;
 				position: absolute;
 				left: 10px;
 				width: 18px;
@@ -262,7 +279,6 @@
 		&--margin {
 			margin: 20px 0;
 		}
-
 	}
 
 	&__center {

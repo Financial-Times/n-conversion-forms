@@ -3,18 +3,18 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getCountries } from '../utils/countries';
 
-export function BillingCountry ({
+export function BillingCountry({
 	fieldId = 'billingCountryField',
 	filterList = [],
 	hasError = false,
 	inputId = 'billingCountry',
 	isDisabled = false,
-	value
+	value,
 }) {
 	const selectWrapperClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--select',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 	const props = {
 		id: inputId,
@@ -27,18 +27,24 @@ export function BillingCountry ({
 	};
 	const countries = getCountries({ filter: filterList, value });
 
-	const createOption = country => (
-		<option key={country.code} value={country.code} selected={country.selected}>{country.name}</option>
+	const createOption = (country) => (
+		<option key={country.code} value={country.code} selected={country.selected}>
+			{country.name}
+		</option>
 	);
-	const createOptGroup = country => (
+	const createOptGroup = (country) => (
 		<optgroup key={country.label} label={country.label}>
-			{country.countries.map(country => createOption(country))}
+			{country.countries.map((country) => createOption(country))}
 		</optgroup>
 	);
-	const createSelect = countries => (
+	const createSelect = (countries) => (
 		<select {...props}>
-			<option value="" disabled>Please select a country</option>
-			{countries.map(country => country.label ? createOptGroup(country) : createOption(country))}
+			<option value="" disabled>
+				Please select a country
+			</option>
+			{countries.map((country) =>
+				country.label ? createOptGroup(country) : createOption(country)
+			)}
 		</select>
 	);
 
@@ -66,5 +72,5 @@ BillingCountry.propTypes = {
 	hasError: PropTypes.bool,
 	inputId: PropTypes.string,
 	isDisabled: PropTypes.bool,
-	value: PropTypes.string
+	value: PropTypes.string,
 };

@@ -20,7 +20,7 @@ const _fields = {
 	city: 'City/Town',
 	state: 'State',
 	postalCode: 'Post Code',
-	error: 'Validation failed on server-side. Please check your input values.' //generic server error
+	error: 'Validation failed on server-side. Please check your input values.', //generic server error
 };
 
 // AKA ZUORA MESSAGE
@@ -28,20 +28,25 @@ const _fields = {
 const _messages = {
 	NullValue: 'is required',
 	InvalidFormat: 'is invalid',
-	ExceededMaxLength: 'is too long'
+	ExceededMaxLength: 'is too long',
 };
 
 // AKA ZUORA CODE
 // used in Zuora errorCode
 const _codes = {
-	HostedPageFieldValidationError: 'One or more field validation errors have occurred',
-	GatewayTransactionError: 'One or more gateway transaction errors have occurred',
-	BusinessValidationError: 'One or more business validation errors have occurred',
+	HostedPageFieldValidationError:
+		'One or more field validation errors have occurred',
+	GatewayTransactionError:
+		'One or more gateway transaction errors have occurred',
+	BusinessValidationError:
+		'One or more business validation errors have occurred',
 	Invalid_Security: 'Security validation error',
-	Invalid_Request_Method: 'The Payment Page form was submitted using an invalid method',
-	Invalid_PaymentGateway: 'The paymentGateway parameter specified a gateway name that does not exist',
+	Invalid_Request_Method:
+		'The Payment Page form was submitted using an invalid method',
+	Invalid_PaymentGateway:
+		'The paymentGateway parameter specified a gateway name that does not exist',
 	GeneralSystemError: 'One or more general system errors have occurred',
-	Decryption_Error: 'An error happened during decryption'
+	Decryption_Error: 'An error happened during decryption',
 };
 
 // when the client-side credit card validation fails
@@ -49,7 +54,7 @@ const _cc_codes = {
 	1: _messages['NullValue'], //001: Required field not completed
 	2: _messages['InvalidFormat'], //002: Invalid card number
 	3: 'does not match card type. Please try again.', //003: Invalid card type
-	4: _messages['InvalidFormat'] //004: Invalid CVV number
+	4: _messages['InvalidFormat'], //004: Invalid CVV number
 };
 
 /**
@@ -61,7 +66,7 @@ const _cc_codes = {
  * getFieldByKey('firstName'); // 'First Name'
  */
 function getFieldByKey (key) {
-	return (key && _fields[key]) ? _fields[key] : null;
+	return key && _fields[key] ? _fields[key] : null;
 }
 
 /**
@@ -73,7 +78,7 @@ function getFieldByKey (key) {
  * getReasonByMessage('InvalidFormat'); // 'is invalid'
  */
 function getReasonByMessage (message) {
-	return (message && _messages[message]) ? _messages[message] : null;
+	return message && _messages[message] ? _messages[message] : null;
 }
 
 /**
@@ -87,9 +92,9 @@ function getReasonByMessage (message) {
 function getReasonByCode (code) {
 	if (isCreditCardValidationCode(code)) {
 		code = parseInt(code); // '001' -> 1
-		return (code && _cc_codes[code]) ? _cc_codes[code] : null;
+		return code && _cc_codes[code] ? _cc_codes[code] : null;
 	} else {
-		return (code && _codes[code]) ? _codes[code] : null;
+		return code && _codes[code] ? _codes[code] : null;
 	}
 }
 
@@ -105,11 +110,10 @@ function isCreditCardValidationCode (code) {
 	let _int;
 	try {
 		_int = parseInt(code, 0);
-	}
-	catch (e) {
+	} catch (e) {
 		return false;
 	}
-	return (_int > 0 && _int < 5);
+	return _int > 0 && _int < 5;
 }
 
 /**
@@ -125,8 +129,7 @@ function generateCustomErrorMessage (key, code, message) {
 
 	if (code && getReasonByCode(code)) {
 		reason = getReasonByCode(code);
-	}
-	else {
+	} else {
 		reason = getReasonByMessage(message) || 'is invalid';
 	}
 
@@ -135,5 +138,5 @@ function generateCustomErrorMessage (key, code, message) {
 
 module.exports = {
 	generateCustomErrorMessage,
-	getReasonByCode
+	getReasonByCode,
 };

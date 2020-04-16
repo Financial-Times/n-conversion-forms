@@ -2,34 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function Submit ({
+export function Submit({
 	id = 'submitButton',
 	isCentered = false,
 	isDisabled = false,
 	backButtonUrl = null,
-	label = 'Continue'
+	label = 'Continue',
 }) {
 	const divClassName = classNames([
 		// The space at the beginning is so that we match what the handlebars
 		// template does. Not great I know. :/
 		{ ' ncf__field--center': isCentered },
-		{ ' ncf__field--flex': backButtonUrl }
+		{ ' ncf__field--flex': backButtonUrl },
 	]);
 
-	const backButton = backButtonUrl
-		? (
-			<a
-				className="ncf__button"
-				href={backButtonUrl}
-				target="_parent"
-				data-trackable="link"
-			>Back</a>
-		)
-		: null;
+	const backButton = backButtonUrl ? (
+		<a
+			className="ncf__button"
+			href={backButtonUrl}
+			target="_parent"
+			data-trackable="link"
+		>
+			Back
+		</a>
+	) : null;
 
 	return (
 		<div className={divClassName}>
-			{ backButton }
+			{backButton}
 
 			<button
 				id={id}
@@ -38,7 +38,7 @@ export function Submit ({
 				type="submit"
 				disabled={isDisabled}
 			>
-				{ label }
+				{label}
 			</button>
 		</div>
 	);
@@ -49,5 +49,5 @@ Submit.propTypes = {
 	isCentered: PropTypes.bool,
 	isDisabled: PropTypes.bool,
 	backButtonUrl: PropTypes.string,
-	label: PropTypes.string
+	label: PropTypes.string,
 };

@@ -7,9 +7,9 @@ const initStub = sandbox.stub().returns(expanderInstance);
 const PaymentType = proxyquire('../../utils/payment-type', {
 	'o-expander': {
 		default: {
-			init: initStub
-		}
-	}
+			init: initStub,
+		},
+	},
 });
 
 describe('PaymentType', () => {
@@ -22,8 +22,8 @@ describe('PaymentType', () => {
 		parentStub = {
 			classList: {
 				add: sandbox.stub(),
-				remove: sandbox.stub()
-			}
+				remove: sandbox.stub(),
+			},
 		};
 		elementStub = {
 			querySelector: sandbox.stub(),
@@ -31,16 +31,16 @@ describe('PaymentType', () => {
 			getAttribute: sandbox.stub(),
 			addEventListener: sandbox.stub(),
 			parentElement: {
-				parentElement: parentStub
+				parentElement: parentStub,
 			},
 			classList: {
 				add: sandbox.stub(),
 				remove: sandbox.stub(),
-				contains: sandbox.stub()
-			}
+				contains: sandbox.stub(),
+			},
 		};
 		documentStub = {
-			querySelector: sandbox.stub()
+			querySelector: sandbox.stub(),
 		};
 
 		documentStub.querySelector.returns(elementStub);

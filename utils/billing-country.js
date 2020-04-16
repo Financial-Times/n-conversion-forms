@@ -32,7 +32,7 @@ class BillingCountry {
 	 * Register an event listener
 	 * @param {Function} callback Called with event when changed
 	 */
-	onChange (callback=()=>{}) {
+	onChange (callback = () => {}) {
 		return this.$billingCountry.addEventListener('change', callback);
 	}
 
@@ -42,12 +42,14 @@ class BillingCountry {
 	 * @throws If nothing has been selected
 	 */
 	getSelected () {
-		const selected = this.$billingCountry.options[this.$billingCountry.selectedIndex];
+		const selected = this.$billingCountry.options[
+			this.$billingCountry.selectedIndex
+		];
 		if (!selected) {
 			throw new Error('No country has been selected');
 		}
 		return selected.value;
 	}
-};
+}
 
 module.exports = BillingCountry;

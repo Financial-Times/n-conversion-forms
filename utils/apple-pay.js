@@ -38,7 +38,12 @@ class ApplePay {
 	 * @param {Object} options PaymentRequest API payment options object
 	 * @throws If browser doesn't support PaymentRequest API
 	 */
-	constructor (window, methods = ApplePay.PAYMENT_METHODS, details = ApplePay.PAYMENT_DETAILS, options = ApplePay.PAYMENT_OPTIONS) {
+	constructor (
+		window,
+		methods = ApplePay.PAYMENT_METHODS,
+		details = ApplePay.PAYMENT_DETAILS,
+		options = ApplePay.PAYMENT_OPTIONS
+	) {
 		if (!window.PaymentRequest) {
 			throw new Error('Browser does not support PaymentRequest API');
 		}
@@ -47,7 +52,11 @@ class ApplePay {
 		this.methods = methods;
 		this.details = details;
 		this.options = options;
-		this.request = new this.window.PaymentRequest(this.methods, this.details, this.options);
+		this.request = new this.window.PaymentRequest(
+			this.methods,
+			this.details,
+			this.options
+		);
 	}
 
 	/**
@@ -68,9 +77,14 @@ class ApplePay {
 		// browsers as it seems not to be supported, regenerates PaymentRequest
 		if (paymentDetails) {
 			this.details = paymentDetails;
-			this.request = new this.window.PaymentRequest(this.methods, this.details, this.options);
+			this.request = new this.window.PaymentRequest(
+				this.methods,
+				this.details,
+				this.options
+			);
 		}
-		this.request.onmerchantvalidation = event => this.handleMerchantValidation(event);
+		this.request.onmerchantvalidation = (event) =>
+			this.handleMerchantValidation(event);
 		return this.request.show();
 	}
 
@@ -85,7 +99,7 @@ class ApplePay {
 			validationUrl: event.validationURL,
 			displayName: 'FT.com',
 			domainName: 'www.ft.com',
-			merchantId
+			merchantId,
 		};
 		try {
 			const response = await this.window.fetch(url, {
@@ -93,9 +107,9 @@ class ApplePay {
 				mode: 'cors',
 				cache: 'no-cache',
 				headers: {
-					'Content-Type': 'application/json; charset=utf-8'
+					'Content-Type': 'application/json; charset=utf-8',
 				},
-				body: JSON.stringify(data)
+				body: JSON.stringify(data),
 			});
 			return event.complete(response.json());
 		} catch (error) {
@@ -111,7 +125,9 @@ class ApplePay {
 	 */
 	static getMerchantId (methods = []) {
 		const method = methods[0] || {};
-		return method.data && method.data.merchantIdentifier || ApplePay.MERCHANT_ID;
+		return (
+			(method.data && method.data.merchantIdentifier) || ApplePay.MERCHANT_ID
+		);
 	}
 
 	/**
@@ -161,16 +177,18 @@ class ApplePay {
 	 * @return {Array}
 	 */
 	static get PAYMENT_METHODS () {
-		return [{
-			supportedMethods: 'https://apple.com/apple-pay',
-			data: {
-				version: 1,
-				merchantIdentifier: ApplePay.MERCHANT_ID,
-				merchantCapabilities: ['supports3DS'],
-				supportedNetworks: ['amex', 'discover', 'masterCard', 'visa'],
-				countryCode: 'GB',
-			}
-		}];
+		return [
+			{
+				supportedMethods: 'https://apple.com/apple-pay',
+				data: {
+					version: 1,
+					merchantIdentifier: ApplePay.MERCHANT_ID,
+					merchantCapabilities: ['supports3DS'],
+					supportedNetworks: ['amex', 'discover', 'masterCard', 'visa'],
+					countryCode: 'GB',
+				},
+			},
+		];
 	}
 
 	/**
@@ -183,11 +201,11 @@ class ApplePay {
 				label: 'FT.com',
 				amount: {
 					value: 0.01,
-					currency: 'GBP'
+					currency: 'GBP',
 				},
-			}
+			},
 		};
-	};
+	}
 
 	/**
 	 * Default payment options
@@ -198,7 +216,7 @@ class ApplePay {
 			requestPayerName: false,
 			requestPayerEmail: false,
 			requestPayerPhone: false,
-			requestShipping: false
+			requestShipping: false,
 		};
 	}
 
@@ -223,16 +241,18 @@ class ApplePay {
 	 * @return {Array}
 	 */
 	static get TEST_PAYMENT_METHODS () {
-		return [{
-			supportedMethods: 'https://apple.com/apple-pay',
-			data: {
-				version: 1,
-				merchantIdentifier: ApplePay.TEST_MERCHANT_ID,
-				merchantCapabilities: ['supports3DS'],
-				supportedNetworks: ['amex', 'discover', 'masterCard', 'visa'],
-				countryCode: 'GB',
-			}
-		}];
+		return [
+			{
+				supportedMethods: 'https://apple.com/apple-pay',
+				data: {
+					version: 1,
+					merchantIdentifier: ApplePay.TEST_MERCHANT_ID,
+					merchantCapabilities: ['supports3DS'],
+					supportedNetworks: ['amex', 'discover', 'masterCard', 'visa'],
+					countryCode: 'GB',
+				},
+			},
+		];
 	}
 }
 

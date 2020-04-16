@@ -11,7 +11,7 @@ describe('Password', () => {
 
 	beforeEach(() => {
 		passwordElement = { type: '' };
-		checkboxElement = { addEventListener: ()=>{}, checked: false };
+		checkboxElement = { addEventListener: () => {}, checked: false };
 		document = {
 			querySelector: (selector) => {
 				if (selector.indexOf('#password') !== -1) {
@@ -19,7 +19,7 @@ describe('Password', () => {
 				} else {
 					return checkboxElement;
 				}
-			}
+			},
 		};
 		password = new Password(document);
 		sandbox = sinon.createSandbox();

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function LicenceConfirmation ({
+export function LicenceConfirmation({
 	isTrial = false,
 	isEmbedded = false,
 	duration = null,
@@ -11,13 +11,13 @@ export function LicenceConfirmation ({
 	const myFtLinkProps = {
 		href: '/myft',
 		className: 'ncf__button ncf__button--submit',
-		...(isEmbedded && { target: '_top' })
+		...(isEmbedded && { target: '_top' }),
 	};
 
 	const readingLinkProps = {
 		href: contentId === '' ? '/' : `/content/${contentId}`,
 		className: 'ncf__link',
-		...(isEmbedded && { target: '_top' })
+		...(isEmbedded && { target: '_top' }),
 	};
 
 	return (
@@ -25,20 +25,27 @@ export function LicenceConfirmation ({
 			<div className="ncf__center">
 				<div className="ncf__icon ncf__icon--tick ncf__icon--large"></div>
 				<div className="ncf__paragraph">
-					{
-						isTrial
-							? (<h1 className="ncf__header ncf__header--confirmation">Your{ duration ? ` ${duration}` : '' } trial has started</h1>)
-							: (<h1 className="ncf__header ncf__header--confirmation">Great news, you have joined your { isEducationalLicence ? 'school' : 'company'} licence</h1>)
-					}
+					{isTrial ? (
+						<h1 className="ncf__header ncf__header--confirmation">
+							Your{duration ? ` ${duration}` : ''} trial has started
+						</h1>
+					) : (
+						<h1 className="ncf__header ncf__header--confirmation">
+							Great news, you have joined your{' '}
+							{isEducationalLicence ? 'school' : 'company'} licence
+						</h1>
+					)}
 				</div>
 			</div>
 
 			<p className="ncf__paragraph">
-				Go to myFT to personalise your feed &amp; follow topics &amp; articles of interest to you. Set this up now or later.
+				Go to myFT to personalise your feed &amp; follow topics &amp; articles
+				of interest to you. Set this up now or later.
 			</p>
 
 			<p className="ncf__paragraph">
-				Explore the homepage &amp; enjoy your unlimited access &amp; exclusive content.
+				Explore the homepage &amp; enjoy your unlimited access &amp; exclusive
+				content.
 			</p>
 
 			<p className="ncf__paragraph ncf__center">
@@ -59,4 +66,3 @@ LicenceConfirmation.propTypes = {
 	isEducationalLicence: PropTypes.bool,
 	contentId: PropTypes.string,
 };
-

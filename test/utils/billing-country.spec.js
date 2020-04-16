@@ -11,10 +11,10 @@ describe('BillingCountry', () => {
 		elementStub = {
 			addEventListener: sandbox.stub(),
 			selectedIndex: 1,
-			options: [{value: 0}, {value: 1}, {value: 2}]
+			options: [{ value: 0 }, { value: 1 }, { value: 2 }],
 		};
 		documentStub = {
-			querySelector: sandbox.stub()
+			querySelector: sandbox.stub(),
 		};
 	});
 

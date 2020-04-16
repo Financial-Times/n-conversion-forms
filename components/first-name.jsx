@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function FirstName ({
-	dataTrackable='field-name',
+export function FirstName({
+	dataTrackable = 'field-name',
 	errorText = 'Please enter your first name',
 	fieldId = 'firstNameField',
 	hasError = false,
@@ -12,7 +12,7 @@ export function FirstName ({
 	isDisabled = false,
 	label = 'First name',
 	placeHolder = 'Enter your first name',
-	value = ''
+	value = '',
 }) {
 	// Use inputId if inputName is not explicitly passed.
 	inputName = inputName || inputId;
@@ -20,7 +20,7 @@ export function FirstName ({
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	return (
@@ -41,7 +41,8 @@ export function FirstName ({
 					placeholder={placeHolder}
 					autoComplete="given-name"
 					data-trackable={dataTrackable}
-					aria-required="true" required
+					aria-required="true"
+					required
 					disabled={isDisabled}
 					defaultValue={value}
 				/>

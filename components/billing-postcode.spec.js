@@ -1,7 +1,6 @@
 import { BillingPostcode } from './index';
 import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
-
 expect.extend(expectToRenderCorrectly);
 
 describe('Billing Postcode', () => {
@@ -11,7 +10,6 @@ describe('Billing Postcode', () => {
 		};
 
 		expect(BillingPostcode).toRenderCorrectly(props);
-
 	});
 
 	it('can render a disable input', () => {
@@ -21,17 +19,15 @@ describe('Billing Postcode', () => {
 		};
 
 		expect(BillingPostcode).toRenderCorrectly(props);
-
 	});
 
 	it('can render a pattern attribute', () => {
 		const props = {
 			postcodeReference: 'ZipCode',
-			pattern: 'Whatever'
+			pattern: 'Whatever',
 		};
 
 		expect(BillingPostcode).toRenderCorrectly(props);
-
 	});
 
 	it('can render as an Error', () => {

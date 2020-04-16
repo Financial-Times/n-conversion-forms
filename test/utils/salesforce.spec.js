@@ -1,6 +1,6 @@
 const {
 	isoCodeToSalesforceName,
-	salesforceNameToIsoCode
+	salesforceNameToIsoCode,
 } = require('../../utils/salesforce');
 const expect = require('chai').expect;
 

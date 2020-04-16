@@ -32,7 +32,7 @@ class Country {
 	 * Register an event listener
 	 * @param {Function} callback Called with event when changed
 	 */
-	onChange (callback=()=>{}) {
+	onChange (callback = () => {}) {
 		return this.$country.addEventListener('change', callback);
 	}
 
@@ -48,6 +48,6 @@ class Country {
 		}
 		return selected.value;
 	}
-};
+}
 
 module.exports = Country;

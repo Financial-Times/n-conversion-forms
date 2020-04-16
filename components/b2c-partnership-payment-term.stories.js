@@ -7,16 +7,20 @@ export default {
 	component: B2cPartnershipPaymentTerm,
 };
 
-export const Basic = (args) => <Fieldset><B2cPartnershipPaymentTerm {...args} /></Fieldset>;
+export const Basic = (args) => (
+	<Fieldset>
+		<B2cPartnershipPaymentTerm {...args} />
+	</Fieldset>
+);
 Basic.args = {
 	displayName: 'Digital FT + The Washington Post',
 	partnerOffer: {
 		duration: '90-day',
 		name: 'All-Access Digital',
-		vendor: 'The Washington Post'
+		vendor: 'The Washington Post',
 	},
 	conditions: [
-		'90-day Washington Post subscription must be redeemed by 31 March 2021.'
+		'90-day Washington Post subscription must be redeemed by 31 March 2021.',
 	],
 	offerType: 'DIGITAL',
 	options: [
@@ -26,7 +30,7 @@ Basic.args = {
 			value: 49.99,
 			isTrial: false,
 			discount: '33%',
-			selected: false
+			selected: false,
 		},
 		{
 			name: 'annual',
@@ -34,7 +38,7 @@ Basic.args = {
 			value: 299.99,
 			isTrial: false,
 			discount: null,
-			selected: true
-		}
-	]
+			selected: true,
+		},
+	],
 };

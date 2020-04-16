@@ -15,12 +15,20 @@ describe('GraduationDate', () => {
 	it('renders graduation date compliance component', () => {
 		const wrapper = shallow(<GraduationDate />);
 		expect(wrapper.find(Compliance).exists()).toBe(true);
-		expect(wrapper.find(Compliance).shallow().find('#graduationDateCompliance').exists()).toBe(true);
+		expect(
+			wrapper
+				.find(Compliance)
+				.shallow()
+				.find('#graduationDateCompliance')
+				.exists()
+		).toBe(true);
 	});
 
 	it('should display graduationDateMonth options as English month names', () => {
 		const wrapper = shallow(<GraduationDate />);
-		const values = wrapper.find('#graduationDateMonth option').map(node => node.text());
+		const values = wrapper
+			.find('#graduationDateMonth option')
+			.map((node) => node.text());
 		expect(values).toEqual([
 			'January',
 			'February',
@@ -39,7 +47,9 @@ describe('GraduationDate', () => {
 
 	it('should store graduationDateMonth values as two-digit numbers', () => {
 		const wrapper = shallow(<GraduationDate />);
-		const values = wrapper.find('#graduationDateMonth option').map(node => node.prop('value'));
+		const values = wrapper
+			.find('#graduationDateMonth option')
+			.map((node) => node.prop('value'));
 		expect(values).toEqual([
 			'01',
 			'02',
@@ -61,7 +71,9 @@ describe('GraduationDate', () => {
 		jest.spyOn(global, 'Date').mockImplementation(() => stubDate);
 
 		const wrapper = shallow(<GraduationDate />);
-		const values = wrapper.find('#graduationDateYear option').map(node => node.prop('value'));
+		const values = wrapper
+			.find('#graduationDateYear option')
+			.map((node) => node.prop('value'));
 
 		expect(values).toEqual([
 			2016,
@@ -82,11 +94,15 @@ describe('GraduationDate', () => {
 		const wrapper = shallow(<GraduationDate value="2020-08-28" />);
 
 		it('should set the default month', () => {
-			expect(wrapper.find('#graduationDateMonth').prop('defaultValue')).toEqual('08');
+			expect(wrapper.find('#graduationDateMonth').prop('defaultValue')).toEqual(
+				'08'
+			);
 		});
 
 		it('should set the default year', () => {
-			expect(wrapper.find('#graduationDateYear').prop('defaultValue')).toEqual('2020');
+			expect(wrapper.find('#graduationDateYear').prop('defaultValue')).toEqual(
+				'2020'
+			);
 		});
 	});
 
@@ -94,8 +110,12 @@ describe('GraduationDate', () => {
 		const wrapper = shallow(<GraduationDate value="invalid" />);
 
 		it('should not set any default values', () => {
-			expect(wrapper.find('#graduationDateMonth').prop('defaultValue')).toBeFalsy();
-			expect(wrapper.find('#graduationDateYear').prop('defaultValue')).toBeFalsy();
+			expect(
+				wrapper.find('#graduationDateMonth').prop('defaultValue')
+			).toBeFalsy();
+			expect(
+				wrapper.find('#graduationDateYear').prop('defaultValue')
+			).toBeFalsy();
 		});
 	});
 
@@ -103,7 +123,9 @@ describe('GraduationDate', () => {
 		const wrapper = shallow(<GraduationDate isDisabled={true} />);
 
 		it('should disable both select fields', () => {
-			expect(wrapper.find('#graduationDateMonth').prop('disabled')).toBeTruthy();
+			expect(
+				wrapper.find('#graduationDateMonth').prop('disabled')
+			).toBeTruthy();
 			expect(wrapper.find('#graduationDateYear').prop('disabled')).toBeTruthy();
 		});
 	});
@@ -112,7 +134,9 @@ describe('GraduationDate', () => {
 		const wrapper = shallow(<GraduationDate isRequired={true} />);
 
 		it('should make both fields required', () => {
-			expect(wrapper.find('#graduationDateMonth').prop('required')).toBeTruthy();
+			expect(
+				wrapper.find('#graduationDateMonth').prop('required')
+			).toBeTruthy();
 			expect(wrapper.find('#graduationDateYear').prop('required')).toBeTruthy();
 		});
 	});
@@ -121,7 +145,9 @@ describe('GraduationDate', () => {
 		const wrapper = shallow(<GraduationDate hasError={true} />);
 
 		it('should add an invalid modifier class', () => {
-			expect(wrapper.find('div.o-forms-input').prop('className')).toMatch('o-forms-input--invalid');
+			expect(wrapper.find('div.o-forms-input').prop('className')).toMatch(
+				'o-forms-input--invalid'
+			);
 		});
 	});
 });

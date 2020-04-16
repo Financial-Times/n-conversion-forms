@@ -3,7 +3,7 @@ import { DeliveryCounty } from './delivery-county';
 
 export default {
 	title: 'Delivery County',
-	component: DeliveryCounty
+	component: DeliveryCounty,
 };
 
 export const Basic = (args) => <DeliveryCounty {...args} />;

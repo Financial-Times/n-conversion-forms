@@ -5,7 +5,7 @@ export default {
 	title: 'Delivery Options',
 	component: DeliveryOption,
 	argTypes: {
-		options: { control: 'array' }
+		options: { control: 'array' },
 	},
 };
 
@@ -14,15 +14,15 @@ Basic.args = {
 	options: [
 		{
 			value: 'PV',
-			isValidDeliveryOption: true
+			isValidDeliveryOption: true,
 		},
 		{
 			value: 'HD',
-			isValidDeliveryOption: true
+			isValidDeliveryOption: true,
 		},
 		{
 			value: 'EV',
-			isValidDeliveryOption: true
-		}
-	]
+			isValidDeliveryOption: true,
+		},
+	],
 };

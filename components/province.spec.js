@@ -12,11 +12,10 @@ expect.extend(expectToRenderCorrectly);
 describe('Province', () => {
 	it('render a select with a label', () => {
 		const props = {
-			provinces: defaultProvinces
+			provinces: defaultProvinces,
 		};
 
 		expect(Province).toRenderCorrectly(props);
-
 	});
 
 	it('can render an initial selected value', () => {
@@ -31,7 +30,7 @@ describe('Province', () => {
 	it('can render a disabled select', () => {
 		const props = {
 			provinces: defaultProvinces,
-			isDisabled: true
+			isDisabled: true,
 		};
 
 		expect(Province).toRenderCorrectly(props);
@@ -67,7 +66,7 @@ describe('Province', () => {
 
 	it('can override ID for select', () => {
 		const props = {
-			selectId: 'selectId'
+			selectId: 'selectId',
 		};
 		const component = mount(Province(props));
 		const select = component.find('select#selectId');
@@ -77,7 +76,7 @@ describe('Province', () => {
 
 	it('applies context-specific name if is billing province', () => {
 		const props = {
-			isBillingProvince: true
+			isBillingProvince: true,
 		};
 		const component = mount(Province(props));
 		const selectElementName = component.find('select#province').prop('name');
@@ -87,7 +86,7 @@ describe('Province', () => {
 
 	it('applies context-specific name if is not billing province', () => {
 		const props = {
-			isBillingProvince: false
+			isBillingProvince: false,
 		};
 		const component = mount(Province(props));
 		const selectElementName = component.find('select#province').prop('name');

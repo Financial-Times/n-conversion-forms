@@ -37,6 +37,6 @@ class Password {
 	toggleMask (mask) {
 		this.$password.type = mask ? 'password' : 'text';
 	}
-};
+}
 
 module.exports = Password;

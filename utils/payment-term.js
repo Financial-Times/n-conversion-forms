@@ -58,7 +58,7 @@ class PaymentTerm {
 	 * Register on change an event listener
 	 * @param {Function} callback Called with event when changed
 	 */
-	onChange (callback=()=>{}) {
+	onChange (callback = () => {}) {
 		return this.$paymentTerm.addEventListener('change', callback);
 	}
 
@@ -74,7 +74,7 @@ class PaymentTerm {
 			const price = term.querySelector(PRICE_CLASS);
 			const trialPrice = term.querySelector(TRIAL_PRICE_CLASS);
 			const monthlyPrice = term.querySelector(MONTHLY_PRICE_CLASS);
-			const update = options.find(option => option.value === value);
+			const update = options.find((option) => option.value === value);
 
 			if (!update) {
 				throw new Error(`Payment term update not found for "${value}"`);

@@ -4,10 +4,10 @@ import classNames from 'classnames';
 
 const postcodeLabel = {
 	USA: 'Zip Code',
-	CAN: 'postal code'
-}
+	CAN: 'postal code',
+};
 
-export function DeliveryPostcode ({
+export function DeliveryPostcode({
 	value = '',
 	country = '',
 	isDisabled = false,
@@ -16,23 +16,24 @@ export function DeliveryPostcode ({
 	pattern,
 	additionalFieldInformation,
 }) {
-
 	const postcodeReference = postcodeLabel[country.toUpperCase()] || 'postcode';
 
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	const deliveryPostcodeFieldClassNames = classNames([
 		'o-forms-field',
-		{ 'ncf__hidden': isHidden }
+		{ ncf__hidden: isHidden },
 	]);
 
 	const fieldErrorClassNames = classNames([
 		'o-forms-input__error',
-		{ 'additional-field-information__with-field-error': additionalFieldInformation }
+		{
+			'additional-field-information__with-field-error': additionalFieldInformation,
+		},
 	]);
 
 	return (
@@ -42,7 +43,6 @@ export function DeliveryPostcode ({
 			data-validate="required"
 			htmlFor="deliveryPostcode"
 		>
-
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">
 					Delivery <span data-reference="postcode">{postcodeReference}</span>
@@ -50,7 +50,8 @@ export function DeliveryPostcode ({
 			</span>
 
 			<span className={inputWrapperClassNames}>
-				<input type="text"
+				<input
+					type="text"
 					id="deliveryPostcode"
 					name="deliveryPostcode"
 					defaultValue={`${value}`}
@@ -63,10 +64,13 @@ export function DeliveryPostcode ({
 					disabled={isDisabled}
 				/>
 				<span className={fieldErrorClassNames}>
-					Please enter a valid <span data-reference="postcode">{postcodeReference}</span>.
+					Please enter a valid{' '}
+					<span data-reference="postcode">{postcodeReference}</span>.
 				</span>
 				{additionalFieldInformation ? (
-					<p className="additional-field-information">{additionalFieldInformation}</p>
+					<p className="additional-field-information">
+						{additionalFieldInformation}
+					</p>
 				) : null}
 			</span>
 		</label>
@@ -80,5 +84,5 @@ DeliveryPostcode.propTypes = {
 	isDisabled: PropTypes.bool,
 	hasError: PropTypes.bool,
 	isHidden: PropTypes.bool,
-	additionalFieldInformation: PropTypes.node
+	additionalFieldInformation: PropTypes.node,
 };

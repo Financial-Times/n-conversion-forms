@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function DeliveryStartDate ({
+export function DeliveryStartDate({
 	hasError = false,
 	date = '',
 	value = '',
@@ -10,12 +10,12 @@ export function DeliveryStartDate ({
 	max = null,
 	isDisabled = false,
 	isAddressUpdate = false,
-	isWeekendOnly = false
+	isWeekendOnly = false,
 }) {
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	const inputProps = {
@@ -28,19 +28,17 @@ export function DeliveryStartDate ({
 		'aria-required': 'true',
 		required: true,
 		disabled: isDisabled,
-		defaultValue: value
+		defaultValue: value,
 	};
 
-	const startMessage =
-		isAddressUpdate
-			? 'We’ll start delivering to this address from:'
-			: 'Your print subscription will start from:';
+	const startMessage = isAddressUpdate
+		? 'We’ll start delivering to this address from:'
+		: 'Your print subscription will start from:';
 
 	// Primary Address deliveries start on Monday (default) while Weekend Address deliveries start on Saturday.
-	const startDescriptionExample =
-		isWeekendOnly
-			? 'if you select a Sunday then we’ll start your deliveries on the following Saturday.'
-			: 'if you select a Sunday then we can start your supply on the Monday.';
+	const startDescriptionExample = isWeekendOnly
+		? 'if you select a Sunday then we’ll start your deliveries on the following Saturday.'
+		: 'if you select a Sunday then we can start your supply on the Monday.';
 
 	return (
 		<label
@@ -51,17 +49,26 @@ export function DeliveryStartDate ({
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">Delivery start date</span>
-				<span className="o-forms-title__prompt">Earliest available delivery date: {date}</span>
+				<span className="o-forms-title__prompt">
+					Earliest available delivery date: {date}
+				</span>
 			</span>
 
 			<span className={inputWrapperClassNames}>
 				<input {...inputProps} />
-				<span className="o-forms-input__error">Please select a valid start date</span>
+				<span className="o-forms-input__error">
+					Please select a valid start date
+				</span>
 			</span>
 
-			<p>{startMessage} <strong className="js-start-date-text">{date}</strong></p>
+			<p>
+				{startMessage} <strong className="js-start-date-text">{date}</strong>
+			</p>
 
-			<p>NB. This will  be the closest date we can supply your newspaper based on your selected date e.g. {startDescriptionExample}</p>
+			<p>
+				NB. This will be the closest date we can supply your newspaper based on
+				your selected date e.g. {startDescriptionExample}
+			</p>
 		</label>
 	);
 }

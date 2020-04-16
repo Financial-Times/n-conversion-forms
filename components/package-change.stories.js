@@ -9,5 +9,5 @@ export default {
 export const Basic = (args) => <PackageChange {...args} />;
 Basic.args = {
 	currentPackage: 'Premium Digital',
-	changePackageUrl: 'https://ft.com/products'
+	changePackageUrl: 'https://ft.com/products',
 };

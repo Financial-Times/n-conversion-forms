@@ -24,7 +24,9 @@ class PaymentType {
 		this.element = element;
 		this.$paymentType = element.querySelector('.ncf #paymentTypeField');
 
-		this.$directDebitGuarantee = this.$paymentType.querySelector('.ncf #directDebitGuarantee');
+		this.$directDebitGuarantee = this.$paymentType.querySelector(
+			'.ncf #directDebitGuarantee'
+		);
 		if (this.$directDebitGuarantee) {
 			// HACK require here so server side code use the static methods
 			const expander = require('o-expander').default;
@@ -45,7 +47,8 @@ class PaymentType {
 	 * @param {String} type Payment type to hide
 	 */
 	hide (type) {
-		const container = this.$paymentType.querySelector(`#${type}`).parentElement.parentElement;
+		const container = this.$paymentType.querySelector(`#${type}`).parentElement
+			.parentElement;
 		container.classList.add('ncf__hidden');
 	}
 
@@ -55,7 +58,8 @@ class PaymentType {
 	 * @param {String} type Payment type to show
 	 */
 	show (type) {
-		const container = this.$paymentType.querySelector(`#${type}`).parentElement.parentElement;
+		const container = this.$paymentType.querySelector(`#${type}`).parentElement
+			.parentElement;
 		container.classList.remove('ncf__hidden');
 	}
 
@@ -77,7 +81,7 @@ class PaymentType {
 	 * Register on change an event listener
 	 * @param {Function} callback Called with event when changed
 	 */
-	onChange (callback=()=>{}) {
+	onChange (callback = () => {}) {
 		return this.$paymentType.addEventListener('change', callback);
 	}
 
@@ -99,7 +103,9 @@ class PaymentType {
 	 */
 	showPanel () {
 		const type = this.getSelected();
-		const content = this.$paymentType.querySelectorAll('.ncf__payment-type-panel');
+		const content = this.$paymentType.querySelectorAll(
+			'.ncf__payment-type-panel'
+		);
 		for (let i = 0; i < content.length; i++) {
 			const element = content[i];
 			if (element.classList.contains(`ncf__payment-type-panel--${type}`)) {
@@ -125,6 +131,6 @@ class PaymentType {
 	static get APPLEPAY () {
 		return 'applepay';
 	}
-};
+}
 
 module.exports = PaymentType;

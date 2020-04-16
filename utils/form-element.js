@@ -5,7 +5,6 @@
  *
  */
 class FormElement {
-
 	/**
 	 * Constructor for the FormElement.
 	 * @param {object} document The global document object
@@ -21,7 +20,9 @@ class FormElement {
 		this.$el = this.$document.querySelector(querySelector);
 
 		if (!this.$el) {
-			throw new Error('Please include the DOM element for this component on the page');
+			throw new Error(
+				'Please include the DOM element for this component on the page'
+			);
 		}
 
 		this.inputs = this.$el.querySelectorAll('input,select');
@@ -33,7 +34,6 @@ class FormElement {
 	hide () {
 		this.$el.classList.add('ncf__hidden');
 	}
-
 
 	/**
 	 * Shows the form element.

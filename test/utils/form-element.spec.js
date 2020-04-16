@@ -18,15 +18,15 @@ describe('FormElement', () => {
 					querySelectorAll: () => {},
 					querySelector: () => {
 						return {
-							value: 'test'
+							value: 'test',
 						};
 					},
 					classList: {
 						add: addStub,
-						remove: removeStub
-					}
+						remove: removeStub,
+					},
 				};
-			}
+			},
 		};
 		formElement = new FormElement(document);
 		sandbox = sinon.createSandbox();
@@ -45,7 +45,7 @@ describe('FormElement', () => {
 
 		it('should throw an error if form element does not exist on the page', () => {
 			expect(() => {
-				document.querySelector = () => { };
+				document.querySelector = () => {};
 				new FormElement(document);
 			}).to.throw();
 		});

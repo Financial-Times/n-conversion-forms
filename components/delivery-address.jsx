@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function DeliveryAddress ({
+export function DeliveryAddress({
 	hasError = false,
 	line1 = '',
 	line2 = '',
@@ -12,12 +12,15 @@ export function DeliveryAddress ({
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	return (
 		<div id="deliveryAddressFields" data-validate="required">
-			<label className="o-forms-field ncf__validation-error" htmlFor="deliveryAddressLine1">
+			<label
+				className="o-forms-field ncf__validation-error"
+				htmlFor="deliveryAddressLine1"
+			>
 				<span className="o-forms-title">
 					<span className="o-forms-title__main">Address line 1</span>
 				</span>
@@ -35,10 +38,15 @@ export function DeliveryAddress ({
 						disabled={isDisabled}
 						defaultValue={line1}
 					/>
-				<span className="o-forms-input__error">Please enter a valid address</span>
+					<span className="o-forms-input__error">
+						Please enter a valid address
+					</span>
 				</span>
 			</label>
-			<label className="o-forms-field o-forms-field--optional" htmlFor="deliveryAddressLine2">
+			<label
+				className="o-forms-field o-forms-field--optional"
+				htmlFor="deliveryAddressLine2"
+			>
 				<span className="o-forms-title">
 					<span className="o-forms-title__main">Address line 2</span>
 				</span>
@@ -56,7 +64,10 @@ export function DeliveryAddress ({
 					/>
 				</span>
 			</label>
-			<label className="o-forms-field o-forms-field--optional" htmlFor="deliveryAddressLine3">
+			<label
+				className="o-forms-field o-forms-field--optional"
+				htmlFor="deliveryAddressLine3"
+			>
 				<span className="o-forms-title">
 					<span className="o-forms-title__main">Address line 3</span>
 				</span>
@@ -83,5 +94,5 @@ DeliveryAddress.propTypes = {
 	line1: PropTypes.string,
 	line2: PropTypes.string,
 	line3: PropTypes.string,
-	isDisabled: PropTypes.bool
+	isDisabled: PropTypes.bool,
 };

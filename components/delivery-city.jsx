@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function DeliveryCity ({
+export function DeliveryCity({
 	hasError = false,
 	value = '',
-	isDisabled = false
+	isDisabled = false,
 }) {
 	const inputWrapperClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	return (
@@ -37,7 +37,9 @@ export function DeliveryCity ({
 					disabled={isDisabled}
 					defaultValue={value}
 				/>
-			<span className="o-forms-input__error">Please enter a valid city or town</span>
+				<span className="o-forms-input__error">
+					Please enter a valid city or town
+				</span>
 			</span>
 		</label>
 	);
@@ -47,5 +49,5 @@ DeliveryCity.propTypes = {
 	hasError: PropTypes.bool,
 	value: PropTypes.string,
 	isDisabled: PropTypes.bool,
-	maxlength: PropTypes.number
+	maxlength: PropTypes.number,
 };

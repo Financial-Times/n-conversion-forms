@@ -10,12 +10,12 @@ export const Basic = (args) => <Province {...args} />;
 Basic.args = {
 	provinces: [
 		{
-			'code': 'AB',
-			'name': 'Alberta'
+			code: 'AB',
+			name: 'Alberta',
 		},
 		{
-			'code': 'BC',
-			'name': 'British Columbia'
-		}
-	]
+			code: 'BC',
+			name: 'British Columbia',
+		},
+	],
 };

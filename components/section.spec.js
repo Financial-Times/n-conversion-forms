@@ -8,7 +8,7 @@ expect.extend(expectToRenderCorrectly);
 describe('Section', () => {
 	it('renders with default props', () => {
 		const props = {
-			children: (TEST_MESSAGE)
+			children: TEST_MESSAGE,
 		};
 
 		expect(Section).toRenderCorrectly(props);

@@ -11,13 +11,13 @@ Basic.args = {
 	message: 'This is just a simple message.',
 	additional: [
 		'This is some extra information about the above message.',
-		'This is the second item in the array - so you can have as many as you need.'
+		'This is the second item in the array - so you can have as many as you need.',
 	],
 	actions: [
 		{
 			link: 'https://ft.com',
 			isSecondary: false,
-			text: 'FT Home'
-		}
+			text: 'FT Home',
+		},
 	],
 };

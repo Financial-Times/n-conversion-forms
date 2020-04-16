@@ -11,6 +11,10 @@ Basic.args = {
 	header: <span>Header Text</span>,
 	legend: 'This is my fieldset legend',
 	headingLevel: 'h1',
-	children: <div style={{ border: '4px solid blue', padding: '10px' }}>This is a passed in child node!</div>,
-	descriptor: <div>Description element</div>
+	children: (
+		<div style={{ border: '4px solid blue', padding: '10px' }}>
+			This is a passed in child node!
+		</div>
+	),
+	descriptor: <div>Description element</div>,
 };

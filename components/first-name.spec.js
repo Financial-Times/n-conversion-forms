@@ -15,21 +15,21 @@ describe('First name', () => {
 
 	it('render a field with value', () => {
 		const props = {
-			value: 'some value'
+			value: 'some value',
 		};
 		expect(FirstName).toRenderCorrectly(props);
 	});
 
 	it('render a disabled field', () => {
 		const props = {
-			isDisabled: true
+			isDisabled: true,
 		};
 		expect(FirstName).toRenderCorrectly(props);
 	});
 
 	it('render a field with error', () => {
 		const props = {
-			hasError: true
+			hasError: true,
 		};
 		expect(FirstName).toRenderCorrectly(props);
 	});
@@ -49,7 +49,6 @@ describe('First name', () => {
 		const props = {
 			dataTrackable: 'test-data-trackable',
 			inputId: 'inputId',
-
 		};
 		const component = mount(FirstName(props));
 		const actualValue = component.find('#inputId').prop('data-trackable');
@@ -58,7 +57,7 @@ describe('First name', () => {
 
 	it('render a field with custom id', () => {
 		const props = {
-			fieldId: 'fieldId'
+			fieldId: 'fieldId',
 		};
 		const component = mount(FirstName(props));
 		const element = component.find('#fieldId');
@@ -67,7 +66,7 @@ describe('First name', () => {
 
 	it('render a field with custom input id', () => {
 		const props = {
-			inputId: 'inputId'
+			inputId: 'inputId',
 		};
 		const component = mount(FirstName(props));
 		const element = component.find('input#inputId');
@@ -77,17 +76,20 @@ describe('First name', () => {
 	it('render a field with custom label', () => {
 		const props = {
 			fieldId: 'fieldId',
-			label: 'test label'
+			label: 'test label',
 		};
 		const component = mount(FirstName(props));
-		const element = component.find('#fieldId').children('.o-forms-title').first();
+		const element = component
+			.find('#fieldId')
+			.children('.o-forms-title')
+			.first();
 		expect(element.text()).toBe(props.label);
 	});
 
 	it('render a field with custom placeholder text', () => {
 		const props = {
 			inputId: 'inputId',
-			placeHolder: 'test placeholder'
+			placeHolder: 'test placeholder',
 		};
 		const component = mount(FirstName(props));
 		const actualValue = component.find('#inputId').prop('placeholder');
