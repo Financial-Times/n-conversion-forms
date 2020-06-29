@@ -1,7 +1,7 @@
 import React from 'react';
 import { Submit } from '../components/submit';
 
-module.exports = {
+export default {
 	'accept-terms': {
 		'isTransition': true,
 		'transitionType': 'endOfTerm'

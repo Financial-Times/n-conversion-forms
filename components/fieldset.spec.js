@@ -62,4 +62,14 @@ describe('Fieldset', () => {
 
 		expect(Fieldset).toRenderCorrectly(props);
 	});
+
+	it('renders a custom header containing markup', () => {
+		const props = {
+			children: (<div id={TEST_FIELDS_ID}></div>),
+			headingLevel: 'h2',
+			header: (<div>{HEADER_TEXT}<span className="test">Test</span></div>)
+		};
+
+		expect(Fieldset).toRenderCorrectly(props);
+	});
 });

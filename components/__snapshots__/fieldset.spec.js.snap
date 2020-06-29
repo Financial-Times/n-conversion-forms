@@ -12,6 +12,23 @@ exports[`Fieldset renders a custom descriptor paragraph 1`] = `
 </fieldset>
 `;
 
+exports[`Fieldset renders a custom header containing markup 1`] = `
+<fieldset class="ncf__fieldset">
+  <h2 class="ncf__header">
+    <div>
+      Header text
+      <span class="test">
+        Test
+      </span>
+    </div>
+  </h2>
+  <div class="ncf__fields">
+    <div id="fields_test">
+    </div>
+  </div>
+</fieldset>
+`;
+
 exports[`Fieldset renders a custom header in specific heading level tags 1`] = `
 <fieldset class="ncf__fieldset">
   <h2 class="ncf__header">

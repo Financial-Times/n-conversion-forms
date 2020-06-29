@@ -50,7 +50,7 @@ function initDemo () {
 			<ncf.LicenceConfirmation />
 			<ncf.LicenceHeader />
 			<ncf.Loader />
-			<ncf.Message {...fixture['message'].params}/>
+			<ncf.Message {...fixture.form['message'].params}/>
 			<ncf.PackageChange />
 			<ncf.Password />
 			<ncf.PaymentType />
