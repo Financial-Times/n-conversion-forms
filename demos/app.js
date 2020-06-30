@@ -7,7 +7,7 @@ const renderer = new PageKitReactJSX();
 
 const demoLandingTemplate = require('./views/jsx');
 const { DemoComponent } = require('./views/demo-component.jsx');
-const componentData = require('./data.jsx');
+const componentData = require('./data.jsx').default;
 
 const PORT = process.env.PORT || 5005;
 const app = express();

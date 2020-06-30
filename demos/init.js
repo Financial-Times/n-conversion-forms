@@ -1,72 +1,54 @@
+/* eslint-disable no-console */
 import React from 'react';
 import * as ncf from '../dist/index';
 import ReactDOM from 'react-dom';
-import fixture from './data.jsx';
+
+const toKebabCase = str =>
+	str &&
+	str.match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
+		.map(x => x.toLowerCase())
+		.join('-');
 
 function initDemo () {
-	const container = document.querySelector('#demoContent');
+	const demoContainer = document.querySelector('#demoContent');
+	const sidebarContainer = document.querySelector('#demoSidebar');
+	const demoContent = [];
+	const sidebarContent = [];
 
-	const element =
+	try {
+		Object.keys(ncf).forEach(comp => {
+			comp = toKebabCase(comp);
+			demoContent.push((
+				<div key={comp}>
+					<h2 id={comp}><a href={'/component/' + comp} target="_blank" rel="noopener noreferrer">{comp}</a></h2>
+					<iframe className="demo__iframe" src={'/component/' + comp}></iframe>
+				</div>
+			));
+			sidebarContent.push((
+				<li>
+					<a href={'#' + comp}>{comp}</a>
+				</li>
+			));
+		});
+	} catch (e) {
+		console.log('error::', e);
+	}
+
+	const demoElement =
 		<React.Fragment>
-			<ncf.AcceptTerms isSignup={true} isPrintProduct={true} isTrial={true}/>
-			<ncf.AppBanner />
-			<ncf.BillingCountry></ncf.BillingCountry>
-			<ncf.BillingPostcode postcodeReference={'billing postcode'}/>
-			<ncf.CompanyName />
-			<ncf.Confirmation />
-			<ncf.ContinueReading />
-			<ncf.Country />
-			<ncf.CustomerCare />
-			<ncf.Debug />
-			<ncf.DecisionMaker />
-			<ncf.DeliveryAddress />
-			<ncf.DeliveryCity />
-			<ncf.DeliveryCounty />
-			<ncf.DeliveryInstructions hasSignupSecurityNote={true} />
-			<ncf.DeliveryOption options={[
-				{
-					value: 'PV',
-					isSelected: true
-				},
-				{
-					value: 'HD',
-					isSelected: false
-				},
-				{
-					value: 'EV',
-					isSelected: false
-				}
-			]} />
-			<ncf.DeliveryPostcode postcodeReference={'delivery postcode'}/>
-			<ncf.DeliveryStartDate />
-			<ncf.Email />
-			<ncf.ErrorPage />
-			<ncf.Fieldset />
-			<ncf.FirstName />
-			<ncf.Form />
-			<ncf.Industry />
-			<ncf.JobTitle />
-			<ncf.LastName />
-			<ncf.LicenceConfirmation />
-			<ncf.LicenceHeader />
-			<ncf.Loader />
-			<ncf.Message {...fixture.form['message'].params}/>
-			<ncf.PackageChange />
-			<ncf.Password />
-			<ncf.PaymentType />
-			<ncf.Phone />
-			<ncf.Position />
-			<ncf.ProgressIndicator />
-			<ncf.Province />
-			<ncf.RegistrationConfirmation />
-			<ncf.Responsibility />
-			<ncf.Section />
-			<ncf.State />
-			<ncf.Submit />
-			<ncf.TrialBanner />
-		</React.Fragment>
-	;
-	ReactDOM.render(element, container);
+			<h1>Demos</h1>
+			{demoContent}
+		</React.Fragment>;
+
+	const sidebarElement =
+		<React.Fragment>
+			<ul>
+				{sidebarContent}
+			</ul>
+		</React.Fragment>;
+
+	ReactDOM.render(demoElement, demoContainer);
+	ReactDOM.render(sidebarElement, sidebarContainer);
 }
 
 initDemo();

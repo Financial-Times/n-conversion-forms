@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function DemoComponent({ name, data }) {
+export function DemoComponent ({ name, data }) {
 	const component = require(`../../components/${name}.jsx`);
 	const componentName = Object.keys(component)[0];
 	let Component = component[componentName];

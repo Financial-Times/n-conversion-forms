@@ -4,27 +4,19 @@ import { Submit } from '../components/submit';
 export default {
 	'accept-terms': {
 		'isTransition': true,
-		'transitionType': 'endOfTerm'
+		'transitionType': 'endOfTerm',
+		'isSignup': true,
+		'isPrintProduct': true,
+		'isTrial': true
 	},
 	'billing-country': {
 		'filterList': [
-			{
-				'code': 'GBR'
-			},
-			{
-				'code': 'JPN'
-			},
-			{
-				'code': 'USA'
-			},
-			{
-				'code': 'FRA'
-			}
+			'GBR', 'JPN', 'USA', 'FRA'
 		],
 		'value': 'USA'
 	},
 	'billing-postcode': {
-		'postcodeReference': 'postcode',
+		'postcodeReference': 'billing postcode',
 		'value': 'EC4M9BT',
 		'isZipCode': true
 	},
@@ -62,18 +54,7 @@ export default {
 	},
 	'country': {
 		'filterList': [
-			{
-				'code': 'GBR'
-			},
-			{
-				'code': 'JPN'
-			},
-			{
-				'code': 'USA'
-			},
-			{
-				'code': 'FRA'
-			}
+			'GBR', 'JPN', 'USA', 'FRA'
 		],
 		'value': 'USA'
 	},
@@ -103,15 +84,17 @@ export default {
 	},
 	'delivery-instructions': {
 		'maxlength': 200,
-		'rows': '5',
-		'value': 'Foo bar baz'
+		'rows': 5,
+		'value': 'Foo bar baz',
+		'hasSignupSecurityNote': true
 	},
 	'delivery-option': {
 		'isSingle': true,
 		'options': [
 			{
 				'value': 'PV',
-				'isValidDeliveryOption': true
+				'isValidDeliveryOption': true,
+				'isSelected': true
 			},
 			{
 				'value': 'HD',
@@ -120,13 +103,15 @@ export default {
 			},
 			{
 				'value': 'EV',
-				'isValidDeliveryOption': true
+				'isValidDeliveryOption': true,
+				'isSelected': false
 			}
 		]
 	},
 	'delivery-postcode': {
 		'value': 'EC4M9BT',
-		'isZipCode': true
+		'isZipCode': true,
+		'postcodeReference': 'delivery postcode'
 	},
 	'delivery-start-date': {
 		'hasError': false,
@@ -271,6 +256,20 @@ export default {
 				}
 			]
 		}
+	},
+	'message': {
+		'isError': true,
+		'message': 'The quick brown fox jumped over the lazy dog!',
+		'title': 'Hooray!',
+		'additional': ['You can specify additional messages.'],
+		'actions': [
+			{ 'link': '#', 'text': 'Button' },
+			{ 'link': '#', 'text': 'Text link', 'isSecondary': true }
+		]
+	},
+	'package-change': {
+		'changePackageUrl': '/foo',
+		'currentPackage': 'Digital'
 	},
 	'section': {
 		'children': (<div>Section content</div>)
