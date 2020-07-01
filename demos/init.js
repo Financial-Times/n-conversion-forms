@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React from 'react';
 import * as ncf from '../dist/index';
 import ReactDOM from 'react-dom';
@@ -31,6 +30,7 @@ function initDemo () {
 			));
 		});
 	} catch (e) {
+		// eslint-disable-next-line no-console
 		console.log('error::', e);
 	}
 
