@@ -251,5 +251,8 @@ export default {
 	},
 	'submit': {
 		'isCentered': true
+	},
+	'trial-banner': {
+		'trialDuration': '40 Days'
 	}
 };
