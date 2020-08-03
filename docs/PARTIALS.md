@@ -12,11 +12,12 @@
 * [Customer Care](#customer-care)
 * [Decision Maker](#decision-maker)
 * [Delivery Address](#delivery-address)
-* [Delivey City/town](#delivery-city-town)
+* [Delivery City/town](#delivery-city-town)
 * [Delivery Information](#delivery-information)
 * [Delivery Option](#delivery-option)
 * [Delivery Postcode](#delivery-postcode)
 * [Delivery Start Date](#delivery-start-date)
+* [Email](#email)
 * [Fieldset](#fieldset)
 * [Firstname](#firstname)
 * [Lastname](#lastname)
@@ -253,6 +254,21 @@ Renders a date field with a given start date (and accompanying copy).
 + `isDisabled`: boolean - Whether the field is disabled or not.
 + `hasError`: boolean - If true it adds `o-forms-input--invalid` class to display error.
 
+## Email
+
+A form field for adding a user's email.
+
+```handlebars
+{{> n-conversion-forms/partials/email value='Enter your email address'}}
+```
+### Options
++ value: string - the email address.
++ hasError: boolean - true - adds o-forms-input--invalid class
++ isDisabled: boolean - true - disables the field
++ isB2b: boolean - true - shows `work email address` label
++ isEducationalLicence: boolean - true removes `work` from field label
++ isB2cPartnershipLicence: boolean - true removes `work` from field label
+
 ## Error Page
 
 Renders a generic "error" page.
@@ -365,12 +381,17 @@ Header copy for licence pages.
 
 ### Options
 
-+ `isTrial`: boolean - Is the licence a trial or not
++ `isTrial`: boolean - Is the licence a trial or not, defaults false.
++ `isB2cPartnershipLicence`: boolean - Is the licence a B2C Partnership, default false.
 + `displayName`: string - Name of the company licence is for
 + `welcomeText`: string - Form welcome text
 
 ```handlebars
 {{> n-conversion-forms/partials/licence-header isTrial=false displayName="IBM" welcomeText="Join our FT.com licence" }}
+```
+
+```handlebars
+{{> n-conversion-forms/partials/licence-header isTrial=false isB2cPartnershipLicence=true }}
 ```
 
 ## Loader
