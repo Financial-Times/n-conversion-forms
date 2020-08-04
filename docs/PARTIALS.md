@@ -2,6 +2,7 @@
 
 ## Content
 
+* [Accept Terms](#accept-terms)
 * [App Banner](#app-banner)
 * [Billing Country](#billing-country)
 * [Billing Postcode](#billing-postcode)
@@ -29,6 +30,31 @@
 * [Payment Term](#payment-term)
 * [Phone](#phone)
 * [Submit](#submit)
+
+## Accept Terms
+
+Renders the appropriate terms and conditions, based on the form that is shown to the user.
+
+```handlebars
+{{> n-conversion-forms/partials/accept-terms isCorpSignup=true isTrial=true isB2cParnership=true}}
+```
+
+### Options
+
++ `hasError`: boolean - default `false` - whether the terms and conditions checkbox has an error
++ `isSignup`: boolean - default `false` - whether the user is subscribing
++ `isRegister`: boolean - default `false` - whether the user is simply registering
++ `isChecked`: boolean - default `false` - whether the checkbox is already checked
++ `isB2b`: boolean - default `false` - whether the user is B2B
++ `isB2cPartnership`: boolean - default `false` - whether the licence is B2C Partnership
++ `ageRestriction`: string - default `16` - the minimum age a user must be to sign up
++ `isEmbedded`: boolean - default `false` - whether the form is embedded in a frame
++ `isCorpSignup`: boolean - default `false` - whether it's an individual signing up to a B2B licence
++ `isTrial`: boolean - default `false` - if the user is signing up to a trial
++ `isTransition`: boolean - default `false` - if the user is changing from one licence to another
++ `transitionType`: string - the type of transition from a previous licence (e.g. `immediate`)
++ `isPrintProduct`: boolean - default `false` - if the user is signing up to a print edition subscription
++ `specialTerms`: string - any special terms and conditions, in addition to the standard ones
 
 ## App Banner
 
