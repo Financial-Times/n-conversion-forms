@@ -15,8 +15,9 @@ export function Email ({
 	placeHolder = 'Enter your email address',
 	value = '',
 	isEducationalLicence = false,
+	isB2cPartnershipLicence = false,
 }) {
-	const labelText = label || (isB2b && !isEducationalLicence ? 'Work email address' : 'Email address');
+	const labelText = label || (isB2b && !(isEducationalLicence || isB2cPartnershipLicence) ? 'Work email address' : 'Email address');
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
@@ -70,4 +71,5 @@ Email.propTypes = {
 	readonly: PropTypes.bool,
 	value: PropTypes.string,
 	isEducationalLicence: PropTypes.bool,
+	isB2cPartnershipLicence: PropTypes.bool,
 };
