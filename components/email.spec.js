@@ -51,7 +51,7 @@ describe('Email with confirmation', () => {
 			isB2cPartnershipLicence: true,
 		};
 
-		expect(Email).toRenderAs(context, props);
+		expect(Email).toRenderCorrectly(props);
 	});
 
 	it('render a email input with given description', () => {

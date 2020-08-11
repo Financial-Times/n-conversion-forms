@@ -25,7 +25,7 @@ describe('LicenceHeader', () => {
 	it('renders if is isB2cPartnershipLicence', () => {
 		const props = { isB2cPartnershipLicence: true };
 
-		expect(LicenceHeader).toRenderAs(context, props);
+		expect(LicenceHeader).toRenderCorrectly(props);
 	});
 
 	it('renders with custom welcome text (that requires escaping, e.g. ampersand)', () => {

@@ -6,12 +6,6 @@ exports[`LicenceHeader renders if is isB2cPartnershipLicence 1`] = `
 </h1>
 `;
 
-exports[`LicenceHeader renders if is isB2cPartnershipLicence 2`] = `
-<h1 class="ncf__header">
-  Welcome to the Financial Times
-</h1>
-`;
-
 exports[`LicenceHeader renders if is trial 1`] = `
 <h1 class="ncf__header">
   Start your free trial
