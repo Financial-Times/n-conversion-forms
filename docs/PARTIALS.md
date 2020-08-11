@@ -2,6 +2,7 @@
 
 ## Content
 
+* [Accept Terms](#accept-terms)
 * [App Banner](#app-banner)
 * [Billing Country](#billing-country)
 * [Billing Postcode](#billing-postcode)
@@ -12,11 +13,12 @@
 * [Customer Care](#customer-care)
 * [Decision Maker](#decision-maker)
 * [Delivery Address](#delivery-address)
-* [Delivey City/town](#delivery-city-town)
+* [Delivery City/town](#delivery-city-town)
 * [Delivery Information](#delivery-information)
 * [Delivery Option](#delivery-option)
 * [Delivery Postcode](#delivery-postcode)
 * [Delivery Start Date](#delivery-start-date)
+* [Email](#email)
 * [Fieldset](#fieldset)
 * [Firstname](#firstname)
 * [Lastname](#lastname)
@@ -28,6 +30,31 @@
 * [Payment Term](#payment-term)
 * [Phone](#phone)
 * [Submit](#submit)
+
+## Accept Terms
+
+Renders the appropriate terms and conditions, based on the form that is shown to the user.
+
+```handlebars
+{{> n-conversion-forms/partials/accept-terms isCorpSignup=true isTrial=true isB2cParnership=true}}
+```
+
+### Options
+
++ `hasError`: boolean - default `false` - whether the terms and conditions checkbox has an error
++ `isSignup`: boolean - default `false` - whether the user is subscribing
++ `isRegister`: boolean - default `false` - whether the user is simply registering
++ `isChecked`: boolean - default `false` - whether the checkbox is already checked
++ `isB2b`: boolean - default `false` - whether the user is B2B
++ `isB2cPartnership`: boolean - default `false` - whether the licence is B2C Partnership
++ `ageRestriction`: string - default `16` - the minimum age a user must be to sign up
++ `isEmbedded`: boolean - default `false` - whether the form is embedded in a frame
++ `isCorpSignup`: boolean - default `false` - whether it's an individual signing up to a B2B licence
++ `isTrial`: boolean - default `false` - if the user is signing up to a trial
++ `isTransition`: boolean - default `false` - if the user is changing from one licence to another
++ `transitionType`: string - the type of transition from a previous licence (e.g. `immediate`)
++ `isPrintProduct`: boolean - default `false` - if the user is signing up to a print edition subscription
++ `specialTerms`: string - any special terms and conditions, in addition to the standard ones
 
 ## App Banner
 
@@ -268,6 +295,21 @@ const { DeliveryStartDate } = require('@financial-times/n-conversion-forms/compo
 + `isDisabled`: boolean - Whether the field is disabled or not.
 + `hasError`: boolean - If true it adds `o-forms-input--invalid` class to display error.
 
+## Email
+
+A form field for adding a user's email.
+
+```handlebars
+{{> n-conversion-forms/partials/email value='Enter your email address'}}
+```
+### Options
++ value: string - the email address.
++ hasError: boolean - true - adds o-forms-input--invalid class
++ isDisabled: boolean - true - disables the field
++ isB2b: boolean - true - shows `work email address` label
++ isEducationalLicence: boolean - true removes `work` from field label
++ isB2cPartnershipLicence: boolean - true removes `work` from field label
+
 ## Error Page
 
 Renders a generic "error" page.
@@ -356,13 +398,18 @@ Header copy for licence pages.
 
 ### Options
 
-+ `isTrial`: boolean - Is the licence a trial or not
++ `isTrial`: boolean - Is the licence a trial or not, defaults false.
++ `isB2cPartnershipLicence`: boolean - Is the licence a B2C Partnership, default false.
 + `displayName`: string - Name of the company licence is for
 + `welcomeText`: string - Form welcome text
 
 ```jsx
 const { LicenceHeader } = require('@financial-times/n-conversion-forms/components');
 <LicenceHeader isTrial=false displayName="IBM" welcomeText="Join our FT.com licence" />
+```
+
+```handlebars
+{{> n-conversion-forms/partials/licence-header isTrial=false isB2cPartnershipLicence=true }}
 ```
 
 ## Loader

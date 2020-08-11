@@ -9,4 +9,12 @@
 			padding-left: 0;
 		}
 	}
+
+	.checkbox-two-lines {
+		margin-top: 10px;
+
+		.o-forms-input__label {
+			margin-top: -10px;
+		}
+	}
 }

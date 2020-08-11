@@ -45,6 +45,15 @@ describe('Email with confirmation', () => {
 		expect(Email).toRenderCorrectly({}, props);
 	});
 
+	it('render default label if isB2cPartnershipLicence', () => {
+		const props = {
+			pattern: 'whatever',
+			isB2cPartnershipLicence: true,
+		};
+
+		expect(Email).toRenderAs(context, props);
+	});
+
 	it('render a email input with given description', () => {
 		const props = {
 			description: 'some description',

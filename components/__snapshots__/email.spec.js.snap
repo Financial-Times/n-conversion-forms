@@ -256,3 +256,67 @@ exports[`Email with confirmation render default label if B2B and educational lic
   </span>
 </label>
 `;
+
+exports[`Email with confirmation render default label if isB2cPartnershipLicence 1`] = `
+<label id="emailField"
+       class="o-forms-field ncf__validation-error"
+       data-validate="required,email"
+       for="email"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Email address
+    </span>
+    <span class="o-forms-title__prompt">
+      Please enter an email address
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="email"
+           id="email"
+           name="email"
+           placeholder="Enter your email address"
+           autocomplete="email"
+           data-trackable="field-email"
+           aria-required="true"
+           required
+           value
+    >
+    <span class="o-forms-input__error">
+      This email address is not valid
+    </span>
+  </span>
+</label>
+`;
+
+exports[`Email with confirmation render default label if isB2cPartnershipLicence 2`] = `
+<label id="emailField"
+       class="o-forms-field ncf__validation-error"
+       data-validate="required,email"
+       for="email"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Email address
+    </span>
+    <span class="o-forms-title__prompt">
+      Please enter an email address
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="email"
+           id="email"
+           name="email"
+           placeholder="Enter your email address"
+           autocomplete="email"
+           data-trackable="field-email"
+           aria-required="true"
+           required
+           value
+    >
+    <span class="o-forms-input__error">
+      This email address is not valid
+    </span>
+  </span>
+</label>
+`;

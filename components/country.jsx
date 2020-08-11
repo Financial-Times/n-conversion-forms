@@ -63,9 +63,9 @@ export function Country ({
 			<span className={selectWrapperClassName}>
 				{createSelect(countries)}
 				<span className={fieldErrorClassNames}>{error}</span>
-					{additionalFieldInformation ? (
-						<p className="additional-field-information">{additionalFieldInformation}</p>
-					) : null}
+				{additionalFieldInformation ? (
+					<p className="additional-field-information">{additionalFieldInformation}</p>
+				) : null}
 			</span>
 		</label>
 	);

@@ -144,4 +144,10 @@ describe('AcceptTerms', () => {
 
 		expect(AcceptTerms).toRenderCorrectly(props);
 	});
+
+	it('renders appropriately if is B2C Partnership', () => {
+		const props = { isB2cPartnership: true };
+
+		expect(AcceptTerms).toRenderAs(context, props);
+	});
 });
