@@ -14,7 +14,7 @@ Have you completed these common tasks (remove those that don't apply)?
 
 - [ ] **Documentation** updated or created
 - [ ] **Tests** written for new or updated for existing functionality
-- [ ] **Demos** updated to use this change
+- [ ] **Stories** updated to use this change
 - [ ] **Accessibility** checked for screen readers and contrast
-- [ ] **Design Review** ran past the designer 
+- [ ] **Design Review** ran past the designer
 - [ ] **Product Review** ran past the product owner

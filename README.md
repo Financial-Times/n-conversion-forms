@@ -39,9 +39,9 @@ Handlebars.registerPartial(fileName, fileContents);
 ```
 
 #### Autocomplete attributes
-Autocomplete fields documentation is available here:  
+Autocomplete fields documentation is available here:
 https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute
- 
+
 ### CSS
 
 The styles can be used by including the `main.scss` file within your own SASS files.
@@ -89,7 +89,7 @@ Simple utility to use in conjunction with the `app-banner` partial that performs
 
 ### TrialBanner
 
-Displays banner for trial only. Designed to take in dynamic period `trialDuration`. If period is not present, then default 30 day period would be used  
+Displays banner for trial only. Designed to take in dynamic period `trialDuration`. If period is not present, then default 30 day period would be used
 
 
 ### Country
@@ -152,7 +152,7 @@ This utility provides the following:
     ```js
     email.registerEmailExistsCheck(backendServiceUrl, onFoundCallback, onNotFoundCallback);
     ```
-  
+
   **NB** It's recommended you have a hidden `#csrfToken` input element that you validate the request with in your backend service to prevent having your service abused.
 
   The backend service will be sent the following as the body of a `POST` request: `{ email, csrfToken }`.
@@ -384,7 +384,3 @@ try {
 }
 
 ```
-
-### Passing data to the demo components
-
-Add any component properties under the key of the template you're adding/working on to [demos/data.json].

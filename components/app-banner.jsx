@@ -11,7 +11,7 @@ export function AppBanner () {
 					/>
 				</div>
 				<div className="ncf__app-banner-content">
-				<div className="ncf__app-banner-header">Get our free App</div>
+					<div className="ncf__app-banner-header">Get our free App</div>
 					Download the <span className="ncf__app-banner-strong">FT app</span> to access articles on the move.
 				</div>
 				<div className="ncf__app-banner-actions">
