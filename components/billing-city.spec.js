@@ -1,6 +1,5 @@
 import { BillingCity } from './index';
 import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
-
 expect.extend(expectToRenderCorrectly);
 
 describe('BillingCity', () => {

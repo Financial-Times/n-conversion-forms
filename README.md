@@ -29,7 +29,6 @@ For installing dependencies, running the build process and the documentation app
 ## Usage
 
 This repository contains JSX components and CSS that can be used in your projects.
-
 ### CSS
 
 The styles can be used by including the `main.scss` file within your own SASS files.
