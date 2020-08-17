@@ -45,6 +45,7 @@
     "mocha": "5.1.1",
     "node-sass": "4.12.0",
     "pa11y-ci": "2.1.1",
+    "postcss": "^7.0.32",
     "prop-types": "15.7.2",
     "proxyquire": "2.1.0",
     "react": "16.10.2",

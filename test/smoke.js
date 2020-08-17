@@ -15,5 +15,5 @@ module.exports = getFilesFromPath(COMPONENTS_DIR, '.jsx').map(component => {
 				status: 200
 			}
 		}
-	}
+	};
 });
