@@ -14,5 +14,6 @@ module.exports = getFilesFromPath(COMPONENTS_DIR, '.jsx').map(component => {
 			[`/iframe.html?id=${component.replace('.jsx', '')}`]: {
 				status: 200
 			}
-		};
-	});
+		}
+	}
+});
