@@ -5,8 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel components/*.jsx -d dist --copy-files",
     "prepare": "(npx snyk protect || npx snyk protect -d || true)",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 5005",
     "build-storybook": "build-storybook"
   },
   "repository": {
@@ -26,6 +27,10 @@
     "n-common-static-data": "financial-times/n-common-static-data#v1.6.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
     "@financial-times/dotcom-build-bower-resolve": "^2.0.2",
     "@financial-times/n-gage": "^5.1.2",
     "@storybook/addon-a11y": "^6.0.10",

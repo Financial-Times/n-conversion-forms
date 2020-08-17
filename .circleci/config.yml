@@ -77,6 +77,9 @@ jobs:
           name: shared-helper / npm-update
           command: .circleci/shared-helpers/helper-npm-update
       - run:
+          name: Run the project build task
+          command: make build
+      - run:
           name: shared-helper / generate-build-state-artifacts
           command: .circleci/shared-helpers/helper-generate-build-state-artifacts
           when: always

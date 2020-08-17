@@ -4,6 +4,9 @@ node_modules/@financial-times/n-gage/index.mk:
 
 -include node_modules/@financial-times/n-gage/index.mk
 
+build:
+	npm run build
+
 run:
 	npm run storybook
 
@@ -18,7 +21,7 @@ jest:
 	jest
 
 smoke:
-	n-test smoke --host http://localhost:6006
+	n-test smoke --host http://localhost:5005
 
 test-update-snapshots:
 	NODE_ENV=test jest --updateSnapshot
