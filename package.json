@@ -5,8 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "(npx snyk protect || npx snyk protect -d || true) && npm run build",
-    "build": "babel components/*.jsx -d dist --copy-files",
+    "prepare": "(npx snyk protect || npx snyk protect -d || true)",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -21,33 +20,20 @@
   },
   "homepage": "https://github.com/Financial-Times/n-conversion-forms#readme",
   "dependencies": {
-    "@babel/runtime": "7.6.3",
     "classnames": "2.2.6",
-    "diffable-html": "4.0.0",
     "fetchres": "1.7.2",
     "lodash.get": "4.4.2",
     "n-common-static-data": "financial-times/n-common-static-data#v1.6.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.4",
-    "@babel/core": "^7.6.4",
-    "@babel/node": "^7.6.3",
-    "@babel/plugin-transform-runtime": "^7.6.2",
-    "@babel/preset-env": "^7.6.3",
-    "@babel/preset-react": "^7.6.3",
-    "@financial-times/dotcom-server-react-jsx": "^0.5.4",
+    "@financial-times/dotcom-build-bower-resolve": "^2.0.2",
     "@financial-times/n-gage": "^5.1.2",
-    "@financial-times/n-internal-tool": "^2.3.1",
     "@storybook/addon-a11y": "^6.0.10",
     "@storybook/addon-essentials": "^6.0.10",
     "@storybook/react": "^6.0.10",
     "@sucrase/jest-plugin": "^2.0.0",
-    "autoprefixer": "^8.6.3",
-    "babel-loader": "^8.0.0-beta.6",
     "bower": "^1.8.8",
-    "bower-resolve-webpack-plugin": "^1.0.4",
     "chai": "^4.2.0",
-    "cheerio": "^1.0.0-rc.2",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "eslint-plugin-jest": "^22.17.0",
@@ -58,9 +44,7 @@
     "jsdom": "15.1.0",
     "mocha": "5.1.1",
     "node-sass": "4.12.0",
-    "nodemon": "1.17.5",
     "pa11y-ci": "2.1.1",
-    "postcss-cli": "5.0.1",
     "prop-types": "15.7.2",
     "proxyquire": "2.1.0",
     "react": "16.10.2",
@@ -68,12 +52,10 @@
     "react-is": "^16.13.1",
     "sass-loader": "^9.0.3",
     "sinon": "6.3.5",
-    "snyk": "1.167.2",
-    "webpack": "4.20.2",
-    "webpack-cli": "3.1.2"
+    "snyk": "1.167.2"
   },
   "engines": {
-    "node": "8.16.2"
+    "node": "12.x"
   },
   "husky": {
     "hooks": {
