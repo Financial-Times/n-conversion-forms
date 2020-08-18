@@ -74,7 +74,7 @@ export function PaymentTerm ({
 				<label htmlFor={option.value} className="o-forms-input__label ncf__payment-term__label">
 					{createDiscount()}
 
-					<span className="ncf__payment-term__title">{showTrialCopyInTitle ? 'Trial: Digital Premium - ': ''}{nameMap[option.name].title}</span>
+					<span className="ncf__payment-term__title">{showTrialCopyInTitle ? 'Trial: Premium Digital - ': ''}{nameMap[option.name].title}</span>
 
 					{createDescription()}
 				</label>
