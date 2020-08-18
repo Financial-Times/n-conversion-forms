@@ -171,10 +171,10 @@ describe('payment-term', () => {
 				name,
 				isTrial: true
 			}]});
-			expect($(TITLE_SELECTOR).text()).to.contain('Trial: Digital Premium');
+			expect($(TITLE_SELECTOR).text()).to.contain('Trial: Premium Digital');
 		});
 
-		it('should not show Trial: Digital Premium for print or bundle trials', () => {
+		it('should not show Trial: Premium Digital for print or bundle trials', () => {
 			const $ = context.template({
 				options: [{
 					name,
@@ -182,7 +182,7 @@ describe('payment-term', () => {
 				}],
 				isPrintOrBundle: true
 			});
-			expect($(TITLE_SELECTOR).text()).to.not.contain('Trial: Digital Premium');
+			expect($(TITLE_SELECTOR).text()).to.not.contain('Trial: Premium Digital');
 		});
 
 		it('should show the price', () => {
