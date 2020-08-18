@@ -8,7 +8,7 @@
 			{{/if}}
 
 			{{#ifEquals this.name 'annual'}}
-			<span class="ncf__payment-term__title">{{#unless ../isPrintOrBundle}}{{#if isTrial}}Try the FT - {{/if}}{{/unless}}Annual</span>
+			<span class="ncf__payment-term__title">{{#unless ../isPrintOrBundle}}{{#if isTrial}}Trial: Digital Premium - {{/if}}{{/unless}}Annual</span>
 			<div class="ncf__payment-term__description">
 				{{#if isTrial}}
 				{{#if trialDuration}}{{trialDuration}}{{else}}4 weeks{{/if}} for <span class="ncf__payment-term__trial-price">{{trialPrice}}</span><br />
@@ -24,7 +24,7 @@
 			{{/ifEquals}}
 
 			{{#ifEquals this.name 'quarterly'}}
-			<span class="ncf__payment-term__title">{{#unless ../isPrintOrBundle}}{{#if isTrial}}Try the FT - {{/if}}{{/unless}}Quarterly</span>
+			<span class="ncf__payment-term__title">{{#unless ../isPrintOrBundle}}{{#if isTrial}}Trial: Digital Premium - {{/if}}{{/unless}}Quarterly</span>
 			<div class="ncf__payment-term__description">
 				{{#if isTrial}}
 				{{#if trialDuration}}{{trialDuration}}{{else}}4 weeks{{/if}} for <span class="ncf__payment-term__trial-price">{{trialPrice}}</span><br />
@@ -37,7 +37,7 @@
 			{{/ifEquals}}
 
 			{{#ifEquals this.name 'monthly'}}
-			<span class="ncf__payment-term__title">{{#unless ../isPrintOrBundle}}{{#if isTrial}}Try the FT - {{/if}}{{/unless}}Monthly</span>
+			<span class="ncf__payment-term__title">{{#unless ../isPrintOrBundle}}{{#if isTrial}}Trial: Digital Premium - {{/if}}{{/unless}}Monthly</span>
 			<div class="ncf__payment-term__description">
 				{{#if isTrial}}
 				{{#if trialDuration}}{{trialDuration}}{{else}}4 weeks{{/if}} for <span class="ncf__payment-term__trial-price">{{trialPrice}}</span><br />
