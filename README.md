@@ -17,6 +17,7 @@ make run # build and start documentation app at http://local.ft.com:5005/
 * [Utilities](#utilities)
 * [Contributing](CONTRIBUTING.md)
 * [Partials](docs/PARTIALS.md)
+* [Components](docs/COMPONENTS.md)
 
 ## Requirements
 

@@ -14,7 +14,7 @@ export function LicenceHeader ({
 	return (
 		<React.Fragment>
 			<h1 className="ncf__header">
-			{ displayName && (`${displayName} | `) }
+				{ displayName && (`${displayName} | `) }
 				{
 					isB2cPartnershipLicence
 						? ('Welcome to the Financial Times')
