@@ -1,0 +1,20 @@
+@mixin ncfB2cPartnershipPaymentTerm() {
+	&__b2c-partnership-payment-term {
+		&__description {
+			font-size: 15px;
+
+			p:first-child {
+				margin-top: 0;
+			}
+			p:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		// hide radio button
+		.o-forms-input--radio-round .o-forms-input__label:after,
+		.o-forms-input--radio-round .o-forms-input__label:before {
+			content: none;
+		}
+	}
+}
