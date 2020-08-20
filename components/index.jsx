@@ -3,6 +3,7 @@ export { AppBanner } from'./app-banner';
 export { BillingCity } from './billing-city';
 export { BillingCountry } from './billing-country';
 export { BillingPostcode } from'./billing-postcode';
+export { B2CPartnershipConfirmation} from './b2c-partnership-confirmation';
 export { CompanyName } from'./company-name';
 export { Confirmation } from'./confirmation';
 export { ContinueReading } from'./continue-reading';

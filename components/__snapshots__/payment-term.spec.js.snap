@@ -116,7 +116,7 @@ exports[`PaymentTerm annual option render option with isTrial 1`] = `
            class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
-        Try the FT - Annual
+        Trial: Premium Digital - Annual
       </span>
       <div class="ncf__payment-term__description">
         4 weeks for
@@ -272,7 +272,7 @@ exports[`PaymentTerm annual option render option with trial 1`] = `
            class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
-        Try the FT - Annual
+        Trial: Premium Digital - Annual
       </span>
       <div class="ncf__payment-term__description">
         6 weeks for
@@ -422,7 +422,7 @@ exports[`PaymentTerm monthly option render option with isTrial 1`] = `
            class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
-        Try the FT - Monthly
+        Trial: Premium Digital - Monthly
       </span>
       <div class="ncf__payment-term__description">
         4 weeks for
@@ -569,7 +569,7 @@ exports[`PaymentTerm monthly option render option with trial 1`] = `
            class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
-        Try the FT - Monthly
+        Trial: Premium Digital - Monthly
       </span>
       <div class="ncf__payment-term__description">
         6 weeks for
@@ -719,7 +719,7 @@ exports[`PaymentTerm quarterly option render option with isTrial 1`] = `
            class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
-        Try the FT - Quarterly
+        Trial: Premium Digital - Quarterly
       </span>
       <div class="ncf__payment-term__description">
         4 weeks for
@@ -866,7 +866,7 @@ exports[`PaymentTerm quarterly option render option with trial 1`] = `
            class="o-forms-input__label ncf__payment-term__label"
     >
       <span class="ncf__payment-term__title">
-        Try the FT - Quarterly
+        Trial: Premium Digital - Quarterly
       </span>
       <div class="ncf__payment-term__description">
         6 weeks for

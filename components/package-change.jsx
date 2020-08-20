@@ -5,7 +5,6 @@ export function PackageChange ({
 	changePackageUrl,
 	currentPackage,
 }) {
-	
 	return (
 		<div className="ncf__package-change">
 			<div className="ncf__package-change__package">
