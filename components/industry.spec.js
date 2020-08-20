@@ -1,37 +1,21 @@
-import { mount } from 'enzyme';
 import { Industry } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 import { demographics } from 'n-common-static-data';
 const defaultOptions = demographics.industries.industries;
 
-const context = {};
-expect.extend(expectToRenderAs);
+import Enzyme, { mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+Enzyme.configure({ adapter: new Adapter() });
 
-const {
-	registerHelper,
-	unregisterHelper,
-} = require('../test/helpers');
+expect.extend(expectToRenderCorrectly);
 
 describe('Industry', () => {
-	let options;
-	beforeAll(async () => {
-		registerHelper('ncf-common-data', function ({ fn }) {
-			return fn(Object.assign({}, { options }, this));
-		});
-		context.template = await fetchPartialAsString('industry.html');
-	});
-
-	afterAll(() => {
-		unregisterHelper('ncf-common-data');
-	});
-
 	it('render a select with a label', () => {
 		const props = {
 			options: defaultOptions
 		};
 
-		expect(Industry).toRenderAs(context, props);
+		expect(Industry).toRenderCorrectly(props);
 
 	});
 
@@ -41,7 +25,7 @@ describe('Industry', () => {
 			value: 'DEF',
 		};
 
-		expect(Industry).toRenderAs(context, props);
+		expect(Industry).toRenderCorrectly(props);
 	});
 
 	it('can render a disable select', () => {
@@ -50,7 +34,7 @@ describe('Industry', () => {
 			isDisabled: true
 		};
 
-		expect(Industry).toRenderAs(context, props);
+		expect(Industry).toRenderCorrectly(props);
 	});
 
 	it('can render an error message', () => {
@@ -59,7 +43,7 @@ describe('Industry', () => {
 			hasError: true,
 		};
 
-		expect(Industry).toRenderAs(context, props);
+		expect(Industry).toRenderCorrectly(props);
 	});
 
 	it('can override id and name for select', () => {

@@ -30,66 +30,7 @@ exports[`Last name render a disabled field 1`] = `
 </label>
 `;
 
-exports[`Last name render a disabled field 2`] = `
-<label id="lastNameField"
-       class="o-forms-field ncf__validation-error"
-       data-validate="required"
-       for="lastName"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Last name
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="text"
-           id="lastName"
-           name="lastName"
-           placeholder="Enter your last name"
-           autocomplete="family-name"
-           data-trackable="field-lastname"
-           aria-required="true"
-           required
-           disabled
-           value
-    >
-    <span class="o-forms-input__error">
-      Please enter your last name
-    </span>
-  </span>
-</label>
-`;
-
 exports[`Last name render a field with default error 1`] = `
-<label id="lastNameField"
-       class="o-forms-field ncf__validation-error"
-       data-validate="required"
-       for="lastName"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Last name
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
-    <input type="text"
-           id="lastName"
-           name="lastName"
-           placeholder="Enter your last name"
-           autocomplete="family-name"
-           data-trackable="field-lastname"
-           aria-required="true"
-           required
-           value
-    >
-    <span class="o-forms-input__error">
-      Please enter your last name
-    </span>
-  </span>
-</label>
-`;
-
-exports[`Last name render a field with default error 2`] = `
 <label id="lastNameField"
        class="o-forms-field ncf__validation-error"
        data-validate="required"
@@ -147,65 +88,7 @@ exports[`Last name render a field with default settings 1`] = `
 </label>
 `;
 
-exports[`Last name render a field with default settings 2`] = `
-<label id="lastNameField"
-       class="o-forms-field ncf__validation-error"
-       data-validate="required"
-       for="lastName"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Last name
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="text"
-           id="lastName"
-           name="lastName"
-           placeholder="Enter your last name"
-           autocomplete="family-name"
-           data-trackable="field-lastname"
-           aria-required="true"
-           required
-           value
-    >
-    <span class="o-forms-input__error">
-      Please enter your last name
-    </span>
-  </span>
-</label>
-`;
-
 exports[`Last name render a field with value 1`] = `
-<label id="lastNameField"
-       class="o-forms-field ncf__validation-error"
-       data-validate="required"
-       for="lastName"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Last name
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="text"
-           id="lastName"
-           name="lastName"
-           placeholder="Enter your last name"
-           autocomplete="family-name"
-           data-trackable="field-lastname"
-           aria-required="true"
-           required
-           value="some value"
-    >
-    <span class="o-forms-input__error">
-      Please enter your last name
-    </span>
-  </span>
-</label>
-`;
-
-exports[`Last name render a field with value 2`] = `
 <label id="lastNameField"
        class="o-forms-field ncf__validation-error"
        data-validate="required"

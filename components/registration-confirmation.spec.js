@@ -1,25 +1,18 @@
 import { RegistrationConfirmation } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
-const context = {};
-
-expect.extend(expectToRenderAs);
+expect.extend(expectToRenderCorrectly);
 
 describe('RegistrationConfirmation', () => {
-	beforeAll(async () => {
-		context.template = await fetchPartialAsString('registration-confirmation.html');
-	});
-
 	it('renders with default props', () => {
 		const props = {};
 
-		expect(RegistrationConfirmation).toRenderAs(context, props);
+		expect(RegistrationConfirmation).toRenderCorrectly(props);
 	});
 
 	it('renders with a custom email', () => {
 		const props = { email: 'test@example.com' };
 
-		expect(RegistrationConfirmation).toRenderAs(context, props);
+		expect(RegistrationConfirmation).toRenderCorrectly(props);
 	});
 });

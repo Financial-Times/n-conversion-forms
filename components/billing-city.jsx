@@ -37,7 +37,7 @@ export function BillingCity ({
 					disabled={isDisabled}
 					defaultValue={value}
 				/>
-			<span className="o-forms-input__error">Please enter a valid city or town</span>
+				<span className="o-forms-input__error">Please enter a valid city or town</span>
 			</span>
 		</label>
 	);
@@ -47,5 +47,4 @@ BillingCity.propTypes = {
 	hasError: PropTypes.bool,
 	value: PropTypes.string,
 	isDisabled: PropTypes.bool,
-	maxlength: PropTypes.number
 };

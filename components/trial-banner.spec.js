@@ -1,19 +1,12 @@
 import { TrialBanner } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
-const context = {};
-
-expect.extend(expectToRenderAs);
+expect.extend(expectToRenderCorrectly);
 
 describe('TrialBanner', () => {
-	beforeAll(async () => {
-		context.template = await fetchPartialAsString('trial-banner.html');
-	});
-
 	it('renders with default props', () => {
 		const props = {};
 
-		expect(TrialBanner).toRenderAs(context, props);
+		expect(TrialBanner).toRenderCorrectly(props);
 	});
 });

@@ -11,35 +11,7 @@ exports[`ContinueReading renders with a custom quote 1`] = `
 </div>
 `;
 
-exports[`ContinueReading renders with a custom quote 2`] = `
-<div class="ncf__continue-reading-wrapper">
-  <p class="ncf__continue-reading-title">
-    Become an FT subscriber to read:
-  </p>
-  <blockquote class="ncf__continue-reading-quote">
-    Foobar
-  </blockquote>
-</div>
-`;
-
 exports[`ContinueReading renders with a link 1`] = `
-<div class="ncf__continue-reading-wrapper">
-  <p class="ncf__continue-reading-title">
-    You can now continue reading:
-  </p>
-  <blockquote class="ncf__continue-reading-quote">
-  </blockquote>
-  <p class="ncf__center">
-    <a href="https://foo.com"
-       class="ncf__button ncf__button--secondary"
-    >
-      Continue reading
-    </a>
-  </p>
-</div>
-`;
-
-exports[`ContinueReading renders with a link 2`] = `
 <div class="ncf__continue-reading-wrapper">
   <p class="ncf__continue-reading-title">
     You can now continue reading:
@@ -74,24 +46,6 @@ exports[`ContinueReading renders with a link and is embedded 1`] = `
 </div>
 `;
 
-exports[`ContinueReading renders with a link and is embedded 2`] = `
-<div class="ncf__continue-reading-wrapper">
-  <p class="ncf__continue-reading-title">
-    You can now continue reading:
-  </p>
-  <blockquote class="ncf__continue-reading-quote">
-  </blockquote>
-  <p class="ncf__center">
-    <a href="https://foo.com"
-       target="_top"
-       class="ncf__button ncf__button--secondary"
-    >
-      Continue reading
-    </a>
-  </p>
-</div>
-`;
-
 exports[`ContinueReading renders with a link and is not embedded 1`] = `
 <div class="ncf__continue-reading-wrapper">
   <p class="ncf__continue-reading-title">
@@ -109,34 +63,7 @@ exports[`ContinueReading renders with a link and is not embedded 1`] = `
 </div>
 `;
 
-exports[`ContinueReading renders with a link and is not embedded 2`] = `
-<div class="ncf__continue-reading-wrapper">
-  <p class="ncf__continue-reading-title">
-    You can now continue reading:
-  </p>
-  <blockquote class="ncf__continue-reading-quote">
-  </blockquote>
-  <p class="ncf__center">
-    <a href="https://foo.com"
-       class="ncf__button ncf__button--secondary"
-    >
-      Continue reading
-    </a>
-  </p>
-</div>
-`;
-
 exports[`ContinueReading renders with default props 1`] = `
-<div class="ncf__continue-reading-wrapper">
-  <p class="ncf__continue-reading-title">
-    Become an FT subscriber to read:
-  </p>
-  <blockquote class="ncf__continue-reading-quote">
-  </blockquote>
-</div>
-`;
-
-exports[`ContinueReading renders with default props 2`] = `
 <div class="ncf__continue-reading-wrapper">
   <p class="ncf__continue-reading-title">
     Become an FT subscriber to read:

@@ -52,5 +52,6 @@ export function CompanyName ({
 CompanyName.propTypes = {
 	hasError: PropTypes.bool,
 	value: PropTypes.string,
-	isDisabled: PropTypes.bool
+	isDisabled: PropTypes.bool,
+	fieldLabel: PropTypes.string
 };

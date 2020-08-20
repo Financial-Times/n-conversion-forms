@@ -1,24 +1,16 @@
 import { DeliveryPostcode } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
-const context = {
-};
-
-expect.extend(expectToRenderAs);
+expect.extend(expectToRenderCorrectly);
 
 describe('Delivery Postcode', () => {
-	beforeAll(async () => {
-		context.template = await fetchPartialAsString('delivery-postcode.html');
-	});
-
 	it('render a postcode input with a label set as postcode', () => {
 		const props = {
 			postcodeReference: 'postcode',
 			pattern: 'whatever',
 		};
 
-		expect(DeliveryPostcode).toRenderAs(context, props);
+		expect(DeliveryPostcode).toRenderCorrectly(props);
 
 	});
 
@@ -29,7 +21,7 @@ describe('Delivery Postcode', () => {
 			pattern: 'whatever',
 		};
 
-		expect(DeliveryPostcode).toRenderAs(context, props);
+		expect(DeliveryPostcode).toRenderCorrectly(props);
 
 	});
 
@@ -40,7 +32,7 @@ describe('Delivery Postcode', () => {
 			pattern: 'whatever',
 		};
 
-		expect(DeliveryPostcode).toRenderAs(context, props);
+		expect(DeliveryPostcode).toRenderCorrectly(props);
 
 	});
 
@@ -51,7 +43,7 @@ describe('Delivery Postcode', () => {
 			pattern: 'whatever',
 		};
 
-		expect(DeliveryPostcode).toRenderAs(context, props);
+		expect(DeliveryPostcode).toRenderCorrectly(props);
 
 	});
 
@@ -61,7 +53,7 @@ describe('Delivery Postcode', () => {
 			pattern: 'whatever',
 		};
 
-		expect(DeliveryPostcode).toRenderAs(context, props);
+		expect(DeliveryPostcode).toRenderCorrectly(props);
 
 	});
 
@@ -72,7 +64,7 @@ describe('Delivery Postcode', () => {
 			isDisabled: true,
 		};
 
-		expect(DeliveryPostcode).toRenderAs(context, props);
+		expect(DeliveryPostcode).toRenderCorrectly(props);
 
 	});
 
@@ -84,6 +76,6 @@ describe('Delivery Postcode', () => {
 			isHidden: true,
 		};
 
-		expect(DeliveryPostcode).toRenderAs(context, props);
+		expect(DeliveryPostcode).toRenderCorrectly(props);
 	});
 });

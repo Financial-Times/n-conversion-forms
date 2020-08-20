@@ -1,20 +1,13 @@
 import { PaymentTerm } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
-const context = {};
-
-expect.extend(expectToRenderAs);
+expect.extend(expectToRenderCorrectly);
 
 describe('PaymentTerm', () => {
-	beforeAll(async () => {
-		context.template = await fetchPartialAsString('payment-term.html');
-	});
-
 	it('render with defaults', () => {
 		const props = {};
 
-		expect(PaymentTerm).toRenderAs(context, props);
+		expect(PaymentTerm).toRenderCorrectly(props);
 	});
 
 	it('render with isPrintOrBundle', () => {
@@ -22,7 +15,7 @@ describe('PaymentTerm', () => {
 			isPrintOrBundle: true
 		};
 
-		expect(PaymentTerm).toRenderAs(context, props);
+		expect(PaymentTerm).toRenderCorrectly(props);
 	});
 
 	['annual', 'quarterly', 'monthly'].forEach(type => {
@@ -36,7 +29,7 @@ describe('PaymentTerm', () => {
 					}]
 				};
 
-				expect(PaymentTerm).toRenderAs(context, props);
+				expect(PaymentTerm).toRenderCorrectly(props);
 			});
 
 			it('render option with discount', () => {
@@ -49,7 +42,7 @@ describe('PaymentTerm', () => {
 					}]
 				};
 
-				expect(PaymentTerm).toRenderAs(context, props);
+				expect(PaymentTerm).toRenderCorrectly(props);
 			});
 
 			it('render option with isTrial', () => {
@@ -62,7 +55,7 @@ describe('PaymentTerm', () => {
 					}]
 				};
 
-				expect(PaymentTerm).toRenderAs(context, props);
+				expect(PaymentTerm).toRenderCorrectly(props);
 			});
 
 			it('render option with selected', () => {
@@ -75,7 +68,7 @@ describe('PaymentTerm', () => {
 					}]
 				};
 
-				expect(PaymentTerm).toRenderAs(context, props);
+				expect(PaymentTerm).toRenderCorrectly(props);
 			});
 
 			it('render option with trial', () => {
@@ -90,7 +83,7 @@ describe('PaymentTerm', () => {
 					}]
 				};
 
-				expect(PaymentTerm).toRenderAs(context, props);
+				expect(PaymentTerm).toRenderCorrectly(props);
 			});
 
 			it('render option with monthlyPrice', () => {
@@ -103,7 +96,7 @@ describe('PaymentTerm', () => {
 					}]
 				};
 
-				expect(PaymentTerm).toRenderAs(context, props);
+				expect(PaymentTerm).toRenderCorrectly(props);
 			});
 		});
 	});

@@ -1,20 +1,17 @@
-import { mount } from 'enzyme';
 import { JobTitle } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
-const context = {};
-expect.extend(expectToRenderAs);
+import Enzyme, { mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+Enzyme.configure({ adapter: new Adapter() });
+
+expect.extend(expectToRenderCorrectly);
 
 describe('JobTitle', () => {
-	beforeAll(async () => {
-		context.template = await fetchPartialAsString('job-title.html');
-	});
-
 	it('render a select with a label', () => {
 		const props = {};
 
-		expect(JobTitle).toRenderAs(context, props);
+		expect(JobTitle).toRenderCorrectly(props);
 	});
 
 	it('can render an initial selected value', () => {
@@ -22,7 +19,7 @@ describe('JobTitle', () => {
 			value: 'Super hero',
 		};
 
-		expect(JobTitle).toRenderAs(context, props);
+		expect(JobTitle).toRenderCorrectly(props);
 	});
 
 	it('can render a disable input', () => {
@@ -30,7 +27,7 @@ describe('JobTitle', () => {
 			isDisabled: true
 		};
 
-		expect(JobTitle).toRenderAs(context, props);
+		expect(JobTitle).toRenderCorrectly(props);
 	});
 
 	it('can render an error message', () => {
@@ -38,7 +35,7 @@ describe('JobTitle', () => {
 			hasError: true,
 		};
 
-		expect(JobTitle).toRenderAs(context, props);
+		expect(JobTitle).toRenderCorrectly(props);
 	});
 
 	it('can override id and name for input', () => {

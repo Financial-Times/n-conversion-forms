@@ -1,23 +1,14 @@
 import { BillingCountry } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
-import ncfCountries from '../helpers/ncf-countries';
-import { registerHelper } from '../test/helpers';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
-const context = {};
-
-expect.extend(expectToRenderAs);
+expect.extend(expectToRenderCorrectly);
 
 describe('Country', () => {
-	beforeAll(async () => {
-		registerHelper('ncf-countries', ncfCountries);
-		context.template = await fetchPartialAsString('billing-country.html');
-	});
 
 	it('renders with default props', () => {
 		const props = {};
 
-		expect(BillingCountry).toRenderAs(context, props);
+		expect(BillingCountry).toRenderCorrectly(props);
 	});
 
 	it('renders with small filterList', () => {
@@ -25,7 +16,7 @@ describe('Country', () => {
 			filterList: ['GBR']
 		};
 
-		expect(BillingCountry).toRenderAs(context, props);
+		expect(BillingCountry).toRenderCorrectly(props);
 	});
 
 	it('renders with large filterList', () => {
@@ -36,7 +27,7 @@ describe('Country', () => {
 			]
 		};
 
-		expect(BillingCountry).toRenderAs(context, props);
+		expect(BillingCountry).toRenderCorrectly(props);
 	});
 
 	it('renders with hasError', () => {
@@ -44,7 +35,7 @@ describe('Country', () => {
 			hasError: true
 		};
 
-		expect(BillingCountry).toRenderAs(context, props);
+		expect(BillingCountry).toRenderCorrectly(props);
 	});
 
 	it('renders with isDisabled', () => {
@@ -52,7 +43,7 @@ describe('Country', () => {
 			isDisabled: true
 		};
 
-		expect(BillingCountry).toRenderAs(context, props);
+		expect(BillingCountry).toRenderCorrectly(props);
 	});
 
 	it('renders with value', () => {
@@ -60,6 +51,6 @@ describe('Country', () => {
 			value: 'GBR'
 		};
 
-		expect(BillingCountry).toRenderAs(context, props);
+		expect(BillingCountry).toRenderCorrectly(props);
 	});
 });

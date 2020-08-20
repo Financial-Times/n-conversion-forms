@@ -59,3 +59,4 @@ LicenceConfirmation.propTypes = {
 	isEducationalLicence: PropTypes.bool,
 	contentId: PropTypes.string,
 };
+

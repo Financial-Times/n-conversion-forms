@@ -1,20 +1,13 @@
 import { Debug } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
-const context = {};
-
-expect.extend(expectToRenderAs);
+expect.extend(expectToRenderCorrectly);
 
 describe('Debug', () => {
-	beforeAll(async () => {
-		context.template = await fetchPartialAsString('debug.html');
-	});
-
 	it('renders with default props', () => {
 		const props = {};
 
-		expect(Debug).toRenderAs(context, props);
+		expect(Debug).toRenderCorrectly(props);
 	});
 
 	it('renders with isTest', () => {
@@ -22,7 +15,7 @@ describe('Debug', () => {
 			isTest: true
 		};
 
-		expect(Debug).toRenderAs(context, props);
+		expect(Debug).toRenderCorrectly(props);
 	});
 
 	it('renders with showHelpers', () => {
@@ -30,7 +23,7 @@ describe('Debug', () => {
 			showHelpers: true
 		};
 
-		expect(Debug).toRenderAs(context, props);
+		expect(Debug).toRenderCorrectly(props);
 	});
 
 	it('renders with links', () => {
@@ -40,6 +33,6 @@ describe('Debug', () => {
 			}
 		};
 
-		expect(Debug).toRenderAs(context, props);
+		expect(Debug).toRenderCorrectly(props);
 	});
 });

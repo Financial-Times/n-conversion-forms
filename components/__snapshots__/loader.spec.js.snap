@@ -24,30 +24,6 @@ exports[`Loader renders with default props 1`] = `
 </div>
 `;
 
-exports[`Loader renders with default props 2`] = `
-<div class="ncf__loader ncf__hidden"
-     role="dialog"
-     aria-labelledby="loader-aria-label"
-     aria-describedby="loader-aria-description"
-     aria-modal="true"
->
-  <div class="ncf__loader__content">
-    <div class="ncf__hidden"
-         id="loader-aria-label"
-    >
-      Loading
-    </div>
-    <div class="ncf__loader__content__main"
-         id="loader-aria-description"
-    >
-      <div>
-        Foo Bar
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Loader renders with showLoader 1`] = `
 <div class="ncf__loader is-visible"
      role="dialog"
@@ -73,56 +49,7 @@ exports[`Loader renders with showLoader 1`] = `
 </div>
 `;
 
-exports[`Loader renders with showLoader 2`] = `
-<div class="ncf__loader is-visible"
-     role="dialog"
-     aria-labelledby="loader-aria-label"
-     aria-describedby="loader-aria-description"
-     aria-modal="true"
-     tabindex="1"
->
-  <div class="ncf__loader__content">
-    <div class="ncf__hidden"
-         id="loader-aria-label"
-    >
-      Loading
-    </div>
-    <div class="ncf__loader__content__main"
-         id="loader-aria-description"
-    >
-      <div>
-        Foo Bar
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Loader renders with title 1`] = `
-<div class="ncf__loader ncf__hidden"
-     role="dialog"
-     aria-labelledby="loader-aria-label"
-     aria-describedby="loader-aria-description"
-     aria-modal="true"
->
-  <div class="ncf__loader__content">
-    <div class="ncf__loader__content__title"
-         id="loader-aria-label"
-    >
-      TITLE
-    </div>
-    <div class="ncf__loader__content__main"
-         id="loader-aria-description"
-    >
-      <div>
-        Foo Bar
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Loader renders with title 2`] = `
 <div class="ncf__loader ncf__hidden"
      role="dialog"
      aria-labelledby="loader-aria-label"

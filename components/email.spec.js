@@ -1,20 +1,14 @@
 import { Email } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
-const context = {};
-expect.extend(expectToRenderAs);
+expect.extend(expectToRenderCorrectly);
 
 describe('Email with confirmation', () => {
-	beforeAll(async () => {
-		context.template = await fetchPartialAsString('email.html');
-	});
-
 	it('render a email input with default params', () => {
 		const props = {
 		};
 
-		expect(Email).toRenderAs(context, props);
+		expect(Email).toRenderCorrectly(props);
 	});
 
 	it('render a email input with email error', () => {
@@ -22,7 +16,7 @@ describe('Email with confirmation', () => {
 			hasError: true,
 		};
 
-		expect(Email).toRenderAs(context, props);
+		expect(Email).toRenderCorrectly(props);
 	});
 
 	it('render a email input with default value', () => {
@@ -30,7 +24,7 @@ describe('Email with confirmation', () => {
 			value: 'test@example.com'
 		};
 
-		expect(Email).toRenderAs(context, props);
+		expect(Email).toRenderCorrectly(props);
 	});
 
 	it('render a email input for B2B', () => {
@@ -38,7 +32,7 @@ describe('Email with confirmation', () => {
 			isB2b: true,
 		};
 
-		expect(Email).toRenderAs(context, props);
+		expect(Email).toRenderCorrectly(props);
 	});
 
 	it('render default label if B2B and educational licence', () => {
@@ -48,7 +42,7 @@ describe('Email with confirmation', () => {
 			educationalLicence: true,
 		};
 
-		expect(Email).toRenderAs(context, props);
+		expect(Email).toRenderCorrectly({}, props);
 	});
 
 	it('render default label if isB2cPartnershipLicence', () => {
@@ -57,7 +51,7 @@ describe('Email with confirmation', () => {
 			isB2cPartnershipLicence: true,
 		};
 
-		expect(Email).toRenderAs(context, props);
+		expect(Email).toRenderCorrectly(props);
 	});
 
 	it('render a email input with given description', () => {
@@ -66,7 +60,7 @@ describe('Email with confirmation', () => {
 			isB2b: false,
 		};
 
-		expect(Email).toRenderAs(context, props);
+		expect(Email).toRenderCorrectly(props);
 	});
 
 	it('render a email input with read only fields', () => {
@@ -75,7 +69,7 @@ describe('Email with confirmation', () => {
 			readonly: true,
 		};
 
-		expect(Email).toRenderAs(context, props);
+		expect(Email).toRenderCorrectly(props);
 	});
 
 	it('render a email input with disabled fields', () => {
@@ -84,6 +78,6 @@ describe('Email with confirmation', () => {
 			isDisabled: true
 		};
 
-		expect(Email).toRenderAs(context, props);
+		expect(Email).toRenderCorrectly(props);
 	});
 });

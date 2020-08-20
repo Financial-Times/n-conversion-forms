@@ -1,23 +1,15 @@
 import { Message } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
-const context = {
-};
-
-expect.extend(expectToRenderAs);
+expect.extend(expectToRenderCorrectly);
 
 describe('Message', () => {
-	beforeAll(async () => {
-		context.template = await fetchPartialAsString('message.html');
-	});
-
 	it('render a message', () => {
 		const props = {
 			message: 'My message in a bottle',
 		};
 
-		expect(Message).toRenderAs(context, props);
+		expect(Message).toRenderCorrectly(props);
 	});
 
 	it('can render a title', () => {
@@ -26,7 +18,7 @@ describe('Message', () => {
 			message: 'My message in a bottle'
 		};
 
-		expect(Message).toRenderAs(context, props);
+		expect(Message).toRenderCorrectly(props);
 	});
 
 	it('can render additional information', () => {
@@ -36,7 +28,7 @@ describe('Message', () => {
 			additional: ['Sting', 'Steward Copeland', 'Andy Summers']
 		};
 
-		expect(Message).toRenderAs(context, props);
+		expect(Message).toRenderCorrectly(props);
 	});
 
 	it('can render some actions as primary', () => {
@@ -49,7 +41,7 @@ describe('Message', () => {
 			}]
 		};
 
-		expect(Message).toRenderAs(context, props);
+		expect(Message).toRenderCorrectly(props);
 	});
 
 	it('can render some actions as secondary', () => {
@@ -63,7 +55,7 @@ describe('Message', () => {
 			}]
 		};
 
-		expect(Message).toRenderAs(context, props);
+		expect(Message).toRenderCorrectly(props);
 	});
 
 	it('can render a message as a Notice', () => {
@@ -72,7 +64,7 @@ describe('Message', () => {
 			isNotice: true
 		};
 
-		expect(Message).toRenderAs(context, props);
+		expect(Message).toRenderCorrectly(props);
 	});
 
 	it('can render a message as an Error', () => {
@@ -81,7 +73,7 @@ describe('Message', () => {
 			isError: true
 		};
 
-		expect(Message).toRenderAs(context, props);
+		expect(Message).toRenderCorrectly(props);
 	});
 
 	it('can render a message as a Success', () => {
@@ -90,7 +82,7 @@ describe('Message', () => {
 			isSuccess: true
 		};
 
-		expect(Message).toRenderAs(context, props);
+		expect(Message).toRenderCorrectly(props);
 	});
 
 	it('can render a message as an Inform', () => {
@@ -99,7 +91,7 @@ describe('Message', () => {
 			isInform: true
 		};
 
-		expect(Message).toRenderAs(context, props);
+		expect(Message).toRenderCorrectly(props);
 	});
 
 	it('can add a data attribute name', () => {
@@ -108,7 +100,7 @@ describe('Message', () => {
 			name: 'The Police best album ever'
 		};
 
-		expect(Message).toRenderAs(context, props);
+		expect(Message).toRenderCorrectly(props);
 	});
 
 
