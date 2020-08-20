@@ -6,7 +6,7 @@ export function B2cPartnershipPaymentTerm ({
 	inputName = 'paymentTerm',
 	options = [],
 	optionName,
-	title,
+	displayName,
 	includes,
 	conditions,
 }) {
@@ -17,7 +17,7 @@ export function B2cPartnershipPaymentTerm ({
 			<div className="ncf__payment-term__item o-forms-input--radio-round">
 				<input type="radio" id={value} name={inputName} value={value} defaultChecked={true} />
 				<label htmlFor={value} className="o-forms-input__label ncf__payment-term__label">
-					<span className="ncf__payment-term__title">{price} - {title}</span>
+					<span className="ncf__payment-term__title">{price} - {displayName}</span>
 					<div className="ncf__b2c-partnership-payment-term__description">
 						<p>
 							Includes:<br />
