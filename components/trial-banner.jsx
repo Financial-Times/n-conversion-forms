@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export function TrialBanner ({
 	trialDuration = ''
 }) {
-	const durationMessage = trialDuration === '' ? trialDuration : <><span className="ncf__strong">{trialDuration}</span>{' '}</>;
+	const durationMessage = trialDuration ? <><span className="ncf__strong">{trialDuration}</span>{' '}</> : '';
 
 	return (
 		<div id="trialBanner" className="ncf__trial-banner">

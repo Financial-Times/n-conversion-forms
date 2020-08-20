@@ -24,3 +24,4 @@ package-lock.json
 .pa11yci.js
 .stylelintrc
 dist
+docs

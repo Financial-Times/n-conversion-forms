@@ -26,7 +26,6 @@ export function Industry ({
 		<label
 			id={fieldId}
 			className="o-forms-field ncf__validation-error"
-			data-validate={isRequired ? 'required' : ''}
 			htmlFor={selectId}
 		>
 			<span className="o-forms-title">
@@ -63,5 +62,6 @@ Industry.propTypes = {
 		code: PropTypes.string,
 		description: PropTypes.string,
 	})),
+	fieldLabel: PropTypes.string,
 	isRequired: PropTypes.bool,
 };

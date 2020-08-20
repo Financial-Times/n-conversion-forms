@@ -9,13 +9,3 @@ exports[`Section renders with default props 1`] = `
   </div>
 </div>
 `;
-
-exports[`Section renders with default props 2`] = `
-<div class="o-forms-section o-forms-section--wide">
-  <div class="o-forms-section__message">
-    <div id="message">
-      Message Text
-    </div>
-  </div>
-</div>
-`;

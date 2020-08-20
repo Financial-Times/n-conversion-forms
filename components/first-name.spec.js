@@ -1,40 +1,37 @@
-import { mount } from 'enzyme';
 import { FirstName } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
-const context = {};
-expect.extend(expectToRenderAs);
+import Enzyme, { mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+Enzyme.configure({ adapter: new Adapter() });
+
+expect.extend(expectToRenderCorrectly);
 
 describe('First name', () => {
-	beforeAll(async () => {
-		context.template = await fetchPartialAsString('firstname.html');
-	});
-
 	it('render a field with default settings', () => {
 		const props = {};
-		expect(FirstName).toRenderAs(context, props);
+		expect(FirstName).toRenderCorrectly(props);
 	});
 
 	it('render a field with value', () => {
 		const props = {
 			value: 'some value'
 		};
-		expect(FirstName).toRenderAs(context, props);
+		expect(FirstName).toRenderCorrectly(props);
 	});
 
 	it('render a disabled field', () => {
 		const props = {
 			isDisabled: true
 		};
-		expect(FirstName).toRenderAs(context, props);
+		expect(FirstName).toRenderCorrectly(props);
 	});
 
 	it('render a field with error', () => {
 		const props = {
 			hasError: true
 		};
-		expect(FirstName).toRenderAs(context, props);
+		expect(FirstName).toRenderCorrectly(props);
 	});
 
 	it('render a field with custom error', () => {

@@ -1,37 +1,30 @@
 import { DeliveryCounty } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
-const context = {};
-
-expect.extend(expectToRenderAs);
+expect.extend(expectToRenderCorrectly);
 
 describe('DeliveryCounty', () => {
-	beforeAll(async () => {
-		context.template = await fetchPartialAsString('delivery-county.html');
-	});
-
 	it('renders with default props', () => {
 		const props = {};
 
-		expect(DeliveryCounty).toRenderAs(context, props);
+		expect(DeliveryCounty).toRenderCorrectly(props);
 	});
 
 	it('renders with an error', () => {
 		const props = { hasError: true };
 
-		expect(DeliveryCounty).toRenderAs(context, props);
+		expect(DeliveryCounty).toRenderCorrectly(props);
 	});
 
 	it('renders with a custom value', () => {
 		const props = { value: 'foobar' };
 
-		expect(DeliveryCounty).toRenderAs(context, props);
+		expect(DeliveryCounty).toRenderCorrectly(props);
 	});
 
 	it('renders with a disabled input element', () => {
 		const props = { isDisabled: true };
 
-		expect(DeliveryCounty).toRenderAs(context, props);
+		expect(DeliveryCounty).toRenderCorrectly(props);
 	});
 });

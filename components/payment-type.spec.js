@@ -1,21 +1,13 @@
 import { PaymentType } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
-const context = {
-};
-
-expect.extend(expectToRenderAs);
+expect.extend(expectToRenderCorrectly);
 
 describe('PaymentType', () => {
-	beforeAll(async () => {
-		context.template = await fetchPartialAsString('payment-type.html');
-	});
-
 	it('render with default props', () => {
 		const props = {};
 
-		expect(PaymentType).toRenderAs(context, props);
+		expect(PaymentType).toRenderCorrectly(props);
 	});
 
 	it('render with enableApplepay', () => {
@@ -23,7 +15,7 @@ describe('PaymentType', () => {
 			enableApplepay: true
 		};
 
-		expect(PaymentType).toRenderAs(context, props);
+		expect(PaymentType).toRenderCorrectly(props);
 	});
 
 	it('render with enableCreditcard', () => {
@@ -31,7 +23,7 @@ describe('PaymentType', () => {
 			enableCreditcard: true
 		};
 
-		expect(PaymentType).toRenderAs(context, props);
+		expect(PaymentType).toRenderCorrectly(props);
 	});
 
 	it('render with enableDirectdebit', () => {
@@ -39,7 +31,7 @@ describe('PaymentType', () => {
 			enableDirectdebit: true
 		};
 
-		expect(PaymentType).toRenderAs(context, props);
+		expect(PaymentType).toRenderCorrectly(props);
 	});
 
 	it('render with enablePaypal', () => {
@@ -47,7 +39,7 @@ describe('PaymentType', () => {
 			enablePaypal: true
 		};
 
-		expect(PaymentType).toRenderAs(context, props);
+		expect(PaymentType).toRenderCorrectly(props);
 	});
 
 	it('render with value', () => {
@@ -55,7 +47,7 @@ describe('PaymentType', () => {
 			value: 'paypal'
 		};
 
-		expect(PaymentType).toRenderAs(context, props);
+		expect(PaymentType).toRenderCorrectly(props);
 	});
 
 	it('can initialise with the loader visible', () => {
@@ -63,6 +55,6 @@ describe('PaymentType', () => {
 			showLoaderOnInit: true
 		};
 
-		expect(PaymentType).toRenderAs(context, props);
+		expect(PaymentType).toRenderCorrectly({}, props);
 	});
 });

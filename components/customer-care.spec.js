@@ -1,37 +1,30 @@
 import { CustomerCare } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
-const context = {};
-
-expect.extend(expectToRenderAs);
+expect.extend(expectToRenderCorrectly);
 
 describe('CustomerCare', () => {
-	beforeAll(async () => {
-		context.template = await fetchPartialAsString('customer-care.html');
-	});
-
 	it('renders with default props', () => {
 		const props = {};
 
-		expect(CustomerCare).toRenderAs(context, props);
+		expect(CustomerCare).toRenderCorrectly(props);
 	});
 
 	it('renders with custom header text', () => {
 		const props = { header: 'Header text' };
 
-		expect(CustomerCare).toRenderAs(context, props);
+		expect(CustomerCare).toRenderCorrectly(props);
 	});
 
 	it('renders in compact mode', () => {
 		const props = { isCompact: true };
 
-		expect(CustomerCare).toRenderAs(context, props);
+		expect(CustomerCare).toRenderCorrectly(props);
 	});
 
 	it('renders with custom message text', () => {
 		const props = { message: 'Message text' };
 
-		expect(CustomerCare).toRenderAs(context, props);
+		expect(CustomerCare).toRenderCorrectly(props);
 	});
 });

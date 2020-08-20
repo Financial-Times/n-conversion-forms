@@ -37,81 +37,7 @@ exports[`Billing Postcode can render a disable input 1`] = `
 </label>
 `;
 
-exports[`Billing Postcode can render a disable input 2`] = `
-<label id="billingPostcodeField"
-       class="o-forms-field"
-       data-validate="required"
-       for="billingPostcode"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Billing
-      <span data-reference="postcode">
-        ZipCode
-      </span>
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="text"
-           id="billingPostcode"
-           name="billingPostcode"
-           placeholder="Enter your ZipCode"
-           autocomplete="postal-code"
-           data-trackable="billing-postcode"
-           aria-required="true"
-           required
-           disabled
-           value
-    >
-    <span class="o-forms-input__error">
-      Please enter a valid
-      <span data-reference="postcode">
-        ZipCode
-      </span>
-      .
-    </span>
-  </span>
-</label>
-`;
-
 exports[`Billing Postcode can render a pattern attribute 1`] = `
-<label id="billingPostcodeField"
-       class="o-forms-field"
-       data-validate="required"
-       for="billingPostcode"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Billing
-      <span data-reference="postcode">
-        ZipCode
-      </span>
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="text"
-           id="billingPostcode"
-           name="billingPostcode"
-           placeholder="Enter your ZipCode"
-           autocomplete="postal-code"
-           data-trackable="billing-postcode"
-           aria-required="true"
-           required
-           pattern="Whatever"
-           value
-    >
-    <span class="o-forms-input__error">
-      Please enter a valid
-      <span data-reference="postcode">
-        ZipCode
-      </span>
-      .
-    </span>
-  </span>
-</label>
-`;
-
-exports[`Billing Postcode can render a pattern attribute 2`] = `
 <label id="billingPostcodeField"
        class="o-forms-field"
        data-validate="required"
@@ -184,42 +110,6 @@ exports[`Billing Postcode can render as an Error 1`] = `
 </label>
 `;
 
-exports[`Billing Postcode can render as an Error 2`] = `
-<label id="billingPostcodeField"
-       class="o-forms-field"
-       data-validate="required"
-       for="billingPostcode"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Billing
-      <span data-reference="postcode">
-        ZipCode
-      </span>
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
-    <input type="text"
-           id="billingPostcode"
-           name="billingPostcode"
-           placeholder="Enter your ZipCode"
-           autocomplete="postal-code"
-           data-trackable="billing-postcode"
-           aria-required="true"
-           required
-           value
-    >
-    <span class="o-forms-input__error">
-      Please enter a valid
-      <span data-reference="postcode">
-        ZipCode
-      </span>
-      .
-    </span>
-  </span>
-</label>
-`;
-
 exports[`Billing Postcode can render as an hidden field 1`] = `
 <label id="billingPostcodeField"
        class="o-forms-field ncf__hidden"
@@ -256,79 +146,7 @@ exports[`Billing Postcode can render as an hidden field 1`] = `
 </label>
 `;
 
-exports[`Billing Postcode can render as an hidden field 2`] = `
-<label id="billingPostcodeField"
-       class="o-forms-field ncf__hidden"
-       data-validate="required"
-       for="billingPostcode"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Billing
-      <span data-reference="postcode">
-        ZipCode
-      </span>
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="text"
-           id="billingPostcode"
-           name="billingPostcode"
-           placeholder="Enter your ZipCode"
-           autocomplete="postal-code"
-           data-trackable="billing-postcode"
-           aria-required="true"
-           required
-           value
-    >
-    <span class="o-forms-input__error">
-      Please enter a valid
-      <span data-reference="postcode">
-        ZipCode
-      </span>
-      .
-    </span>
-  </span>
-</label>
-`;
-
 exports[`Billing Postcode render a postcode input with a label 1`] = `
-<label id="billingPostcodeField"
-       class="o-forms-field"
-       data-validate="required"
-       for="billingPostcode"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Billing
-      <span data-reference="postcode">
-        ZipCode
-      </span>
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="text"
-           id="billingPostcode"
-           name="billingPostcode"
-           placeholder="Enter your ZipCode"
-           autocomplete="postal-code"
-           data-trackable="billing-postcode"
-           aria-required="true"
-           required
-           value
-    >
-    <span class="o-forms-input__error">
-      Please enter a valid
-      <span data-reference="postcode">
-        ZipCode
-      </span>
-      .
-    </span>
-  </span>
-</label>
-`;
-
-exports[`Billing Postcode render a postcode input with a label 2`] = `
 <label id="billingPostcodeField"
        class="o-forms-field"
        data-validate="required"

@@ -1,37 +1,21 @@
-import { mount } from 'enzyme';
 import { Province } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 import { canadianProvinces } from 'n-common-static-data';
 const defaultProvinces = canadianProvinces.provinces;
 
-const context = {};
-expect.extend(expectToRenderAs);
+import Enzyme, { mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+Enzyme.configure({ adapter: new Adapter() });
 
-const {
-	registerHelper,
-	unregisterHelper,
-} = require('../test/helpers');
+expect.extend(expectToRenderCorrectly);
 
 describe('Province', () => {
-	let provinces;
-	beforeAll(async () => {
-		registerHelper('ncf-common-data', function ({ fn }) {
-			return fn(Object.assign({}, { provinces }, this));
-		});
-		context.template = await fetchPartialAsString('province.html');
-	});
-
-	afterAll(() => {
-		unregisterHelper('ncf-common-data');
-	});
-
 	it('render a select with a label', () => {
 		const props = {
 			provinces: defaultProvinces
 		};
 
-		expect(Province).toRenderAs(context, props);
+		expect(Province).toRenderCorrectly(props);
 
 	});
 
@@ -41,7 +25,7 @@ describe('Province', () => {
 			value: 'AB',
 		};
 
-		expect(Province).toRenderAs(context, props);
+		expect(Province).toRenderCorrectly(props);
 	});
 
 	it('can render a disabled select', () => {
@@ -50,7 +34,7 @@ describe('Province', () => {
 			isDisabled: true
 		};
 
-		expect(Province).toRenderAs(context, props);
+		expect(Province).toRenderCorrectly(props);
 	});
 
 	it('can render an error message', () => {
@@ -59,7 +43,7 @@ describe('Province', () => {
 			hasError: true,
 		};
 
-		expect(Province).toRenderAs(context, props);
+		expect(Province).toRenderCorrectly(props);
 	});
 
 	it('can apply class to hide the component', () => {
@@ -68,7 +52,7 @@ describe('Province', () => {
 			isHidden: true,
 		};
 
-		expect(Province).toRenderAs(context, props);
+		expect(Province).toRenderCorrectly(props);
 	});
 
 	it('can override ID for field', () => {

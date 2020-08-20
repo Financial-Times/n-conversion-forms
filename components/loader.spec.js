@@ -1,25 +1,18 @@
 import React from 'react';
 import { Loader } from './index';
-import { expectToRenderAs } from '../test-jest/helpers/expect-to-render-as';
-import { fetchPartialAsString } from '../test-jest/helpers/fetch-hbs-as-string';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
-const context = {};
 const CHILDREN = <div>Foo Bar</div>;
-const CHILDREN_STRING = '<div>Foo Bar</div>';
 
-expect.extend(expectToRenderAs);
+expect.extend(expectToRenderCorrectly);
 
 describe('Loader', () => {
-	beforeAll(async () => {
-		context.template = await fetchPartialAsString('loader.html', CHILDREN_STRING);
-	});
-
 	it('renders with default props', () => {
 		const props = {
 			children: CHILDREN
 		};
 
-		expect(Loader).toRenderAs(context, props);
+		expect(Loader).toRenderCorrectly(props);
 	});
 
 	it('renders with showLoader', () => {
@@ -28,7 +21,7 @@ describe('Loader', () => {
 			showLoader: true
 		};
 
-		expect(Loader).toRenderAs(context, props);
+		expect(Loader).toRenderCorrectly(props);
 	});
 
 	it('renders with title', () => {
@@ -37,6 +30,6 @@ describe('Loader', () => {
 			title: 'TITLE'
 		};
 
-		expect(Loader).toRenderAs(context, props);
+		expect(Loader).toRenderCorrectly(props);
 	});
 });

@@ -38,82 +38,7 @@ exports[`Delivery Postcode render a disable input 1`] = `
 </label>
 `;
 
-exports[`Delivery Postcode render a disable input 2`] = `
-<label id="deliveryPostcodeField"
-       class="o-forms-field"
-       data-validate="required"
-       for="deliveryPostcode"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Delivery
-      <span data-reference="postcode">
-        postcode
-      </span>
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="text"
-           id="deliveryPostcode"
-           name="deliveryPostcode"
-           placeholder="Enter your postcode"
-           autocomplete="postal-code"
-           data-trackable="delivery-postcode"
-           aria-required="true"
-           required
-           pattern="whatever"
-           disabled
-           value
-    >
-    <span class="o-forms-input__error">
-      Please enter a valid
-      <span data-reference="postcode">
-        postcode
-      </span>
-      .
-    </span>
-  </span>
-</label>
-`;
-
 exports[`Delivery Postcode render a postcode input with a label set as Zip Code 1`] = `
-<label id="deliveryPostcodeField"
-       class="o-forms-field"
-       data-validate="required"
-       for="deliveryPostcode"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Delivery
-      <span data-reference="postcode">
-        Zip Code
-      </span>
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="text"
-           id="deliveryPostcode"
-           name="deliveryPostcode"
-           placeholder="Enter your Zip Code"
-           autocomplete="postal-code"
-           data-trackable="delivery-postcode"
-           aria-required="true"
-           required
-           pattern="whatever"
-           value
-    >
-    <span class="o-forms-input__error">
-      Please enter a valid
-      <span data-reference="postcode">
-        Zip Code
-      </span>
-      .
-    </span>
-  </span>
-</label>
-`;
-
-exports[`Delivery Postcode render a postcode input with a label set as Zip Code 2`] = `
 <label id="deliveryPostcodeField"
        class="o-forms-field"
        data-validate="required"
@@ -187,81 +112,7 @@ exports[`Delivery Postcode render a postcode input with a label set as Zip Code 
 </label>
 `;
 
-exports[`Delivery Postcode render a postcode input with a label set as Zip Code with USA in lower case 2`] = `
-<label id="deliveryPostcodeField"
-       class="o-forms-field"
-       data-validate="required"
-       for="deliveryPostcode"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Delivery
-      <span data-reference="postcode">
-        Zip Code
-      </span>
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="text"
-           id="deliveryPostcode"
-           name="deliveryPostcode"
-           placeholder="Enter your Zip Code"
-           autocomplete="postal-code"
-           data-trackable="delivery-postcode"
-           aria-required="true"
-           required
-           pattern="whatever"
-           value
-    >
-    <span class="o-forms-input__error">
-      Please enter a valid
-      <span data-reference="postcode">
-        Zip Code
-      </span>
-      .
-    </span>
-  </span>
-</label>
-`;
-
 exports[`Delivery Postcode render a postcode input with a label set as postal code 1`] = `
-<label id="deliveryPostcodeField"
-       class="o-forms-field"
-       data-validate="required"
-       for="deliveryPostcode"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Delivery
-      <span data-reference="postcode">
-        postal code
-      </span>
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="text"
-           id="deliveryPostcode"
-           name="deliveryPostcode"
-           placeholder="Enter your postal code"
-           autocomplete="postal-code"
-           data-trackable="delivery-postcode"
-           aria-required="true"
-           required
-           pattern="whatever"
-           value
-    >
-    <span class="o-forms-input__error">
-      Please enter a valid
-      <span data-reference="postcode">
-        postal code
-      </span>
-      .
-    </span>
-  </span>
-</label>
-`;
-
-exports[`Delivery Postcode render a postcode input with a label set as postal code 2`] = `
 <label id="deliveryPostcodeField"
        class="o-forms-field"
        data-validate="required"
@@ -335,43 +186,6 @@ exports[`Delivery Postcode render a postcode input with a label set as postcode 
 </label>
 `;
 
-exports[`Delivery Postcode render a postcode input with a label set as postcode 2`] = `
-<label id="deliveryPostcodeField"
-       class="o-forms-field"
-       data-validate="required"
-       for="deliveryPostcode"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Delivery
-      <span data-reference="postcode">
-        postcode
-      </span>
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="text"
-           id="deliveryPostcode"
-           name="deliveryPostcode"
-           placeholder="Enter your postcode"
-           autocomplete="postal-code"
-           data-trackable="delivery-postcode"
-           aria-required="true"
-           required
-           pattern="whatever"
-           value
-    >
-    <span class="o-forms-input__error">
-      Please enter a valid
-      <span data-reference="postcode">
-        postcode
-      </span>
-      .
-    </span>
-  </span>
-</label>
-`;
-
 exports[`Delivery Postcode render a postcode input with default label 1`] = `
 <label id="deliveryPostcodeField"
        class="o-forms-field"
@@ -409,81 +223,7 @@ exports[`Delivery Postcode render a postcode input with default label 1`] = `
 </label>
 `;
 
-exports[`Delivery Postcode render a postcode input with default label 2`] = `
-<label id="deliveryPostcodeField"
-       class="o-forms-field"
-       data-validate="required"
-       for="deliveryPostcode"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Delivery
-      <span data-reference="postcode">
-        postcode
-      </span>
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="text"
-           id="deliveryPostcode"
-           name="deliveryPostcode"
-           placeholder="Enter your postcode"
-           autocomplete="postal-code"
-           data-trackable="delivery-postcode"
-           aria-required="true"
-           required
-           pattern="whatever"
-           value
-    >
-    <span class="o-forms-input__error">
-      Please enter a valid
-      <span data-reference="postcode">
-        postcode
-      </span>
-      .
-    </span>
-  </span>
-</label>
-`;
-
 exports[`Delivery Postcode render different styles 1`] = `
-<label id="deliveryPostcodeField"
-       class="o-forms-field ncf__hidden"
-       data-validate="required"
-       for="deliveryPostcode"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Delivery
-      <span data-reference="postcode">
-        postcode
-      </span>
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
-    <input type="text"
-           id="deliveryPostcode"
-           name="deliveryPostcode"
-           placeholder="Enter your postcode"
-           autocomplete="postal-code"
-           data-trackable="delivery-postcode"
-           aria-required="true"
-           required
-           pattern="whatever"
-           value
-    >
-    <span class="o-forms-input__error">
-      Please enter a valid
-      <span data-reference="postcode">
-        postcode
-      </span>
-      .
-    </span>
-  </span>
-</label>
-`;
-
-exports[`Delivery Postcode render different styles 2`] = `
 <label id="deliveryPostcodeField"
        class="o-forms-field ncf__hidden"
        data-validate="required"

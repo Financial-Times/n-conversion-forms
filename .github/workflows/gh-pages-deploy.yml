@@ -1,0 +1,27 @@
+name: Deploy
+on:
+  release:
+    types:
+      - published
+defaults:
+  run:
+    shell: bash
+jobs:
+  gh-pages-deploy:
+    name: Deploying Storybook
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - run: git config --global url."https://${{ secrets.NEXT_USER_PAT }}@github.com/".insteadOf ssh://git@github.com/
+      - run: make install
+      - run: npm run build-storybook
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs

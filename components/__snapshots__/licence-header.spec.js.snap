@@ -6,31 +6,13 @@ exports[`LicenceHeader renders if is isB2cPartnershipLicence 1`] = `
 </h1>
 `;
 
-exports[`LicenceHeader renders if is isB2cPartnershipLicence 2`] = `
-<h1 class="ncf__header">
-  Welcome to the Financial Times
-</h1>
-`;
-
 exports[`LicenceHeader renders if is trial 1`] = `
 <h1 class="ncf__header">
   Start your free trial
 </h1>
 `;
 
-exports[`LicenceHeader renders if is trial 2`] = `
-<h1 class="ncf__header">
-  Start your free trial
-</h1>
-`;
-
 exports[`LicenceHeader renders with custom display name 1`] = `
-<h1 class="ncf__header">
-  Display name text | Join your FT.com subscription
-</h1>
-`;
-
-exports[`LicenceHeader renders with custom display name 2`] = `
 <h1 class="ncf__header">
   Display name text | Join your FT.com subscription
 </h1>
@@ -45,22 +27,7 @@ exports[`LicenceHeader renders with custom welcome text (that requires escaping,
 </p>
 `;
 
-exports[`LicenceHeader renders with custom welcome text (that requires escaping, e.g. ampersand) 2`] = `
-<h1 class="ncf__header">
-  Join your FT.com subscription
-</h1>
-<p>
-  Welcome text & some more welcome text
-</p>
-`;
-
 exports[`LicenceHeader renders with default props 1`] = `
-<h1 class="ncf__header">
-  Join your FT.com subscription
-</h1>
-`;
-
-exports[`LicenceHeader renders with default props 2`] = `
 <h1 class="ncf__header">
   Join your FT.com subscription
 </h1>

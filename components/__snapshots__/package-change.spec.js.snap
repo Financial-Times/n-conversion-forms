@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PackageChange render with defaults 1`] = `
+exports[`PackageChange annual render with defaults 1`] = `
 <div class="ncf__package-change">
   <div class="ncf__package-change__package">
     <p class="ncf__package-change__content">
@@ -21,7 +21,49 @@ exports[`PackageChange render with defaults 1`] = `
 </div>
 `;
 
-exports[`PackageChange render with defaults 2`] = `
+exports[`PackageChange annual render with discount 1`] = `
+<div class="ncf__package-change">
+  <div class="ncf__package-change__package">
+    <p class="ncf__package-change__content">
+      You have chosen
+      <span class="ncf__strong">
+        Trial
+      </span>
+    </p>
+    <div class="ncf__package-change__actions">
+      <a href="https://www.ft.com"
+         class="ncf__button ncf__button--mono ncf__button--baseline"
+         data-trackable="change"
+      >
+        Change
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PackageChange annual render with trialPrice 1`] = `
+<div class="ncf__package-change">
+  <div class="ncf__package-change__package">
+    <p class="ncf__package-change__content">
+      You have chosen
+      <span class="ncf__strong">
+        Trial
+      </span>
+    </p>
+    <div class="ncf__package-change__actions">
+      <a href="https://www.ft.com"
+         class="ncf__button ncf__button--mono ncf__button--baseline"
+         data-trackable="change"
+      >
+        Change
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PackageChange render with defaults 1`] = `
 <div class="ncf__package-change">
   <div class="ncf__package-change__package">
     <p class="ncf__package-change__content">

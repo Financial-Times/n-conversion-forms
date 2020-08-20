@@ -30,68 +30,7 @@ exports[`BillingCity renders with a custom value 1`] = `
 </label>
 `;
 
-exports[`BillingCity renders with a custom value 2`] = `
-<label id="billingCityField"
-       class="o-forms-field ncf__validation-error"
-       data-validate="required"
-       for="billingCity"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Billing city/town
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="text"
-           id="billingCity"
-           name="billingCity"
-           data-trackable="field-billingCity"
-           autocomplete="address-level2"
-           placeholder="e.g. Bath"
-           maxlength="40"
-           aria-required="true"
-           required
-           value="foobar"
-    >
-    <span class="o-forms-input__error">
-      Please enter a valid city or town
-    </span>
-  </span>
-</label>
-`;
-
 exports[`BillingCity renders with a disabled input element 1`] = `
-<label id="billingCityField"
-       class="o-forms-field ncf__validation-error"
-       data-validate="required"
-       for="billingCity"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Billing city/town
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="text"
-           id="billingCity"
-           name="billingCity"
-           data-trackable="field-billingCity"
-           autocomplete="address-level2"
-           placeholder="e.g. Bath"
-           maxlength="40"
-           aria-required="true"
-           required
-           disabled
-           value
-    >
-    <span class="o-forms-input__error">
-      Please enter a valid city or town
-    </span>
-  </span>
-</label>
-`;
-
-exports[`BillingCity renders with a disabled input element 2`] = `
 <label id="billingCityField"
        class="o-forms-field ncf__validation-error"
        data-validate="required"
@@ -152,67 +91,7 @@ exports[`BillingCity renders with an error 1`] = `
 </label>
 `;
 
-exports[`BillingCity renders with an error 2`] = `
-<label id="billingCityField"
-       class="o-forms-field ncf__validation-error"
-       data-validate="required"
-       for="billingCity"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Billing city/town
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
-    <input type="text"
-           id="billingCity"
-           name="billingCity"
-           data-trackable="field-billingCity"
-           autocomplete="address-level2"
-           placeholder="e.g. Bath"
-           maxlength="40"
-           aria-required="true"
-           required
-           value
-    >
-    <span class="o-forms-input__error">
-      Please enter a valid city or town
-    </span>
-  </span>
-</label>
-`;
-
 exports[`BillingCity renders with default props 1`] = `
-<label id="billingCityField"
-       class="o-forms-field ncf__validation-error"
-       data-validate="required"
-       for="billingCity"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      Billing city/town
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="text"
-           id="billingCity"
-           name="billingCity"
-           data-trackable="field-billingCity"
-           autocomplete="address-level2"
-           placeholder="e.g. Bath"
-           maxlength="40"
-           aria-required="true"
-           required
-           value
-    >
-    <span class="o-forms-input__error">
-      Please enter a valid city or town
-    </span>
-  </span>
-</label>
-`;
-
-exports[`BillingCity renders with default props 2`] = `
 <label id="billingCityField"
        class="o-forms-field ncf__validation-error"
        data-validate="required"
