@@ -28,6 +28,11 @@ describe('LicenceHeader', () => {
 		expect(LicenceHeader).toRenderCorrectly(props);
 	});
 
+    it('renders if url is defined', () => {
+        const props = { url: 'https://mytest.com' };
+        expect(LicenceHeader).toRenderAs(context, props);
+    });
+
 	it('renders with custom welcome text (that requires escaping, e.g. ampersand)', () => {
 		const props = { welcomeText: 'Welcome text & some more welcome text' };
 

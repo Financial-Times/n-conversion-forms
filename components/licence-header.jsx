@@ -6,7 +6,7 @@ export function LicenceHeader ({
 	isTrial = false,
 	isB2cPartnershipLicence = false,
 	welcomeText = null,
-	url=null
+	url
 }) {
 	function createMarkup (text) {
 		return { __html: text };
@@ -16,26 +16,31 @@ export function LicenceHeader ({
         <React.Fragment>
             <h1 className="ncf__header ncf__center">
                 {
-                    isTrial ? (displayName && (`${displayName}`)) :
+                    (isB2cPartnershipLicence || isTrial) ? (displayName && (`${displayName}`)) :
 
                         ('Great news! ' +
-                            (displayName && (`${displayName}`)) +
+                            (displayName != null ? (`${displayName}`) : '') +
                             ' has an FT Subscription you can join')
+                }
+				{   isB2cPartnershipLicence
+                    ? ('Welcome to the Financial Times')
+                    : isTrial ? ('Start your free trial')
+					: ''
                 }
             </h1>
             {
-                isB2cPartnershipLicence
-                    ? ('Welcome to the Financial Times')
-                    : isTrial ? ('Start your free trial') :
+                isTrial ? '' :
                             (<div className="ncf__center">
                                 <div>
                                     {'Have you already joined the '}
                                     {displayName && (`${displayName}`)}
                                     {' account?'}
                                 </div>
-                                <div>
-                                    <a href={url} className="ncf__button--secondary">Sign in</a>
-                                </div>
+								{url ?
+									(<div>
+										<a href={url} className="ncf__button--secondary">Sign in</a>
+									</div>) : ''
+								}
                             </div>)
             }
 
