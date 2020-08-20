@@ -61,6 +61,7 @@ Message.propTypes = {
 	additional: PropTypes.arrayOf(PropTypes.string),
 	actions: PropTypes.arrayOf(actionType),
 	name: PropTypes.string,
+	isStaticMessage: PropTypes.bool,
 	isNotice: PropTypes.bool,
 	isError: PropTypes.bool,
 	isSuccess: PropTypes.bool,
