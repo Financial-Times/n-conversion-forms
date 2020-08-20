@@ -1,8 +1,8 @@
 name: Deploy
 on:
-  push:
-    branches:
-      - rb-remove-hbs-new
+  release:
+    types:
+      - published
 defaults:
   run:
     shell: bash
@@ -13,8 +13,11 @@ jobs:
     steps:
       - uses: actions/setup-node@v1
         with:
-          version: 12.x
+          node-version: 12.x
       - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - run: git config --global url."https://${{ secrets.NEXT_USER_PAT }}@github.com/".insteadOf ssh://git@github.com/
       - run: make install
       - run: npm run build-storybook
       - name: Deploy
