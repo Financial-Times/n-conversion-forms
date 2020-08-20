@@ -8,7 +8,7 @@
     "build": "babel components/*.jsx -d dist --copy-files",
     "prepare": "(npx snyk protect || npx snyk protect -d || true)",
     "storybook": "start-storybook -p 5005",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook --docs --output-dir docs"
   },
   "repository": {
     "type": "git",
