@@ -266,33 +266,33 @@ export function AcceptTerms ({
 	);
 
 	const b2cPartnershipTerms = (
-			<label className={[labelClassName, "checkbox-two-lines"].join(" ")}>
-				<input {...inputProps}/>
-				<span className="o-forms-input__label">
+		<label className={[labelClassName, 'checkbox-two-lines'].join(' ')}>
+			<input {...inputProps}/>
+			<span className="o-forms-input__label">
 					I confirm I am {ageRestriction} years or older and have read and
-					agree to the{" "}
-					<a
-						className="ncf__link--external"
-						href="http://help.ft.com/help/legal-privacy/terms-conditions/"
-						target={isEmbedded ? "_top" : "_blank"}
-						rel="noopener noreferrer"
-						data-trackable="terms-and-conditions"
-					>
+					agree to the{' '}
+				<a
+					className="ncf__link--external"
+					href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+					target={isEmbedded ? '_top' : '_blank'}
+					rel="noopener noreferrer"
+					data-trackable="terms-and-conditions"
+				>
 						Terms &amp; Conditions
-					</a>
+				</a>
 					.
-				</span>
-				<p className="o-forms-input__error">Please accept our terms &amp; conditions</p>
-			</label>
-		)
+			</span>
+			<p className="o-forms-input__error">Please accept our terms &amp; conditions</p>
+		</label>
+	);
 
 	return (
 		<div {...divProps}>
 			{ isB2cPartnership
-			? b2cPartnershipTerms
-			: isRegister
-				? registerTerms
-				: (
+				? b2cPartnershipTerms
+				: isRegister
+					? registerTerms
+					: (
 					<>
 						<ul className="o-typography-list ncf__accept-terms-list">
 							{b2bTerms}
@@ -308,7 +308,7 @@ export function AcceptTerms ({
 							<p className="o-forms-input__error">Please accept our terms &amp; conditions</p>
 						</label>
 					</>
-				)
+					)
 			}
 		</div>
 	);
