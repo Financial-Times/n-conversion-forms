@@ -74,4 +74,5 @@ B2cPartnershipPaymentTerm.propTypes = {
 		vendor: PropTypes.string.isRequired,
 	}).isRequired,
 	conditions: PropTypes.arrayOf(PropTypes.string),
+	offerType: PropTypes.string.isRequired,
 };

@@ -18,6 +18,7 @@ Basic.args = {
 	conditions: [
 		'90-day Washington Post subscription must be redeemed by 31 March 2021.'
 	],
+	offerType: 'DIGITAL',
 	options: [
 		{
 			name: 'monthly',
