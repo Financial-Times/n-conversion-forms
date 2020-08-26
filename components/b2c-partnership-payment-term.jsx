@@ -5,28 +5,41 @@ export function B2cPartnershipPaymentTerm ({
 	fieldId = 'paymentTermField',
 	inputName = 'paymentTerm',
 	options = [],
-	optionName,
 	displayName,
-	includes,
+	offerType,
+	partnerOffer,
 	conditions,
 }) {
-	const { price, value } = options.find(option => option.name === optionName);
+	const durations = {
+		annual: '1 year',
+		quarterly: '3 month',
+		monthly: '1 month',
+	};
+
+	// convert to Title Case
+	offerType = offerType
+		.split('')
+		.map((letter, i) => i !== 0 ? letter.toLowerCase() : letter.toUpperCase())
+		.join('');
 
 	return (
 		<div id={fieldId} className="o-forms__group ncf__payment-term ncf__b2c-partnership-payment-term">
-			<div className="ncf__payment-term__item o-forms-input--radio-round">
-				<input type="radio" id={value} name={inputName} value={value} defaultChecked={true} />
-				<label htmlFor={value} className="o-forms-input__label ncf__payment-term__label">
-					<span className="ncf__payment-term__title">{price} - {displayName}</span>
-					<div className="ncf__b2c-partnership-payment-term__description">
-						<p>
-							Includes:<br />
-							{includes.map(line => <>{line}<br /></>)}
-						</p>
-						<p>{conditions.map(line => <>{line}<br /></>)}</p>
-					</div>
-				</label>
-			</div>
+			{options.map(option => option.selected && (
+				<div className="ncf__payment-term__item o-forms-input--radio-round">
+					<input type="radio" id={option.value} name={inputName} value={option.value} defaultChecked={true} />
+					<label htmlFor={option.value} className="o-forms-input__label ncf__payment-term__label">
+						<span className="ncf__payment-term__title">{option.price} - {displayName}</span>
+						<div className="ncf__b2c-partnership-payment-term__description">
+							<p>
+								Includes:<br />
+								{durations[option.name]} {offerType} subscription to the Financial Times<br />
+								{partnerOffer.duration} {partnerOffer.name} subscription to {partnerOffer.vendor}
+							</p>
+							<p>{conditions.map(line => <>{line}<br /></>)}</p>
+						</div>
+					</label>
+				</div>
+			))}
 
 			<div className="ncf__payment-term__legal">
 				<p>
@@ -54,8 +67,11 @@ B2cPartnershipPaymentTerm.propTypes = {
 		value: PropTypes.string.isRequired,
 		monthlyPrice: PropTypes.string
 	})),
-	optionName: PropTypes.string,
-	title: PropTypes.string,
-	includes: PropTypes.arrayOf(PropTypes.string),
+	displayName: PropTypes.string,
+	partnerOffer: PropTypes.shape({
+		duration: PropTypes.string.isRequired,
+		name: PropTypes.string.isRequired,
+		vendor: PropTypes.string.isRequired,
+	}),
 	conditions: PropTypes.arrayOf(PropTypes.string),
 };
