@@ -68,7 +68,6 @@ Email.propTypes = {
 	isDisabled: PropTypes.bool,
 	label: PropTypes.string,
 	placeHolder: PropTypes.string,
-	readonly: PropTypes.bool,
 	value: PropTypes.string,
 	isEducationalLicence: PropTypes.bool,
 	isB2cPartnershipLicence: PropTypes.bool,

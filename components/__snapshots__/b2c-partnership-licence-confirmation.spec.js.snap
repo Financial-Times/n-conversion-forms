@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`B2CPartnershipConfirmation renders with default props 1`] = `
+<div class="ncf ncf__wrapper">
+  <div class="ncf__center">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <div class="ncf__paragraph">
+      <h1 class="ncf__header ncf__header--confirmation">
+        Welcome to your three months&#x27; Premium access
+      </h1>
+    </div>
+  </div>
+  <p class="ncf__paragraph">
+    Please check your email to confirm your account and set your password.
+  </p>
+  <p class="ncf__paragraph">
+    Explore the homepage &amp; enjoy your unlimited access &amp; exclusive content.
+  </p>
+  <p class="ncf__paragraph ncf__center">
+    <a href="/myft"
+       class="ncf__button ncf__button--submit"
+    >
+      Go to myFT
+    </a>
+  </p>
+  <p class="ncf__paragraph ncf__center">
+    <a href="/"
+       class="ncf__link"
+    >
+      Start reading
+    </a>
+  </p>
+  <p class="ncf__paragraph">
+    <div class="ncf__strong">
+      Can we help?
+    </div>
+    For any queries about your Premium subscription please
+    <a href="https://help.ft.com/"
+       class="ncf__link"
+    >
+      contact Customer Care
+    </a>
+    .
+  </p>
+</div>
+`;
