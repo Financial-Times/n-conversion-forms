@@ -8,7 +8,7 @@ export function B2cPartnershipPaymentTerm ({
 	displayName,
 	offerType,
 	partnerOffer,
-	conditions,
+	conditions = [],
 }) {
 	const durations = {
 		annual: '1 year',
@@ -35,7 +35,7 @@ export function B2cPartnershipPaymentTerm ({
 								{durations[option.name]} {offerType} subscription to the Financial Times<br />
 								{partnerOffer.duration} {partnerOffer.name} subscription to {partnerOffer.vendor}
 							</p>
-							<p>{conditions.map(line => <>{line}<br /></>)}</p>
+							{conditions.length > 0 && <p>{conditions.map(line => <>{line}<br /></>)}</p>}
 						</div>
 					</label>
 				</div>
@@ -66,12 +66,12 @@ B2cPartnershipPaymentTerm.propTypes = {
 		trialPrice: PropTypes.string,
 		value: PropTypes.string.isRequired,
 		monthlyPrice: PropTypes.string
-	})),
-	displayName: PropTypes.string,
+	})).isRequired,
+	displayName: PropTypes.string.isRequired,
 	partnerOffer: PropTypes.shape({
 		duration: PropTypes.string.isRequired,
 		name: PropTypes.string.isRequired,
 		vendor: PropTypes.string.isRequired,
-	}),
+	}).isRequired,
 	conditions: PropTypes.arrayOf(PropTypes.string),
 };
