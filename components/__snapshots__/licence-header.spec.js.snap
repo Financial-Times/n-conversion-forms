@@ -19,7 +19,7 @@ exports[`LicenceHeader renders if is trial 1`] = `
 
 exports[`LicenceHeader renders if url is defined 1`] = `
 <h1 class="ncf__header ncf__center">
-  Great news!  has an FT Subscription you can join
+  Great news! null has an FT Subscription you can join
 </h1>
 <div class="ncf__center">
   <div>
@@ -48,7 +48,7 @@ exports[`LicenceHeader renders with custom display name 1`] = `
 
 exports[`LicenceHeader renders with custom welcome text (that requires escaping, e.g. ampersand) 1`] = `
 <h1 class="ncf__header ncf__center">
-  Great news!  has an FT Subscription you can join
+  Great news! null has an FT Subscription you can join
 </h1>
 <div class="ncf__center">
   <div>
@@ -62,7 +62,7 @@ exports[`LicenceHeader renders with custom welcome text (that requires escaping,
 
 exports[`LicenceHeader renders with default props 1`] = `
 <h1 class="ncf__header ncf__center">
-  Great news!  has an FT Subscription you can join
+  Great news! null has an FT Subscription you can join
 </h1>
 <div class="ncf__center">
   <div>

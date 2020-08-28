@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LicenceSignIn renders if url is defined 1`] = `
+<div class="ncf__center">
+  <div>
+    Have you already joined the  account?
+  </div>
+  <div>
+    <a href="https://mytest.com"
+       class="ncf__button--secondary"
+    >
+      Sign in
+    </a>
+  </div>
+</div>
+`;
+
+exports[`LicenceSignIn renders with custom display name 1`] = `
+<div class="ncf__center">
+  <div>
+    Have you already joined the Display name text account?
+  </div>
+</div>
+`;
+
+exports[`LicenceSignIn renders with default props 1`] = `
+<div class="ncf__center">
+  <div>
+    Have you already joined the  account?
+  </div>
+</div>
+`;

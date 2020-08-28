@@ -1,51 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {LicenceSignIn} from './licence-partials/licence-sign-in';
+import {LicenceTitle} from './licence-partials/licence-title';
 
-export function LicenceHeader ({
-	displayName = null,
-	isTrial = false,
-	isB2cPartnershipLicence = false,
-	welcomeText = null,
-	url
-}) {
+export function LicenceHeader (props) {
+	 const {
+		displayName = null,
+		isTrial = false,
+		isB2cPartnershipLicence = false,
+		welcomeText = null,
+		url
+	} = props;
 	function createMarkup (text) {
 		return { __html: text };
 	}
 
 	return (
-        <React.Fragment>
-            <h1 className="ncf__header ncf__center">
-                {
-                    (isB2cPartnershipLicence || isTrial) ? (displayName && (`${displayName}`)) :
+		<React.Fragment>
+			<LicenceTitle
+				displayName={displayName}
+				isTrial={isTrial}
+				isB2cPartnershipLicence={isB2cPartnershipLicence}
+			/>
 
-                        ('Great news! ' +
-                            (displayName != null ? (`${displayName}`) : '') +
-                            ' has an FT Subscription you can join')
-                }
-				{   isB2cPartnershipLicence
-                    ? ('Welcome to the Financial Times')
-                    : isTrial ? ('Start your free trial')
-					: ''
-                }
-            </h1>
-            {
-                isTrial ? '' :
-                            (<div className="ncf__center">
-                                <div>
-                                    {'Have you already joined the '}
-                                    {displayName && (`${displayName}`)}
-                                    {' account?'}
-                                </div>
-								{url ?
-									(<div>
-										<a href={url} className="ncf__button--secondary">Sign in</a>
-									</div>) : ''
-								}
-                            </div>)
-            }
+			{(!isTrial && <LicenceSignIn displayName={displayName} url={url}/>)}
 
-            {welcomeText && (<p dangerouslySetInnerHTML={createMarkup(welcomeText)}/>)}
-        </React.Fragment>
+			{welcomeText && (<p dangerouslySetInnerHTML={createMarkup(welcomeText)}/>)}
+		</React.Fragment>
 	);
 }
 
