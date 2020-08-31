@@ -5,9 +5,9 @@ exports[`LicenceHeader renders if is isB2cPartnershipLicence 1`] = `
   Welcome to the Financial Times
 </h1>
 <div class="ncf__center">
-  <div>
+  <p>
     Have you already joined the  account?
-  </div>
+  </p>
 </div>
 `;
 
@@ -19,15 +19,20 @@ exports[`LicenceHeader renders if is trial 1`] = `
 
 exports[`LicenceHeader renders if url is defined 1`] = `
 <h1 class="ncf__header ncf__center">
-  Great news! null has an FT Subscription you can join
+  <span class="light-licence-text">
+    Great news
+  </span>
+  <span class="light-licence-text">
+    has an FT Subscription you can join
+  </span>
 </h1>
 <div class="ncf__center">
-  <div>
+  <p>
     Have you already joined the  account?
-  </div>
+  </p>
   <div>
     <a href="https://mytest.com"
-       class="ncf__button--secondary"
+       class="ncf__button--secondary mid-width-button"
     >
       Sign in
     </a>
@@ -37,23 +42,40 @@ exports[`LicenceHeader renders if url is defined 1`] = `
 
 exports[`LicenceHeader renders with custom display name 1`] = `
 <h1 class="ncf__header ncf__center">
-  Great news! Display name text has an FT Subscription you can join
+  <span class="light-licence-text">
+    Great news
+  </span>
+  <span class="bold-licence-text">
+    displayName
+  </span>
+  <span class="light-licence-text">
+    has an FT Subscription you can join
+  </span>
 </h1>
 <div class="ncf__center">
-  <div>
-    Have you already joined the Display name text account?
-  </div>
+  <p>
+    Have you already joined the
+    <span class="bold-licence-text">
+      displayName
+    </span>
+    account?
+  </p>
 </div>
 `;
 
 exports[`LicenceHeader renders with custom welcome text (that requires escaping, e.g. ampersand) 1`] = `
 <h1 class="ncf__header ncf__center">
-  Great news! null has an FT Subscription you can join
+  <span class="light-licence-text">
+    Great news
+  </span>
+  <span class="light-licence-text">
+    has an FT Subscription you can join
+  </span>
 </h1>
 <div class="ncf__center">
-  <div>
+  <p>
     Have you already joined the  account?
-  </div>
+  </p>
 </div>
 <p>
   Welcome text & some more welcome text
@@ -62,11 +84,16 @@ exports[`LicenceHeader renders with custom welcome text (that requires escaping,
 
 exports[`LicenceHeader renders with default props 1`] = `
 <h1 class="ncf__header ncf__center">
-  Great news! null has an FT Subscription you can join
+  <span class="light-licence-text">
+    Great news
+  </span>
+  <span class="light-licence-text">
+    has an FT Subscription you can join
+  </span>
 </h1>
 <div class="ncf__center">
-  <div>
+  <p>
     Have you already joined the  account?
-  </div>
+  </p>
 </div>
 `;
