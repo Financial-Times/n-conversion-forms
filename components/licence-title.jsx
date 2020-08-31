@@ -14,19 +14,17 @@ export function LicenceTitle ({
 				}
 				{
 					isB2cPartnershipLicence
-						? ('Welcome to the Financial Times')
+						? 'Welcome to the Financial Times'
 						: (isTrial && ('Start your free trial'))
 				}
 			</h1>
 		);
 	}
 
-	return (
+	return (displayName &&
 		<h1 className="ncf__header ncf__center">
 			<span className="ncf__light-licence-text">Great news! </span>
-			{
-				(displayName && (<span className="ncf__bold-licence-text">{displayName}</span>))
-			}
+			<span className="ncf__bold-licence-text">{displayName}</span>
 			<span className="ncf__light-licence-text"> has an FT Subscription you can join</span>
 		</h1>
 	);

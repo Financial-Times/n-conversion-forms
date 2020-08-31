@@ -2,12 +2,9 @@
 
 exports[`LicenceSignIn renders if url is defined 1`] = `
 <div class="ncf__center">
-  <p>
-    Have you already joined the  account?
-  </p>
   <div>
     <a href="https://mytest.com"
-       class="ncf__button--secondary ncf__button--mid-width"
+       class="ncf__button--secondary ncf__mid-width-button"
     >
       Sign in
     </a>
@@ -18,19 +15,20 @@ exports[`LicenceSignIn renders if url is defined 1`] = `
 exports[`LicenceSignIn renders with custom display name 1`] = `
 <div class="ncf__center">
   <p>
-    Have you already joined the
+    <span>
+      Have you already joined the
+    </span>
     <span class="ncf__bold-licence-text">
       Display name text
     </span>
-    account?
+    <span>
+      account?
+    </span>
   </p>
 </div>
 `;
 
 exports[`LicenceSignIn renders with default props 1`] = `
 <div class="ncf__center">
-  <p>
-    Have you already joined the  account?
-  </p>
 </div>
 `;

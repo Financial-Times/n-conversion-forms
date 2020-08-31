@@ -7,11 +7,13 @@ export function LicenceSignIn ({
 }) {
 	return (
 		<div className="ncf__center">
-			<p>
-				{'Have you already joined the '}
-				{displayName && (<span className="ncf__bold-licence-text">{displayName}</span>)}
-				{' account?'}
-			</p>
+			{displayName &&
+				(<p>
+					<span>Have you already joined the </span>
+					<span className="ncf__bold-licence-text">{displayName}</span>
+					<span> account?</span>
+				</p>)
+			}
 			{url &&
                 (<div>
                 	<a href={url} className="ncf__button--secondary ncf__mid-width-button">Sign in</a>
