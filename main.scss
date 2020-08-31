@@ -74,6 +74,14 @@
 		}
 	}
 
+	&__light-licence-text {
+		font-weight: lighter;
+	}
+
+	&__bold-licence-text {
+		font-weight: bold;
+	}
+
 	&__paragraph {
 		padding: oSpacingByName('s4') 0;
 		margin: 0;
@@ -246,6 +254,11 @@
 		&--baseline {
 			vertical-align: baseline;
 		}
+
+		&--mid-width {
+			width: 30%;
+		}
+
 	}
 
 	&__center {

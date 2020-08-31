@@ -19,10 +19,10 @@ exports[`LicenceHeader renders if is trial 1`] = `
 
 exports[`LicenceHeader renders if url is defined 1`] = `
 <h1 class="ncf__header ncf__center">
-  <span class="light-licence-text">
-    Great news
+  <span class="ncf__light-licence-text">
+    Great news!
   </span>
-  <span class="light-licence-text">
+  <span class="ncf__light-licence-text">
     has an FT Subscription you can join
   </span>
 </h1>
@@ -32,7 +32,7 @@ exports[`LicenceHeader renders if url is defined 1`] = `
   </p>
   <div>
     <a href="https://mytest.com"
-       class="ncf__button--secondary mid-width-button"
+       class="ncf__button--secondary ncf__button--mid-width"
     >
       Sign in
     </a>
@@ -42,21 +42,21 @@ exports[`LicenceHeader renders if url is defined 1`] = `
 
 exports[`LicenceHeader renders with custom display name 1`] = `
 <h1 class="ncf__header ncf__center">
-  <span class="light-licence-text">
-    Great news
+  <span class="ncf__light-licence-text">
+    Great news!
   </span>
-  <span class="bold-licence-text">
-    displayName
+  <span class="ncf__bold-licence-text">
+    Display name text
   </span>
-  <span class="light-licence-text">
+  <span class="ncf__light-licence-text">
     has an FT Subscription you can join
   </span>
 </h1>
 <div class="ncf__center">
   <p>
     Have you already joined the
-    <span class="bold-licence-text">
-      displayName
+    <span class="ncf__bold-licence-text">
+      Display name text
     </span>
     account?
   </p>
@@ -65,10 +65,10 @@ exports[`LicenceHeader renders with custom display name 1`] = `
 
 exports[`LicenceHeader renders with custom welcome text (that requires escaping, e.g. ampersand) 1`] = `
 <h1 class="ncf__header ncf__center">
-  <span class="light-licence-text">
-    Great news
+  <span class="ncf__light-licence-text">
+    Great news!
   </span>
-  <span class="light-licence-text">
+  <span class="ncf__light-licence-text">
     has an FT Subscription you can join
   </span>
 </h1>
@@ -84,10 +84,10 @@ exports[`LicenceHeader renders with custom welcome text (that requires escaping,
 
 exports[`LicenceHeader renders with default props 1`] = `
 <h1 class="ncf__header ncf__center">
-  <span class="light-licence-text">
-    Great news
+  <span class="ncf__light-licence-text">
+    Great news!
   </span>
-  <span class="light-licence-text">
+  <span class="ncf__light-licence-text">
     has an FT Subscription you can join
   </span>
 </h1>

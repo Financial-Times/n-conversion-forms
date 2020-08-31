@@ -23,11 +23,11 @@ export function LicenceTitle ({
 
 	return (
 		<h1 className="ncf__header ncf__center">
-			<span className="light-licence-text">Great news</span>
+			<span className="ncf__light-licence-text">Great news! </span>
 			{
-				(displayName && (<span className="bold-licence-text">displayName</span>))
+				(displayName && (<span className="ncf__bold-licence-text">{displayName}</span>))
 			}
-			<span className="light-licence-text">has an FT Subscription you can join</span>
+			<span className="ncf__light-licence-text"> has an FT Subscription you can join</span>
 		</h1>
 	);
 }

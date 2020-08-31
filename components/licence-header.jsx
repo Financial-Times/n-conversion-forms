@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {LicenceSignIn} from './licence-partials/licence-sign-in';
-import {LicenceTitle} from './licence-partials/licence-title';
+import {LicenceSignIn} from './licence-sign-in';
+import {LicenceTitle} from './licence-title';
 
 export function LicenceHeader (props) {
 	 const {

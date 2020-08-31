@@ -9,12 +9,12 @@ export function LicenceSignIn ({
 		<div className="ncf__center">
 			<p>
 				{'Have you already joined the '}
-				{displayName && (<span className="bold-licence-text">displayName</span>)}
+				{displayName && (<span className="ncf__bold-licence-text">{displayName}</span>)}
 				{' account?'}
 			</p>
 			{url &&
                 (<div>
-                	<a href={url} className="ncf__button--secondary mid-width-button">Sign in</a>
+                	<a href={url} className="ncf__button--secondary ncf__mid-width-button">Sign in</a>
                 </div>)
 			}
 		</div>
