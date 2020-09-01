@@ -3,7 +3,7 @@ import { Fieldset } from './fieldset';
 import { B2cPartnershipPaymentTerm } from './b2c-partnership-payment-term';
 
 export default {
-	title: 'Payment Term',
+	title: 'B2C Partnership Payment Term',
 	component: B2cPartnershipPaymentTerm,
 };
 
