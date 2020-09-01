@@ -16,7 +16,7 @@ export function LicenceSignIn ({
 			}
 			{url &&
                 (<div>
-                	<a href={url} className="ncf__button--secondary ncf__mid-width-button">Sign in</a>
+                	<a href={url} className="ncf__button--secondary ncf__button--mid-width">Sign in</a>
                 </div>)
 			}
 		</div>

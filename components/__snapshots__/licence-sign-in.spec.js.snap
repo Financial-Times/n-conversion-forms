@@ -4,7 +4,7 @@ exports[`LicenceSignIn renders if url is defined 1`] = `
 <div class="ncf__center">
   <div>
     <a href="https://mytest.com"
-       class="ncf__button--secondary ncf__mid-width-button"
+       class="ncf__button--secondary ncf__button--mid-width"
     >
       Sign in
     </a>
