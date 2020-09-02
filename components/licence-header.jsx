@@ -8,8 +8,8 @@ export function LicenceHeader (props) {
 		displayName = null,
 		isTrial = false,
 		isB2cPartnershipLicence = false,
-		welcomeText = null,
-		url
+		welcomeText = '',
+		url = ''
 	} = props;
 	function createMarkup (text) {
 		return { __html: text };

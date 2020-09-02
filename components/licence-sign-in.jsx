@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export function LicenceSignIn ({
-	displayName = null,
-	url = null,
+	displayName = '',
+	url = '',
 }) {
 	return (
 		<div className="ncf__center">
 			{
 				renderSignInTitle(displayName)
 			}
-			{url &&
+			{(url !== '') &&
                 (<div>
                 	<a href={url} className="ncf__button--secondary ncf__button--mid-width">Sign in</a>
                 </div>)
@@ -22,7 +22,7 @@ export function LicenceSignIn ({
 function renderSignInTitle (displayName){
 	let signInTitle;
 
-	if(displayName) {
+	if(displayName !== '') {
 		signInTitle =
 			<p>
 				<span>Have you already joined the </span>

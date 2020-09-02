@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export function LicenceTitle ({
-	displayName = null,
+	displayName = '',
 	isTrial = false,
 	isB2cPartnershipLicence = false,
 }){
@@ -10,12 +10,12 @@ export function LicenceTitle ({
 		return (
 			<h1 className="ncf__header ncf__center">
 				{
-					(displayName && (`${displayName}`))
+					displayName
 				}
 				{
 					isB2cPartnershipLicence
-						? 'Welcome to the Financial Times'
-						: (isTrial && ('Start your free trial'))
+						? ' Welcome to the Financial Times'
+						: ' Start your free trial'
 				}
 			</h1>
 		);
@@ -27,8 +27,8 @@ export function LicenceTitle ({
 }
 
 function renderB2BTitle (displayName) {
-	const companyName = (displayName && displayName !== null) ? displayName : 'Your company';
-	const boldTextClassName = (displayName && displayName !== null) ? 'ncf__bold-licence-text' : 'ncf__light-licence-text';
+	const companyName = (displayName !== '') ? displayName : 'Your company';
+	const boldTextClassName = (displayName !== '') ? 'ncf__bold-licence-text' : 'ncf__light-licence-text';
 	const template =
 		<h1 className="ncf__header ncf__center">
 			<span className="ncf__light-licence-text">Great news! </span>
