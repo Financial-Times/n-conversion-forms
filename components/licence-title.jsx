@@ -27,7 +27,7 @@ export function LicenceTitle ({
 }
 
 function renderB2BTitle (displayName) {
-	const companyName = (displayName !== '') ? displayName : 'Your company';
+	const companyName = displayName ? displayName : 'Your company';
 	const boldTextClassName = (displayName !== '') ? 'ncf__bold-licence-text' : 'ncf__light-licence-text';
 	const template =
 		<h1 className="ncf__header ncf__center">
