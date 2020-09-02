@@ -1,5 +1,5 @@
-import {expectToRenderCorrectly} from '../test-jest/helpers/expect-to-render-correctly';
-import {LicenceSignIn} from './licence-sign-in';
+import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
+import { LicenceSignIn } from './licence-sign-in';
 
 expect.extend(expectToRenderCorrectly);
 

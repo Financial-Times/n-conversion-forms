@@ -7,12 +7,8 @@ export function LicenceSignIn ({
 }) {
 	return (
 		<div className="ncf__center">
-			{displayName &&
-				(<p>
-					<span>Have you already joined the </span>
-					<span className="ncf__bold-licence-text">{displayName}</span>
-					<span> account?</span>
-				</p>)
+			{
+				renderSignInTitle(displayName)
 			}
 			{url &&
                 (<div>
@@ -21,6 +17,23 @@ export function LicenceSignIn ({
 			}
 		</div>
 	);
+}
+
+function renderSignInTitle (displayName){
+	let signInTitle;
+
+	if(displayName) {
+		signInTitle =
+			<p>
+				<span>Have you already joined the </span>
+				<span className="ncf__bold-licence-text">{displayName}</span>
+				<span> account?</span>
+			</p>;
+	} else {
+		signInTitle = <p>Already have a subscription?</p>;
+	}
+
+	return signInTitle;
 }
 
 LicenceSignIn.propTypes = {
