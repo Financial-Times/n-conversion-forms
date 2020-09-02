@@ -58,7 +58,7 @@ exports[`B2CPartnershipConfirmation renders with default props 1`] = `
     </div>
   </div>
   <p class="ncf__paragraph">
-    We have sent you an email to start your 90-day All Access Digital with The Washington Post
+    We have sent you an email to start your 90-day All Access Digital subscription with The Washington Post
   </p>
   <p class="ncf__paragraph ncf__center">
     <a href="/myft"

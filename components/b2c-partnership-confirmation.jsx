@@ -22,7 +22,7 @@ export function B2CPartnershipConfirmation ({
 
 	const b2cSubscriptionType = hostPartner ? 'Digital subscription' : 'three months\' Premium access';
 
-	const subscriptionAction = hostPartner ? 'We have sent you an email to start your 90-day All Access Digital with The Washington Post' : 'Please check your email to confirm your account and set your password.';
+	const subscriptionAction = hostPartner ? 'We have sent you an email to start your 90-day All Access Digital subscription with The Washington Post' : 'Please check your email to confirm your account and set your password.';
 
 	return (
 		<div className="ncf ncf__wrapper">
