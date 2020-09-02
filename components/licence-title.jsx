@@ -10,12 +10,12 @@ export function LicenceTitle ({
 		return (
 			<h1 className="ncf__header ncf__center">
 				{
-					displayName
+					(displayName !== '') && (`${displayName} | `)
 				}
 				{
 					isB2cPartnershipLicence
-						? ' Welcome to the Financial Times'
-						: ' Start your free trial'
+						? 'Welcome to the Financial Times'
+						: 'Start your free trial'
 				}
 			</h1>
 		);
