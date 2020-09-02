@@ -5,6 +5,12 @@ expect.extend(expectToRenderCorrectly);
 
 describe('B2CPartnershipConfirmation', () => {
 	it('renders with default props', () => {
-		expect(B2CPartnershipConfirmation).toRenderCorrectly();
+		const props = {};
+		expect(B2CPartnershipConfirmation).toRenderCorrectly(props);
+	});
+
+	it('renders when FT is not the host', () => {
+		const props = { hostPartner: false };
+		expect(B2CPartnershipConfirmation).toRenderCorrectly(props);
 	});
 });
