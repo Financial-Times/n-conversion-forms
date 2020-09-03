@@ -1,30 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { LicenceSignIn } from './licence-sign-in';
+import { LicenceTitle } from './licence-title';
 
-export function LicenceHeader ({
-	displayName = null,
-	isTrial = false,
-	isB2cPartnershipLicence = false,
-	welcomeText = null
-}) {
+export function LicenceHeader (props) {
+	 const {
+		displayName = '',
+		isTrial = false,
+		isB2cPartnershipLicence = false,
+		welcomeText = '',
+		url = ''
+	} = props;
 	function createMarkup (text) {
 		return { __html: text };
 	}
 
 	return (
 		<React.Fragment>
-			<h1 className="ncf__header">
-				{ displayName && (`${displayName} | `) }
-				{
-					isB2cPartnershipLicence
-						? ('Welcome to the Financial Times')
-						: isTrial
-							? ('Start your free trial')
-							: ('Join your FT.com subscription')
-				}
-			</h1>
+			<LicenceTitle
+				displayName={displayName}
+				isTrial={isTrial}
+				isB2cPartnershipLicence={isB2cPartnershipLicence}
+			/>
 
-			{ welcomeText && (<p dangerouslySetInnerHTML={createMarkup(welcomeText)} />) }
+			{((!isTrial && !isB2cPartnershipLicence) && <LicenceSignIn displayName={displayName} url={url}/>)}
+
+			{welcomeText && (<p dangerouslySetInnerHTML={createMarkup(welcomeText)}/>)}
 		</React.Fragment>
 	);
 }
@@ -34,4 +35,5 @@ LicenceHeader.propTypes = {
 	isTrial: PropTypes.bool,
 	welcomeText: PropTypes.string,
 	isB2cPartnershipLicence: PropTypes.bool,
+	url: PropTypes.string
 };

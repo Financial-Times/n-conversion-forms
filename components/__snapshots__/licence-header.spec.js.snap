@@ -1,34 +1,107 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LicenceHeader renders if is isB2cPartnershipLicence 1`] = `
-<h1 class="ncf__header">
+<h1 class="ncf__header ncf__center">
   Welcome to the Financial Times
 </h1>
 `;
 
 exports[`LicenceHeader renders if is trial 1`] = `
-<h1 class="ncf__header">
+<h1 class="ncf__header ncf__center">
   Start your free trial
 </h1>
 `;
 
-exports[`LicenceHeader renders with custom display name 1`] = `
-<h1 class="ncf__header">
-  Display name text | Join your FT.com subscription
+exports[`LicenceHeader renders if url is defined 1`] = `
+<h1 class="ncf__header ncf__center">
+  <span class="ncf__light-licence-text">
+    Great news!
+  </span>
+  <span class="ncf__light-licence-text">
+    Your company
+  </span>
+  <span class="ncf__light-licence-text">
+    has an FT Subscription you can join
+  </span>
 </h1>
+<div class="ncf__center">
+  <p>
+    Already have a subscription?
+  </p>
+  <div>
+    <a href="https://mytest.com"
+       class="ncf__button--secondary ncf__button--mid-width"
+    >
+      Sign in
+    </a>
+  </div>
+</div>
+`;
+
+exports[`LicenceHeader renders with custom display name 1`] = `
+<h1 class="ncf__header ncf__center">
+  <span class="ncf__light-licence-text">
+    Great news!
+  </span>
+  <span class="ncf__bold-licence-text">
+    Display name text
+  </span>
+  <span class="ncf__light-licence-text">
+    has an FT Subscription you can join
+  </span>
+</h1>
+<div class="ncf__center">
+  <p>
+    <span>
+      Have you already joined the
+    </span>
+    <span class="ncf__bold-licence-text">
+      Display name text
+    </span>
+    <span>
+      account?
+    </span>
+  </p>
+</div>
 `;
 
 exports[`LicenceHeader renders with custom welcome text (that requires escaping, e.g. ampersand) 1`] = `
-<h1 class="ncf__header">
-  Join your FT.com subscription
+<h1 class="ncf__header ncf__center">
+  <span class="ncf__light-licence-text">
+    Great news!
+  </span>
+  <span class="ncf__light-licence-text">
+    Your company
+  </span>
+  <span class="ncf__light-licence-text">
+    has an FT Subscription you can join
+  </span>
 </h1>
+<div class="ncf__center">
+  <p>
+    Already have a subscription?
+  </p>
+</div>
 <p>
   Welcome text & some more welcome text
 </p>
 `;
 
 exports[`LicenceHeader renders with default props 1`] = `
-<h1 class="ncf__header">
-  Join your FT.com subscription
+<h1 class="ncf__header ncf__center">
+  <span class="ncf__light-licence-text">
+    Great news!
+  </span>
+  <span class="ncf__light-licence-text">
+    Your company
+  </span>
+  <span class="ncf__light-licence-text">
+    has an FT Subscription you can join
+  </span>
 </h1>
+<div class="ncf__center">
+  <p>
+    Already have a subscription?
+  </p>
+</div>
 `;

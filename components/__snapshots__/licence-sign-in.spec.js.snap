@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LicenceSignIn renders if url is defined 1`] = `
+<div class="ncf__center">
+  <p>
+    Already have a subscription?
+  </p>
+  <div>
+    <a href="https://mytest.com"
+       class="ncf__button--secondary ncf__button--mid-width"
+    >
+      Sign in
+    </a>
+  </div>
+</div>
+`;
+
+exports[`LicenceSignIn renders with custom display name 1`] = `
+<div class="ncf__center">
+  <p>
+    <span>
+      Have you already joined the
+    </span>
+    <span class="ncf__bold-licence-text">
+      Display name text
+    </span>
+    <span>
+      account?
+    </span>
+  </p>
+</div>
+`;
+
+exports[`LicenceSignIn renders with default props 1`] = `
+<div class="ncf__center">
+  <p>
+    Already have a subscription?
+  </p>
+</div>
+`;
