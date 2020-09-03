@@ -1,7 +1,8 @@
 ### Description
 <!--- Describe your changes in detail -->
 
-[Ticket](<!-- Add link to the corresponding ticket -->)
+### Ticket
+<!-- Add link to the corresponding ticket -->
 
 ### Screenshots
 
