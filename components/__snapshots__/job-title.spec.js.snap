@@ -16,6 +16,7 @@ exports[`JobTitle can render a disable input 1`] = `
            id="jobTitle"
            name="jobTitle"
            placeholder="Enter your job title"
+           autocomplete="organization-title"
            data-trackable="job-title"
            aria-required="true"
            required
@@ -45,6 +46,7 @@ exports[`JobTitle can render an error message 1`] = `
            id="jobTitle"
            name="jobTitle"
            placeholder="Enter your job title"
+           autocomplete="organization-title"
            data-trackable="job-title"
            aria-required="true"
            required
@@ -73,6 +75,7 @@ exports[`JobTitle can render an initial selected value 1`] = `
            id="jobTitle"
            name="jobTitle"
            placeholder="Enter your job title"
+           autocomplete="organization-title"
            data-trackable="job-title"
            aria-required="true"
            required
@@ -101,6 +104,7 @@ exports[`JobTitle render a select with a label 1`] = `
            id="jobTitle"
            name="jobTitle"
            placeholder="Enter your job title"
+           autocomplete="organization-title"
            data-trackable="job-title"
            aria-required="true"
            required
