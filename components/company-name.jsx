@@ -10,6 +10,7 @@ export function CompanyName ({
 	value = '',
 	isDisabled = false,
 	fieldLabel = 'Company name',
+	placeHolder = 'Please enter your company name'
 }) {
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
@@ -27,7 +28,8 @@ export function CompanyName ({
 		'aria-required': 'true',
 		required: true,
 		disabled: isDisabled,
-		defaultValue: value
+		defaultValue: value,
+		placeHolder,
 	};
 
 	return (
