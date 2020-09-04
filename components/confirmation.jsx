@@ -6,6 +6,7 @@ const EMAIL_DEFAULT_TEXT = 'your email';
 export function Confirmation ({
 	// isTrial prop is needed for the floodlight pixel tracking.
 	isTrial = false,
+	isB2cPartnership = false,
 	offer = '',
 	email = EMAIL_DEFAULT_TEXT,
 	details = null,
@@ -65,6 +66,10 @@ export function Confirmation ({
 			<p className="ncf__paragraph">
 				We’ve sent confirmation to {email}. Make sure you check your spam folder if you don’t receive it.
 			</p>
+			{ isB2cPartnership ?
+				<p>We&apos;ve also sent you an email to start your 90-day All Access Digital subscription with The Washington Post.</p>
+				: ''
+			}
 			<p className="ncf__paragraph">
 				Here’s a summary of your {offer} subscription:
 			</p>
@@ -90,6 +95,7 @@ export function Confirmation ({
 
 Confirmation.propTypes = {
 	isTrial: PropTypes.bool,
+	isB2cPartnership: PropTypes.bool,
 	offer: PropTypes.string.isRequired,
 	email: PropTypes.string,
 	details: PropTypes.arrayOf(PropTypes.shape({
