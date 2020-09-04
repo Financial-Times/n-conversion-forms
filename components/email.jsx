@@ -58,7 +58,6 @@ export function Email ({
 
 Email.propTypes = {
 	dataTrackable: PropTypes.string,
-	describedBy: PropTypes.string,
 	description: PropTypes.string,
 	errorText: PropTypes.string,
 	fieldId: PropTypes.string,

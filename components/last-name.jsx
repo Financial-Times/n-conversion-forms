@@ -53,7 +53,6 @@ export function LastName ({
 
 LastName.propTypes = {
 	dataTrackable: PropTypes.string,
-	describedBy: PropTypes.string,
 	errorText: PropTypes.string,
 	fieldId: PropTypes.string,
 	hasError: PropTypes.bool,
