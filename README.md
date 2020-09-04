@@ -159,10 +159,10 @@ Requirements:
 
 If you want to define some content, this can be done as follows:
 
-```handlebars
-{{#> n-conversion-forms/partials/loader title="Hooray!" }}
-  <p>Main content for the message can be defined in here</p>
-{{/ n-conversion-forms/partials/loader }}
+```jsx
+<Loader showLoader={false} title={loaderTitle}>
+	{loaderContent}
+</Loader>
 ```
 
 #### Showing/Hiding
@@ -179,8 +179,8 @@ or
 
 To show loader on page load/render:
 
-```handlebars
-{{> n-conversion-forms/partials/loader showLoader=true title="Hooray!" }}
+```jsx
+<Loader showLoader={true} title={loaderTitle}>
 ```
 
 You can optionally pass in content when showing the loader:
@@ -192,7 +192,7 @@ loader.showAndPreventTabbing({ title: 'Hello World!' });
 
 #### Loading Message
 
-To dynamically set the messsage to be displayed (either of the properties are optional):
+To dynamically set the message to be displayed (either of the properties are optional):
 
 ```js
 loader.setContent({

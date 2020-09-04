@@ -4,7 +4,7 @@ const PaymentType = require('./payment-type');
 /**
  * Wrapper for the 3rd party Zuora library
  *
- * The library is inserted via a script tag in partials/zuora.html.
+ * The library is inserted via a script tag in components/payment-type.jsx.
  *
  * 'Z' is the global of the 3rd party Zuora lib, its methods:
  * Z.submit                  submit the form, will trigger Z.runAfterRender*
