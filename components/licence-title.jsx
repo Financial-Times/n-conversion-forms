@@ -34,11 +34,13 @@ function renderB2BTitle (displayName) {
 
 	return (
 		<h1 className="ncf__header ncf__center">
-			<span className="ncf__light-licence-text">Great news! </span>
-			<span className="ncf__bold-licence-text">{displayName}</span>
-			<span className="ncf__light-licence-text"> has an </span>
-			<span className="ncf__bold-licence-text">FT subscription </span>
-			<span className="ncf__light-licence-text">you can join</span>
+			<span className="ncf__light-licence-text">
+				Great news!
+				<span className="ncf__bold-licence-text"> {displayName} </span>
+				has an
+				<span className="ncf__bold-licence-text"> FT subscription </span>
+				you can join
+			</span>
 		</h1>
 	);
 }

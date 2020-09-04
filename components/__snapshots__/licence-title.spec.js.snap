@@ -16,17 +16,13 @@ exports[`LicenceTitle renders with custom display name 1`] = `
 <h1 class="ncf__header ncf__center">
   <span class="ncf__light-licence-text">
     Great news!
-  </span>
-  <span class="ncf__bold-licence-text">
-    Display name text
-  </span>
-  <span class="ncf__light-licence-text">
+    <span class="ncf__bold-licence-text">
+      Display name text
+    </span>
     has an
-  </span>
-  <span class="ncf__bold-licence-text">
-    FT subscription
-  </span>
-  <span class="ncf__light-licence-text">
+    <span class="ncf__bold-licence-text">
+      FT subscription
+    </span>
     you can join
   </span>
 </h1>
