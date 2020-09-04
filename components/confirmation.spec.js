@@ -18,6 +18,12 @@ describe('Confirmation', () => {
 		expect(Confirmation).toRenderCorrectly(props);
 	});
 
+	it('renders appropriately if is B2C Partnership', () => {
+		const props = { isB2cPartnership: true };
+
+		expect(Confirmation).toRenderCorrectly(props);
+	});
+
 	it('renders with custom email', () => {
 		const props = { offer: OFFER_TEXT, email: 'test@example.com' };
 
