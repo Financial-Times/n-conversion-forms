@@ -2,7 +2,7 @@
 
 exports[`GraduationDate renders with default props 1`] = `
 <label id="graduationDateField"
-       class="o-forms-field ncf__validation-error"
+       class="o-forms-field ncf__validation-error ncf__graduation-date"
        data-validate="required"
        for="graduationDateMonth"
 >
