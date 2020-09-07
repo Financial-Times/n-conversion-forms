@@ -26,7 +26,7 @@ export function GraduationDate ({
 	return (
 		<label
 			id="graduationDateField"
-			className="o-forms-field ncf__validation-error"
+			className="o-forms-field ncf__validation-error ncf__graduation-date"
 			data-validate="required"
 			htmlFor="graduationDateMonth"
 		>
