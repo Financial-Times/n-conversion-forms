@@ -87,8 +87,8 @@ describe('GraduationDate', () => {
 		const wrapper = shallow(GraduationDate({ value: 'invalid' }));
 
 		it('should not set any default values', () => {
-			expect(wrapper.find('#graduationDateMonth').prop('defaultValue')).toBeNull();
-			expect(wrapper.find('#graduationDateYear').prop('defaultValue')).toBeNull();
+			expect(wrapper.find('#graduationDateMonth').prop('defaultValue')).toBeFalsy();
+			expect(wrapper.find('#graduationDateYear').prop('defaultValue')).toBeFalsy();
 		});
 	});
 

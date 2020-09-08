@@ -15,8 +15,7 @@ export function GraduationDate ({
 	const currentYear = (new Date()).getUTCFullYear();
 	const earliestSelectableYear = currentYear - 4;
 	const defaultValues = value && value.trim().match(/^([0-9]{4})-(0[0-9]|1[012])-[0-9]{2}$/);
-	const defaultMonth = defaultValues && defaultValues[2];
-	const defaultYear = defaultValues && defaultValues[1];
+	const [, defaultYear, defaultMonth] = defaultValues || [];
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--select',
