@@ -1,3 +1,4 @@
+import React from 'react';
 import { GraduationDate } from './graduation-date';
 import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 import Enzyme, { shallow } from 'enzyme';
@@ -12,7 +13,7 @@ describe('GraduationDate', () => {
 	});
 
 	it('should display graduationDateMonth options as English month names', () => {
-		const wrapper = shallow(GraduationDate({}));
+		const wrapper = shallow(<GraduationDate />);
 		const values = wrapper.find('#graduationDateMonth option').map(node => node.text());
 		expect(values).toEqual([
 			'January',
@@ -31,7 +32,7 @@ describe('GraduationDate', () => {
 	});
 
 	it('should store graduationDateMonth values as two-digit numbers', () => {
-		const wrapper = shallow(GraduationDate({}));
+		const wrapper = shallow(<GraduationDate />);
 		const values = wrapper.find('#graduationDateMonth option').map(node => node.prop('value'));
 		expect(values).toEqual([
 			'01',
@@ -53,7 +54,7 @@ describe('GraduationDate', () => {
 		const stubDate = new Date('2020-08-26T00:00:00.000Z');
 		jest.spyOn(global, 'Date').mockImplementation(() => stubDate);
 
-		const wrapper = shallow(GraduationDate({}));
+		const wrapper = shallow(<GraduationDate />);
 		const values = wrapper.find('#graduationDateYear option').map(node => node.prop('value'));
 
 		expect(values).toEqual([
@@ -72,7 +73,7 @@ describe('GraduationDate', () => {
 	});
 
 	describe('given a valid value prop is passed', () => {
-		const wrapper = shallow(GraduationDate({ value: '2020-08-28' }));
+		const wrapper = shallow(<GraduationDate value="2020-08-28" />);
 
 		it('should set the default month', () => {
 			expect(wrapper.find('#graduationDateMonth').prop('defaultValue')).toEqual('08');
@@ -84,7 +85,7 @@ describe('GraduationDate', () => {
 	});
 
 	describe('given an invalid value prop is passed', () => {
-		const wrapper = shallow(GraduationDate({ value: 'invalid' }));
+		const wrapper = shallow(<GraduationDate value="invalid" />);
 
 		it('should not set any default values', () => {
 			expect(wrapper.find('#graduationDateMonth').prop('defaultValue')).toBeFalsy();
@@ -93,7 +94,7 @@ describe('GraduationDate', () => {
 	});
 
 	describe('given the isDisabled prop is set to true', () => {
-		const wrapper = shallow(GraduationDate({ isDisabled: true }));
+		const wrapper = shallow(<GraduationDate isDisabled={true} />);
 
 		it('should disable both select fields', () => {
 			expect(wrapper.find('#graduationDateMonth').prop('disabled')).toBeTruthy();
@@ -102,7 +103,7 @@ describe('GraduationDate', () => {
 	});
 
 	describe('given the isRequired prop is set to true', () => {
-		const wrapper = shallow(GraduationDate({ isRequired: true }));
+		const wrapper = shallow(<GraduationDate isRequired={true} />);
 
 		it('should make both fields required', () => {
 			expect(wrapper.find('#graduationDateMonth').prop('required')).toBeTruthy();
@@ -111,7 +112,7 @@ describe('GraduationDate', () => {
 	});
 
 	describe('given the hasError prop is set to true', () => {
-		const wrapper = shallow(GraduationDate({ hasError: true }));
+		const wrapper = shallow(<GraduationDate hasError={true} />);
 
 		it('should add an invalid modifier class', () => {
 			expect(wrapper.find('span.o-forms-input').prop('className')).toMatch('o-forms-input--invalid');
