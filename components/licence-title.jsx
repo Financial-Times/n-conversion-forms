@@ -27,16 +27,22 @@ export function LicenceTitle ({
 }
 
 function renderB2BTitle (displayName) {
-	const companyName = displayName ? displayName : 'Your company';
-	const boldTextClassName = (displayName !== '') ? 'ncf__bold-licence-text' : 'ncf__light-licence-text';
-	const template =
-		<h1 className="ncf__header ncf__center">
-			<span className="ncf__light-licence-text">Great news! </span>
-			<span className={boldTextClassName}>{companyName}</span>
-			<span className="ncf__light-licence-text"> has an FT Subscription you can join</span>
-		</h1>;
 
-	return template;
+	if(!displayName) {
+		return (<h1 className="ncf__header ncf__center">Join your FT.com subscription</h1>);
+	}
+
+	return (
+		<h1 className="ncf__header ncf__center">
+			<span className="ncf__light-licence-text">
+				Great news!
+				<span className="ncf__bold-licence-text"> {displayName} </span>
+				has an
+				<span className="ncf__bold-licence-text"> FT subscription </span>
+				you can join
+			</span>
+		</h1>
+	);
 }
 
 LicenceTitle.propTypes = {
