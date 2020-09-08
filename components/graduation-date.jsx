@@ -54,7 +54,8 @@ export function GraduationDate ({
 					defaultValue={defaultYear}
 				>
 					{Array.from({ length: 9 }, (_, index) => {
-						return <option key={index} value={earliestSelectableYear + index}>{earliestSelectableYear + index}</option>;
+						const value = earliestSelectableYear + index;
+						return <option key={index} value={value}>{value}</option>;
 					})}
 				</select>
 				<span className="o-forms-input__error">Please select a valid graduation date</span>
