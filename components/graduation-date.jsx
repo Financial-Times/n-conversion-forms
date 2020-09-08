@@ -31,7 +31,7 @@ export function GraduationDate ({
 			htmlFor="graduationDateMonth"
 		>
 			<span className="o-forms-title">
-				<span className="o-forms-title__main">Gradiation date</span>
+				<span className="o-forms-title__main">Graduation date</span>
 			</span>
 			<span className={inputWrapperClassNames}>
 				<select

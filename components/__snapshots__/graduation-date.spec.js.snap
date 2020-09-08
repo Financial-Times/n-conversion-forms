@@ -8,7 +8,7 @@ exports[`GraduationDate renders with default props 1`] = `
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
-      Gradiation date
+      Graduation date
     </span>
   </span>
   <span class="o-forms-input o-forms-input--select">
