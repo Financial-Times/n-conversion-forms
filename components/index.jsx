@@ -32,6 +32,7 @@ export { LicenceConfirmation } from'./licence-confirmation';
 export { LicenceHeader } from'./licence-header';
 export { Loader } from'./loader';
 export { Message } from'./message';
+export { Organisation } from'./organisation';
 export { PackageChange } from'./package-change';
 export { Password } from'./password';
 export { PaymentTerm } from'./payment-term';

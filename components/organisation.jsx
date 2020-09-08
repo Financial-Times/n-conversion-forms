@@ -2,22 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function Email ({
-	dataTrackable='field-email',
-	description = 'Please enter an email address',
-	errorText='This email address is not valid',
-	fieldId = 'emailField',
+export function Organisation ({
+	dataTrackable = 'organization',
+	errorText = 'Please enter your organisation',
+	fieldId = 'organisationField',
 	hasError = false,
-	inputId = 'email',
-	isB2b = false,
+	inputId = 'organisation',
+	inputName,
 	isDisabled = false,
-	label = '',
-	placeHolder = 'Enter your email address',
-	value = '',
-	isEducationalLicence = false,
-	isB2cPartnershipLicence = false,
+	label = 'Organisation',
+	placeHolder = 'Enter your organisation',
+	value = ''
 }) {
-	const labelText = label || (isB2b && !(isEducationalLicence || isB2cPartnershipLicence) ? 'Work email address' : 'Email address');
+	// Use inputId if inputName is not explicitly passed.
+	inputName = inputName || inputId;
+
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
@@ -28,25 +27,21 @@ export function Email ({
 		<label
 			id={fieldId}
 			className="o-forms-field ncf__validation-error"
-			data-validate="required,email"
+			data-validate="required"
 			htmlFor={inputId}
 		>
 			<span className="o-forms-title">
-				<span className="o-forms-title__main">{labelText}</span>
-				{description &&
-					<span className="o-forms-title__prompt">{description}</span>
-				}
+				<span className="o-forms-title__main">{label}</span>
 			</span>
 			<span className={inputWrapperClassNames}>
 				<input
-					type="email"
+					type="text"
 					id={inputId}
-					name={inputId}
+					name={inputName}
 					placeholder={placeHolder}
-					autoComplete="email"
+					autoComplete="organization"
 					data-trackable={dataTrackable}
-					aria-required="true"
-					required
+					aria-required="true" required
 					disabled={isDisabled}
 					defaultValue={value}
 				/>
@@ -56,18 +51,15 @@ export function Email ({
 	);
 }
 
-Email.propTypes = {
+Organisation.propTypes = {
 	dataTrackable: PropTypes.string,
-	description: PropTypes.string,
 	errorText: PropTypes.string,
 	fieldId: PropTypes.string,
 	hasError: PropTypes.bool,
 	inputId: PropTypes.string,
-	isB2b: PropTypes.bool,
+	inputName: PropTypes.string,
 	isDisabled: PropTypes.bool,
 	label: PropTypes.string,
 	placeHolder: PropTypes.string,
 	value: PropTypes.string,
-	isEducationalLicence: PropTypes.bool,
-	isB2cPartnershipLicence: PropTypes.bool,
 };
