@@ -24,50 +24,63 @@ export function GraduationDate ({
 	]);
 
 	return (
-		<label
-			id="graduationDateField"
-			className="o-forms-field ncf__validation-error ncf__graduation-date"
-			data-validate="required"
-			htmlFor="graduationDateMonth"
-		>
-			<span className="o-forms-title">
-				<span className="o-forms-title__main">Graduation date</span>
-			</span>
-			<span className={inputWrapperClassNames}>
-			 <span>
-				<label htmlFor="graduationDateMonth">Month</label>
-				<select
-					id="graduationDateMonth"
-					name="graduationDateMonth"
-					required={isRequired}
-					aria-required={isRequired}
-					disabled={isDisabled}
-					defaultValue={defaultMonth}
-				>
-				{Array.from({ length: 12 }, (_, index) => {
-						return <option key={index} value={(index + 1).toString(10).padStart(2, '0')}>{getMonthNameByIndex(index + 1)}</option>;
-				})}
-				</select>
-				</span>
-				<span>
-				<label htmlFor="graduationDateYear">Year</label>
-				<select
-					id="graduationDateYear"
-					name="graduationDateYear"
-					required={isRequired}
-					aria-required={isRequired}
-					disabled={isDisabled}
-					defaultValue={defaultYear}
-				>
-					{Array.from({ length: 9 }, (_, index) => {
-						const value = earliestSelectableYear + index;
-						return <option key={index} value={value}>{value}</option>;
-					})}
-				</select>
-				</span>
-				<span className="o-forms-input__error">Please select a valid graduation date</span>
-			</span>
-		</label>
+    <div
+    id="graduationDateField"
+    className="o-forms-field ncf__validation-error ncf__graduation-date"
+    data-validate="required"
+    htmlFor="graduationDateMonth"
+  >
+    <span className="o-forms-title">
+      <span className="o-forms-title__main">Graduation date</span>
+    </span>
+    <span className={inputWrapperClassNames}>
+      <span>
+        <label htmlFor="graduationDateMonth">Month</label>
+        <select
+          id="graduationDateMonth"
+          name="graduationDateMonth"
+          required={isRequired}
+          aria-required={isRequired}
+          disabled={isDisabled}
+          defaultValue={defaultMonth}
+        >
+          {Array.from({ length: 12 }, (_, index) => {
+            return (
+              <option
+                key={index}
+                value={(index + 1).toString(10).padStart(2, "0")}
+              >
+                {getMonthNameByIndex(index + 1)}
+              </option>
+            );
+          })}
+        </select>
+      </span>
+      <span>
+        <label htmlFor="graduationDateYear">Year</label>
+        <select
+          id="graduationDateYear"
+          name="graduationDateYear"
+          required={isRequired}
+          aria-required={isRequired}
+          disabled={isDisabled}
+          defaultValue={defaultYear}
+        >
+          {Array.from({ length: 9 }, (_, index) => {
+            const value = earliestSelectableYear + index;
+            return (
+              <option key={index} value={value}>
+                {value}
+              </option>
+            );
+          })}
+        </select>
+      </span>
+      <span className="o-forms-input__error">
+        Please select a valid graduation date
+      </span>
+    </span>
+  </div>
 	);
 };
 

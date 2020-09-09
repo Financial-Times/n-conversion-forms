@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GraduationDate renders with default props 1`] = `
-<label id="graduationDateField"
-       class="o-forms-field ncf__validation-error ncf__graduation-date"
-       data-validate="required"
-       for="graduationDateMonth"
+<div id="graduationDateField"
+     class="o-forms-field ncf__validation-error ncf__graduation-date"
+     data-validate="required"
+     for="graduationDateMonth"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -99,5 +99,5 @@ exports[`GraduationDate renders with default props 1`] = `
       Please select a valid graduation date
     </span>
   </span>
-</label>
+</div>
 `;
