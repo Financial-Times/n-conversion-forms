@@ -28,7 +28,6 @@ export function GraduationDate ({
     id="graduationDateField"
     className="o-forms-field ncf__validation-error ncf__graduation-date"
     data-validate="required"
-    htmlFor="graduationDateMonth"
   >
     <span className="o-forms-title">
       <span className="o-forms-title__main">Graduation date</span>
