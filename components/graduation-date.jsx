@@ -35,7 +35,7 @@ export function GraduationDate ({
 			</span>
 			<span className={inputWrapperClassNames}>
 			 <span>
-				<label>Month</label>
+				<label htmlFor="graduationDateMonth">Month</label>
 				<select
 					id="graduationDateMonth"
 					name="graduationDateMonth"
@@ -50,7 +50,7 @@ export function GraduationDate ({
 				</select>
 				</span>
 				<span>
-				<label>Year</label>
+				<label htmlFor="graduationDateYear">Year</label>
 				<select
 					id="graduationDateYear"
 					name="graduationDateYear"
