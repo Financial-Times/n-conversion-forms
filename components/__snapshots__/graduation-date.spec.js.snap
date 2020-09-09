@@ -13,7 +13,7 @@ exports[`GraduationDate renders with default props 1`] = `
   </span>
   <span class="o-forms-input o-forms-input--select ncf__graduation-date__select-wrapper">
     <span>
-      <label>
+      <label for="graduationDateMonth">
         Month
       </label>
       <select id="graduationDateMonth"
@@ -59,7 +59,7 @@ exports[`GraduationDate renders with default props 1`] = `
       </select>
     </span>
     <span>
-      <label>
+      <label for="graduationDateYear">
         Year
       </label>
       <select id="graduationDateYear"
