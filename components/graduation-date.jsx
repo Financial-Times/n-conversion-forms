@@ -19,6 +19,7 @@ export function GraduationDate ({
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--select',
+		'ncf__graduation-date__select-wrapper',
 		{ 'o-forms-input--invalid': hasError },
 	]);
 
@@ -33,6 +34,8 @@ export function GraduationDate ({
 				<span className="o-forms-title__main">Graduation date</span>
 			</span>
 			<span className={inputWrapperClassNames}>
+			 <span>
+				<label>Month</label>
 				<select
 					id="graduationDateMonth"
 					name="graduationDateMonth"
@@ -41,10 +44,13 @@ export function GraduationDate ({
 					disabled={isDisabled}
 					defaultValue={defaultMonth}
 				>
-					{Array.from({ length: 12 }, (_, index) => {
+				{Array.from({ length: 12 }, (_, index) => {
 						return <option key={index} value={(index + 1).toString(10).padStart(2, '0')}>{getMonthNameByIndex(index + 1)}</option>;
-					})}
+				})}
 				</select>
+				</span>
+				<span>
+				<label>Year</label>
 				<select
 					id="graduationDateYear"
 					name="graduationDateYear"
@@ -58,6 +64,7 @@ export function GraduationDate ({
 						return <option key={index} value={value}>{value}</option>;
 					})}
 				</select>
+				</span>
 				<span className="o-forms-input__error">Please select a valid graduation date</span>
 			</span>
 		</label>
