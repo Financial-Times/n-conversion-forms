@@ -1,4 +1,3 @@
-const fs = require('fs');
 const config = {
 	'env': {
 		'browser': true,
@@ -47,8 +46,8 @@ const config = {
 	'overrides': [
 		{
 			'files': [ 'test/**/*.js', 'tests/**/*.js', 'cypress/**/*.js' ],
-			"env": {
-				"jest": true
+			'env': {
+				'jest': true
 			},
 			'rules': {
 				'no-only-tests/no-only-tests': 'error'
@@ -66,8 +65,8 @@ const packageJsonContainsPackage = packageName => {
 		(dependencies && dependencies[packageName])
 		|| (devDependencies && devDependencies[packageName])
 		|| (peerDependencies && peerDependencies[packageName])
-	)
-}
+	);
+};
 
 if ((packageJsonContainsPackage('react') || packageJsonContainsPackage('preact'))) {
 	config.plugins.push('react');
