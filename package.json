@@ -23,6 +23,7 @@
   "dependencies": {
     "@babel/runtime": "^7.11.2",
     "classnames": "2.2.6",
+    "eslint-plugin-no-only-tests": "^2.4.0",
     "fetchres": "1.7.2",
     "lodash.get": "4.4.2",
     "n-common-static-data": "financial-times/n-common-static-data#v1.6.1"
