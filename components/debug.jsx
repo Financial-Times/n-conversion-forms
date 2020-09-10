@@ -63,6 +63,7 @@ export function Debug ({
 		industry: 'DEF',
 		lastName: 'Test',
 		jobTitle: 'CEO',
+		organisation: 'ft-org',
 		password: 'password123',
 		position: 'AS',
 		postCode: 'EC4M9BT',
