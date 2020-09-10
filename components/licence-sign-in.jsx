@@ -11,18 +11,18 @@ export function LicenceSignIn ({
 				renderSignInTitle(displayName)
 			}
 			{(url !== '') &&
-                (<div>
-                	<a href={url} className="ncf__button--secondary ncf__button--mid-width">Sign in</a>
-                </div>)
+				(<div>
+					<a href={url} className="ncf__button--secondary ncf__button--mid-width">Sign in</a>
+				</div>)
 			}
 		</div>
 	);
 }
 
-function renderSignInTitle (displayName){
+function renderSignInTitle (displayName) {
 	let signInTitle;
 
-	if(displayName !== '') {
+	if (displayName !== '') {
 		signInTitle =
 			<p>
 				<span>Have you already joined the </span>

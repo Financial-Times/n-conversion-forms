@@ -4,7 +4,7 @@ import { LicenceSignIn } from './licence-sign-in';
 import { LicenceTitle } from './licence-title';
 
 export function LicenceHeader (props) {
-	 const {
+	const {
 		displayName = '',
 		isTrial = false,
 		isB2cPartnershipLicence = false,
@@ -23,9 +23,9 @@ export function LicenceHeader (props) {
 				isB2cPartnershipLicence={isB2cPartnershipLicence}
 			/>
 
-			{((!isTrial && !isB2cPartnershipLicence) && <LicenceSignIn displayName={displayName} url={url}/>)}
+			{((!isTrial && !isB2cPartnershipLicence) && <LicenceSignIn displayName={displayName} url={url} />)}
 
-			{welcomeText && (<p dangerouslySetInnerHTML={createMarkup(welcomeText)}/>)}
+			{welcomeText && (<p dangerouslySetInnerHTML={createMarkup(welcomeText)} />)}
 		</React.Fragment>
 	);
 }

@@ -1,0 +1,13 @@
+@mixin ncfGraduationDate() {
+	&__graduation-date {
+		select {
+			width: auto;
+			margin-right: 12px;
+			padding-right: 5em;
+		}
+
+		&__select-wrapper {
+			display: flex;
+		}
+	}
+}
