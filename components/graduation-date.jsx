@@ -31,8 +31,8 @@ export function GraduationDate ({
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">Graduation date</span>
 			</span>
-			<span className={inputWrapperClassNames}>
-				<span className="ncf__graduation-date__select-wrapper">
+			<div className={inputWrapperClassNames}>
+				<div className="ncf__graduation-date__select-wrapper">
 					<span>
 						<label htmlFor="graduationDateMonth">Month</label>
 						<select
@@ -75,11 +75,11 @@ export function GraduationDate ({
 							})}
 						</select>
 					</span>
-				</span>
+				</div>
 				<span className="o-forms-input__error">
 					Please select a valid graduation date
 				</span>
-			</span>
+			</div>
 		</div>
 	);
 };

@@ -10,8 +10,8 @@ exports[`GraduationDate renders with default props 1`] = `
       Graduation date
     </span>
   </span>
-  <span class="o-forms-input o-forms-input--select">
-    <span class="ncf__graduation-date__select-wrapper">
+  <div class="o-forms-input o-forms-input--select">
+    <div class="ncf__graduation-date__select-wrapper">
       <span>
         <label for="graduationDateMonth">
           Month
@@ -95,10 +95,10 @@ exports[`GraduationDate renders with default props 1`] = `
           </option>
         </select>
       </span>
-    </span>
+    </div>
     <span class="o-forms-input__error">
       Please select a valid graduation date
     </span>
-  </span>
+  </div>
 </div>
 `;
