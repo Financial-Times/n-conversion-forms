@@ -115,7 +115,7 @@ describe('GraduationDate', () => {
 		const wrapper = shallow(<GraduationDate hasError={true} />);
 
 		it('should add an invalid modifier class', () => {
-			expect(wrapper.find('span.o-forms-input').prop('className')).toMatch('o-forms-input--invalid');
+			expect(wrapper.find('div.o-forms-input').prop('className')).toMatch('o-forms-input--invalid');
 		});
 	});
 });
