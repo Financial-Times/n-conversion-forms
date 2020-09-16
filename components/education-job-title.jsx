@@ -60,4 +60,5 @@ EducationJobTitle.propTypes = {
 	fieldId: PropTypes.string,
 	inputId: PropTypes.string,
 	inputName: PropTypes.string,
+	isUSContract: PropTypes.bool,
 };
