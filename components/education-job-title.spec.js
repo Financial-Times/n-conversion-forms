@@ -21,7 +21,7 @@ describe('Education job title', () => {
 	});
 
 	it('shows US student occupation options', () => {
-		const props = { isUSContract: true};
+		const props = { isUSContract: true };
 		expect(EducationJobTitle).toRenderCorrectly(context, props);
 	});
 
