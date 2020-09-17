@@ -20,6 +20,11 @@ describe('Education job title', () => {
 		expect(EducationJobTitle).toRenderCorrectly(context, props);
 	});
 
+	it('shows US student occupation options', () => {
+		const props = { isUSContract: true};
+		expect(EducationJobTitle).toRenderCorrectly(context, props);
+	});
+
 	it('renders an error message', () => {
 		const props = { hasError: true };
 		expect(EducationJobTitle).toRenderCorrectly(context, props);
