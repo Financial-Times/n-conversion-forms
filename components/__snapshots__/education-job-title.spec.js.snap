@@ -147,3 +147,40 @@ exports[`Education job title renders an select element with default params 1`] =
   </span>
 </label>
 `;
+
+exports[`Education job title shows US student occupation options 1`] = `
+<label id="jobTitleField"
+       class="o-forms-field"
+       data-validate="required"
+       for="jobTitle"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Occupation
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--select">
+    <select id="jobTitle"
+            name="jobTitle"
+            data-trackable="job-title"
+            aria-required="true"
+            required
+    >
+      <option selected
+              value
+      >
+        Select your occupation
+      </option>
+      <option>
+        Faculty/Other
+      </option>
+      <option>
+        Student
+      </option>
+    </select>
+    <span class="o-forms-input__error">
+      Please enter your occupation.
+    </span>
+  </span>
+</label>
+`;
