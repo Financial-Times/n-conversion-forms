@@ -4,6 +4,7 @@ import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-c
 expect.extend(expectToRenderCorrectly);
 
 const OFFER_TEXT = 'Offer text';
+const UUID = 'article uuid';
 
 describe('Confirmation', () => {
 	it('renders with default props', () => {
@@ -73,7 +74,13 @@ describe('Confirmation', () => {
 		expect(Confirmation).toRenderCorrectly(props);
 	});
 
-	it('renders Call To Action (CTA) for non-print-only', () => {
+	it('renders Call To Action (CTA) for non-print-only with article return', () => {
+		const props = { offer: OFFER_TEXT, isPrintOnly: false, contentUuid: UUID };
+
+		expect(Confirmation).toRenderCorrectly(props);
+	});
+
+	it('renders Call To Action (CTA) for non-print-only without article return', () => {
 		const props = { offer: OFFER_TEXT, isPrintOnly: false };
 
 		expect(Confirmation).toRenderCorrectly(props);
