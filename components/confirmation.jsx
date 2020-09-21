@@ -12,7 +12,8 @@ export function Confirmation ({
 	details = null,
 	directDebitMandateUrl = null,
 	hideCta = false,
-	isPrintOnly = false
+	isPrintOnly = false,
+	contentUuid = '',
 }) {
 	const containerDivProps = {
 		className: 'ncf ncf__wrapper',
@@ -45,12 +46,23 @@ export function Confirmation ({
 		</div>
 	);
 
+	const returnToArticleCta = (<>
+		<div>
+			<a href={`/content/${contentUuid}`} className="ncf__button ncf__button--submit ncf__button--margin">Return to your article</a>
+		</div>
+		<div>
+			<a href="/" className="ncf__link">Explore the FT</a>
+		</div>
+	</>);
+
 	const ctaElement = !hideCta && (
 		<p className="ncf__center">
 			{
 				isPrintOnly
 					? (<a href="/todaysnewspaper " className="ncf__button ncf__button--submit">Explore our E-Paper</a>)
-					: (<a href="/" className="ncf__button ncf__button--submit">Start exploring</a>)
+					: contentUuid
+						? returnToArticleCta
+						: <a href={"/"} className="ncf__button ncf__button--submit">Start exploring</a>
 			}
 		</p>
 	);
@@ -94,6 +106,7 @@ export function Confirmation ({
 }
 
 Confirmation.propTypes = {
+	contentUuid: PropTypes.string,
 	isTrial: PropTypes.bool,
 	isB2cPartnership: PropTypes.bool,
 	offer: PropTypes.string.isRequired,
