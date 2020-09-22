@@ -5,8 +5,13 @@ exports[`GraduationDate renders with default props 1`] = `
      class="o-forms-field ncf__validation-error ncf__graduation-date"
      data-validate="required"
 >
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
+  <span class="o-forms-title"
+        role="group"
+        aria-labelledby="graduationTitleMain"
+  >
+    <span class="o-forms-title__main"
+          id="graduationTitleMain"
+    >
       Graduation date
     </span>
   </span>
