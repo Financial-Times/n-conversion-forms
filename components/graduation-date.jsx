@@ -28,8 +28,8 @@ export function GraduationDate ({
 			className="o-forms-field ncf__validation-error ncf__graduation-date"
 			data-validate="required"
 		>
-			<span className="o-forms-title">
-				<span className="o-forms-title__main">Graduation date</span>
+			<span className="o-forms-title" role="group" aria-labelledby="graduationTitleMain">
+				<span className="o-forms-title__main" id="graduationTitleMain">Graduation date</span>
 			</span>
 			<div className={inputWrapperClassNames}>
 				<div className="ncf__graduation-date__select-wrapper">
