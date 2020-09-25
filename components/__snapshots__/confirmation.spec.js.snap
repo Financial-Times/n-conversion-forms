@@ -53,19 +53,21 @@ exports[`Confirmation renders Call To Action (CTA) for non-print-only with artic
     for details on how to cancel.
   </p>
   <p class="ncf__center">
-    <div>
-      <a href="/content/article uuid"
-         class="ncf__button ncf__button--submit ncf__button--margin"
-      >
-        Return to your article
-      </a>
-    </div>
-    <div>
-      <a href="/"
-         class="ncf__link"
-      >
-        Explore the FT
-      </a>
+    <div class="ncf__field--center">
+      <div>
+        <a href="/content/article uuid"
+           class="ncf__button ncf__button--submit ncf__button--margin"
+        >
+          Return to your article
+        </a>
+      </div>
+      <div>
+        <a href="/"
+           class="ncf__link"
+        >
+          Explore the FT
+        </a>
+      </div>
     </div>
   </p>
 </div>
