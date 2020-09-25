@@ -46,14 +46,16 @@ export function Confirmation ({
 		</div>
 	);
 
-	const returnToArticleCta = (<>
-		<div>
-			<a href={`/content/${contentUuid}`} className="ncf__button ncf__button--submit ncf__button--margin">Return to your article</a>
+	const returnToArticleCta = (
+		<div className="ncf__field--center">
+			<div>
+				<a href={`/content/${contentUuid}`} className="ncf__button ncf__button--submit ncf__button--margin">Return to your article</a>
+			</div>
+			<div>
+				<a href="/" className="ncf__link">Explore the FT</a>
+			</div>
 		</div>
-		<div>
-			<a href="/" className="ncf__link">Explore the FT</a>
-		</div>
-	</>);
+	);
 
 	const ctaElement = !hideCta && (
 		<p className="ncf__center">
