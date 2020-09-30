@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationDate } from './graduation-date';
+import { GraduationDate, Compliance } from './graduation-date';
 import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -10,6 +10,13 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('GraduationDate', () => {
 	it('renders with default props', () => {
 		expect(GraduationDate).toRenderCorrectly({});
+	});
+
+	it('renders graduation date compliance component', () => {
+		const wrapper = shallow(<GraduationDate />);
+
+		expect(wrapper.find(Compliance).exists()).toBe(true);
+		expect(wrapper.find(Compliance).shallow().find('#graduationDateCompliance').exists()).toBe(true);
 	});
 
 	it('should display graduationDateMonth options as English month names', () => {
