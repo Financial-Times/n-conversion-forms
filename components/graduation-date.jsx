@@ -9,8 +9,8 @@ const getMonthNameByIndex = index => {
 export const Compliance = () => (
 	<div id="graduationDateCompliance" className="ncf__field">
 		<p>
-		We use your graduation date, and may share it with your institution, for the purposes of administering your institution&apos;s licence for <a className="ncf__link--external" href="https://ft.com/" title="Financial Times" target="_blank" rel="noopener noreferrer">FT.com</a>
-		</p>
+		 We use your graduation date, and may share it with your institution, for the purposes of administering your institution&apos;s licence for <a className="ncf__link--external" href="https://ft.com/" title="Financial Times" target="_blank" rel="noopener noreferrer">FT.com</a>
+	  </p>
 	</div>
 );
 
