@@ -88,7 +88,7 @@ export function GraduationDate ({
 					Please select a valid graduation date
 				</span>
 			</div>
-			<Compliance/>
+			<Compliance />
 		</div>
 	);
 };
