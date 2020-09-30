@@ -12,7 +12,7 @@ exports[`GraduationDate renders with default props 1`] = `
     <span class="o-forms-title__main"
           id="graduationTitleMain"
     >
-      Graduation date
+      Expected graduation date
     </span>
   </span>
   <div class="o-forms-input o-forms-input--select">
@@ -104,6 +104,21 @@ exports[`GraduationDate renders with default props 1`] = `
     <span class="o-forms-input__error">
       Please select a valid graduation date
     </span>
+  </div>
+  <div id="graduationDateCompliance"
+       class="ncf__field"
+  >
+    <p>
+      We use your graduation date, and may share it with your institution, for the purposes of administering your institution&#x27;s licence for
+      <a class="ncf__link--external"
+         href="https://ft.com/"
+         title="Financial Times"
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        FT.com
+      </a>
+    </p>
   </div>
 </div>
 `;

@@ -6,6 +6,14 @@ const getMonthNameByIndex = index => {
 	return new Date(null, index, null).toLocaleDateString('en', { month: 'long' });
 };
 
+export const Compliance = () => (
+	<div id="graduationDateCompliance" className="ncf__field">
+		<p>
+		 We use your graduation date, and may share it with your institution, for the purposes of administering your institution&apos;s licence for <a className="ncf__link--external" href="https://ft.com/" title="Financial Times" target="_blank" rel="noopener noreferrer">FT.com</a>
+	  </p>
+	</div>
+);
+
 export function GraduationDate ({
 	value,
 	isDisabled = false,
@@ -29,7 +37,7 @@ export function GraduationDate ({
 			data-validate="required"
 		>
 			<span className="o-forms-title" role="group" aria-labelledby="graduationTitleMain">
-				<span className="o-forms-title__main" id="graduationTitleMain">Graduation date</span>
+				<span className="o-forms-title__main" id="graduationTitleMain">Expected graduation date</span>
 			</span>
 			<div className={inputWrapperClassNames}>
 				<div className="ncf__graduation-date__select-wrapper">
@@ -80,6 +88,7 @@ export function GraduationDate ({
 					Please select a valid graduation date
 				</span>
 			</div>
+			<Compliance />
 		</div>
 	);
 };
