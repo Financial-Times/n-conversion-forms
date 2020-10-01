@@ -14,7 +14,7 @@ exports[`Responsibility can render a disable select 1`] = `
   <span class="o-forms-input o-forms-input--select">
     <select id="responsibility"
             name="responsibility"
-            data-trackable="field-responsibility"
+            data-trackable="responsibility"
             aria-required="true"
             required
             disabled
@@ -125,7 +125,7 @@ exports[`Responsibility can render an error message 1`] = `
   <span class="o-forms-input o-forms-input--select o-forms-input--invalid">
     <select id="responsibility"
             name="responsibility"
-            data-trackable="field-responsibility"
+            data-trackable="responsibility"
             aria-required="true"
             required
     >
@@ -235,7 +235,7 @@ exports[`Responsibility can render an initial selected value 1`] = `
   <span class="o-forms-input o-forms-input--select">
     <select id="responsibility"
             name="responsibility"
-            data-trackable="field-responsibility"
+            data-trackable="responsibility"
             aria-required="true"
             required
     >
@@ -347,7 +347,7 @@ exports[`Responsibility render a select with a label 1`] = `
   <span class="o-forms-input o-forms-input--select">
     <select id="responsibility"
             name="responsibility"
-            data-trackable="field-responsibility"
+            data-trackable="responsibility"
             aria-required="true"
             required
     >

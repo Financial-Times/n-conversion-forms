@@ -35,7 +35,7 @@ export function Position ({
 			<span className={inputWrapperClassNames}>
 				<select id={selectId}
 					name={selectName}
-					data-trackable="field-position"
+					data-trackable="position"
 					aria-required={isRequired}
 					required={isRequired}
 					disabled={isDisabled}

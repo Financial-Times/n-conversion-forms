@@ -14,7 +14,7 @@ exports[`Position can render a disable select 1`] = `
   <span class="o-forms-input o-forms-input--select">
     <select id="position"
             name="position"
-            data-trackable="field-position"
+            data-trackable="position"
             aria-required="true"
             required
             disabled
@@ -107,7 +107,7 @@ exports[`Position can render an error message 1`] = `
   <span class="o-forms-input o-forms-input--select o-forms-input--invalid">
     <select id="position"
             name="position"
-            data-trackable="field-position"
+            data-trackable="position"
             aria-required="true"
             required
     >
@@ -199,7 +199,7 @@ exports[`Position can render an initial selected value 1`] = `
   <span class="o-forms-input o-forms-input--select">
     <select id="position"
             name="position"
-            data-trackable="field-position"
+            data-trackable="position"
             aria-required="true"
             required
     >
@@ -293,7 +293,7 @@ exports[`Position render a select with a label 1`] = `
   <span class="o-forms-input o-forms-input--select">
     <select id="position"
             name="position"
-            data-trackable="field-position"
+            data-trackable="position"
             aria-required="true"
             required
     >
