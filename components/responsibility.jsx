@@ -29,7 +29,7 @@ export function Responsibility ({
 				<select
 					id={selectId}
 					name={selectName}
-					data-trackable="field-responsibility"
+					data-trackable="responsibility"
 					aria-required="true"
 					required
 					disabled={isDisabled}

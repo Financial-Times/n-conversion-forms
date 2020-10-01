@@ -13,7 +13,7 @@ exports[`Industry can render a disable select 1`] = `
   <span class="o-forms-input o-forms-input--select">
     <select id="industry"
             name="industry"
-            data-trackable="field-industry"
+            data-trackable="industry"
             aria-required="true"
             required
             disabled
@@ -132,7 +132,7 @@ exports[`Industry can render an error message 1`] = `
   <span class="o-forms-input o-forms-input--select o-forms-input--invalid">
     <select id="industry"
             name="industry"
-            data-trackable="field-industry"
+            data-trackable="industry"
             aria-required="true"
             required
     >
@@ -250,7 +250,7 @@ exports[`Industry can render an initial selected value 1`] = `
   <span class="o-forms-input o-forms-input--select">
     <select id="industry"
             name="industry"
-            data-trackable="field-industry"
+            data-trackable="industry"
             aria-required="true"
             required
     >
@@ -370,7 +370,7 @@ exports[`Industry render a select with a label 1`] = `
   <span class="o-forms-input o-forms-input--select">
     <select id="industry"
             name="industry"
-            data-trackable="field-industry"
+            data-trackable="industry"
             aria-required="true"
             required
     >

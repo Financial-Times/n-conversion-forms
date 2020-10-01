@@ -34,7 +34,7 @@ export function Industry ({
 			<span className={inpiutWrapperClassName}>
 				<select id={selectId}
 					name={selectName}
-					data-trackable="field-industry"
+					data-trackable="industry"
 					aria-required={isRequired}
 					required={isRequired}
 					disabled={isDisabled}
