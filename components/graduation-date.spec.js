@@ -13,7 +13,8 @@ describe('GraduationDate', () => {
 	});
 
 	it('renders graduation date compliance component', () => {
-		const complianceText = 'We use your graduation date, and may share it with your institution, for the purposes of administering your institution\'s licence for FT.com';
+		const complianceText = 'We use the information you provide, and may share it with your institution, for the purposes of administering your institution\'s licence for FT.com. ' +
+			'We may also use it to ensure our communications to you are more relevant. If you do not wish us to do so, you can amend your preferences at any time here';
 		const wrapper = shallow(<GraduationDate />);
 
 		expect(wrapper.find(Compliance).exists()).toBe(true);

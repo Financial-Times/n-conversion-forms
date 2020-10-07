@@ -372,6 +372,10 @@
 		}
 	}
 
+	&__line-break {
+		display: block;
+	}
+
 	@include bigRadioButton($className: '.ncf__delivery-option');
 	&__delivery-option--single {
 		.ncf__delivery-option__label {
