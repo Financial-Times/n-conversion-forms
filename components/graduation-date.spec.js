@@ -13,13 +13,9 @@ describe('GraduationDate', () => {
 	});
 
 	it('renders graduation date compliance component', () => {
-		const complianceText = 'We use the information you provide, and may share it with your institution, for the purposes of administering your institution\'s licence for FT.com. ' +
-			'We may also use it to ensure our communications to you are more relevant. If you do not wish us to do so, you can amend your preferences at any time here';
 		const wrapper = shallow(<GraduationDate />);
-
 		expect(wrapper.find(Compliance).exists()).toBe(true);
 		expect(wrapper.find(Compliance).shallow().find('#graduationDateCompliance').exists()).toBe(true);
-		expect(wrapper.find(Compliance).shallow().find('#graduationDateCompliance').text()).toEqual(complianceText);
 	});
 
 	it('should display graduationDateMonth options as English month names', () => {
