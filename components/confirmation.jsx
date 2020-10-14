@@ -11,9 +11,7 @@ export function Confirmation ({
 	email = EMAIL_DEFAULT_TEXT,
 	details = null,
 	directDebitMandateUrl = null,
-	hideCta = false,
-	isPrintOnly = false,
-	contentUuid = '',
+	nextActionBottom = null,
 }) {
 	const containerDivProps = {
 		className: 'ncf ncf__wrapper',
@@ -44,29 +42,6 @@ export function Confirmation ({
 			<p className="ncf__paragraph--reduced-padding">Download your <a href={directDebitMandateUrl} data-trackable="dd-mandate-link" id="encryptedMandateLink">direct debit mandate</a><i className="ncf__icon-download"></i>
 			</p>
 		</div>
-	);
-
-	const returnToArticleCta = (
-		<div className="ncf__field--center">
-			<div>
-				<a href={`/content/${contentUuid}`} className="ncf__button ncf__button--submit ncf__button--margin">Return to your article</a>
-			</div>
-			<div>
-				<a href="/" className="ncf__link">Explore the FT</a>
-			</div>
-		</div>
-	);
-
-	const ctaElement = !hideCta && (
-		<p className="ncf__center">
-			{
-				isPrintOnly
-					? (<a href="/todaysnewspaper " className="ncf__button ncf__button--submit">Explore our E-Paper</a>)
-					: contentUuid
-						? returnToArticleCta
-						: <a href={"/"} className="ncf__button ncf__button--submit">Start exploring</a>
-			}
-		</p>
 	);
 
 	return (
@@ -102,13 +77,12 @@ export function Confirmation ({
 				We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. See our <a className="ncf__link ncf__link--external" href="http://help.ft.com/help/legal-privacy/terms-conditions/" target="_top" rel="noopener">Terms &amp; Conditions</a> for details on how to cancel.
 			</p>
 
-			{ ctaElement }
+			{ nextActionBottom }
 		</div>
 	);
 }
 
 Confirmation.propTypes = {
-	contentUuid: PropTypes.string,
 	isTrial: PropTypes.bool,
 	isB2cPartnership: PropTypes.bool,
 	offer: PropTypes.string.isRequired,
@@ -119,6 +93,5 @@ Confirmation.propTypes = {
 		description: PropTypes.string
 	})),
 	directDebitMandateUrl: PropTypes.string,
-	hideCta: PropTypes.bool,
-	isPrintOnly: PropTypes.bool
+	nextActionBottom: PropTypes.node
 };
