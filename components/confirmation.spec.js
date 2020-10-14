@@ -4,6 +4,7 @@ import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-c
 expect.extend(expectToRenderCorrectly);
 
 const OFFER_TEXT = 'Offer text';
+const nextActionTop = ['i might take you to tailor your experience'];
 const nextActionBottom = ['i might take you to the ePaper'];
 
 describe('Confirmation', () => {
@@ -58,6 +59,18 @@ describe('Confirmation', () => {
 
 	it('renders with direct debit mandate URL', () => {
 		const props = { offer: OFFER_TEXT, directDebitMandateUrl: 'https://foo.com' };
+
+		expect(Confirmation).toRenderCorrectly(props);
+	});
+
+	it('renders appropriately if nextActionTop is supplied', () => {
+		const props = { offer: OFFER_TEXT, nextActionTop };
+
+		expect(Confirmation).toRenderCorrectly(props);
+	});
+
+	it('renders appropriately if nextActionTop is not supplied', () => {
+		const props = { offer: OFFER_TEXT };
 
 		expect(Confirmation).toRenderCorrectly(props);
 	});

@@ -9,6 +9,10 @@ export default {
 	},
 };
 
+const nextActionTop = <p className="ncf__center">
+	<a href="/myft/" className="ncf__button ncf__button--submit ncf__button--margin">An example child: this is the tailor my experience button</a>
+</p>;
+
 const nextActionBottom = <div className="ncf__field--center">
 	<div>
 		<a href={'/contentuuid'} className="ncf__button ncf__button--submit ncf__button--margin">Return to your article</a>
@@ -33,5 +37,6 @@ Basic.args = {
 			data: 'Dec 25, 2020',
 		}
 	],
+	nextActionTop,
 	nextActionBottom
 };
