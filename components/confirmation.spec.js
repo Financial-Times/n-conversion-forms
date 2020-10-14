@@ -4,7 +4,7 @@ import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-c
 expect.extend(expectToRenderCorrectly);
 
 const OFFER_TEXT = 'Offer text';
-const UUID = 'article uuid';
+const nextActionBottom = ['i might take you to the ePaper'];
 
 describe('Confirmation', () => {
 	it('renders with default props', () => {
@@ -62,26 +62,14 @@ describe('Confirmation', () => {
 		expect(Confirmation).toRenderCorrectly(props);
 	});
 
-	it('renders with hidden Call To Action (CTA)', () => {
-		const props = { offer: OFFER_TEXT, hideCta: true };
+	it('renders appropriately if nextActionBottom is supplied', () => {
+		const props = { offer: OFFER_TEXT, nextActionBottom };
 
 		expect(Confirmation).toRenderCorrectly(props);
 	});
 
-	it('renders Call To Action (CTA) for print-only', () => {
-		const props = { offer: OFFER_TEXT, isPrintOnly: true };
-
-		expect(Confirmation).toRenderCorrectly(props);
-	});
-
-	it('renders Call To Action (CTA) for non-print-only with article return', () => {
-		const props = { offer: OFFER_TEXT, isPrintOnly: false, contentUuid: UUID };
-
-		expect(Confirmation).toRenderCorrectly(props);
-	});
-
-	it('renders Call To Action (CTA) for non-print-only without article return', () => {
-		const props = { offer: OFFER_TEXT, isPrintOnly: false };
+	it('renders appropriately if nextActionBottom is not supplied', () => {
+		const props = { offer: OFFER_TEXT };
 
 		expect(Confirmation).toRenderCorrectly(props);
 	});
