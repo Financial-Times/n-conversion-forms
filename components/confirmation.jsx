@@ -11,6 +11,7 @@ export function Confirmation ({
 	email = EMAIL_DEFAULT_TEXT,
 	details = null,
 	directDebitMandateUrl = null,
+	nextActionTop = null,
 	nextActionBottom = null,
 }) {
 	const containerDivProps = {
@@ -51,6 +52,8 @@ export function Confirmation ({
 				<p className="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">You are now subscribed to:</p>
 				<h1 className="ncf__header ncf__header--confirmation">{offer}</h1>
 			</div>
+
+			{nextActionTop}
 
 			<p className="ncf__paragraph">
 				We’ve sent confirmation to {email}. Make sure you check your spam folder if you don’t receive it.
@@ -93,5 +96,6 @@ Confirmation.propTypes = {
 		description: PropTypes.string
 	})),
 	directDebitMandateUrl: PropTypes.string,
+	nextActionTop: PropTypes.node,
 	nextActionBottom: PropTypes.node
 };
