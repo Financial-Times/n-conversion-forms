@@ -2,11 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+const isoDurationToEnglish = {
+	P3M: '3 months',
+};
+
 export function PaymentTerm({
 	fieldId = 'paymentTermField',
 	inputName = 'paymentTerm',
 	isPrintOrBundle = false,
 	options = [],
+	isFixedTermOffer = false,
+	subscriptionDuration,
 }) {
 	const nameMap = {
 		annual: {
@@ -121,7 +127,10 @@ export function PaymentTerm({
 				<div className="ncf__payment-term__description">
 					{nameMap[option.name].price(option.price)}
 					{nameMap[option.name].monthlyPrice(option.monthlyPrice)}
-					{nameMap[option.name].renewsText()}
+					{isFixedTermOffer ?
+						<p className="ncf__payment-term__renews-text">This subscription is for {isoDurationToEnglish[subscriptionDuration]} and will not renew</p> :
+						nameMap[option.name].renewsText()
+					}
 					{/* Remove this discount text temporarily in favour of monthly price */}
 					{/* <br />Save up to 25% when you pay annually */}
 				</div>
@@ -153,26 +162,32 @@ export function PaymentTerm({
 			{options.map((option) => createPaymentTerm(option))}
 
 			<div className="ncf__payment-term__legal">
-				<p>
-					With all subscription types, we will automatically renew your
-					subscription using the payment method provided unless you cancel
-					before your renewal date.
-				</p>
-				<p>
-					We will notify you at least 14 days in advance of any changes to the
-					price in your subscription that would apply upon next renewal. Find
-					out more about our cancellation policy in our{' '}
-					<a
-						className="ncf__link--external"
-						href="https://help.ft.com/help/legal-privacy/terms-conditions/"
-						title="FT Legal Terms and Conditions help page"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Terms &amp; Conditions
-					</a>
-					.
-				</p>
+				{
+					isFixedTermOffer ?
+						<p>Find out more about our cancellation policy in our <a className="ncf__link--external" href="https://help.ft.com/help/legal-privacy/terms-conditions/" title="FT Legal Terms and Conditions help page" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>.</p> :
+						<React.Fragment>
+							<p>
+								With all subscription types, we will automatically renew your
+								subscription using the payment method provided unless you cancel
+								before your renewal date.
+							</p>
+							<p>
+								We will notify you at least 14 days in advance of any changes to the
+								price in your subscription that would apply upon next renewal. Find
+								out more about our cancellation policy in our{' '}
+								<a
+									className="ncf__link--external"
+									href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+									title="FT Legal Terms and Conditions help page"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Terms &amp; Conditions
+								</a>
+								.
+							</p>
+						</React.Fragment>
+				}
 			</div>
 		</div>
 	);
