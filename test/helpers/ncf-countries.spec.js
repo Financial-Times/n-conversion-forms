@@ -157,7 +157,7 @@ function generateCountryArray (length, { includeAllFrequent = true } = {}) {
 				{ code: 'USA' },
 				{ code: 'CAN' },
 				{ code: 'GBR' },
-			  ]
+			]
 			: []
 	);
 }
