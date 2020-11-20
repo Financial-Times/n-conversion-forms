@@ -73,7 +73,7 @@
     "hooks": {
       "commit-msg": "node_modules/.bin/secret-squirrel-commitmsg",
       "pre-commit": "node_modules/.bin/secret-squirrel && make test",
-      "pre-push": "make verify -j3"
+      "pre-push": "make verify -j3 && pretty-quick --staged"
     }
   }
 }
