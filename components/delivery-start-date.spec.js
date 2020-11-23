@@ -57,5 +57,4 @@ describe('DeliveryStartDate', () => {
 
 		expect(DeliveryStartDate).toRenderCorrectly(props);
 	});
-
 });

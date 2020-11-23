@@ -12,9 +12,11 @@ describe('Email', () => {
 	let sandbox;
 
 	beforeEach(() => {
-		emailElement = { addEventListener: ()=>{} };
-		emailConfirmElement = { addEventListener: ()=>{} };
-		emailConfirmFieldElement = { classList: { add: ()=>{}, remove: ()=>{} } };
+		emailElement = { addEventListener: () => {} };
+		emailConfirmElement = { addEventListener: () => {} };
+		emailConfirmFieldElement = {
+			classList: { add: () => {}, remove: () => {} },
+		};
 		csrfFieldElement = { value: '1234567890' };
 
 		document = {
@@ -28,7 +30,7 @@ describe('Email', () => {
 				} else {
 					return emailElement;
 				}
-			}
+			},
 		};
 		sandbox = sinon.createSandbox();
 		sandbox.spy(emailElement, 'addEventListener');
@@ -51,7 +53,7 @@ describe('Email', () => {
 
 		it('should throw an error if email confirm element does not exist on the page', () => {
 			expect(() => {
-				document.querySelector = () => { };
+				document.querySelector = () => {};
 				new Email(document);
 			}).to.throw();
 		});
@@ -153,12 +155,12 @@ describe('Email', () => {
 				method: 'POST',
 				credentials: 'include',
 				headers: {
-					'Content-Type': 'application/json'
+					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({
 					email: 'test@example.com',
-					csrfToken: '1234567890'
-				})
+					csrfToken: '1234567890',
+				}),
 			});
 		});
 
@@ -192,5 +194,4 @@ describe('Email', () => {
 			expect(onNotFound.called).to.be.true;
 		});
 	});
-
 });

@@ -24,7 +24,7 @@ describe('JobTitle', () => {
 
 	it('can render a disable input', () => {
 		const props = {
-			isDisabled: true
+			isDisabled: true,
 		};
 
 		expect(JobTitle).toRenderCorrectly(props);

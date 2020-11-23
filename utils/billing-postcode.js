@@ -1,4 +1,4 @@
-const Postcode= require('./postcode');
+const Postcode = require('./postcode');
 
 class BillingPostcode extends Postcode {
 	constructor (document) {

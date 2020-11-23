@@ -24,7 +24,6 @@ class Postcode extends FormElement {
 			return 'postcode';
 		}
 	}
-
 }
 
 module.exports = Postcode;

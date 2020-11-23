@@ -6,8 +6,8 @@ export default {
 	component: CompanyName,
 	argTypes: {
 		hasError: { control: 'boolean' },
-		isDisabled: { control: 'boolean' }
-	}
+		isDisabled: { control: 'boolean' },
+	},
 };
 
 export const Basic = (args) => <CompanyName {...args} />;

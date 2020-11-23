@@ -31,10 +31,12 @@
 			color: oColorsByName('white');
 
 			&::before {
-				@include oLoadingContent($opts: (
-					'theme': 'light',
-					'size': 'large'
-				));
+				@include oLoadingContent(
+					$opts: (
+						'theme': 'light',
+						'size': 'large',
+					)
+				);
 				content: '';
 				position: relative;
 				top: 50%;

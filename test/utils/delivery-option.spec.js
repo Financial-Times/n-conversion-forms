@@ -24,7 +24,7 @@ describe('DeliveryOption', () => {
 
 		it('should throw an error if delivery option element does not exist on the page', () => {
 			expect(() => {
-				document.querySelector = () => { };
+				document.querySelector = () => {};
 				new DeliveryOption(document);
 			}).to.throw();
 		});
@@ -42,8 +42,8 @@ describe('DeliveryOption', () => {
 				const formStub = {
 					deliveryOption: [
 						{ addEventListener: deliveryOption1Listener },
-						{ addEventListener: deliveryOption2Listener }
-					]
+						{ addEventListener: deliveryOption2Listener },
+					],
 				};
 
 				document.querySelector.withArgs('form.ncf').returns(formStub);
@@ -58,8 +58,10 @@ describe('DeliveryOption', () => {
 				let callback = sinon.stub();
 				deliveryOptionUtil.handleDeliveryOptionChange(callback);
 
-				expect(deliveryOption1Listener.calledWith('change', callback)).to.be.true;
-				expect(deliveryOption2Listener.calledWith('change', callback)).to.be.true;
+				expect(deliveryOption1Listener.calledWith('change', callback)).to.be
+					.true;
+				expect(deliveryOption2Listener.calledWith('change', callback)).to.be
+					.true;
 			});
 		});
 
@@ -70,13 +72,15 @@ describe('DeliveryOption', () => {
 
 			beforeEach(() => {
 				const dom = new JSDOM();
-				const formElement = dom.window.document.createElement('HTMLInputElement');
+				const formElement = dom.window.document.createElement(
+					'HTMLInputElement'
+				);
 
 				deliveryOptionListener = sandbox.stub();
 				formElement.addEventListener = deliveryOptionListener;
 
 				const altFormStub = {
-					deliveryOption: formElement
+					deliveryOption: formElement,
 				};
 
 				document.querySelector.withArgs('form.ncf').returns(altFormStub);
@@ -97,9 +101,9 @@ describe('DeliveryOption', () => {
 
 			it('adds the event listener', () => {
 				deliveryOptionUtil.handleDeliveryOptionChange(callback);
-				expect(deliveryOptionListener.calledWith('change', callback)).to.be.true;
+				expect(deliveryOptionListener.calledWith('change', callback)).to.be
+					.true;
 			});
 		});
 	});
-
 });

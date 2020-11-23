@@ -21,5 +21,4 @@ describe('LicenceSignIn', () => {
 
 		expect(LicenceSignIn).toRenderCorrectly(props);
 	});
-
 });

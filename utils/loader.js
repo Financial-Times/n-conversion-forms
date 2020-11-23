@@ -23,8 +23,12 @@ class Loader {
 		this.element = element;
 		this.$loader = element.querySelector('.ncf__loader');
 		this.$loaderContent = element.querySelector('.ncf__loader__content');
-		this.$loaderContentTitle = element.querySelector('.ncf__loader__content__title');
-		this.$loaderContentMain = element.querySelector('.ncf__loader__content__main');
+		this.$loaderContentTitle = element.querySelector(
+			'.ncf__loader__content__title'
+		);
+		this.$loaderContentMain = element.querySelector(
+			'.ncf__loader__content__main'
+		);
 
 		if (!this.$loader) {
 			throw new Error('Please include the loader partial on the page');
@@ -44,12 +48,15 @@ class Loader {
 	 * @param {string} title The HTML markup/string containing the title of the message.
 	 * @param {string} content The HTML markup/string containing the main content of the message.
 	 */
-	setContent ({ title, content}) {
+	setContent ({ title, content }) {
 		if (title) {
 			if (!this.$loaderContentTitle) {
 				this.$loaderContentTitle = document.createElement('div');
 				this.$loaderContentTitle.classList.add('ncf__loader__content__title');
-				this.$loaderContent.insertBefore(this.$loaderContentTitle, this.$loaderContentMain);
+				this.$loaderContent.insertBefore(
+					this.$loaderContentTitle,
+					this.$loaderContentMain
+				);
 			}
 			this.$loaderContentTitle.innerHTML = title;
 		}
@@ -120,7 +127,9 @@ class Loader {
 	 */
 	showOnElement (element, content) {
 		const existingLoader = element.querySelector('.ncf__loader');
-		const loader = new DOMParser().parseFromString(this.template(content), 'text/html').querySelector('.ncf__loader');
+		const loader = new DOMParser()
+			.parseFromString(this.template(content), 'text/html')
+			.querySelector('.ncf__loader');
 
 		if (!existingLoader) {
 			element.appendChild(loader);
@@ -142,7 +151,7 @@ class Loader {
 	 * @param {String} title
 	 * @param {String} content
 	 */
-	template ({ title='Loading', content='' }) {
+	template ({ title = 'Loading', content = '' }) {
 		return `
 		<div class="ncf__loader is-visible ncf__loader--element"
 			role="dialog"
@@ -160,6 +169,6 @@ class Loader {
 			</div>
 		</div>`;
 	}
-};
+}
 
 module.exports = Loader;

@@ -16,12 +16,16 @@ class DeliveryStartDate {
 			throw new Error('Please supply the DOM element');
 		}
 
-		this.$container = element.querySelector('#deliveryStartDateField .o-forms-input');
+		this.$container = element.querySelector(
+			'#deliveryStartDateField .o-forms-input'
+		);
 		this.$deliveryStartDate = element.querySelector('#deliveryStartDate');
 		this.$deliveryStartDateText = element.querySelector('.js-start-date-text');
 
 		if (!this.$deliveryStartDate) {
-			throw new Error('Please include the delivery start date partial on the page.');
+			throw new Error(
+				'Please include the delivery start date partial on the page.'
+			);
 		}
 	}
 
@@ -40,13 +44,14 @@ class DeliveryStartDate {
 					method: 'POST',
 					credentials: 'include',
 					headers: {
-						'Content-Type': 'application/json'
+						'Content-Type': 'application/json',
 					},
-					body: JSON.stringify(Object.assign({}, getData(), {
-						startDate: this.$deliveryStartDate.value
-					}))
-				})
-					.then(fetchres.json);
+					body: JSON.stringify(
+						Object.assign({}, getData(), {
+							startDate: this.$deliveryStartDate.value,
+						})
+					),
+				}).then(fetchres.json);
 
 				this.$deliveryStartDate.value = result.firstDeliveryDate;
 				this.$deliveryStartDateText.innerHTML = result.firstDeliveryDateString;
@@ -57,7 +62,7 @@ class DeliveryStartDate {
 				return false;
 			}
 		}
-	};
+	}
 
 	/**
 	 * Enables the start date field
@@ -72,7 +77,6 @@ class DeliveryStartDate {
 	disable () {
 		this.$deliveryStartDate.setAttribute('disabled', 'true');
 	}
-
-};
+}
 
 module.exports = DeliveryStartDate;

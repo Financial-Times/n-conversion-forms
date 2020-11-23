@@ -2,7 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function Phone ({
+export function Phone({
 	hasError = false,
 	isB2b = false,
 	isDisabled = false,
@@ -14,12 +14,13 @@ export function Phone ({
 	dataTrackable = 'field-phone',
 	isEducationalLicence = false,
 }) {
-	const labelText = isB2b && !isEducationalLicence ? 'Work phone number' : 'Phone number';
+	const labelText =
+		isB2b && !isEducationalLicence ? 'Work phone number' : 'Phone number';
 	const descriptionId = 'phone-description';
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	return (
@@ -31,7 +32,9 @@ export function Phone ({
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">{labelText}</span>
-				<span className="o-forms-title__prompt">5 to 15 characters (numbers only)</span>
+				<span className="o-forms-title__prompt">
+					5 to 15 characters (numbers only)
+				</span>
 			</span>
 			<span className={inputWrapperClassNames}>
 				<input
@@ -50,7 +53,9 @@ export function Phone ({
 					disabled={isDisabled}
 					defaultValue={value}
 				/>
-				<span className="o-forms-input__error">This phone number is not valid</span>
+				<span className="o-forms-input__error">
+					This phone number is not valid
+				</span>
 			</span>
 		</label>
 	);

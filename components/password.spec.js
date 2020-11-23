@@ -16,7 +16,6 @@ describe('Password', () => {
 		const renderedPassword = mount(Password(props));
 		const inputElement = renderedPassword.find('#password');
 		expect(inputElement.prop('name')).toBe('password');
-
 	});
 
 	it('can have a different label', () => {
@@ -26,9 +25,10 @@ describe('Password', () => {
 		};
 
 		const renderedPassword = mount(Password(props));
-		const inputElement = renderedPassword.find(`label[htmlFor="${props.inputId}"] .o-forms-title__main`);
+		const inputElement = renderedPassword.find(
+			`label[htmlFor="${props.inputId}"] .o-forms-title__main`
+		);
 		expect(inputElement.text()).toBe(props.label);
-
 	});
 
 	it('can have different placeholder text', () => {
@@ -51,7 +51,6 @@ describe('Password', () => {
 		const renderedPassword = mount(Password(props));
 		const inputElement = renderedPassword.find(`#${props.inputId}`);
 		expect(inputElement.prop('name')).toBe(props.inputName);
-
 	});
 
 	it('can render a disable input', () => {
@@ -60,16 +59,14 @@ describe('Password', () => {
 		};
 
 		expect(Password).toRenderCorrectly(props);
-
 	});
 
 	it('can render a pattern attribute', () => {
 		const props = {
-			pattern: 'Whatever'
+			pattern: 'Whatever',
 		};
 
 		expect(Password).toRenderCorrectly(props);
-
 	});
 
 	it('can render as an Error', () => {
@@ -118,6 +115,8 @@ describe('Password', () => {
 		};
 
 		const renderedPassword = mount(Password(props));
-		expect(renderedPassword.exists('input[data-trackable="field-show-password"]')).toBe(false);
+		expect(
+			renderedPassword.exists('input[data-trackable="field-show-password"]')
+		).toBe(false);
 	});
 });

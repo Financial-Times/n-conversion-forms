@@ -17,7 +17,9 @@ class DeliveryOption {
 		this.$form = element.querySelector('form.ncf');
 
 		if (!this.$form.deliveryOption) {
-			throw new Error('Please include the delivery option partial on the page.');
+			throw new Error(
+				'Please include the delivery option partial on the page.'
+			);
 		}
 	}
 
@@ -34,7 +36,6 @@ class DeliveryOption {
 			}
 		}
 	}
-
-};
+}
 
 module.exports = DeliveryOption;

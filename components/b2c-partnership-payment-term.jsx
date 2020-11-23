@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function B2cPartnershipPaymentTerm ({
+export function B2cPartnershipPaymentTerm({
 	fieldId = 'paymentTermField',
 	inputName = 'paymentTerm',
 	options = [],
@@ -19,34 +19,77 @@ export function B2cPartnershipPaymentTerm ({
 	// convert to Title Case
 	offerType = offerType
 		.split('')
-		.map((letter, i) => i !== 0 ? letter.toLowerCase() : letter.toUpperCase())
+		.map((letter, i) => (i !== 0 ? letter.toLowerCase() : letter.toUpperCase()))
 		.join('');
 
 	return (
-		<div id={fieldId} className="o-forms__group ncf__payment-term ncf__b2c-partnership-payment-term">
-			{options.map(option => option.selected && (
-				<div className="ncf__payment-term__item o-forms-input--radio-round">
-					<input type="radio" id={option.value} name={inputName} value={option.value} defaultChecked={true} />
-					<label htmlFor={option.value} className="o-forms-input__label ncf__payment-term__label">
-						<span className="ncf__payment-term__title">{option.price} - {displayName}</span>
-						<div className="ncf__b2c-partnership-payment-term__description">
-							<p>
-								Includes:<br />
-								{durations[option.name]} {offerType} subscription to the Financial Times<br />
-								{partnerOffer.duration} {partnerOffer.name} subscription to {partnerOffer.vendor}
-							</p>
-							{conditions.length > 0 && <p>{conditions.map(line => <>{line}<br /></>)}</p>}
+		<div
+			id={fieldId}
+			className="o-forms__group ncf__payment-term ncf__b2c-partnership-payment-term"
+		>
+			{options.map(
+				(option) =>
+					option.selected && (
+						<div className="ncf__payment-term__item o-forms-input--radio-round" key={option.value}>
+							<input
+								type="radio"
+								id={option.value}
+								name={inputName}
+								value={option.value}
+								defaultChecked={true}
+							/>
+							<label
+								htmlFor={option.value}
+								className="o-forms-input__label ncf__payment-term__label"
+							>
+								<span className="ncf__payment-term__title">
+									{option.price} - {displayName}
+								</span>
+								<div className="ncf__b2c-partnership-payment-term__description">
+									<p>
+										Includes:
+										<br />
+										{durations[option.name]} {offerType} subscription to the
+										Financial Times
+										<br />
+										{partnerOffer.duration} {partnerOffer.name} subscription to{' '}
+										{partnerOffer.vendor}
+									</p>
+									{conditions.length > 0 && (
+										<p>
+											{conditions.map((line) => (
+												<>
+													{line}
+													<br />
+												</>
+											))}
+										</p>
+									)}
+								</div>
+							</label>
 						</div>
-					</label>
-				</div>
-			))}
+					)
+			)}
 
 			<div className="ncf__payment-term__legal">
 				<p>
-					We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
+					We will automatically renew your subscription using the payment method
+					provided unless you cancel before your renewal date.
 				</p>
 				<p>
-					We will notify you at least 14 days in advance of any changes to the price in your subscription that would apply upon next renewal. Find out more about our cancellation policy in our <a className="ncf__link--external" href="https://help.ft.com/help/legal-privacy/terms-conditions/" title="FT Legal Terms and Conditions help page" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>.
+					We will notify you at least 14 days in advance of any changes to the
+					price in your subscription that would apply upon next renewal. Find
+					out more about our cancellation policy in our{' '}
+					<a
+						className="ncf__link--external"
+						href="https://help.ft.com/help/legal-privacy/terms-conditions/"
+						title="FT Legal Terms and Conditions help page"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Terms &amp; Conditions
+					</a>
+					.
 				</p>
 			</div>
 		</div>
@@ -56,17 +99,19 @@ export function B2cPartnershipPaymentTerm ({
 B2cPartnershipPaymentTerm.propTypes = {
 	fieldId: PropTypes.string,
 	inputName: PropTypes.string,
-	options: PropTypes.arrayOf(PropTypes.shape({
-		discount: PropTypes.string,
-		isTrial: PropTypes.bool,
-		name: PropTypes.string.isRequired,
-		price: PropTypes.string.isRequired,
-		selected: PropTypes.bool,
-		trialDuration: PropTypes.string,
-		trialPrice: PropTypes.string,
-		value: PropTypes.string.isRequired,
-		monthlyPrice: PropTypes.string
-	})).isRequired,
+	options: PropTypes.arrayOf(
+		PropTypes.shape({
+			discount: PropTypes.string,
+			isTrial: PropTypes.bool,
+			name: PropTypes.string.isRequired,
+			price: PropTypes.string.isRequired,
+			selected: PropTypes.bool,
+			trialDuration: PropTypes.string,
+			trialPrice: PropTypes.string,
+			value: PropTypes.string.isRequired,
+			monthlyPrice: PropTypes.string,
+		})
+	).isRequired,
 	displayName: PropTypes.string.isRequired,
 	partnerOffer: PropTypes.shape({
 		duration: PropTypes.string.isRequired,

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function BillingPostcode ({
+export function BillingPostcode({
 	postcodeReference,
 	value = '',
 	pattern = null,
@@ -13,16 +13,15 @@ export function BillingPostcode ({
 	inputId = 'billingPostcode',
 	inputName = 'billingPostcode',
 }) {
-
 	const BillingPostcodeFieldClassNames = classNames([
 		'o-forms-field',
-		{ 'ncf__hidden': isHidden }
+		{ ncf__hidden: isHidden },
 	]);
 
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	return (
@@ -39,7 +38,8 @@ export function BillingPostcode ({
 			</span>
 
 			<span className={inputWrapperClassNames}>
-				<input type="text"
+				<input
+					type="text"
 					id={inputId}
 					name={inputName}
 					defaultValue={value}
@@ -52,7 +52,8 @@ export function BillingPostcode ({
 					disabled={isDisabled}
 				/>
 				<span className="o-forms-input__error">
-					Please enter a valid <span data-reference="postcode">{postcodeReference}</span>.
+					Please enter a valid{' '}
+					<span data-reference="postcode">{postcodeReference}</span>.
 				</span>
 			</span>
 		</label>

@@ -5,15 +5,15 @@ const PaymentType = require('../../utils/payment-type');
 
 let FormElementStub = sinon.stub();
 const Zuora = proxyquire('../../utils/zuora', {
-	'./form-element': FormElementStub
+	'./form-element': FormElementStub,
 });
 
 let fixtures = {
 	render: {
 		code: 'firstNameRequired',
 		key: 'firstName',
-		message: 'firstName required'
-	}
+		message: 'firstName required',
+	},
 };
 
 describe('Zuora', () => {
@@ -30,8 +30,8 @@ describe('Zuora', () => {
 				sendErrorMessageToHpm: sinon.stub(),
 				setEventHandler: sinon.stub(),
 				submit: sinon.stub(),
-				validate: sinon.stub()
-			}
+				validate: sinon.stub(),
+			},
 		};
 		zuora = new Zuora(window);
 		sandbox = sinon.createSandbox();
@@ -43,8 +43,12 @@ describe('Zuora', () => {
 
 	context('constructor', () => {
 		it('sets up global listeners', () => {
-			expect(window.Z.setEventHandler.getCall(0).args[0]).to.equal('blur_mode_enabled');
-			expect(window.Z.setEventHandler.getCall(1).args[0]).to.equal('blur_mode_disabled');
+			expect(window.Z.setEventHandler.getCall(0).args[0]).to.equal(
+				'blur_mode_enabled'
+			);
+			expect(window.Z.setEventHandler.getCall(1).args[0]).to.equal(
+				'blur_mode_disabled'
+			);
 		});
 
 		it('sets up dom elements', () => {
@@ -60,7 +64,7 @@ describe('Zuora', () => {
 	context('render', () => {
 		const params = { foo: 'bar' };
 		const prepopulatedFields = { firstName: 'John' };
-		const renderCallback = () => { };
+		const renderCallback = () => {};
 
 		it('calls relevant Zuora functions', async () => {
 			await zuora.render({ params, prepopulatedFields, renderCallback });
@@ -80,8 +84,15 @@ describe('Zuora', () => {
 			await zuora.render({ params, prepopulatedFields, renderCallback });
 			const handler = window.Z.renderWithErrorHandler.getCall(0).args[3];
 
-			handler(fixtures.render.key, fixtures.render.code, fixtures.render.message);
-			expect(window.Z.sendErrorMessageToHpm.getCall(0).args).to.deep.equal(['firstName', 'First Name is invalid']);
+			handler(
+				fixtures.render.key,
+				fixtures.render.code,
+				fixtures.render.message
+			);
+			expect(window.Z.sendErrorMessageToHpm.getCall(0).args).to.deep.equal([
+				'firstName',
+				'First Name is invalid',
+			]);
 		});
 
 		it('binds the renderCallback to Zuora\'s runAfterRender function', async () => {
@@ -105,7 +116,7 @@ describe('Zuora', () => {
 
 		context(PaymentType.CREDITCARD, () => {
 			it('should call validate', async () => {
-				window.Z.validate.callsFake(callback => callback({success: true}));
+				window.Z.validate.callsFake((callback) => callback({ success: true }));
 				await zuora.submit(PaymentType.CREDITCARD);
 
 				expect(window.Z.validate.called).to.be.true;
@@ -113,7 +124,7 @@ describe('Zuora', () => {
 
 			it('should reject if the validation fails', async () => {
 				let error;
-				window.Z.validate.callsFake(callback => callback({success: false}));
+				window.Z.validate.callsFake((callback) => callback({ success: false }));
 				try {
 					await zuora.submit(PaymentType.CREDITCARD);
 				} catch (e) {
@@ -124,7 +135,7 @@ describe('Zuora', () => {
 			});
 
 			it('should call submit if validation passes', async () => {
-				window.Z.validate.callsFake(callback => callback({success: true}));
+				window.Z.validate.callsFake((callback) => callback({ success: true }));
 				await zuora.submit(PaymentType.CREDITCARD);
 
 				expect(window.Z.submit.called).to.be.true;
@@ -133,8 +144,10 @@ describe('Zuora', () => {
 
 		context(PaymentType.DIRECTDEBIT, () => {
 			it('should call validate', async () => {
-				zuora.onDirectDebitConfirmation = sandbox.stub().callsFake(callback => callback(true));
-				window.Z.validate.callsFake(callback => callback({success: true}));
+				zuora.onDirectDebitConfirmation = sandbox
+					.stub()
+					.callsFake((callback) => callback(true));
+				window.Z.validate.callsFake((callback) => callback({ success: true }));
 				await zuora.submit(PaymentType.DIRECTDEBIT);
 
 				expect(window.Z.validate.called).to.be.true;
@@ -142,8 +155,10 @@ describe('Zuora', () => {
 
 			it('should reject if the validation fails', async () => {
 				let error;
-				zuora.onDirectDebitConfirmation = sandbox.stub().callsFake(callback => callback(true));
-				window.Z.validate.callsFake(callback => callback({success: false}));
+				zuora.onDirectDebitConfirmation = sandbox
+					.stub()
+					.callsFake((callback) => callback(true));
+				window.Z.validate.callsFake((callback) => callback({ success: false }));
 				try {
 					await zuora.submit(PaymentType.DIRECTDEBIT);
 				} catch (e) {
@@ -154,8 +169,10 @@ describe('Zuora', () => {
 			});
 
 			it('should call submit if validation passes', async () => {
-				zuora.onDirectDebitConfirmation = sandbox.stub().callsFake(callback => callback(true));
-				window.Z.validate.callsFake(callback => callback({success: true}));
+				zuora.onDirectDebitConfirmation = sandbox
+					.stub()
+					.callsFake((callback) => callback(true));
+				window.Z.validate.callsFake((callback) => callback({ success: true }));
 				await zuora.submit(PaymentType.DIRECTDEBIT);
 
 				expect(window.Z.submit.called).to.be.true;
@@ -163,8 +180,10 @@ describe('Zuora', () => {
 
 			it('should reject if the direct debit is not confirmed', async () => {
 				let error;
-				zuora.onDirectDebitConfirmation = sandbox.stub().callsFake(callback => callback(false));
-				window.Z.validate.callsFake(callback => callback({success: true}));
+				zuora.onDirectDebitConfirmation = sandbox
+					.stub()
+					.callsFake((callback) => callback(false));
+				window.Z.validate.callsFake((callback) => callback({ success: true }));
 				try {
 					await zuora.submit(PaymentType.DIRECTDEBIT);
 				} catch (e) {
@@ -189,8 +208,12 @@ describe('Zuora', () => {
 			zuora.onAgreementCheckboxChange(callbackStub);
 
 			// The first 2 calls to this happen in setupListeners
-			expect(window.Z.setEventHandler.getCall(2).args[0]).to.equal('agreement_checked');
-			expect(window.Z.setEventHandler.getCall(3).args[0]).to.equal('agreement_unchecked');
+			expect(window.Z.setEventHandler.getCall(2).args[0]).to.equal(
+				'agreement_checked'
+			);
+			expect(window.Z.setEventHandler.getCall(3).args[0]).to.equal(
+				'agreement_unchecked'
+			);
 		});
 
 		it('passes the appropriate data to the callback when checked', () => {
@@ -222,8 +245,12 @@ describe('Zuora', () => {
 			zuora.onDirectDebitConfirmation(callbackStub);
 
 			// The first 2 calls to this happen in setupListeners
-			expect(window.Z.setEventHandler.getCall(2).args[0]).to.equal('mandate_confirmed');
-			expect(window.Z.setEventHandler.getCall(3).args[0]).to.equal('mandate_cancelled');
+			expect(window.Z.setEventHandler.getCall(2).args[0]).to.equal(
+				'mandate_confirmed'
+			);
+			expect(window.Z.setEventHandler.getCall(3).args[0]).to.equal(
+				'mandate_cancelled'
+			);
 		});
 
 		it('passes the appropriate data to the callback when confirmed', () => {

@@ -4,25 +4,32 @@ import classNames from 'classnames';
 import { demographics } from 'n-common-static-data';
 const defaultOptions = demographics.responsibilities.responsibilities;
 
-export function Responsibility ({
+export function Responsibility({
 	value,
 	isDisabled = false,
 	hasError = false,
 	fieldId = 'responsibilityField',
 	selectId = 'responsibility',
 	selectName = 'responsibility',
-	options = defaultOptions
+	options = defaultOptions,
 }) {
 	const inputWrapperClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--select',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	return (
-		<label id={fieldId} className="o-forms-field ncf__validation-error" data-validate="required" htmlFor={selectId}>
+		<label
+			id={fieldId}
+			className="o-forms-field ncf__validation-error"
+			data-validate="required"
+			htmlFor={selectId}
+		>
 			<span className="o-forms-title">
-				<span className="o-forms-title__main">Which best describes your job responsibility?</span>
+				<span className="o-forms-title__main">
+					Which best describes your job responsibility?
+				</span>
 			</span>
 
 			<span className={inputWrapperClassName}>
@@ -38,10 +45,16 @@ export function Responsibility ({
 					<option value="">Please select a job responsibility</option>
 
 					{options.map(({ code, description }) => {
-						return <option key={code} value={code}>{description}</option>;
+						return (
+							<option key={code} value={code}>
+								{description}
+							</option>
+						);
 					})}
 				</select>
-				<span className="o-forms-input__error">Please select your responsibility</span>
+				<span className="o-forms-input__error">
+					Please select your responsibility
+				</span>
 			</span>
 		</label>
 	);
@@ -54,8 +67,10 @@ Responsibility.propTypes = {
 	fieldId: PropTypes.string,
 	selectId: PropTypes.string,
 	selectName: PropTypes.string,
-	options: PropTypes.arrayOf(PropTypes.shape({
-		code: PropTypes.string,
-		description: PropTypes.string,
-	}))
+	options: PropTypes.arrayOf(
+		PropTypes.shape({
+			code: PropTypes.string,
+			description: PropTypes.string,
+		})
+	),
 };

@@ -3,7 +3,7 @@ import { AppBanner } from './app-banner';
 
 export default {
 	title: 'App Banner',
-	component: AppBanner
+	component: AppBanner,
 };
 
 export const Basic = (args) => <AppBanner {...args} />;

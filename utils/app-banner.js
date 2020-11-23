@@ -10,8 +10,12 @@ class AppBanner {
 			throw new Error('Please include the app banner partial on the page');
 		}
 
-		this.$androidAction = this.$banner.querySelector('.ncf__app-banner-action--android');
-		this.$iosAction = this.$banner.querySelector('.ncf__app-banner-action--ios');
+		this.$androidAction = this.$banner.querySelector(
+			'.ncf__app-banner-action--android'
+		);
+		this.$iosAction = this.$banner.querySelector(
+			'.ncf__app-banner-action--ios'
+		);
 
 		// If user agent can be detected remove the action that's not needed
 		if (/(android)/i.test(window.navigator.userAgent)) {

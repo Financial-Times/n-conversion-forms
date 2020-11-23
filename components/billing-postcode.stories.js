@@ -8,5 +8,5 @@ export default {
 
 export const Basic = (args) => <BillingPostcode {...args} />;
 Basic.args = {
-	postcodeReference: 'Postcode'
+	postcodeReference: 'Postcode',
 };

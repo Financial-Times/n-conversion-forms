@@ -11,10 +11,10 @@ describe('Submit', () => {
 	beforeEach(() => {
 		elementStub = {
 			querySelector: sandbox.stub(),
-			innerHTML: 'default'
+			innerHTML: 'default',
 		};
 		documentStub = {
-			querySelector: sandbox.stub()
+			querySelector: sandbox.stub(),
 		};
 	});
 
@@ -39,10 +39,9 @@ describe('Submit', () => {
 
 	context('constructed', () => {
 		beforeEach(() => {
-			newString = ('test');
+			newString = 'test';
 			documentStub.querySelector.returns(elementStub);
 			submit = new Submit(documentStub);
-
 		});
 
 		describe('updateText', () => {

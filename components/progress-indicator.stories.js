@@ -13,19 +13,19 @@ Basic.args = {
 			isComplete: true,
 			isCurrent: false,
 			name: 'Get Business',
-			url: 'https://ft.com'
+			url: 'https://ft.com',
 		},
 		{
 			isComplete: false,
 			isCurrent: true,
 			name: '????',
-			url: 'https://google.com'
+			url: 'https://google.com',
 		},
 		{
 			isComplete: false,
 			isCurrent: false,
 			name: 'Profit',
-			url: 'https://ft.com'
-		}
-	]
+			url: 'https://ft.com',
+		},
+	],
 };

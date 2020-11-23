@@ -9,9 +9,9 @@ describe('ProgressIndicator', () => {
 			items: [
 				{
 					url: 'https://foo.com',
-					name: 'Item name'
-				}
-			]
+					name: 'Item name',
+				},
+			],
 		};
 
 		expect(ProgressIndicator).toRenderCorrectly(props);
@@ -24,9 +24,9 @@ describe('ProgressIndicator', () => {
 					url: 'https://foo.com',
 					name: 'Item name',
 					isComplete: true,
-					isCurrent: false
-				}
-			]
+					isCurrent: false,
+				},
+			],
 		};
 
 		expect(ProgressIndicator).toRenderCorrectly(props);
@@ -39,9 +39,9 @@ describe('ProgressIndicator', () => {
 					url: 'https://foo.com',
 					name: 'Item name',
 					isComplete: false,
-					isCurrent: false
-				}
-			]
+					isCurrent: false,
+				},
+			],
 		};
 
 		expect(ProgressIndicator).toRenderCorrectly(props);
@@ -54,9 +54,9 @@ describe('ProgressIndicator', () => {
 					url: 'https://foo.com',
 					name: 'Item name',
 					isComplete: false,
-					isCurrent: true
-				}
-			]
+					isCurrent: true,
+				},
+			],
 		};
 
 		expect(ProgressIndicator).toRenderCorrectly(props);

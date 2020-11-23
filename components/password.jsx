@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function Password ({
+export function Password({
 	unknownUser = false,
 	hasError = false,
 	pattern = null,
@@ -17,7 +17,8 @@ export function Password ({
 	hasShowPassword = true,
 }) {
 	// This is necessary to make this backward compatible with the Handlebars partial.
-	const showPasswordId = inputId === 'password' ? 'showPassword' : `${inputId}-showPassword`;
+	const showPasswordId =
+		inputId === 'password' ? 'showPassword' : `${inputId}-showPassword`;
 	const showPasswordName = showPasswordId;
 	// Use inputId if inputName is not explicitly passed.
 	inputName = inputName || inputId;
@@ -27,8 +28,8 @@ export function Password ({
 		'ncf__password-field',
 		'ncf__validation-error',
 		{
-			'js-unknown-user-field': unknownUser
-		}
+			'js-unknown-user-field': unknownUser,
+		},
 	]);
 
 	const inputWrapperClassNames = classNames([
@@ -38,7 +39,7 @@ export function Password ({
 		'o-forms-input--suffix',
 		{
 			'o-forms-input--invalid': hasError,
-		}
+		},
 	]);
 
 	return (
@@ -47,15 +48,11 @@ export function Password ({
 			className={fieldClassNames}
 			data-validate="required,password"
 		>
-
 			<label htmlFor={inputId} className="o-forms-title">
-				<span className="o-forms-title__main">
-					{label}
-				</span>
-				{showDescription ?
-					(<span className="o-forms-title__prompt">
-						{description}
-					</span>) : null}
+				<span className="o-forms-title__main">{label}</span>
+				{showDescription ? (
+					<span className="o-forms-title__prompt">{description}</span>
+				) : null}
 			</label>
 
 			<div className={inputWrapperClassNames}>
@@ -66,16 +63,29 @@ export function Password ({
 					placeholder={placeholder}
 					autoComplete="new-password"
 					data-trackable="field-password"
-					aria-required="true" required
+					aria-required="true"
+					required
 					pattern={pattern}
-					disabled={isDisabled} />
-				{hasShowPassword ?
-					(<label className="ncf__password-field--show-password">
-						<input type="checkbox" id={showPasswordId} name={showPasswordName} data-trackable="field-show-password" aria-label="Show password" />
-						<span className="o-forms-input__label" aria-hidden="true">Show password</span>
-					</label>) : null}
+					disabled={isDisabled}
+				/>
+				{hasShowPassword ? (
+					<label className="ncf__password-field--show-password">
+						<input
+							type="checkbox"
+							id={showPasswordId}
+							name={showPasswordName}
+							data-trackable="field-show-password"
+							aria-label="Show password"
+						/>
+						<span className="o-forms-input__label" aria-hidden="true">
+							Show password
+						</span>
+					</label>
+				) : null}
 
-				<div className="o-forms-input__error">Please enter a valid password</div>
+				<div className="o-forms-input__error">
+					Please enter a valid password
+				</div>
 			</div>
 		</div>
 	);

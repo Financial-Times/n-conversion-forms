@@ -7,23 +7,17 @@ const { countries } = require('n-common-static-data').billingCountries;
  * @param {array} options.filter Only returns countries within the filter list if supplied
  * @param {number} options.minimumToGroup Only show groupings if there are over this amount of countries
  */
-function getCountries (
-	{
-		value,
-		filter=[],
-		minimumToGroup=20
-	}={}
-) {
+function getCountries ({ value, filter = [], minimumToGroup = 20 } = {}) {
 	let data = countries;
 
 	// Only show countries in the filter
 	if (filter.length) {
-		data = data.filter(item => filter.includes(item.code));
+		data = data.filter((item) => filter.includes(item.code));
 	}
 
 	// Select the country
 	if (value) {
-		data = data.map(item => {
+		data = data.map((item) => {
 			item.selected = item.code === value;
 			return item;
 		});
@@ -50,16 +44,18 @@ function getCountries (
 function groupCountries (
 	countries,
 	{
-		minimumToShowGroups=2,
-		frequentlyUsed=['GBR', 'USA', 'JPN', 'FRA', 'CAN'],
-		frequentlyUsedLabel='Frequently Used',
-		alphabeticalLabel='Alphabetical'
-	}={}
+		minimumToShowGroups = 2,
+		frequentlyUsed = ['GBR', 'USA', 'JPN', 'FRA', 'CAN'],
+		frequentlyUsedLabel = 'Frequently Used',
+		alphabeticalLabel = 'Alphabetical',
+	} = {}
 ) {
 	const frequentlyUsedCountries = countries
-		.filter(item => frequentlyUsed.includes(item.code))
-		.map(item => Object.assign({}, item))
-		.sort((a, b) => frequentlyUsed.indexOf(a.code) - frequentlyUsed.indexOf(b.code));
+		.filter((item) => frequentlyUsed.includes(item.code))
+		.map((item) => Object.assign({}, item))
+		.sort(
+			(a, b) => frequentlyUsed.indexOf(a.code) - frequentlyUsed.indexOf(b.code)
+		);
 
 	// Not worth showing return standard countries list
 	if (frequentlyUsedCountries.length < minimumToShowGroups) {
@@ -68,18 +64,18 @@ function groupCountries (
 
 	// If selected country is in frequently used only leave that one selected
 	// otherwise the user is shown the lowest selected option
-	const selected = frequentlyUsedCountries.find(item => item.selected);
+	const selected = frequentlyUsedCountries.find((item) => item.selected);
 	if (selected) {
-		countries.forEach(item => item.selected = false);
+		countries.forEach((item) => (item.selected = false));
 	}
 
 	return [
 		{ label: frequentlyUsedLabel, countries: frequentlyUsedCountries },
-		{ label: alphabeticalLabel, countries }
+		{ label: alphabeticalLabel, countries },
 	];
 }
 
 module.exports = {
 	getCountries,
-	groupCountries
+	groupCountries,
 };

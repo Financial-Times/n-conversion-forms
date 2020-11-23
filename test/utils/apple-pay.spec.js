@@ -11,7 +11,14 @@ describe('Apple Pay', () => {
 
 	beforeEach(() => {
 		request = { canMakePayment: function () {}, show: function () {} };
-		window = { PaymentRequest: function () { return request; }, fetch: function () { return Promise.resolve({ json: function () {} }); } };
+		window = {
+			PaymentRequest: function () {
+				return request;
+			},
+			fetch: function () {
+				return Promise.resolve({ json: function () {} });
+			},
+		};
 		event = { complete: function () {} };
 
 		sandbox = sinon.createSandbox();
@@ -70,13 +77,13 @@ describe('Apple Pay', () => {
 
 			it('should create new request if new details passed', () => {
 				applePay = new ApplePay(window);
-				applePay.show({ total: { label: 'new' }});
+				applePay.show({ total: { label: 'new' } });
 				expect(window.PaymentRequest.callCount).to.equal(2);
 			});
 
 			it('should create new request with right parameters', () => {
 				applePay = new ApplePay(window);
-				applePay.show({ total: { label: 'new' }});
+				applePay.show({ total: { label: 'new' } });
 				expect(
 					window.PaymentRequest.calledWith(
 						applePay.methods,
@@ -98,13 +105,16 @@ describe('Apple Pay', () => {
 			it('should use the production merchant validation URL by default', () => {
 				applePay = new ApplePay(window);
 				applePay.handleMerchantValidation(event);
-				expect(window.fetch.calledOnceWith(ApplePay.MERCHANT_VALIDATION_URL)).to.be.true;
+				expect(window.fetch.calledOnceWith(ApplePay.MERCHANT_VALIDATION_URL)).to
+					.be.true;
 			});
 
 			it('should use the test merchant validation URL', () => {
 				applePay = new ApplePay(window, ApplePay.TEST_PAYMENT_METHODS);
 				applePay.handleMerchantValidation(event);
-				expect(window.fetch.calledOnceWith(ApplePay.TEST_MERCHANT_VALIDATION_URL)).to.be.true;
+				expect(
+					window.fetch.calledOnceWith(ApplePay.TEST_MERCHANT_VALIDATION_URL)
+				).to.be.true;
 			});
 
 			it('should call event.complete with response', async () => {
@@ -114,7 +124,6 @@ describe('Apple Pay', () => {
 			});
 		});
 	});
-
 
 	describe('static methods', () => {
 		describe('getMerchantId', () => {
@@ -140,15 +149,21 @@ describe('Apple Pay', () => {
 
 		describe('getMerchantValidationUrl', () => {
 			it('should return production merchant validation url', () => {
-				expect(ApplePay.getMerchantValidationUrl(ApplePay.MERCHANT_ID)).to.equal(ApplePay.MERCHANT_VALIDATION_URL);
+				expect(
+					ApplePay.getMerchantValidationUrl(ApplePay.MERCHANT_ID)
+				).to.equal(ApplePay.MERCHANT_VALIDATION_URL);
 			});
 
 			it('should return a differnt merchant validation url for test merchant', () => {
-				expect(ApplePay.getMerchantValidationUrl(ApplePay.TEST_MERCHANT_ID)).to.equal(ApplePay.TEST_MERCHANT_VALIDATION_URL);
+				expect(
+					ApplePay.getMerchantValidationUrl(ApplePay.TEST_MERCHANT_ID)
+				).to.equal(ApplePay.TEST_MERCHANT_VALIDATION_URL);
 			});
 
 			it('should default to the production merchant validation url', () => {
-				expect(ApplePay.getMerchantValidationUrl()).to.equal(ApplePay.MERCHANT_VALIDATION_URL);
+				expect(ApplePay.getMerchantValidationUrl()).to.equal(
+					ApplePay.MERCHANT_VALIDATION_URL
+				);
 			});
 		});
 

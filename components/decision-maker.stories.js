@@ -3,7 +3,7 @@ import { DecisionMaker } from './decision-maker';
 
 export default {
 	title: 'Decision Maker',
-	component: DecisionMaker
+	component: DecisionMaker,
 };
 
 export const Basic = (args) => <DecisionMaker {...args} />;

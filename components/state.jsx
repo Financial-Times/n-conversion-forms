@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { americanStates } from 'n-common-static-data';
 const defaultStates = americanStates.states;
 
-export function State ({
+export function State({
 	value,
 	fieldId = 'stateField',
 	selectId = 'state',
@@ -12,17 +12,17 @@ export function State ({
 	isHidden = false,
 	isBillingState = false,
 	isDisabled = false,
-	states = defaultStates
+	states = defaultStates,
 }) {
 	const fieldClassNames = classNames([
 		'o-forms-field',
-		{ 'ncf__hidden': isHidden }
+		{ ncf__hidden: isHidden },
 	]);
 
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--select',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	return (
@@ -33,7 +33,9 @@ export function State ({
 			htmlFor={selectId}
 		>
 			<span className="o-forms-title">
-				<span className="o-forms-title__main">{ isBillingState ? 'Billing ' : '' }State</span>
+				<span className="o-forms-title__main">
+					{isBillingState ? 'Billing ' : ''}State
+				</span>
 			</span>
 
 			<span className={inputWrapperClassNames}>
@@ -46,13 +48,17 @@ export function State ({
 					disabled={isDisabled}
 					defaultValue={value}
 				>
-					<option disabled value="">Please select a state</option>
+					<option disabled value="">
+						Please select a state
+					</option>
 
-					{
-						states.map(({ code, name }) => {
-							return (<option key={code} value={code}>{name}</option>);
-						})
-					}
+					{states.map(({ code, name }) => {
+						return (
+							<option key={code} value={code}>
+								{name}
+							</option>
+						);
+					})}
 				</select>
 				<span className="o-forms-input__error">Please select your state</span>
 			</span>
@@ -68,8 +74,10 @@ State.propTypes = {
 	isHidden: PropTypes.bool,
 	isBillingState: PropTypes.bool,
 	isDisabled: PropTypes.bool,
-	states: PropTypes.arrayOf(PropTypes.shape({
-		code: PropTypes.string,
-		name: PropTypes.string,
-	}))
+	states: PropTypes.arrayOf(
+		PropTypes.shape({
+			code: PropTypes.string,
+			name: PropTypes.string,
+		})
+	),
 };

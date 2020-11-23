@@ -23,10 +23,17 @@ class Zuora {
 		this.Z = window.Z;
 
 		this.iframe = new FormElement(window.document, '.ncf__zuora-payment');
-		this.overlay = new FormElement(window.document, '.ncf__zuora-payment-overlay');
+		this.overlay = new FormElement(
+			window.document,
+			'.ncf__zuora-payment-overlay'
+		);
 		// `blur_mode_(enabled|disabled)` are for the DD confirmation dialog.
-		this.Z.setEventHandler('blur_mode_enabled', () => { this.overlay.show(); });
-		this.Z.setEventHandler('blur_mode_disabled', () => { this.overlay.hide(); });
+		this.Z.setEventHandler('blur_mode_enabled', () => {
+			this.overlay.show();
+		});
+		this.Z.setEventHandler('blur_mode_disabled', () => {
+			this.overlay.hide();
+		});
 	}
 
 	/**
@@ -36,7 +43,7 @@ class Zuora {
 	 * @param {Object} prePopulatedFields Parameters with field ids and values to be pre-populated on the form
 	 * @param {Function} renderCallback A function that gets called after the form is rendered.
 	 */
-	render ({ params, prePopulatedFields = {}, renderCallback=()=>{} }) {
+	render ({ params, prePopulatedFields = {}, renderCallback = () => {} }) {
 		// Using an undocumented Zuora method to attach a render callback for the iframe.
 		// This method is called once when the iframe is rendered but gets removed for subsequent renderings.
 		// In the Zuora code https://static.zuora.com/Resources/libs/hosted/1.3.1/zuora.js
@@ -53,10 +60,14 @@ class Zuora {
 		this.Z.renderWithErrorHandler(
 			params,
 			prePopulatedFields,
-			()=>{},
+			() => {},
 			(key, code, message) => {
 				// Generate our custom error messages and send them to the HPM
-				const errorMessage = customiseZuoraError.generateCustomErrorMessage(key, code, message);
+				const errorMessage = customiseZuoraError.generateCustomErrorMessage(
+					key,
+					code,
+					message
+				);
 				this.Z.sendErrorMessageToHpm(key, errorMessage);
 			}
 		);
@@ -71,11 +82,14 @@ class Zuora {
 	submit (paymentType) {
 		return new Promise((resolve, reject) => {
 			// Only handle credit card and direct debit payments
-			if (paymentType !== PaymentType.CREDITCARD && paymentType !== PaymentType.DIRECTDEBIT) {
+			if (
+				paymentType !== PaymentType.CREDITCARD &&
+				paymentType !== PaymentType.DIRECTDEBIT
+			) {
 				return reject(new ZuoraErrorInvalidPaymentType());
 			}
 
-			this.Z.validate(validation => {
+			this.Z.validate((validation) => {
 				// Reject with an error on validation failure
 				if (!validation.success) {
 					return reject(new ZuoraErrorValidation());
@@ -86,7 +100,7 @@ class Zuora {
 
 				if (paymentType === PaymentType.DIRECTDEBIT) {
 					// Wait for the direct debit confirmation before resolving
-					this.onDirectDebitConfirmation(result => {
+					this.onDirectDebitConfirmation((result) => {
 						if (result === true) {
 							resolve(true);
 						} else {
@@ -160,18 +174,18 @@ class ZuoraErrorValidation extends Error {
 		super(message);
 		Object.setPrototypeOf(this, ZuoraErrorValidation.prototype);
 	}
-};
+}
 class ZuoraErrorMandateCancel extends Error {
 	constructor (message) {
 		super(message);
 		Object.setPrototypeOf(this, ZuoraErrorMandateCancel.prototype);
 	}
-};
+}
 class ZuoraErrorInvalidPaymentType extends Error {
 	constructor (message) {
 		super(message);
 		Object.setPrototypeOf(this, ZuoraErrorInvalidPaymentType.prototype);
 	}
-};
+}
 
 module.exports = Zuora;

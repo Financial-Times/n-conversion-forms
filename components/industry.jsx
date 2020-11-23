@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { demographics } from 'n-common-static-data';
 const defaultOptions = demographics.industries.industries;
 
-export function Industry ({
+export function Industry({
 	value,
 	isDisabled = false,
 	hasError = false,
@@ -13,13 +13,12 @@ export function Industry ({
 	selectName = 'industry',
 	options = defaultOptions,
 	fieldLabel = 'In which industry do you work?',
-	isRequired = true
+	isRequired = true,
 }) {
-
 	const inpiutWrapperClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--select',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	return (
@@ -32,7 +31,8 @@ export function Industry ({
 				<span className="o-forms-title__main">{fieldLabel}</span>
 			</span>
 			<span className={inpiutWrapperClassName}>
-				<select id={selectId}
+				<select
+					id={selectId}
 					name={selectName}
 					data-trackable="industry"
 					aria-required={isRequired}
@@ -42,10 +42,16 @@ export function Industry ({
 				>
 					<option value="">Please select an industry</option>
 					{options.map(({ code, description }) => {
-						return <option key={code} value={code}>{description}</option>;
+						return (
+							<option key={code} value={code}>
+								{description}
+							</option>
+						);
 					})}
 				</select>
-				<span className="o-forms-input__error" >Please select your company’s industry</span>
+				<span className="o-forms-input__error">
+					Please select your company’s industry
+				</span>
 			</span>
 		</label>
 	);
@@ -58,10 +64,12 @@ Industry.propTypes = {
 	fieldId: PropTypes.string,
 	selectId: PropTypes.string,
 	selectName: PropTypes.string,
-	options: PropTypes.arrayOf(PropTypes.shape({
-		code: PropTypes.string,
-		description: PropTypes.string,
-	})),
+	options: PropTypes.arrayOf(
+		PropTypes.shape({
+			code: PropTypes.string,
+			description: PropTypes.string,
+		})
+	),
 	fieldLabel: PropTypes.string,
 	isRequired: PropTypes.bool,
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function Organisation ({
+export function Organisation({
 	dataTrackable = 'organization',
 	errorText = 'Please enter your organisation',
 	fieldId = 'organisationField',
@@ -12,7 +12,7 @@ export function Organisation ({
 	isDisabled = false,
 	label = 'Organisation',
 	placeHolder = 'Enter your organisation',
-	value = ''
+	value = '',
 }) {
 	// Use inputId if inputName is not explicitly passed.
 	inputName = inputName || inputId;
@@ -20,7 +20,7 @@ export function Organisation ({
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	return (
@@ -41,7 +41,8 @@ export function Organisation ({
 					placeholder={placeHolder}
 					autoComplete="organization"
 					data-trackable={dataTrackable}
-					aria-required="true" required
+					aria-required="true"
+					required
 					disabled={isDisabled}
 					defaultValue={value}
 				/>

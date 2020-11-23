@@ -8,7 +8,7 @@ const defaultProps = {
 	partnerOffer: {
 		duration: '90-day',
 		name: 'All-Access Digital',
-		vendor: 'The Washington Post'
+		vendor: 'The Washington Post',
 	},
 	offerType: 'DIGITAL',
 	options: [
@@ -18,9 +18,9 @@ const defaultProps = {
 			value: 299.99,
 			isTrial: false,
 			discount: null,
-			selected: true
-		}
-	]
+			selected: true,
+		},
+	],
 };
 
 describe('B2cPartnershipPaymentTerm', () => {
@@ -32,16 +32,18 @@ describe('B2cPartnershipPaymentTerm', () => {
 		expect(B2cPartnershipPaymentTerm).toRenderCorrectly(props);
 	});
 
-	['annual', 'quarterly', 'monthly'].forEach(type => {
+	['annual', 'quarterly', 'monthly'].forEach((type) => {
 		it(`renders with ${type} option`, () => {
 			const props = {
 				...defaultProps,
-				options: [{
-					name: type,
-					value: type,
-					price: '£20.00',
-					selected: true
-				}]
+				options: [
+					{
+						name: type,
+						value: type,
+						price: '£20.00',
+						selected: true,
+					},
+				],
 			};
 
 			expect(B2cPartnershipPaymentTerm).toRenderCorrectly(props);

@@ -1,35 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function LicenceTitle ({
+export function LicenceTitle({
 	displayName = '',
 	isTrial = false,
 	isB2cPartnershipLicence = false,
-}){
-	if(isB2cPartnershipLicence || isTrial) {
+}) {
+	if (isB2cPartnershipLicence || isTrial) {
 		return (
 			<h1 className="ncf__header ncf__center">
-				{
-					(displayName !== '') && (`${displayName} | `)
-				}
-				{
-					isB2cPartnershipLicence
-						? 'Welcome to the Financial Times'
-						: 'Start your free trial'
-				}
+				{displayName !== '' && `${displayName} | `}
+				{isB2cPartnershipLicence
+					? 'Welcome to the Financial Times'
+					: 'Start your free trial'}
 			</h1>
 		);
 	}
 	{
 		return renderB2BTitle(displayName);
 	}
-
 }
 
-function renderB2BTitle (displayName) {
-
-	if(!displayName) {
-		return (<h1 className="ncf__header ncf__center">Join your FT.com subscription</h1>);
+function renderB2BTitle(displayName) {
+	if (!displayName) {
+		return (
+			<h1 className="ncf__header ncf__center">Join your FT.com subscription</h1>
+		);
 	}
 
 	return (

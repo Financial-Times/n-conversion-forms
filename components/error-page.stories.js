@@ -8,5 +8,9 @@ export default {
 
 export const Basic = (args) => <ErrorPage {...args} />;
 Basic.args = {
-	children: <div style={{ border: '4px solid blue', padding: '10px' }}>This is a passed in child node!</div>
+	children: (
+		<div style={{ border: '4px solid blue', padding: '10px' }}>
+			This is a passed in child node!
+		</div>
+	),
 };

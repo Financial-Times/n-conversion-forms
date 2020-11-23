@@ -77,15 +77,15 @@ class Email {
 				method: 'POST',
 				credentials: 'include',
 				headers: {
-					'Content-Type': 'application/json'
+					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({
 					email: this.$email.value,
-					csrfToken: this.$csrfToken && this.$csrfToken.value
-				})
+					csrfToken: this.$csrfToken && this.$csrfToken.value,
+				}),
 			})
 				.then(fetchres.json)
-				.then(response => {
+				.then((response) => {
 					if (response === true) {
 						onFound();
 					} else {
@@ -96,8 +96,7 @@ class Email {
 		} else {
 			onNotFound();
 		}
-	};
-
-};
+	}
+}
 
 module.exports = Email;

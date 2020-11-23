@@ -3,7 +3,7 @@ import { DeliveryCity } from './delivery-city';
 
 export default {
 	title: 'Delivery City',
-	component: DeliveryCity
+	component: DeliveryCity,
 };
 
 export const Basic = (args) => <DeliveryCity {...args} />;

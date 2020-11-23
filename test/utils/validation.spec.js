@@ -14,7 +14,7 @@ let requiredElListener;
 let sandbox;
 let validation;
 
-const createElement = config => {
+const createElement = (config) => {
 	let el = DomHelper.createElement(config, sandbox);
 	let parentNode = document.createElement('div');
 
@@ -24,7 +24,7 @@ const createElement = config => {
 
 	return {
 		input: el,
-		...config
+		...config,
 	};
 };
 
@@ -33,20 +33,20 @@ let formInputsStub = [];
 let OFormsStub = {
 	default: {
 		init: sinon.stub().returns({
-			formInputs: formInputsStub
-		})
-	}
+			formInputs: formInputsStub,
+		}),
+	},
 };
 
 let InputStub = sinon.stub().returns({
-	validate: validateInputStub
+	validate: validateInputStub,
 });
 
 const Validation = proxyquire('../../utils/validation', {
 	'o-forms': OFormsStub,
 	'o-forms/src/js/input': {
-		default: InputStub
-	}
+		default: InputStub,
+	},
 });
 
 describe('Validation', () => {
@@ -85,28 +85,28 @@ describe('Validation', () => {
 				createElement({
 					name: 'foo',
 					type: 'hidden',
-					checkValidity: checkValidityStub
+					checkValidity: checkValidityStub,
 				}),
 				createElement({ name: 'bar', checkValidity: checkValidityStub }),
 				createElement({
 					name: 'baz',
 					required: true,
 					addEventListener: requiredElListener,
-					checkValidity: checkValidityStub
+					checkValidity: checkValidityStub,
 				}),
 				createElement({
 					name: 'qoo',
 					required: true,
 					addEventListener: requiredElListener,
-					checkValidity: checkValidityStub
+					checkValidity: checkValidityStub,
 				}),
 				createElement({
 					name: 'checkbox',
 					type: 'checkbox',
 					addEventListener: checkboxAddEventListener,
 					required: true,
-					checkValidity: checkValidityStub
-				})
+					checkValidity: checkValidityStub,
+				}),
 			]
 		);
 
@@ -229,7 +229,7 @@ describe('Validation', () => {
 				validation.addCustomValidation({
 					errorMessage: 'Oops, something custom went wrong!',
 					field,
-					validator: sandbox.stub()
+					validator: sandbox.stub(),
 				});
 				expect(validation.customValidation.size).to.equal(1);
 			});
@@ -238,13 +238,13 @@ describe('Validation', () => {
 				validation.addCustomValidation({
 					errorMessage: 'Oops, something custom went wrong!',
 					field,
-					validator: sandbox.stub()
+					validator: sandbox.stub(),
 				});
 
 				expect(() => {
 					validation.addCustomValidation({
 						errorMessage: 'Oops, something else custom went wrong!',
-						field
+						field,
 					});
 				}).to.throw();
 			});
@@ -256,7 +256,7 @@ describe('Validation', () => {
 				validation.addCustomValidation({
 					errorMessage: 'Oops, something custom went wrong!',
 					field,
-					validator: sandbox.stub().returns(false)
+					validator: sandbox.stub().returns(false),
 				});
 
 				// Run the stored custom validation function
@@ -273,7 +273,7 @@ describe('Validation', () => {
 				validation.addCustomValidation({
 					errorMessage: 'Oops, something custom went wrong!',
 					field,
-					validator: sandbox.stub().returns(true)
+					validator: sandbox.stub().returns(true),
 				});
 
 				// Run the stored custom validation function

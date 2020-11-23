@@ -12,11 +12,10 @@ expect.extend(expectToRenderCorrectly);
 describe('Responsibility', () => {
 	it('render a select with a label', () => {
 		const props = {
-			options: defaultOptions
+			options: defaultOptions,
 		};
 
 		expect(Responsibility).toRenderCorrectly(props);
-
 	});
 
 	it('can render an initial selected value', () => {
@@ -31,7 +30,7 @@ describe('Responsibility', () => {
 	it('can render a disable select', () => {
 		const props = {
 			options: defaultOptions,
-			isDisabled: true
+			isDisabled: true,
 		};
 
 		expect(Responsibility).toRenderCorrectly(props);
