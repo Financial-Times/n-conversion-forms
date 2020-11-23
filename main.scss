@@ -21,6 +21,7 @@
 @import './styles/forms-additional-field-information';
 @import './styles/error';
 @import './styles/graduation-date';
+@import './styles/lite-subs-confirmation';
 
 @include oTypography();
 @include oFonts();
@@ -410,6 +411,7 @@
 	@include ncfCustomerCarePanel();
 	@include ncfAcceptTermsList();
 	@include ncfGraduationDate();
+	@include ncfLiteSubsConfirmation();
 
 	&__hidden {
 		display: none !important;

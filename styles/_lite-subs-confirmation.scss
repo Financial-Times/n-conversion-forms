@@ -1,0 +1,7 @@
+@mixin ncfLiteSubsConfirmation() {
+	&__lite-subs-confirmation {
+		&--lite-subs-cta {
+			width: 240px;
+		}
+	}
+}
