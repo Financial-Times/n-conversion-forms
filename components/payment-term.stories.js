@@ -32,3 +32,15 @@ Basic.args = {
 		},
 	],
 };
+
+export const FixedTermOffer = (args) => <Fieldset><PaymentTerm {...args} subscriptionDuration='P3M' /></Fieldset>;
+FixedTermOffer.args = {
+	options: [
+		{
+			name: 'monthly',
+			price: '$5.00',
+			value: 5.00,
+		}
+	],
+	isFixedTermOffer: true,
+};
