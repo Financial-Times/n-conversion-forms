@@ -11,7 +11,7 @@ export default {
 
 export const Basic = (args) => <LiteSubsConfirmation {...args} />;
 Basic.args = {
-	offer: 'Premium',
+	offer: 'Inbox Only',
 	details: [
 		{
 			title: 'End Date',
@@ -26,5 +26,7 @@ Basic.args = {
 			title: 'Payment method',
 			data: 'Credit / Debit Card',
 		}
-	]
+	],
+	subscriptionType: 'Premium',
+	newsletters:['Moral Money', 'Due Diligence', '#techAsia']
 };
