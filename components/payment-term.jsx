@@ -210,4 +210,6 @@ PaymentTerm.propTypes = {
 			monthlyPrice: PropTypes.string,
 		})
 	),
+	isFixedTermOffer: PropTypes.bool,
+	subscriptionDuration: PropTypes.string,
 };
