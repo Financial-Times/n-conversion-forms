@@ -1,7 +1,11 @@
 import { PaymentTerm } from './index';
 import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
+import React from 'react';
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
 expect.extend(expectToRenderCorrectly);
+Enzyme.configure({ adapter: new Adapter() });
 
 describe('PaymentTerm', () => {
 	it('render with defaults', () => {
@@ -110,6 +114,26 @@ describe('PaymentTerm', () => {
 
 				expect(PaymentTerm).toRenderCorrectly(props);
 			});
+		});
+	});
+
+	describe('given isFixedTermOffer prop is set to true', () => {
+		const options = [
+			{
+				name: 'monthly',
+				price: '$5.00',
+				value: 'monthly',
+				monthlyPrice: '$5.00',
+			}
+		];
+		const wrapper = shallow(<PaymentTerm isFixedTermOffer={true} options={options} subscriptionDuration='P3M' />);
+
+		it('should not include renewal text', () => {
+			expect(wrapper.find('.ncf__payment-term__renews-text').text()).not.toMatch(/Renews (annually|monthly|quarterly) unless cancelled/);
+		});
+
+		it('should render the subscriptionDuration in English', () => {
+			expect(wrapper.find('.ncf__payment-term__renews-text').text()).toMatch(/3 months/);
 		});
 	});
 });
