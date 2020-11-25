@@ -1,17 +1,19 @@
 import React from 'react';
-import { LiteSubsConfirmation } from './lite-subs-confirmation';
+import { LiteSubConfirmation } from './lite-sub-confirmation';
 
 export default {
-	title: 'Confirmation',
-	component: LiteSubsConfirmation,
+	title: 'Light confirmation',
+	component: LiteSubConfirmation,
 	argTypes: {
 		details: { control: 'array' },
+		offerType: { control: 'string'},
+		offerName: { control: 'string'},
 	},
 };
 
-export const Basic = (args) => <LiteSubsConfirmation {...args} />;
+export const Basic = (args) => <LiteSubConfirmation {...args} />;
 Basic.args = {
-	offer: 'Inbox Only',
+	offerType: 'Premium',
 	details: [
 		{
 			title: 'End Date',
@@ -27,6 +29,5 @@ Basic.args = {
 			data: 'Credit / Debit Card',
 		}
 	],
-	subscriptionType: 'Premium',
-	newsletters:['Moral Money', 'Due Diligence', '#techAsia']
+	offerName: 'Standard',
 };
