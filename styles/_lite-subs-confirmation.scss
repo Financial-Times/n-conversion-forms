@@ -1,7 +1,28 @@
 @mixin ncfLiteSubsConfirmation() {
-	&__lite-subs-confirmation {
+	&__lite-sub-confirmation {
 		&--lite-sub-cta {
 			width: 240px;
+		}
+	}
+
+	&__lite-sub__details {
+		list-style-type: none;
+		padding-left: 0;
+
+		@include oGridRespondTo($until: S) {
+			&--list {
+				display: grid;
+				padding-top: oSpacingByName("s3");
+				font-size: oSpacingByName("s3");
+			}
+			&--hidden-sm {
+				@include oNormaliseVisuallyHidden;
+			}
+		}
+		@include oGridRespondTo($from: L) {
+			&--hidden-lg {
+				@include oNormaliseVisuallyHidden;
+			}
 		}
 	}
 }
