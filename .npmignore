@@ -20,7 +20,6 @@ main.scss
 .pa11yci.js
 .stylelintrc
 bower.json
-package-lock.json
 circle.yml
 ft.yml
 Makefile
