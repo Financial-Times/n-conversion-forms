@@ -4,42 +4,6 @@ import PropTypes from 'prop-types';
 const EMAIL_DEFAULT_TEXT = 'your email';
 const PREMIUM_OFFER = 'premium';
 
-const DetailsMobileView = ({ details }) => (
-	<ul className="ncf__list ncf__lite-sub__details hidden-lg">
-		{
-			details.map((detail, index) =>
-				(
-
-					<li className="ncf__lite-sub__details--list" key={index}>
-						{<span className="title"><b>{detail.title}</b></span>}
-						<span className="data">
-							{detail.data}
-							{detail.description && <span> ({detail.description})</span>}
-						</span>
-					</li>
-
-				)
-			)
-		}
-	</ul>
-);
-const DetailsDesktopView = ({ details }) => (
-	<dl className="ncf__list ncf__lite-sub__details hidden-sm">
-		{
-			details.map((detail, index) =>
-				(
-					<React.Fragment key={index}>
-						<dt className="ncf__list-title">{detail.title}</dt>
-						<dd className="ncf__list-data">{detail.data}
-							{detail.description && (<div>({detail.description})</div>)}
-						</dd>
-					</React.Fragment>
-				)
-			)
-		}
-	</dl>
-);
-
 export function LiteSubConfirmation ({
 	offerType = '',
 	offerName = '',
@@ -50,8 +14,23 @@ export function LiteSubConfirmation ({
 	const detailElements = details && (
 		<React.Fragment>
 			<h2 className="ncf__header2--afterline">Your billing details</h2>
-			<DetailsMobileView details={details} />
-			<DetailsDesktopView details={details} />
+			<dl className="ncf__list ncf__lite-sub__details">
+				{
+					details.map((detail, index) =>
+						(
+							<React.Fragment key={index}>
+								<dt className="ncf__list-title">{detail.title}</dt>
+								<>
+								<dd className="ncf__list-data">{detail.data}
+									{detail.description && (<span className="ncf__lite-sub__details--description">({detail.description})</span>)}
+								</dd>
+
+								</>
+							</React.Fragment>
+						)
+					)
+				}
+			</dl>
 		</React.Fragment>
 	);
 

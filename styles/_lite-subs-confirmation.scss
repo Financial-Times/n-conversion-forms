@@ -6,22 +6,26 @@
 	}
 
 	&__lite-sub__details {
-		list-style-type: none;
-		padding-left: 0;
-
 		@include oGridRespondTo($until: S) {
-			&--list {
-				display: grid;
-				padding-top: oSpacingByName("s3");
-				font-size: oSpacingByName("s3");
+			display: grid;
+
+			&--description::before {
+				content: " ";
 			}
-			&--hidden-sm {
-				@include oNormaliseVisuallyHidden;
+
+			& .ncf__list-data {
+				width: 100%;
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+
+			& .ncf__list-title {
+				margin-bottom: 0;
 			}
 		}
-		@include oGridRespondTo($from: L) {
-			&--hidden-lg {
-				@include oNormaliseVisuallyHidden;
+		@include oGridRespondTo($from: M) {
+			&--description {
+				display: block;
 			}
 		}
 	}
