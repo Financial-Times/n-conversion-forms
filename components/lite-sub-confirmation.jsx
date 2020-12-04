@@ -39,12 +39,8 @@ export function LiteSubConfirmation ({
 				<p className="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">You&apos;ve been upgraded to:</p>
 				<h1 className="ncf__header ncf__header--confirmation">{offerType}</h1>
 			</div>
-			<p className="ncf__paragraph">
-				Thank you for choosing to subscribe to the FT. We are testing new ways to subscribe, <b>and the product you’ve chosen does not yet exist</b>.
-			</p>
-			<p className="ncf__paragraph">
-				To thank you for your interest, we’ve upgraded you to a {offerName} subscription at <b>no additional cost</b>. For $5 a month, you can now enjoy {offerName} access to FT.com, where you can explore not only the product you had purchased, but everything else the FT has to offer.
-			</p>
+			<p className="ncf__paragraph">Thank you for choosing to subscribe to {offerName}. We are not quite ready to deliver this type of subscription, so we have upgraded you to a {offerType} 3 month subscription at no additional cost.</p>
+			<p className="ncf__paragraph">For $5 a month, you can now enjoy {offerName} access to FT.com, where you can explore not only the product you had purchased, but everything else the FT has to offer. However, if you would like to cancel your subscription, please contact our <a className="barrier__terms-link ncf__link ncf__link--external" href="https://help.ft.com/">customer care team</a> and they will arrange this for you.</p>
 			<p className="ncf__paragraph">
 				<b>Head to FT.com now to sign up to the newsletter(s)</b> that would have been included with your {offerName} subscription
 				{offerType.toLowerCase() === PREMIUM_OFFER && <span>: Moral Money, Due Diligence, #techAsia, Energy Source, Trade Secrets and Scoreboard</span>}.
