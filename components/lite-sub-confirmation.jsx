@@ -20,12 +20,9 @@ export function LiteSubConfirmation ({
 						(
 							<React.Fragment key={index}>
 								<dt className="ncf__list-title">{detail.title}</dt>
-								<>
 								<dd className="ncf__list-data">{detail.data}
 									{detail.description && (<span className="ncf__lite-sub__details--description">({detail.description})</span>)}
 								</dd>
-
-								</>
 							</React.Fragment>
 						)
 					)
