@@ -50,7 +50,7 @@ export function LiteSubConfirmation ({
 				}.
 			</p>
 			<p className="ncf__center">
-				<a href="/newsletter/" className="ncf__button ncf__button--submit ncf__button--margin ncf__lite-sub-confirmation--lite-sub-cta">Go to newsletters</a>
+				<a href="/newsletters/" className="ncf__button ncf__button--submit ncf__button--margin ncf__lite-sub-confirmation--lite-sub-cta">Go to newsletters</a>
 			</p>
 			<p className="ncf__paragraph">
 				We&apos;ve sent confirmation to {email}. Make sure you check your spam folder if you don’t receive it.
