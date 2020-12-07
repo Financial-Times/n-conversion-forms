@@ -2,13 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const EMAIL_DEFAULT_TEXT = 'your email';
-const PREMIUM_OFFER = 'premium';
+const PREMIUM_OFFER = 'P2';
+
+const isPremium = (productCode) => productCode === PREMIUM_OFFER;
 
 export function LiteSubConfirmation ({
-	offerType = '',
+	productCode = '',
 	offerName = '',
 	email = EMAIL_DEFAULT_TEXT,
-	details = null,
+	details = [],
 
 }) {
 	const detailElements = details && (
@@ -37,13 +39,15 @@ export function LiteSubConfirmation ({
 			<div className="ncf__center">
 				<div className="ncf__icon ncf__icon--tick ncf__icon--large"></div>
 				<p className="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">You&apos;ve been upgraded to:</p>
-				<h1 className="ncf__header ncf__header--confirmation">{offerType}</h1>
+				<h1 className="ncf__header ncf__header--confirmation">{isPremium(productCode) ? 'Premium' : 'Digital'}</h1>
 			</div>
-			<p className="ncf__paragraph">Thank you for choosing to subscribe to {offerName}. We are not quite ready to deliver this type of subscription, so we have upgraded you to a {offerType} 3 month subscription at no additional cost.</p>
-			<p className="ncf__paragraph">For $5 a month, you can now enjoy {offerName} access to FT.com, where you can explore not only the product you had purchased, but everything else the FT has to offer. However, if you would like to cancel your subscription, please contact our <a className="barrier__terms-link ncf__link ncf__link--external" href="https://help.ft.com/">customer care team</a> and they will arrange this for you.</p>
+			<p className="ncf__paragraph">Thank you for choosing to subscribe to {offerName}. We are not quite ready to deliver this type of subscription, so we have upgraded you to a {isPremium(productCode) ? 'Premium' : 'Digital'} 3 month subscription at no additional cost.</p>
+			<p className="ncf__paragraph">For $5 a month, you can now enjoy {isPremium(productCode) ? 'unlimited' : 'standard digital'} access to FT.com, where you can explore not only the product you had purchased, but everything else the FT has to offer. However, if you would like to cancel your subscription, please contact our <a className="barrier__terms-link ncf__link ncf__link--external" href="https://help.ft.com/contact">customer care team</a> and they will arrange this for you.</p>
 			<p className="ncf__paragraph">
 				<b>Head to FT.com now to sign up to the newsletter(s)</b> that would have been included with your {offerName} subscription
-				{offerType.toLowerCase() === PREMIUM_OFFER && <span>: Moral Money, Due Diligence, #techAsia, Energy Source, Trade Secrets and Scoreboard</span>}.
+				{isPremium(productCode) ? <span>: Moral Money, Due Diligence, #techAsia, Energy Source, Trade Secrets and Scoreboard</span>
+					: <span>: FirstFT Americas</span>
+				}.
 			</p>
 			<p className="ncf__center">
 				<a href="/newsletter/" className="ncf__button ncf__button--submit ncf__button--margin ncf__lite-sub-confirmation--lite-sub-cta">Go to newsletters</a>
@@ -52,7 +56,7 @@ export function LiteSubConfirmation ({
 				We&apos;ve sent confirmation to {email}. Make sure you check your spam folder if you don’t receive it.
 			</p>
 			<p className="ncf__paragraph">
-				Here&apos;s a summary of your {offerType} subscription:
+				Here&apos;s a summary of your {isPremium(productCode) ? 'Premium' : 'Digital'} subscription:
 			</p>
 
 			{ detailElements}
@@ -69,7 +73,7 @@ export function LiteSubConfirmation ({
 
 LiteSubConfirmation.propTypes = {
 	offerName: PropTypes.string.isRequired,
-	offerType: PropTypes.string,
+	productCode: PropTypes.string,
 	email: PropTypes.string,
 	details: PropTypes.arrayOf(PropTypes.shape({
 		title: PropTypes.string.isRequired,
