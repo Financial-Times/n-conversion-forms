@@ -6,6 +6,23 @@ const PREMIUM_OFFER = 'P2';
 
 const isPremium = (productCode) => productCode === PREMIUM_OFFER;
 
+const DetailsMobileView = ({details}) => (
+	<dl className="ncf__list ncf__lite-sub__details ncf__lite-sub-confirmation--hidden-md ncf__lite-sub-confirmation--hidden-lg">
+		{
+			details.map((detail, index) =>
+				(
+					<React.Fragment key={index}>
+						<dt className="ncf__list-title">{detail.title}</dt>
+						<dd className="ncf__list-data">{detail.data}
+							{detail.description && (<span className="ncf__lite-sub__details--description">({detail.description})</span>)}
+						</dd>
+					</React.Fragment>
+				)
+			)
+		}
+	</dl>
+);
+
 export function LiteSubConfirmation ({
 	productCode = '',
 	offerName = '',
@@ -16,20 +33,21 @@ export function LiteSubConfirmation ({
 	const detailElements = details && (
 		<React.Fragment>
 			<h2 className="ncf__header2--afterline">Your billing details</h2>
-			<dl className="ncf__list ncf__lite-sub__details">
+			<dl className="ncf__list ncf__lite-sub-confirmation--hidden-sm">
 				{
 					details.map((detail, index) =>
 						(
 							<React.Fragment key={index}>
 								<dt className="ncf__list-title">{detail.title}</dt>
 								<dd className="ncf__list-data">{detail.data}
-									{detail.description && (<span className="ncf__lite-sub__details--description">({detail.description})</span>)}
+									{detail.description && (<div>({detail.description})</div>)}
 								</dd>
 							</React.Fragment>
 						)
 					)
 				}
 			</dl>
+			<DetailsMobileView details={details}/>
 		</React.Fragment>
 	);
 

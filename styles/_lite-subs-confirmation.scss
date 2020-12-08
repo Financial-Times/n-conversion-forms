@@ -3,30 +3,36 @@
 		&--lite-sub-cta {
 			width: 240px;
 		}
+
+		&--hidden-sm {
+			@include oGridRespondTo($from: S, $until: M) {
+				@include oNormaliseVisuallyHidden;
+			}
+		}
+
+		&--hidden-md,
+		&--hidden-lg {
+			@include oGridRespondTo($from: M) {
+				@include oNormaliseVisuallyHidden;
+			}
+		}
 	}
 
 	&__lite-sub__details {
-		@include oGridRespondTo($until: S) {
-			display: grid;
+		display: inline;
 
-			&--description::before {
-				content: " ";
-			}
-
-			& .ncf__list-data {
-				width: 100%;
-				margin-top: 0;
-				margin-bottom: 0;
-			}
-
-			& .ncf__list-title {
-				margin-bottom: 0;
-			}
+		&--description::before {
+			content: " ";
 		}
-		@include oGridRespondTo($from: M) {
-			&--description {
-				display: block;
-			}
+
+		& .ncf__list-data {
+			width: 100%;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		& .ncf__list-title {
+			margin-bottom: 0;
 		}
 	}
 }
