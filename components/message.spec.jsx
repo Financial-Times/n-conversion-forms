@@ -3,6 +3,11 @@ import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-c
 
 expect.extend(expectToRenderCorrectly);
 
+const ACTION_MOCK = {
+	text: 'Listen on Spotify',
+	link: 'https://open.spotify.com/album/2EpuND32cO7CX0gXZl2NB6',
+};
+
 describe('Message', () => {
 	it('render a message', () => {
 		const props = {
@@ -35,12 +40,7 @@ describe('Message', () => {
 		const props = {
 			title: 'Reggatta de Blanc',
 			message: 'My message in a bottle',
-			actions: [
-				{
-					text: 'Listen on Spotify',
-					link: 'https://open.spotify.com/album/2EpuND32cO7CX0gXZl2NB6',
-				},
-			],
+			actions: [ACTION_MOCK],
 		};
 
 		expect(Message).toRenderCorrectly(props);
@@ -50,13 +50,7 @@ describe('Message', () => {
 		const props = {
 			title: 'Reggatta de Blanc',
 			message: 'My message in a bottle',
-			actions: [
-				{
-					text: 'Listen on Spotify',
-					link: 'https://open.spotify.com/album/2EpuND32cO7CX0gXZl2NB6',
-					isSecondary: true,
-				},
-			],
+			actions: [{...ACTION_MOCK, isSecondary: true}],
 		};
 
 		expect(Message).toRenderCorrectly(props);
@@ -102,6 +96,15 @@ describe('Message', () => {
 		const props = {
 			message: 'My message in a bottle',
 			name: 'The Police best album ever',
+		};
+
+		expect(Message).toRenderCorrectly(props);
+	});
+
+	it('can set the action link target of call to action buttons', () => {
+		const props = {
+			target: '_top',
+			actions: [ACTION_MOCK],
 		};
 
 		expect(Message).toRenderCorrectly(props);

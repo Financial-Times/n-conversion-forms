@@ -199,6 +199,31 @@ exports[`Message can render some actions as secondary 1`] = `
 </div>
 `;
 
+exports[`Message can set the action link target of call to action buttons 1`] = `
+<div class="ncf__message">
+  <div class="o-message o-message--inner o-message--alert o-message--neutral"
+       data-o-component="o-message"
+  >
+    <div class="o-message__container">
+      <div class="o-message__content">
+        <p class="o-message__content-main">
+          <span class="o-message__content-detail">
+          </span>
+        </p>
+        <div class="o-message__actions">
+          <a href="https://open.spotify.com/album/2EpuND32cO7CX0gXZl2NB6"
+             target="_top"
+             class="o-message__actions__primary"
+          >
+            Listen on Spotify
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Message render a message 1`] = `
 <div class="ncf__message">
   <div class="o-message o-message--inner o-message--alert o-message--neutral"

@@ -8,6 +8,7 @@ export function Message({
 	additional = [],
 	actions = null,
 	name,
+	target,
 	isNotice,
 	isError,
 	isSuccess,
@@ -45,6 +46,7 @@ export function Message({
 					<a
 						href={link}
 						key={index}
+						target={target}
 						className={
 							isSecondary
 								? 'o-message__actions__secondary'
@@ -85,13 +87,16 @@ const actionType = PropTypes.shape({
 	link: PropTypes.string.isRequired,
 	isSecondary: PropTypes.bool,
 	text: PropTypes.string,
+	target: '_self',
 });
+
 Message.propTypes = {
 	title: PropTypes.string,
 	message: PropTypes.string.isRequired,
 	additional: PropTypes.arrayOf(PropTypes.string),
 	actions: PropTypes.arrayOf(actionType),
 	name: PropTypes.string,
+	target: PropTypes.string,
 	isStaticMessage: PropTypes.bool,
 	isNotice: PropTypes.bool,
 	isError: PropTypes.bool,
