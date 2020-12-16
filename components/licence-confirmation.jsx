@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function LicenceConfirmation({
+export function LicenceConfirmation ({
 	isTrial = false,
 	isEmbedded = false,
 	duration = null,
 	isEducationalLicence = false,
 	contentId = '',
+	ctaText = 'Go to myFT',
+	ctaHref = '/myft',
 }) {
-	const myFtLinkProps = {
-		href: '/myft',
+	const ctaProps = {
+		href: ctaHref,
 		className: 'ncf__button ncf__button--submit',
 		...(isEmbedded && { target: '_top' }),
 	};
@@ -49,7 +51,7 @@ export function LicenceConfirmation({
 			</p>
 
 			<p className="ncf__paragraph ncf__center">
-				<a {...myFtLinkProps}>Go to myFT</a>
+				<a {...ctaProps}>{ctaText}</a>
 			</p>
 
 			<p className="ncf__paragraph ncf__center">
@@ -65,4 +67,6 @@ LicenceConfirmation.propTypes = {
 	duration: PropTypes.string,
 	isEducationalLicence: PropTypes.bool,
 	contentId: PropTypes.string,
+	ctaText: PropTypes.string,
+	ctaHref: PropTypes.string
 };
