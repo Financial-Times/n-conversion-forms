@@ -6,5 +6,13 @@ export default {
 	component: LicenceConfirmation,
 };
 
+const goToMyFtElement = (
+	<p className="ncf__paragraph ncf__center">
+		<a className="ncf__button ncf__button--submit" href="/myft">Go to myFT</a>
+	</p>
+);
+
 export const Basic = (args) => <LicenceConfirmation {...args} />;
-Basic.args = {};
+Basic.args = {
+	ctaElement: goToMyFtElement,
+};

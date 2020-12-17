@@ -7,14 +7,8 @@ export function LicenceConfirmation ({
 	duration = null,
 	isEducationalLicence = false,
 	contentId = '',
-	ctaText = 'Go to myFT',
-	ctaHref = '/myft',
+	ctaElement=null,
 }) {
-	const ctaProps = {
-		href: ctaHref,
-		className: 'ncf__button ncf__button--submit',
-		...(isEmbedded && { target: '_top' }),
-	};
 
 	const readingLinkProps = {
 		href: contentId === '' ? '/' : `/content/${contentId}`,
@@ -50,9 +44,7 @@ export function LicenceConfirmation ({
 				content.
 			</p>
 
-			<p className="ncf__paragraph ncf__center">
-				<a {...ctaProps}>{ctaText}</a>
-			</p>
+			{ctaElement}
 
 			<p className="ncf__paragraph ncf__center">
 				<a {...readingLinkProps}>Start reading</a>
@@ -67,6 +59,5 @@ LicenceConfirmation.propTypes = {
 	duration: PropTypes.string,
 	isEducationalLicence: PropTypes.bool,
 	contentId: PropTypes.string,
-	ctaText: PropTypes.string,
-	ctaHref: PropTypes.string
+	ctaElement: PropTypes.node,
 };
