@@ -4,7 +4,9 @@ import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-c
 expect.extend(expectToRenderCorrectly);
 
 describe('B2CPartnershipConfirmation', () => {
-	it('renders aß default', () => {
-		expect(B2CPartnershipConfirmation).toRenderCorrectly();
+	it('renders as default', () => {
+		const props = {ctaElement: 'hello'};
+
+		expect(B2CPartnershipConfirmation).toRenderCorrectly(props);
 	});
 });
