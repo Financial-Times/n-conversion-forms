@@ -1,10 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export function B2CPartnershipConfirmation() {
-	const myFtLinkProps = {
-		href: '/myft',
-		className: 'ncf__button ncf__button--submit',
-	};
+export function B2CPartnershipConfirmation ({
+	ctaElement = null,
+}) {
 
 	const readingLinkProps = {
 		href: '/',
@@ -23,7 +22,7 @@ export function B2CPartnershipConfirmation() {
 				<div className="ncf__paragraph">
 					{
 						<h1 className="ncf__header ncf__header--confirmation">
-							{"Welcome to your three months' Premium access"}
+							{'Welcome to your three months\' Premium access'}
 						</h1>
 					}
 				</div>
@@ -38,9 +37,7 @@ export function B2CPartnershipConfirmation() {
 				content.
 			</p>
 
-			<p className="ncf__paragraph ncf__center">
-				<a {...myFtLinkProps}>Go to myFT</a>
-			</p>
+			{ctaElement}
 
 			<p className="ncf__paragraph ncf__center">
 				<a {...readingLinkProps}>Start reading</a>
@@ -54,3 +51,8 @@ export function B2CPartnershipConfirmation() {
 		</div>
 	);
 }
+
+
+B2CPartnershipConfirmation.propTypes = {
+	ctaElement: PropTypes.node,
+};
