@@ -37,7 +37,10 @@ export function B2CPartnershipConfirmation ({
 				content.
 			</p>
 
-			{ctaElement}
+			{ctaElement ||
+				<p className="ncf__paragraph ncf__center">
+					<a className="ncf__button ncf__button--submit" href="/myft">Go to myFT</a>
+				</p>}
 
 			<p className="ncf__paragraph ncf__center">
 				<a {...readingLinkProps}>Start reading</a>

@@ -18,6 +18,13 @@ exports[`LicenceConfirmation renders if content id 1`] = `
     Explore the homepage &amp; enjoy your unlimited access &amp; exclusive content.
   </p>
   <p class="ncf__paragraph ncf__center">
+    <a class="ncf__button ncf__button--submit"
+       href="/myft"
+    >
+      Go to myFT
+    </a>
+  </p>
+  <p class="ncf__paragraph ncf__center">
     <a href="/content/d19dc7a6-c33b-4931-9a7e-4a74674da29a"
        class="ncf__link"
     >
@@ -45,6 +52,13 @@ exports[`LicenceConfirmation renders if educational licence 1`] = `
     Explore the homepage &amp; enjoy your unlimited access &amp; exclusive content.
   </p>
   <p class="ncf__paragraph ncf__center">
+    <a class="ncf__button ncf__button--submit"
+       href="/myft"
+    >
+      Go to myFT
+    </a>
+  </p>
+  <p class="ncf__paragraph ncf__center">
     <a href="/"
        class="ncf__link"
     >
@@ -70,6 +84,13 @@ exports[`LicenceConfirmation renders if is embedded 1`] = `
   </p>
   <p class="ncf__paragraph">
     Explore the homepage &amp; enjoy your unlimited access &amp; exclusive content.
+  </p>
+  <p class="ncf__paragraph ncf__center">
+    <a class="ncf__button ncf__button--submit"
+       href="/myft"
+    >
+      Go to myFT
+    </a>
   </p>
   <p class="ncf__paragraph ncf__center">
     <a href="/"
@@ -100,6 +121,13 @@ exports[`LicenceConfirmation renders if is trial 1`] = `
     Explore the homepage &amp; enjoy your unlimited access &amp; exclusive content.
   </p>
   <p class="ncf__paragraph ncf__center">
+    <a class="ncf__button ncf__button--submit"
+       href="/myft"
+    >
+      Go to myFT
+    </a>
+  </p>
+  <p class="ncf__paragraph ncf__center">
     <a href="/"
        class="ncf__link"
     >
@@ -127,6 +155,13 @@ exports[`LicenceConfirmation renders with custom duration value 1`] = `
     Explore the homepage &amp; enjoy your unlimited access &amp; exclusive content.
   </p>
   <p class="ncf__paragraph ncf__center">
+    <a class="ncf__button ncf__button--submit"
+       href="/myft"
+    >
+      Go to myFT
+    </a>
+  </p>
+  <p class="ncf__paragraph ncf__center">
     <a href="/"
        class="ncf__link"
     >
@@ -152,6 +187,13 @@ exports[`LicenceConfirmation renders with default props 1`] = `
   </p>
   <p class="ncf__paragraph">
     Explore the homepage &amp; enjoy your unlimited access &amp; exclusive content.
+  </p>
+  <p class="ncf__paragraph ncf__center">
+    <a class="ncf__button ncf__button--submit"
+       href="/myft"
+    >
+      Go to myFT
+    </a>
   </p>
   <p class="ncf__paragraph ncf__center">
     <a href="/"
