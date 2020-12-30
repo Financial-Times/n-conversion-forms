@@ -19,6 +19,9 @@ describe('PaymentTerm', () => {
 			parentElement: elementStub,
 			addEventListener: sandbox.stub(),
 			value: 'test',
+			dataset: {
+				baseAmount: 100,
+			},
 		};
 		documentStub = {
 			querySelector: sandbox.stub(),
@@ -133,6 +136,21 @@ describe('PaymentTerm', () => {
 					},
 				]);
 				expect(monthlyPriceStub.innerHTML).to.equal('£1.01');
+			});
+
+			describe('getBaseAmount', () => {
+				it('should throw an error if nothing selected', () => {
+					elementStub.querySelector.returns(false);
+					expect(() => {
+						paymentTerm.getBaseAmount();
+					}).to.throw();
+				});
+
+				it('should return base amount of the selected term', () => {
+					elementStub.querySelector.returns(elementStub);
+					const returnedAmount = paymentTerm.getBaseAmount();
+					expect(returnedAmount).to.equal(elementStub.dataset.baseAmount);
+				});
 			});
 		});
 	});
