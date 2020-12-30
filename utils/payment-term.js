@@ -55,6 +55,19 @@ class PaymentTerm {
 	}
 
 	/**
+	 * Returns the base amount for the selected payment term
+	 * @return {Number}
+	 * @throws If no payment term has been selected
+	 */
+	getBaseAmount () {
+		const checked = this.$paymentTerm.querySelector('input:checked');
+		if (!checked) {
+			throw new Error('No payment term has been selected');
+		}
+		return checked.dataset.baseAmount;
+	}
+
+	/**
 	 * Register on change an event listener
 	 * @param {Function} callback Called with event when changed
 	 */
