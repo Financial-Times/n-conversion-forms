@@ -54,6 +54,11 @@ class PaymentTerm {
 		return checked.getAttribute('value');
 	}
 
+	/**
+	 * Returns the base amount for the selected payment term
+	 * @return {Number}
+	 * @throws If no payment term has been selected
+	 */
 	getBaseAmount () {
 		const checked = this.$paymentTerm.querySelector('input:checked');
 		if (!checked) {
