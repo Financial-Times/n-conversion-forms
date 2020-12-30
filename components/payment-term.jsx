@@ -207,7 +207,7 @@ PaymentTerm.propTypes = {
 			selected: PropTypes.bool,
 			trialDuration: PropTypes.string,
 			trialPrice: PropTypes.string,
-			amount: PropTypes.string,
+			amount: PropTypes.number,
 			value: PropTypes.string.isRequired,
 			monthlyPrice: PropTypes.string,
 		})
