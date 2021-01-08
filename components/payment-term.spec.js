@@ -136,4 +136,39 @@ describe('PaymentTerm', () => {
 			expect(wrapper.find('.ncf__payment-term__renews-text').text()).toMatch(/3 months/);
 		});
 	});
+
+	describe('[data-base-amount]', () => {
+		it('renders option.amount as data-base-amount if isTrial is false', () => {
+			const options = [
+				{
+					name: 'monthly',
+					price: '$5.00',
+					value: 'monthly',
+					monthlyPrice: '$5.00',
+					isTrial: false,
+					amount: 100,
+					trialAmount: 1,
+				}
+			];
+			const wrapper = shallow(<PaymentTerm options={options} />);
+			expect(wrapper.find('input').prop('data-base-amount')).toEqual(100);
+		});
+
+		it('renders option.amount as data-base-amount if isTrial is true', () => {
+			const options = [
+				{
+					name: 'monthly',
+					price: '$5.00',
+					value: 'monthly',
+					monthlyPrice: '$5.00',
+					isTrial: true,
+					amount: 100,
+					trialAmount: 1,
+				}
+			];
+			const wrapper = shallow(<PaymentTerm options={options} />);
+			expect(wrapper.find('input').prop('data-base-amount')).toEqual(1);
+		});
+
+	});
 });
