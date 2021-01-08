@@ -97,7 +97,7 @@ export function PaymentTerm({
 		const props = {
 			type: 'radio',
 			id: option.value,
-			'data-base-amount': option.amount,
+      'data-base-amount': option.isTrial ? option.trialAmount : option.amount,
 			name: inputName,
 			value: option.value,
 			className:
@@ -208,6 +208,7 @@ PaymentTerm.propTypes = {
 			trialDuration: PropTypes.string,
 			trialPrice: PropTypes.string,
 			amount: PropTypes.number,
+			trialAmount: PropTypes.number,
 			value: PropTypes.string.isRequired,
 			monthlyPrice: PropTypes.string,
 		})
