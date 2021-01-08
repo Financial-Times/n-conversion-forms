@@ -154,7 +154,7 @@ describe('PaymentTerm', () => {
 			expect(wrapper.find('input').prop('data-base-amount')).toEqual(100);
 		});
 
-		it('renders option.amount as data-base-amount if isTrial is true', () => {
+		it('renders option.trialAmount as data-base-amount if isTrial is true', () => {
 			const options = [
 				{
 					name: 'monthly',
