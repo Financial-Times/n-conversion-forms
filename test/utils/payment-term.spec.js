@@ -138,6 +138,33 @@ describe('PaymentTerm', () => {
 				expect(monthlyPriceStub.innerHTML).to.equal('£1.01');
 			});
 
+			describe('updating base amount', () => {
+				const updatedOptions = [
+					{
+						value: 'test',
+						monthlyPrice: '£1.01',
+						amount: 500,
+						trialAmount: 1,
+					},
+				];
+
+				beforeEach(() => {
+					elementStub.querySelector.returns(elementStub);
+				});
+
+				it('should replace the base amount with the correct updated trial amount', () => {
+					updatedOptions[0].isTrial = true;
+					paymentTerm.updateOptions(updatedOptions);
+					expect(elementStub.setAttribute.calledWith('data-base-amount', 1)).to.be.true;
+				});
+
+				it('should replace the base amount with the correct updated amount', () => {
+					updatedOptions[0].isTrial = false;
+					paymentTerm.updateOptions(updatedOptions);
+					expect(elementStub.setAttribute.calledWith('data-base-amount', 500)).to.be.true;
+				});
+			});
+
 			describe('getBaseAmount', () => {
 				it('should throw an error if nothing selected', () => {
 					elementStub.querySelector.returns(false);
@@ -147,9 +174,10 @@ describe('PaymentTerm', () => {
 				});
 
 				it('should return base amount of the selected term', () => {
+					elementStub.dataset.baseAmount = 99;
 					elementStub.querySelector.returns(elementStub);
 					const returnedAmount = paymentTerm.getBaseAmount();
-					expect(returnedAmount).to.equal(elementStub.dataset.baseAmount);
+					expect(returnedAmount).to.equal(99);
 				});
 			});
 		});

@@ -93,6 +93,9 @@ class PaymentTerm {
 				throw new Error(`Payment term update not found for "${value}"`);
 			}
 
+			const baseAmount = update.isTrial ? update.trialAmount : update.amount;
+			term.setAttribute('data-base-amount', baseAmount);
+
 			// Update prices if they are found in the term
 			if (price) {
 				price.innerHTML = update.price;
