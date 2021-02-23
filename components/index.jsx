@@ -21,6 +21,7 @@ export { DeliveryOption } from './delivery-option';
 export { DeliveryPostcode } from './delivery-postcode';
 export { DeliverySecurityInstructions } from './delivery-security-instructions';
 export { DeliveryStartDate } from './delivery-start-date';
+export { DeliveryPOBox } from './delivery-po-box';
 export { Email } from './email';
 export { ErrorPage } from './error-page';
 export { Fieldset } from './fieldset';
