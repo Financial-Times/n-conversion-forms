@@ -12,6 +12,7 @@ export { Country } from './country';
 export { CustomerCare } from './customer-care';
 export { Debug } from './debug';
 export { DecisionMaker } from './decision-maker';
+export { DeliveryAddressType } from './delivery-address-type';
 export { DeliveryAddress } from './delivery-address';
 export { DeliveryCity } from './delivery-city';
 export { DeliveryCounty } from './delivery-county';
