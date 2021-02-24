@@ -7,3 +7,9 @@ export default {
 };
 
 export const Basic = (args) => <DeliveryAddressType {...args} />;
+
+export const HomeAndCompanyTypes = (args) => <DeliveryAddressType {...args} />;
+HomeAndCompanyTypes.args = {
+	value: 'home',
+	options: ['home', 'company'],
+};

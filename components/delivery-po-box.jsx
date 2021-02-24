@@ -2,10 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+const message = {
+	USA: 'A P.O. Box address is only deliverable by US Mail, and is subject to a delay of up to 3 business days. For delivery on the publication date, we recommend you enter a residential or business address.',
+	CAN: 'A P.O. Box address is only deliverable by Canada Post, and is subject to a delay of up to 3 business days. For delivery on the publication day, we recommend you enter a residential or business address.',
+};
+
 export function DeliveryPOBox({
+	fieldId = 'deliveryPOBoxField',
+	inputId = 'deliveryPOBox',
 	hasError = false,
 	value = '',
 	isDisabled = false,
+	maxlength = 50,
+	country = '',
 }) {
 	const inputWrapperClassName = classNames([
 		'o-forms-input',
@@ -15,26 +24,25 @@ export function DeliveryPOBox({
 
 	return (
 		<label
-			id="deliveryPOBoxField"
+			id={fieldId}
 			className="o-forms-field ncf__validation-error"
 			data-validate="required"
-			htmlFor="deliveryPOBox"
+			htmlFor={inputId}
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">P.O. Box</span>
 				<span className="o-forms-title__prompt">
-					A P.O. Box address is only deliverable by US Mail, and is subject to a delay of up to 3 business days.
-					For delivery on the publication date, we recommend you enter a residential or business address.
+					{message[country]}
 				</span>
 			</span>
 			<span className={inputWrapperClassName}>
 				<input
 					type="text"
-					id="deliveryPOBox"
-					name="deliveryPOBox"
+					id={inputId}
+					name={inputId}
 					data-trackable="field-deliveryPOBox"
 					placeholder="e.g. PO Box 1033"
-					maxLength={50}
+					maxLength={maxlength}
 					aria-required="true"
 					required
 					disabled={isDisabled}
@@ -49,8 +57,11 @@ export function DeliveryPOBox({
 }
 
 DeliveryPOBox.propTypes = {
-	hasError: PropTypes.bool,
+	fieldId: PropTypes.string,
+	inputId: PropTypes.string,
 	value: PropTypes.string,
+	hasError: PropTypes.bool,
 	isDisabled: PropTypes.bool,
 	maxlength: PropTypes.number,
+	country: PropTypes.string,
 };

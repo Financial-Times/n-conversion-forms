@@ -1,28 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 
-export function DeliveryAddressType({ value = 'home' }) {
-	const divClassName = classNames([
-		'o-forms-field',
-		'ncf__delivery-address-type',,
-	]);
+const addressTypes = [
+	{ id: 'home', label: 'Home Address' },
+	{ id: 'company', label: 'Company Address' },
+	{ id: 'pobox', label: 'P.O. Box' },
+];
 
-	const addressTypes = [
-		{ id: 'home',	label: 'Home Address'	},
-		{ id: 'company',	label: 'Company Address'	},
-		{ id: 'pobox',	label: 'P.O. Box'	},
-	];
-
-	const className = classNames([
-		'o-forms-input',
-		'o-forms-input--inline',
-		'o-forms-input--radio-round',
-	]);
+export function DeliveryAddressType({
+	value = 'home',
+	fieldId = 'deliveryAddressTypeField',
+	inputName = 'deliveryAddressType',
+	options = ['home', 'company', 'pobox'],
+}) {
 
 	return (
 		<div
-			id="deliveryAddressTypeField"
+			id={fieldId}
 			className="o-forms-field ncf__delivery-address-type"
 			role="group"
 			aria-label="Delivery Address Type"
@@ -31,24 +25,24 @@ export function DeliveryAddressType({ value = 'home' }) {
 				<span className="o-forms-title__main">Address type</span>
 			</span>
 
-			<div className={className}>
-				{addressTypes.map((type) => {
-					const inputProps = {
-						type: 'radio',
-						id: type.id,
-						name: 'deliveryAddressType',
-						value: type.id,
-						className: 'ncf__delivery-address-type__input',
-						defaultChecked: type.id === value,
-					};
+			<div className='o-forms-input o-forms-input--inline o-forms-input--radio-round'>
+				{options.map(option => {
+					const type = addressTypes.find(item => item.id === option);
 
-					return (
-							<label htmlFor={inputProps.id} aria-label={type.label}>
-								<input {...inputProps} />
-								<span className="o-forms-input__label" aria-hidden="true">
-									{type.label}
-								</span>
-							</label>
+					return (!type) ? null : (
+						<label htmlFor={type.id} aria-label={type.label}>
+							<input
+								type="radio"
+								id={type.id}
+								name={inputName}
+								value={type.id}
+								className="ncf__delivery-address-type__input"
+								defaultChecked={type.id === value}
+							/>
+							<span className="o-forms-input__label" aria-hidden="true">
+								{type.label}
+							</span>
+						</label>
 					);
 				})}
 			</div>
@@ -57,5 +51,10 @@ export function DeliveryAddressType({ value = 'home' }) {
 }
 
 DeliveryAddressType.propTypes = {
+	fieldId: PropTypes.string,
+	inputName: PropTypes.string,
 	value: PropTypes.oneOf(['home', 'company', 'pobox']),
+	options: PropTypes.arrayOf(
+		PropTypes.oneOf(['home', 'company', 'pobox']),
+	),
 };

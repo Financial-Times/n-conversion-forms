@@ -10,20 +10,16 @@ describe('DeliveryPOBox', () => {
 		expect(DeliveryPOBox).toRenderCorrectly(props);
 	});
 
-	it('renders with an error', () => {
-		const props = { hasError: true };
-
-		expect(DeliveryPOBox).toRenderCorrectly(props);
-	});
-
-	it('renders with a custom value', () => {
-		const props = { value: 'PO Box 1054' };
-
-		expect(DeliveryPOBox).toRenderCorrectly(props);
-	});
-
-	it('renders with a disabled input element', () => {
-		const props = { isDisabled: true };
+	it('renders with a custom props values', () => {
+		const props = {
+			value: 'PO Box 1054',
+			fieldId: 'customFieldId',
+			inputId: 'customInputId',
+			maxlength: 30,
+			hasError: true,
+			isDisabled: true,
+			country: 'USA',
+		};
 
 		expect(DeliveryPOBox).toRenderCorrectly(props);
 	});

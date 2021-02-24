@@ -10,20 +10,12 @@ describe('DeliveryAddressType', () => {
 		expect(DeliveryAddressType).toRenderCorrectly(props);
 	});
 
-	it('renders with home value selected', () => {
-		const props = { value: 'home' };
-
-		expect(DeliveryAddressType).toRenderCorrectly(props);
-	});
-
-	it('renders with company value selected', () => {
-		const props = { value: 'company' };
-
-		expect(DeliveryAddressType).toRenderCorrectly(props);
-	});
-
-	it('renders with pobox value selected', () => {
-		const props = { value: 'pobox' };
+	it('renders with all props', () => {
+		const props = {
+			fieldId: 'customField',
+			imputName: 'customName',
+			value: 'company',
+		};
 
 		expect(DeliveryAddressType).toRenderCorrectly(props);
 	});

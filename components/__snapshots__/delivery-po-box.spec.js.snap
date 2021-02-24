@@ -1,75 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DeliveryPOBox renders with a custom value 1`] = `
-<label id="deliveryPOBoxField"
+exports[`DeliveryPOBox renders with a custom props values 1`] = `
+<label id="customFieldId"
        class="o-forms-field ncf__validation-error"
        data-validate="required"
-       for="deliveryPOBox"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      P.O. Box
-    </span>
-    <span class="o-forms-title__prompt">
-      A P.O. Box address is only deliverable by US Mail, and is subject to a delay of up to 3 business days. For delivery on the publication date, we recommend you enter a residential or business address.
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="text"
-           id="deliveryPOBox"
-           name="deliveryPOBox"
-           data-trackable="field-deliveryPOBox"
-           placeholder="e.g. PO Box 1033"
-           maxlength="50"
-           aria-required="true"
-           required
-           value="PO Box 1054"
-    >
-    <span class="o-forms-input__error">
-      Please enter a valid P.O. Box address
-    </span>
-  </span>
-</label>
-`;
-
-exports[`DeliveryPOBox renders with a disabled input element 1`] = `
-<label id="deliveryPOBoxField"
-       class="o-forms-field ncf__validation-error"
-       data-validate="required"
-       for="deliveryPOBox"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      P.O. Box
-    </span>
-    <span class="o-forms-title__prompt">
-      A P.O. Box address is only deliverable by US Mail, and is subject to a delay of up to 3 business days. For delivery on the publication date, we recommend you enter a residential or business address.
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="text"
-           id="deliveryPOBox"
-           name="deliveryPOBox"
-           data-trackable="field-deliveryPOBox"
-           placeholder="e.g. PO Box 1033"
-           maxlength="50"
-           aria-required="true"
-           required
-           disabled
-           value
-    >
-    <span class="o-forms-input__error">
-      Please enter a valid P.O. Box address
-    </span>
-  </span>
-</label>
-`;
-
-exports[`DeliveryPOBox renders with an error 1`] = `
-<label id="deliveryPOBoxField"
-       class="o-forms-field ncf__validation-error"
-       data-validate="required"
-       for="deliveryPOBox"
+       for="customInputId"
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
@@ -81,14 +16,15 @@ exports[`DeliveryPOBox renders with an error 1`] = `
   </span>
   <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
     <input type="text"
-           id="deliveryPOBox"
-           name="deliveryPOBox"
+           id="customInputId"
+           name="customInputId"
            data-trackable="field-deliveryPOBox"
            placeholder="e.g. PO Box 1033"
-           maxlength="50"
+           maxlength="30"
            aria-required="true"
            required
-           value
+           disabled
+           value="PO Box 1054"
     >
     <span class="o-forms-input__error">
       Please enter a valid P.O. Box address
@@ -108,7 +44,6 @@ exports[`DeliveryPOBox renders with default props 1`] = `
       P.O. Box
     </span>
     <span class="o-forms-title__prompt">
-      A P.O. Box address is only deliverable by US Mail, and is subject to a delay of up to 3 business days. For delivery on the publication date, we recommend you enter a residential or business address.
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
