@@ -1,15 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { findCustomDeliveryOption } from './delivery-option-messages';
 
-export function DeliveryOption({ options = [], isSingle = false }) {
+export function DeliveryOption({
+	country,
+	deliveryFrequency,
+	options = [],
+	isSingle = false
+}) {
 	const divClassName = classNames([
 		'o-forms-field',
 		'ncf__delivery-option',
 		{ 'ncf__delivery-option--single': isSingle },
 	]);
 
-	const deliveryOptions = {
+	const defaultDeliveryOptions = {
 		PV: {
 			title: 'Paper vouchers',
 			description:
@@ -26,6 +32,8 @@ export function DeliveryOption({ options = [], isSingle = false }) {
 		},
 	};
 
+	const customMessageCountries = ['USA', 'CAN'];
+
 	return (
 		<div
 			id="deliveryOptionField"
@@ -34,8 +42,14 @@ export function DeliveryOption({ options = [], isSingle = false }) {
 			aria-label="Delivery options"
 		>
 			<span className="o-forms-input o-forms-input--radio-round">
-				{options.map(({ value, isValidDeliveryOption, isSelected }) => {
-					if (!isValidDeliveryOption) {
+				{options.map((option) => {
+					const { value, isValidDeliveryOption, isSelected } = option;
+
+					const deliveryOptionValue = customMessageCountries.includes(country)
+						? findCustomDeliveryOption(deliveryFrequency, option, country)
+						: defaultDeliveryOptions[value];
+
+					if (!isValidDeliveryOption || !deliveryOptionValue) {
 						return null;
 					}
 
@@ -47,8 +61,6 @@ export function DeliveryOption({ options = [], isSingle = false }) {
 						className: 'ncf__delivery-option__input',
 						defaultChecked: isSelected,
 					};
-
-					const deliveryOptionValue = deliveryOptions[value];
 
 					return (
 						<label
@@ -74,10 +86,15 @@ export function DeliveryOption({ options = [], isSingle = false }) {
 }
 
 DeliveryOption.propTypes = {
+	country: PropTypes.string,
+	deliveryFrequency: PropTypes.oneOf(['A1', 'A5', 'A6']),
 	options: PropTypes.arrayOf(
 		PropTypes.shape({
 			value: PropTypes.oneOf(['PV', 'HD', 'EV']),
 			isSelected: PropTypes.bool,
+			deliveryOnPublicationDate: PropTypes.bool,
+			flightMarket: PropTypes.bool,
+			mailDelivery: PropTypes.bool,
 		})
 	),
 	isSingle: PropTypes.bool,
