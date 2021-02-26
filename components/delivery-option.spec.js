@@ -81,4 +81,29 @@ describe('DeliveryOption', () => {
 
 		expect(DeliveryOption).toRenderCorrectly(props);
 	});
+
+	it('renders with USA print offer', () => {
+		const props = {
+			country : 'USA',
+			productCode: 'NWE',
+			options: [
+				{
+					value: 'HD',
+					isSelected: true,
+					isValidDeliveryOption: true,
+					mailDelivery: false,
+					deliveryOnPublicationDate: true,
+					flightMarket:false,
+				},
+				{
+					value: 'HD',
+					isSelected: false,
+					isValidDeliveryOption: true,
+					mailDelivery: true,
+				},
+			],
+		};
+
+		expect(DeliveryOption).toRenderCorrectly(props);
+	});
 });

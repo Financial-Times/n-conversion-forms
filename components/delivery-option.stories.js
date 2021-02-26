@@ -46,7 +46,7 @@ US5or6DaysWeekDeliveryOptions.args = {
 		}
 	],
 	country: 'USA',
-	deliveryFrequency: 'A5',
+	productCode: 'P2N6D',
 };
 
 export const USWeekendOnlyDeliveryOptions = (args) => <DeliveryOption {...args} />;
@@ -66,5 +66,5 @@ USWeekendOnlyDeliveryOptions.args = {
 		}
 	],
 	country: 'USA',
-	deliveryFrequency: 'A1',
+	productCode: 'NWE',
 };

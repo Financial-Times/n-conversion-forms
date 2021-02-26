@@ -4,8 +4,8 @@ import classNames from 'classnames';
 import { findCustomDeliveryOption } from './delivery-option-messages';
 
 export function DeliveryOption({
-	country,
-	deliveryFrequency,
+	country = undefined,
+	productCode = undefined,
 	options = [],
 	isSingle = false
 }) {
@@ -46,7 +46,7 @@ export function DeliveryOption({
 					const { value, isValidDeliveryOption, isSelected } = option;
 
 					const deliveryOptionValue = customMessageCountries.includes(country)
-						? findCustomDeliveryOption(deliveryFrequency, option, country)
+						? findCustomDeliveryOption(productCode, option, country)
 						: defaultDeliveryOptions[value];
 
 					if (!isValidDeliveryOption || !deliveryOptionValue) {
@@ -87,7 +87,7 @@ export function DeliveryOption({
 
 DeliveryOption.propTypes = {
 	country: PropTypes.string,
-	deliveryFrequency: PropTypes.oneOf(['A1', 'A5', 'A6']),
+	productCode: PropTypes.string,
 	options: PropTypes.arrayOf(
 		PropTypes.shape({
 			value: PropTypes.oneOf(['PV', 'HD', 'EV']),
