@@ -83,4 +83,26 @@ describe('CompanyName', () => {
 			'Organisation name'
 		);
 	});
+
+	it('renders as required field', () => {
+		const component = mount(CompanyName({}));
+
+		expect(component.find('#companyNameField').hasClass('o-forms-field--optional')).toBe(false);
+		expect(component.find('input#companyName').prop('required')).toBe(true);
+	});
+
+	it('renders with optional field', () => {
+		const props = { isRequired: false };
+
+		expect(CompanyName).toRenderCorrectly(props);
+	});
+
+	it('renders as optional field', () => {
+		const props = { isRequired: false };
+
+		const component = mount(CompanyName(props));
+
+		expect(component.find('#companyNameField').hasClass('o-forms-field--optional')).toBe(true);
+		expect(component.find('input#companyName').prop('required')).toBe(false);
+	});
 });

@@ -11,7 +11,13 @@ export function CompanyName({
 	isDisabled = false,
 	fieldLabel = 'Company name',
 	placeholder = 'Please enter your company name',
+	isRequired = true,
 }) {
+	const divClassNames = classNames([
+		'o-forms-field',
+		{ 'o-forms-field--optional': !isRequired },
+	]);
+
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
@@ -25,8 +31,8 @@ export function CompanyName({
 		placeholder: placeholder,
 		autoComplete: 'organization',
 		'data-trackable': 'company-name',
-		'aria-required': 'true',
-		required: true,
+		'aria-required': isRequired,
+		required: isRequired,
 		disabled: isDisabled,
 		defaultValue: value,
 	};
@@ -34,7 +40,7 @@ export function CompanyName({
 	return (
 		<label
 			id={fieldId}
-			className="o-forms-field"
+			className={divClassNames}
 			data-validate="required"
 			htmlFor={inputProps.id}
 		>
@@ -57,4 +63,5 @@ CompanyName.propTypes = {
 	value: PropTypes.string,
 	isDisabled: PropTypes.bool,
 	fieldLabel: PropTypes.string,
+	isRequired: PropTypes.bool,
 };
