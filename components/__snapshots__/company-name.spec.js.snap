@@ -116,3 +116,31 @@ exports[`CompanyName renders with disabled input 1`] = `
   </span>
 </label>
 `;
+
+exports[`CompanyName renders with optional field 1`] = `
+<label id="companyNameField"
+       class="o-forms-field o-forms-field--optional"
+       data-validate="required"
+       for="companyName"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Company name
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="text"
+           id="companyName"
+           name="company"
+           placeholder="Please enter your company name"
+           autocomplete="organization"
+           data-trackable="company-name"
+           aria-required="false"
+           value
+    >
+    <span class="o-forms-input__error">
+      Please enter your company name.
+    </span>
+  </span>
+</label>
+`;

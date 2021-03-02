@@ -7,7 +7,13 @@ export default {
 	argTypes: {
 		hasError: { control: 'boolean' },
 		isDisabled: { control: 'boolean' },
+		isRequired: { control: 'boolean' },
 	},
 };
 
 export const Basic = (args) => <CompanyName {...args} />;
+
+export const OptionalCompany = (args) => <CompanyName {...args} />;
+OptionalCompany.args = {
+	isRequired: false,
+};
