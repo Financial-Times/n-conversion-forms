@@ -24,3 +24,4 @@ npm-debug.log
 .stylelintrc
 dist
 docs
+.vscode/

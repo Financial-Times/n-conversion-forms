@@ -12,3 +12,13 @@ export default {
 };
 
 export const Basic = (args) => <DeliveryInstructions {...args} />;
+
+export const SpanMessageForUSA = (args) => <DeliveryInstructions {...args} />;
+SpanMessageForUSA.args = {
+	country: 'USA',
+};
+
+export const SpanMessageForCAN = (args) => <DeliveryInstructions {...args} />;
+SpanMessageForCAN.args = {
+	country: 'CAN',
+};
