@@ -15,37 +15,37 @@ expect.extend(expectToRenderCorrectly);
 
 describe('DeliveryInstructions', () => {
 	it('renders with default props', () => {
-		const props = { placeholder: 'test' };
+		const props = { placeholder: 'test', country: 'GBR' };
 
 		expect(DeliveryInstructions).toRenderCorrectly(props);
 	});
 
 	it('renders with an error', () => {
-		const props = { placeholder: 'test', hasError: true };
+		const props = { placeholder: 'test', hasError: true, country: 'GBR' };
 
 		expect(DeliveryInstructions).toRenderCorrectly(props);
 	});
 
 	it('renders with maxlength', () => {
-		const props = { placeholder: 'test', maxlength: 200 };
+		const props = { placeholder: 'test', maxlength: 200, country: 'GBR' };
 
 		expect(DeliveryInstructions).toRenderCorrectly(props);
 	});
 
 	it('renders with rows', () => {
-		const props = { placeholder: 'test', rows: 20 };
+		const props = { placeholder: 'test', rows: 20, country: 'GBR' };
 
 		expect(DeliveryInstructions).toRenderCorrectly(props);
 	});
 
 	it('renders with a custom value', () => {
-		const props = { placeholder: 'test', value: 'foobar' };
+		const props = { placeholder: 'test', value: 'foobar', country: 'GBR' };
 
 		expect(DeliveryInstructions).toRenderCorrectly(props);
 	});
 
 	it('renders with a disabled input element', () => {
-		const props = { placeholder: 'test', isDisabled: true };
+		const props = { placeholder: 'test', isDisabled: true, country: 'GBR' };
 
 		expect(DeliveryInstructions).toRenderCorrectly(props);
 	});
@@ -62,8 +62,8 @@ describe('DeliveryInstructions', () => {
 		expect(DeliveryInstructions).toRenderCorrectly(props);
 	});
 
-	it('renders as with a USA span message and che', () => {
-		const props = { isRequired: false };
+	it('renders as with a GBR span message and che', () => {
+		const props = { isRequired: false, country: 'GBR' };
 
 		const component = mount(DeliveryInstructions(props));
 
