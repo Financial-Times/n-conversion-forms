@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeliveryAddressType renders with all props 1`] = `
+<div id="customField"
+     class="o-forms-field ncf__delivery-address-type"
+     role="group"
+     aria-label="Delivery Address Type"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Address type
+    </span>
+  </span>
+  <div class="o-forms-input o-forms-input--inline o-forms-input--radio-round">
+    <label for="home"
+           aria-label="Home Address"
+    >
+      <input type="radio"
+             id="home"
+             name="deliveryAddressType"
+             value="home"
+             class="ncf__delivery-address-type__input"
+      >
+      <span class="o-forms-input__label"
+            aria-hidden="true"
+      >
+        Home Address
+      </span>
+    </label>
+    <label for="company"
+           aria-label="Company Address"
+    >
+      <input type="radio"
+             id="company"
+             name="deliveryAddressType"
+             value="company"
+             class="ncf__delivery-address-type__input"
+             checked
+      >
+      <span class="o-forms-input__label"
+            aria-hidden="true"
+      >
+        Company Address
+      </span>
+    </label>
+    <label for="pobox"
+           aria-label="P.O. Box"
+    >
+      <input type="radio"
+             id="pobox"
+             name="deliveryAddressType"
+             value="pobox"
+             class="ncf__delivery-address-type__input"
+      >
+      <span class="o-forms-input__label"
+            aria-hidden="true"
+      >
+        P.O. Box
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`DeliveryAddressType renders with default props 1`] = `
+<div id="deliveryAddressTypeField"
+     class="o-forms-field ncf__delivery-address-type"
+     role="group"
+     aria-label="Delivery Address Type"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Address type
+    </span>
+  </span>
+  <div class="o-forms-input o-forms-input--inline o-forms-input--radio-round">
+    <label for="home"
+           aria-label="Home Address"
+    >
+      <input type="radio"
+             id="home"
+             name="deliveryAddressType"
+             value="home"
+             class="ncf__delivery-address-type__input"
+             checked
+      >
+      <span class="o-forms-input__label"
+            aria-hidden="true"
+      >
+        Home Address
+      </span>
+    </label>
+    <label for="company"
+           aria-label="Company Address"
+    >
+      <input type="radio"
+             id="company"
+             name="deliveryAddressType"
+             value="company"
+             class="ncf__delivery-address-type__input"
+      >
+      <span class="o-forms-input__label"
+            aria-hidden="true"
+      >
+        Company Address
+      </span>
+    </label>
+    <label for="pobox"
+           aria-label="P.O. Box"
+    >
+      <input type="radio"
+             id="pobox"
+             name="deliveryAddressType"
+             value="pobox"
+             class="ncf__delivery-address-type__input"
+      >
+      <span class="o-forms-input__label"
+            aria-hidden="true"
+      >
+        P.O. Box
+      </span>
+    </label>
+  </div>
+</div>
+`;
