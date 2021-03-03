@@ -6,6 +6,7 @@ expect.extend(expectToRenderCorrectly);
 describe('DeliveryOption', () => {
 	it('renders with minimum mandatory props', () => {
 		const props = {
+			country: 'GBR',
 			options: [
 				{
 					value: 'PV',
@@ -30,6 +31,7 @@ describe('DeliveryOption', () => {
 
 	it('renders with a context of being single', () => {
 		const props = {
+			country: 'GBR',
 			options: [
 				{
 					value: 'PV',
@@ -55,6 +57,7 @@ describe('DeliveryOption', () => {
 
 	it('renders without unrecognised delivery options', () => {
 		const props = {
+			country: 'GBR',
 			options: [
 				{
 					value: 'PV',
@@ -75,6 +78,31 @@ describe('DeliveryOption', () => {
 					value: 'EV',
 					isSelected: false,
 					isValidDeliveryOption: true,
+				},
+			],
+		};
+
+		expect(DeliveryOption).toRenderCorrectly(props);
+	});
+
+	it('renders with USA print offer', () => {
+		const props = {
+			country : 'USA',
+			productCode: 'NWE',
+			options: [
+				{
+					value: 'HD',
+					isSelected: true,
+					isValidDeliveryOption: true,
+					mailDelivery: false,
+					deliveryOnPublicationDate: true,
+					flightMarket:false,
+				},
+				{
+					value: 'HD',
+					isSelected: false,
+					isValidDeliveryOption: true,
+					mailDelivery: true,
 				},
 			],
 		};

@@ -11,6 +11,7 @@ export default {
 
 export const Basic = (args) => <DeliveryOption {...args} />;
 Basic.args = {
+	country: 'GBR',
 	options: [
 		{
 			value: 'PV',
@@ -25,4 +26,46 @@ Basic.args = {
 			isValidDeliveryOption: true,
 		},
 	],
+};
+
+export const US5or6DaysWeekDeliveryOptions = (args) => <DeliveryOption {...args} />;
+US5or6DaysWeekDeliveryOptions.args = {
+	options: [
+		{
+			value: 'HD',
+			isValidDeliveryOption: true,
+			deliveryOnPublicationDate: true,
+			flightMarket: false,
+			mailDelivery: false,
+		},
+		{
+			value: 'HD',
+			isValidDeliveryOption: true,
+			deliveryOnPublicationDate: false,
+			flightMarket: false,
+			mailDelivery: true,
+		}
+	],
+	country: 'USA',
+	productCode: 'P2N6D',
+};
+
+export const USWeekendOnlyDeliveryOptions = (args) => <DeliveryOption {...args} />;
+USWeekendOnlyDeliveryOptions.args = {
+	options: [
+		{
+			value: 'HD',
+			isValidDeliveryOption: true,
+			deliveryOnPublicationDate: false,
+			flightMarket: false,
+			mailDelivery: false,
+		},
+		{
+			value: 'HD',
+			isValidDeliveryOption: true,
+			mailDelivery: true,
+		}
+	],
+	country: 'USA',
+	productCode: 'NWE',
 };

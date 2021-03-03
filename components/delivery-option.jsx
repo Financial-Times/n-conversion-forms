@@ -1,30 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { getDeliveryOption } from '../utils/delivery-option-messages';
 
-export function DeliveryOption({ options = [], isSingle = false }) {
+export function DeliveryOption({
+	country,
+	productCode = undefined,
+	options = [],
+	isSingle = false
+}) {
 	const divClassName = classNames([
 		'o-forms-field',
 		'ncf__delivery-option',
 		{ 'ncf__delivery-option--single': isSingle },
 	]);
-
-	const deliveryOptions = {
-		PV: {
-			title: 'Paper vouchers',
-			description:
-				'13-week voucher pack delivered quarterly and redeemable at retailers nationwide. COVID-19 - make sure your preferred newsagent or retailer is open and/or delivering before you select this option.',
-		},
-		HD: {
-			title: 'Home delivery',
-			description: 'Free delivery to your home or office before 7am.',
-		},
-		EV: {
-			title: 'Electronic vouchers',
-			description:
-				'Delivered via email and card, redeemable at retailers nationwide.',
-		},
-	};
 
 	return (
 		<div
@@ -34,8 +23,12 @@ export function DeliveryOption({ options = [], isSingle = false }) {
 			aria-label="Delivery options"
 		>
 			<span className="o-forms-input o-forms-input--radio-round">
-				{options.map(({ value, isValidDeliveryOption, isSelected }) => {
-					if (!isValidDeliveryOption) {
+				{options.map((option) => {
+					const { value, isValidDeliveryOption, isSelected } = option;
+
+					const deliveryOptionValue = getDeliveryOption(productCode, option, country);
+
+					if (!isValidDeliveryOption || !deliveryOptionValue) {
 						return null;
 					}
 
@@ -47,8 +40,6 @@ export function DeliveryOption({ options = [], isSingle = false }) {
 						className: 'ncf__delivery-option__input',
 						defaultChecked: isSelected,
 					};
-
-					const deliveryOptionValue = deliveryOptions[value];
 
 					return (
 						<label
@@ -74,10 +65,15 @@ export function DeliveryOption({ options = [], isSingle = false }) {
 }
 
 DeliveryOption.propTypes = {
+	country: PropTypes.oneOf(['GBR', 'USA', 'CAN']).isRequired,
+	productCode: PropTypes.string,
 	options: PropTypes.arrayOf(
 		PropTypes.shape({
 			value: PropTypes.oneOf(['PV', 'HD', 'EV']),
 			isSelected: PropTypes.bool,
+			deliveryOnPublicationDate: PropTypes.bool,
+			flightMarket: PropTypes.bool,
+			mailDelivery: PropTypes.bool,
 		})
 	),
 	isSingle: PropTypes.bool,
