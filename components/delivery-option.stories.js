@@ -11,6 +11,7 @@ export default {
 
 export const Basic = (args) => <DeliveryOption {...args} />;
 Basic.args = {
+	country: 'GBR',
 	options: [
 		{
 			value: 'PV',

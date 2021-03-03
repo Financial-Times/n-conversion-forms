@@ -18,8 +18,26 @@ const HAND_DELIVERY = 'HD';
 const MAIL = 'ML';
 
 // Country codes
+const UK_COUNTRY_CODE = 'GBR';
 const USA_COUNTRY_CODE = 'USA';
 const CAN_COUNTRY_CODE = 'CAN';
+
+const UKDeliveryOptions = {
+	PV: {
+		title: 'Paper vouchers',
+		description:
+			'13-week voucher pack delivered quarterly and redeemable at retailers nationwide. COVID-19 - make sure your preferred newsagent or retailer is open and/or delivering before you select this option.',
+	},
+	HD: {
+		title: 'Home delivery',
+		description: 'Free delivery to your home or office before 7am.',
+	},
+	EV: {
+		title: 'Electronic vouchers',
+		description:
+			'Delivered via email and card, redeemable at retailers nationwide.',
+	},
+};
 
 /**
  * This is a static list of messages for delivery options. The items are created by the combination of some distributor properties:
@@ -146,7 +164,7 @@ const handDeliveryStrategy = (productCode, option, country, item) => {
  * Both cases are represented by system option code 'HD', but differ on the mailDelivery property value.
  * If no message matchs, then undefined is returned.
  */
-export function findCustomDeliveryOption (productCode, option, country) {
+const findCustomDeliveryOption = (productCode, option, country) => {
 	let deliveryOption;
 
 	if (option.value === HAND_DELIVERY) {
@@ -163,4 +181,10 @@ export function findCustomDeliveryOption (productCode, option, country) {
 	}
 
 	return deliveryOption;
+};
+
+export function getDeliveryOption (productCode, option, country) {
+	return country === UK_COUNTRY_CODE
+		? UKDeliveryOptions[option.value]
+		: findCustomDeliveryOption(productCode, option, country);;
 };

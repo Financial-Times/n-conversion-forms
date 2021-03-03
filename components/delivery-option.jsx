@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { findCustomDeliveryOption } from './delivery-option-messages';
+import { getDeliveryOption } from './delivery-option-messages';
 
 export function DeliveryOption({
-	country = undefined,
+	country,
 	productCode = undefined,
 	options = [],
 	isSingle = false
@@ -14,25 +14,6 @@ export function DeliveryOption({
 		'ncf__delivery-option',
 		{ 'ncf__delivery-option--single': isSingle },
 	]);
-
-	const defaultDeliveryOptions = {
-		PV: {
-			title: 'Paper vouchers',
-			description:
-				'13-week voucher pack delivered quarterly and redeemable at retailers nationwide. COVID-19 - make sure your preferred newsagent or retailer is open and/or delivering before you select this option.',
-		},
-		HD: {
-			title: 'Home delivery',
-			description: 'Free delivery to your home or office before 7am.',
-		},
-		EV: {
-			title: 'Electronic vouchers',
-			description:
-				'Delivered via email and card, redeemable at retailers nationwide.',
-		},
-	};
-
-	const customMessageCountries = ['USA', 'CAN'];
 
 	return (
 		<div
@@ -45,9 +26,7 @@ export function DeliveryOption({
 				{options.map((option) => {
 					const { value, isValidDeliveryOption, isSelected } = option;
 
-					const deliveryOptionValue = customMessageCountries.includes(country)
-						? findCustomDeliveryOption(productCode, option, country)
-						: defaultDeliveryOptions[value];
+					const deliveryOptionValue = getDeliveryOption(productCode, option, country);
 
 					if (!isValidDeliveryOption || !deliveryOptionValue) {
 						return null;
@@ -86,7 +65,7 @@ export function DeliveryOption({
 }
 
 DeliveryOption.propTypes = {
-	country: PropTypes.string,
+	country: PropTypes.oneOf(['GBR', 'USA', 'CAN']).isRequired,
 	productCode: PropTypes.string,
 	options: PropTypes.arrayOf(
 		PropTypes.shape({
