@@ -62,7 +62,7 @@ describe('DeliveryInstructions', () => {
 		expect(DeliveryInstructions).toRenderCorrectly(props);
 	});
 
-	it('renders as with a GBR span message and che', () => {
+	it('renders as with a GBR span message and check the text', () => {
 		const props = { isRequired: false, country: 'GBR' };
 
 		const component = mount(DeliveryInstructions(props));
@@ -71,7 +71,7 @@ describe('DeliveryInstructions', () => {
 		expect(element.text()).toBe(spanMessageByCountry['GBR']);
 	});
 
-	it('renders as with a USA span message and che', () => {
+	it('renders as with a USA span message and check the text', () => {
 		const props = { isRequired: false, country: 'USA' };
 
 		const component = mount(DeliveryInstructions(props));
@@ -80,7 +80,7 @@ describe('DeliveryInstructions', () => {
 		expect(element.text()).toBe(spanMessageByCountry[props.country]);
 	});
 
-	it('renders as with a CAN span message and che', () => {
+	it('renders as with a CAN span message and check the text', () => {
 		const props = { isRequired: false, country: 'CAN' };
 
 		const component = mount(DeliveryInstructions(props));
