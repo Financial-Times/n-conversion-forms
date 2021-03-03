@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { getDeliveryOption } from './delivery-option-messages';
+import { getDeliveryOption } from '../utils/delivery-option-messages';
 
 export function DeliveryOption({
 	country,

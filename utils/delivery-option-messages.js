@@ -139,18 +139,20 @@ const deliveryOptionMessages = [
 	}
 ];
 
-const includesDeliveryFrequency = (productCode = '', item) => item.deliveryFrequency.find(freq => {
-	const productCodePattern = deliveryFrequencyProductsMapping[freq];
-	return productCode.includes(productCodePattern);
-});
+function includesDeliveryFrequency (productCode = '', item) {
+	return item.deliveryFrequency.find(freq => {
+		const productCodePattern = deliveryFrequencyProductsMapping[freq];
+		return productCode.includes(productCodePattern);
+	});
+};
 
-const mailStrategy = (productCode, option, country, item) => {
+function mailStrategy (productCode, option, country, item) {
 	return includesDeliveryFrequency(productCode, item)
 		&& item.distributorType === MAIL
 		&& item.country.includes(country);
 };
 
-const handDeliveryStrategy = (productCode, option, country, item) => {
+function handDeliveryStrategy (productCode, option, country, item) {
 	return includesDeliveryFrequency(productCode, item)
 		&& item.distributorType === HAND_DELIVERY
 		&& item.deliveryOnPublicationDate === option.deliveryOnPublicationDate
@@ -164,7 +166,7 @@ const handDeliveryStrategy = (productCode, option, country, item) => {
  * Both cases are represented by system option code 'HD', but differ on the mailDelivery property value.
  * If no message matchs, then undefined is returned.
  */
-const findCustomDeliveryOption = (productCode, option, country) => {
+function findCustomDeliveryOption (productCode, option, country) {
 	let deliveryOption;
 
 	if (option.value === HAND_DELIVERY) {
@@ -183,8 +185,12 @@ const findCustomDeliveryOption = (productCode, option, country) => {
 	return deliveryOption;
 };
 
-export function getDeliveryOption (productCode, option, country) {
+function getDeliveryOption (productCode, option, country) {
 	return country === UK_COUNTRY_CODE
 		? UKDeliveryOptions[option.value]
 		: findCustomDeliveryOption(productCode, option, country);;
+};
+
+module.exports = {
+	getDeliveryOption,
 };
