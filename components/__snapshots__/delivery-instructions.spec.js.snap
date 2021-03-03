@@ -1,5 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`DeliveryInstructions renders with a CAN span message 1`] = `
+<label id="deliveryInstructionsField"
+       class="o-forms-field o-forms-field--optional"
+       data-validate="required"
+       for="deliveryInstructions"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Delivery instructions
+    </span>
+    <span class="o-forms-title__prompt">
+      Please note we cannot guarantee delivery of the newspaper to a specific location on your property, which also includes delivery to a specific floor/suite in a building. If you prefer delivery by Canada Post, please either select the &quot;PO Box&quot; delivery option from the top of this form, or contact.
+      <a href="https://help.ft.com/contact/">
+        FT Customer Care
+      </a>
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--textarea">
+    <textarea id="deliveryInstructions"
+              name="deliveryInstructions"
+              data-trackable="field-deliveryInstructions"
+              placeholder="test"
+    >
+    </textarea>
+  </span>
+</label>
+`;
+
+exports[`DeliveryInstructions renders with a USA span message 1`] = `
+<label id="deliveryInstructionsField"
+       class="o-forms-field o-forms-field--optional"
+       data-validate="required"
+       for="deliveryInstructions"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Delivery instructions
+    </span>
+    <span class="o-forms-title__prompt">
+      Please note we cannot guarantee delivery of the newspaper to a specific location on your property, which also includes delivery to a specific floor/suite in a building. US Federal Law prohibits delivery of newspapers into a mailbox, except via a USPS mail carrier. If you prefer delivery to a mailbox, please either select the &quot;PO Box&quot; delivery option from the top of this form, or contact.
+      <a href="https://help.ft.com/contact/">
+        FT Customer Care
+      </a>
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--textarea">
+    <textarea id="deliveryInstructions"
+              name="deliveryInstructions"
+              data-trackable="field-deliveryInstructions"
+              placeholder="test"
+    >
+    </textarea>
+  </span>
+</label>
+`;
+
 exports[`DeliveryInstructions renders with a custom value 1`] = `
 <label id="deliveryInstructionsField"
        class="o-forms-field o-forms-field--optional"
