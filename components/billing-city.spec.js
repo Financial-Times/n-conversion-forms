@@ -26,4 +26,13 @@ describe('BillingCity', () => {
 
 		expect(BillingCity).toRenderCorrectly(props);
 	});
+
+	it('render different styles', () => {
+		const props = {
+			hasError: true,
+			isHidden: true,
+		};
+
+		expect(BillingCity).toRenderCorrectly(props);
+	});
 });
