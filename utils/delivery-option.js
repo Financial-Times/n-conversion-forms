@@ -36,6 +36,39 @@ class DeliveryOption {
 			}
 		}
 	}
+
+	/**
+	 * Hide a specific radio input item.
+	 */
+	hideItem (itemId) {
+		const labelNodes = this.$form.querySelectorAll('.ncf__delivery-option__item');
+		const item = Array.from(labelNodes).find(node => node.htmlFor === itemId);
+		if (item) {
+			item.classList.add('ncf__hidden');
+		}
+	}
+
+	/**
+	 * Show a specific radio input item.
+	 */
+	showItem (itemId) {
+		const labelNodes = this.$form.querySelectorAll('.ncf__delivery-option__item');
+		const item = Array.from(labelNodes).find(node => node.htmlFor === itemId);
+		if (item) {
+			item.classList.remove('ncf__hidden');
+		}
+	}
+
+	/**
+	 * Mark an input item as checked
+	 */
+	checkItem (itemId) {
+		const inputNodes = this.$form.deliveryOption;
+		const item = Array.from(inputNodes).find(node => node.id === itemId);
+		if (item) {
+			item.checked = true;
+		}
+	};
 }
 
 module.exports = DeliveryOption;

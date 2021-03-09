@@ -67,6 +67,26 @@ class FormElement {
 	value () {
 		return this.$el.querySelector('input,select').value;
 	}
+
+	/**
+	 * Make firts input element required
+	 */
+	required () {
+		if (this.inputs && this.inputs.length) {
+			this.inputs[0].required = true;
+		}
+		this.$el.classList.remove('o-forms-field--optional');
+	}
+
+	/**
+	 * Make firts input element not required (optional)
+	 */
+	optional () {
+		if (this.inputs && this.inputs.length) {
+			this.inputs[0].required = false;
+		}
+		this.$el.classList.add('o-forms-field--optional');
+	}
 }
 
 module.exports = FormElement;

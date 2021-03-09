@@ -3,12 +3,16 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 export function DeliveryAddress({
+	fieldId = 'deliveryAddressFields',
 	hasError = false,
 	line1 = '',
 	line2 = '',
 	line3 = '',
 	isDisabled = false,
+	isHidden = false,
 }) {
+	const divClassNames = classNames([{ ncf__hidden: isHidden }]);
+
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
@@ -16,7 +20,7 @@ export function DeliveryAddress({
 	]);
 
 	return (
-		<div id="deliveryAddressFields" data-validate="required">
+		<div id={fieldId} data-validate="required" className={divClassNames}>
 			<label
 				className="o-forms-field ncf__validation-error"
 				htmlFor="deliveryAddressLine1"
@@ -90,9 +94,11 @@ export function DeliveryAddress({
 }
 
 DeliveryAddress.propTypes = {
+	fieldId: PropTypes.string,
 	hasError: PropTypes.bool,
 	line1: PropTypes.string,
 	line2: PropTypes.string,
 	line3: PropTypes.string,
 	isDisabled: PropTypes.bool,
+	isHidden: PropTypes.bool,
 };

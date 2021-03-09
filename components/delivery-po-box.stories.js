@@ -7,6 +7,7 @@ export default {
 	argTypes: {
 		hasError: { control: 'boolean' },
 		isDisabled: { control: 'boolean' },
+		isHidden: { control: 'boolean' },
 	}
 };
 
