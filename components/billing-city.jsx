@@ -6,11 +6,13 @@ export function BillingCity({
 	hasError = false,
 	value = '',
 	isDisabled = false,
+	isHidden = false,
 }) {
 	const inputWrapperClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
 		{ 'o-forms-input--invalid': hasError },
+		{ ncf__hidden: isHidden },
 	]);
 
 	return (
@@ -49,4 +51,5 @@ BillingCity.propTypes = {
 	hasError: PropTypes.bool,
 	value: PropTypes.string,
 	isDisabled: PropTypes.bool,
+	isHidden: PropTypes.bool,
 };
