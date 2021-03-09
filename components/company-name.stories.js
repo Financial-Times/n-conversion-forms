@@ -8,6 +8,7 @@ export default {
 		hasError: { control: 'boolean' },
 		isDisabled: { control: 'boolean' },
 		isRequired: { control: 'boolean' },
+		isHidden: { control: 'boolean' },
 	},
 };
 

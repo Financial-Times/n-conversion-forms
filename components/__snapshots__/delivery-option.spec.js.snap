@@ -27,10 +27,10 @@ exports[`DeliveryOption renders with USA print offer 1`] = `
       </span>
     </label>
     <label class="ncf__delivery-option__item"
-           for="HD"
+           for="ML"
     >
       <input type="radio"
-             id="HD"
+             id="ML"
              name="deliveryOption"
              value="HD"
              class="ncf__delivery-option__input"

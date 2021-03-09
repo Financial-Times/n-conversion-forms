@@ -13,19 +13,26 @@ export function DeliveryPOBox({
 	hasError = false,
 	value = '',
 	isDisabled = false,
+	isHidden = false,
 	maxlength = 50,
 	country = '',
 }) {
+	const labelClassNames = classNames([
+		'o-forms-field',
+		'ncf__validation-error',
+		{ ncf__hidden: isHidden }
+	]);
+
 	const inputWrapperClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
-		{ 'o-forms-input--invalid': hasError },
+		{ 'o-forms-input--invalid': hasError }
 	]);
 
 	return (
 		<label
 			id={fieldId}
-			className="o-forms-field ncf__validation-error"
+			className={labelClassNames}
 			data-validate="required"
 			htmlFor={inputId}
 		>
@@ -62,6 +69,7 @@ DeliveryPOBox.propTypes = {
 	value: PropTypes.string,
 	hasError: PropTypes.bool,
 	isDisabled: PropTypes.bool,
+	isHidden: PropTypes.bool,
 	maxlength: PropTypes.number,
 	country: PropTypes.string,
 };

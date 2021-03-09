@@ -68,6 +68,7 @@ describe('Find Custom Delivery Option', () => {
 		it('returns a 5/6 days MAIL option when mailDelivery is set to true', () => {
 			const expected = {
 				title: 'Mail',
+				customId: 'ML',
 				description: 'We can only deliver the newspaper to your location by postal mail. This will result in delivery of the newspaper at least 3 business days after the date of publication. We also fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside the FT\'s control. Please note: HTSI is not included with mail delivery. If you prefer to read the printed content on the day of publication, please proceed to subscribe to the FT ePaper - a digital replica of the print edition.',
 			};
 
@@ -79,6 +80,7 @@ describe('Find Custom Delivery Option', () => {
 		it('returns a weekend MAIL option when mailDelivery is set to true', () => {
 			const expected = {
 				title: 'Mail',
+				customId: 'ML',
 				description: 'We can only deliver the FT Weekend newspaper to your location by postal mail. This will result in delivery of the newspaper at least 3 business days after the date of publication. We also fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside the FT\'s control. Please note: HTSI is not included with mail delivery. If you prefer to read the printed content on the day of publication, please proceed to subscribe to the FT ePaper - a digital replica of the print edition.',
 			};
 

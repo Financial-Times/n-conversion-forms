@@ -3,6 +3,7 @@
 exports[`DeliveryAddress renders default props 1`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
+     class
 >
   <label class="o-forms-field ncf__validation-error"
          for="deliveryAddressLine1"
@@ -75,6 +76,7 @@ exports[`DeliveryAddress renders default props 1`] = `
 exports[`DeliveryAddress renders with an error 1`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
+     class
 >
   <label class="o-forms-field ncf__validation-error"
          for="deliveryAddressLine1"
@@ -147,6 +149,7 @@ exports[`DeliveryAddress renders with an error 1`] = `
 exports[`DeliveryAddress renders with custom line 1 value 1`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
+     class
 >
   <label class="o-forms-field ncf__validation-error"
          for="deliveryAddressLine1"
@@ -219,6 +222,7 @@ exports[`DeliveryAddress renders with custom line 1 value 1`] = `
 exports[`DeliveryAddress renders with custom line 2 value 1`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
+     class
 >
   <label class="o-forms-field ncf__validation-error"
          for="deliveryAddressLine1"
@@ -291,6 +295,7 @@ exports[`DeliveryAddress renders with custom line 2 value 1`] = `
 exports[`DeliveryAddress renders with custom line 3 value 1`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
+     class
 >
   <label class="o-forms-field ncf__validation-error"
          for="deliveryAddressLine1"
@@ -363,6 +368,7 @@ exports[`DeliveryAddress renders with custom line 3 value 1`] = `
 exports[`DeliveryAddress renders with disabled input elements 1`] = `
 <div id="deliveryAddressFields"
      data-validate="required"
+     class
 >
   <label class="o-forms-field ncf__validation-error"
          for="deliveryAddressLine1"
