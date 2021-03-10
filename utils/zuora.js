@@ -145,6 +145,17 @@ class Zuora {
 	}
 
 	/**
+	 * Creating a stored credential profile within the created payment method
+	 * @param {String} mitConsentAgreementSrc
+	 * @param {String} mitProfileType
+	 * @param {String} agreementSupportedBrands
+	 * @param {String} mitConsentAgreementRef
+	 */
+	setAgreement (mitConsentAgreementSrc, mitProfileType, agreementSupportedBrands, mitConsentAgreementRef) {
+		return this.Z.setAgreement(mitConsentAgreementSrc, mitProfileType, agreementSupportedBrands, mitConsentAgreementRef);
+	}
+
+	/**
 	 * Expose ZuoraErrorValidation
 	 */
 	static get ZuoraErrorValidation () {
