@@ -7,7 +7,7 @@ const addressTypes = [
 	{ id: 'pobox', label: 'P.O. Box' },
 ];
 
-export function DeliveryAddressType({
+export function DeliveryAddressType ({
 	value = 'home',
 	fieldId = 'deliveryAddressTypeField',
 	inputName = 'deliveryAddressType',
@@ -39,7 +39,7 @@ export function DeliveryAddressType({
 								className="ncf__delivery-address-type__input"
 								defaultChecked={type.id === value}
 							/>
-							<span className="o-forms-input__label" aria-hidden="true">
+							<span className="o-forms-input__label o-forms-input__address-type__label" aria-hidden="true">
 								{type.label}
 							</span>
 						</label>

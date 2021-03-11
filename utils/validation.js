@@ -170,10 +170,6 @@ class Validation {
 			this.customValidation.forEach(async (validator) => {
 				await validator();
 			});
-
-			setTimeout(() => {
-				delete this.debounceCustomValidation;
-			}, 500);
 		}
 
 		return !document.querySelector('.ncf__custom-validation-error');
