@@ -359,7 +359,7 @@ zuora.onAgreementCheckboxChange((checked) => {});
 // @param {boolean} confirmed - whether confirmed or not
 zuora.onDirectDebitConfirmation((confirmed) => {});
 
-// Sets necessary static parameters for creadential user profile
+// Sets necessary static parameters for credential user profile
 // Makes a call to Zuora supplying those parameters for agreement validation
 zuora.setAgreement();
 
