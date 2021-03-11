@@ -146,12 +146,16 @@ class Zuora {
 
 	/**
 	 * Creating a stored credential profile within the created payment method
-	 * @param {String} mitConsentAgreementSrc
-	 * @param {String} mitProfileType
-	 * @param {String} agreementSupportedBrands
-	 * @param {String} mitConsentAgreementRef
+	 * Zuora doc: https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/LA_Hosted_Payment_Pages/B_Payment_Pages_2.0/H_Integrate_Payment_Pages_2.0#Add_a_Checkbox_for_Stored_Credential_Consent
+	 *
+	 * @param {String} agreementRef Reference for the customer consent agreement
+	 * @returns {boolean}
 	 */
-	setAgreement (mitConsentAgreementSrc, mitProfileType, agreementSupportedBrands, mitConsentAgreementRef) {
+	setAgreement (agreementRef) {
+		const mitConsentAgreementSrc = 'External';
+		const mitProfileType = 'Recurring';
+		const agreementSupportedBrands = 'Visa,Mastercard';
+		const mitConsentAgreementRef = agreementRef;
 		return this.Z.setAgreement(mitConsentAgreementSrc, mitProfileType, agreementSupportedBrands, mitConsentAgreementRef);
 	}
 
