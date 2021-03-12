@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getDeliveryOption } from '../utils/delivery-option-messages';
 
-export function DeliveryOption({
+export function DeliveryOption ({
+	fieldId = 'deliveryOptionField',
 	country,
 	productCode = undefined,
 	options = [],
@@ -17,7 +18,7 @@ export function DeliveryOption({
 
 	return (
 		<div
-			id="deliveryOptionField"
+			id={fieldId}
 			className={divClassName}
 			role="group"
 			aria-label="Delivery options"

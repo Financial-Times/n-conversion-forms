@@ -114,6 +114,36 @@ exports[`DeliveryOption renders with a context of being single 1`] = `
 </div>
 `;
 
+exports[`DeliveryOption renders with country CAN print offer HD and mailDelivery false 1`] = `
+<div id="deliveryOptionField"
+     class="o-forms-field ncf__delivery-option"
+     role="group"
+     aria-label="Delivery options"
+>
+  <span class="o-forms-input o-forms-input--radio-round">
+    <label class="ncf__delivery-option__item"
+           for="HD"
+    >
+      <input type="radio"
+             id="HD"
+             name="deliveryOption"
+             value="HD"
+             class="ncf__delivery-option__input"
+             checked
+      >
+      <span class="o-forms-input__label ncf__delivery-option__label">
+        <span class="ncf__delivery-option__title o-forms-title__main">
+          Hand delivery
+        </span>
+        <div class="ncf__delivery-option__description">
+          Enjoy delivery of the newspaper daily to your home or office address.
+        </div>
+      </span>
+    </label>
+  </span>
+</div>
+`;
+
 exports[`DeliveryOption renders with minimum mandatory props 1`] = `
 <div id="deliveryOptionField"
      class="o-forms-field ncf__delivery-option"

@@ -5,6 +5,8 @@ export default {
 	title: 'Company Name',
 	component: CompanyName,
 	argTypes: {
+		value: { control: 'string' },
+		fieldLabel: { control: 'string' },
 		hasError: { control: 'boolean' },
 		isDisabled: { control: 'boolean' },
 		isRequired: { control: 'boolean' },

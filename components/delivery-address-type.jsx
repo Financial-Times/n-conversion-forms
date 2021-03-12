@@ -30,7 +30,7 @@ export function DeliveryAddressType ({
 					const type = addressTypes.find(item => item.id === option);
 
 					return (!type) ? null : (
-						<label htmlFor={type.id} aria-label={type.label}>
+						<label htmlFor={type.id} aria-label={type.label} key={type.id}>
 							<input
 								type="radio"
 								id={type.id}

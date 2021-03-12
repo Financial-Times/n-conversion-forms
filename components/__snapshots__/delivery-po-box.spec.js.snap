@@ -63,3 +63,34 @@ exports[`DeliveryPOBox renders with default props 1`] = `
   </span>
 </label>
 `;
+
+exports[`DeliveryPOBox renders with hidden input elements 1`] = `
+<label id="deliveryPOBoxField"
+       class="o-forms-field ncf__validation-error ncf__hidden"
+       data-validate="required"
+       for="deliveryPOBox"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      P.O. Box
+    </span>
+    <span class="o-forms-title__prompt">
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="text"
+           id="deliveryPOBox"
+           name="deliveryPOBox"
+           data-trackable="field-deliveryPOBox"
+           placeholder="e.g. PO Box 1033"
+           maxlength="50"
+           aria-required="true"
+           required
+           value
+    >
+    <span class="o-forms-input__error">
+      Please enter a valid P.O. Box address
+    </span>
+  </span>
+</label>
+`;

@@ -109,4 +109,23 @@ describe('DeliveryOption', () => {
 
 		expect(DeliveryOption).toRenderCorrectly(props);
 	});
+
+	it('renders with country CAN print offer HD and mailDelivery false', () => {
+		const props = {
+			country : 'CAN',
+			productCode: 'N6D',
+			options: [
+				{
+					value: 'HD',
+					isSelected: true,
+					isValidDeliveryOption: true,
+					mailDelivery: false,
+					deliveryOnPublicationDate: true,
+					flightMarket:false,
+				},
+			],
+		};
+
+		expect(DeliveryOption).toRenderCorrectly(props);
+	});
 });
