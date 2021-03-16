@@ -40,10 +40,12 @@ describe('DeliveryOption', () => {
 				deliveryOption2Listener = sandbox.stub();
 
 				const formStub = {
-					deliveryOption: [
-						{ addEventListener: deliveryOption1Listener },
-						{ addEventListener: deliveryOption2Listener },
-					],
+					elements: {
+						deliveryOption: [
+							{ addEventListener: deliveryOption1Listener },
+							{ addEventListener: deliveryOption2Listener },
+						],
+					}
 				};
 
 				document.querySelector.withArgs('form.ncf').returns(formStub);
@@ -80,7 +82,7 @@ describe('DeliveryOption', () => {
 				formElement.addEventListener = deliveryOptionListener;
 
 				const altFormStub = {
-					deliveryOption: formElement,
+					elements: { deliveryOption: formElement },
 				};
 
 				document.querySelector.withArgs('form.ncf').returns(altFormStub);

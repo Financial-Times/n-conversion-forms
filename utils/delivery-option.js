@@ -16,7 +16,7 @@ class DeliveryOption {
 
 		this.$form = element.querySelector('form.ncf');
 
-		if (!this.$form.deliveryOption) {
+		if (!this.$form.elements['deliveryOption']) {
 			throw new Error(
 				'Please include the delivery option partial on the page.'
 			);
@@ -28,10 +28,10 @@ class DeliveryOption {
 	 * @param {Function} callback The callback function to call when a change event occurs.
 	 */
 	handleDeliveryOptionChange (callback) {
-		if (this.$form.deliveryOption.length === undefined) {
-			this.$form.deliveryOption.addEventListener('change', callback);
+		if (this.$form.elements['deliveryOption'].length === undefined) {
+			this.$form.elements['deliveryOption'].addEventListener('change', callback);
 		} else {
-			for (let option of [...this.$form.deliveryOption]) {
+			for (let option of [...this.$form.elements['deliveryOption']]) {
 				option.addEventListener('change', callback);
 			}
 		}
@@ -63,7 +63,7 @@ class DeliveryOption {
 	 * Mark an input item as checked
 	 */
 	checkItem (itemId) {
-		const inputNodes = this.$form.deliveryOption;
+		const inputNodes = this.$form.elements['deliveryOption'];
 		const item = Array.from(inputNodes).find(node => node.id === itemId);
 		if (item) {
 			item.checked = true;
