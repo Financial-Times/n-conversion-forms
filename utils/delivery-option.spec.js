@@ -9,27 +9,6 @@ const { JSDOM } = require('jsdom');
 
 describe('Delivery Option - Util', () => {
 	describe('Get an instance of the util class', () => {
-		it('should return an instance of the util properly', () => {
-			const props = {
-				country: 'GBR',
-				options: [
-					{ value: 'HD', isSelected: true, isValidDeliveryOption: true },
-					{ value: 'PV', isSelected: false, isValidDeliveryOption: true }
-				]
-			};
-			const component = mount(<Form ><DeliveryOption {...props} /></Form>);
-			const dom = new JSDOM(`
-				<!DOCTYPE html>
-				<html>
-				<head></head>
-				<body>${component.html()}</body>
-				</html>
-			`);
-			const document = dom.window.document;
-
-			const deliveryoptionUtilInstance = new DeliveryOptionUtil(document);
-			expect(deliveryoptionUtilInstance).toBeDefined();
-		});
 		it('should throw an error since the component is not found', () => {
 			const dom = new JSDOM(`
 				<!DOCTYPE html>
@@ -46,7 +25,7 @@ describe('Delivery Option - Util', () => {
 		});
 	});
 	describe('Show/Hide Items for Delivery Option Change', () => {
-		it('should swap between hide an show two items by adding and removing the related classes', () => {
+		it('should swap between hide and show two items by adding and removing the related classes', () => {
 			const props = {
 				country: 'GBR',
 				options: [

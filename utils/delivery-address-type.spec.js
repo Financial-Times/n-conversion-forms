@@ -9,14 +9,6 @@ const { JSDOM } = require('jsdom');
 
 describe('Delivery Address Type - Util', () => {
 	describe('Get an instance of the util class', () => {
-		it('should return an instance of the util properly', () => {
-			const props = {};
-			const component = mount(<Form ><DeliveryAddressType {...props} /></Form>);
-			const jsdom = JSDOM.fragment(component.html());
-
-			const deliveryAdressTypeUtilInstance = new DeliveryAdressTypeUtil(jsdom);
-			expect(deliveryAdressTypeUtilInstance).toBeDefined();
-		});
 		it('should throw an error since the component is not found', () => {
 			const component = mount(<Form ></Form>);
 			const jsdom = JSDOM.fragment(component.html());

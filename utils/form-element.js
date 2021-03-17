@@ -71,7 +71,7 @@ class FormElement {
 	/**
 	 * Make firts input element required
 	 */
-	required () {
+	makeRequired () {
 		if (this.inputs && this.inputs.length) {
 			this.inputs[0].required = true;
 		}
@@ -81,7 +81,7 @@ class FormElement {
 	/**
 	 * Make firts input element not required (optional)
 	 */
-	optional () {
+	makeOptional () {
 		if (this.inputs && this.inputs.length) {
 			this.inputs[0].required = false;
 		}

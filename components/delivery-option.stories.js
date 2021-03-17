@@ -7,7 +7,7 @@ export default {
 	argTypes: {
 		options: { control: 'array' },
 		country: { control: 'string' },
-		productCode: { control: 'string' }
+		productCode: { control: 'string' },
 	},
 };
 

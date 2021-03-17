@@ -34,15 +34,15 @@ class DeliveryAdressType {
 		if (!checked) {
 			throw new Error('No address type has been selected');
 		}
-		return checked.getAttribute('value');
+		return checked.value;
 	}
 
 	/**
 	 * Register an event listener
 	 * @param {Function} callback Called with event when changed
 	 */
-	onChange (callback = () => { }) {
-		return this.$deliveryAddressType.addEventListener('change', callback);
+	onChange (callback) {
+		return typeof callback === 'function' && this.$deliveryAddressType.addEventListener('change', callback);
 	}
 }
 
