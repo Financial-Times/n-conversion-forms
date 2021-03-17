@@ -7,7 +7,7 @@ const postcodeLabel = {
 	CAN: 'postal code',
 };
 
-export function DeliveryPostcode({
+export function DeliveryPostcode ({
 	value = '',
 	country = '',
 	isDisabled = false,
