@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function CompanyName({
+export function CompanyName ({
 	fieldId = 'companyNameField',
 	hasError = false,
 	inputId = 'companyName',
@@ -12,10 +12,12 @@ export function CompanyName({
 	fieldLabel = 'Company name',
 	placeholder = 'Please enter your company name',
 	isRequired = true,
+	isHidden = false,
 }) {
 	const divClassNames = classNames([
 		'o-forms-field',
 		{ 'o-forms-field--optional': !isRequired },
+		{ ncf__hidden: isHidden },
 	]);
 
 	const inputWrapperClassNames = classNames([
@@ -64,4 +66,5 @@ CompanyName.propTypes = {
 	isDisabled: PropTypes.bool,
 	fieldLabel: PropTypes.string,
 	isRequired: PropTypes.bool,
+	isHidden: PropTypes.bool,
 };

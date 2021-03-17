@@ -105,4 +105,12 @@ describe('CompanyName', () => {
 		expect(component.find('#companyNameField').hasClass('o-forms-field--optional')).toBe(true);
 		expect(component.find('input#companyName').prop('required')).toBe(false);
 	});
+
+	it('renders as hidden', () => {
+		const props = { isHidden: true };
+
+		const component = mount(CompanyName(props));
+
+		expect(component.find('#companyNameField').hasClass('ncf__hidden')).toBe(true);
+	});
 });

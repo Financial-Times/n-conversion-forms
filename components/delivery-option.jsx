@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getDeliveryOption } from '../utils/delivery-option-messages';
 
-export function DeliveryOption({
+export function DeliveryOption ({
+	fieldId = 'deliveryOptionField',
 	country,
 	productCode = undefined,
 	options = [],
@@ -17,7 +18,7 @@ export function DeliveryOption({
 
 	return (
 		<div
-			id="deliveryOptionField"
+			id={fieldId}
 			className={divClassName}
 			role="group"
 			aria-label="Delivery options"
@@ -32,9 +33,12 @@ export function DeliveryOption({
 						return null;
 					}
 
+					// in case the delivery option has a custom ID
+					const id = deliveryOptionValue.customId || value;
+
 					const inputProps = {
 						type: 'radio',
-						id: value,
+						id,
 						name: 'deliveryOption',
 						value: value,
 						className: 'ncf__delivery-option__input',
@@ -45,7 +49,7 @@ export function DeliveryOption({
 						<label
 							key={value}
 							className="ncf__delivery-option__item"
-							htmlFor={value}
+							htmlFor={id}
 						>
 							<input {...inputProps} />
 							<span className="o-forms-input__label ncf__delivery-option__label">

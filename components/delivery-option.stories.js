@@ -6,6 +6,8 @@ export default {
 	component: DeliveryOption,
 	argTypes: {
 		options: { control: 'array' },
+		country: { control: 'string' },
+		productCode: { control: 'string' },
 	},
 };
 
