@@ -259,3 +259,47 @@ exports[`Delivery Postcode render different styles 1`] = `
   </span>
 </label>
 `;
+
+exports[`Delivery Postcode render with link to change the value 1`] = `
+<label id="deliveryPostcodeField"
+       class="o-forms-field"
+       data-validate="required"
+       for="deliveryPostcode"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Delivery
+      <span data-reference="postcode">
+        Zip Code
+      </span>
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="text"
+           id="deliveryPostcode"
+           name="deliveryPostcode"
+           placeholder="Enter your Zip Code"
+           autocomplete="postal-code"
+           data-trackable="delivery-postcode"
+           aria-required="true"
+           required
+           pattern="whatever"
+           value
+    >
+    <span class="o-forms-input__error">
+      Please enter a valid
+      <span data-reference="postcode">
+        Zip Code
+      </span>
+      .
+    </span>
+    <a href="http://local.ft.com"
+       style="font-size:12px"
+       class="change-postcode-url"
+       data-trackable="change-progress"
+    >
+      Change Zip Code
+    </a>
+  </span>
+</label>
+`;

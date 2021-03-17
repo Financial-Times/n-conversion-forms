@@ -7,7 +7,7 @@ const postcodeLabel = {
 	CAN: 'postal code',
 };
 
-export function DeliveryPostcode({
+export function DeliveryPostcode ({
 	value = '',
 	country = '',
 	isDisabled = false,
@@ -15,6 +15,7 @@ export function DeliveryPostcode({
 	isHidden = false,
 	pattern,
 	additionalFieldInformation,
+	changePostcodeUrl = '',
 }) {
 	const postcodeReference = postcodeLabel[country.toUpperCase()] || 'postcode';
 
@@ -72,6 +73,16 @@ export function DeliveryPostcode({
 						{additionalFieldInformation}
 					</p>
 				) : null}
+				{changePostcodeUrl ? (
+					<a
+						href={changePostcodeUrl}
+						style={{fontSize: '12px'}}
+						className="change-postcode-url"
+						data-trackable="change-progress"
+					>
+						{`Change ${postcodeReference}`}
+					</a>
+				) : null}
 			</span>
 		</label>
 	);
@@ -85,4 +96,5 @@ DeliveryPostcode.propTypes = {
 	hasError: PropTypes.bool,
 	isHidden: PropTypes.bool,
 	additionalFieldInformation: PropTypes.node,
+	changePostcodeUrl: PropTypes.string,
 };

@@ -173,7 +173,7 @@ class Validation {
 
 			setTimeout(() => {
 				delete this.debounceCustomValidation;
-			}, 500);
+			}, 1500);
 		}
 
 		return !document.querySelector('.ncf__custom-validation-error');

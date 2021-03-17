@@ -72,4 +72,15 @@ describe('Delivery Postcode', () => {
 
 		expect(DeliveryPostcode).toRenderCorrectly(props);
 	});
+
+	it('render with link to change the value', () => {
+		const props = {
+			country: 'USA',
+			postcodeReference: 'Zip Code',
+			pattern: 'whatever',
+			changePostcodeUrl: 'http://local.ft.com',
+		};
+
+		expect(DeliveryPostcode).toRenderCorrectly(props);
+	});
 });
