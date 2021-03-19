@@ -30,4 +30,5 @@ Basic.args = {
 		}
 	],
 	offerName: 'Standard',
+	offerPrice: '$5',
 };

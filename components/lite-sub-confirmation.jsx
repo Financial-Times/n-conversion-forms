@@ -26,6 +26,7 @@ const DetailsMobileView = ({details}) => (
 export function LiteSubConfirmation ({
 	productCode = '',
 	offerName = '',
+	offerPrice = '',
 	email = EMAIL_DEFAULT_TEXT,
 	details = [],
 
@@ -60,7 +61,7 @@ export function LiteSubConfirmation ({
 				<h1 className="ncf__header ncf__header--confirmation">{isPremium(productCode) ? 'Premium' : 'Digital'}</h1>
 			</div>
 			<p className="ncf__paragraph">Thank you for choosing to subscribe to {offerName}. We are not quite ready to deliver this type of subscription, so we have upgraded you to a {isPremium(productCode) ? 'Premium' : 'Digital'} 3 month subscription at no additional cost.</p>
-			<p className="ncf__paragraph">For $5 a month, you can now enjoy {isPremium(productCode) ? 'unlimited' : 'standard digital'} access to FT.com, where you can explore not only the product you had purchased, but everything else the FT has to offer. However, if you would like to cancel your subscription, please contact our <a className="barrier__terms-link ncf__link ncf__link--external" href="https://help.ft.com/contact">customer care team</a> and they will arrange this for you.</p>
+			<p className="ncf__paragraph">For {`${offerPrice}`} a month, you can now enjoy {isPremium(productCode) ? 'unlimited' : 'standard digital'} access to FT.com, where you can explore not only the product you had purchased, but everything else the FT has to offer. However, if you would like to cancel your subscription, please contact our <a className="barrier__terms-link ncf__link ncf__link--external" href="https://help.ft.com/contact">customer care team</a> and they will arrange this for you.</p>
 			<p className="ncf__paragraph">
 				<b>Head to FT.com now to sign up to the newsletter(s)</b> that would have been included with your {offerName} subscription
 				{isPremium(productCode) ? <span>: Moral Money, Due Diligence, #techAsia, Energy Source, Trade Secrets and Scoreboard</span>
@@ -91,6 +92,7 @@ export function LiteSubConfirmation ({
 
 LiteSubConfirmation.propTypes = {
 	offerName: PropTypes.string.isRequired,
+	offerPrice: PropTypes.string.isRequired,
 	productCode: PropTypes.string,
 	email: PropTypes.string,
 	details: PropTypes.arrayOf(PropTypes.shape({
