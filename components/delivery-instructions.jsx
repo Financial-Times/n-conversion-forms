@@ -24,7 +24,6 @@ export function DeliveryInstructions ({
 	rows = null,
 	isDisabled = false,
 	placeholder = '',
-	hasSignupSecurityNote = false,
 	value = '',
 	country,
 }) {
@@ -34,8 +33,9 @@ export function DeliveryInstructions ({
 		{ 'o-forms-input--invalid': hasError },
 	]);
 
-	const maxLengthText = maxlength ? `(Max. ${maxlength} characters)` : '';
-	const defaultPlaceholder = `Enter instructions ${maxLengthText}:\u000a- Door colour, letterbox location\u000a- Placement i.e. letterbox delivery\u000a- Special handling i.e. place in plastic bag`;
+	const maxLengthText = maxlength && country !== 'GBR'? ` (Max. ${maxlength} characters)` : '';
+	const extraInstruction = country === 'GBR' ? '' : '\u000a- Special handling i.e. place in plastic bag';
+	const defaultPlaceholder = `Enter instructions${maxLengthText}:\u000a- Door colour, letterbox location\u000a- Placement i.e. letterbox delivery${extraInstruction}` ;
 
 	const textAreaProps = {
 		id: inputId,
@@ -47,17 +47,8 @@ export function DeliveryInstructions ({
 		disabled: isDisabled,
 		defaultValue: value,
 	};
-
-	const signupSecurityNote = hasSignupSecurityNote && (
-		<>
-			Either add them to the Security Notes section at{' '}
-			<a href="https://ft.com/myaccount">ft.com/myaccount</a> after purchase, or
-			contact <a href="https://help.ft.com/contact/">FT Customer Care</a>.{' '}
-		</>
-	);
-
-	const securityMessage = <span className="o-forms-title__prompt">
-		If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. {signupSecurityNote}If you do add them here you do so at your own risk as these will appear on your label.
+	const deliveryInstructionsMessage = <span className="o-forms-title__prompt">
+		Special characters including punctuation cannot be used in the Delivery instructions.
 	</span>;
 
 	return (
@@ -70,7 +61,7 @@ export function DeliveryInstructions ({
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">Delivery instructions</span>
 				{spanMessageByCountry[country]}
-				{country === 'GBR' && securityMessage}
+				{country === 'GBR' && deliveryInstructionsMessage}
 			</span>
 
 			<span className={textAreaWrapperClassNames}>
@@ -85,7 +76,6 @@ DeliveryInstructions.propTypes = {
 	maxlength: PropTypes.number,
 	rows: PropTypes.number,
 	isDisabled: PropTypes.bool,
-	hasSignupSecurityNote: PropTypes.bool,
 	value: PropTypes.string,
 	country: PropTypes.oneOf(['GBR', 'USA', 'CAN']).isRequired,
 };

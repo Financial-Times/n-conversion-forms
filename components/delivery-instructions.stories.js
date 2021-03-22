@@ -5,7 +5,6 @@ export default {
 	title: 'Delivery Instructions',
 	component: DeliveryInstructions,
 	argTypes: {
-		hasSignupSecurityNote: { control: 'boolean' },
 		hasError: { control: 'boolean' },
 		isDisabled: { control: 'boolean' },
 	},
