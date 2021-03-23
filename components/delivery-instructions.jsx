@@ -33,7 +33,7 @@ export function DeliveryInstructions ({
 		{ 'o-forms-input--invalid': hasError },
 	]);
 
-	const maxLengthText = maxlength && country !== 'GBR'? ` (Max. ${maxlength} characters)` : '';
+	const maxLengthText = maxlength && country === 'GBR'? ` (Max. ${maxlength} characters)` : '';
 	const extraInstruction = country === 'GBR' ? '' : '\u000a- Special handling i.e. place in plastic bag';
 	const defaultPlaceholder = `Enter instructions${maxLengthText}:\u000a- Door colour, letterbox location\u000a- Placement i.e. letterbox delivery${extraInstruction}` ;
 
