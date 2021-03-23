@@ -92,7 +92,7 @@ export function LiteSubConfirmation ({
 
 LiteSubConfirmation.propTypes = {
 	offerName: PropTypes.string.isRequired,
-	offerPrice: PropTypes.string.isRequired,
+	subscriptionAmount: PropTypes.string.isRequired,
 	productCode: PropTypes.string,
 	email: PropTypes.string,
 	details: PropTypes.arrayOf(PropTypes.shape({
