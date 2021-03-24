@@ -22,6 +22,7 @@
 @import './styles/error';
 @import './styles/graduation-date';
 @import './styles/lite-subs-confirmation';
+@import './styles/google-sign-in';
 
 @include oTypography();
 @include oFonts();
@@ -421,6 +422,8 @@
 		@include oNormaliseVisuallyHidden;
 	}
 }
+
+@include ncfGoogleSignIn();
 
 .ncf__password-field .ncf__password-field--show-password {
 	margin-top: 7px;

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GoogleSignIn renders with default props 1`] = `
+<link href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+>
+<a class="google_button"
+   href="https://www.ft.com"
+>
+  Sign in with Google
+</a>
+`;
