@@ -2,7 +2,7 @@
 
 exports[`BillingCity render different styles 1`] = `
 <label id="billingCityField"
-       class="o-forms-field ncf__validation-error"
+       class="o-forms-field ncf__validation-error ncf__hidden"
        data-validate="required"
        for="billingCity"
 >

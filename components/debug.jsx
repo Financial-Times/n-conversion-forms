@@ -49,18 +49,25 @@ export function Debug({ isTest = false, showHelpers = false, links = {} }) {
 	// This env var gets set in production. We use this when creating email addresses in case any
 	// get into production so Membership know who to come to about deleting them.
 	var SYSTEM_CODE = document.documentElement.getAttribute('data-next-app') || 'n-conversion-forms';
+	var COUNTRY_CODE = window.FT && window.FT.country || 'GBR';
+
+	var billingPostcodeByCountry = {
+		GBR: 'EC4M9BT',
+		USA: '10028',
+		CAN: 'K0E 9Z9'
+	}
 
 	var debugData = {
 		billingCity: 'London',
-		billingCountry: 'GBR',
-		billingPostcode: 'EC4M9BT',
-		country: 'GBR',
+		billingCountry: COUNTRY_CODE,
+		billingPostcode: billingPostcodeByCountry[COUNTRY_CODE],
+		country: COUNTRY_CODE,
 		deliveryAddressLine1: 'delivery test1',
 		deliveryAddressLine2: 'delivery test2',
 		deliveryAddressLine3: 'delivery test3',
 		deliveryCity: 'delivery city',
 		deliveryCounty: 'delivery county',
-		deliveryPostcode: 'EC4M9BT',
+		deliveryPostcode: billingPostcodeByCountry[COUNTRY_CODE],
 		email: SYSTEM_CODE + '-' + Date.now() + '@ftqa.org',
 		firstName: 'Test',
 		industry: 'DEF',
@@ -69,7 +76,7 @@ export function Debug({ isTest = false, showHelpers = false, links = {} }) {
 		organisation: 'ft-org',
 		password: 'password123',
 		position: 'AS',
-		postCode: 'EC4M9BT',
+		postCode: billingPostcodeByCountry[COUNTRY_CODE],
 		primaryTelephone: '0987654321',
 		responsibility: 'ADL',
 		ukVisa: '4111111111111111',
