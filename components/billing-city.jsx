@@ -8,7 +8,7 @@ export function BillingCity ({
 	isDisabled = false,
 	isHidden = false,
 }) {
-	const BillingCityFieldClassNames = classNames([
+	const billingCityFieldClassNames = classNames([
 		'o-forms-field',
 		'ncf__validation-error',
 		{ ncf__hidden: isHidden },
@@ -24,7 +24,7 @@ export function BillingCity ({
 	return (
 		<label
 			id="billingCityField"
-			className={BillingCityFieldClassNames}
+			className={billingCityFieldClassNames}
 			data-validate="required"
 			htmlFor="billingCity"
 		>

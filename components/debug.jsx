@@ -51,7 +51,7 @@ export function Debug({ isTest = false, showHelpers = false, links = {} }) {
 	var SYSTEM_CODE = document.documentElement.getAttribute('data-next-app') || 'n-conversion-forms';
 	var COUNTRY_CODE = window.FT && window.FT.country || 'GBR';
 
-	var billingPostcodeByCountry = {
+	var postcodeByCountry = {
 		GBR: 'EC4M9BT',
 		USA: '10028',
 		CAN: 'K0E 9Z9'
@@ -60,14 +60,14 @@ export function Debug({ isTest = false, showHelpers = false, links = {} }) {
 	var debugData = {
 		billingCity: 'London',
 		billingCountry: COUNTRY_CODE,
-		billingPostcode: billingPostcodeByCountry[COUNTRY_CODE],
+		billingPostcode: postcodeByCountry[COUNTRY_CODE],
 		country: COUNTRY_CODE,
 		deliveryAddressLine1: 'delivery test1',
 		deliveryAddressLine2: 'delivery test2',
 		deliveryAddressLine3: 'delivery test3',
 		deliveryCity: 'delivery city',
 		deliveryCounty: 'delivery county',
-		deliveryPostcode: billingPostcodeByCountry[COUNTRY_CODE],
+		deliveryPostcode: postcodeByCountry[COUNTRY_CODE],
 		email: SYSTEM_CODE + '-' + Date.now() + '@ftqa.org',
 		firstName: 'Test',
 		industry: 'DEF',
@@ -76,7 +76,7 @@ export function Debug({ isTest = false, showHelpers = false, links = {} }) {
 		organisation: 'ft-org',
 		password: 'password123',
 		position: 'AS',
-		postCode: billingPostcodeByCountry[COUNTRY_CODE],
+		postCode: postcodeByCountry[COUNTRY_CODE],
 		primaryTelephone: '0987654321',
 		responsibility: 'ADL',
 		ukVisa: '4111111111111111',
