@@ -64,7 +64,7 @@
     "react-is": "^16.13.1",
     "sass-loader": "^9.0.3",
     "sinon": "6.3.5",
-    "snyk": "1.167.2"
+    "snyk": "1.230.7"
   },
   "engines": {
     "node": "12.x"
