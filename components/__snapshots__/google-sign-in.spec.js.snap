@@ -4,6 +4,7 @@ exports[`GoogleSignIn renders with default props 1`] = `
 <link href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
 >
+<base target="_parent">
 <a class="google_button"
    href="https://www.ft.com"
 >
