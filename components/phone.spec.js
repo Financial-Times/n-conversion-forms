@@ -1,3 +1,4 @@
+import { mount } from 'enzyme';
 import { Phone } from './index';
 import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 
@@ -47,5 +48,12 @@ describe('Phone', () => {
 		};
 
 		expect(Phone).toRenderCorrectly(props);
+	});
+
+	it('renders with optional title class, when not required', () => {
+		const props = { isRequired: false };
+		const component = mount(Phone(props));
+
+		expect(component.find('.o-forms-title.o-forms-field--optional').length).toEqual(1);
 	});
 });
