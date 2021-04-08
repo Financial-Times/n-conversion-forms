@@ -13,6 +13,16 @@ describe('PackageChange', () => {
 		expect(PackageChange).toRenderCorrectly(props);
 	});
 
+	it('renders with subtext', () => {
+		const props = {
+			changePackageUrl: 'https://www.ft.com',
+			currentPackage: 'Trial',
+			subText: 'Personalised email briefings and alerts',
+		};
+
+		expect(PackageChange).toRenderCorrectly(props);
+	});
+
 	['annual'].forEach((term) => {
 		describe(`${term}`, () => {
 			it('render with defaults', () => {

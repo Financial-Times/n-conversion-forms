@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function PackageChange({ changePackageUrl, currentPackage }) {
+export function PackageChange({ changePackageUrl, currentPackage, subText }) {
 	return (
 		<div className="ncf__package-change">
 			<div className="ncf__package-change__package">
@@ -18,6 +18,7 @@ export function PackageChange({ changePackageUrl, currentPackage }) {
 					</a>
 				</div>
 			</div>
+			{subText && <p className="ncf__package-change__subtext">{subText}</p>}
 		</div>
 	);
 }
