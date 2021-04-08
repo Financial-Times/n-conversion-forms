@@ -9,11 +9,17 @@ export function JobTitle({
 	fieldId = 'jobTitleField',
 	inputId = 'jobTitle',
 	inputName = 'jobTitle',
+	isRequired = true,
 }) {
 	const inputWrapperClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
 		{ 'o-forms-input--invalid': hasError },
+	]);
+
+	const fieldTitleClassName = classNames([
+		'o-forms-title',
+		{ 'o-forms-field--optional': !isRequired }
 	]);
 
 	return (
@@ -23,7 +29,7 @@ export function JobTitle({
 			data-validate="required"
 			htmlFor={inputId}
 		>
-			<span className="o-forms-title">
+			<span className={fieldTitleClassName}>
 				<span className="o-forms-title__main">Job title</span>
 			</span>
 			<span className={inputWrapperClassName}>
@@ -34,8 +40,8 @@ export function JobTitle({
 					placeholder="Enter your job title"
 					autoComplete="organization-title"
 					data-trackable="job-title"
-					aria-required="true"
-					required
+					aria-required={isRequired}
+					required={isRequired}
 					disabled={isDisabled}
 					defaultValue={value}
 				/>

@@ -58,4 +58,11 @@ describe('JobTitle', () => {
 
 		expect(field.exists()).toBe(true);
 	});
+
+	it('renders with optional title class, when not required', () => {
+		const props = { isRequired: false };
+		const component = mount(JobTitle(props));
+
+		expect(component.find('.o-forms-title.o-forms-field--optional').length).toEqual(1);
+	});
 });
