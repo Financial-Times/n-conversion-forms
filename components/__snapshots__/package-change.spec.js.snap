@@ -102,8 +102,8 @@ exports[`PackageChange renders with subtext 1`] = `
       </a>
     </div>
   </div>
-  <div class="ncf__package-change__subtext">
+  <p class="ncf__package-change__subtext">
     Personalised email briefings and alerts
-  </div>
+  </p>
 </div>
 `;
