@@ -13,10 +13,16 @@
 			align-items: center;
 		}
 
-		&__subtext {
-			@include oTypographySans($scale: -1);
-			margin: 0;
-			padding-bottom: 1em;
+		&__content {
+			padding: 0.5em 0;
+
+			p {
+				margin: 0.5em 0;
+			}
+
+			&__subtext {
+				@include oTypographySans($scale: -1);
+			}
 		}
 	}
 }

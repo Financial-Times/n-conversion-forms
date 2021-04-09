@@ -3,12 +3,14 @@
 exports[`PackageChange annual render with defaults 1`] = `
 <div class="ncf__package-change">
   <div class="ncf__package-change__package">
-    <p class="ncf__package-change__content">
-      You have chosen
-      <span class="ncf__strong">
-        Trial
-      </span>
-    </p>
+    <div class="ncf__package-change__content">
+      <p>
+        You have chosen
+        <span class="ncf__strong">
+          Trial
+        </span>
+      </p>
+    </div>
     <div class="ncf__package-change__actions">
       <a href="https://www.ft.com"
          class="ncf__button ncf__button--mono ncf__button--baseline"
@@ -24,12 +26,14 @@ exports[`PackageChange annual render with defaults 1`] = `
 exports[`PackageChange annual render with discount 1`] = `
 <div class="ncf__package-change">
   <div class="ncf__package-change__package">
-    <p class="ncf__package-change__content">
-      You have chosen
-      <span class="ncf__strong">
-        Trial
-      </span>
-    </p>
+    <div class="ncf__package-change__content">
+      <p>
+        You have chosen
+        <span class="ncf__strong">
+          Trial
+        </span>
+      </p>
+    </div>
     <div class="ncf__package-change__actions">
       <a href="https://www.ft.com"
          class="ncf__button ncf__button--mono ncf__button--baseline"
@@ -45,12 +49,14 @@ exports[`PackageChange annual render with discount 1`] = `
 exports[`PackageChange annual render with trialPrice 1`] = `
 <div class="ncf__package-change">
   <div class="ncf__package-change__package">
-    <p class="ncf__package-change__content">
-      You have chosen
-      <span class="ncf__strong">
-        Trial
-      </span>
-    </p>
+    <div class="ncf__package-change__content">
+      <p>
+        You have chosen
+        <span class="ncf__strong">
+          Trial
+        </span>
+      </p>
+    </div>
     <div class="ncf__package-change__actions">
       <a href="https://www.ft.com"
          class="ncf__button ncf__button--mono ncf__button--baseline"
@@ -66,12 +72,14 @@ exports[`PackageChange annual render with trialPrice 1`] = `
 exports[`PackageChange render with defaults 1`] = `
 <div class="ncf__package-change">
   <div class="ncf__package-change__package">
-    <p class="ncf__package-change__content">
-      You have chosen
-      <span class="ncf__strong">
-        Trial
-      </span>
-    </p>
+    <div class="ncf__package-change__content">
+      <p>
+        You have chosen
+        <span class="ncf__strong">
+          Trial
+        </span>
+      </p>
+    </div>
     <div class="ncf__package-change__actions">
       <a href="https://www.ft.com"
          class="ncf__button ncf__button--mono ncf__button--baseline"
@@ -87,12 +95,17 @@ exports[`PackageChange render with defaults 1`] = `
 exports[`PackageChange renders with subtext 1`] = `
 <div class="ncf__package-change">
   <div class="ncf__package-change__package">
-    <p class="ncf__package-change__content">
-      You have chosen
-      <span class="ncf__strong">
-        Trial
-      </span>
-    </p>
+    <div class="ncf__package-change__content">
+      <p>
+        You have chosen
+        <span class="ncf__strong">
+          Trial
+        </span>
+      </p>
+      <p class="ncf__package-change__content__subtext">
+        Personalised email briefings and alerts
+      </p>
+    </div>
     <div class="ncf__package-change__actions">
       <a href="https://www.ft.com"
          class="ncf__button ncf__button--mono ncf__button--baseline"
@@ -102,8 +115,5 @@ exports[`PackageChange renders with subtext 1`] = `
       </a>
     </div>
   </div>
-  <p class="ncf__package-change__subtext">
-    Personalised email briefings and alerts
-  </p>
 </div>
 `;

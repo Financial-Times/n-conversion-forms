@@ -5,9 +5,12 @@ export function PackageChange({ changePackageUrl, currentPackage, subText }) {
 	return (
 		<div className="ncf__package-change">
 			<div className="ncf__package-change__package">
-				<p className="ncf__package-change__content">
-					You have chosen <span className="ncf__strong">{currentPackage}</span>
-				</p>
+				<div className="ncf__package-change__content">
+					<p>
+						You have chosen <span className="ncf__strong">{currentPackage}</span>
+					</p>
+					{subText && <p className="ncf__package-change__content__subtext">{subText}</p>}
+				</div>	
 				<div className="ncf__package-change__actions">
 					<a
 						href={changePackageUrl}
@@ -18,7 +21,6 @@ export function PackageChange({ changePackageUrl, currentPackage, subText }) {
 					</a>
 				</div>
 			</div>
-			{subText && <p className="ncf__package-change__subtext">{subText}</p>}
 		</div>
 	);
 }
@@ -26,4 +28,5 @@ export function PackageChange({ changePackageUrl, currentPackage, subText }) {
 PackageChange.propTypes = {
 	changePackageUrl: PropTypes.string.isRequired,
 	currentPackage: PropTypes.string.isRequired,
+	subText: PropTypes.string,
 };
