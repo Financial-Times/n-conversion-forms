@@ -13,11 +13,11 @@ describe('PackageChange', () => {
 		expect(PackageChange).toRenderCorrectly(props);
 	});
 
-	it('renders with subtext', () => {
+	it('renders with introtext', () => {
 		const props = {
 			changePackageUrl: 'https://www.ft.com',
 			currentPackage: 'Trial',
-			subText: 'Personalised email briefings and alerts',
+			introText: 'Personalised email briefings and alerts',
 		};
 
 		expect(PackageChange).toRenderCorrectly(props);

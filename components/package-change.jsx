@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function PackageChange({ changePackageUrl, currentPackage, subText }) {
+export function PackageChange({ changePackageUrl, currentPackage, introText }) {
 	return (
 		<div className="ncf__package-change">
 			<div className="ncf__package-change__package">
@@ -9,7 +9,7 @@ export function PackageChange({ changePackageUrl, currentPackage, subText }) {
 					<p>
 						You have chosen <span className="ncf__strong">{currentPackage}</span>
 					</p>
-					{subText && <p className="ncf__package-change__content__subtext">{subText}</p>}
+					{introText && <p className="ncf__package-change__content__introtext">{introText}</p>}
 				</div>	
 				<div className="ncf__package-change__actions">
 					<a
@@ -28,5 +28,5 @@ export function PackageChange({ changePackageUrl, currentPackage, subText }) {
 PackageChange.propTypes = {
 	changePackageUrl: PropTypes.string.isRequired,
 	currentPackage: PropTypes.string.isRequired,
-	subText: PropTypes.string,
+	introText: PropTypes.string,
 };

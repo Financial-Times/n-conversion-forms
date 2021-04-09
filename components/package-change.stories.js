@@ -10,5 +10,5 @@ export const Basic = (args) => <PackageChange {...args} />;
 Basic.args = {
 	currentPackage: 'Premium Digital',
 	changePackageUrl: 'https://ft.com/products',
-	subText: 'Personalised email briefings and alerts',
+	introText: 'Personalised email briefings and alerts',
 };
