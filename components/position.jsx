@@ -21,6 +21,11 @@ export function Position({
 		{ 'o-forms-input--invalid': hasError },
 	]);
 
+	const fieldTitleClassName = classNames([
+		'o-forms-title',
+		{ 'o-forms-field--optional': !isRequired }
+	]);
+
 	return (
 		<label
 			id={fieldId}
@@ -28,7 +33,7 @@ export function Position({
 			data-validate={isRequired ? 'required' : ''}
 			htmlFor={selectId}
 		>
-			<span className="o-forms-title">
+			<span className={fieldTitleClassName}>
 				<span className="o-forms-title__main">{fieldLabel}</span>
 			</span>
 			<span className={inputWrapperClassNames}>

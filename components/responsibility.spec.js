@@ -65,4 +65,11 @@ describe('Responsibility', () => {
 
 		expect(field.exists()).toBe(true);
 	});
+
+	it('renders with optional title class, when not required', () => {
+		const props = { isRequired: false };
+		const component = mount(Responsibility(props));
+
+		expect(component.find('.o-forms-title.o-forms-field--optional').length).toEqual(1);
+	});
 });

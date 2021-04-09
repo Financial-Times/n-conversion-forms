@@ -7,16 +7,23 @@ const defaultOptions = demographics.responsibilities.responsibilities;
 export function Responsibility({
 	value,
 	isDisabled = false,
+	isRequired = true,
 	hasError = false,
 	fieldId = 'responsibilityField',
 	selectId = 'responsibility',
 	selectName = 'responsibility',
 	options = defaultOptions,
+	fieldLabel = 'Which best describes your job responsibility?',
 }) {
 	const inputWrapperClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--select',
 		{ 'o-forms-input--invalid': hasError },
+	]);
+
+	const fieldTitleClassName = classNames([
+		'o-forms-title',
+		{ 'o-forms-field--optional': !isRequired }
 	]);
 
 	return (
@@ -26,9 +33,9 @@ export function Responsibility({
 			data-validate="required"
 			htmlFor={selectId}
 		>
-			<span className="o-forms-title">
+			<span className={fieldTitleClassName}>
 				<span className="o-forms-title__main">
-					Which best describes your job responsibility?
+					{fieldLabel}
 				</span>
 			</span>
 
@@ -37,8 +44,8 @@ export function Responsibility({
 					id={selectId}
 					name={selectName}
 					data-trackable="responsibility"
-					aria-required="true"
-					required
+					aria-required={isRequired}
+					required={isRequired}
 					disabled={isDisabled}
 					defaultValue={value}
 				>
