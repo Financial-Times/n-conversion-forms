@@ -11,9 +11,9 @@ exports[`DeliveryInstructions renders with a CAN span message 1`] = `
       Delivery instructions
     </span>
     <span class="o-forms-title__prompt">
-      Please note we cannot guarantee delivery of the newspaper to a specific location on your property, which also includes delivery to a specific floor/suite in a building. If you prefer delivery by Canada Post, please either select the &quot;PO Box&quot; delivery option from the top of this form, or contact.
+      Please note we cannot guarantee delivery of the newspaper to a specific location on your property, which also includes delivery to a specific floor/suite in a building. If you prefer delivery by Canada Post, please either select the &quot;PO Box&quot; delivery option from the top of this form, or contact  
       <a href="https://help.ft.com/contact/">
-        FT Customer Care
+        FT Customer Care.
       </a>
     </span>
   </span>
@@ -39,9 +39,9 @@ exports[`DeliveryInstructions renders with a USA span message 1`] = `
       Delivery instructions
     </span>
     <span class="o-forms-title__prompt">
-      Please note we cannot guarantee delivery of the newspaper to a specific location on your property, which also includes delivery to a specific floor/suite in a building. US Federal Law prohibits delivery of newspapers into a mailbox, except via a USPS mail carrier. If you prefer delivery to a mailbox, please either select the &quot;PO Box&quot; delivery option from the top of this form, or contact.
+      Please note we cannot guarantee delivery of the newspaper to a specific location on your property, which also includes delivery to a specific floor/suite in a building. US Federal Law prohibits delivery of newspapers into a mailbox, except via a USPS mail carrier. If you prefer delivery to a mailbox, please either select the &quot;PO Box&quot; delivery option from the top of this form, or contact  
       <a href="https://help.ft.com/contact/">
-        FT Customer Care
+        FT Customer Care.
       </a>
     </span>
   </span>

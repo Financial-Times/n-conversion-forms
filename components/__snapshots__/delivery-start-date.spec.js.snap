@@ -308,6 +308,41 @@ exports[`DeliveryStartDate renders with appropriate start message when isAddress
 </label>
 `;
 
+exports[`DeliveryStartDate renders with country different than default 1`] = `
+<label id="deliveryStartDateField"
+       class="o-forms-field ncf__validation-error"
+       data-validate="required"
+       for="deliveryStartDate"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Delivery start date
+    </span>
+    <span class="o-forms-title__prompt">
+      Earliest available delivery date:
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="date"
+           id="deliveryStartDate"
+           name="deliveryStartDate"
+           data-trackable="field-deliveryStartDate"
+           aria-required="true"
+           required
+           value
+    >
+    <span class="o-forms-input__error">
+      Please select a valid start date
+    </span>
+  </span>
+  <p>
+    Your print subscription will start from:
+    <strong class="js-start-date-text">
+    </strong>
+  </p>
+</label>
+`;
+
 exports[`DeliveryStartDate renders with default props 1`] = `
 <label id="deliveryStartDateField"
        class="o-forms-field ncf__validation-error"

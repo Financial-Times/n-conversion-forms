@@ -8,7 +8,7 @@ exports[`DeliveryCity renders with a custom value 1`] = `
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
-      City/town
+      City
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -38,7 +38,7 @@ exports[`DeliveryCity renders with a disabled input element 1`] = `
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
-      City/town
+      City
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -69,7 +69,7 @@ exports[`DeliveryCity renders with an error 1`] = `
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
-      City/town
+      City
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
@@ -91,6 +91,36 @@ exports[`DeliveryCity renders with an error 1`] = `
 </label>
 `;
 
+exports[`DeliveryCity renders with country different than default 1`] = `
+<label id="deliveryCityField"
+       class="o-forms-field ncf__validation-error"
+       data-validate="required"
+       for="deliveryCity"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      City
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="text"
+           id="deliveryCity"
+           name="deliveryCity"
+           data-trackable="field-deliveryCity"
+           autocomplete="address-level2"
+           placeholder="e.g. Los Angeles"
+           maxlength="40"
+           aria-required="true"
+           required
+           value
+    >
+    <span class="o-forms-input__error">
+      Please enter a valid city or town
+    </span>
+  </span>
+</label>
+`;
+
 exports[`DeliveryCity renders with default props 1`] = `
 <label id="deliveryCityField"
        class="o-forms-field ncf__validation-error"
@@ -99,7 +129,7 @@ exports[`DeliveryCity renders with default props 1`] = `
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
-      City/town
+      City
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">

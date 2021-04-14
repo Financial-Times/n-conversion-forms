@@ -7,12 +7,12 @@ const spanMessageByCountry = {
 		For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
 	</span>,
 	USA: <span className="o-forms-title__prompt">
-		Please note we cannot guarantee delivery of the newspaper to a specific location on your property, which also includes delivery to a specific floor/suite in a building. US Federal Law prohibits delivery of newspapers into a mailbox, except via a USPS mail carrier. If you prefer delivery to a mailbox, please either select the &quot;PO Box&quot; delivery option from the top of this form, or contact.
-		<a href="https://help.ft.com/contact/"> FT Customer Care</a>
+		Please note we cannot guarantee delivery of the newspaper to a specific location on your property, which also includes delivery to a specific floor/suite in a building. US Federal Law prohibits delivery of newspapers into a mailbox, except via a USPS mail carrier. If you prefer delivery to a mailbox, please either select the &quot;PO Box&quot; delivery option from the top of this form, or contact
+		&nbsp;<a href="https://help.ft.com/contact/">FT Customer Care.</a>
 	</span>,
 	CAN: <span className="o-forms-title__prompt">
-		Please note we cannot guarantee delivery of the newspaper to a specific location on your property, which also includes delivery to a specific floor/suite in a building. If you prefer delivery by Canada Post, please either select the &quot;PO Box&quot; delivery option from the top of this form, or contact.
-		<a href="https://help.ft.com/contact/"> FT Customer Care</a>
+		Please note we cannot guarantee delivery of the newspaper to a specific location on your property, which also includes delivery to a specific floor/suite in a building. If you prefer delivery by Canada Post, please either select the &quot;PO Box&quot; delivery option from the top of this form, or contact
+		&nbsp;<a href="https://help.ft.com/contact/">FT Customer Care.</a>
 	</span>,
 };
 
@@ -33,8 +33,8 @@ export function DeliveryInstructions ({
 		{ 'o-forms-input--invalid': hasError },
 	]);
 
-	const extraInstruction = country === 'GBR' ? '' : '\u000a- Special handling i.e. place in plastic bag';
-	const defaultPlaceholder = `Enter instructions ${maxlength && `(Max. ${maxlength} characters)`}:\u000a- Door colour, letterbox location\u000a- Placement i.e. letterbox delivery${extraInstruction}` ;
+	const extraInstruction = country === 'GBR' ? '' : '\u000a- Special handling, e.g. place in plastic bag, 24/7 security on reception';
+	const defaultPlaceholder = `Enter instructions ${maxlength && `(Max. ${maxlength} characters)`}:\u000a- Door colour, driveway signage\u000a- Cross street${extraInstruction}` ;
 
 	const textAreaProps = {
 		id: inputId,

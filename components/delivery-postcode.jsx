@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 const postcodeLabel = {
 	USA: 'Zip Code',
-	CAN: 'postal code',
+	CAN: 'Postal Code',
 };
 
 export function DeliveryPostcode ({
@@ -46,7 +46,7 @@ export function DeliveryPostcode ({
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">
-					Delivery <span data-reference="postcode">{postcodeReference}</span>
+					<span data-reference="postcode">{postcodeReference}</span>
 				</span>
 			</span>
 

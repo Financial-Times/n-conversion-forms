@@ -57,4 +57,10 @@ describe('DeliveryAddress', () => {
 
 		expect(component.find('#deliveryAddressFields').hasClass('ncf__hidden')).toBe(true);
 	});
+
+	it('renders with country different than default', () => {
+		const props = { country: 'USA' };
+
+		expect(DeliveryAddress).toRenderCorrectly(props);
+	});
 });
