@@ -11,3 +11,10 @@ Basic.args = {
 	currentPackage: 'Premium Digital',
 	changePackageUrl: 'https://ft.com/products',
 };
+
+export const WithPackageDescription = (args) => <PackageChange {...args} />;
+WithPackageDescription.args = {
+	currentPackage: 'Premium Digital',
+	changePackageUrl: 'https://ft.com/products',
+	packageDescription: 'Personalised email briefings and alerts',
+};

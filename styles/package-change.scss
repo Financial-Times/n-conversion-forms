@@ -12,5 +12,17 @@
 			grid-template-columns: 1fr min-content;
 			align-items: center;
 		}
+
+		&__content {
+			padding: 0.5em 0;
+
+			p {
+				margin: 0.5em 0;
+			}
+
+			&__description {
+				@include oTypographySans($scale: -1);
+			}
+		}
 	}
 }
