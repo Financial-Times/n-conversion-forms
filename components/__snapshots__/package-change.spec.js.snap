@@ -92,7 +92,7 @@ exports[`PackageChange render with defaults 1`] = `
 </div>
 `;
 
-exports[`PackageChange renders with introtext 1`] = `
+exports[`PackageChange renders with description 1`] = `
 <div class="ncf__package-change">
   <div class="ncf__package-change__package">
     <div class="ncf__package-change__content">
@@ -102,7 +102,7 @@ exports[`PackageChange renders with introtext 1`] = `
           Trial
         </span>
       </p>
-      <p class="ncf__package-change__content__introtext">
+      <p class="ncf__package-change__content__description">
         Personalised email briefings and alerts
       </p>
     </div>

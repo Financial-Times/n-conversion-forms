@@ -12,9 +12,9 @@ Basic.args = {
 	changePackageUrl: 'https://ft.com/products',
 };
 
-export const WithIntroText = (args) => <PackageChange {...args} />;
-WithIntroText.args = {
+export const WithPackageDescription = (args) => <PackageChange {...args} />;
+WithPackageDescription.args = {
 	currentPackage: 'Premium Digital',
 	changePackageUrl: 'https://ft.com/products',
-	introText: 'Personalised email briefings and alerts',
+	packageDescription: 'Personalised email briefings and alerts',
 };
