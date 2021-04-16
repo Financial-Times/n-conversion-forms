@@ -27,4 +27,10 @@ describe('DeliveryCity', () => {
 
 		expect(DeliveryCity).toRenderCorrectly(props);
 	});
+
+	it('renders with country different than default', () => {
+		const props = { country: 'USA' };
+
+		expect(DeliveryCity).toRenderCorrectly(props);
+	});
 });

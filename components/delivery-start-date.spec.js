@@ -57,4 +57,10 @@ describe('DeliveryStartDate', () => {
 
 		expect(DeliveryStartDate).toRenderCorrectly(props);
 	});
+
+	it('renders with country different than default', () => {
+		const props = { country: 'USA' };
+
+		expect(DeliveryStartDate).toRenderCorrectly(props);
+	});
 });

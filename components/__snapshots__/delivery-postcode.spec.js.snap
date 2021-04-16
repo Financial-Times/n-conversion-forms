@@ -8,7 +8,6 @@ exports[`Delivery Postcode render a disable input 1`] = `
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
-      Delivery
       <span data-reference="postcode">
         postcode
       </span>
@@ -46,7 +45,6 @@ exports[`Delivery Postcode render a postcode input with a label set as Zip Code 
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
-      Delivery
       <span data-reference="postcode">
         Zip Code
       </span>
@@ -83,7 +81,6 @@ exports[`Delivery Postcode render a postcode input with a label set as Zip Code 
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
-      Delivery
       <span data-reference="postcode">
         Zip Code
       </span>
@@ -120,9 +117,8 @@ exports[`Delivery Postcode render a postcode input with a label set as postal co
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
-      Delivery
       <span data-reference="postcode">
-        postal code
+        Postal Code
       </span>
     </span>
   </span>
@@ -130,7 +126,7 @@ exports[`Delivery Postcode render a postcode input with a label set as postal co
     <input type="text"
            id="deliveryPostcode"
            name="deliveryPostcode"
-           placeholder="Enter your postal code"
+           placeholder="Enter your Postal Code"
            autocomplete="postal-code"
            data-trackable="delivery-postcode"
            aria-required="true"
@@ -141,7 +137,7 @@ exports[`Delivery Postcode render a postcode input with a label set as postal co
     <span class="o-forms-input__error">
       Please enter a valid
       <span data-reference="postcode">
-        postal code
+        Postal Code
       </span>
       .
     </span>
@@ -157,7 +153,6 @@ exports[`Delivery Postcode render a postcode input with a label set as postcode 
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
-      Delivery
       <span data-reference="postcode">
         postcode
       </span>
@@ -194,7 +189,6 @@ exports[`Delivery Postcode render a postcode input with default label 1`] = `
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
-      Delivery
       <span data-reference="postcode">
         postcode
       </span>
@@ -231,7 +225,6 @@ exports[`Delivery Postcode render different styles 1`] = `
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
-      Delivery
       <span data-reference="postcode">
         postcode
       </span>
@@ -268,7 +261,6 @@ exports[`Delivery Postcode render with link to change the value 1`] = `
 >
   <span class="o-forms-title">
     <span class="o-forms-title__main">
-      Delivery
       <span data-reference="postcode">
         Zip Code
       </span>

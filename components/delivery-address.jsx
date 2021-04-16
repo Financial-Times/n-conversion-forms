@@ -10,6 +10,7 @@ export function DeliveryAddress ({
 	line3 = '',
 	isDisabled = false,
 	isHidden = false,
+	country = 'GBR'
 }) {
 	const divClassNames = classNames([{ ncf__hidden: isHidden }]);
 
@@ -18,6 +19,12 @@ export function DeliveryAddress ({
 		'o-forms-input--text',
 		{ 'o-forms-input--invalid': hasError },
 	]);
+
+	const addressLine1Placeholder = {
+		GBR: 'e.g. 10 Elm Street',
+		USA: 'e.g. 10 Elm St.',
+		CAN: 'e.g. 36 Poirier Blvd.'
+	};
 
 	return (
 		<div id={fieldId} data-validate="required" className={divClassNames}>
@@ -35,7 +42,7 @@ export function DeliveryAddress ({
 						name="deliveryAddressLine1"
 						data-trackable="field-deliveryAddressLine1"
 						autoComplete="address-line1"
-						placeholder="e.g. 10 Elm Street"
+						placeholder={addressLine1Placeholder[country]}
 						maxLength={50}
 						aria-required="true"
 						required
@@ -45,6 +52,27 @@ export function DeliveryAddress ({
 					<span className="o-forms-input__error">
 						Please enter a valid address
 					</span>
+				</span>
+			</label>
+			<label
+				className="o-forms-field o-forms-field--optional"
+				htmlFor="deliveryAddressLine3"
+			>
+				<span className="o-forms-title">
+					<span className="o-forms-title__main">Apt/Floor/Suite</span>
+				</span>
+				<span className={inputWrapperClassNames}>
+					<input
+						type="text"
+						id="deliveryAddressLine3"
+						name="deliveryAddressLine3"
+						data-trackable="field-deliveryAddressLine3"
+						autoComplete="address-line3"
+						placeholder="e.g. Apt. 1"
+						maxLength={50}
+						disabled={isDisabled}
+						defaultValue={line3}
+					/>
 				</span>
 			</label>
 			<label
@@ -61,31 +89,10 @@ export function DeliveryAddress ({
 						name="deliveryAddressLine2"
 						data-trackable="field-deliveryAddressLine2"
 						autoComplete="address-line2"
-						placeholder="e.g. Apartment 1"
-						maxLength={50}
-						disabled={isDisabled}
-						defaultValue={line2}
-					/>
-				</span>
-			</label>
-			<label
-				className="o-forms-field o-forms-field--optional"
-				htmlFor="deliveryAddressLine3"
-			>
-				<span className="o-forms-title">
-					<span className="o-forms-title__main">Address line 3</span>
-				</span>
-				<span className={inputWrapperClassNames}>
-					<input
-						type="text"
-						id="deliveryAddressLine3"
-						name="deliveryAddressLine3"
-						data-trackable="field-deliveryAddressLine3"
-						autoComplete="address-line3"
 						placeholder=""
 						maxLength={50}
 						disabled={isDisabled}
-						defaultValue={line3}
+						defaultValue={line2}
 					/>
 				</span>
 			</label>
@@ -101,4 +108,5 @@ DeliveryAddress.propTypes = {
 	line3: PropTypes.string,
 	isDisabled: PropTypes.bool,
 	isHidden: PropTypes.bool,
+	country: PropTypes.oneOf(['GBR', 'USA', 'CAN']),
 };
