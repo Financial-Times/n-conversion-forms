@@ -85,7 +85,7 @@ const deliveryOptionMessages = [
 		flightMarket: false,
 		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
 		title: 'Hand delivery',
-		description: 'Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: Your FT Weekend will be delivered on Sunday and your Monday edition will be delivered on Tuesday with the Tuesday\'s edition.',
+		description: 'Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: Your FT Weekend will be delivered on Sunday or Monday.'
 	},
 	{
 		deliveryFrequency: [FIVE_DAYS_WEEK_DELIVERY_FREQ, SIX_DAYS_WEEK_DELIVERY_FREQ],
