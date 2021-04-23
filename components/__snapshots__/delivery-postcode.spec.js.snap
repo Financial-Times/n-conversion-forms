@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Delivery Postcode render a disable input 1`] = `
+exports[`Delivery Postcode renders a disable input 1`] = `
 <label id="deliveryPostcodeField"
        class="o-forms-field"
        data-validate="required"
@@ -9,7 +9,7 @@ exports[`Delivery Postcode render a disable input 1`] = `
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       <span data-reference="postcode">
-        postcode
+        Postcode
       </span>
     </span>
   </span>
@@ -17,7 +17,7 @@ exports[`Delivery Postcode render a disable input 1`] = `
     <input type="text"
            id="deliveryPostcode"
            name="deliveryPostcode"
-           placeholder="Enter your postcode"
+           placeholder="Enter your Postcode"
            autocomplete="postal-code"
            data-trackable="delivery-postcode"
            aria-required="true"
@@ -29,7 +29,7 @@ exports[`Delivery Postcode render a disable input 1`] = `
     <span class="o-forms-input__error">
       Please enter a valid
       <span data-reference="postcode">
-        postcode
+        Postcode
       </span>
       .
     </span>
@@ -37,7 +37,43 @@ exports[`Delivery Postcode render a disable input 1`] = `
 </label>
 `;
 
-exports[`Delivery Postcode render a postcode input with a label set as Zip Code 1`] = `
+exports[`Delivery Postcode renders a postcode input with a label set as Postcode 1`] = `
+<label id="deliveryPostcodeField"
+       class="o-forms-field"
+       data-validate="required"
+       for="deliveryPostcode"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      <span data-reference="postcode">
+        Postcode
+      </span>
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="text"
+           id="deliveryPostcode"
+           name="deliveryPostcode"
+           placeholder="Enter your Postcode"
+           autocomplete="postal-code"
+           data-trackable="delivery-postcode"
+           aria-required="true"
+           required
+           pattern="whatever"
+           value
+    >
+    <span class="o-forms-input__error">
+      Please enter a valid
+      <span data-reference="postcode">
+        Postcode
+      </span>
+      .
+    </span>
+  </span>
+</label>
+`;
+
+exports[`Delivery Postcode renders a postcode input with a label set as Zip Code 1`] = `
 <label id="deliveryPostcodeField"
        class="o-forms-field"
        data-validate="required"
@@ -73,7 +109,7 @@ exports[`Delivery Postcode render a postcode input with a label set as Zip Code 
 </label>
 `;
 
-exports[`Delivery Postcode render a postcode input with a label set as Zip Code with USA in lower case 1`] = `
+exports[`Delivery Postcode renders a postcode input with a label set as Zip Code with USA in lower case 1`] = `
 <label id="deliveryPostcodeField"
        class="o-forms-field"
        data-validate="required"
@@ -109,7 +145,7 @@ exports[`Delivery Postcode render a postcode input with a label set as Zip Code 
 </label>
 `;
 
-exports[`Delivery Postcode render a postcode input with a label set as postal code 1`] = `
+exports[`Delivery Postcode renders a postcode input with a label set as postal code 1`] = `
 <label id="deliveryPostcodeField"
        class="o-forms-field"
        data-validate="required"
@@ -145,7 +181,7 @@ exports[`Delivery Postcode render a postcode input with a label set as postal co
 </label>
 `;
 
-exports[`Delivery Postcode render a postcode input with a label set as postcode 1`] = `
+exports[`Delivery Postcode renders a postcode input with default label 1`] = `
 <label id="deliveryPostcodeField"
        class="o-forms-field"
        data-validate="required"
@@ -154,7 +190,7 @@ exports[`Delivery Postcode render a postcode input with a label set as postcode 
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       <span data-reference="postcode">
-        postcode
+        Postcode
       </span>
     </span>
   </span>
@@ -162,7 +198,7 @@ exports[`Delivery Postcode render a postcode input with a label set as postcode 
     <input type="text"
            id="deliveryPostcode"
            name="deliveryPostcode"
-           placeholder="Enter your postcode"
+           placeholder="Enter your Postcode"
            autocomplete="postal-code"
            data-trackable="delivery-postcode"
            aria-required="true"
@@ -173,7 +209,7 @@ exports[`Delivery Postcode render a postcode input with a label set as postcode 
     <span class="o-forms-input__error">
       Please enter a valid
       <span data-reference="postcode">
-        postcode
+        Postcode
       </span>
       .
     </span>
@@ -181,43 +217,7 @@ exports[`Delivery Postcode render a postcode input with a label set as postcode 
 </label>
 `;
 
-exports[`Delivery Postcode render a postcode input with default label 1`] = `
-<label id="deliveryPostcodeField"
-       class="o-forms-field"
-       data-validate="required"
-       for="deliveryPostcode"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main">
-      <span data-reference="postcode">
-        postcode
-      </span>
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="text"
-           id="deliveryPostcode"
-           name="deliveryPostcode"
-           placeholder="Enter your postcode"
-           autocomplete="postal-code"
-           data-trackable="delivery-postcode"
-           aria-required="true"
-           required
-           pattern="whatever"
-           value
-    >
-    <span class="o-forms-input__error">
-      Please enter a valid
-      <span data-reference="postcode">
-        postcode
-      </span>
-      .
-    </span>
-  </span>
-</label>
-`;
-
-exports[`Delivery Postcode render different styles 1`] = `
+exports[`Delivery Postcode renders different styles 1`] = `
 <label id="deliveryPostcodeField"
        class="o-forms-field ncf__hidden"
        data-validate="required"
@@ -226,7 +226,7 @@ exports[`Delivery Postcode render different styles 1`] = `
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       <span data-reference="postcode">
-        postcode
+        Postcode
       </span>
     </span>
   </span>
@@ -234,7 +234,7 @@ exports[`Delivery Postcode render different styles 1`] = `
     <input type="text"
            id="deliveryPostcode"
            name="deliveryPostcode"
-           placeholder="Enter your postcode"
+           placeholder="Enter your Postcode"
            autocomplete="postal-code"
            data-trackable="delivery-postcode"
            aria-required="true"
@@ -245,7 +245,7 @@ exports[`Delivery Postcode render different styles 1`] = `
     <span class="o-forms-input__error">
       Please enter a valid
       <span data-reference="postcode">
-        postcode
+        Postcode
       </span>
       .
     </span>
@@ -253,7 +253,7 @@ exports[`Delivery Postcode render different styles 1`] = `
 </label>
 `;
 
-exports[`Delivery Postcode render with link to change the value 1`] = `
+exports[`Delivery Postcode renders with link to change the value 1`] = `
 <label id="deliveryPostcodeField"
        class="o-forms-field"
        data-validate="required"
