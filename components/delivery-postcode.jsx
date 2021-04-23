@@ -17,7 +17,7 @@ export function DeliveryPostcode ({
 	additionalFieldInformation,
 	changePostcodeUrl = '',
 }) {
-	const postcodeReference = postcodeLabel[country.toUpperCase()] || 'postcode';
+	const postcodeReference = postcodeLabel[country.toUpperCase()] || 'Postcode';
 
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
