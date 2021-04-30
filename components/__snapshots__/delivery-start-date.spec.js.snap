@@ -7,7 +7,9 @@ exports[`DeliveryStartDate renders with a custom date 1`] = `
        for="deliveryStartDate"
 >
   <span class="o-forms-title">
-    <span class="o-forms-title__main">
+    <span class="o-forms-title__main"
+          id="start-date-picker-title-span"
+    >
       Delivery start date
     </span>
     <span class="o-forms-title__prompt">
@@ -46,7 +48,9 @@ exports[`DeliveryStartDate renders with a custom input max value 1`] = `
        for="deliveryStartDate"
 >
   <span class="o-forms-title">
-    <span class="o-forms-title__main">
+    <span class="o-forms-title__main"
+          id="start-date-picker-title-span"
+    >
       Delivery start date
     </span>
     <span class="o-forms-title__prompt">
@@ -85,7 +89,9 @@ exports[`DeliveryStartDate renders with a custom input min value 1`] = `
        for="deliveryStartDate"
 >
   <span class="o-forms-title">
-    <span class="o-forms-title__main">
+    <span class="o-forms-title__main"
+          id="start-date-picker-title-span"
+    >
       Delivery start date
     </span>
     <span class="o-forms-title__prompt">
@@ -124,7 +130,9 @@ exports[`DeliveryStartDate renders with a custom input value 1`] = `
        for="deliveryStartDate"
 >
   <span class="o-forms-title">
-    <span class="o-forms-title__main">
+    <span class="o-forms-title__main"
+          id="start-date-picker-title-span"
+    >
       Delivery start date
     </span>
     <span class="o-forms-title__prompt">
@@ -162,7 +170,9 @@ exports[`DeliveryStartDate renders with a disabled input 1`] = `
        for="deliveryStartDate"
 >
   <span class="o-forms-title">
-    <span class="o-forms-title__main">
+    <span class="o-forms-title__main"
+          id="start-date-picker-title-span"
+    >
       Delivery start date
     </span>
     <span class="o-forms-title__prompt">
@@ -201,7 +211,9 @@ exports[`DeliveryStartDate renders with an error 1`] = `
        for="deliveryStartDate"
 >
   <span class="o-forms-title">
-    <span class="o-forms-title__main">
+    <span class="o-forms-title__main"
+          id="start-date-picker-title-span"
+    >
       Delivery start date
     </span>
     <span class="o-forms-title__prompt">
@@ -239,7 +251,9 @@ exports[`DeliveryStartDate renders with appropriate start description example wh
        for="deliveryStartDate"
 >
   <span class="o-forms-title">
-    <span class="o-forms-title__main">
+    <span class="o-forms-title__main"
+          id="start-date-picker-title-span"
+    >
       Delivery start date
     </span>
     <span class="o-forms-title__prompt">
@@ -277,7 +291,9 @@ exports[`DeliveryStartDate renders with appropriate start message when isAddress
        for="deliveryStartDate"
 >
   <span class="o-forms-title">
-    <span class="o-forms-title__main">
+    <span class="o-forms-title__main"
+          id="start-date-picker-title-span"
+    >
       Delivery start date
     </span>
     <span class="o-forms-title__prompt">
@@ -315,7 +331,9 @@ exports[`DeliveryStartDate renders with country different than default 1`] = `
        for="deliveryStartDate"
 >
   <span class="o-forms-title">
-    <span class="o-forms-title__main">
+    <span class="o-forms-title__main"
+          id="start-date-picker-title-span"
+    >
       Delivery start date
     </span>
     <span class="o-forms-title__prompt">
@@ -350,7 +368,9 @@ exports[`DeliveryStartDate renders with default props 1`] = `
        for="deliveryStartDate"
 >
   <span class="o-forms-title">
-    <span class="o-forms-title__main">
+    <span class="o-forms-title__main"
+          id="start-date-picker-title-span"
+    >
       Delivery start date
     </span>
     <span class="o-forms-title__prompt">
