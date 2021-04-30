@@ -27,6 +27,26 @@ class DeliveryStartDate {
 				'Please include the delivery start date partial on the page.'
 			);
 		}
+
+		// We need to see if browser supports date field and offer correct format
+		// to use if datepicker isn't available
+		// from https://stackoverflow.com/questions/10193294/how-can-i-tell-if-a-browser-supports-input-type-date
+
+		this.$deliveryStartDateTitleSpan = element.querySelector('#start-date-picker-title-span');
+
+		const checkDateInput = () => {
+			let input = element.createElement('input');
+			input.setAttribute('type', 'date');
+
+			let notADateValue = 'not-a-date';
+			input.setAttribute('value', notADateValue);
+
+			return input.value !== notADateValue;
+		};
+
+		if (checkDateInput() === false) {
+			this.$deliveryStartDateTitleSpan.innerHTML += ' (YYYY-MM-DD)';
+		}
 	}
 
 	/**
