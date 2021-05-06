@@ -1,22 +1,23 @@
 @mixin ncfGoogleSignIn() {
 	.google_button {
-		background-color: #4285f4;
+		background-color: #1A73E8;
 		color: #ffffff;
 		display: inline-block;
 		width: 100%;
 		text-align: center;
-		font-size: 16px;
-		font-family: Roboto;
+		vertical-align: middle;
+		white-space: nowrap;
+		font-size: 15px;
+		font-family: Roboto,arial,sans-serif;
 		text-decoration: none;
-		padding-top: 8px;
-		padding-bottom: 8px;
 		font-weight: 500;
 		letter-spacing: 0.21px;
-		border-radius: 5px;
-
-		@include oGridRespondTo($from: S) {
-			width: 240px;
-		}
+		border-radius: 4px;
+		height: 36px;
+		animation: fadeIn 0.32s;
+		outline: none;
+		overflow: hidden;
+		line-height: 36px;
 
 		&:hover {
 			color: #ffffff;
