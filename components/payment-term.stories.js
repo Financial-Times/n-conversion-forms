@@ -8,9 +8,11 @@ export default {
 };
 
 export const Basic = (args) => (
-	<Fieldset>
-		<PaymentTerm {...args} />
-	</Fieldset>
+	<div className="ncf">
+		<Fieldset>
+			<PaymentTerm {...args} />
+		</Fieldset>
+	</div>
 );
 Basic.args = {
 	options: [
@@ -33,7 +35,7 @@ Basic.args = {
 	],
 };
 
-export const FixedTermOffer = (args) => <Fieldset><PaymentTerm {...args} subscriptionDuration='P3M' /></Fieldset>;
+export const FixedTermOffer = (args) => <div className="ncf"><Fieldset><PaymentTerm {...args} subscriptionDuration='P3M' /></Fieldset></div>;
 FixedTermOffer.args = {
 	options: [
 		{
