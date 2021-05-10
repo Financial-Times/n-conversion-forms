@@ -390,7 +390,10 @@
 		}
 	}
 
-	@include bigRadioButton($className: '.ncf__delivery-option');
+	&__delivery-option {
+		@include bigRadioButton($className: '.ncf__delivery-option');
+	}
+
 	&__delivery-option--single {
 		.ncf__delivery-option__label {
 			// We need to hide the radio button if this the sole delivery option
