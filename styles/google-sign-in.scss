@@ -1,0 +1,26 @@
+@mixin ncfGoogleSignIn() {
+	.google_button {
+		background-color: #1A73E8;
+		color: #ffffff;
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+		vertical-align: middle;
+		white-space: nowrap;
+		font-size: 15px;
+		font-family: Roboto,arial,sans-serif;
+		text-decoration: none;
+		font-weight: 500;
+		letter-spacing: 0.21px;
+		border-radius: 4px;
+		height: 36px;
+		animation: fadeIn 0.32s;
+		outline: none;
+		overflow: hidden;
+		line-height: 36px;
+
+		&:hover {
+			color: #ffffff;
+		}
+	}
+}

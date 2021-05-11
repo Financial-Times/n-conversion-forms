@@ -1,8 +1,9 @@
 @import './shared';
 
 @mixin ncfPaymentTerm() {
-	@include bigRadioButton($className: '.ncf__payment-term');
 	&__payment-term {
+		@include bigRadioButton($className: '.ncf__payment-term');
+
 		&__item {
 			position: relative;
 			margin-bottom: oSpacingByName('s3');

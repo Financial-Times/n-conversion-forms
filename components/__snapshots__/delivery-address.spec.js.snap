@@ -44,7 +44,7 @@ exports[`DeliveryAddress renders default props 1`] = `
              name="deliveryAddressLine2"
              data-trackable="field-deliveryAddressLine2"
              autocomplete="address-line2"
-             placeholder="e.g. Apartment 1"
+             placeholder
              maxlength="50"
              value
       >
@@ -64,7 +64,7 @@ exports[`DeliveryAddress renders default props 1`] = `
              name="deliveryAddressLine3"
              data-trackable="field-deliveryAddressLine3"
              autocomplete="address-line3"
-             placeholder
+             placeholder="e.g. Apt. 1"
              maxlength="50"
              value
       >
@@ -117,7 +117,7 @@ exports[`DeliveryAddress renders with an error 1`] = `
              name="deliveryAddressLine2"
              data-trackable="field-deliveryAddressLine2"
              autocomplete="address-line2"
-             placeholder="e.g. Apartment 1"
+             placeholder
              maxlength="50"
              value
       >
@@ -137,6 +137,79 @@ exports[`DeliveryAddress renders with an error 1`] = `
              name="deliveryAddressLine3"
              data-trackable="field-deliveryAddressLine3"
              autocomplete="address-line3"
+             placeholder="e.g. Apt. 1"
+             maxlength="50"
+             value
+      >
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DeliveryAddress renders with country different than default 1`] = `
+<div id="deliveryAddressFields"
+     data-validate="required"
+     class
+>
+  <label class="o-forms-field ncf__validation-error"
+         for="deliveryAddressLine1"
+  >
+    <span class="o-forms-title">
+      <span class="o-forms-title__main">
+        Address line 1
+      </span>
+    </span>
+    <span class="o-forms-input o-forms-input--text">
+      <input type="text"
+             id="deliveryAddressLine1"
+             name="deliveryAddressLine1"
+             data-trackable="field-deliveryAddressLine1"
+             autocomplete="address-line1"
+             placeholder="e.g. 10 Elm St."
+             maxlength="50"
+             aria-required="true"
+             required
+             value
+      >
+      <span class="o-forms-input__error">
+        Please enter a valid address
+      </span>
+    </span>
+  </label>
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine3"
+  >
+    <span class="o-forms-title">
+      <span class="o-forms-title__main">
+        Apt/Floor/Suite
+      </span>
+    </span>
+    <span class="o-forms-input o-forms-input--text">
+      <input type="text"
+             id="deliveryAddressLine3"
+             name="deliveryAddressLine3"
+             data-trackable="field-deliveryAddressLine3"
+             autocomplete="address-line3"
+             placeholder="e.g. Apt. 1"
+             maxlength="50"
+             value
+      >
+    </span>
+  </label>
+  <label class="o-forms-field o-forms-field--optional"
+         for="deliveryAddressLine2"
+  >
+    <span class="o-forms-title">
+      <span class="o-forms-title__main">
+        Address line 2
+      </span>
+    </span>
+    <span class="o-forms-input o-forms-input--text">
+      <input type="text"
+             id="deliveryAddressLine2"
+             name="deliveryAddressLine2"
+             data-trackable="field-deliveryAddressLine2"
+             autocomplete="address-line2"
              placeholder
              maxlength="50"
              value
@@ -190,7 +263,7 @@ exports[`DeliveryAddress renders with custom line 1 value 1`] = `
              name="deliveryAddressLine2"
              data-trackable="field-deliveryAddressLine2"
              autocomplete="address-line2"
-             placeholder="e.g. Apartment 1"
+             placeholder
              maxlength="50"
              value
       >
@@ -210,7 +283,7 @@ exports[`DeliveryAddress renders with custom line 1 value 1`] = `
              name="deliveryAddressLine3"
              data-trackable="field-deliveryAddressLine3"
              autocomplete="address-line3"
-             placeholder
+             placeholder="e.g. Apt. 1"
              maxlength="50"
              value
       >
@@ -263,7 +336,7 @@ exports[`DeliveryAddress renders with custom line 2 value 1`] = `
              name="deliveryAddressLine2"
              data-trackable="field-deliveryAddressLine2"
              autocomplete="address-line2"
-             placeholder="e.g. Apartment 1"
+             placeholder
              maxlength="50"
              value="Line 2 text"
       >
@@ -283,7 +356,7 @@ exports[`DeliveryAddress renders with custom line 2 value 1`] = `
              name="deliveryAddressLine3"
              data-trackable="field-deliveryAddressLine3"
              autocomplete="address-line3"
-             placeholder
+             placeholder="e.g. Apt. 1"
              maxlength="50"
              value
       >
@@ -336,7 +409,7 @@ exports[`DeliveryAddress renders with custom line 3 value 1`] = `
              name="deliveryAddressLine2"
              data-trackable="field-deliveryAddressLine2"
              autocomplete="address-line2"
-             placeholder="e.g. Apartment 1"
+             placeholder
              maxlength="50"
              value
       >
@@ -356,7 +429,7 @@ exports[`DeliveryAddress renders with custom line 3 value 1`] = `
              name="deliveryAddressLine3"
              data-trackable="field-deliveryAddressLine3"
              autocomplete="address-line3"
-             placeholder
+             placeholder="e.g. Apt. 1"
              maxlength="50"
              value="Line 3 text"
       >
@@ -410,7 +483,7 @@ exports[`DeliveryAddress renders with disabled input elements 1`] = `
              name="deliveryAddressLine2"
              data-trackable="field-deliveryAddressLine2"
              autocomplete="address-line2"
-             placeholder="e.g. Apartment 1"
+             placeholder
              maxlength="50"
              disabled
              value
@@ -431,7 +504,7 @@ exports[`DeliveryAddress renders with disabled input elements 1`] = `
              name="deliveryAddressLine3"
              data-trackable="field-deliveryAddressLine3"
              autocomplete="address-line3"
-             placeholder
+             placeholder="e.g. Apt. 1"
              maxlength="50"
              disabled
              value
@@ -485,7 +558,7 @@ exports[`DeliveryAddress renders with hidden input elements 1`] = `
              name="deliveryAddressLine2"
              data-trackable="field-deliveryAddressLine2"
              autocomplete="address-line2"
-             placeholder="e.g. Apartment 1"
+             placeholder
              maxlength="50"
              value
       >
@@ -505,7 +578,7 @@ exports[`DeliveryAddress renders with hidden input elements 1`] = `
              name="deliveryAddressLine3"
              data-trackable="field-deliveryAddressLine3"
              autocomplete="address-line3"
-             placeholder
+             placeholder="e.g. Apt. 1"
              maxlength="50"
              value
       >

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function DeliveryStartDate({
+export function DeliveryStartDate ({
 	hasError = false,
 	date = '',
 	value = '',
@@ -11,6 +11,7 @@ export function DeliveryStartDate({
 	isDisabled = false,
 	isAddressUpdate = false,
 	isWeekendOnly = false,
+	country = 'GBR',
 }) {
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
@@ -40,6 +41,11 @@ export function DeliveryStartDate({
 		? 'if you select a Sunday then we’ll start your deliveries on the following Saturday.'
 		: 'if you select a Sunday then we can start your supply on the Monday.';
 
+	const nbMessage = <p>
+		NB. This will be the closest date we can supply your newspaper based on
+		your selected date e.g. {startDescriptionExample}
+	</p>;
+
 	return (
 		<label
 			id="deliveryStartDateField"
@@ -48,7 +54,7 @@ export function DeliveryStartDate({
 			htmlFor={inputProps.id}
 		>
 			<span className="o-forms-title">
-				<span className="o-forms-title__main">Delivery start date</span>
+				<span className="o-forms-title__main" id="start-date-picker-title-span">Delivery start date</span>
 				<span className="o-forms-title__prompt">
 					Earliest available delivery date: {date}
 				</span>
@@ -65,10 +71,7 @@ export function DeliveryStartDate({
 				{startMessage} <strong className="js-start-date-text">{date}</strong>
 			</p>
 
-			<p>
-				NB. This will be the closest date we can supply your newspaper based on
-				your selected date e.g. {startDescriptionExample}
-			</p>
+			{country === 'GBR' && nbMessage}
 		</label>
 	);
 }
@@ -82,4 +85,5 @@ DeliveryStartDate.propTypes = {
 	isDisabled: PropTypes.bool,
 	isAddressUpdate: PropTypes.bool,
 	isWeekendOnly: PropTypes.bool,
+	country: PropTypes.oneOf(['GBR', 'USA', 'CAN']),
 };

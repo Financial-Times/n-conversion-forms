@@ -10,9 +10,10 @@ describe('DeliveryStartDate', () => {
 	let startDateContainer;
 	let startDateFieldStub;
 	let startDateTextStub;
+	let dateTestInput;
 
 	beforeEach(() => {
-		document = { querySelector: sandbox.stub().returns(false) };
+		document = { querySelector: sandbox.stub().returns(false), createElement: sandbox.stub().returns(false) };
 
 		startDateContainer = {
 			classList: { add: sandbox.stub(), remove: sandbox.stub() },
@@ -33,6 +34,12 @@ describe('DeliveryStartDate', () => {
 		document.querySelector
 			.withArgs('.js-start-date-text')
 			.returns(startDateTextStub);
+
+		dateTestInput = {
+			setAttribute: sandbox.stub(),
+		};
+
+		document.createElement.withArgs('input').returns(dateTestInput);
 	});
 
 	afterEach(() => {

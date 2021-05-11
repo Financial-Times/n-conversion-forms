@@ -6,6 +6,7 @@ export function Phone({
 	hasError = false,
 	isB2b = false,
 	isDisabled = false,
+	isRequired = true,
 	value = '',
 	pattern = '',
 	fieldId = 'primaryTelephoneField',
@@ -23,6 +24,11 @@ export function Phone({
 		{ 'o-forms-input--invalid': hasError },
 	]);
 
+	const fieldTitleClassName = classNames([
+		'o-forms-title',
+		{ 'o-forms-field--optional': !isRequired }
+	]);
+
 	return (
 		<label
 			id={fieldId}
@@ -30,7 +36,7 @@ export function Phone({
 			className="o-forms-field ncf__validation-error"
 			data-validate="required,number"
 		>
-			<span className="o-forms-title">
+			<span className={fieldTitleClassName}>
 				<span className="o-forms-title__main">{labelText}</span>
 				<span className="o-forms-title__prompt">
 					5 to 15 characters (numbers only)
@@ -47,8 +53,8 @@ export function Phone({
 					maxLength="15"
 					data-trackable={dataTrackable}
 					aria-describedby={descriptionId}
-					aria-required="true"
-					required
+					aria-required={isRequired}
+					required={isRequired}
 					pattern={pattern}
 					disabled={isDisabled}
 					defaultValue={value}

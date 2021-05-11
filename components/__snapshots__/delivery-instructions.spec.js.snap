@@ -11,10 +11,11 @@ exports[`DeliveryInstructions renders with a CAN span message 1`] = `
       Delivery instructions
     </span>
     <span class="o-forms-title__prompt">
-      Please note we cannot guarantee delivery of the newspaper to a specific location on your property, which also includes delivery to a specific floor/suite in a building. If you prefer delivery by Canada Post, please either select the &quot;PO Box&quot; delivery option from the top of this form, or contact.
+      Please note we cannot guarantee delivery of the newspaper to a specific location on your property, which also includes delivery to a specific floor/suite in a building. If you prefer delivery by Canada Post, please either select the &quot;PO Box&quot; delivery option from the top of this form, or contact  
       <a href="https://help.ft.com/contact/">
         FT Customer Care
       </a>
+      .
     </span>
   </span>
   <span class="o-forms-input o-forms-input--textarea">
@@ -39,10 +40,11 @@ exports[`DeliveryInstructions renders with a USA span message 1`] = `
       Delivery instructions
     </span>
     <span class="o-forms-title__prompt">
-      Please note we cannot guarantee delivery of the newspaper to a specific location on your property, which also includes delivery to a specific floor/suite in a building. US Federal Law prohibits delivery of newspapers into a mailbox, except via a USPS mail carrier. If you prefer delivery to a mailbox, please either select the &quot;PO Box&quot; delivery option from the top of this form, or contact.
+      Please note we cannot guarantee delivery of the newspaper to a specific location on your property, which also includes delivery to a specific floor/suite in a building. US Federal Law prohibits delivery of newspapers into a mailbox, except via a USPS mail carrier. If you prefer delivery to a mailbox, please either select the &quot;PO Box&quot; delivery option from the top of this form, or contact  
       <a href="https://help.ft.com/contact/">
         FT Customer Care
       </a>
+      .
     </span>
   </span>
   <span class="o-forms-input o-forms-input--textarea">
@@ -70,7 +72,7 @@ exports[`DeliveryInstructions renders with a custom value 1`] = `
       For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
     </span>
     <span class="o-forms-title__prompt">
-      If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. If you do add them here you do so at your own risk as these will appear on your label.
+      Special characters including punctuation cannot be used in the Delivery instructions.
     </span>
   </span>
   <span class="o-forms-input o-forms-input--textarea">
@@ -99,7 +101,7 @@ exports[`DeliveryInstructions renders with a disabled input element 1`] = `
       For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
     </span>
     <span class="o-forms-title__prompt">
-      If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. If you do add them here you do so at your own risk as these will appear on your label.
+      Special characters including punctuation cannot be used in the Delivery instructions.
     </span>
   </span>
   <span class="o-forms-input o-forms-input--textarea">
@@ -128,7 +130,7 @@ exports[`DeliveryInstructions renders with an error 1`] = `
       For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
     </span>
     <span class="o-forms-title__prompt">
-      If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. If you do add them here you do so at your own risk as these will appear on your label.
+      Special characters including punctuation cannot be used in the Delivery instructions.
     </span>
   </span>
   <span class="o-forms-input o-forms-input--textarea o-forms-input--invalid">
@@ -156,7 +158,7 @@ exports[`DeliveryInstructions renders with default props 1`] = `
       For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
     </span>
     <span class="o-forms-title__prompt">
-      If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. If you do add them here you do so at your own risk as these will appear on your label.
+      Special characters including punctuation cannot be used in the Delivery instructions.
     </span>
   </span>
   <span class="o-forms-input o-forms-input--textarea">
@@ -184,7 +186,7 @@ exports[`DeliveryInstructions renders with maxlength 1`] = `
       For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
     </span>
     <span class="o-forms-title__prompt">
-      If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. If you do add them here you do so at your own risk as these will appear on your label.
+      Special characters including punctuation cannot be used in the Delivery instructions.
     </span>
   </span>
   <span class="o-forms-input o-forms-input--textarea">
@@ -213,7 +215,7 @@ exports[`DeliveryInstructions renders with rows 1`] = `
       For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
     </span>
     <span class="o-forms-title__prompt">
-      If your property requires security codes that will help our drivers deliver your newspaper safely, please do not add them here as they may be printed on your newspaper label. If you do add them here you do so at your own risk as these will appear on your label.
+      Special characters including punctuation cannot be used in the Delivery instructions.
     </span>
   </span>
   <span class="o-forms-input o-forms-input--textarea">

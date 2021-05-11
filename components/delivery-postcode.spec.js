@@ -4,16 +4,16 @@ import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-c
 expect.extend(expectToRenderCorrectly);
 
 describe('Delivery Postcode', () => {
-	it('render a postcode input with a label set as postcode', () => {
+	it('renders a postcode input with a label set as Postcode', () => {
 		const props = {
-			postcodeReference: 'postcode',
+			postcodeReference: 'Postcode',
 			pattern: 'whatever',
 		};
 
 		expect(DeliveryPostcode).toRenderCorrectly(props);
 	});
 
-	it('render a postcode input with a label set as Zip Code', () => {
+	it('renders a postcode input with a label set as Zip Code', () => {
 		const props = {
 			country: 'USA',
 			postcodeReference: 'Zip Code',
@@ -23,7 +23,7 @@ describe('Delivery Postcode', () => {
 		expect(DeliveryPostcode).toRenderCorrectly(props);
 	});
 
-	it('render a postcode input with a label set as Zip Code with USA in lower case', () => {
+	it('renders a postcode input with a label set as Zip Code with USA in lower case', () => {
 		const props = {
 			country: 'usa',
 			postcodeReference: 'Zip Code',
@@ -33,28 +33,28 @@ describe('Delivery Postcode', () => {
 		expect(DeliveryPostcode).toRenderCorrectly(props);
 	});
 
-	it('render a postcode input with a label set as postal code', () => {
+	it('renders a postcode input with a label set as postal code', () => {
 		const props = {
 			country: 'CAN',
-			postcodeReference: 'postal code',
+			postcodeReference: 'Postal Code',
 			pattern: 'whatever',
 		};
 
 		expect(DeliveryPostcode).toRenderCorrectly(props);
 	});
 
-	it('render a postcode input with default label', () => {
+	it('renders a postcode input with default label', () => {
 		const props = {
-			postcodeReference: 'postcode',
+			postcodeReference: 'Postcode',
 			pattern: 'whatever',
 		};
 
 		expect(DeliveryPostcode).toRenderCorrectly(props);
 	});
 
-	it('render a disable input', () => {
+	it('renders a disable input', () => {
 		const props = {
-			postcodeReference: 'postcode',
+			postcodeReference: 'Postcode',
 			pattern: 'whatever',
 			isDisabled: true,
 		};
@@ -62,9 +62,9 @@ describe('Delivery Postcode', () => {
 		expect(DeliveryPostcode).toRenderCorrectly(props);
 	});
 
-	it('render different styles', () => {
+	it('renders different styles', () => {
 		const props = {
-			postcodeReference: 'postcode',
+			postcodeReference: 'Postcode',
 			pattern: 'whatever',
 			hasError: true,
 			isHidden: true,
@@ -73,7 +73,7 @@ describe('Delivery Postcode', () => {
 		expect(DeliveryPostcode).toRenderCorrectly(props);
 	});
 
-	it('render with link to change the value', () => {
+	it('renders with link to change the value', () => {
 		const props = {
 			country: 'USA',
 			postcodeReference: 'Zip Code',

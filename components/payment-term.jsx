@@ -10,6 +10,7 @@ export function PaymentTerm({
 	fieldId = 'paymentTermField',
 	inputName = 'paymentTerm',
 	isPrintOrBundle = false,
+	isEpaper = false,
 	options = [],
 	isFixedTermOffer = false,
 	subscriptionDuration,
@@ -104,7 +105,7 @@ export function PaymentTerm({
 				'o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input',
 			...(option.selected && { defaultChecked: true }),
 		};
-		const showTrialCopyInTitle = option.isTrial && !isPrintOrBundle;
+		const showTrialCopyInTitle = option.isTrial && !isPrintOrBundle && !isEpaper;
 		const createDiscount = () => {
 			return (
 				option.discount && (
@@ -198,6 +199,7 @@ PaymentTerm.propTypes = {
 	fieldId: PropTypes.string,
 	inputName: PropTypes.string,
 	isPrintOrBundle: PropTypes.bool,
+	isEpaper: PropTypes.bool,
 	options: PropTypes.arrayOf(
 		PropTypes.shape({
 			discount: PropTypes.string,

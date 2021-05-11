@@ -2,12 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function BillingCity({
+export function BillingCity ({
 	hasError = false,
 	value = '',
 	isDisabled = false,
 	isHidden = false,
 }) {
+	const billingCityFieldClassNames = classNames([
+		'o-forms-field',
+		'ncf__validation-error',
+		{ ncf__hidden: isHidden },
+	]);
+
 	const inputWrapperClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
@@ -18,7 +24,7 @@ export function BillingCity({
 	return (
 		<label
 			id="billingCityField"
-			className="o-forms-field ncf__validation-error"
+			className={billingCityFieldClassNames}
 			data-validate="required"
 			htmlFor="billingCity"
 		>

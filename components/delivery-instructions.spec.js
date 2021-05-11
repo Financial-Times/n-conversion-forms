@@ -7,8 +7,8 @@ Enzyme.configure({ adapter: new Adapter() });
 
 const spanMessageByCountry = {
 	GBR: 'For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.',
-	USA: 'Please note we cannot guarantee delivery of the newspaper to a specific location on your property, which also includes delivery to a specific floor/suite in a building. US Federal Law prohibits delivery of newspapers into a mailbox, except via a USPS mail carrier. If you prefer delivery to a mailbox, please either select the "PO Box" delivery option from the top of this form, or contact. FT Customer Care',
-	CAN: 'Please note we cannot guarantee delivery of the newspaper to a specific location on your property, which also includes delivery to a specific floor/suite in a building. If you prefer delivery by Canada Post, please either select the "PO Box" delivery option from the top of this form, or contact. FT Customer Care',
+	USA: 'Please note we cannot guarantee delivery of the newspaper to a specific location on your property, which also includes delivery to a specific floor/suite in a building. US Federal Law prohibits delivery of newspapers into a mailbox, except via a USPS mail carrier. If you prefer delivery to a mailbox, please either select the "PO Box" delivery option from the top of this form, or contact  FT Customer Care.',
+	CAN: 'Please note we cannot guarantee delivery of the newspaper to a specific location on your property, which also includes delivery to a specific floor/suite in a building. If you prefer delivery by Canada Post, please either select the "PO Box" delivery option from the top of this form, or contact  FT Customer Care.',
 };
 
 expect.extend(expectToRenderCorrectly);
@@ -77,7 +77,7 @@ describe('DeliveryInstructions', () => {
 		const component = mount(DeliveryInstructions(props));
 
 		const element = component.find('.o-forms-title__prompt').first();
-		expect(element.text()).toBe(spanMessageByCountry[props.country]);
+		expect(element.text().replace(/\&nbsp;/g, '')).toBe(spanMessageByCountry[props.country]);
 	});
 
 	it('renders as with a CAN span message and check the text', () => {
@@ -86,6 +86,6 @@ describe('DeliveryInstructions', () => {
 		const component = mount(DeliveryInstructions(props));
 
 		const element = component.find('.o-forms-title__prompt').first();
-		expect(element.text()).toBe(spanMessageByCountry[props.country]);
+		expect(element.text().replace(/\&nbsp;/g, '')).toBe(spanMessageByCountry[props.country]);
 	});
 });

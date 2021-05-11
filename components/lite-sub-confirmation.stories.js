@@ -30,4 +30,5 @@ Basic.args = {
 		}
 	],
 	offerName: 'Standard',
+	subscriptionAmount: '$5',
 };
