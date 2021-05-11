@@ -11,7 +11,7 @@ export default {
 	},
 };
 
-export const Basic = (args) => <DeliveryOption {...args} />;
+export const Basic = (args) => <div className="ncf"><DeliveryOption {...args} /></div>;
 Basic.args = {
 	country: 'GBR',
 	options: [
@@ -30,7 +30,7 @@ Basic.args = {
 	],
 };
 
-export const US5or6DaysWeekDeliveryOptions = (args) => <DeliveryOption {...args} />;
+export const US5or6DaysWeekDeliveryOptions = (args) => <div className="ncf"><DeliveryOption {...args} /></div>;
 US5or6DaysWeekDeliveryOptions.args = {
 	options: [
 		{
@@ -52,7 +52,7 @@ US5or6DaysWeekDeliveryOptions.args = {
 	productCode: 'P2N6D',
 };
 
-export const USWeekendOnlyDeliveryOptions = (args) => <DeliveryOption {...args} />;
+export const USWeekendOnlyDeliveryOptions = (args) => <div className="ncf"><DeliveryOption {...args} /></div>;
 USWeekendOnlyDeliveryOptions.args = {
 	options: [
 		{
