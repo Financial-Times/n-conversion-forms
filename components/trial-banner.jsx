@@ -15,7 +15,7 @@ export function TrialBanner({ trialDuration = '' }) {
 			<p className="ncf__trial-banner-content">
 				Your free {durationMessage}FT.com trial
 				<img
-					src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2Fassets%2Fb2b%2Fmacron-desktop-banner.png?source=conversion&height=40"
+					src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2Fb2b%2Fmacron-desktop-banner.png?source=conversion&height=40"
 					alt="Emmanuel Macron"
 					className="ncf__trial-banner-img"
 				/>
