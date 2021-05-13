@@ -6,7 +6,7 @@ exports[`TrialBanner renders with default props 1`] = `
 >
   <p class="ncf__trial-banner-content">
     Your free FT.com trial
-    <img src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2Fassets%2Fb2b%2Fmacron-desktop-banner.png?source=conversion&amp;height=40"
+    <img src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2Fb2b%2Fmacron-desktop-banner.png?source=conversion&amp;height=40"
          alt="Emmanuel Macron"
          class="ncf__trial-banner-img"
     >
