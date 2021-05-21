@@ -27,7 +27,7 @@ exports[`Confirmation renders appropriately if is B2C Partnership 1`] = `
     <p class="ncf__paragraph">
       Go to your
       <a class="ncf__link ncf__link--external"
-         href="https://myaccount.ft.com/details/core/view"
+         href="https://www.ft.com/myaccount/personal-details"
          target="_blank"
          rel="noopener"
          data-trackable="yourAccount"
@@ -84,7 +84,7 @@ exports[`Confirmation renders appropriately if is trial 1`] = `
     <p class="ncf__paragraph">
       Go to your
       <a class="ncf__link ncf__link--external"
-         href="https://myaccount.ft.com/details/core/view"
+         href="https://www.ft.com/myaccount/personal-details"
          target="_blank"
          rel="noopener"
          data-trackable="yourAccount"
@@ -139,7 +139,7 @@ exports[`Confirmation renders appropriately if nextActionBottom is not supplied 
     <p class="ncf__paragraph">
       Go to your
       <a class="ncf__link ncf__link--external"
-         href="https://myaccount.ft.com/details/core/view"
+         href="https://www.ft.com/myaccount/personal-details"
          target="_blank"
          rel="noopener"
          data-trackable="yourAccount"
@@ -194,7 +194,7 @@ exports[`Confirmation renders appropriately if nextActionBottom is supplied 1`] 
     <p class="ncf__paragraph">
       Go to your
       <a class="ncf__link ncf__link--external"
-         href="https://myaccount.ft.com/details/core/view"
+         href="https://www.ft.com/myaccount/personal-details"
          target="_blank"
          rel="noopener"
          data-trackable="yourAccount"
@@ -250,7 +250,7 @@ exports[`Confirmation renders appropriately if nextActionTop is not supplied 1`]
     <p class="ncf__paragraph">
       Go to your
       <a class="ncf__link ncf__link--external"
-         href="https://myaccount.ft.com/details/core/view"
+         href="https://www.ft.com/myaccount/personal-details"
          target="_blank"
          rel="noopener"
          data-trackable="yourAccount"
@@ -306,7 +306,7 @@ exports[`Confirmation renders appropriately if nextActionTop is supplied 1`] = `
     <p class="ncf__paragraph">
       Go to your
       <a class="ncf__link ncf__link--external"
-         href="https://myaccount.ft.com/details/core/view"
+         href="https://www.ft.com/myaccount/personal-details"
          target="_blank"
          rel="noopener"
          data-trackable="yourAccount"
@@ -375,7 +375,7 @@ exports[`Confirmation renders with complete details 1`] = `
     <p class="ncf__paragraph">
       Go to your
       <a class="ncf__link ncf__link--external"
-         href="https://myaccount.ft.com/details/core/view"
+         href="https://www.ft.com/myaccount/personal-details"
          target="_blank"
          rel="noopener"
          data-trackable="yourAccount"
@@ -430,7 +430,7 @@ exports[`Confirmation renders with custom email 1`] = `
     <p class="ncf__paragraph">
       Go to your
       <a class="ncf__link ncf__link--external"
-         href="https://myaccount.ft.com/details/core/view"
+         href="https://www.ft.com/myaccount/personal-details"
          target="_blank"
          rel="noopener"
          data-trackable="yourAccount"
@@ -485,7 +485,7 @@ exports[`Confirmation renders with default props 1`] = `
     <p class="ncf__paragraph">
       Go to your
       <a class="ncf__link ncf__link--external"
-         href="https://myaccount.ft.com/details/core/view"
+         href="https://www.ft.com/myaccount/personal-details"
          target="_blank"
          rel="noopener"
          data-trackable="yourAccount"
@@ -551,7 +551,7 @@ exports[`Confirmation renders with details missing a description 1`] = `
     <p class="ncf__paragraph">
       Go to your
       <a class="ncf__link ncf__link--external"
-         href="https://myaccount.ft.com/details/core/view"
+         href="https://www.ft.com/myaccount/personal-details"
          target="_blank"
          rel="noopener"
          data-trackable="yourAccount"
@@ -619,7 +619,7 @@ exports[`Confirmation renders with direct debit mandate URL 1`] = `
     <p class="ncf__paragraph">
       Go to your
       <a class="ncf__link ncf__link--external"
-         href="https://myaccount.ft.com/details/core/view"
+         href="https://www.ft.com/myaccount/personal-details"
          target="_blank"
          rel="noopener"
          data-trackable="yourAccount"

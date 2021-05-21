@@ -21,7 +21,7 @@ exports[`RegistrationConfirmation renders with a custom email 1`] = `
     <p class="ncf__paragraph">
       Go to your
       <a class="ncf__link ncf__link--external"
-         href="https://myaccount.ft.com/details/core/view"
+         href="https://www.ft.com/myaccount/personal-details"
          target="_blank"
          rel="noopener"
          data-trackable="yourAccount"
@@ -68,7 +68,7 @@ exports[`RegistrationConfirmation renders with default props 1`] = `
     <p class="ncf__paragraph">
       Go to your
       <a class="ncf__link ncf__link--external"
-         href="https://myaccount.ft.com/details/core/view"
+         href="https://www.ft.com/myaccount/personal-details"
          target="_blank"
          rel="noopener"
          data-trackable="yourAccount"
