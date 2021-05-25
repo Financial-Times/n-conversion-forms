@@ -83,7 +83,7 @@ export function LiteSubConfirmation ({
 			<div className="ncf__headed-paragraph">
 				<h3 className="ncf__header">Something not right?</h3>
 				<p className="ncf__paragraph">
-					Go to your <a className="ncf__link ncf__link--external" href="https://myaccount.ft.com/details/core/view" target="_blank" rel="noopener" data-trackable="yourAccount">account settings</a> to view or edit your account. If you need to get in touch call us on <a href="tel:+18556852372" className="ncf__link ncf__link--external">+1 855 685 2372</a>. Or contact us for additional support.
+					Go to your <a className="ncf__link ncf__link--external" href="https://www.ft.com/myaccount/personal-details" target="_blank" rel="noopener" data-trackable="yourAccount">account settings</a> to view or edit your account. If you need to get in touch call us on <a href="tel:+18556852372" className="ncf__link ncf__link--external">+1 855 685 2372</a>. Or contact us for additional support.
 				</p>
 			</div>
 		</div>

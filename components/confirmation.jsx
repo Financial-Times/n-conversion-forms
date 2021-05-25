@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const EMAIL_DEFAULT_TEXT = 'your email';
 
-export function Confirmation({
+export function Confirmation ({
 	// isTrial prop is needed for the floodlight pixel tracking.
 	isTrial = false,
 	isB2cPartnership = false,
@@ -90,7 +90,7 @@ export function Confirmation({
 					Go to your{' '}
 					<a
 						className="ncf__link ncf__link--external"
-						href="https://myaccount.ft.com/details/core/view"
+						href="https://www.ft.com/myaccount/personal-details"
 						target="_blank"
 						rel="noopener"
 						data-trackable="yourAccount"
