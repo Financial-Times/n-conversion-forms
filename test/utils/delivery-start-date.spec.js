@@ -11,6 +11,7 @@ describe('DeliveryStartDate', () => {
 	let startDateFieldStub;
 	let startDateTextStub;
 	let dateTestInput;
+	let csrfFieldElement;
 
 	beforeEach(() => {
 		document = { querySelector: sandbox.stub().returns(false), createElement: sandbox.stub().returns(false) };
@@ -24,6 +25,7 @@ describe('DeliveryStartDate', () => {
 			removeAttribute: sandbox.stub(),
 		};
 		startDateTextStub = { innerHTML: 'Saturday 16th of February 2019' };
+		csrfFieldElement = { value: '1234567890' };
 
 		document.querySelector
 			.withArgs('#deliveryStartDateField .o-forms-input')
@@ -40,6 +42,10 @@ describe('DeliveryStartDate', () => {
 		};
 
 		document.createElement.withArgs('input').returns(dateTestInput);
+
+		document.querySelector
+			.withArgs('.ncf #csrfToken')
+			.returns(csrfFieldElement);
 	});
 
 	afterEach(() => {
@@ -100,6 +106,9 @@ describe('DeliveryStartDate', () => {
 					startDate: '2019-02-16',
 				})
 			);
+			expect(fetchMock.lastOptions().headers).to.contain({
+				'CSRF-Token': '1234567890'
+			});
 		});
 
 		it('should update the page according to the response from the API call', async () => {
