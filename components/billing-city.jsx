@@ -18,7 +18,6 @@ export function BillingCity ({
 		'o-forms-input',
 		'o-forms-input--text',
 		{ 'o-forms-input--invalid': hasError },
-		{ ncf__hidden: isHidden },
 	]);
 
 	return (

@@ -11,7 +11,7 @@ exports[`BillingCity render different styles 1`] = `
       Billing city/town
     </span>
   </span>
-  <span class="o-forms-input o-forms-input--text o-forms-input--invalid ncf__hidden">
+  <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
     <input type="text"
            id="billingCity"
            name="billingCity"
