@@ -28,6 +28,8 @@ class DeliveryStartDate {
 			);
 		}
 
+		this.$csrfToken = element.querySelector('.ncf #csrfToken');
+
 		// We need to see if browser supports date field and offer correct format
 		// to use if datepicker isn't available
 		// from https://stackoverflow.com/questions/10193294/how-can-i-tell-if-a-browser-supports-input-type-date
@@ -65,6 +67,7 @@ class DeliveryStartDate {
 					credentials: 'include',
 					headers: {
 						'Content-Type': 'application/json',
+						'CSRF-Token': this.$csrfToken && this.$csrfToken.value,
 					},
 					body: JSON.stringify(
 						Object.assign({}, getData(), {
