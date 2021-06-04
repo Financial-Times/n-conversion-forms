@@ -6,6 +6,7 @@ const fetchres = require('fetchres');
  * const deliveryStartDate = new DeliveryStartDate(document);
  */
 class DeliveryStartDate {
+
 	/**
 	 * Initalise the DeliveryStartDate utility
 	 * @param {Element} element Usually the window.document
@@ -59,9 +60,11 @@ class DeliveryStartDate {
 	 * @throws If there was an error calling the endpoint to check this.
 	 */
 	async handleDeliveryStartDateChange (url, getData) {
-		if (this.$deliveryStartDate.value) {
+		const isNewValue = (this.previousDeliveryDateValue !== this.$deliveryStartDate.value);
+		this.previousDeliveryDateValue = this.$deliveryStartDate.value;
+
+		if (this.$deliveryStartDate.value && isNewValue) {
 			try {
-				this.$container.classList.remove('o-forms-input--invalid');
 				const result = await fetch(url, {
 					method: 'POST',
 					credentials: 'include',
@@ -78,13 +81,21 @@ class DeliveryStartDate {
 
 				this.$deliveryStartDate.value = result.firstDeliveryDate;
 				this.$deliveryStartDateText.innerHTML = result.firstDeliveryDateString;
+				this.$container.classList.remove('o-forms-input--invalid');
+
+				this.lastDeliveryDateState = true;
 
 				return true;
 			} catch (error) {
 				this.$container.classList.add('o-forms-input--invalid');
+
+				this.lastDeliveryDateState = false;
+
 				return false;
 			}
 		}
+
+		return this.lastDeliveryDateState || false;
 	}
 
 	/**
