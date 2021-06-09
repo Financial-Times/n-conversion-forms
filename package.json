@@ -34,7 +34,7 @@
     "@babel/plugin-transform-runtime": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
-    "@financial-times/dotcom-build-bower-resolve": "2.4.0",
+    "@financial-times/dotcom-build-bower-resolve": "2.5.1",
     "@financial-times/n-gage": "^8.2.0",
     "@storybook/addon-a11y": "^6.0.10",
     "@storybook/addon-essentials": "^6.0.10",
