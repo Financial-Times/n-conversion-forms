@@ -49,7 +49,7 @@ references:
       ignore: /.*/
     branches:
       ignore: /(^renovate-.*|^nori/.*)/
-      
+
   filters_version_tag: &filters_version_tag
     tags:
       only:
@@ -150,7 +150,7 @@ workflows:
             <<: *filters_version_tag
           requires:
             - test
-  
+
   renovate-nori-build-test-provision:
     jobs:
       - waiting-for-approval:
