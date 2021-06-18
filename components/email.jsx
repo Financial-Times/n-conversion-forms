@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function Email({
+export function Email ({
 	dataTrackable = 'field-email',
 	description = 'Please enter an email address',
 	errorText = 'This email address is not valid',
@@ -16,6 +16,7 @@ export function Email({
 	value = '',
 	isEducationalLicence = false,
 	isB2cPartnershipLicence = false,
+	hideTitle = false,
 }) {
 	const labelText =
 		label ||
@@ -35,12 +36,12 @@ export function Email({
 			data-validate="required,email"
 			htmlFor={inputId}
 		>
-			<span className="o-forms-title">
+			{!hideTitle && <span className="o-forms-title">
 				<span className="o-forms-title__main">{labelText}</span>
 				{description && (
 					<span className="o-forms-title__prompt">{description}</span>
 				)}
-			</span>
+			</span>}
 			<span className={inputWrapperClassNames}>
 				<input
 					type="email"
@@ -74,4 +75,5 @@ Email.propTypes = {
 	value: PropTypes.string,
 	isEducationalLicence: PropTypes.bool,
 	isB2cPartnershipLicence: PropTypes.bool,
+	hideTitle: PropTypes.bool
 };
