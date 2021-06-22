@@ -193,6 +193,30 @@ exports[`Email with confirmation render a email input with given description 1`]
 </label>
 `;
 
+exports[`Email with confirmation render a email input with hiding the title 1`] = `
+<label id="emailField"
+       class="o-forms-field ncf__validation-error"
+       data-validate="required,email"
+       for="email"
+>
+  <span class="o-forms-input o-forms-input--text">
+    <input type="email"
+           id="email"
+           name="email"
+           placeholder="Enter your email address"
+           autocomplete="email"
+           data-trackable="field-email"
+           aria-required="true"
+           required
+           value
+    >
+    <span class="o-forms-input__error">
+      This email address is not valid
+    </span>
+  </span>
+</label>
+`;
+
 exports[`Email with confirmation render a email input with read only fields 1`] = `
 <label id="emailField"
        class="o-forms-field ncf__validation-error"

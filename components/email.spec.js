@@ -79,4 +79,12 @@ describe('Email with confirmation', () => {
 
 		expect(Email).toRenderCorrectly(props);
 	});
+
+	it('render a email input with hiding the title', () => {
+		const props = {
+			showTitle: false,
+		};
+
+		expect(Email).toRenderCorrectly(props);
+	});
 });
