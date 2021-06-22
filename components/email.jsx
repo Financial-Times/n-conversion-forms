@@ -16,7 +16,7 @@ export function Email ({
 	value = '',
 	isEducationalLicence = false,
 	isB2cPartnershipLicence = false,
-	hideTitle = false,
+	showTitle = true,
 }) {
 	const labelText =
 		label ||
@@ -36,7 +36,7 @@ export function Email ({
 			data-validate="required,email"
 			htmlFor={inputId}
 		>
-			{!hideTitle && <span className="o-forms-title">
+			{showTitle && <span className="o-forms-title">
 				<span className="o-forms-title__main">{labelText}</span>
 				{description && (
 					<span className="o-forms-title__prompt">{description}</span>
@@ -75,5 +75,5 @@ Email.propTypes = {
 	value: PropTypes.string,
 	isEducationalLicence: PropTypes.bool,
 	isB2cPartnershipLicence: PropTypes.bool,
-	hideTitle: PropTypes.bool
+	showTitle: PropTypes.bool
 };

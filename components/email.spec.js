@@ -82,7 +82,7 @@ describe('Email with confirmation', () => {
 
 	it('render a email input with hiding the title', () => {
 		const props = {
-			hideTitle: true,
+			showTitle: false,
 		};
 
 		expect(Email).toRenderCorrectly(props);
