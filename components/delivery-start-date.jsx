@@ -36,16 +36,6 @@ export function DeliveryStartDate ({
 		? 'We’ll start delivering to this address from:'
 		: 'Your print subscription will start from:';
 
-	// Primary Address deliveries start on Monday (default) while Weekend Address deliveries start on Saturday.
-	const startDescriptionExample = isWeekendOnly
-		? 'if you select a Sunday then we’ll start your deliveries on the following Saturday.'
-		: 'if you select a Sunday then we can start your supply on the Monday.';
-
-	const nbMessage = <p>
-		NB. This will be the closest date we can supply your newspaper based on
-		your selected date e.g. {startDescriptionExample}
-	</p>;
-
 	return (
 		<label
 			id="deliveryStartDateField"
@@ -70,8 +60,6 @@ export function DeliveryStartDate ({
 			<p>
 				{startMessage} <strong className="js-start-date-text">{date}</strong>
 			</p>
-
-			{country === 'GBR' && nbMessage}
 		</label>
 	);
 }
