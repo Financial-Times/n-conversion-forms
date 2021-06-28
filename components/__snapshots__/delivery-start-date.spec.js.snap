@@ -226,43 +226,6 @@ exports[`DeliveryStartDate renders with an error 1`] = `
 </label>
 `;
 
-exports[`DeliveryStartDate renders with appropriate start description example when address type is weekend 1`] = `
-<label id="deliveryStartDateField"
-       class="o-forms-field ncf__validation-error"
-       data-validate="required"
-       for="deliveryStartDate"
->
-  <span class="o-forms-title">
-    <span class="o-forms-title__main"
-          id="start-date-picker-title-span"
-    >
-      Delivery start date
-    </span>
-    <span class="o-forms-title__prompt">
-      Earliest available delivery date:
-    </span>
-  </span>
-  <span class="o-forms-input o-forms-input--text">
-    <input type="date"
-           id="deliveryStartDate"
-           name="deliveryStartDate"
-           data-trackable="field-deliveryStartDate"
-           aria-required="true"
-           required
-           value
-    >
-    <span class="o-forms-input__error">
-      Please select a valid start date
-    </span>
-  </span>
-  <p>
-    Your print subscription will start from:
-    <strong class="js-start-date-text">
-    </strong>
-  </p>
-</label>
-`;
-
 exports[`DeliveryStartDate renders with appropriate start message when isAddressUpdate 1`] = `
 <label id="deliveryStartDateField"
        class="o-forms-field ncf__validation-error"

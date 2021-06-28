@@ -10,8 +10,6 @@ export function DeliveryStartDate ({
 	max = null,
 	isDisabled = false,
 	isAddressUpdate = false,
-	isWeekendOnly = false,
-	country = 'GBR',
 }) {
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
@@ -72,6 +70,4 @@ DeliveryStartDate.propTypes = {
 	max: PropTypes.string,
 	isDisabled: PropTypes.bool,
 	isAddressUpdate: PropTypes.bool,
-	isWeekendOnly: PropTypes.bool,
-	country: PropTypes.oneOf(['GBR', 'USA', 'CAN']),
 };
