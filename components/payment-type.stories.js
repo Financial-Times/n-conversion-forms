@@ -13,4 +13,5 @@ Basic.args = {
 	enableDirectdebit: true,
 	enableCreditcard: true,
 	enablePaypal: true,
+	showPaypalCustomerCareMessage: true,
 };
