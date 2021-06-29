@@ -10,8 +10,6 @@ export function DeliveryStartDate ({
 	max = null,
 	isDisabled = false,
 	isAddressUpdate = false,
-	isWeekendOnly = false,
-	country = 'GBR',
 }) {
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
@@ -35,16 +33,6 @@ export function DeliveryStartDate ({
 	const startMessage = isAddressUpdate
 		? 'We’ll start delivering to this address from:'
 		: 'Your print subscription will start from:';
-
-	// Primary Address deliveries start on Monday (default) while Weekend Address deliveries start on Saturday.
-	const startDescriptionExample = isWeekendOnly
-		? 'if you select a Sunday then we’ll start your deliveries on the following Saturday.'
-		: 'if you select a Sunday then we can start your supply on the Monday.';
-
-	const nbMessage = <p>
-		NB. This will be the closest date we can supply your newspaper based on
-		your selected date e.g. {startDescriptionExample}
-	</p>;
 
 	return (
 		<label
@@ -70,8 +58,6 @@ export function DeliveryStartDate ({
 			<p>
 				{startMessage} <strong className="js-start-date-text">{date}</strong>
 			</p>
-
-			{country === 'GBR' && nbMessage}
 		</label>
 	);
 }
@@ -84,6 +70,4 @@ DeliveryStartDate.propTypes = {
 	max: PropTypes.string,
 	isDisabled: PropTypes.bool,
 	isAddressUpdate: PropTypes.bool,
-	isWeekendOnly: PropTypes.bool,
-	country: PropTypes.oneOf(['GBR', 'USA', 'CAN']),
 };

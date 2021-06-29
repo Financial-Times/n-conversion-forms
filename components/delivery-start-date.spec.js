@@ -52,12 +52,6 @@ describe('DeliveryStartDate', () => {
 		expect(DeliveryStartDate).toRenderCorrectly(props);
 	});
 
-	it('renders with appropriate start description example when address type is weekend', () => {
-		const props = { isWeekendOnly: true };
-
-		expect(DeliveryStartDate).toRenderCorrectly(props);
-	});
-
 	it('renders with country different than default', () => {
 		const props = { country: 'USA' };
 
