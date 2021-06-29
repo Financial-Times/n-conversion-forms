@@ -3,12 +3,39 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Loader } from './loader';
 
+const PaypalCustomerCareMessage = () => {
+	return (
+		<div className="ncf__payment-type-paypal-message">
+			<div
+				className="o-message o-message--notice o-message--inform"
+				data-o-component="o-message"
+			>
+				<div className="o-message__container">
+					<div className="o-message__content">
+						<p className="o-message__content-main">
+							If you'd like to change your payment method to Paypal please{' '}
+							<a
+								className="o-message__actions__secondary"
+								href="https://help.ft.com"
+							>
+								contact Customer Care
+							</a>
+							.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
+
 export function PaymentType({
 	enableApplepay = false,
 	enableCreditcard = false,
 	enableDirectdebit = false,
 	enablePaypal = false,
 	showLoaderOnInit = false,
+	showPaypalCustomerCareMessage = false,
 	fieldId = 'paymentTypeField',
 	inputId = 'paymentType',
 	value,
@@ -35,43 +62,68 @@ export function PaymentType({
 			/>
 		);
 	};
+	const paymentTypeCreditCard = {
+		id: 'creditcard',
+		label: 'Credit / Debit Card',
+		hide: !enableCreditcard,
+	};
+
+	const paymentTypePaypal = () => {
+		if (showPaypalCustomerCareMessage) {
+			return PaypalCustomerCareMessage();
+		} else {
+			return { id: 'paypal', label: 'PayPal', hide: !enablePaypal };
+		}
+	};
+
+	const paymentTypeDirectDebit = {
+		id: 'directdebit',
+		label: 'Direct Debit',
+		hide: !enableDirectdebit,
+	};
+
+	const paymentTypeApplePay = {
+		id: 'applepay',
+		label: 'Apple Pay',
+		hide: !enableApplepay,
+	};
 
 	const createPaymentTypes = () => {
 		const paymentTypes = [
-			{
-				id: 'creditcard',
-				label: 'Credit / Debit Card',
-				hide: !enableCreditcard,
-			},
-			{ id: 'paypal', label: 'PayPal', hide: !enablePaypal },
-			{ id: 'directdebit', label: 'Direct Debit', hide: !enableDirectdebit },
-			{ id: 'applepay', label: 'Apple Pay', hide: !enableApplepay },
+			paymentTypeCreditCard,
+			paymentTypePaypal(),
+			paymentTypeDirectDebit,
+			paymentTypeApplePay,
 		];
 		return paymentTypes.map((type) => {
-			const inputProps = {
-				type: 'radio',
-				name: inputId,
-				value: type.id,
-				id: type.id,
-				'aria-label': type.label,
-				...(value === type.id && { defaultChecked: true }),
-			};
-			const className = classNames([
-				'o-forms-input--radio-box__container',
-				'ncf__payment-type',
-				`ncf__payment-type--${type.id}`,
-				{ ncf__hidden: type.hide },
-			]);
-			return (
-				<div key={type.id} className={className}>
-					<label htmlFor={inputProps.id}>
-						<input {...inputProps} />
-						<span className="o-forms-input__label" aria-hidden="true">
-							{type.label}
-						</span>
-					</label>
-				</div>
-			);
+			if (type.id === undefined) {
+				return type;
+			} else {
+				const inputProps = {
+					type: 'radio',
+					name: inputId,
+					value: type.id,
+					id: type.id,
+					'aria-label': type.label,
+					...(value === type.id && { defaultChecked: true }),
+				};
+				const className = classNames([
+					'o-forms-input--radio-box__container',
+					'ncf__payment-type',
+					`ncf__payment-type--${type.id}`,
+					{ ncf__hidden: type.hide },
+				]);
+				return (
+					<div key={type.id} className={className}>
+						<label htmlFor={inputProps.id}>
+							<input {...inputProps} />
+							<span className="o-forms-input__label" aria-hidden="true">
+								{type.label}
+							</span>
+						</label>
+					</div>
+				);
+			}
 		});
 	};
 
@@ -195,6 +247,7 @@ PaymentType.propTypes = {
 	enableDirectdebit: PropTypes.bool,
 	enablePaypal: PropTypes.bool,
 	showLoaderOnInit: PropTypes.bool,
+	showPaypalCustomerCareMessage: PropTypes.bool,
 	fieldId: PropTypes.string,
 	inputId: PropTypes.string,
 	value: PropTypes.string,

@@ -49,6 +49,7 @@
 			}
 		}
 
+
 		.o-forms-input--radio-box &--directdebit {
 			// #2
 			[type='radio'] + .o-forms-input__label {
@@ -104,4 +105,8 @@
 			border: 0;
 		}
 	}
+}
+
+.ncf__payment-type-paypal-message {
+	margin-bottom: oSpacingByName('s3');
 }
