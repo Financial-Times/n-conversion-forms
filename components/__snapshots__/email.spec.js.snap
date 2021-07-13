@@ -199,6 +199,14 @@ exports[`Email with confirmation render a email input with hiding the title 1`] 
        data-validate="required,email"
        for="email"
 >
+  <span class="o-forms-title ncf__hidden">
+    <span class="o-forms-title__main">
+      Email address
+    </span>
+    <span class="o-forms-title__prompt">
+      Please enter an email address
+    </span>
+  </span>
   <span class="o-forms-input o-forms-input--text">
     <input type="email"
            id="email"
