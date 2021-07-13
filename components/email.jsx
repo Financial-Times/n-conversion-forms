@@ -28,6 +28,10 @@ export function Email ({
 		'o-forms-input--text',
 		{ 'o-forms-input--invalid': hasError },
 	]);
+	const emailTitleClassNames = classNames([
+		'o-forms-title',
+		{ ncf__hidden: !showTitle },
+	]);
 
 	return (
 		<label
@@ -36,12 +40,12 @@ export function Email ({
 			data-validate="required,email"
 			htmlFor={inputId}
 		>
-			{showTitle && <span className="o-forms-title">
+			<span className={emailTitleClassNames}>
 				<span className="o-forms-title__main">{labelText}</span>
 				{description && (
 					<span className="o-forms-title__prompt">{description}</span>
 				)}
-			</span>}
+			</span>
 			<span className={inputWrapperClassNames}>
 				<input
 					type="email"
