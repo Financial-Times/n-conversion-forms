@@ -60,8 +60,17 @@ export function LiteSubConfirmation ({
 				<p className="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">You&apos;ve been upgraded to:</p>
 				<h1 className="ncf__header ncf__header--confirmation">{isPremium(productCode) ? 'Premium' : 'Digital'}</h1>
 			</div>
-			<p className="ncf__paragraph">Thank you for choosing to subscribe to {offerName}. We are not quite ready to deliver this type of subscription, so we have upgraded you to a {isPremium(productCode) ? 'Premium' : 'Digital'} 3 month subscription at no additional cost.</p>
-			<p className="ncf__paragraph">For {subscriptionAmount} a month, you can now enjoy {isPremium(productCode) ? 'unlimited' : 'standard digital'} access to FT.com, where you can explore not only the product you had purchased, but everything else the FT has to offer. However, if you would like to cancel your subscription, please contact our <a className="barrier__terms-link ncf__link ncf__link--external" href="https://help.ft.com/contact">customer care team</a> and they will arrange this for you.</p>
+			<p className="ncf__paragraph">Thank you for choosing to subscribe to <strong>{offerName}</strong>. We are not quite ready to deliver this type of subscription, so we have upgraded you to a {isPremium(productCode) ? 'Premium' : 'Digital'} 3 month subscription at no additional cost.</p>
+			<p className="ncf__paragraph">For {subscriptionAmount} a month, here&apos;s what your subscription covers:</p>
+			<ul className="ncf__unordered-list">
+				<li>Access to stories from over 600 journalists in 50+ countries covering markets, politics, business, tech and more</li>
+				<li>FirstFT: a daily newsletter with the global stories you need to know</li>
+				<li>Share 10 articles per month with colleagues, family and friends</li>
+			</ul>
+			<p className="ncf__paragraph">However, if you would like to cancel your subscription, please contact our <a href="https://help.ft.com/help/contact-us/">customer care team</a> and they will arrange this for you.</p>
+			<p className="ncf__center">
+				<a href="/" className="ncf__button ncf__button--submit ncf__button--margin ncf__lite-sub-confirmation--lite-sub-cta">Go to FT.com</a>
+			</p>
 			<p className="ncf__paragraph">
 				We&apos;ve sent confirmation to {email}. Make sure you check your spam folder if you don’t receive it.
 			</p>

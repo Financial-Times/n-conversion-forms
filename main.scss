@@ -404,6 +404,12 @@
 		}
 	}
 
+	&__unordered-list {
+		> li {
+			margin-bottom: 10px;
+		}
+	}
+
 	@include ncfMessage();
 	@include ncfPackageChange();
 	@include ncfPaymentTerm();
