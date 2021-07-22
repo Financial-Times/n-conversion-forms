@@ -63,15 +63,6 @@ export function LiteSubConfirmation ({
 			<p className="ncf__paragraph">Thank you for choosing to subscribe to {offerName}. We are not quite ready to deliver this type of subscription, so we have upgraded you to a {isPremium(productCode) ? 'Premium' : 'Digital'} 3 month subscription at no additional cost.</p>
 			<p className="ncf__paragraph">For {subscriptionAmount} a month, you can now enjoy {isPremium(productCode) ? 'unlimited' : 'standard digital'} access to FT.com, where you can explore not only the product you had purchased, but everything else the FT has to offer. However, if you would like to cancel your subscription, please contact our <a className="barrier__terms-link ncf__link ncf__link--external" href="https://help.ft.com/contact">customer care team</a> and they will arrange this for you.</p>
 			<p className="ncf__paragraph">
-				<b>Head to FT.com now to sign up to the newsletter(s)</b> that would have been included with your {offerName} subscription
-				{isPremium(productCode) ? <span>: Moral Money, Due Diligence, #techAsia, Energy Source, Trade Secrets and Scoreboard</span>
-					: <span>: FirstFT Americas</span>
-				}.
-			</p>
-			<p className="ncf__center">
-				<a href="/newsletters/" className="ncf__button ncf__button--submit ncf__button--margin ncf__lite-sub-confirmation--lite-sub-cta">Go to newsletters</a>
-			</p>
-			<p className="ncf__paragraph">
 				We&apos;ve sent confirmation to {email}. Make sure you check your spam folder if you don’t receive it.
 			</p>
 			<p className="ncf__paragraph">
