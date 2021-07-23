@@ -405,8 +405,9 @@
 	}
 
 	&__unordered-list {
+		padding-inline-start: 25px;
 		> li {
-			margin-bottom: 10px;
+			margin-bottom: oSpacingByName('s3');
 		}
 	}
 
