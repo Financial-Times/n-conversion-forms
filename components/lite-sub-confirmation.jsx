@@ -67,7 +67,7 @@ export function LiteSubConfirmation ({
 				<li>FirstFT: a daily newsletter with the global stories you need to know</li>
 				<li>Share 10 articles per month with colleagues, family and friends</li>
 			</ul>
-			<p className="ncf__paragraph">However, if you would like to cancel your subscription, please contact our <a href="https://help.ft.com/help/contact-us/">customer care team</a> and they will arrange this for you.</p>
+			<p className="ncf__paragraph">However, if you would like to cancel your subscription, please contact our <a href="https://help.ft.com/contact/">customer care team</a> and they will arrange this for you.</p>
 			<p className="ncf__center">
 				<a href="/" className="ncf__button ncf__button--submit ncf__button--margin ncf__lite-sub-confirmation--lite-sub-cta">Go to FT.com</a>
 			</p>
