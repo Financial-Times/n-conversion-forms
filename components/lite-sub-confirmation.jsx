@@ -58,7 +58,7 @@ export function LiteSubConfirmation ({
 			<div className="ncf__center">
 				<div className="ncf__icon ncf__icon--tick ncf__icon--large"></div>
 				<p className="ncf__paragraph--reduced-padding ncf__paragraph--subscription-confirmation">You&apos;ve been upgraded to:</p>
-				<h1 className="ncf__header ncf__header--confirmation">{isPremium(productCode) ? 'Premium' : 'Digital'}</h1>
+				<h1 className="ncf__header ncf__header--confirmation">{isPremium(productCode) ? 'Premium Digital' : 'Standard Digital'}</h1>
 			</div>
 			<p className="ncf__paragraph">Thank you for choosing to subscribe to <strong>{offerName}</strong>. We are not quite ready to deliver this type of subscription, so we have upgraded you to a {isPremium(productCode) ? 'Premium' : 'Digital'} 3 month subscription at no additional cost.</p>
 			<p className="ncf__paragraph">For {subscriptionAmount} a month, here&apos;s what your subscription covers:</p>
@@ -83,7 +83,7 @@ export function LiteSubConfirmation ({
 			<div className="ncf__headed-paragraph">
 				<h3 className="ncf__header">Something not right?</h3>
 				<p className="ncf__paragraph">
-					Go to your <a className="ncf__link ncf__link--external" href="https://www.ft.com/myaccount/personal-details" target="_blank" rel="noopener" data-trackable="yourAccount">account settings</a> to view or edit your account. If you need to get in touch call us on <a href="tel:+18556852372" className="ncf__link ncf__link--external">+1 855 685 2372</a>. Or contact us for additional support.
+					Go to your <a className="ncf__link ncf__link--external" href="https://www.ft.com/myaccount/personal-details" target="_blank" rel="noopener" data-trackable="yourAccount">account settings</a> to view or edit your account. If you need to get in touch call us on <a href="tel:+18556852372" className="ncf__link ncf__link--external">+1 855 685 2372</a>. Or <a href="https://help.ft.com/contact/">contact us</a> for additional support.
 				</p>
 			</div>
 		</div>
