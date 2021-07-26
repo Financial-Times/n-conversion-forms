@@ -67,7 +67,7 @@ export function LiteSubConfirmation ({
 				<li>FirstFT: a daily newsletter with the global stories you need to know</li>
 				<li>Share 10 articles per month with colleagues, family and friends</li>
 			</ul>
-			<p className="ncf__paragraph">However, if you would like to cancel your subscription, please contact our <a href="https://help.ft.com/contact/">customer care team</a> and they will arrange this for you.</p>
+			<p className="ncf__paragraph">However, if you would like to cancel your subscription, please contact our <a className="ncf__link ncf__link--external" href="https://help.ft.com/contact/" target="_blank" rel="noopener noreferrer">customer care team</a> and they will arrange this for you.</p>
 			<p className="ncf__center">
 				<a href="/" className="ncf__button ncf__button--submit ncf__button--margin ncf__lite-sub-confirmation--lite-sub-cta">Go to FT.com</a>
 			</p>
@@ -83,7 +83,7 @@ export function LiteSubConfirmation ({
 			<div className="ncf__headed-paragraph">
 				<h3 className="ncf__header">Something not right?</h3>
 				<p className="ncf__paragraph">
-					Go to your <a className="ncf__link ncf__link--external" href="https://www.ft.com/myaccount/personal-details" target="_blank" rel="noopener" data-trackable="yourAccount">account settings</a> to view or edit your account. If you need to get in touch call us on <a href="tel:+18556852372" className="ncf__link ncf__link--external">+1 855 685 2372</a>. Or <a href="https://help.ft.com/contact/">contact us</a> for additional support.
+					Go to your <a className="ncf__link ncf__link--external" href="https://www.ft.com/myaccount/personal-details" target="_blank" rel="noopener noreferrer" data-trackable="yourAccount">account settings</a> to view or edit your account. If you need to get in touch call us on <a href="tel:+18556852372" className="ncf__link ncf__link--external">+1 855 685 2372</a>. Or <a className="ncf__link ncf__link--external" href="https://help.ft.com/contact/" target="_blank" rel="noopener noreferrer">contact us</a> for additional support.
 				</p>
 			</div>
 		</div>
