@@ -75,7 +75,7 @@ export function LiteSubConfirmation ({
 				We&apos;ve sent confirmation to {email}. Make sure you check your spam folder if you don’t receive it.
 			</p>
 			<p className="ncf__paragraph">
-				Here&apos;s a summary of your {isPremium(productCode) ? 'Premium' : 'Digital'} subscription:
+				Here&apos;s a summary of your {isPremium(productCode) ? 'Premium Digital' : 'Standard Digital'} subscription:
 			</p>
 
 			{ detailElements}
