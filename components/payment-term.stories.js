@@ -35,7 +35,7 @@ Basic.args = {
 	],
 };
 
-export const FixedTermOffer = (args) => <div className="ncf"><Fieldset><PaymentTerm {...args} subscriptionDuration='P3M' /></Fieldset></div>;
+export const FixedTermOffer = (args) => <div className="ncf"><Fieldset><PaymentTerm {...args} /></Fieldset></div>;
 FixedTermOffer.args = {
 	options: [
 		{
