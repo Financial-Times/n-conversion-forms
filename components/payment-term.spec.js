@@ -126,14 +126,14 @@ describe('PaymentTerm', () => {
 				monthlyPrice: '$5.00',
 			}
 		];
-		const wrapper = shallow(<PaymentTerm isFixedTermOffer={true} options={options} subscriptionDuration='P3M' />);
+		const wrapper = shallow(<PaymentTerm isFixedTermOffer={true} options={options} />);
 
 		it('should not include renewal text', () => {
 			expect(wrapper.find('.ncf__payment-term__renews-text').text()).not.toMatch(/Renews (annually|monthly|quarterly) unless cancelled/);
 		});
 
-		it('should render the subscriptionDuration in English', () => {
-			expect(wrapper.find('.ncf__payment-term__renews-text').text()).toMatch(/3 months/);
+		it('should render fixed term renewal text in English', () => {
+			expect(wrapper.find('.ncf__payment-term__renews-text').text()).toMatch(/This subscription is charged monthly and can be cancelled at anytime/);
 		});
 	});
 
