@@ -13,9 +13,7 @@ const DetailsMobileView = ({details}) => (
 				(
 					<React.Fragment key={index}>
 						<dt className="ncf__list-title">{detail.title}</dt>
-						<dd className="ncf__list-data">{detail.data}
-							{detail.description && (<span className="ncf__lite-sub__details--description">({detail.description})</span>)}
-						</dd>
+						<dd className="ncf__list-data">{detail.data}</dd>
 					</React.Fragment>
 				)
 			)
@@ -40,9 +38,7 @@ export function LiteSubConfirmation ({
 						(
 							<React.Fragment key={index}>
 								<dt className="ncf__list-title">{detail.title}</dt>
-								<dd className="ncf__list-data">{detail.data}
-									{detail.description && (<div>({detail.description})</div>)}
-								</dd>
+								<dd className="ncf__list-data">{detail.data}</dd>
 							</React.Fragment>
 						)
 					)
@@ -98,6 +94,5 @@ LiteSubConfirmation.propTypes = {
 	details: PropTypes.arrayOf(PropTypes.shape({
 		title: PropTypes.string.isRequired,
 		data: PropTypes.string.isRequired,
-		description: PropTypes.string
 	})),
 };

@@ -21,7 +21,6 @@ Basic.args = {
 		},
 		{
 			title: '3 monthly payments',
-			description: 'Total cost of subscription: $15.00',
 			data: '$5.00 per month',
 		},
 		{
