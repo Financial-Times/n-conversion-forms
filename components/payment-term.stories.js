@@ -45,4 +45,5 @@ FixedTermOffer.args = {
 		}
 	],
 	isFixedTermOffer: true,
+	displayName: 'Mix & Match'
 };

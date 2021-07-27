@@ -8,6 +8,7 @@ export function PaymentTerm({
 	isEpaper = false,
 	options = [],
 	isFixedTermOffer = false,
+	displayName, 
 }) {
 	const nameMap = {
 		annual: {
@@ -113,6 +114,8 @@ export function PaymentTerm({
 		};
 		const showTrialCopyInTitle =
 			option.isTrial && !isPrintOrBundle && !isEpaper;
+		const defaultTitle = nameMap[option.name].title;
+		const title = isFixedTermOffer ? `${displayName} - ${defaultTitle}` : defaultTitle;
 		const createDiscount = () => {
 			return (
 				option.discount && (
@@ -154,7 +157,7 @@ export function PaymentTerm({
 
 					<span className="ncf__payment-term__title">
 						{showTrialCopyInTitle ? 'Trial: Premium Digital - ' : ''}
-						{nameMap[option.name].title}
+						{title}
 					</span>
 
 					{createDescription()}
@@ -232,4 +235,5 @@ PaymentTerm.propTypes = {
 		})
 	),
 	isFixedTermOffer: PropTypes.bool,
+	displayName: PropTypes.string,
 };
