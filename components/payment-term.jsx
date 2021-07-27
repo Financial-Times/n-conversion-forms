@@ -82,11 +82,17 @@ export function PaymentTerm({
 				</React.Fragment>
 			),
 			monthlyPrice: () => {},
-			renewsText: () => (
-				<p className="ncf__payment-term__renews-text">
-					Renews monthly unless cancelled
-				</p>
-			),
+			renewsText: (isFixedTermOffer) => {
+				return isFixedTermOffer ? (
+					<p className="ncf__payment-term__renews-text">
+						This subscription is charged monthly and can be cancelled at anytime
+					</p>
+				) : (
+					<p className="ncf__payment-term__renews-text">
+						Renews monthly unless cancelled
+					</p>
+				);
+			},
 		},
 	};
 	const createPaymentTerm = (option) => {
