@@ -35,17 +35,11 @@ export function PaymentTerm({
 						per month
 					</span>
 				),
-			renewsText: (isFixedTermOffer) => {
-				return isFixedTermOffer ? (
+				renewsText: () => (
 					<p className="ncf__payment-term__renews-text">
-						This subscription is charged monthly and can be cancelled at anytime
+						Renews annually unless cancelled
 					</p>
-				) : (
-					<p className="ncf__payment-term__renews-text">
-						Renews monthly unless cancelled
-					</p>
-				);
-			},
+				),
 		},
 		quarterly: {
 			title: 'Quarterly',
