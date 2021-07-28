@@ -4,6 +4,18 @@
 	&__payment-term {
 		@include bigRadioButton($className: '.ncf__payment-term');
 
+		@include oGridRespondTo(L) {
+			&__options-grid {
+				display: flex;
+				align-items: baseline;
+
+				> * {
+					flex: 1;
+					margin-left: oGridGutter(L);
+				}
+			}
+		}
+
 		&__item {
 			position: relative;
 			margin-bottom: oSpacingByName('s3');
@@ -47,9 +59,20 @@
 			font-weight: oFontsWeight('semibold');
 		}
 
+		&__large-price {
+			@include oTypographySans($scale: 5, $include-font-family: false);
+			font-weight: oFontsWeight('semibold');
+		}
+
 		&__renews-text {
 			@include oTypographySans($scale: -2, $include-font-family: false);
 			margin-bottom: 0;
+		}
+
+		&__charge-on-text {
+			@include oTypographySans($scale: -1, $include-font-family: false);
+			margin-bottom: 0;
+			margin-top: oSpacingByName('s1');
 		}
 	}
 }

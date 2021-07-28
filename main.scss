@@ -291,6 +291,10 @@
 		font-weight: oFontsWeight('semibold');
 	}
 
+	&__regular {
+		font-weight: oFontsWeight('regular');
+	}
+
 	&__icon {
 		background: oColorsByName('paper');
 		border: 2px solid oColorsByName('black-40');

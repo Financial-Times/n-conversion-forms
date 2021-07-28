@@ -47,3 +47,39 @@ FixedTermOffer.args = {
 	isFixedTermOffer: true,
 	displayName: 'Mix & Match'
 };
+
+export const RenewOffers = (args) => (
+	<div className="ncf">
+		<Fieldset>
+			<PaymentTerm {...args} />
+		</Fieldset>
+	</div>
+);
+
+RenewOffers.args = {
+	showLegal: false,
+	largePrice: true,
+	options: [
+		{
+			title: 'Annual',
+			subTitle: '(Renews annually unless cancelled)',
+			price: '€ 270.00',
+			value: 270.00,
+			isTrial: false,
+			discount: '33%',
+			bestOffer: true,
+			selected: false,
+			chargeOnText: 'You will be charged on May 1, 2021',
+		},
+		{
+			title: '12 Month Subscription',
+			price: '€ 300.00',
+			value: 300.00,
+			isTrial: false,
+			discount: '10%',
+			selected: true,
+			chargeOnText: 'You will be charged on May 1, 2021',
+		},
+	],
+	optionsInARow: true,
+};

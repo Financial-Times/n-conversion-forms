@@ -4,30 +4,32 @@ exports[`PaymentTerm annual option render option 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="annual"
-           name="paymentTerm"
-           value="annual"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="annual"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Annual
-      </span>
-      <div class="ncf__payment-term__description">
-        Single
-        <span class="ncf__payment-term__price ncf__strong">
-          £20.00
+  <div class>
+    <div class="ncf__payment-term__item o-forms-input--radio-round">
+      <input type="radio"
+             id="annual"
+             name="paymentTerm"
+             value="annual"
+             class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+      >
+      <label for="annual"
+             class="o-forms-input__label ncf__payment-term__label"
+      >
+        <span class="ncf__payment-term__title">
+          Annual
         </span>
-        payment
-        <p class="ncf__payment-term__renews-text">
-          Renews annually unless cancelled
-        </p>
-      </div>
-    </label>
+        <div class="ncf__payment-term__description">
+          Single
+          <span class="ncf__payment-term__price ncf__strong">
+            £20.00
+          </span>
+          payment
+          <p class="ncf__payment-term__renews-text">
+            Renews annually unless cancelled
+          </p>
+        </div>
+      </label>
+    </div>
   </div>
   <div class="ncf__payment-term__legal">
     <p>
@@ -53,33 +55,35 @@ exports[`PaymentTerm annual option render option with discount 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item o-forms-input--radio-round ncf__payment-term__item--discount">
-    <input type="radio"
-           id="annual"
-           name="paymentTerm"
-           value="annual"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="annual"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__discount">
-        Save 25% off off RRP
-      </span>
-      <span class="ncf__payment-term__title">
-        Annual
-      </span>
-      <div class="ncf__payment-term__description">
-        Single
-        <span class="ncf__payment-term__price ncf__strong">
-          £20.00
+  <div class>
+    <div class="ncf__payment-term__item o-forms-input--radio-round ncf__payment-term__item--discount">
+      <input type="radio"
+             id="annual"
+             name="paymentTerm"
+             value="annual"
+             class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+      >
+      <label for="annual"
+             class="o-forms-input__label ncf__payment-term__label"
+      >
+        <span class="ncf__payment-term__discount">
+          Save 25% off off RRP
         </span>
-        payment
-        <p class="ncf__payment-term__renews-text">
-          Renews annually unless cancelled
-        </p>
-      </div>
-    </label>
+        <span class="ncf__payment-term__title">
+          Annual
+        </span>
+        <div class="ncf__payment-term__description">
+          Single
+          <span class="ncf__payment-term__price ncf__strong">
+            £20.00
+          </span>
+          payment
+          <p class="ncf__payment-term__renews-text">
+            Renews annually unless cancelled
+          </p>
+        </div>
+      </label>
+    </div>
   </div>
   <div class="ncf__payment-term__legal">
     <p>
@@ -105,31 +109,33 @@ exports[`PaymentTerm annual option render option with isTrial 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="annual"
-           name="paymentTerm"
-           value="annual"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="annual"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Trial: Premium Digital - Annual
-      </span>
-      <div class="ncf__payment-term__description">
-        4 weeks for
-        <span class="ncf__payment-term__trial-price">
+  <div class>
+    <div class="ncf__payment-term__item o-forms-input--radio-round">
+      <input type="radio"
+             id="annual"
+             name="paymentTerm"
+             value="annual"
+             class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+      >
+      <label for="annual"
+             class="o-forms-input__label ncf__payment-term__label"
+      >
+        <span class="ncf__payment-term__title">
+          Trial: Premium Digital - Annual
         </span>
-        <br>
-        Unless you cancel during your trial you will be billed
-        <span class="ncf__payment-term__price">
-          £20.00
-        </span>
-        per year after the trial period.
-      </div>
-    </label>
+        <div class="ncf__payment-term__description">
+          4 weeks for
+          <span class="ncf__payment-term__trial-price">
+          </span>
+          <br>
+          Unless you cancel during your trial you will be billed
+          <span class="ncf__payment-term__price">
+            £20.00
+          </span>
+          per year after the trial period.
+        </div>
+      </label>
+    </div>
   </div>
   <div class="ncf__payment-term__legal">
     <p>
@@ -155,37 +161,39 @@ exports[`PaymentTerm annual option render option with monthlyPrice 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="annual"
-           name="paymentTerm"
-           value="annual"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="annual"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Annual
-      </span>
-      <div class="ncf__payment-term__description">
-        Single
-        <span class="ncf__payment-term__price ncf__strong">
-          £20.00
+  <div class>
+    <div class="ncf__payment-term__item o-forms-input--radio-round">
+      <input type="radio"
+             id="annual"
+             name="paymentTerm"
+             value="annual"
+             class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+      >
+      <label for="annual"
+             class="o-forms-input__label ncf__payment-term__label"
+      >
+        <span class="ncf__payment-term__title">
+          Annual
         </span>
-        payment
-        <span class="ncf__payment-term__equivalent-price">
-          That’s equivalent to
-          <span class="ncf__payment-term__monthly-price">
-            £1.67
+        <div class="ncf__payment-term__description">
+          Single
+          <span class="ncf__payment-term__price ncf__strong">
+            £20.00
           </span>
-          per month
-        </span>
-        <p class="ncf__payment-term__renews-text">
-          Renews annually unless cancelled
-        </p>
-      </div>
-    </label>
+          payment
+          <span class="ncf__payment-term__equivalent-price">
+            That’s equivalent to
+            <span class="ncf__payment-term__monthly-price">
+              £1.67
+            </span>
+            per month
+          </span>
+          <p class="ncf__payment-term__renews-text">
+            Renews annually unless cancelled
+          </p>
+        </div>
+      </label>
+    </div>
   </div>
   <div class="ncf__payment-term__legal">
     <p>
@@ -211,31 +219,33 @@ exports[`PaymentTerm annual option render option with selected 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="annual"
-           name="paymentTerm"
-           value="annual"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-           checked
-    >
-    <label for="annual"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Annual
-      </span>
-      <div class="ncf__payment-term__description">
-        Single
-        <span class="ncf__payment-term__price ncf__strong">
-          £20.00
+  <div class>
+    <div class="ncf__payment-term__item o-forms-input--radio-round">
+      <input type="radio"
+             id="annual"
+             name="paymentTerm"
+             value="annual"
+             class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+             checked
+      >
+      <label for="annual"
+             class="o-forms-input__label ncf__payment-term__label"
+      >
+        <span class="ncf__payment-term__title">
+          Annual
         </span>
-        payment
-        <p class="ncf__payment-term__renews-text">
-          Renews annually unless cancelled
-        </p>
-      </div>
-    </label>
+        <div class="ncf__payment-term__description">
+          Single
+          <span class="ncf__payment-term__price ncf__strong">
+            £20.00
+          </span>
+          payment
+          <p class="ncf__payment-term__renews-text">
+            Renews annually unless cancelled
+          </p>
+        </div>
+      </label>
+    </div>
   </div>
   <div class="ncf__payment-term__legal">
     <p>
@@ -261,32 +271,34 @@ exports[`PaymentTerm annual option render option with trial 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="annual"
-           name="paymentTerm"
-           value="annual"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="annual"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Trial: Premium Digital - Annual
-      </span>
-      <div class="ncf__payment-term__description">
-        6 weeks for
-        <span class="ncf__payment-term__trial-price">
-          £1.00
+  <div class>
+    <div class="ncf__payment-term__item o-forms-input--radio-round">
+      <input type="radio"
+             id="annual"
+             name="paymentTerm"
+             value="annual"
+             class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+      >
+      <label for="annual"
+             class="o-forms-input__label ncf__payment-term__label"
+      >
+        <span class="ncf__payment-term__title">
+          Trial: Premium Digital - Annual
         </span>
-        <br>
-        Unless you cancel during your trial you will be billed
-        <span class="ncf__payment-term__price">
-          £20.00
-        </span>
-        per year after the trial period.
-      </div>
-    </label>
+        <div class="ncf__payment-term__description">
+          6 weeks for
+          <span class="ncf__payment-term__trial-price">
+            £1.00
+          </span>
+          <br>
+          Unless you cancel during your trial you will be billed
+          <span class="ncf__payment-term__price">
+            £20.00
+          </span>
+          per year after the trial period.
+        </div>
+      </label>
+    </div>
   </div>
   <div class="ncf__payment-term__legal">
     <p>
@@ -312,29 +324,31 @@ exports[`PaymentTerm monthly option render option 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="monthly"
-           name="paymentTerm"
-           value="monthly"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="monthly"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Monthly
-      </span>
-      <div class="ncf__payment-term__description">
-        <span class="ncf__payment-term__price">
-          £20.00
+  <div class>
+    <div class="ncf__payment-term__item o-forms-input--radio-round">
+      <input type="radio"
+             id="monthly"
+             name="paymentTerm"
+             value="monthly"
+             class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+      >
+      <label for="monthly"
+             class="o-forms-input__label ncf__payment-term__label"
+      >
+        <span class="ncf__payment-term__title">
+          Monthly
         </span>
-        per month
-        <p class="ncf__payment-term__renews-text">
-          Renews monthly unless cancelled
-        </p>
-      </div>
-    </label>
+        <div class="ncf__payment-term__description">
+          <span class="ncf__payment-term__price">
+            £20.00
+          </span>
+          per month
+          <p class="ncf__payment-term__renews-text">
+            Renews monthly unless cancelled
+          </p>
+        </div>
+      </label>
+    </div>
   </div>
   <div class="ncf__payment-term__legal">
     <p>
@@ -360,32 +374,34 @@ exports[`PaymentTerm monthly option render option with discount 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item o-forms-input--radio-round ncf__payment-term__item--discount">
-    <input type="radio"
-           id="monthly"
-           name="paymentTerm"
-           value="monthly"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="monthly"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__discount">
-        Save 25% off off RRP
-      </span>
-      <span class="ncf__payment-term__title">
-        Monthly
-      </span>
-      <div class="ncf__payment-term__description">
-        <span class="ncf__payment-term__price">
-          £20.00
+  <div class>
+    <div class="ncf__payment-term__item o-forms-input--radio-round ncf__payment-term__item--discount">
+      <input type="radio"
+             id="monthly"
+             name="paymentTerm"
+             value="monthly"
+             class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+      >
+      <label for="monthly"
+             class="o-forms-input__label ncf__payment-term__label"
+      >
+        <span class="ncf__payment-term__discount">
+          Save 25% off off RRP
         </span>
-        per month
-        <p class="ncf__payment-term__renews-text">
-          Renews monthly unless cancelled
-        </p>
-      </div>
-    </label>
+        <span class="ncf__payment-term__title">
+          Monthly
+        </span>
+        <div class="ncf__payment-term__description">
+          <span class="ncf__payment-term__price">
+            £20.00
+          </span>
+          per month
+          <p class="ncf__payment-term__renews-text">
+            Renews monthly unless cancelled
+          </p>
+        </div>
+      </label>
+    </div>
   </div>
   <div class="ncf__payment-term__legal">
     <p>
@@ -411,31 +427,33 @@ exports[`PaymentTerm monthly option render option with isTrial 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="monthly"
-           name="paymentTerm"
-           value="monthly"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="monthly"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Trial: Premium Digital - Monthly
-      </span>
-      <div class="ncf__payment-term__description">
-        4 weeks for
-        <span class="ncf__payment-term__trial-price">
+  <div class>
+    <div class="ncf__payment-term__item o-forms-input--radio-round">
+      <input type="radio"
+             id="monthly"
+             name="paymentTerm"
+             value="monthly"
+             class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+      >
+      <label for="monthly"
+             class="o-forms-input__label ncf__payment-term__label"
+      >
+        <span class="ncf__payment-term__title">
+          Trial: Premium Digital - Monthly
         </span>
-        <br>
-        Unless you cancel during your trial you will be billed
-        <span class="ncf__payment-term__price">
-          £20.00
-        </span>
-        per month after the trial period.
-      </div>
-    </label>
+        <div class="ncf__payment-term__description">
+          4 weeks for
+          <span class="ncf__payment-term__trial-price">
+          </span>
+          <br>
+          Unless you cancel during your trial you will be billed
+          <span class="ncf__payment-term__price">
+            £20.00
+          </span>
+          per month after the trial period.
+        </div>
+      </label>
+    </div>
   </div>
   <div class="ncf__payment-term__legal">
     <p>
@@ -461,29 +479,31 @@ exports[`PaymentTerm monthly option render option with monthlyPrice 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="monthly"
-           name="paymentTerm"
-           value="monthly"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="monthly"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Monthly
-      </span>
-      <div class="ncf__payment-term__description">
-        <span class="ncf__payment-term__price">
-          £20.00
+  <div class>
+    <div class="ncf__payment-term__item o-forms-input--radio-round">
+      <input type="radio"
+             id="monthly"
+             name="paymentTerm"
+             value="monthly"
+             class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+      >
+      <label for="monthly"
+             class="o-forms-input__label ncf__payment-term__label"
+      >
+        <span class="ncf__payment-term__title">
+          Monthly
         </span>
-        per month
-        <p class="ncf__payment-term__renews-text">
-          Renews monthly unless cancelled
-        </p>
-      </div>
-    </label>
+        <div class="ncf__payment-term__description">
+          <span class="ncf__payment-term__price">
+            £20.00
+          </span>
+          per month
+          <p class="ncf__payment-term__renews-text">
+            Renews monthly unless cancelled
+          </p>
+        </div>
+      </label>
+    </div>
   </div>
   <div class="ncf__payment-term__legal">
     <p>
@@ -509,30 +529,32 @@ exports[`PaymentTerm monthly option render option with selected 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="monthly"
-           name="paymentTerm"
-           value="monthly"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-           checked
-    >
-    <label for="monthly"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Monthly
-      </span>
-      <div class="ncf__payment-term__description">
-        <span class="ncf__payment-term__price">
-          £20.00
+  <div class>
+    <div class="ncf__payment-term__item o-forms-input--radio-round">
+      <input type="radio"
+             id="monthly"
+             name="paymentTerm"
+             value="monthly"
+             class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+             checked
+      >
+      <label for="monthly"
+             class="o-forms-input__label ncf__payment-term__label"
+      >
+        <span class="ncf__payment-term__title">
+          Monthly
         </span>
-        per month
-        <p class="ncf__payment-term__renews-text">
-          Renews monthly unless cancelled
-        </p>
-      </div>
-    </label>
+        <div class="ncf__payment-term__description">
+          <span class="ncf__payment-term__price">
+            £20.00
+          </span>
+          per month
+          <p class="ncf__payment-term__renews-text">
+            Renews monthly unless cancelled
+          </p>
+        </div>
+      </label>
+    </div>
   </div>
   <div class="ncf__payment-term__legal">
     <p>
@@ -558,32 +580,34 @@ exports[`PaymentTerm monthly option render option with trial 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="monthly"
-           name="paymentTerm"
-           value="monthly"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="monthly"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Trial: Premium Digital - Monthly
-      </span>
-      <div class="ncf__payment-term__description">
-        6 weeks for
-        <span class="ncf__payment-term__trial-price">
-          £1.00
+  <div class>
+    <div class="ncf__payment-term__item o-forms-input--radio-round">
+      <input type="radio"
+             id="monthly"
+             name="paymentTerm"
+             value="monthly"
+             class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+      >
+      <label for="monthly"
+             class="o-forms-input__label ncf__payment-term__label"
+      >
+        <span class="ncf__payment-term__title">
+          Trial: Premium Digital - Monthly
         </span>
-        <br>
-        Unless you cancel during your trial you will be billed
-        <span class="ncf__payment-term__price">
-          £20.00
-        </span>
-        per month after the trial period.
-      </div>
-    </label>
+        <div class="ncf__payment-term__description">
+          6 weeks for
+          <span class="ncf__payment-term__trial-price">
+            £1.00
+          </span>
+          <br>
+          Unless you cancel during your trial you will be billed
+          <span class="ncf__payment-term__price">
+            £20.00
+          </span>
+          per month after the trial period.
+        </div>
+      </label>
+    </div>
   </div>
   <div class="ncf__payment-term__legal">
     <p>
@@ -609,29 +633,31 @@ exports[`PaymentTerm quarterly option render option 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="quarterly"
-           name="paymentTerm"
-           value="quarterly"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="quarterly"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Quarterly
-      </span>
-      <div class="ncf__payment-term__description">
-        <span class="ncf__payment-term__price">
-          £20.00
+  <div class>
+    <div class="ncf__payment-term__item o-forms-input--radio-round">
+      <input type="radio"
+             id="quarterly"
+             name="paymentTerm"
+             value="quarterly"
+             class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+      >
+      <label for="quarterly"
+             class="o-forms-input__label ncf__payment-term__label"
+      >
+        <span class="ncf__payment-term__title">
+          Quarterly
         </span>
-        per quarter
-        <p class="ncf__payment-term__renews-text">
-          Renews quarterly unless cancelled
-        </p>
-      </div>
-    </label>
+        <div class="ncf__payment-term__description">
+          <span class="ncf__payment-term__price">
+            £20.00
+          </span>
+          per quarter
+          <p class="ncf__payment-term__renews-text">
+            Renews quarterly unless cancelled
+          </p>
+        </div>
+      </label>
+    </div>
   </div>
   <div class="ncf__payment-term__legal">
     <p>
@@ -657,32 +683,34 @@ exports[`PaymentTerm quarterly option render option with discount 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item o-forms-input--radio-round ncf__payment-term__item--discount">
-    <input type="radio"
-           id="quarterly"
-           name="paymentTerm"
-           value="quarterly"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="quarterly"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__discount">
-        Save 25% off off RRP
-      </span>
-      <span class="ncf__payment-term__title">
-        Quarterly
-      </span>
-      <div class="ncf__payment-term__description">
-        <span class="ncf__payment-term__price">
-          £20.00
+  <div class>
+    <div class="ncf__payment-term__item o-forms-input--radio-round ncf__payment-term__item--discount">
+      <input type="radio"
+             id="quarterly"
+             name="paymentTerm"
+             value="quarterly"
+             class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+      >
+      <label for="quarterly"
+             class="o-forms-input__label ncf__payment-term__label"
+      >
+        <span class="ncf__payment-term__discount">
+          Save 25% off off RRP
         </span>
-        per quarter
-        <p class="ncf__payment-term__renews-text">
-          Renews quarterly unless cancelled
-        </p>
-      </div>
-    </label>
+        <span class="ncf__payment-term__title">
+          Quarterly
+        </span>
+        <div class="ncf__payment-term__description">
+          <span class="ncf__payment-term__price">
+            £20.00
+          </span>
+          per quarter
+          <p class="ncf__payment-term__renews-text">
+            Renews quarterly unless cancelled
+          </p>
+        </div>
+      </label>
+    </div>
   </div>
   <div class="ncf__payment-term__legal">
     <p>
@@ -708,31 +736,33 @@ exports[`PaymentTerm quarterly option render option with isTrial 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="quarterly"
-           name="paymentTerm"
-           value="quarterly"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="quarterly"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Trial: Premium Digital - Quarterly
-      </span>
-      <div class="ncf__payment-term__description">
-        4 weeks for
-        <span class="ncf__payment-term__trial-price">
+  <div class>
+    <div class="ncf__payment-term__item o-forms-input--radio-round">
+      <input type="radio"
+             id="quarterly"
+             name="paymentTerm"
+             value="quarterly"
+             class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+      >
+      <label for="quarterly"
+             class="o-forms-input__label ncf__payment-term__label"
+      >
+        <span class="ncf__payment-term__title">
+          Trial: Premium Digital - Quarterly
         </span>
-        <br>
-        Unless you cancel during your trial you will be billed
-        <span class="ncf__payment-term__price">
-          £20.00
-        </span>
-        per quarter after the trial period.
-      </div>
-    </label>
+        <div class="ncf__payment-term__description">
+          4 weeks for
+          <span class="ncf__payment-term__trial-price">
+          </span>
+          <br>
+          Unless you cancel during your trial you will be billed
+          <span class="ncf__payment-term__price">
+            £20.00
+          </span>
+          per quarter after the trial period.
+        </div>
+      </label>
+    </div>
   </div>
   <div class="ncf__payment-term__legal">
     <p>
@@ -758,29 +788,31 @@ exports[`PaymentTerm quarterly option render option with monthlyPrice 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="quarterly"
-           name="paymentTerm"
-           value="quarterly"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="quarterly"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Quarterly
-      </span>
-      <div class="ncf__payment-term__description">
-        <span class="ncf__payment-term__price">
-          £20.00
+  <div class>
+    <div class="ncf__payment-term__item o-forms-input--radio-round">
+      <input type="radio"
+             id="quarterly"
+             name="paymentTerm"
+             value="quarterly"
+             class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+      >
+      <label for="quarterly"
+             class="o-forms-input__label ncf__payment-term__label"
+      >
+        <span class="ncf__payment-term__title">
+          Quarterly
         </span>
-        per quarter
-        <p class="ncf__payment-term__renews-text">
-          Renews quarterly unless cancelled
-        </p>
-      </div>
-    </label>
+        <div class="ncf__payment-term__description">
+          <span class="ncf__payment-term__price">
+            £20.00
+          </span>
+          per quarter
+          <p class="ncf__payment-term__renews-text">
+            Renews quarterly unless cancelled
+          </p>
+        </div>
+      </label>
+    </div>
   </div>
   <div class="ncf__payment-term__legal">
     <p>
@@ -806,30 +838,32 @@ exports[`PaymentTerm quarterly option render option with selected 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="quarterly"
-           name="paymentTerm"
-           value="quarterly"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-           checked
-    >
-    <label for="quarterly"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Quarterly
-      </span>
-      <div class="ncf__payment-term__description">
-        <span class="ncf__payment-term__price">
-          £20.00
+  <div class>
+    <div class="ncf__payment-term__item o-forms-input--radio-round">
+      <input type="radio"
+             id="quarterly"
+             name="paymentTerm"
+             value="quarterly"
+             class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+             checked
+      >
+      <label for="quarterly"
+             class="o-forms-input__label ncf__payment-term__label"
+      >
+        <span class="ncf__payment-term__title">
+          Quarterly
         </span>
-        per quarter
-        <p class="ncf__payment-term__renews-text">
-          Renews quarterly unless cancelled
-        </p>
-      </div>
-    </label>
+        <div class="ncf__payment-term__description">
+          <span class="ncf__payment-term__price">
+            £20.00
+          </span>
+          per quarter
+          <p class="ncf__payment-term__renews-text">
+            Renews quarterly unless cancelled
+          </p>
+        </div>
+      </label>
+    </div>
   </div>
   <div class="ncf__payment-term__legal">
     <p>
@@ -855,32 +889,34 @@ exports[`PaymentTerm quarterly option render option with trial 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
-  <div class="ncf__payment-term__item o-forms-input--radio-round">
-    <input type="radio"
-           id="quarterly"
-           name="paymentTerm"
-           value="quarterly"
-           class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
-    >
-    <label for="quarterly"
-           class="o-forms-input__label ncf__payment-term__label"
-    >
-      <span class="ncf__payment-term__title">
-        Trial: Premium Digital - Quarterly
-      </span>
-      <div class="ncf__payment-term__description">
-        6 weeks for
-        <span class="ncf__payment-term__trial-price">
-          £1.00
+  <div class>
+    <div class="ncf__payment-term__item o-forms-input--radio-round">
+      <input type="radio"
+             id="quarterly"
+             name="paymentTerm"
+             value="quarterly"
+             class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+      >
+      <label for="quarterly"
+             class="o-forms-input__label ncf__payment-term__label"
+      >
+        <span class="ncf__payment-term__title">
+          Trial: Premium Digital - Quarterly
         </span>
-        <br>
-        Unless you cancel during your trial you will be billed
-        <span class="ncf__payment-term__price">
-          £20.00
-        </span>
-        per quarter after the trial period.
-      </div>
-    </label>
+        <div class="ncf__payment-term__description">
+          6 weeks for
+          <span class="ncf__payment-term__trial-price">
+            £1.00
+          </span>
+          <br>
+          Unless you cancel during your trial you will be billed
+          <span class="ncf__payment-term__price">
+            £20.00
+          </span>
+          per quarter after the trial period.
+        </div>
+      </label>
+    </div>
   </div>
   <div class="ncf__payment-term__legal">
     <p>
@@ -906,6 +942,8 @@ exports[`PaymentTerm render with defaults 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
+  <div class>
+  </div>
   <div class="ncf__payment-term__legal">
     <p>
       With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
@@ -930,6 +968,8 @@ exports[`PaymentTerm render with isPrintOrBundle 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
 >
+  <div class>
+  </div>
   <div class="ncf__payment-term__legal">
     <p>
       With all subscription types, we will automatically renew your subscription using the payment method provided unless you cancel before your renewal date.
