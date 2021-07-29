@@ -11,7 +11,10 @@
 
 				> * {
 					flex: 1;
-					margin-left: oGridGutter(L);
+
+					&:not(:first-child) {
+						margin-left: oGridGutter(L);
+					}
 				}
 			}
 		}
