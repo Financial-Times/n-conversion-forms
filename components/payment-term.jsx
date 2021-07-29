@@ -116,7 +116,8 @@ export function PaymentTerm({
 			return (
 				option.discount && (
 					<span className="ncf__payment-term__discount">
-						{option.bestOffer ? 'Best offer -' : 'Save'} {option.discount} off RRP
+						{option.bestOffer ? 'Best offer -' : 'Save'} {option.discount} off
+						RRP
 					</span>
 				)
 			);
@@ -129,7 +130,8 @@ export function PaymentTerm({
 						{option.trialPrice}
 					</span>
 					<br />
-					{nameMap[option.name] && nameMap[option.name].trialPrice(option.price)}
+					{nameMap[option.name] &&
+						nameMap[option.name].trialPrice(option.price)}
 				</div>
 			) : (
 				<React.Fragment>
@@ -143,7 +145,11 @@ export function PaymentTerm({
 						</div>
 					) : (
 						<div>
-							<span className={largePrice ? 'ncf__payment-term__large-price' : ''}>{option.price}</span>
+							<span
+								className={largePrice ? 'ncf__payment-term__large-price' : ''}
+							>
+								{option.price}
+							</span>
 							{option.chargeOnText && (
 								<p className="ncf__payment-term__charge-on-text">
 									{option.chargeOnText}
@@ -151,7 +157,7 @@ export function PaymentTerm({
 							)}
 						</div>
 					)}
-					</React.Fragment>
+				</React.Fragment>
 			);
 		};
 
@@ -166,8 +172,7 @@ export function PaymentTerm({
 
 					<span className="ncf__payment-term__title">
 						{showTrialCopyInTitle ? 'Trial: Premium Digital - ' : ''}
-						{nameMap[option.name] ? title : option.title}
-						{' '}
+						{nameMap[option.name] ? title : option.title}{' '}
 						{option.subTitle && (
 							<span className="ncf__regular">{option.subTitle}</span>
 						)}
@@ -181,7 +186,7 @@ export function PaymentTerm({
 
 	return (
 		<div id={fieldId} className="o-forms__group ncf__payment-term">
-			<div className={`${optionsInARow ? 'ncf__payment-term__options-grid' : ''}`}>
+			<div className={optionsInARow ? 'ncf__payment-term__options-grid' : ''}>
 				{options.map((option) => createPaymentTerm(option))}
 			</div>
 
@@ -210,8 +215,8 @@ export function PaymentTerm({
 							</p>
 							<p>
 								We will notify you at least 14 days in advance of any changes to
-								the price in your subscription that would apply upon next renewal.
-								Find out more about our cancellation policy in our{' '}
+								the price in your subscription that would apply upon next
+								renewal. Find out more about our cancellation policy in our{' '}
 								<a
 									className="ncf__link--external"
 									href="https://help.ft.com/legal-privacy/terms-and-conditions/"

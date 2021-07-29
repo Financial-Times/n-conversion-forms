@@ -35,17 +35,23 @@ Basic.args = {
 	],
 };
 
-export const FixedTermOffer = (args) => <div className="ncf"><Fieldset><PaymentTerm {...args} /></Fieldset></div>;
+export const FixedTermOffer = (args) => (
+	<div className="ncf">
+		<Fieldset>
+			<PaymentTerm {...args} />
+		</Fieldset>
+	</div>
+);
 FixedTermOffer.args = {
 	options: [
 		{
 			name: 'monthly',
 			price: '$5.00',
-			value: 5.00,
-		}
+			value: 5.0,
+		},
 	],
 	isFixedTermOffer: true,
-	displayName: 'Mix & Match'
+	displayName: 'Mix & Match',
 };
 
 export const RenewOffers = (args) => (
@@ -64,7 +70,7 @@ RenewOffers.args = {
 			title: 'Annual',
 			subTitle: '(Renews annually unless cancelled)',
 			price: '€ 270.00',
-			value: 270.00,
+			value: 270.0,
 			isTrial: false,
 			discount: '33%',
 			bestOffer: true,
@@ -74,7 +80,7 @@ RenewOffers.args = {
 		{
 			title: '12 Month Subscription',
 			price: '€ 300.00',
-			value: 300.00,
+			value: 300.0,
 			isTrial: false,
 			discount: '10%',
 			selected: true,
