@@ -404,6 +404,13 @@
 		}
 	}
 
+	&__unordered-list {
+		padding-inline-start: 25px;
+		> li {
+			margin-bottom: oSpacingByName('s3');
+		}
+	}
+
 	@include ncfMessage();
 	@include ncfPackageChange();
 	@include ncfPaymentTerm();
