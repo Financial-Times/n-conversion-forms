@@ -79,7 +79,7 @@ export function PaymentTerm({
 			monthlyPrice: () => {},
 			renewsText: (isFixedTermOffer) => {
 				const textToDisplay = isFixedTermOffer
-					? 'This subscription is charged monthly and can be cancelled at anytime'
+					? 'This subscription is for 3 months, charged monthly. You can cancel at anytime'
 					: 'Renews monthly unless cancelled';
 				return (
 					<p className="ncf__payment-term__renews-text">{textToDisplay}</p>

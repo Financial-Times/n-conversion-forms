@@ -133,7 +133,7 @@ describe('PaymentTerm', () => {
 		});
 
 		it('should render fixed term renewal text in English', () => {
-			expect(wrapper.find('.ncf__payment-term__renews-text').text()).toMatch(/This subscription is charged monthly and can be cancelled at anytime/);
+			expect(wrapper.find('.ncf__payment-term__renews-text').text()).toMatch(/This subscription is for 3 months, charged monthly. You can cancel at anytime/);
 		});
 
 		it('should render offer name on payment term title', () => {
