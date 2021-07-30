@@ -1,21 +1,18 @@
 import { PersonalTitle } from './index';
 import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
+import { defaultPersonalTitles } from './personal-title';
 
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+
 Enzyme.configure({ adapter: new Adapter() });
 
 expect.extend(expectToRenderCorrectly);
 
-const titleOptions = [
-	{ code: 'Mr', description: 'Mr' },
-	{ code: 'Mrs', description: 'Mrs' }
-];
-
 describe('PersonalTitle', () => {
 	it('render a select with a label', () => {
 		const props = {
-			options: titleOptions
+			options: defaultPersonalTitles
 		};
 
 		expect(PersonalTitle).toRenderCorrectly(props);
@@ -23,7 +20,7 @@ describe('PersonalTitle', () => {
 
 	it('can render an initial selected value', () => {
 		const props = {
-			options: titleOptions,
+			options: defaultPersonalTitles,
 			value: 'mr',
 		};
 
@@ -32,7 +29,7 @@ describe('PersonalTitle', () => {
 
 	it('can render a disable select', () => {
 		const props = {
-			options: titleOptions,
+			options: defaultPersonalTitles,
 			isDisabled: true,
 		};
 
@@ -41,7 +38,7 @@ describe('PersonalTitle', () => {
 
 	it('can render an error message', () => {
 		const props = {
-			options: titleOptions,
+			options: defaultPersonalTitles,
 			hasError: true,
 		};
 

@@ -2,6 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+export const defaultPersonalTitles = [
+	{ code: 'Mr', description: 'Mr' },
+	{ code: 'Mrs', description: 'Mrs' },
+	{ code: 'Miss', description: 'Miss' },
+	{ code: 'Ms', description: 'Ms' },
+];
+
 export function PersonalTitle ({
 	value,
 	isDisabled = false,
@@ -9,12 +16,7 @@ export function PersonalTitle ({
 	fieldId = 'title',
 	selectId = 'title',
 	selectName = 'title',
-	options = [
-		{ code: 'Mr', description: 'Mr' },
-		{ code: 'Mrs', description: 'Mrs' },
-		{ code: 'Miss', description: 'Miss' },
-		{ code: 'Ms', description: 'Ms' },
-	],
+	options = defaultPersonalTitles,
 	fieldLabel = 'Title',
 	isRequired = true,
 }) {
