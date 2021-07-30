@@ -239,7 +239,7 @@ export function AcceptTerms({
 							Find out more about our cancellation policy in our{' '}
 							<a
 								className="ncf__link--external"
-								href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+								href="https://help.ft.com/legal-privacy/terms-and-conditions/"
 								target={isEmbedded ? '_top' : '_blank'}
 								rel="noopener noreferrer"
 							>
