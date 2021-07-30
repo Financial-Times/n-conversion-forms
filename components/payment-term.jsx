@@ -1,11 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-
-const isoDurationToEnglish = {
-	P3M: '3 months',
-};
-
 export function PaymentTerm({
 	fieldId = 'paymentTermField',
 	inputName = 'paymentTerm',
@@ -13,7 +8,7 @@ export function PaymentTerm({
 	isEpaper = false,
 	options = [],
 	isFixedTermOffer = false,
-	subscriptionDuration,
+	displayName,
 }) {
 	const nameMap = {
 		annual: {
@@ -82,11 +77,14 @@ export function PaymentTerm({
 				</React.Fragment>
 			),
 			monthlyPrice: () => {},
-			renewsText: () => (
-				<p className="ncf__payment-term__renews-text">
-					Renews monthly unless cancelled
-				</p>
-			),
+			renewsText: (isFixedTermOffer) => {
+				const textToDisplay = isFixedTermOffer
+					? 'This subscription is charged monthly and can be cancelled at anytime'
+					: 'Renews monthly unless cancelled';
+				return (
+					<p className="ncf__payment-term__renews-text">{textToDisplay}</p>
+				);
+			},
 		},
 	};
 	const createPaymentTerm = (option) => {
@@ -98,14 +96,19 @@ export function PaymentTerm({
 		const props = {
 			type: 'radio',
 			id: option.value,
-      'data-base-amount': option.isTrial ? option.trialAmount : option.amount,
+			'data-base-amount': option.isTrial ? option.trialAmount : option.amount,
 			name: inputName,
 			value: option.value,
 			className:
 				'o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input',
 			...(option.selected && { defaultChecked: true }),
 		};
-		const showTrialCopyInTitle = option.isTrial && !isPrintOrBundle && !isEpaper;
+		const showTrialCopyInTitle =
+			option.isTrial && !isPrintOrBundle && !isEpaper;
+		const defaultTitle = nameMap[option.name].title;
+		const title = isFixedTermOffer
+			? `${displayName} - ${defaultTitle}`
+			: defaultTitle;
 		const createDiscount = () => {
 			return (
 				option.discount && (
@@ -129,10 +132,7 @@ export function PaymentTerm({
 				<div className="ncf__payment-term__description">
 					{nameMap[option.name].price(option.price)}
 					{nameMap[option.name].monthlyPrice(option.monthlyPrice)}
-					{isFixedTermOffer ?
-						<p className="ncf__payment-term__renews-text">This subscription is for {isoDurationToEnglish[subscriptionDuration]} and will not renew</p> :
-						nameMap[option.name].renewsText()
-					}
+					{nameMap[option.name].renewsText(isFixedTermOffer)}
 					{/* Remove this discount text temporarily in favour of monthly price */}
 					{/* <br />Save up to 25% when you pay annually */}
 				</div>
@@ -150,7 +150,7 @@ export function PaymentTerm({
 
 					<span className="ncf__payment-term__title">
 						{showTrialCopyInTitle ? 'Trial: Premium Digital - ' : ''}
-						{nameMap[option.name].title}
+						{title}
 					</span>
 
 					{createDescription()}
@@ -164,32 +164,44 @@ export function PaymentTerm({
 			{options.map((option) => createPaymentTerm(option))}
 
 			<div className="ncf__payment-term__legal">
-				{
-					isFixedTermOffer ?
-						<p>Find out more about our cancellation policy in our <a className="ncf__link--external" href="https://help.ft.com/help/legal-privacy/terms-conditions/" title="FT Legal Terms and Conditions help page" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>.</p> :
-						<React.Fragment>
-							<p>
-								With all subscription types, we will automatically renew your
-								subscription using the payment method provided unless you cancel
-								before your renewal date.
-							</p>
-							<p>
-								We will notify you at least 14 days in advance of any changes to the
-								price in your subscription that would apply upon next renewal. Find
-								out more about our cancellation policy in our{' '}
-								<a
-									className="ncf__link--external"
-									href="https://help.ft.com/help/legal-privacy/terms-conditions/"
-									title="FT Legal Terms and Conditions help page"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									Terms &amp; Conditions
-								</a>
-								.
-							</p>
-						</React.Fragment>
-				}
+				{isFixedTermOffer ? (
+					<p>
+						Find out more about our cancellation policy in our{' '}
+						<a
+							className="ncf__link--external"
+							href="https://help.ft.com/legal-privacy/terms-and-conditions/"
+							title="FT Legal Terms and Conditions help page"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Terms &amp; Conditions
+						</a>
+						.
+					</p>
+				) : (
+					<React.Fragment>
+						<p>
+							With all subscription types, we will automatically renew your
+							subscription using the payment method provided unless you cancel
+							before your renewal date.
+						</p>
+						<p>
+							We will notify you at least 14 days in advance of any changes to
+							the price in your subscription that would apply upon next renewal.
+							Find out more about our cancellation policy in our{' '}
+							<a
+								className="ncf__link--external"
+								href="https://help.ft.com/legal-privacy/terms-and-conditions/"
+								title="FT Legal Terms and Conditions help page"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Terms &amp; Conditions
+							</a>
+							.
+						</p>
+					</React.Fragment>
+				)}
 			</div>
 		</div>
 	);
@@ -216,5 +228,5 @@ PaymentTerm.propTypes = {
 		})
 	),
 	isFixedTermOffer: PropTypes.bool,
-	subscriptionDuration: PropTypes.string,
+	displayName: PropTypes.string,
 };
