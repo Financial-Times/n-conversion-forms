@@ -8,6 +8,7 @@
 			border: 2px solid oColorsByName('teal');
 			text-align: left;
 			width: 100%;
+			position: relative;
 
 			// radio button styling
 			&::before {
@@ -53,7 +54,6 @@
 		+ .o-forms-input__label {
 			background-color: oColorsByName('teal');
 			color: oColorsByName('white');
-			position: relative;
 
 			// radio button styling
 			&::before {

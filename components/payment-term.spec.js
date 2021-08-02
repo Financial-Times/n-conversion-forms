@@ -124,16 +124,26 @@ describe('PaymentTerm', () => {
 				price: '$5.00',
 				value: 'monthly',
 				monthlyPrice: '$5.00',
-			}
+			},
 		];
-		const wrapper = shallow(<PaymentTerm isFixedTermOffer={true} options={options} displayName='Mix & Match' />);
+		const wrapper = shallow(
+			<PaymentTerm
+				isFixedTermOffer={true}
+				options={options}
+				displayName="Mix & Match"
+			/>
+		);
 
 		it('should not include renewal text', () => {
-			expect(wrapper.find('.ncf__payment-term__renews-text').text()).not.toMatch(/Renews (annually|monthly|quarterly) unless cancelled/);
+			expect(
+				wrapper.find('.ncf__payment-term__renews-text').text()
+			).not.toMatch(/Renews (annually|monthly|quarterly) unless cancelled/);
 		});
 
 		it('should render fixed term renewal text in English', () => {
-			expect(wrapper.find('.ncf__payment-term__renews-text').text()).toMatch(/This subscription is for 3 months, charged monthly. You can cancel at anytime/);
+			expect(wrapper.find('.ncf__payment-term__renews-text').text()).toMatch(
+				/This subscription is for 3 months, charged monthly. You can cancel at anytime/
+			);
 		});
 
 		it('should render offer name on payment term title', () => {
@@ -154,7 +164,7 @@ describe('PaymentTerm', () => {
 					isTrial: false,
 					amount: 100,
 					trialAmount: 1,
-				}
+				},
 			];
 			const wrapper = shallow(<PaymentTerm options={options} />);
 			expect(wrapper.find('input').prop('data-base-amount')).toEqual(100);
@@ -170,11 +180,10 @@ describe('PaymentTerm', () => {
 					isTrial: true,
 					amount: 100,
 					trialAmount: 1,
-				}
+				},
 			];
 			const wrapper = shallow(<PaymentTerm options={options} />);
 			expect(wrapper.find('input').prop('data-base-amount')).toEqual(1);
 		});
-
 	});
 });
