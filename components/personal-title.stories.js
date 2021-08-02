@@ -6,8 +6,8 @@ export default {
 	component: PersonalTitle,
 };
 
-export const Basic = (args) => <PersonalTitle {...args} />;
-Basic.args = {
+export const CustomPersonalTitle = (args) => <PersonalTitle {...args} />;
+CustomPersonalTitle.args = {
 	options: [
 		{ code: 'Mr', description: 'Mr' },
 		{ code: 'Mrs', description: 'Mrs' },
