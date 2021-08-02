@@ -108,7 +108,7 @@ export function PaymentTerm({
 		};
 		const showTrialCopyInTitle =
 			option.isTrial && !isPrintOrBundle && !isEpaper;
-		const defaultTitle = nameMap[option.name].title;
+		const defaultTitle = option.name ? nameMap[option.name].title : '';
 		const title = isFixedTermOffer
 			? `${displayName} - ${defaultTitle}`
 			: defaultTitle;
