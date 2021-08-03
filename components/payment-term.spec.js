@@ -186,4 +186,38 @@ describe('PaymentTerm', () => {
 			expect(wrapper.find('input').prop('data-base-amount')).toEqual(1);
 		});
 	});
+
+	describe('When using custom options', () => {
+		it('renders when not using an option in nameMap but provides a custom props instead', () => {
+			const props = {
+				showLegal: false,
+				largePrice: true,
+				options: [
+					{
+						title: 'Annual',
+						subTitle: '(Renews annually unless cancelled)',
+						price: '€ 270.00',
+						value: 270.0,
+						isTrial: false,
+						discount: '33%',
+						bestOffer: true,
+						selected: false,
+						chargeOnText: 'You will be charged on May 1, 2021',
+					},
+					{
+						title: '12 Month Subscription',
+						price: '€ 300.00',
+						value: 300.0,
+						isTrial: false,
+						discount: '10%',
+						selected: true,
+						chargeOnText: 'You will be charged on May 1, 2021',
+					},
+				],
+				optionsInARow: true,
+			};
+
+			expect(PaymentTerm).toRenderCorrectly(props);
+		});
+	});
 });

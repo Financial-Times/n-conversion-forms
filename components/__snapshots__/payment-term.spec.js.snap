@@ -1,5 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`PaymentTerm When using custom options renders when not using an option in nameMap but provides a custom props instead 1`] = `
+<div id="paymentTermField"
+     class="o-forms__group ncf__payment-term"
+>
+  <div class="ncf__payment-term__options-grid">
+    <div class="ncf__payment-term__item o-forms-input--radio-round ncf__payment-term__item--discount">
+      <input type="radio"
+             id="270"
+             name="paymentTerm"
+             value="270"
+             class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+      >
+      <label for="270"
+             class="o-forms-input__label ncf__payment-term__label"
+      >
+        <span class="ncf__payment-term__discount">
+          Best offer - 33% off RRP
+        </span>
+        <span class="ncf__payment-term__title">
+          Annual
+          <span class="ncf__regular">
+            (Renews annually unless cancelled)
+          </span>
+        </span>
+        <div>
+          <span class="ncf__payment-term__large-price">
+            € 270.00
+          </span>
+          <p class="ncf__payment-term__charge-on-text">
+            You will be charged on May 1, 2021
+          </p>
+        </div>
+      </label>
+    </div>
+    <div class="ncf__payment-term__item o-forms-input--radio-round ncf__payment-term__item--discount">
+      <input type="radio"
+             id="300"
+             name="paymentTerm"
+             value="300"
+             class="o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input"
+             checked
+      >
+      <label for="300"
+             class="o-forms-input__label ncf__payment-term__label"
+      >
+        <span class="ncf__payment-term__discount">
+          Save 10% off RRP
+        </span>
+        <span class="ncf__payment-term__title">
+          12 Month Subscription
+        </span>
+        <div>
+          <span class="ncf__payment-term__large-price">
+            € 300.00
+          </span>
+          <p class="ncf__payment-term__charge-on-text">
+            You will be charged on May 1, 2021
+          </p>
+        </div>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`PaymentTerm annual option render option 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
