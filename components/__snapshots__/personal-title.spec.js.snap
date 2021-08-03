@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PersonalTitle can render a disable select 1`] = `
+<label id="titleField"
+       class="o-forms-field ncf__validation-error"
+       for="title"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Title
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--select">
+    <select id="title"
+            name="title"
+            data-trackable="title"
+            aria-required="true"
+            required
+            disabled
+    >
+      <option value>
+        Please select a title
+      </option>
+      <option value="Mr">
+        Mr
+      </option>
+      <option value="Mrs">
+        Mrs
+      </option>
+      <option value="Miss">
+        Miss
+      </option>
+      <option value="Ms">
+        Ms
+      </option>
+    </select>
+    <span class="o-forms-input__error">
+      Please select your personal title
+    </span>
+  </span>
+</label>
+`;
+
+exports[`PersonalTitle can render an error message 1`] = `
+<label id="titleField"
+       class="o-forms-field ncf__validation-error"
+       for="title"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Title
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--select o-forms-input--invalid">
+    <select id="title"
+            name="title"
+            data-trackable="title"
+            aria-required="true"
+            required
+    >
+      <option value>
+        Please select a title
+      </option>
+      <option value="Mr">
+        Mr
+      </option>
+      <option value="Mrs">
+        Mrs
+      </option>
+      <option value="Miss">
+        Miss
+      </option>
+      <option value="Ms">
+        Ms
+      </option>
+    </select>
+    <span class="o-forms-input__error">
+      Please select your personal title
+    </span>
+  </span>
+</label>
+`;
+
+exports[`PersonalTitle can render an initial selected value 1`] = `
+<label id="titleField"
+       class="o-forms-field ncf__validation-error"
+       for="title"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Title
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--select">
+    <select id="title"
+            name="title"
+            data-trackable="title"
+            aria-required="true"
+            required
+    >
+      <option value>
+        Please select a title
+      </option>
+      <option value="Mr">
+        Mr
+      </option>
+      <option value="Mrs">
+        Mrs
+      </option>
+      <option value="Miss">
+        Miss
+      </option>
+      <option value="Ms">
+        Ms
+      </option>
+    </select>
+    <span class="o-forms-input__error">
+      Please select your personal title
+    </span>
+  </span>
+</label>
+`;
+
+exports[`PersonalTitle render a select with a label 1`] = `
+<label id="titleField"
+       class="o-forms-field ncf__validation-error"
+       for="title"
+>
+  <span class="o-forms-title">
+    <span class="o-forms-title__main">
+      Title
+    </span>
+  </span>
+  <span class="o-forms-input o-forms-input--select">
+    <select id="title"
+            name="title"
+            data-trackable="title"
+            aria-required="true"
+            required
+    >
+      <option value>
+        Please select a title
+      </option>
+      <option value="Mr">
+        Mr
+      </option>
+      <option value="Mrs">
+        Mrs
+      </option>
+      <option value="Miss">
+        Miss
+      </option>
+      <option value="Ms">
+        Ms
+      </option>
+    </select>
+    <span class="o-forms-input__error">
+      Please select your personal title
+    </span>
+  </span>
+</label>
+`;

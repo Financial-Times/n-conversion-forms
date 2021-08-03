@@ -29,6 +29,7 @@ export { FirstName } from './first-name';
 export { Form } from './form';
 export { Industry } from './industry';
 export { JobTitle } from './job-title';
+export { PersonalTitle } from './personal-title';
 export { LastName } from './last-name';
 export { LicenceConfirmation } from './licence-confirmation';
 export { LicenceHeader } from './licence-header';
