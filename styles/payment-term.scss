@@ -7,7 +7,7 @@
 		@include oGridRespondTo(L) {
 			&__options-grid {
 				display: flex;
-				align-items: baseline;
+				align-items: flex-end;
 
 				> * {
 					flex: 1;
@@ -76,6 +76,14 @@
 			@include oTypographySans($scale: -1, $include-font-family: false);
 			margin-bottom: 0;
 			margin-top: oSpacingByName('s1');
+		}
+
+		&__title--large-price {
+			@include oTypographySans($scale: 0, $include-font-family: false);
+		}
+
+		&__sub-title {
+			@include oTypographySans($scale: -1, $include-font-family: false);
 		}
 	}
 }
