@@ -19,6 +19,7 @@ export function AcceptTerms({
 	transitionType = null,
 	isPrintProduct = false,
 	specialTerms = null,
+	isSingleTerm = false,
 }) {
 	const divProps = {
 		id: 'acceptTermsField',
@@ -132,22 +133,24 @@ export function AcceptTerms({
 
 	const transitionTerms = isTransition && (
 		<>
-			<li>
-				<span className="terms-transition">
-					I give consent for my chosen payment method to be charged
-					automatically at the end of each subscription term until I cancel it
-					by contacting{' '}
-					<a
-						className="ncf__link--external"
-						href="https://help.ft.com/help/contact-us/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						customer care through chat, phone or email
-					</a>
-					.
-				</span>
-			</li>
+			{!isSingleTerm && (
+				<li>
+					<span className="terms-transition">
+						I give consent for my chosen payment method to be charged
+						automatically at the end of each subscription term until I cancel it
+						by contacting{' '}
+						<a
+							className="ncf__link--external"
+							href="https://help.ft.com/help/contact-us/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							customer care through chat, phone or email
+						</a>
+						.
+					</span>
+				</li>
+			)}
 			{transitionType === 'immediate' ? (
 				<li>
 					<span className="terms-transition terms-transition--immediate">
@@ -160,6 +163,9 @@ export function AcceptTerms({
 				<li>
 					<span className="terms-transition terms-transition--other">
 						By placing my order, I acknowledge that my subscription will start
+						{isSingleTerm
+							? ' and the chosen payment method will be charged '
+							: ' '}
 						on the date given above. Any cancellation notice received after that
 						date will take effect at the end of my subscription term and
 						previously paid amounts are non-refundable.
@@ -326,4 +332,5 @@ AcceptTerms.propTypes = {
 	transitionType: PropTypes.string,
 	isPrintProduct: PropTypes.bool,
 	specialTerms: PropTypes.string,
+	isSingleTerm: PropTypes.bool,
 };

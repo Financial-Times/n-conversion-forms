@@ -145,6 +145,16 @@ describe('AcceptTerms', () => {
 		expect(AcceptTerms).toRenderCorrectly(props);
 	});
 
+	it('renders appropriately if is transition with transition type other than immediate and is single term', () => {
+		const props = {
+			isTransition: true,
+			transitionType: 'foobar',
+			isSingleTerm: true,
+		};
+
+		expect(AcceptTerms).toRenderCorrectly(props);
+	});
+
 	it('renders appropriately if is B2C Partnership', () => {
 		const props = { isB2cPartnership: true };
 
