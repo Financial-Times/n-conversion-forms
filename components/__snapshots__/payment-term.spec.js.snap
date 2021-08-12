@@ -18,9 +18,9 @@ exports[`PaymentTerm When using custom options renders when not using an option 
         <span class="ncf__payment-term__discount">
           Best offer - 33% off RRP
         </span>
-        <span class="ncf__payment-term__title">
+        <span class="ncf__payment-term__title ncf__payment-term__title--large-price">
           Annual
-          <span class="ncf__regular">
+          <span class="ncf__regular ncf__payment-term__sub-title">
             (Renews annually unless cancelled)
           </span>
         </span>
@@ -48,7 +48,7 @@ exports[`PaymentTerm When using custom options renders when not using an option 
         <span class="ncf__payment-term__discount">
           Save 10% off RRP
         </span>
-        <span class="ncf__payment-term__title">
+        <span class="ncf__payment-term__title ncf__payment-term__title--large-price">
           12 Month Subscription
         </span>
         <div>

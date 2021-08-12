@@ -170,11 +170,18 @@ export function PaymentTerm({
 				>
 					{createDiscount()}
 
-					<span className="ncf__payment-term__title">
+					<span
+						className={classNames([
+							'ncf__payment-term__title',
+							{ 'ncf__payment-term__title--large-price': largePrice },
+						])}
+					>
 						{showTrialCopyInTitle ? 'Trial: Premium Digital - ' : ''}
 						{nameMap[option.name] ? title : option.title}{' '}
 						{option.subTitle && (
-							<span className="ncf__regular">{option.subTitle}</span>
+							<span className="ncf__regular ncf__payment-term__sub-title">
+								{option.subTitle}
+							</span>
 						)}
 					</span>
 
