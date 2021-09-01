@@ -61,4 +61,20 @@ describe('ProgressIndicator', () => {
 
 		expect(ProgressIndicator).toRenderCorrectly(props);
 	});
+
+	it('renders completed items with disabled links', () => {
+		const props = {
+			items: [
+				{
+					url: 'https://foo.com',
+					name: 'Item name',
+					isComplete: true,
+					isCurrent: false,
+				},
+			],
+			disableLinks: true,
+		};
+
+		expect(ProgressIndicator).toRenderCorrectly(props);
+	});
 });
