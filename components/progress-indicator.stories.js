@@ -29,3 +29,28 @@ Basic.args = {
 		},
 	],
 };
+
+export const WithLinksDisabled = (args) => <ProgressIndicator {...args} />;
+WithLinksDisabled.args = {
+	items: [
+		{
+			isComplete: true,
+			isCurrent: false,
+			name: 'Get Business',
+			url: 'https://ft.com',
+		},
+		{
+			isComplete: true,
+			isCurrent: true,
+			name: '????',
+			url: 'https://google.com',
+		},
+		{
+			isComplete: false,
+			isCurrent: false,
+			name: 'Profit',
+			url: 'https://ft.com',
+		},
+	],
+	disableLinks: true,
+};

@@ -2,9 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function ProgressIndicator({ items = [] }) {
+export function ProgressIndicator({ items = [], disableLinks = false }) {
 	function getElementsForComplete(item) {
-		return (
+		return disableLinks? (
+			<span className="o-stepped-progress__step o-stepped-progress__step--complete">
+				<span className="o-stepped-progress__label">
+					{item.name}
+					<span className="o-stepped-progress__status">(completed)</span>
+				</span>
+			</span>
+		) : (
 			<a
 				href={item.url}
 				className="o-stepped-progress__step o-stepped-progress__step--complete"
@@ -66,4 +73,5 @@ ProgressIndicator.propTypes = {
 			url: PropTypes.string,
 		})
 	),
+	disableLinks: PropTypes.bool,
 };

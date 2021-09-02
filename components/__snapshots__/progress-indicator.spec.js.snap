@@ -1,5 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ProgressIndicator renders completed items with disabled links 1`] = `
+<div class="ncf__stepped-progress o-stepped-progress"
+     data-o-component="o-stepped-progress"
+>
+  <ol class="o-stepped-progress__steps">
+    <li>
+      <span class="o-stepped-progress__step o-stepped-progress__step--complete">
+        <span class="o-stepped-progress__label">
+          Item name
+          <span class="o-stepped-progress__status">
+            (completed)
+          </span>
+        </span>
+      </span>
+    </li>
+  </ol>
+</div>
+`;
+
 exports[`ProgressIndicator renders items that are complete 1`] = `
 <div class="ncf__stepped-progress o-stepped-progress"
      data-o-component="o-stepped-progress"
