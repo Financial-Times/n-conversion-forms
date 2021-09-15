@@ -39,6 +39,8 @@ export function PaymentType({
 	fieldId = 'paymentTypeField',
 	inputId = 'paymentType',
 	value,
+	isSingleTerm = false,
+	isSingleTermChecked = false,
 }) {
 	const createSecuritySeal = () => {
 		return (
@@ -87,6 +89,22 @@ export function PaymentType({
 		label: 'Apple Pay',
 		hide: !enableApplepay,
 	};
+
+	const inputProps = {
+		id: 'payFasterNextTime',
+		type: 'checkbox',
+		name: 'payFasterNextTime',
+		value: 'true',
+		'data-trackable': 'field-terms',
+		'aria-required': 'true',
+		required: false,
+		...(isSingleTermChecked && { defaultChecked: true }),
+	};
+
+	const labelClassName = classNames([
+		'o-forms-input',
+		'o-forms-input--checkbox',
+	]);
 
 	const createPaymentTypes = () => {
 		const paymentTypes = [
@@ -236,6 +254,15 @@ export function PaymentType({
 				{createDirectDebitPanel()}
 
 				{createZuoraPanel()}
+
+				{isSingleTerm && (
+					<label className={labelClassName} htmlFor="payFasterNextTime">
+						<input {...inputProps} />
+						<span className="o-forms-input__label">
+						Use these details to pay faster next time
+						</span>
+					</label>
+				)}
 			</div>
 		</React.Fragment>
 	);
@@ -251,4 +278,6 @@ PaymentType.propTypes = {
 	fieldId: PropTypes.string,
 	inputId: PropTypes.string,
 	value: PropTypes.string,
+	isSingleTerm: PropTypes.bool,
+	isSingleTermChecked: PropTypes.bool,
 };

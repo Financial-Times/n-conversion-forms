@@ -57,4 +57,20 @@ describe('PaymentType', () => {
 
 		expect(PaymentType).toRenderCorrectly({}, props);
 	});
+
+	it('render with isSingleTerm', () => {
+		const props = {
+			isSingleTerm: true,
+		};
+
+		expect(PaymentType).toRenderCorrectly(props);
+	});
+
+	it('render with isSingleTermChecked', () => {
+		const props = {
+			isSingleTermChecked: true,
+		};
+
+		expect(PaymentType).toRenderCorrectly(props);
+	});
 });

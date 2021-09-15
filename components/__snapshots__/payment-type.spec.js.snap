@@ -523,6 +523,168 @@ exports[`PaymentType render with enablePaypal 1`] = `
 </div>
 `;
 
+exports[`PaymentType render with isSingleTerm 1`] = `
+<div class="ncf__security-seal">
+</div>
+<div id="paymentTypeField"
+     class="o-forms-field"
+>
+  <div class="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
+    <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--creditcard ncf__hidden">
+      <label for="creditcard">
+        <input type="radio"
+               name="paymentType"
+               value="creditcard"
+               id="creditcard"
+               aria-label="Credit / Debit Card"
+        >
+        <span class="o-forms-input__label"
+              aria-hidden="true"
+        >
+          Credit / Debit Card
+        </span>
+      </label>
+    </div>
+    <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--paypal ncf__hidden">
+      <label for="paypal">
+        <input type="radio"
+               name="paymentType"
+               value="paypal"
+               id="paypal"
+               aria-label="PayPal"
+        >
+        <span class="o-forms-input__label"
+              aria-hidden="true"
+        >
+          PayPal
+        </span>
+      </label>
+    </div>
+    <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--directdebit ncf__hidden">
+      <label for="directdebit">
+        <input type="radio"
+               name="paymentType"
+               value="directdebit"
+               id="directdebit"
+               aria-label="Direct Debit"
+        >
+        <span class="o-forms-input__label"
+              aria-hidden="true"
+        >
+          Direct Debit
+        </span>
+      </label>
+    </div>
+    <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--applepay ncf__hidden">
+      <label for="applepay">
+        <input type="radio"
+               name="paymentType"
+               value="applepay"
+               id="applepay"
+               aria-label="Apple Pay"
+        >
+        <span class="o-forms-input__label"
+              aria-hidden="true"
+        >
+          Apple Pay
+        </span>
+      </label>
+    </div>
+  </div>
+  <div class="o-forms-input__error">
+    Please enter a valid payment type
+  </div>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="payFasterNextTime"
+  >
+    <input type="checkbox"
+           id="payFasterNextTime"
+           name="payFasterNextTime"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+    >
+    <span class="o-forms-input__label">
+      Use these details to pay faster next time
+    </span>
+  </label>
+</div>
+`;
+
+exports[`PaymentType render with isSingleTermChecked 1`] = `
+<div class="ncf__security-seal">
+</div>
+<div id="paymentTypeField"
+     class="o-forms-field"
+>
+  <div class="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
+    <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--creditcard ncf__hidden">
+      <label for="creditcard">
+        <input type="radio"
+               name="paymentType"
+               value="creditcard"
+               id="creditcard"
+               aria-label="Credit / Debit Card"
+        >
+        <span class="o-forms-input__label"
+              aria-hidden="true"
+        >
+          Credit / Debit Card
+        </span>
+      </label>
+    </div>
+    <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--paypal ncf__hidden">
+      <label for="paypal">
+        <input type="radio"
+               name="paymentType"
+               value="paypal"
+               id="paypal"
+               aria-label="PayPal"
+        >
+        <span class="o-forms-input__label"
+              aria-hidden="true"
+        >
+          PayPal
+        </span>
+      </label>
+    </div>
+    <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--directdebit ncf__hidden">
+      <label for="directdebit">
+        <input type="radio"
+               name="paymentType"
+               value="directdebit"
+               id="directdebit"
+               aria-label="Direct Debit"
+        >
+        <span class="o-forms-input__label"
+              aria-hidden="true"
+        >
+          Direct Debit
+        </span>
+      </label>
+    </div>
+    <div class="o-forms-input--radio-box__container ncf__payment-type ncf__payment-type--applepay ncf__hidden">
+      <label for="applepay">
+        <input type="radio"
+               name="paymentType"
+               value="applepay"
+               id="applepay"
+               aria-label="Apple Pay"
+        >
+        <span class="o-forms-input__label"
+              aria-hidden="true"
+        >
+          Apple Pay
+        </span>
+      </label>
+    </div>
+  </div>
+  <div class="o-forms-input__error">
+    Please enter a valid payment type
+  </div>
+</div>
+`;
+
 exports[`PaymentType render with value 1`] = `
 <div class="ncf__security-seal">
 </div>
