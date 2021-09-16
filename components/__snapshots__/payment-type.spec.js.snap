@@ -594,20 +594,21 @@ exports[`PaymentType render with isSingleTerm 1`] = `
   <div class="o-forms-input__error">
     Please enter a valid payment type
   </div>
-  <label class="o-forms-input o-forms-input--checkbox"
-         for="payFasterNextTime"
-  >
-    <input type="checkbox"
-           id="payFasterNextTime"
-           name="payFasterNextTime"
-           value="true"
-           data-trackable="field-terms"
-           aria-required="true"
+  <br>
+  <div>
+    <label class="o-forms-input o-forms-input--checkbox ncf__payment-type-checkbox"
+           for="payFasterNextTime"
     >
-    <span class="o-forms-input__label">
-      Use these details to pay faster next time
-    </span>
-  </label>
+      <input type="checkbox"
+             id="payFasterNextTime"
+             name="payFasterNextTime"
+             value="true"
+      >
+      <span class="o-forms-input__label">
+        Use these details to pay faster next time
+      </span>
+    </label>
+  </div>
 </div>
 `;
 

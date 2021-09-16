@@ -90,22 +90,6 @@ export function PaymentType({
 		hide: !enableApplepay,
 	};
 
-	const inputProps = {
-		id: 'payFasterNextTime',
-		type: 'checkbox',
-		name: 'payFasterNextTime',
-		value: 'true',
-		'data-trackable': 'field-terms',
-		'aria-required': 'true',
-		required: false,
-		...(isSingleTermChecked && { defaultChecked: true }),
-	};
-
-	const labelClassName = classNames([
-		'o-forms-input',
-		'o-forms-input--checkbox',
-	]);
-
 	const createPaymentTypes = () => {
 		const paymentTypes = [
 			paymentTypeCreditCard,
@@ -238,6 +222,15 @@ export function PaymentType({
 		);
 	};
 
+	const inputCheckProps = {
+		id: 'payFasterNextTime',
+		type: 'checkbox',
+		name: 'payFasterNextTime',
+		value: 'true',
+		required: false,
+		...(isSingleTermChecked && { defaultChecked: true }),
+	};
+
 	return (
 		<React.Fragment>
 			{createSecuritySeal()}
@@ -256,12 +249,17 @@ export function PaymentType({
 				{createZuoraPanel()}
 
 				{isSingleTerm && (
-					<label className={labelClassName} htmlFor="payFasterNextTime">
-						<input {...inputProps} />
-						<span className="o-forms-input__label">
-						Use these details to pay faster next time
-						</span>
-					</label>
+					<>
+						<br />
+						<div>
+							<label className='o-forms-input o-forms-input--checkbox ncf__payment-type-checkbox' htmlFor="payFasterNextTime">
+								<input {...inputCheckProps} />
+								<span className="o-forms-input__label">
+									{' '}Use these details to pay faster next time
+								</span>
+							</label>
+						</div>
+					</>
 				)}
 			</div>
 		</React.Fragment>
