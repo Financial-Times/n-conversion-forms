@@ -68,6 +68,7 @@ describe('PaymentType', () => {
 
 	it('render with isSingleTermChecked', () => {
 		const props = {
+			isSingleTerm: true,
 			isSingleTermChecked: true,
 		};
 
