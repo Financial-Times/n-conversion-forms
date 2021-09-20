@@ -594,20 +594,18 @@ exports[`PaymentType render with isSingleTerm 1`] = `
   <div class="o-forms-input__error">
     Please enter a valid payment type
   </div>
-  <div>
-    <label class="o-forms-input o-forms-input--checkbox o-forms-input--suffix ncf__payment-type-pay-faster-next-time-checkbox"
-           for="payFasterNextTime"
+  <label class="o-forms-input o-forms-input--checkbox o-forms-input--suffix ncf__payment-type-pay-faster-next-time-checkbox"
+         for="payFasterNextTime"
+  >
+    <input type="checkbox"
+           id="payFasterNextTime"
+           name="payFasterNextTime"
+           value="true"
     >
-      <input type="checkbox"
-             id="payFasterNextTime"
-             name="payFasterNextTime"
-             value="true"
-      >
-      <span class="o-forms-input__label">
-        Use these details to pay faster next time
-      </span>
-    </label>
-  </div>
+    <span class="o-forms-input__label">
+      Use these details to pay faster next time
+    </span>
+  </label>
 </div>
 `;
 
@@ -682,21 +680,19 @@ exports[`PaymentType render with isSingleTermChecked 1`] = `
   <div class="o-forms-input__error">
     Please enter a valid payment type
   </div>
-  <div>
-    <label class="o-forms-input o-forms-input--checkbox o-forms-input--suffix ncf__payment-type-pay-faster-next-time-checkbox"
-           for="payFasterNextTime"
+  <label class="o-forms-input o-forms-input--checkbox o-forms-input--suffix ncf__payment-type-pay-faster-next-time-checkbox"
+         for="payFasterNextTime"
+  >
+    <input type="checkbox"
+           id="payFasterNextTime"
+           name="payFasterNextTime"
+           value="true"
+           checked
     >
-      <input type="checkbox"
-             id="payFasterNextTime"
-             name="payFasterNextTime"
-             value="true"
-             checked
-      >
-      <span class="o-forms-input__label">
-        Use these details to pay faster next time
-      </span>
-    </label>
-  </div>
+    <span class="o-forms-input__label">
+      Use these details to pay faster next time
+    </span>
+  </label>
 </div>
 `;
 

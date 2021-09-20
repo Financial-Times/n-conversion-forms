@@ -249,14 +249,14 @@ export function PaymentType({
 				{createZuoraPanel()}
 
 				{isSingleTerm && (
-					<div>
+					<>
 						<label className='o-forms-input o-forms-input--checkbox o-forms-input--suffix ncf__payment-type-pay-faster-next-time-checkbox' htmlFor="payFasterNextTime">
 							<input {...inputCheckProps}/>
 							<span className="o-forms-input__label">
-								{' Use these details to pay faster next time'}
+								Use these details to pay faster next time
 							</span>
 						</label>
-					</div>
+					</>
 				)}
 			</div>
 		</React.Fragment>
