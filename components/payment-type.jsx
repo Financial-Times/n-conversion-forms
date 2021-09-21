@@ -39,6 +39,8 @@ export function PaymentType({
 	fieldId = 'paymentTypeField',
 	inputId = 'paymentType',
 	value,
+	isSingleTerm = false,
+	isSingleTermChecked = false,
 }) {
 	const createSecuritySeal = () => {
 		return (
@@ -220,6 +222,15 @@ export function PaymentType({
 		);
 	};
 
+	const inputCheckProps = {
+		id: 'payFasterNextTime',
+		type: 'checkbox',
+		name: 'payFasterNextTime',
+		value: 'true',
+		required: false,
+		...(isSingleTermChecked && { defaultChecked: true }),
+	};
+
 	return (
 		<React.Fragment>
 			{createSecuritySeal()}
@@ -236,6 +247,17 @@ export function PaymentType({
 				{createDirectDebitPanel()}
 
 				{createZuoraPanel()}
+
+				{isSingleTerm && (
+					<>
+						<label className='o-forms-input o-forms-input--checkbox o-forms-input--suffix ncf__payment-type-pay-faster-next-time-checkbox' htmlFor="payFasterNextTime">
+							<input {...inputCheckProps}/>
+							<span className="o-forms-input__label">
+								Use these details to pay faster next time
+							</span>
+						</label>
+					</>
+				)}
 			</div>
 		</React.Fragment>
 	);
@@ -251,4 +273,6 @@ PaymentType.propTypes = {
 	fieldId: PropTypes.string,
 	inputId: PropTypes.string,
 	value: PropTypes.string,
+	isSingleTerm: PropTypes.bool,
+	isSingleTermChecked: PropTypes.bool,
 };
