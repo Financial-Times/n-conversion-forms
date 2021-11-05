@@ -92,7 +92,7 @@ export function Confirmation ({
 						className="ncf__link ncf__link--external"
 						href="https://www.ft.com/myaccount/personal-details"
 						target="_blank"
-						rel="noopener"
+						rel="noopener noreferrer"
 						data-trackable="yourAccount"
 					>
 						account settings
