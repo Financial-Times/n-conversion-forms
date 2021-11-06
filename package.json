@@ -52,6 +52,7 @@
     "jest": "^26.0.0",
     "jest-serializer-html": "^7.0.0",
     "jsdom": "15.1.0",
+    "lint-staged": "^11.2.6",
     "mocha": "5.1.1",
     "node-sass": "4.14.1",
     "pa11y-ci": "2.1.1",
@@ -69,11 +70,15 @@
   "engines": {
     "node": "12.x"
   },
+  "lint-staged": {
+    "**/*.{js,jsx,json,scss}": "prettier --write",
+    "**/*.{js,jsx}": "eslint --fix"
+  },
   "husky": {
     "hooks": {
       "commit-msg": "node_modules/.bin/secret-squirrel-commitmsg",
-      "pre-commit": "node_modules/.bin/secret-squirrel && make test",
-      "pre-push": "make verify -j3 && pretty-quick --staged"
+      "pre-commit": "node_modules/.bin/secret-squirrel && npm run lint && lint-staged && make test",
+      "pre-push": "npm run lint && make test"
     }
   }
 }
