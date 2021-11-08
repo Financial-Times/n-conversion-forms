@@ -100,7 +100,7 @@ jobs:
       - *attach_workspace
       - run:
           name: Run tests
-          command: make test
+          command: npm run lint && make test
           environment:
             JEST_JUNIT_OUTPUT: test-results/jest/results.xml
             MOCHA_FILE: test-results/mocha/results.xml
