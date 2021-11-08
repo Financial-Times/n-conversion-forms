@@ -13,7 +13,7 @@ const PaypalCustomerCareMessage = () => {
 				<div className="o-message__container">
 					<div className="o-message__content">
 						<p className="o-message__content-main">
-							If you'd like to change your payment method to Paypal please{' '}
+							If you{"'"}d like to change your payment method to Paypal please{' '}
 							<a
 								className="o-message__actions__secondary"
 								href="https://help.ft.com"

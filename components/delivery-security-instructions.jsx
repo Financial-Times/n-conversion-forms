@@ -18,7 +18,6 @@ export function DeliverySecurityInstructions({
 		{ 'o-forms-input--invalid': hasError },
 	]);
 
-	const maxLengthText = maxlength ? `(Max. ${maxlength} characters)` : '';
 	const defaultPlaceholder =
 		'Please enter any secure information here, e.g. security gate access codes';
 
