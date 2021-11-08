@@ -48,6 +48,8 @@
     "enzyme-adapter-react-16": "^1.15.1",
     "eslint": "^8.1.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^25.2.4",
+    "eslint-plugin-react": "^7.26.1",
     "fetch-mock": "^7.2.0",
     "jest": "^26.0.0",
     "jest-serializer-html": "^7.0.0",
