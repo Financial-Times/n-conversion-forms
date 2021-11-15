@@ -26,6 +26,16 @@ export function DeliveryAddress ({
 		CAN: 'Apt/Floor/Suite'
 	};
 
+	const addressLine3Prompt = {
+		USA: 'Max. 6 characters. Please enter “Apartment 2C” as “Apt 2C”, “Floor 10 as FL 10”',
+		CAN: 'Max. 6 characters. Please enter “Apartment 2C” as “Apt 2C”, “Floor 10 as FL 10”',
+	};
+
+	const addressLine3Placeholder = {
+		USA: 'e.g Apt 2c / FL 10 / STE 5',
+		CAN: 'e.g Apt 2c / FL 10 / STE 5'
+	};
+
 	const addressLine1Placeholder = {
 		GBR: 'e.g. 10 Elm Street',
 		USA: 'e.g. 10 Elm St.',
@@ -87,6 +97,7 @@ export function DeliveryAddress ({
 	>
 		<span className="o-forms-title">
 			<span className="o-forms-title__main">{addressLine3Title[country]}</span>
+			<span className="o-forms-title__prompt">{addressLine3Prompt[country]}</span>
 		</span>
 		<span className={inputWrapperClassNames}>
 			<input
@@ -95,7 +106,7 @@ export function DeliveryAddress ({
 				name="deliveryAddressLine3"
 				data-trackable="field-deliveryAddressLine3"
 				autoComplete="address-line3"
-				placeholder="e.g. Apt. 1"
+				placeholder={addressLine3Placeholder[country] || 'e.g. Apt. 1'}
 				maxLength={50}
 				disabled={isDisabled}
 				defaultValue={line3}
