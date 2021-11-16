@@ -87,7 +87,9 @@ describe('CompanyName', () => {
 	it('renders as required field', () => {
 		const component = mount(CompanyName({}));
 
-		expect(component.find('#companyNameField').hasClass('o-forms-field--optional')).toBe(false);
+		expect(
+			component.find('#companyNameField').hasClass('o-forms-field--optional')
+		).toBe(false);
 		expect(component.find('input#companyName').prop('required')).toBe(true);
 	});
 
@@ -102,7 +104,9 @@ describe('CompanyName', () => {
 
 		const component = mount(CompanyName(props));
 
-		expect(component.find('#companyNameField').hasClass('o-forms-field--optional')).toBe(true);
+		expect(
+			component.find('#companyNameField').hasClass('o-forms-field--optional')
+		).toBe(true);
 		expect(component.find('input#companyName').prop('required')).toBe(false);
 	});
 
@@ -111,6 +115,8 @@ describe('CompanyName', () => {
 
 		const component = mount(CompanyName(props));
 
-		expect(component.find('#companyNameField').hasClass('ncf__hidden')).toBe(true);
+		expect(component.find('#companyNameField').hasClass('ncf__hidden')).toBe(
+			true
+		);
 	});
 });

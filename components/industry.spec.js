@@ -88,6 +88,8 @@ describe('Industry', () => {
 		const props = { isRequired: false };
 		const component = mount(Industry(props));
 
-		expect(component.find('.o-forms-title.o-forms-field--optional').length).toEqual(1);
+		expect(
+			component.find('.o-forms-title.o-forms-field--optional').length
+		).toEqual(1);
 	});
 });

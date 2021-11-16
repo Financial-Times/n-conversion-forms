@@ -9,6 +9,6 @@ export default {
 export const Basic = (args) => <ContinueReading {...args} />;
 Basic.args = {
 	quote:
-		'The problem with quotes found on the internet, is that they\'re often not true - Abraham Lincoln',
+		"The problem with quotes found on the internet, is that they're often not true - Abraham Lincoln",
 	link: 'https://ft.com/world',
 };

@@ -52,7 +52,8 @@ export function Country({
 	const fieldErrorClassNames = classNames([
 		'o-forms-input__error',
 		{
-			'additional-field-information__with-field-error': additionalFieldInformation,
+			'additional-field-information__with-field-error':
+				additionalFieldInformation,
 		},
 	]);
 

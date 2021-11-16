@@ -1,11 +1,11 @@
 const FormElement = require('./form-element');
 
 class Postcode extends FormElement {
-	constructor (document, query = '.ncf #postCodeField') {
+	constructor(document, query = '.ncf #postCodeField') {
 		super(document, query);
 	}
 
-	set changePostcodeReferenceForCountry (countryCode) {
+	set changePostcodeReferenceForCountry(countryCode) {
 		const name = Postcode.getPostcodeReferenceByCountry(countryCode);
 		this.reference = this.$el.querySelectorAll('[data-reference=postcode]');
 		for (let i = 0; i < this.reference.length; i++) {
@@ -15,7 +15,7 @@ class Postcode extends FormElement {
 		this.postcodeInput.placeholder = 'Enter your ' + name;
 	}
 
-	static getPostcodeReferenceByCountry (countryCode) {
+	static getPostcodeReferenceByCountry(countryCode) {
 		if (countryCode === 'CAN') {
 			return 'postal code';
 		} else if (countryCode === 'USA') {

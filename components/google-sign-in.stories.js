@@ -8,5 +8,6 @@ export default {
 
 export const Basic = (args) => <GoogleSignIn {...args} />;
 Basic.args = {
-	signInRedirectUrl: 'https://social-login-svc-eu-test.memb.ft.com/login/google',
+	signInRedirectUrl:
+		'https://social-login-svc-eu-test.memb.ft.com/login/google',
 };

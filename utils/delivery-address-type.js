@@ -11,7 +11,7 @@ class DeliveryAdressType {
 	 * @throws If the document not passed
 	 * @throws When the country element not found
 	 */
-	constructor (element, fieldId = 'deliveryAddressTypeField') {
+	constructor(element, fieldId = 'deliveryAddressTypeField') {
 		if (!element) {
 			throw new Error('Please supply a DOM element');
 		}
@@ -29,7 +29,7 @@ class DeliveryAdressType {
 	 * @return {String}
 	 * @throws If nothing has been selected
 	 */
-	getSelected () {
+	getSelected() {
 		const checked = this.$deliveryAddressType.querySelector('input:checked');
 		if (!checked) {
 			throw new Error('No address type has been selected');
@@ -41,8 +41,11 @@ class DeliveryAdressType {
 	 * Register an event listener
 	 * @param {Function} callback Called with event when changed
 	 */
-	onChange (callback) {
-		return typeof callback === 'function' && this.$deliveryAddressType.addEventListener('change', callback);
+	onChange(callback) {
+		return (
+			typeof callback === 'function' &&
+			this.$deliveryAddressType.addEventListener('change', callback)
+		);
 	}
 }
 

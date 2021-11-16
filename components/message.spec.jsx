@@ -50,7 +50,7 @@ describe('Message', () => {
 		const props = {
 			title: 'Reggatta de Blanc',
 			message: 'My message in a bottle',
-			actions: [{...ACTION_MOCK, isSecondary: true}],
+			actions: [{ ...ACTION_MOCK, isSecondary: true }],
 		};
 
 		expect(Message).toRenderCorrectly(props);

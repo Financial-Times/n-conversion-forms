@@ -76,15 +76,7 @@ describe('GraduationDate', () => {
 			.map((node) => node.prop('value'));
 
 		expect(values).toEqual([
-			2016,
-			2017,
-			2018,
-			2019,
-			2020,
-			2021,
-			2022,
-			2023,
-			2024,
+			2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024,
 		]);
 
 		jest.restoreAllMocks();

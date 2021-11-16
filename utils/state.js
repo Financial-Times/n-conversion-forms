@@ -1,7 +1,7 @@
 const FormElement = require('./form-element');
 
 class State extends FormElement {
-	constructor (document) {
+	constructor(document) {
 		super(document, '.ncf #stateField');
 	}
 }

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const EMAIL_DEFAULT_TEXT = 'your email';
 
-export function Confirmation ({
+export function Confirmation({
 	// isTrial prop is needed for the floodlight pixel tracking.
 	isTrial = false,
 	isB2cPartnership = false,

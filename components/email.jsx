@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function Email ({
+export function Email({
 	dataTrackable = 'field-email',
 	description = 'Please enter an email address',
 	errorText = 'This email address is not valid',
@@ -79,5 +79,5 @@ Email.propTypes = {
 	value: PropTypes.string,
 	isEducationalLicence: PropTypes.bool,
 	isB2cPartnershipLicence: PropTypes.bool,
-	showTitle: PropTypes.bool
+	showTitle: PropTypes.bool,
 };

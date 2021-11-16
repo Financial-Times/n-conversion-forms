@@ -5,7 +5,7 @@ expect.extend(expectToRenderCorrectly);
 
 describe('B2CPartnershipConfirmation', () => {
 	it('renders as default', () => {
-		const props = {ctaElement: 'hello'};
+		const props = { ctaElement: 'hello' };
 
 		expect(B2CPartnershipConfirmation).toRenderCorrectly(props);
 	});

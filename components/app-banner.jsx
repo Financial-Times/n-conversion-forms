@@ -20,7 +20,8 @@ export function AppBanner() {
 						<a
 							href="https://itunes.apple.com/app/apple-store/id1200842933?pt=246269&ct=onsite-app-promotion&mt=8"
 							target="_blank"
-							role="link" rel="noreferrer"
+							role="link"
+							rel="noreferrer"
 						>
 							<img
 								src="https://www.ft.com/__assets/creatives/tour/apps/ios-download.svg"
@@ -33,7 +34,8 @@ export function AppBanner() {
 						<a
 							href="https://play.google.com/store/apps/details?id=com.ft.news&referrer=utm_source%3Donsite-app-promotion%26utm_campaign%3DOnsite%2520Messaging"
 							target="_blank"
-							role="link" rel="noreferrer"
+							role="link"
+							rel="noreferrer"
 						>
 							<img
 								src="https://www.ft.com/__origami/service/image/v2/images/raw/https%253A%252F%252Fwww.ft.com%252F__assets%252Fcreatives%252Ftour%252Fapps%252Fgoogle-play-badge-3x.png?source=ip-envoy"

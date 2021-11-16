@@ -95,7 +95,7 @@ describe('Zuora', () => {
 			]);
 		});
 
-		it('binds the renderCallback to Zuora\'s runAfterRender function', async () => {
+		it("binds the renderCallback to Zuora's runAfterRender function", async () => {
 			await zuora.render({ params, prepopulatedFields, renderCallback });
 
 			expect(window.Z.runAfterRender.called).to.be.true;

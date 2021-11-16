@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 export function ProgressIndicator({ items = [], disableLinks = false }) {
 	function getElementsForComplete(item) {
-		return disableLinks? (
+		return disableLinks ? (
 			<span className="o-stepped-progress__step o-stepped-progress__step--complete">
 				<span className="o-stepped-progress__label">
 					{item.name}

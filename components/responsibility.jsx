@@ -23,7 +23,7 @@ export function Responsibility({
 
 	const fieldTitleClassName = classNames([
 		'o-forms-title',
-		{ 'o-forms-field--optional': !isRequired }
+		{ 'o-forms-field--optional': !isRequired },
 	]);
 
 	return (
@@ -34,9 +34,7 @@ export function Responsibility({
 			htmlFor={selectId}
 		>
 			<span className={fieldTitleClassName}>
-				<span className="o-forms-title__main">
-					{fieldLabel}
-				</span>
+				<span className="o-forms-title__main">{fieldLabel}</span>
 			</span>
 
 			<span className={inputWrapperClassName}>
