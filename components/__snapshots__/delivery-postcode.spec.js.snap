@@ -12,6 +12,8 @@ exports[`Delivery Postcode renders a disable input 1`] = `
         Postcode
       </span>
     </span>
+    <span class="o-forms-title__prompt">
+    </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
     <input type="text"
@@ -49,6 +51,8 @@ exports[`Delivery Postcode renders a postcode input with a label set as Postcode
         Postcode
       </span>
     </span>
+    <span class="o-forms-title__prompt">
+    </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
     <input type="text"
@@ -85,12 +89,15 @@ exports[`Delivery Postcode renders a postcode input with a label set as Zip Code
         Zip Code
       </span>
     </span>
+    <span class="o-forms-title__prompt">
+      Please enter your 5 digit Zip Code
+    </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
     <input type="text"
            id="deliveryPostcode"
            name="deliveryPostcode"
-           placeholder="Enter your Zip Code"
+           placeholder="e.g. 60411"
            autocomplete="postal-code"
            data-trackable="delivery-postcode"
            aria-required="true"
@@ -121,12 +128,15 @@ exports[`Delivery Postcode renders a postcode input with a label set as Zip Code
         Zip Code
       </span>
     </span>
+    <span class="o-forms-title__prompt">
+      Please enter your 5 digit Zip Code
+    </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
     <input type="text"
            id="deliveryPostcode"
            name="deliveryPostcode"
-           placeholder="Enter your Zip Code"
+           placeholder="e.g. 60411"
            autocomplete="postal-code"
            data-trackable="delivery-postcode"
            aria-required="true"
@@ -157,12 +167,15 @@ exports[`Delivery Postcode renders a postcode input with a label set as postal c
         Postal Code
       </span>
     </span>
+    <span class="o-forms-title__prompt">
+      Please enter your 6 digit postal code
+    </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
     <input type="text"
            id="deliveryPostcode"
            name="deliveryPostcode"
-           placeholder="Enter your Postal Code"
+           placeholder="e.g. M4W 2C6"
            autocomplete="postal-code"
            data-trackable="delivery-postcode"
            aria-required="true"
@@ -192,6 +205,8 @@ exports[`Delivery Postcode renders a postcode input with default label 1`] = `
       <span data-reference="postcode">
         Postcode
       </span>
+    </span>
+    <span class="o-forms-title__prompt">
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -229,6 +244,8 @@ exports[`Delivery Postcode renders different styles 1`] = `
         Postcode
       </span>
     </span>
+    <span class="o-forms-title__prompt">
+    </span>
   </span>
   <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
     <input type="text"
@@ -265,12 +282,15 @@ exports[`Delivery Postcode renders with link to change the value 1`] = `
         Zip Code
       </span>
     </span>
+    <span class="o-forms-title__prompt">
+      Please enter your 5 digit Zip Code
+    </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
     <input type="text"
            id="deliveryPostcode"
            name="deliveryPostcode"
-           placeholder="Enter your Zip Code"
+           placeholder="e.g. 60411"
            autocomplete="postal-code"
            data-trackable="delivery-postcode"
            aria-required="true"
