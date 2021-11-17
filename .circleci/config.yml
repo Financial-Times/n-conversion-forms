@@ -84,6 +84,12 @@ jobs:
           name: Run the project build task
           command: make build
       - run:
+          name: Run tests
+          command: make test
+          environment:
+            JEST_JUNIT_OUTPUT: test-results/jest/results.xml
+            MOCHA_FILE: test-results/mocha/results.xml
+      - run:
           name: shared-helper / generate-build-state-artifacts
           command: .circleci/shared-helpers/helper-generate-build-state-artifacts
           when: always
@@ -95,14 +101,6 @@ jobs:
           root: *workspace_root
           paths:
             - build
-      - run:
-          name: Run tests
-          command: make test
-          environment:
-            JEST_JUNIT_OUTPUT: test-results/jest/results.xml
-            MOCHA_FILE: test-results/mocha/results.xml
-
-
   test:
     <<: *container_config_node12
     steps:
