@@ -32,8 +32,8 @@ export function DeliveryAddress({
 	};
 
 	const addressLine3Placeholder = {
-		USA: 'e.g Apt 2c / FL 10 / STE 5',
-		CAN: 'e.g Apt 2c / FL 10 / STE 5',
+		USA: 'e.g Apt 2C / FL 10 / STE 5',
+		CAN: 'e.g Apt 2C / FL 10 / STE 5'
 	};
 
 	const addressLine1Placeholder = {
