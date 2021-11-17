@@ -1,16 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function PackageChange({ changePackageUrl, currentPackage, packageDescription }) {
+export function PackageChange({
+	changePackageUrl,
+	currentPackage,
+	packageDescription,
+}) {
 	return (
 		<div className="ncf__package-change">
 			<div className="ncf__package-change__package">
 				<div className="ncf__package-change__content">
 					<p>
-						You have chosen <span className="ncf__strong">{currentPackage}</span>
+						You have chosen{' '}
+						<span className="ncf__strong">{currentPackage}</span>
 					</p>
-					{packageDescription && <p className="ncf__package-change__content__description">{packageDescription}</p>}
-				</div>	
+					{packageDescription && (
+						<p className="ncf__package-change__content__description">
+							{packageDescription}
+						</p>
+					)}
+				</div>
 				<div className="ncf__package-change__actions">
 					<a
 						href={changePackageUrl}

@@ -17,7 +17,7 @@ const placeholderLabel = {
 	CAN: 'e.g. M4W 2C6',
 };
 
-export function DeliveryPostcode ({
+export function DeliveryPostcode({
 	value = '',
 	country = '',
 	isDisabled = false,
@@ -29,7 +29,9 @@ export function DeliveryPostcode ({
 }) {
 	const postcodeReference = postcodeLabel[country.toUpperCase()] || 'Postcode';
 	const promptReference = promptLabel[country.toUpperCase()];
-	const placeholderReference = placeholderLabel[country.toUpperCase()] || `Enter your ${postcodeReference}`;
+	const placeholderReference =
+		placeholderLabel[country.toUpperCase()] ||
+		`Enter your ${postcodeReference}`;
 
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
@@ -45,7 +47,8 @@ export function DeliveryPostcode ({
 	const fieldErrorClassNames = classNames([
 		'o-forms-input__error',
 		{
-			'additional-field-information__with-field-error': additionalFieldInformation,
+			'additional-field-information__with-field-error':
+				additionalFieldInformation,
 		},
 	]);
 
@@ -89,7 +92,7 @@ export function DeliveryPostcode ({
 				{changePostcodeUrl ? (
 					<a
 						href={changePostcodeUrl}
-						style={{fontSize: '12px'}}
+						style={{ fontSize: '12px' }}
 						className="change-postcode-url"
 						data-trackable="change-progress"
 					>

@@ -13,7 +13,7 @@ export default {
 		hasError: { control: 'boolean' },
 		isDisabled: { control: 'boolean' },
 		isHidden: { control: 'boolean' },
-	}
+	},
 };
 
 export const Basic = (args) => <DeliveryPOBox {...args} />;

@@ -14,7 +14,10 @@ describe('DeliveryStartDate', () => {
 	let csrfFieldElement;
 
 	beforeEach(() => {
-		document = { querySelector: sandbox.stub().returns(false), createElement: sandbox.stub().returns(false) };
+		document = {
+			querySelector: sandbox.stub().returns(false),
+			createElement: sandbox.stub().returns(false),
+		};
 
 		startDateContainer = {
 			classList: { add: sandbox.stub(), remove: sandbox.stub() },
@@ -54,7 +57,7 @@ describe('DeliveryStartDate', () => {
 	});
 
 	describe('constructor', () => {
-		it('should throw an error if document element isn\'t passed in.', () => {
+		it("should throw an error if document element isn't passed in.", () => {
 			expect(() => {
 				new DeliveryStartDate();
 			}).to.throw();
@@ -72,7 +75,7 @@ describe('DeliveryStartDate', () => {
 		let startDateUtil;
 		let startDateChangeResult;
 
-		async function setup () {
+		async function setup() {
 			fetchMock.mock('/api/path', {
 				firstDeliveryDate: '2019-04-13',
 				firstDeliveryDateString: 'Saturday 13th of April 2019',
@@ -107,7 +110,7 @@ describe('DeliveryStartDate', () => {
 				})
 			);
 			expect(fetchMock.lastOptions().headers).to.contain({
-				'CSRF-Token': '1234567890'
+				'CSRF-Token': '1234567890',
 			});
 		});
 
@@ -131,10 +134,11 @@ describe('DeliveryStartDate', () => {
 			fetchMock.mock('/api/path', 500);
 			startDateUtil = new DeliveryStartDate(document);
 
-			let startDateChangeResult = await startDateUtil.handleDeliveryStartDateChange(
-				'/api/path',
-				() => {}
-			);
+			let startDateChangeResult =
+				await startDateUtil.handleDeliveryStartDateChange(
+					'/api/path',
+					() => {}
+				);
 
 			expect(
 				startDateContainer.classList.add.calledWith('o-forms-input--invalid')

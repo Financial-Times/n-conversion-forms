@@ -16,7 +16,7 @@ describe('DeliveryOption', () => {
 	});
 
 	describe('constructor', () => {
-		it('should throw an error if document element isn\'t passed in.', () => {
+		it("should throw an error if document element isn't passed in.", () => {
 			expect(() => {
 				new DeliveryOption();
 			}).to.throw();
@@ -45,7 +45,7 @@ describe('DeliveryOption', () => {
 							{ addEventListener: deliveryOption1Listener },
 							{ addEventListener: deliveryOption2Listener },
 						],
-					}
+					},
 				};
 
 				document.querySelector.withArgs('form.ncf').returns(formStub);
@@ -74,9 +74,8 @@ describe('DeliveryOption', () => {
 
 			beforeEach(() => {
 				const dom = new JSDOM();
-				const formElement = dom.window.document.createElement(
-					'HTMLInputElement'
-				);
+				const formElement =
+					dom.window.document.createElement('HTMLInputElement');
 
 				deliveryOptionListener = sandbox.stub();
 				formElement.addEventListener = deliveryOptionListener;

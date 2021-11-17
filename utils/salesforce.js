@@ -5,7 +5,7 @@ const { countries } = require('n-common-static-data').billingCountries;
  * @param {String} countryCode ISO 3 character country code
  * @returns {String} Country name from Salesforce
  */
-function isoCodeToSalesforceName (countryCode) {
+function isoCodeToSalesforceName(countryCode) {
 	const selectedCountry = countries.find(
 		(country) => country.code === countryCode
 	);
@@ -20,7 +20,7 @@ function isoCodeToSalesforceName (countryCode) {
  * @param {String} salesforceName Country name from Salesforce
  * @returns {String} ISO 3 character country code
  */
-function salesforceNameToIsoCode (salesforceName) {
+function salesforceNameToIsoCode(salesforceName) {
 	const selectedCountry = countries.find(
 		(country) => country.salesforceName === salesforceName
 	);

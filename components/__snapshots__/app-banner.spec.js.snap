@@ -25,6 +25,7 @@ exports[`AppBanner renders 1`] = `
         <a href="https://itunes.apple.com/app/apple-store/id1200842933?pt=246269&amp;ct=onsite-app-promotion&amp;mt=8"
            target="_blank"
            role="link"
+           rel="noreferrer"
         >
           <img src="https://www.ft.com/__assets/creatives/tour/apps/ios-download.svg"
                alt="Download from the iOS App store"
@@ -36,6 +37,7 @@ exports[`AppBanner renders 1`] = `
         <a href="https://play.google.com/store/apps/details?id=com.ft.news&amp;referrer=utm_source%3Donsite-app-promotion%26utm_campaign%3DOnsite%2520Messaging"
            target="_blank"
            role="link"
+           rel="noreferrer"
         >
           <img src="https://www.ft.com/__origami/service/image/v2/images/raw/https%253A%252F%252Fwww.ft.com%252F__assets%252Fcreatives%252Ftour%252Fapps%252Fgoogle-play-badge-3x.png?source=ip-envoy"
                height="35"

@@ -3,20 +3,38 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const spanMessageByCountry = {
-	GBR: <span className="o-forms-title__prompt">
-		For newspaper delivery, we can only deliver to the ground floor, so if you live in an apartment, we’ll leave the newspaper at reception or by the entrance. We deliver in the early hours of the morning so our drivers won’t be able to contact you or ring your doorbell.
-	</span>,
-	USA: <span className="o-forms-title__prompt">
-		Please note we cannot guarantee delivery of the newspaper to a specific location on your property, which also includes delivery to a specific floor/suite in a building. US Federal Law prohibits delivery of newspapers into a mailbox, except via a USPS mail carrier. If you prefer delivery to a mailbox, please either select the &quot;PO Box&quot; delivery option from the top of this form, or contact
-		&nbsp;<a href="https://help.ft.com/contact/">FT Customer Care</a>.
-	</span>,
-	CAN: <span className="o-forms-title__prompt">
-		Please note we cannot guarantee delivery of the newspaper to a specific location on your property, which also includes delivery to a specific floor/suite in a building. If you prefer delivery by Canada Post, please either select the &quot;PO Box&quot; delivery option from the top of this form, or contact
-		&nbsp;<a href="https://help.ft.com/contact/">FT Customer Care</a>.
-	</span>,
+	GBR: (
+		<span className="o-forms-title__prompt">
+			For newspaper delivery, we can only deliver to the ground floor, so if you
+			live in an apartment, we’ll leave the newspaper at reception or by the
+			entrance. We deliver in the early hours of the morning so our drivers
+			won’t be able to contact you or ring your doorbell.
+		</span>
+	),
+	USA: (
+		<span className="o-forms-title__prompt">
+			Please note we cannot guarantee delivery of the newspaper to a specific
+			location on your property, which also includes delivery to a specific
+			floor/suite in a building. US Federal Law prohibits delivery of newspapers
+			into a mailbox, except via a USPS mail carrier. If you prefer delivery to
+			a mailbox, please either select the &quot;PO Box&quot; delivery option
+			from the top of this form, or contact &nbsp;
+			<a href="https://help.ft.com/contact/">FT Customer Care</a>.
+		</span>
+	),
+	CAN: (
+		<span className="o-forms-title__prompt">
+			Please note we cannot guarantee delivery of the newspaper to a specific
+			location on your property, which also includes delivery to a specific
+			floor/suite in a building. If you prefer delivery by Canada Post, please
+			either select the &quot;PO Box&quot; delivery option from the top of this
+			form, or contact &nbsp;
+			<a href="https://help.ft.com/contact/">FT Customer Care</a>.
+		</span>
+	),
 };
 
-export function DeliveryInstructions ({
+export function DeliveryInstructions({
 	fieldId = 'deliveryInstructionsField',
 	hasError = false,
 	inputId = 'deliveryInstructions',
@@ -33,11 +51,20 @@ export function DeliveryInstructions ({
 		{ 'o-forms-input--invalid': hasError },
 	]);
 
-	const extraInstruction = country === 'GBR' ? '' : '\u000a- Special handling, e.g. place in plastic bag, 24/7 security on reception';
+	const extraInstruction =
+		country === 'GBR'
+			? ''
+			: '\u000a- Special handling, e.g. place in plastic bag, 24/7 security on reception';
 	const defaultPlaceholder = {
-		GBR: `Enter instructions ${maxlength && `(Max. ${maxlength} characters)`}:\u000a- Door colour, letterbox location\u000a- Placement i.e. letterbox delivery${extraInstruction}`,
-		USA: `Enter instructions ${maxlength && `(Max. ${maxlength} characters)`}:\u000a- Door colour, driveway signage\u000a- Cross street${extraInstruction}`,
-		CAN: `Enter instructions ${maxlength && `(Max. ${maxlength} characters)`}:\u000a- Door colour, driveway signage\u000a- Cross street${extraInstruction}`,
+		GBR: `Enter instructions ${
+			maxlength && `(Max. ${maxlength} characters)`
+		}:\u000a- Door colour, letterbox location\u000a- Placement i.e. letterbox delivery${extraInstruction}`,
+		USA: `Enter instructions ${
+			maxlength && `(Max. ${maxlength} characters)`
+		}:\u000a- Door colour, driveway signage\u000a- Cross street${extraInstruction}`,
+		CAN: `Enter instructions ${
+			maxlength && `(Max. ${maxlength} characters)`
+		}:\u000a- Door colour, driveway signage\u000a- Cross street${extraInstruction}`,
 	};
 
 	const textAreaProps = {
@@ -50,9 +77,12 @@ export function DeliveryInstructions ({
 		disabled: isDisabled,
 		defaultValue: value,
 	};
-	const deliveryInstructionsMessage = <span className="o-forms-title__prompt">
-		Special characters including punctuation cannot be used in the Delivery instructions.
-	</span>;
+	const deliveryInstructionsMessage = (
+		<span className="o-forms-title__prompt">
+			Special characters including punctuation cannot be used in the Delivery
+			instructions.
+		</span>
+	);
 
 	return (
 		<label

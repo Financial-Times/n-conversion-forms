@@ -39,6 +39,8 @@ describe('DeliveryPOBox', () => {
 
 		const component = mount(DeliveryPOBox(props));
 
-		expect(component.find('#deliveryPOBoxField').hasClass('ncf__hidden')).toBe(true);
+		expect(component.find('#deliveryPOBoxField').hasClass('ncf__hidden')).toBe(
+			true
+		);
 	});
 });

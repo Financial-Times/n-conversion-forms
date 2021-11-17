@@ -7,7 +7,7 @@ const message = {
 	CAN: 'A P.O. Box address is only deliverable by Canada Post, and is subject to a delay of up to 3 business days. For delivery on the publication day, we recommend you enter a residential or business address.',
 };
 
-export function DeliveryPOBox ({
+export function DeliveryPOBox({
 	fieldId = 'deliveryPOBoxField',
 	inputId = 'deliveryPOBox',
 	hasError = false,
@@ -20,13 +20,13 @@ export function DeliveryPOBox ({
 	const labelClassNames = classNames([
 		'o-forms-field',
 		'ncf__validation-error',
-		{ ncf__hidden: isHidden }
+		{ ncf__hidden: isHidden },
 	]);
 
 	const inputWrapperClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	return (
@@ -38,9 +38,7 @@ export function DeliveryPOBox ({
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">P.O. Box</span>
-				<span className="o-forms-title__prompt">
-					{message[country]}
-				</span>
+				<span className="o-forms-title__prompt">{message[country]}</span>
 			</span>
 			<span className={inputWrapperClassName}>
 				<input

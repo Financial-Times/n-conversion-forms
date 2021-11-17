@@ -43,7 +43,7 @@ describe('Apple Pay', () => {
 			}).to.throw();
 		});
 
-		it('should not remove any actions if the user agent isn\'t sniffed', () => {
+		it("should not remove any actions if the user agent isn't sniffed", () => {
 			new AppBanner(window);
 
 			expect(iosAction.remove.called).to.be.false;

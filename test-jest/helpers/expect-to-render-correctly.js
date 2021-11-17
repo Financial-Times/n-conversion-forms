@@ -1,7 +1,7 @@
 import ReactDOMServer from 'react-dom/server';
 
 export const expectToRenderCorrectly = {
-	toRenderCorrectly (reactComponent, props) {
+	toRenderCorrectly(reactComponent, props) {
 		// Render the React component with props.
 		const ReactComponentRendered = ReactDOMServer.renderToStaticMarkup(
 			reactComponent(props)

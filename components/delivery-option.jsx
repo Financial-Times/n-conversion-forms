@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getDeliveryOption } from '../utils/delivery-option-messages';
 
-export function DeliveryOption ({
+export function DeliveryOption({
 	fieldId = 'deliveryOptionField',
 	country,
 	productCode = undefined,
 	options = [],
-	isSingle = false
+	isSingle = false,
 }) {
 	const divClassName = classNames([
 		'o-forms-field',
@@ -27,7 +27,11 @@ export function DeliveryOption ({
 				{options.map((option) => {
 					const { value, isValidDeliveryOption, isSelected } = option;
 
-					const deliveryOptionValue = getDeliveryOption(productCode, option, country);
+					const deliveryOptionValue = getDeliveryOption(
+						productCode,
+						option,
+						country
+					);
 
 					if (!isValidDeliveryOption || !deliveryOptionValue) {
 						return null;

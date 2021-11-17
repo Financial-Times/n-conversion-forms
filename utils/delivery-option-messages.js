@@ -52,48 +52,68 @@ const UKDeliveryOptions = {
  */
 const deliveryOptionMessages = [
 	{
-		deliveryFrequency: [FIVE_DAYS_WEEK_DELIVERY_FREQ, SIX_DAYS_WEEK_DELIVERY_FREQ],
+		deliveryFrequency: [
+			FIVE_DAYS_WEEK_DELIVERY_FREQ,
+			SIX_DAYS_WEEK_DELIVERY_FREQ,
+		],
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: true,
 		flightMarket: true,
 		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
 		title: 'Hand delivery',
-		description: 'Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: We fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT\'s control. In those circumstances, your newspaper will be delivered on the next delivery day.',
+		description:
+			"Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: We fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT's control. In those circumstances, your newspaper will be delivered on the next delivery day.",
 	},
 	{
-		deliveryFrequency: [FIVE_DAYS_WEEK_DELIVERY_FREQ, SIX_DAYS_WEEK_DELIVERY_FREQ],
+		deliveryFrequency: [
+			FIVE_DAYS_WEEK_DELIVERY_FREQ,
+			SIX_DAYS_WEEK_DELIVERY_FREQ,
+		],
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: true,
 		flightMarket: false,
 		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
 		title: 'Hand delivery',
-		description: 'Enjoy delivery of the newspaper daily to your home or office address.',
+		description:
+			'Enjoy delivery of the newspaper daily to your home or office address.',
 	},
 	{
-		deliveryFrequency: [FIVE_DAYS_WEEK_DELIVERY_FREQ, SIX_DAYS_WEEK_DELIVERY_FREQ],
+		deliveryFrequency: [
+			FIVE_DAYS_WEEK_DELIVERY_FREQ,
+			SIX_DAYS_WEEK_DELIVERY_FREQ,
+		],
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: false,
 		flightMarket: true,
 		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
 		title: 'Hand delivery',
-		description: 'Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: We fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT\'s control. In those circumstances, your newspaper will be delivered on the next delivery day. Please also be aware that your FT Weekend will be delivered on Sunday.',
+		description:
+			"Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: We fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT's control. In those circumstances, your newspaper will be delivered on the next delivery day. Please also be aware that your FT Weekend will be delivered on Sunday.",
 	},
 	{
-		deliveryFrequency: [FIVE_DAYS_WEEK_DELIVERY_FREQ, SIX_DAYS_WEEK_DELIVERY_FREQ],
+		deliveryFrequency: [
+			FIVE_DAYS_WEEK_DELIVERY_FREQ,
+			SIX_DAYS_WEEK_DELIVERY_FREQ,
+		],
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: false,
 		flightMarket: false,
 		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
 		title: 'Hand delivery',
-		description: 'Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: Your FT Weekend will be delivered on Sunday or Monday.'
+		description:
+			'Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: Your FT Weekend will be delivered on Sunday or Monday.',
 	},
 	{
-		deliveryFrequency: [FIVE_DAYS_WEEK_DELIVERY_FREQ, SIX_DAYS_WEEK_DELIVERY_FREQ],
+		deliveryFrequency: [
+			FIVE_DAYS_WEEK_DELIVERY_FREQ,
+			SIX_DAYS_WEEK_DELIVERY_FREQ,
+		],
 		distributorType: MAIL,
 		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
 		title: 'Mail',
 		customId: 'ML',
-		description: 'We can only deliver the newspaper to your location by postal mail which means your delivery will arrive up to 3 business days after the date of publication and will not include the HTSI Magazine. We also fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside the FT\'s control. If you prefer to read the printed content on the day of publication, please proceed to subscribe to the FT ePaper - a digital replica of the print edition.',
+		description:
+			"We can only deliver the newspaper to your location by postal mail which means your delivery will arrive up to 3 business days after the date of publication and will not include the HTSI Magazine. We also fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside the FT's control. If you prefer to read the printed content on the day of publication, please proceed to subscribe to the FT ePaper - a digital replica of the print edition.",
 	},
 	{
 		deliveryFrequency: [ONLY_WEEKEND_DELIVERY_FREQ],
@@ -102,7 +122,8 @@ const deliveryOptionMessages = [
 		flightMarket: true,
 		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
 		title: 'Hand delivery',
-		description: 'Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: We fly the newspapers to your location which means delivery is subject to flight delays/cancellations outside of the FT\'s control. In those circumstances, your newspaper will be delivered the next delivery day.',
+		description:
+			"Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: We fly the newspapers to your location which means delivery is subject to flight delays/cancellations outside of the FT's control. In those circumstances, your newspaper will be delivered the next delivery day.",
 	},
 	{
 		deliveryFrequency: [ONLY_WEEKEND_DELIVERY_FREQ],
@@ -111,7 +132,8 @@ const deliveryOptionMessages = [
 		flightMarket: false,
 		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
 		title: 'Hand delivery',
-		description: 'Enjoy delivery of the newspaper daily to your home or office address.',
+		description:
+			'Enjoy delivery of the newspaper daily to your home or office address.',
 	},
 	{
 		deliveryFrequency: [ONLY_WEEKEND_DELIVERY_FREQ],
@@ -120,7 +142,8 @@ const deliveryOptionMessages = [
 		flightMarket: true,
 		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
 		title: 'Hand delivery',
-		description: 'Enjoy delivery of the newspaper daily to your home or office address. \nPlease note we fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT\'s control. In those circumstances, your newspaper will be delivered on the next delivery day. Please also be aware that your FT Weekend will be delivered on Sunday.',
+		description:
+			"Enjoy delivery of the newspaper daily to your home or office address. \nPlease note we fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT's control. In those circumstances, your newspaper will be delivered on the next delivery day. Please also be aware that your FT Weekend will be delivered on Sunday.",
 	},
 	{
 		deliveryFrequency: [ONLY_WEEKEND_DELIVERY_FREQ],
@@ -129,7 +152,8 @@ const deliveryOptionMessages = [
 		flightMarket: false,
 		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
 		title: 'Hand delivery',
-		description: 'Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: Your FT Weekend will be delivered on Sunday.',
+		description:
+			'Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: Your FT Weekend will be delivered on Sunday.',
 	},
 	{
 		deliveryFrequency: [ONLY_WEEKEND_DELIVERY_FREQ],
@@ -137,30 +161,35 @@ const deliveryOptionMessages = [
 		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
 		title: 'Mail',
 		customId: 'ML',
-		description: 'We can only deliver the FT Weekend newspaper to your location by postal mail which means your delivery will arrive up to 3 business days after the date of publication and will not include the HTSI Magazine. We also fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside the FT\'s control. If you prefer to read the printed content on the day of publication, please proceed to subscribe to the FT ePaper - a digital replica of the print edition.',
-	}
+		description:
+			"We can only deliver the FT Weekend newspaper to your location by postal mail which means your delivery will arrive up to 3 business days after the date of publication and will not include the HTSI Magazine. We also fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside the FT's control. If you prefer to read the printed content on the day of publication, please proceed to subscribe to the FT ePaper - a digital replica of the print edition.",
+	},
 ];
 
-function includesDeliveryFrequency (productCode = '', item) {
-	return item.deliveryFrequency.find(freq => {
+function includesDeliveryFrequency(productCode = '', item) {
+	return item.deliveryFrequency.find((freq) => {
 		const productCodePattern = deliveryFrequencyProductsMapping[freq];
 		return productCode.includes(productCodePattern);
 	});
-};
+}
 
-function mailStrategy (productCode, option, country, item) {
-	return includesDeliveryFrequency(productCode, item)
-		&& item.distributorType === MAIL
-		&& item.country.includes(country);
-};
+function mailStrategy(productCode, option, country, item) {
+	return (
+		includesDeliveryFrequency(productCode, item) &&
+		item.distributorType === MAIL &&
+		item.country.includes(country)
+	);
+}
 
-function handDeliveryStrategy (productCode, option, country, item) {
-	return includesDeliveryFrequency(productCode, item)
-		&& item.distributorType === HAND_DELIVERY
-		&& item.deliveryOnPublicationDate === option.deliveryOnPublicationDate
-		&& item.flightMarket === option.flightMarket
-		&& item.country.includes(country);
-};
+function handDeliveryStrategy(productCode, option, country, item) {
+	return (
+		includesDeliveryFrequency(productCode, item) &&
+		item.distributorType === HAND_DELIVERY &&
+		item.deliveryOnPublicationDate === option.deliveryOnPublicationDate &&
+		item.flightMarket === option.flightMarket &&
+		item.country.includes(country)
+	);
+}
 
 /**
  * Method to find a specific delivery option based on the delivery frequency, country and option values.
@@ -168,11 +197,11 @@ function handDeliveryStrategy (productCode, option, country, item) {
  * Both cases are represented by system option code 'HD', but differ on the mailDelivery property value.
  * If no message matchs, then undefined is returned.
  */
-function findCustomDeliveryOption (productCode, option, country) {
+function findCustomDeliveryOption(productCode, option, country) {
 	let deliveryOption;
 
 	if (option.value === HAND_DELIVERY) {
-		const filteredMessages = deliveryOptionMessages.filter(item => {
+		const filteredMessages = deliveryOptionMessages.filter((item) => {
 			return option.mailDelivery
 				? mailStrategy(productCode, option, country, item)
 				: handDeliveryStrategy(productCode, option, country, item);
@@ -185,13 +214,13 @@ function findCustomDeliveryOption (productCode, option, country) {
 	}
 
 	return deliveryOption;
-};
+}
 
-function getDeliveryOption (productCode, option, country) {
+function getDeliveryOption(productCode, option, country) {
 	return country === UK_COUNTRY_CODE
 		? UKDeliveryOptions[option.value]
-		: findCustomDeliveryOption(productCode, option, country);;
-};
+		: findCustomDeliveryOption(productCode, option, country);
+}
 
 module.exports = {
 	getDeliveryOption,

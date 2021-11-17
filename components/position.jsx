@@ -23,7 +23,7 @@ export function Position({
 
 	const fieldTitleClassName = classNames([
 		'o-forms-title',
-		{ 'o-forms-field--optional': !isRequired }
+		{ 'o-forms-field--optional': !isRequired },
 	]);
 
 	return (

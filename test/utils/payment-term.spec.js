@@ -155,13 +155,15 @@ describe('PaymentTerm', () => {
 				it('should replace the base amount with the correct updated trial amount', () => {
 					updatedOptions[0].isTrial = true;
 					paymentTerm.updateOptions(updatedOptions);
-					expect(elementStub.setAttribute.calledWith('data-base-amount', 1)).to.be.true;
+					expect(elementStub.setAttribute.calledWith('data-base-amount', 1)).to
+						.be.true;
 				});
 
 				it('should replace the base amount with the correct updated amount', () => {
 					updatedOptions[0].isTrial = false;
 					paymentTerm.updateOptions(updatedOptions);
-					expect(elementStub.setAttribute.calledWith('data-base-amount', 500)).to.be.true;
+					expect(elementStub.setAttribute.calledWith('data-base-amount', 500))
+						.to.be.true;
 				});
 			});
 

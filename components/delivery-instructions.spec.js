@@ -77,7 +77,9 @@ describe('DeliveryInstructions', () => {
 		const component = mount(DeliveryInstructions(props));
 
 		const element = component.find('.o-forms-title__prompt').first();
-		expect(element.text().replace(/\&nbsp;/g, '')).toBe(spanMessageByCountry[props.country]);
+		expect(element.text().replace(/\&nbsp;/g, '')).toBe(
+			spanMessageByCountry[props.country]
+		);
 	});
 
 	it('renders as with a CAN span message and check the text', () => {
@@ -86,6 +88,8 @@ describe('DeliveryInstructions', () => {
 		const component = mount(DeliveryInstructions(props));
 
 		const element = component.find('.o-forms-title__prompt').first();
-		expect(element.text().replace(/\&nbsp;/g, '')).toBe(spanMessageByCountry[props.country]);
+		expect(element.text().replace(/\&nbsp;/g, '')).toBe(
+			spanMessageByCountry[props.country]
+		);
 	});
 });

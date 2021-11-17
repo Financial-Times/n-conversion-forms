@@ -65,7 +65,7 @@ const _cc_codes = {
  * @example
  * getFieldByKey('firstName'); // 'First Name'
  */
-function getFieldByKey (key) {
+function getFieldByKey(key) {
 	return key && _fields[key] ? _fields[key] : null;
 }
 
@@ -77,7 +77,7 @@ function getFieldByKey (key) {
  * @example
  * getReasonByMessage('InvalidFormat'); // 'is invalid'
  */
-function getReasonByMessage (message) {
+function getReasonByMessage(message) {
 	return message && _messages[message] ? _messages[message] : null;
 }
 
@@ -89,7 +89,7 @@ function getReasonByMessage (message) {
  * @example
  * getReasonByCode('Invalid_Security'); // 'Security validation error'
  */
-function getReasonByCode (code) {
+function getReasonByCode(code) {
 	if (isCreditCardValidationCode(code)) {
 		code = parseInt(code); // '001' -> 1
 		return code && _cc_codes[code] ? _cc_codes[code] : null;
@@ -106,7 +106,7 @@ function getReasonByCode (code) {
  * @example Valid codes:
  * 001,002,003,004
  */
-function isCreditCardValidationCode (code) {
+function isCreditCardValidationCode(code) {
 	let _int;
 	try {
 		_int = parseInt(code, 0);
@@ -123,7 +123,7 @@ function isCreditCardValidationCode (code) {
  * @param {String} code Zuora error code
  * @param {String} message Zuora error message
  */
-function generateCustomErrorMessage (key, code, message) {
+function generateCustomErrorMessage(key, code, message) {
 	const field = getFieldByKey(key) || 'Field';
 	let reason = '';
 

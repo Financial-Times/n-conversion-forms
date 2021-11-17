@@ -30,7 +30,10 @@ export function B2cPartnershipPaymentTerm({
 			{options.map(
 				(option) =>
 					option.selected && (
-						<div className="ncf__payment-term__item o-forms-input--radio-round" key={option.value}>
+						<div
+							className="ncf__payment-term__item o-forms-input--radio-round"
+							key={option.value}
+						>
 							<input
 								type="radio"
 								id={option.value}

@@ -30,10 +30,14 @@ describe('Delivery Option - Util', () => {
 				country: 'GBR',
 				options: [
 					{ value: 'HD', isSelected: true, isValidDeliveryOption: true },
-					{ value: 'PV', isSelected: false, isValidDeliveryOption: true }
-				]
+					{ value: 'PV', isSelected: false, isValidDeliveryOption: true },
+				],
 			};
-			const component = mount(<Form ><DeliveryOption {...props} /></Form>);
+			const component = mount(
+				<Form>
+					<DeliveryOption {...props} />
+				</Form>
+			);
 			const dom = new JSDOM(`
 				<!DOCTYPE html>
 				<html>

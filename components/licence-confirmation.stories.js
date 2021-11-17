@@ -8,7 +8,9 @@ export default {
 
 const goToMyFtElement = (
 	<p className="ncf__paragraph ncf__center">
-		<a className="ncf__button ncf__button--submit" href="/myft">Go to myFT</a>
+		<a className="ncf__button ncf__button--submit" href="/myft">
+			Go to myFT
+		</a>
 	</p>
 );
 

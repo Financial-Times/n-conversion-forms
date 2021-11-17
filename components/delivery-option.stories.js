@@ -11,7 +11,11 @@ export default {
 	},
 };
 
-export const Basic = (args) => <div className="ncf"><DeliveryOption {...args} /></div>;
+export const Basic = (args) => (
+	<div className="ncf">
+		<DeliveryOption {...args} />
+	</div>
+);
 Basic.args = {
 	country: 'GBR',
 	options: [
@@ -30,7 +34,11 @@ Basic.args = {
 	],
 };
 
-export const US5or6DaysWeekDeliveryOptions = (args) => <div className="ncf"><DeliveryOption {...args} /></div>;
+export const US5or6DaysWeekDeliveryOptions = (args) => (
+	<div className="ncf">
+		<DeliveryOption {...args} />
+	</div>
+);
 US5or6DaysWeekDeliveryOptions.args = {
 	options: [
 		{
@@ -46,13 +54,17 @@ US5or6DaysWeekDeliveryOptions.args = {
 			deliveryOnPublicationDate: false,
 			flightMarket: false,
 			mailDelivery: true,
-		}
+		},
 	],
 	country: 'USA',
 	productCode: 'P2N6D',
 };
 
-export const USWeekendOnlyDeliveryOptions = (args) => <div className="ncf"><DeliveryOption {...args} /></div>;
+export const USWeekendOnlyDeliveryOptions = (args) => (
+	<div className="ncf">
+		<DeliveryOption {...args} />
+	</div>
+);
 USWeekendOnlyDeliveryOptions.args = {
 	options: [
 		{
@@ -66,7 +78,7 @@ USWeekendOnlyDeliveryOptions.args = {
 			value: 'HD',
 			isValidDeliveryOption: true,
 			mailDelivery: true,
-		}
+		},
 	],
 	country: 'USA',
 	productCode: 'NWE',

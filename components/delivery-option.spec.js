@@ -87,7 +87,7 @@ describe('DeliveryOption', () => {
 
 	it('renders with USA print offer', () => {
 		const props = {
-			country : 'USA',
+			country: 'USA',
 			productCode: 'NWE',
 			options: [
 				{
@@ -96,7 +96,7 @@ describe('DeliveryOption', () => {
 					isValidDeliveryOption: true,
 					mailDelivery: false,
 					deliveryOnPublicationDate: true,
-					flightMarket:false,
+					flightMarket: false,
 				},
 				{
 					value: 'HD',
@@ -112,7 +112,7 @@ describe('DeliveryOption', () => {
 
 	it('renders with country CAN print offer HD and mailDelivery false', () => {
 		const props = {
-			country : 'CAN',
+			country: 'CAN',
 			productCode: 'N6D',
 			options: [
 				{
@@ -121,7 +121,7 @@ describe('DeliveryOption', () => {
 					isValidDeliveryOption: true,
 					mailDelivery: false,
 					deliveryOnPublicationDate: true,
-					flightMarket:false,
+					flightMarket: false,
 				},
 			],
 		};

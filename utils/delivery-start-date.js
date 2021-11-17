@@ -6,13 +6,12 @@ const fetchres = require('fetchres');
  * const deliveryStartDate = new DeliveryStartDate(document);
  */
 class DeliveryStartDate {
-
 	/**
 	 * Initalise the DeliveryStartDate utility
 	 * @param {Element} element Usually the window.document
 	 * @throws If the element not passed
 	 */
-	constructor (element) {
+	constructor(element) {
 		if (!element) {
 			throw new Error('Please supply the DOM element');
 		}
@@ -35,7 +34,9 @@ class DeliveryStartDate {
 		// to use if datepicker isn't available
 		// from https://stackoverflow.com/questions/10193294/how-can-i-tell-if-a-browser-supports-input-type-date
 
-		this.$deliveryStartDateTitleSpan = element.querySelector('#start-date-picker-title-span');
+		this.$deliveryStartDateTitleSpan = element.querySelector(
+			'#start-date-picker-title-span'
+		);
 
 		const checkDateInput = () => {
 			let input = element.createElement('input');
@@ -59,8 +60,9 @@ class DeliveryStartDate {
 	 * @returns {boolean} Whether or not the start date is valid.
 	 * @throws If there was an error calling the endpoint to check this.
 	 */
-	async handleDeliveryStartDateChange (url, getData) {
-		const isNewValue = (this.previousDeliveryDateValue !== this.$deliveryStartDate.value);
+	async handleDeliveryStartDateChange(url, getData) {
+		const isNewValue =
+			this.previousDeliveryDateValue !== this.$deliveryStartDate.value;
 		this.previousDeliveryDateValue = this.$deliveryStartDate.value;
 
 		if (this.$deliveryStartDate.value && isNewValue) {
@@ -101,14 +103,14 @@ class DeliveryStartDate {
 	/**
 	 * Enables the start date field
 	 */
-	enable () {
+	enable() {
 		this.$deliveryStartDate.removeAttribute('disabled');
 	}
 
 	/**
 	 * Disables the start date field
 	 */
-	disable () {
+	disable() {
 		this.$deliveryStartDate.setAttribute('disabled', 'true');
 	}
 }
