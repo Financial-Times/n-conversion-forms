@@ -1,3 +1,1 @@
-module.exports = {
-	extends: ['@financial-times/eslint-config-next'],
-};
+module.exports = { extends: ['@financial-times/eslint-config-next'] };
