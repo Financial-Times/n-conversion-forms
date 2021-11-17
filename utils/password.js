@@ -13,7 +13,7 @@ class Password {
 	 * @throws If the document not passed
 	 * @throws When the password element not found
 	 */
-	constructor(element) {
+	constructor (element) {
 		if (!element) {
 			throw new Error('Please supply a DOM element');
 		}
@@ -34,7 +34,7 @@ class Password {
 	 * Toggle whether the password is shown in plain text or not
 	 * @param {Boolean} mask Pass false to show plain text
 	 */
-	toggleMask(mask) {
+	toggleMask (mask) {
 		this.$password.type = mask ? 'password' : 'text';
 	}
 }

@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 const DEFAULT_AGE_RESTRICTION = '16';
 
-export function AcceptTerms({
+export function AcceptTerms ({
 	hasError = false,
 	isSignup = false,
 	isRegister = false,

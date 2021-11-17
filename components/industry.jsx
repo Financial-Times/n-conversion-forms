@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { demographics } from 'n-common-static-data';
 const defaultOptions = demographics.industries.industries;
 
-export function Industry({
+export function Industry ({
 	value,
 	isDisabled = false,
 	hasError = false,

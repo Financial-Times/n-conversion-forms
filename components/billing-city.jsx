@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function BillingCity({
+export function BillingCity ({
 	hasError = false,
 	value = '',
 	isDisabled = false,

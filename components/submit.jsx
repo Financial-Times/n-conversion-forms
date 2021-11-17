@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function Submit({
+export function Submit ({
 	id = 'submitButton',
 	isCentered = false,
 	isDisabled = false,

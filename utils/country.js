@@ -15,7 +15,7 @@ class Country {
 	 * @throws If the document not passed
 	 * @throws When the country element not found
 	 */
-	constructor(element) {
+	constructor (element) {
 		if (!element) {
 			throw new Error('Please supply a DOM element');
 		}
@@ -32,7 +32,7 @@ class Country {
 	 * Register an event listener
 	 * @param {Function} callback Called with event when changed
 	 */
-	onChange(callback = () => {}) {
+	onChange (callback = () => {}) {
 		return this.$country.addEventListener('change', callback);
 	}
 
@@ -41,7 +41,7 @@ class Country {
 	 * @return {String}
 	 * @throws If nothing has been selected
 	 */
-	getSelected() {
+	getSelected () {
 		const selected = this.$country.options[this.$country.selectedIndex];
 		if (!selected) {
 			throw new Error('No country has been selected');

@@ -136,7 +136,7 @@ describe('Apple Pay', () => {
 				expect(ApplePay.getMerchantId(methods)).to.be.a('string');
 			});
 
-			it("should return default merchant id if methods data hasn't got one", () => {
+			it('should return default merchant id if methods data hasn\'t got one', () => {
 				const methods = [{ data: {} }];
 				expect(ApplePay.getMerchantId(methods)).to.be.a('string');
 			});

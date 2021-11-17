@@ -11,7 +11,7 @@ class DeliveryStartDate {
 	 * @param {Element} element Usually the window.document
 	 * @throws If the element not passed
 	 */
-	constructor(element) {
+	constructor (element) {
 		if (!element) {
 			throw new Error('Please supply the DOM element');
 		}
@@ -60,7 +60,7 @@ class DeliveryStartDate {
 	 * @returns {boolean} Whether or not the start date is valid.
 	 * @throws If there was an error calling the endpoint to check this.
 	 */
-	async handleDeliveryStartDateChange(url, getData) {
+	async handleDeliveryStartDateChange (url, getData) {
 		const isNewValue =
 			this.previousDeliveryDateValue !== this.$deliveryStartDate.value;
 		this.previousDeliveryDateValue = this.$deliveryStartDate.value;
@@ -103,14 +103,14 @@ class DeliveryStartDate {
 	/**
 	 * Enables the start date field
 	 */
-	enable() {
+	enable () {
 		this.$deliveryStartDate.removeAttribute('disabled');
 	}
 
 	/**
 	 * Disables the start date field
 	 */
-	disable() {
+	disable () {
 		this.$deliveryStartDate.setAttribute('disabled', 'true');
 	}
 }

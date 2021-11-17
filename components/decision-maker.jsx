@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function DecisionMaker({ hasError = false, value = 'yes' }) {
+export function DecisionMaker ({ hasError = false, value = 'yes' }) {
 	const radioButtonsWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--radio-box',

@@ -7,7 +7,7 @@ const addressTypes = [
 	{ id: 'pobox', label: 'P.O. Box' },
 ];
 
-export function DeliveryAddressType({
+export function DeliveryAddressType ({
 	value = 'home',
 	fieldId = 'deliveryAddressTypeField',
 	inputName = 'deliveryAddressType',

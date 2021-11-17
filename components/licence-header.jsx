@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { LicenceSignIn } from './licence-sign-in';
 import { LicenceTitle } from './licence-title';
 
-export function LicenceHeader(props) {
+export function LicenceHeader (props) {
 	const {
 		displayName = '',
 		isTrial = false,
@@ -11,7 +11,7 @@ export function LicenceHeader(props) {
 		welcomeText = '',
 		url = '',
 	} = props;
-	function createMarkup(text) {
+	function createMarkup (text) {
 		return { __html: text };
 	}
 

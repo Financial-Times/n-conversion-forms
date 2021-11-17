@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function B2cPartnershipPaymentTerm({
+export function B2cPartnershipPaymentTerm ({
 	fieldId = 'paymentTermField',
 	inputName = 'paymentTerm',
 	options = [],
