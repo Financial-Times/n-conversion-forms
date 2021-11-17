@@ -95,6 +95,13 @@ jobs:
           root: *workspace_root
           paths:
             - build
+      - run:
+          name: Run tests
+          command: make test
+          environment:
+            JEST_JUNIT_OUTPUT: test-results/jest/results.xml
+            MOCHA_FILE: test-results/mocha/results.xml
+
 
   test:
     <<: *container_config_node12
