@@ -73,7 +73,7 @@
     "snyk": "1.230.7"
   },
   "engines": {
-    "node": "12.x",
+    "node": "12.x || 14.x",
     "npm": "7.x || 8.x"
   },
   "lint-staged": {
