@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getDeliveryOption } from '../utils/delivery-option-messages';
 
-export function DeliveryOption({
+export function DeliveryOption ({
 	fieldId = 'deliveryOptionField',
 	country,
 	productCode = undefined,

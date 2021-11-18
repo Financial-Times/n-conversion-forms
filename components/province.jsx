@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { canadianProvinces } from 'n-common-static-data';
 const defaultProvinces = canadianProvinces.provinces;
 
-export function Province({
+export function Province ({
 	value,
 	fieldId = 'provinceField',
 	selectId = 'province',

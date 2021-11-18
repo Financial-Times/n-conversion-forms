@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function DeliveryAddress({
+export function DeliveryAddress ({
 	fieldId = 'deliveryAddressFields',
 	hasError = false,
 	line1 = '',
@@ -33,7 +33,7 @@ export function DeliveryAddress({
 
 	const addressLine3Placeholder = {
 		USA: 'e.g Apt 2C / FL 10 / STE 5',
-		CAN: 'e.g Apt 2C / FL 10 / STE 5'
+		CAN: 'e.g Apt 2C / FL 10 / STE 5',
 	};
 
 	const addressLine1Placeholder = {

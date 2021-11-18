@@ -7,7 +7,7 @@ const { countries } = require('n-common-static-data').billingCountries;
  * @param {array} options.filter Only returns countries within the filter list if supplied
  * @param {number} options.minimumToGroup Only show groupings if there are over this amount of countries
  */
-function getCountries({ value, filter = [], minimumToGroup = 20 } = {}) {
+function getCountries ({ value, filter = [], minimumToGroup = 20 } = {}) {
 	let data = countries;
 
 	// Only show countries in the filter
@@ -41,7 +41,7 @@ function getCountries({ value, filter = [], minimumToGroup = 20 } = {}) {
  * @param {string} options.alphabeticalLabel Label to use for all other countries
  * @return {array}
  */
-function groupCountries(
+function groupCountries (
 	countries,
 	{
 		minimumToShowGroups = 2,

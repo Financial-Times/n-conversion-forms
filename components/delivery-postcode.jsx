@@ -17,7 +17,7 @@ const placeholderLabel = {
 	CAN: 'e.g. M4W 2C6',
 };
 
-export function DeliveryPostcode({
+export function DeliveryPostcode ({
 	value = '',
 	country = '',
 	isDisabled = false,

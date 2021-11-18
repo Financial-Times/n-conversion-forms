@@ -19,7 +19,7 @@ const PaymentType = require('./payment-type');
  */
 
 class Zuora {
-	constructor(window) {
+	constructor (window) {
 		this.Z = window.Z;
 
 		this.iframe = new FormElement(window.document, '.ncf__zuora-payment');
@@ -43,7 +43,7 @@ class Zuora {
 	 * @param {Object} prePopulatedFields Parameters with field ids and values to be pre-populated on the form
 	 * @param {Function} renderCallback A function that gets called after the form is rendered.
 	 */
-	render({ params, prePopulatedFields = {}, renderCallback = () => {} }) {
+	render ({ params, prePopulatedFields = {}, renderCallback = () => {} }) {
 		// Using an undocumented Zuora method to attach a render callback for the iframe.
 		// This method is called once when the iframe is rendered but gets removed for subsequent renderings.
 		// In the Zuora code https://static.zuora.com/Resources/libs/hosted/1.3.1/zuora.js
@@ -79,7 +79,7 @@ class Zuora {
 	 * @param {String} paymentType Type of payment being used
 	 * @returns {Promise} Resolves when the submission has occurred, rejects if there was an error.
 	 */
-	submit(paymentType) {
+	submit (paymentType) {
 		return new Promise((resolve, reject) => {
 			// Only handle credit card and direct debit payments
 			if (
@@ -119,7 +119,7 @@ class Zuora {
 	 * agreement checkbox changing (inside the 3rd party Zuora iframe).
 	 * @param {Function} callback - the callback to fire upon change
 	 */
-	onAgreementCheckboxChange(callback) {
+	onAgreementCheckboxChange (callback) {
 		// Zuora 3rd party method, returns response to callback
 		this.Z.setEventHandler('agreement_checked', () => {
 			callback(true);
@@ -134,7 +134,7 @@ class Zuora {
 	 * of the direct debit mandate (inside the 3rd party Zuora iframe).
 	 * @param {Function} callback - the callback to fire upon confirmation.
 	 */
-	onDirectDebitConfirmation(callback) {
+	onDirectDebitConfirmation (callback) {
 		// Zuora 3rd party method, returns response to callback
 		this.Z.setEventHandler('mandate_confirmed', () => {
 			callback(true);
@@ -149,7 +149,7 @@ class Zuora {
 	 * Zuora doc: https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/LA_Hosted_Payment_Pages/B_Payment_Pages_2.0/H_Integrate_Payment_Pages_2.0#Add_a_Checkbox_for_Stored_Credential_Consent
 	 * @returns {boolean}
 	 */
-	setAgreement() {
+	setAgreement () {
 		const mitConsentAgreementSrc = 'External';
 		const mitProfileType = 'Recurring';
 		const agreementSupportedBrands = 'Visa,Mastercard';
@@ -166,21 +166,21 @@ class Zuora {
 	/**
 	 * Expose ZuoraErrorValidation
 	 */
-	static get ZuoraErrorValidation() {
+	static get ZuoraErrorValidation () {
 		return ZuoraErrorValidation;
 	}
 
 	/**
 	 * Expose ZuoraErrorMandateCancel
 	 */
-	static get ZuoraErrorMandateCancel() {
+	static get ZuoraErrorMandateCancel () {
 		return ZuoraErrorMandateCancel;
 	}
 
 	/**
 	 * Expose ZuoraErrorInvalidPaymentType
 	 */
-	static get ZuoraErrorInvalidPaymentType() {
+	static get ZuoraErrorInvalidPaymentType () {
 		return ZuoraErrorInvalidPaymentType;
 	}
 }
@@ -189,19 +189,19 @@ class Zuora {
  * Error classes
  */
 class ZuoraErrorValidation extends Error {
-	constructor(message) {
+	constructor (message) {
 		super(message);
 		Object.setPrototypeOf(this, ZuoraErrorValidation.prototype);
 	}
 }
 class ZuoraErrorMandateCancel extends Error {
-	constructor(message) {
+	constructor (message) {
 		super(message);
 		Object.setPrototypeOf(this, ZuoraErrorMandateCancel.prototype);
 	}
 }
 class ZuoraErrorInvalidPaymentType extends Error {
-	constructor(message) {
+	constructor (message) {
 		super(message);
 		Object.setPrototypeOf(this, ZuoraErrorInvalidPaymentType.prototype);
 	}

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function FirstName({
+export function FirstName ({
 	dataTrackable = 'field-name',
 	errorText = 'Please enter your first name',
 	fieldId = 'firstNameField',

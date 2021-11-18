@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getCountries } from '../utils/countries';
 
-export function BillingCountry({
+export function BillingCountry ({
 	fieldId = 'billingCountryField',
 	filterList = [],
 	hasError = false,

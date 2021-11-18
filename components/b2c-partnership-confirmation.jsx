@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function B2CPartnershipConfirmation({ ctaElement = null }) {
+export function B2CPartnershipConfirmation ({ ctaElement = null }) {
 	const readingLinkProps = {
 		href: '/',
 		className: 'ncf__link',
@@ -19,7 +19,7 @@ export function B2CPartnershipConfirmation({ ctaElement = null }) {
 				<div className="ncf__paragraph">
 					{
 						<h1 className="ncf__header ncf__header--confirmation">
-							{"Welcome to your three months' Premium access"}
+							{'Welcome to your three months\' Premium access'}
 						</h1>
 					}
 				</div>

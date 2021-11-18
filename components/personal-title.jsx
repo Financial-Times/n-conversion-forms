@@ -9,7 +9,7 @@ export const defaultPersonalTitles = [
 	{ code: 'Ms', description: 'Ms' },
 ];
 
-export function PersonalTitle({
+export function PersonalTitle ({
 	value,
 	isDisabled = false,
 	hasError = false,

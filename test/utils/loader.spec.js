@@ -62,7 +62,7 @@ describe('Loader', () => {
 		});
 
 		describe('setContent', () => {
-			it("should create the title element if it doesn't exist yet", () => {
+			it('should create the title element if it doesn\'t exist yet', () => {
 				loader.$loaderContentTitle = null;
 				loader.setContent({ title: 'Hooray!' });
 				expect(elementStub.insertBefore.calledWith(elementStub)).to.be.true;

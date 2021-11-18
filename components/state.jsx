@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { americanStates } from 'n-common-static-data';
 const defaultStates = americanStates.states;
 
-export function State({
+export function State ({
 	value,
 	fieldId = 'stateField',
 	selectId = 'state',

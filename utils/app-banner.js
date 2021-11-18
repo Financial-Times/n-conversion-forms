@@ -1,5 +1,5 @@
 class AppBanner {
-	constructor(window) {
+	constructor (window) {
 		if (!window) {
 			throw new Error('Please supply a Window object');
 		}

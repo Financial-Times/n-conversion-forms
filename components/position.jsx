@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { demographics } from 'n-common-static-data';
 const defaultOptions = demographics.positions.positions;
 
-export function Position({
+export function Position ({
 	value,
 	isDisabled = false,
 	hasError = false,

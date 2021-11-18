@@ -37,7 +37,7 @@ describe('FormElement', () => {
 	});
 
 	describe('constructor', () => {
-		it("should throw an error if document element isn't passed in.", () => {
+		it('should throw an error if document element isn\'t passed in.', () => {
 			expect(() => {
 				new FormElement();
 			}).to.throw();
