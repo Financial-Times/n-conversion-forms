@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function DeliveryCity({
+export function DeliveryCity ({
 	hasError = false,
 	value = '',
 	isDisabled = false,

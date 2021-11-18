@@ -1,7 +1,7 @@
 const FormElement = require('./form-element');
 
 class DeliveryAddress extends FormElement {
-	constructor(document, fieldId = 'deliveryAddressFields') {
+	constructor (document, fieldId = 'deliveryAddressFields') {
 		super(document, `.ncf #${fieldId}`);
 	}
 }

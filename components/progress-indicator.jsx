@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function ProgressIndicator({ items = [], disableLinks = false }) {
-	function getElementsForComplete(item) {
+export function ProgressIndicator ({ items = [], disableLinks = false }) {
+	function getElementsForComplete (item) {
 		return disableLinks ? (
 			<span className="o-stepped-progress__step o-stepped-progress__step--complete">
 				<span className="o-stepped-progress__label">
@@ -26,7 +26,7 @@ export function ProgressIndicator({ items = [], disableLinks = false }) {
 		);
 	}
 
-	function getElementsForNonComplete(item) {
+	function getElementsForNonComplete (item) {
 		const nonCompleteDivClassName = classNames([
 			'o-stepped-progress__step',
 			{ 'o-stepped-progress__step--current': item.isCurrent },

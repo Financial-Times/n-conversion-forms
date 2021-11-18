@@ -6,7 +6,7 @@ const DEFAULT_HEADER_TEXT = 'Sorry, this is not available online';
 const DEFAULT_MESSAGE_TEXT =
 	'Speak now to our Customer Care team to discuss your options';
 
-export function CustomerCare({
+export function CustomerCare ({
 	header = DEFAULT_HEADER_TEXT,
 	isCompact = false,
 	message = DEFAULT_MESSAGE_TEXT,

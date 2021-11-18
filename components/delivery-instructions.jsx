@@ -34,7 +34,7 @@ const spanMessageByCountry = {
 	),
 };
 
-export function DeliveryInstructions({
+export function DeliveryInstructions ({
 	fieldId = 'deliveryInstructionsField',
 	hasError = false,
 	inputId = 'deliveryInstructions',

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const EMAIL_DEFAULT_TEXT = 'your email';
 
-export function RegistrationConfirmation({ email = EMAIL_DEFAULT_TEXT }) {
+export function RegistrationConfirmation ({ email = EMAIL_DEFAULT_TEXT }) {
 	return (
 		<div className="ncf ncf__wrapper">
 			<div className="ncf__center">

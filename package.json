@@ -11,7 +11,8 @@
     "build-storybook": "build-storybook --docs --output-dir docs",
     "lint": "eslint . --ext .jsx,.js",
     "lint-fix": "eslint . --ext .jsx,.js --fix",
-    "prettier": "prettier --write '**/*.{js,jsx,json,scss}'"
+    "prettier": "prettier --write '**/*.{js,jsx,json,scss}'",
+    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
   },
   "repository": {
     "type": "git",
@@ -40,11 +41,12 @@
     "@financial-times/eslint-config-next": "^3.0.0",
     "@financial-times/n-gage": "^8.2.0",
     "@storybook/addon-a11y": "^6.0.10",
-    "@storybook/addon-essentials": "^6.0.10",
+    "@storybook/addon-essentials": "6.0.10",
     "@storybook/react": "^6.0.10",
     "@sucrase/jest-plugin": "^2.0.0",
     "bower": "^1.8.8",
     "chai": "^4.2.0",
+    "check-engines": "^1.5.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "eslint": "^8.1.0",
@@ -71,7 +73,8 @@
     "snyk": "1.230.7"
   },
   "engines": {
-    "node": "12.x"
+    "node": "12.x",
+    "npm": "7.x || 8.x"
   },
   "lint-staged": {
     "**/*.{js,jsx,json,scss}": "prettier --write",

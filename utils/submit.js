@@ -16,7 +16,7 @@ class Submit {
 	 * @throws If the document not passed
 	 * @throws When the submit element not found
 	 */
-	constructor(element) {
+	constructor (element) {
 		if (!element) {
 			throw new Error('Please supply a DOM element');
 		}
@@ -33,7 +33,7 @@ class Submit {
 	 * Update the button text
 	 * @param {String}
 	 */
-	updateText(newText) {
+	updateText (newText) {
 		if (!newText) throw new Error('Please supply a new text value');
 		return (this.$submit.innerHTML = newText);
 	}
@@ -41,21 +41,21 @@ class Submit {
 	/**
 	 * Enables the submit button
 	 */
-	enable() {
+	enable () {
 		this.$submit.disabled = false;
 	}
 
 	/**
 	 * Disables the submit button
 	 */
-	disable() {
+	disable () {
 		this.$submit.disabled = true;
 	}
 
 	/**
 	 * Whether or not the button is disabled.
 	 */
-	isDisabled() {
+	isDisabled () {
 		return !!this.$submit.disabled;
 	}
 }

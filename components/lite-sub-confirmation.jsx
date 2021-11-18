@@ -17,7 +17,7 @@ const DetailsMobileView = ({ details }) => (
 	</dl>
 );
 
-export function LiteSubConfirmation({
+export function LiteSubConfirmation ({
 	productCode = '',
 	offerName = '',
 	subscriptionAmount = '',

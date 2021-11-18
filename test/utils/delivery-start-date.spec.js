@@ -57,7 +57,7 @@ describe('DeliveryStartDate', () => {
 	});
 
 	describe('constructor', () => {
-		it("should throw an error if document element isn't passed in.", () => {
+		it('should throw an error if document element isn\'t passed in.', () => {
 			expect(() => {
 				new DeliveryStartDate();
 			}).to.throw();
@@ -75,7 +75,7 @@ describe('DeliveryStartDate', () => {
 		let startDateUtil;
 		let startDateChangeResult;
 
-		async function setup() {
+		async function setup () {
 			fetchMock.mock('/api/path', {
 				firstDeliveryDate: '2019-04-13',
 				firstDeliveryDateString: 'Saturday 13th of April 2019',

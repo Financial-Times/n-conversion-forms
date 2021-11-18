@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function DeliveryCounty({
+export function DeliveryCounty ({
 	hasError = false,
 	value = '',
 	isDisabled = false,

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function LicenceConfirmation({
+export function LicenceConfirmation ({
 	isTrial = false,
 	isEmbedded = false,
 	duration = null,
