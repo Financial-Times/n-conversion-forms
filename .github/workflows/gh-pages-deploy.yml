@@ -14,6 +14,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14.x
+      - run: npm install npm@7.24.2
       - uses: actions/checkout@v2
         with:
           persist-credentials: false
