@@ -18,7 +18,7 @@ jobs:
         with:
           persist-credentials: false
       - run: git config --global url."https://${{ secrets.NEXT_USER_PAT }}@github.com/".insteadOf ssh://git@github.com/
-      - run: npm install npm@7.24.2
+      - run: npm install -g npm@7.24.2
       - run: make install
       - run: npm run build-storybook
       - name: Deploy
