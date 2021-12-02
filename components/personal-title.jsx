@@ -83,4 +83,3 @@ PersonalTitle.propTypes = {
 	fieldLabel: PropTypes.string,
 	isRequired: PropTypes.bool,
 };
-

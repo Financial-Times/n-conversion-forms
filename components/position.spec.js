@@ -64,6 +64,8 @@ describe('Position', () => {
 		const props = { isRequired: false };
 		const component = mount(Position(props));
 
-		expect(component.find('.o-forms-title.o-forms-field--optional').length).toEqual(1);
+		expect(
+			component.find('.o-forms-title.o-forms-field--optional').length
+		).toEqual(1);
 	});
 });

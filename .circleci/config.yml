@@ -6,7 +6,7 @@ references:
   container_config_node12: &container_config_node12
     working_directory: ~/project/build
     docker:
-      - image: circleci/node:12-browsers
+      - image: cimg/node:14.18-browsers
 
   container_config_lambda_node12: &container_config_lambda_node12
     working_directory: ~/project/build
@@ -57,7 +57,10 @@ references:
     branches:
       ignore: /.*/
 
-version: 2
+version: 2.1
+
+orbs:
+  node: circleci/node@4.7.0
 
 jobs:
 
@@ -69,12 +72,11 @@ jobs:
           name: Checkout next-ci-shared-helpers
           command: git clone --depth 1 git@github.com:Financial-Times/next-ci-shared-helpers.git .circleci/shared-helpers
       - *restore_npm_cache
+      - node/install-npm:
+          version: "7"
       - run:
           name: Install project dependencies
           command: make install
-      - run:
-          name: shared-helper / npm-install-peer-deps
-          command: .circleci/shared-helpers/helper-npm-install-peer-deps
       - run:
           name: shared-helper / npm-update
           command: .circleci/shared-helpers/helper-npm-update
@@ -100,7 +102,7 @@ jobs:
       - *attach_workspace
       - run:
           name: Run tests
-          command: make test
+          command: npm run lint && make test
           environment:
             JEST_JUNIT_OUTPUT: test-results/jest/results.xml
             MOCHA_FILE: test-results/mocha/results.xml

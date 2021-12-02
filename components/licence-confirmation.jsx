@@ -7,9 +7,8 @@ export function LicenceConfirmation ({
 	duration = null,
 	isEducationalLicence = false,
 	contentId = '',
-	ctaElement=null,
+	ctaElement = null,
 }) {
-
 	const readingLinkProps = {
 		href: contentId === '' ? '/' : `/content/${contentId}`,
 		className: 'ncf__link',
@@ -44,10 +43,13 @@ export function LicenceConfirmation ({
 				content.
 			</p>
 
-			{ctaElement ||
+			{ctaElement || (
 				<p className="ncf__paragraph ncf__center">
-					<a className="ncf__button ncf__button--submit" href="/myft">Go to myFT</a>
-				</p>}
+					<a className="ncf__button ncf__button--submit" href="/myft">
+						Go to myFT
+					</a>
+				</p>
+			)}
 
 			<p className="ncf__paragraph ncf__center">
 				<a {...readingLinkProps}>Start reading</a>

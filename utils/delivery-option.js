@@ -29,7 +29,10 @@ class DeliveryOption {
 	 */
 	handleDeliveryOptionChange (callback) {
 		if (this.$form.elements['deliveryOption'].length === undefined) {
-			this.$form.elements['deliveryOption'].addEventListener('change', callback);
+			this.$form.elements['deliveryOption'].addEventListener(
+				'change',
+				callback
+			);
 		} else {
 			for (let option of [...this.$form.elements['deliveryOption']]) {
 				option.addEventListener('change', callback);
@@ -41,8 +44,10 @@ class DeliveryOption {
 	 * Hide a specific radio input item.
 	 */
 	hideItem (itemId) {
-		const labelNodes = this.$form.querySelectorAll('.ncf__delivery-option__item');
-		const item = Array.from(labelNodes).find(node => node.htmlFor === itemId);
+		const labelNodes = this.$form.querySelectorAll(
+			'.ncf__delivery-option__item'
+		);
+		const item = Array.from(labelNodes).find((node) => node.htmlFor === itemId);
 		if (item) {
 			item.classList.add('ncf__hidden');
 		}
@@ -52,8 +57,10 @@ class DeliveryOption {
 	 * Show a specific radio input item.
 	 */
 	showItem (itemId) {
-		const labelNodes = this.$form.querySelectorAll('.ncf__delivery-option__item');
-		const item = Array.from(labelNodes).find(node => node.htmlFor === itemId);
+		const labelNodes = this.$form.querySelectorAll(
+			'.ncf__delivery-option__item'
+		);
+		const item = Array.from(labelNodes).find((node) => node.htmlFor === itemId);
 		if (item) {
 			item.classList.remove('ncf__hidden');
 		}
@@ -64,11 +71,11 @@ class DeliveryOption {
 	 */
 	checkItem (itemId) {
 		const inputNodes = this.$form.elements['deliveryOption'];
-		const item = Array.from(inputNodes).find(node => node.id === itemId);
+		const item = Array.from(inputNodes).find((node) => node.id === itemId);
 		if (item) {
 			item.checked = true;
 		}
-	};
+	}
 }
 
 module.exports = DeliveryOption;

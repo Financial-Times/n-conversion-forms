@@ -6,8 +6,8 @@ export default {
 	component: LiteSubConfirmation,
 	argTypes: {
 		details: { control: 'array' },
-		offerType: { control: 'string'},
-		offerName: { control: 'string'},
+		offerType: { control: 'string' },
+		offerName: { control: 'string' },
 	},
 };
 
@@ -26,7 +26,7 @@ Basic.args = {
 		{
 			title: 'Payment method',
 			data: 'Credit / Debit Card',
-		}
+		},
 	],
 	offerName: 'Standard',
 	subscriptionAmount: '$5',

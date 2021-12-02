@@ -6,7 +6,6 @@ const fetchres = require('fetchres');
  * const deliveryStartDate = new DeliveryStartDate(document);
  */
 class DeliveryStartDate {
-
 	/**
 	 * Initalise the DeliveryStartDate utility
 	 * @param {Element} element Usually the window.document
@@ -35,7 +34,9 @@ class DeliveryStartDate {
 		// to use if datepicker isn't available
 		// from https://stackoverflow.com/questions/10193294/how-can-i-tell-if-a-browser-supports-input-type-date
 
-		this.$deliveryStartDateTitleSpan = element.querySelector('#start-date-picker-title-span');
+		this.$deliveryStartDateTitleSpan = element.querySelector(
+			'#start-date-picker-title-span'
+		);
 
 		const checkDateInput = () => {
 			let input = element.createElement('input');
@@ -60,7 +61,8 @@ class DeliveryStartDate {
 	 * @throws If there was an error calling the endpoint to check this.
 	 */
 	async handleDeliveryStartDateChange (url, getData) {
-		const isNewValue = (this.previousDeliveryDateValue !== this.$deliveryStartDate.value);
+		const isNewValue =
+			this.previousDeliveryDateValue !== this.$deliveryStartDate.value;
 		this.previousDeliveryDateValue = this.$deliveryStartDate.value;
 
 		if (this.$deliveryStartDate.value && isNewValue) {

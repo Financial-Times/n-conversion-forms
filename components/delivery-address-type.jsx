@@ -13,7 +13,6 @@ export function DeliveryAddressType ({
 	inputName = 'deliveryAddressType',
 	options = ['home', 'company', 'pobox'],
 }) {
-
 	return (
 		<div
 			id={fieldId}
@@ -25,11 +24,11 @@ export function DeliveryAddressType ({
 				<span className="o-forms-title__main">Address type</span>
 			</span>
 
-			<div className='o-forms-input o-forms-input--inline o-forms-input--radio-round'>
-				{options.map(option => {
-					const type = addressTypes.find(item => item.id === option);
+			<div className="o-forms-input o-forms-input--inline o-forms-input--radio-round">
+				{options.map((option) => {
+					const type = addressTypes.find((item) => item.id === option);
 
-					return (!type) ? null : (
+					return !type ? null : (
 						<label htmlFor={type.id} aria-label={type.label} key={type.id}>
 							<input
 								type="radio"
@@ -39,7 +38,10 @@ export function DeliveryAddressType ({
 								className="ncf__delivery-address-type__input"
 								defaultChecked={type.id === value}
 							/>
-							<span className="o-forms-input__label o-forms-input__address-type__label" aria-hidden="true">
+							<span
+								className="o-forms-input__label o-forms-input__address-type__label"
+								aria-hidden="true"
+							>
 								{type.label}
 							</span>
 						</label>
@@ -54,7 +56,5 @@ DeliveryAddressType.propTypes = {
 	fieldId: PropTypes.string,
 	inputName: PropTypes.string,
 	value: PropTypes.oneOf(['home', 'company', 'pobox']),
-	options: PropTypes.arrayOf(
-		PropTypes.oneOf(['home', 'company', 'pobox']),
-	),
+	options: PropTypes.arrayOf(PropTypes.oneOf(['home', 'company', 'pobox'])),
 };

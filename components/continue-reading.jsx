@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function ContinueReading({
+export function ContinueReading ({
 	link = null,
 	quote = '',
 	isEmbedded = false,

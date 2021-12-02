@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { demographics } from 'n-common-static-data';
 const defaultOptions = demographics.industries.industries;
 
-export function Industry({
+export function Industry ({
 	value,
 	isDisabled = false,
 	hasError = false,
@@ -23,7 +23,7 @@ export function Industry({
 
 	const fieldTitleClassName = classNames([
 		'o-forms-title',
-		{ 'o-forms-field--optional': !isRequired }
+		{ 'o-forms-field--optional': !isRequired },
 	]);
 
 	return (

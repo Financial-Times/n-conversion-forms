@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getCountries } from '../utils/countries';
 
-export function Country({
+export function Country ({
 	fieldId = 'countryField',
 	filterList = [],
 	hasError = false,
@@ -52,7 +52,8 @@ export function Country({
 	const fieldErrorClassNames = classNames([
 		'o-forms-input__error',
 		{
-			'additional-field-information__with-field-error': additionalFieldInformation,
+			'additional-field-information__with-field-error':
+				additionalFieldInformation,
 		},
 	]);
 

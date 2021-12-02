@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function Debug({ isTest = false, showHelpers = false, links = {} }) {
+export function Debug ({ isTest = false, showHelpers = false, links = {} }) {
 	// Strings are used rather than JSX as this component is injected into HTML
 	// along with onclick handlers, styles and javascript. JSX will escape and
 	// modify the HTML which we do not want. Once our applications are on JSX

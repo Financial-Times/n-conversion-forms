@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function JobTitle({
+export function JobTitle ({
 	value = '',
 	isDisabled = false,
 	hasError = false,
@@ -19,7 +19,7 @@ export function JobTitle({
 
 	const fieldTitleClassName = classNames([
 		'o-forms-title',
-		{ 'o-forms-field--optional': !isRequired }
+		{ 'o-forms-field--optional': !isRequired },
 	]);
 
 	return (

@@ -13,7 +13,7 @@ const PaypalCustomerCareMessage = () => {
 				<div className="o-message__container">
 					<div className="o-message__content">
 						<p className="o-message__content-main">
-							If you'd like to change your payment method to Paypal please{' '}
+							If you{'\''}d like to change your payment method to Paypal please{' '}
 							<a
 								className="o-message__actions__secondary"
 								href="https://help.ft.com"
@@ -29,7 +29,7 @@ const PaypalCustomerCareMessage = () => {
 	);
 };
 
-export function PaymentType({
+export function PaymentType ({
 	enableApplepay = false,
 	enableCreditcard = false,
 	enableDirectdebit = false,
@@ -250,8 +250,11 @@ export function PaymentType({
 
 				{isSingleTerm && (
 					<>
-						<label className='o-forms-input o-forms-input--checkbox o-forms-input--suffix ncf__payment-type-pay-faster-next-time-checkbox' htmlFor="payFasterNextTime">
-							<input {...inputCheckProps}/>
+						<label
+							className="o-forms-input o-forms-input--checkbox o-forms-input--suffix ncf__payment-type-pay-faster-next-time-checkbox"
+							htmlFor="payFasterNextTime"
+						>
+							<input {...inputCheckProps} />
 							<span className="o-forms-input__label">
 								Use these details to pay faster next time
 							</span>

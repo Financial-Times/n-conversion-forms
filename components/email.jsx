@@ -79,5 +79,5 @@ Email.propTypes = {
 	value: PropTypes.string,
 	isEducationalLicence: PropTypes.bool,
 	isB2cPartnershipLicence: PropTypes.bool,
-	showTitle: PropTypes.bool
+	showTitle: PropTypes.bool,
 };

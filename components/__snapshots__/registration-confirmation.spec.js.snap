@@ -23,7 +23,7 @@ exports[`RegistrationConfirmation renders with a custom email 1`] = `
       <a class="ncf__link ncf__link--external"
          href="https://www.ft.com/myaccount/personal-details"
          target="_blank"
-         rel="noopener"
+         rel="noopener noreferrer"
          data-trackable="yourAccount"
       >
         account settings
@@ -70,7 +70,7 @@ exports[`RegistrationConfirmation renders with default props 1`] = `
       <a class="ncf__link ncf__link--external"
          href="https://www.ft.com/myaccount/personal-details"
          target="_blank"
-         rel="noopener"
+         rel="noopener noreferrer"
          data-trackable="yourAccount"
       >
         account settings

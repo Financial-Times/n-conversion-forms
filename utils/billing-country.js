@@ -42,9 +42,8 @@ class BillingCountry {
 	 * @throws If nothing has been selected
 	 */
 	getSelected () {
-		const selected = this.$billingCountry.options[
-			this.$billingCountry.selectedIndex
-		];
+		const selected =
+			this.$billingCountry.options[this.$billingCountry.selectedIndex];
 		if (!selected) {
 			throw new Error('No country has been selected');
 		}

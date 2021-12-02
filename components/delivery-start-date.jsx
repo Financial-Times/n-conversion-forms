@@ -42,7 +42,9 @@ export function DeliveryStartDate ({
 			htmlFor={inputProps.id}
 		>
 			<span className="o-forms-title">
-				<span className="o-forms-title__main" id="start-date-picker-title-span">Delivery start date</span>
+				<span className="o-forms-title__main" id="start-date-picker-title-span">
+					Delivery start date
+				</span>
 				<span className="o-forms-title__prompt">
 					Earliest available delivery date: {date}
 				</span>

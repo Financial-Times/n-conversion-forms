@@ -14,7 +14,10 @@ describe('DeliveryStartDate', () => {
 	let csrfFieldElement;
 
 	beforeEach(() => {
-		document = { querySelector: sandbox.stub().returns(false), createElement: sandbox.stub().returns(false) };
+		document = {
+			querySelector: sandbox.stub().returns(false),
+			createElement: sandbox.stub().returns(false),
+		};
 
 		startDateContainer = {
 			classList: { add: sandbox.stub(), remove: sandbox.stub() },
@@ -107,7 +110,7 @@ describe('DeliveryStartDate', () => {
 				})
 			);
 			expect(fetchMock.lastOptions().headers).to.contain({
-				'CSRF-Token': '1234567890'
+				'CSRF-Token': '1234567890',
 			});
 		});
 
@@ -131,10 +134,11 @@ describe('DeliveryStartDate', () => {
 			fetchMock.mock('/api/path', 500);
 			startDateUtil = new DeliveryStartDate(document);
 
-			let startDateChangeResult = await startDateUtil.handleDeliveryStartDateChange(
-				'/api/path',
-				() => {}
-			);
+			let startDateChangeResult =
+				await startDateUtil.handleDeliveryStartDateChange(
+					'/api/path',
+					() => {}
+				);
 
 			expect(
 				startDateContainer.classList.add.calledWith('o-forms-input--invalid')

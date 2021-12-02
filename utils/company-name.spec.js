@@ -11,7 +11,11 @@ describe('Company Name - Util', () => {
 	describe('Make Optional/Required using the methods inherited from FormElements', () => {
 		it('should switch between required and optional the input by adding and removing the related classes', () => {
 			const props = {};
-			const component = mount(<Form ><CompanyName {...props} /></Form>);
+			const component = mount(
+				<Form>
+					<CompanyName {...props} />
+				</Form>
+			);
 			const dom = new JSDOM(`
 				<!DOCTYPE html>
 				<html>
@@ -24,10 +28,14 @@ describe('Company Name - Util', () => {
 			const companyNameUtilInstance = new CompanyNameUtil(document);
 			expect(companyNameUtilInstance).toBeDefined();
 			companyNameUtilInstance.makeOptional();
-			expect(document.querySelector('.o-forms-field--optional #companyNameField')).toBeDefined();
+			expect(
+				document.querySelector('.o-forms-field--optional #companyNameField')
+			).toBeDefined();
 			companyNameUtilInstance.makeRequired();
 			expect(document.querySelector('#companyNameField')).toBeDefined();
-			expect(document.querySelector('.o-forms-field--optional #companyNameField')).toBe(null);
+			expect(
+				document.querySelector('.o-forms-field--optional #companyNameField')
+			).toBe(null);
 		});
 	});
 });

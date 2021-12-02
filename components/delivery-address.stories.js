@@ -12,7 +12,7 @@ export default {
 		line3: { control: 'string' },
 		isDisabled: { control: 'boolean' },
 		isHidden: { control: 'boolean' },
-	}
+	},
 };
 
 export const Basic = (args) => <DeliveryAddress {...args} />;

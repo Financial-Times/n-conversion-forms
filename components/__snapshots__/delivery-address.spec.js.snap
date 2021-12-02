@@ -57,6 +57,8 @@ exports[`DeliveryAddress renders default props 1`] = `
       <span class="o-forms-title__main">
         Address line 3
       </span>
+      <span class="o-forms-title__prompt">
+      </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
       <input type="text"
@@ -130,6 +132,8 @@ exports[`DeliveryAddress renders with an error 1`] = `
       <span class="o-forms-title__main">
         Address line 3
       </span>
+      <span class="o-forms-title__prompt">
+      </span>
     </span>
     <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
       <input type="text"
@@ -183,6 +187,9 @@ exports[`DeliveryAddress renders with country different than default 1`] = `
       <span class="o-forms-title__main">
         Apt/Floor/Suite
       </span>
+      <span class="o-forms-title__prompt">
+        Max. 6 characters. Please enter “Apartment 2C” as “Apt 2C”, “Floor 10 as FL 10”
+      </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
       <input type="text"
@@ -190,7 +197,7 @@ exports[`DeliveryAddress renders with country different than default 1`] = `
              name="deliveryAddressLine3"
              data-trackable="field-deliveryAddressLine3"
              autocomplete="address-line3"
-             placeholder="e.g. Apt. 1"
+             placeholder="e.g Apt 2C / FL 10 / STE 5"
              maxlength="50"
              value
       >
@@ -276,6 +283,8 @@ exports[`DeliveryAddress renders with custom line 1 value 1`] = `
       <span class="o-forms-title__main">
         Address line 3
       </span>
+      <span class="o-forms-title__prompt">
+      </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
       <input type="text"
@@ -349,6 +358,8 @@ exports[`DeliveryAddress renders with custom line 2 value 1`] = `
       <span class="o-forms-title__main">
         Address line 3
       </span>
+      <span class="o-forms-title__prompt">
+      </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
       <input type="text"
@@ -421,6 +432,8 @@ exports[`DeliveryAddress renders with custom line 3 value 1`] = `
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
+      </span>
+      <span class="o-forms-title__prompt">
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
@@ -497,6 +510,8 @@ exports[`DeliveryAddress renders with disabled input elements 1`] = `
       <span class="o-forms-title__main">
         Address line 3
       </span>
+      <span class="o-forms-title__prompt">
+      </span>
     </span>
     <span class="o-forms-input o-forms-input--text">
       <input type="text"
@@ -570,6 +585,8 @@ exports[`DeliveryAddress renders with hidden input elements 1`] = `
     <span class="o-forms-title">
       <span class="o-forms-title__main">
         Address line 3
+      </span>
+      <span class="o-forms-title__prompt">
       </span>
     </span>
     <span class="o-forms-input o-forms-input--text">

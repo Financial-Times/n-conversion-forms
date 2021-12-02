@@ -155,7 +155,12 @@ class Zuora {
 		const agreementSupportedBrands = 'Visa,Mastercard';
 		const mitConsentAgreementRef = 'createStoredCredentialProfile';
 
-		return this.Z.setAgreement(mitConsentAgreementSrc, mitProfileType, agreementSupportedBrands, mitConsentAgreementRef);
+		return this.Z.setAgreement(
+			mitConsentAgreementSrc,
+			mitProfileType,
+			agreementSupportedBrands,
+			mitConsentAgreementRef
+		);
 	}
 
 	/**

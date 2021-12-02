@@ -20,13 +20,13 @@ export function DeliveryPOBox ({
 	const labelClassNames = classNames([
 		'o-forms-field',
 		'ncf__validation-error',
-		{ ncf__hidden: isHidden }
+		{ ncf__hidden: isHidden },
 	]);
 
 	const inputWrapperClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
-		{ 'o-forms-input--invalid': hasError }
+		{ 'o-forms-input--invalid': hasError },
 	]);
 
 	return (
@@ -38,9 +38,7 @@ export function DeliveryPOBox ({
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">P.O. Box</span>
-				<span className="o-forms-title__prompt">
-					{message[country]}
-				</span>
+				<span className="o-forms-title__prompt">{message[country]}</span>
 			</span>
 			<span className={inputWrapperClassName}>
 				<input

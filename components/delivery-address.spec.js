@@ -55,7 +55,9 @@ describe('DeliveryAddress', () => {
 
 		const component = mount(DeliveryAddress(props));
 
-		expect(component.find('#deliveryAddressFields').hasClass('ncf__hidden')).toBe(true);
+		expect(
+			component.find('#deliveryAddressFields').hasClass('ncf__hidden')
+		).toBe(true);
 	});
 
 	it('renders with country different than default', () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function Phone({
+export function Phone ({
 	hasError = false,
 	isB2b = false,
 	isDisabled = false,
@@ -26,7 +26,7 @@ export function Phone({
 
 	const fieldTitleClassName = classNames([
 		'o-forms-title',
-		{ 'o-forms-field--optional': !isRequired }
+		{ 'o-forms-field--optional': !isRequired },
 	]);
 
 	return (

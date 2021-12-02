@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function Password({
+export function Password ({
 	unknownUser = false,
 	hasError = false,
 	pattern = null,

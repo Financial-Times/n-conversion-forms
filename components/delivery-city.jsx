@@ -17,7 +17,7 @@ export function DeliveryCity ({
 	const inputPlaceholder = {
 		GBR: 'e.g. Bath',
 		USA: 'e.g. Los Angeles',
-		CAN: 'e.g. Montreal'
+		CAN: 'e.g. Montreal',
 	};
 
 	return (
@@ -37,7 +37,7 @@ export function DeliveryCity ({
 					name="deliveryCity"
 					data-trackable="field-deliveryCity"
 					autoComplete="address-level2"
-					placeholder= {inputPlaceholder[country]}
+					placeholder={inputPlaceholder[country]}
 					maxLength={40}
 					aria-required="true"
 					required

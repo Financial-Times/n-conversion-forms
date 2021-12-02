@@ -10,7 +10,7 @@ build:
 run:
 	npm run storybook
 
-test: verify
+test:
 	make jest
 	make unit-test
 

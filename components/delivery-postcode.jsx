@@ -7,6 +7,16 @@ const postcodeLabel = {
 	CAN: 'Postal Code',
 };
 
+const promptLabel = {
+	USA: 'Please enter your 5 digit Zip Code',
+	CAN: 'Please enter your 6 digit postal code',
+};
+
+const placeholderLabel = {
+	USA: 'e.g. 60411',
+	CAN: 'e.g. M4W 2C6',
+};
+
 export function DeliveryPostcode ({
 	value = '',
 	country = '',
@@ -18,6 +28,10 @@ export function DeliveryPostcode ({
 	changePostcodeUrl = '',
 }) {
 	const postcodeReference = postcodeLabel[country.toUpperCase()] || 'Postcode';
+	const promptReference = promptLabel[country.toUpperCase()];
+	const placeholderReference =
+		placeholderLabel[country.toUpperCase()] ||
+		`Enter your ${postcodeReference}`;
 
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
@@ -33,7 +47,8 @@ export function DeliveryPostcode ({
 	const fieldErrorClassNames = classNames([
 		'o-forms-input__error',
 		{
-			'additional-field-information__with-field-error': additionalFieldInformation,
+			'additional-field-information__with-field-error':
+				additionalFieldInformation,
 		},
 	]);
 
@@ -48,6 +63,7 @@ export function DeliveryPostcode ({
 				<span className="o-forms-title__main">
 					<span data-reference="postcode">{postcodeReference}</span>
 				</span>
+				<span className="o-forms-title__prompt">{promptReference}</span>
 			</span>
 
 			<span className={inputWrapperClassNames}>
@@ -56,7 +72,7 @@ export function DeliveryPostcode ({
 					id="deliveryPostcode"
 					name="deliveryPostcode"
 					defaultValue={`${value}`}
-					placeholder={`Enter your ${postcodeReference}`}
+					placeholder={placeholderReference}
 					autoComplete="postal-code"
 					data-trackable="delivery-postcode"
 					aria-required="true"
@@ -76,7 +92,7 @@ export function DeliveryPostcode ({
 				{changePostcodeUrl ? (
 					<a
 						href={changePostcodeUrl}
-						style={{fontSize: '12px'}}
+						style={{ fontSize: '12px' }}
 						className="change-postcode-url"
 						data-trackable="change-progress"
 					>

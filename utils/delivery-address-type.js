@@ -42,7 +42,10 @@ class DeliveryAdressType {
 	 * @param {Function} callback Called with event when changed
 	 */
 	onChange (callback) {
-		return typeof callback === 'function' && this.$deliveryAddressType.addEventListener('change', callback);
+		return (
+			typeof callback === 'function' &&
+			this.$deliveryAddressType.addEventListener('change', callback)
+		);
 	}
 }
 
