@@ -5,7 +5,7 @@ import classNames from 'classnames';
 const DEFAULT_AGE_RESTRICTION = '16';
 
 export function AcceptTerms ({
-  isAuthFirstAccount = false,
+	isAuthFirstAccount = false,
 	isAuthFirstPayment = false,
 	hasError = false,
 	isSignup = false,
