@@ -130,7 +130,7 @@ export function AcceptTerms ({
 	) : (
 		<li>
 			<span className="terms-default">
-					I confirm I am {ageRestriction} years or older and have read and agree
+				I confirm I am {ageRestriction} years or older and have read and agree
 				to the{' '}
 				<a
 					className="ncf__link--external"
