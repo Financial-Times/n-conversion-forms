@@ -16,6 +16,18 @@ describe('AcceptTerms', () => {
 		expect(AcceptTerms).toRenderCorrectly(props);
 	});
 
+	it('renders appropriately if a isAuthFirstAccount', () => {
+		const props = { isAuthFirstAccount: true };
+
+		expect(AcceptTerms).toRenderCorrectly(props);
+	});
+
+	it('renders appropriately if a isAuthFirstPayment', () => {
+		const props = { isAuthFirstPayment: true };
+
+		expect(AcceptTerms).toRenderCorrectly(props);
+	});
+
 	it('renders appropriately if a signup', () => {
 		const props = { isSignup: true };
 

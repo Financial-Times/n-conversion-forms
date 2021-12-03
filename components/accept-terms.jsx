@@ -5,6 +5,8 @@ import classNames from 'classnames';
 const DEFAULT_AGE_RESTRICTION = '16';
 
 export function AcceptTerms ({
+	isAuthFirstAccount = false,
+	isAuthFirstPayment = false,
 	hasError = false,
 	isSignup = false,
 	isRegister = false,
@@ -45,6 +47,54 @@ export function AcceptTerms ({
 		required: true,
 		...(isChecked && { defaultChecked: true }),
 	};
+
+	const authFirstStepTerms = (
+		<>
+			<ul className="o-typography-list ncf__accept-terms-list">
+				<li>
+					<span className="terms-auth-first-step">
+						For more information about how we use your data, please refer to our <a
+							className="ncf__link--external"
+							href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+							target='_blank'
+							rel="noopener noreferrer"
+							data-trackable="terms-and-conditions"
+						>
+							privacy
+						</a> and&nbsp;
+						<a
+							className="ncf__link--external"
+							href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+							target='_blank'
+							rel="noopener noreferrer"
+							data-trackable="terms-and-conditions"
+						>
+							cookie
+						</a> policies.
+					</span>
+				</li>
+			</ul>
+			<label className={labelClassName} htmlFor="termsAcceptance">
+				<input {...inputProps} />
+				<span className="o-forms-input__label terms-auth-first-step">
+					I confirm that I am {ageRestriction} years or older and agree to the full {' '}
+					<a
+						className="ncf__link--external"
+						href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+						target={isEmbedded ? '_top' : '_blank'}
+						rel="noopener noreferrer"
+						data-trackable="terms-and-conditions"
+					>
+						Terms &amp; Conditions
+					</a>
+					.
+				</span>
+				<p className="o-forms-input__error">
+					Please accept our terms &amp; conditions
+				</p>
+			</label>
+		</>
+	);
 
 	const registerTerms = (
 		<label className={labelClassName} htmlFor="termsAcceptance">
@@ -154,9 +204,12 @@ export function AcceptTerms ({
 			{transitionType === 'immediate' ? (
 				<li>
 					<span className="terms-transition terms-transition--immediate">
-						By placing my order, my subscription will start immediately.
-						Cancellation notice would take effect at the end of the subscription
-						period and previously paid amounts are non-refundable.
+						By placing my order, my subscription will start immediately and I am
+						aware and agree that I will therefore lose my statutory right to cancel my
+						subscription within 14 days of acceptance of my order. Any notice of
+						cancellation that I provide will only take effect at the end of my subscription
+						period and previously paid amounts are non-refundable, except in the event that
+						there is a fault in the provision of the services.
 					</span>
 				</li>
 			) : (
@@ -192,6 +245,7 @@ export function AcceptTerms ({
 	const printSignupTermText = isTrial
 		? 'Credits for delivery suspension or delivery failure are not available during introductory offer periods.'
 		: 'Credit for delivery suspensions is only available for hand-delivered subscriptions and is limited to a maximum of 24 issues per yearly subscription terms (4 issues per yearly FT Weekend subscription term).';
+
 	const signupTerms = isSignup && (
 		<>
 			{isPrintProduct ? (
@@ -234,10 +288,12 @@ export function AcceptTerms ({
 					</li>
 					<li>
 						<span className="terms-signup">
-							By placing my order, my subscription will start immediately.
-							Cancellation notice would take effect at the end of the
-							subscription period and previously paid amounts are
-							non-refundable.
+							By placing my order, my subscription will start immediately and I am
+							aware and agree that I will therefore lose my statutory right to cancel
+							my subscription within 14 days of acceptance of my order. Any notice of
+							cancellation that I provide will only take effect at the end of my
+							subscription period and previously paid amounts are non-refundable,
+							except in the event that there is a fault in the provision of the services.
 						</span>
 					</li>
 					<li>
@@ -294,10 +350,12 @@ export function AcceptTerms ({
 				b2cPartnershipTerms
 			) : isRegister ? (
 				registerTerms
+			) : isAuthFirstAccount ? (
+				authFirstStepTerms
 			) : (
 				<>
 					<ul className="o-typography-list ncf__accept-terms-list">
-						{b2bTerms}
+						{!isAuthFirstPayment && b2bTerms}
 						{corpSignupTerms}
 						{transitionTerms}
 						{signupTerms}

@@ -1,5 +1,93 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`AcceptTerms renders appropriately if a isAuthFirstAccount 1`] = `
+<div id="acceptTermsField"
+     class="o-forms-field o-layout-typography ncf__validation-error"
+     data-validate="required,checked"
+>
+  <ul class="o-typography-list ncf__accept-terms-list">
+    <li>
+      <span class="terms-auth-first-step">
+        For more information about how we use your data, please refer to our
+        <a class="ncf__link--external"
+           href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-trackable="terms-and-conditions"
+        >
+          privacy
+        </a>
+        and 
+        <a class="ncf__link--external"
+           href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-trackable="terms-and-conditions"
+        >
+          cookie
+        </a>
+        policies.
+      </span>
+    </li>
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label terms-auth-first-step">
+      I confirm that I am 16 years or older and agree to the full
+      <a class="ncf__link--external"
+         href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+         target="_blank"
+         rel="noopener noreferrer"
+         data-trackable="terms-and-conditions"
+      >
+        Terms &amp; Conditions
+      </a>
+      .
+    </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
+</div>
+`;
+
+exports[`AcceptTerms renders appropriately if a isAuthFirstPayment 1`] = `
+<div id="acceptTermsField"
+     class="o-forms-field o-layout-typography ncf__validation-error"
+     data-validate="required,checked"
+>
+  <ul class="o-typography-list ncf__accept-terms-list">
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the above terms &amp; conditions.
+    </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
+</div>
+`;
+
 exports[`AcceptTerms renders appropriately if a registration 1`] = `
 <div id="acceptTermsField"
      class="o-forms-field o-layout-typography ncf__validation-error"
@@ -72,7 +160,7 @@ exports[`AcceptTerms renders appropriately if a signup 1`] = `
     </li>
     <li>
       <span class="terms-signup">
-        By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
+        By placing my order, my subscription will start immediately and I am aware and agree that I will therefore lose my statutory right to cancel my subscription within 14 days of acceptance of my order. Any notice of cancellation that I provide will only take effect at the end of my subscription period and previously paid amounts are non-refundable, except in the event that there is a fault in the provision of the services.
       </span>
     </li>
     <li>
@@ -146,7 +234,7 @@ exports[`AcceptTerms renders appropriately if a signup and has special terms 1`]
     </li>
     <li>
       <span class="terms-signup">
-        By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
+        By placing my order, my subscription will start immediately and I am aware and agree that I will therefore lose my statutory right to cancel my subscription within 14 days of acceptance of my order. Any notice of cancellation that I provide will only take effect at the end of my subscription period and previously paid amounts are non-refundable, except in the event that there is a fault in the provision of the services.
       </span>
     </li>
     <li>
@@ -408,7 +496,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
     </li>
     <li>
       <span class="terms-signup">
-        By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
+        By placing my order, my subscription will start immediately and I am aware and agree that I will therefore lose my statutory right to cancel my subscription within 14 days of acceptance of my order. Any notice of cancellation that I provide will only take effect at the end of my subscription period and previously paid amounts are non-refundable, except in the event that there is a fault in the provision of the services.
       </span>
     </li>
     <li>
@@ -482,7 +570,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
     </li>
     <li>
       <span class="terms-signup">
-        By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
+        By placing my order, my subscription will start immediately and I am aware and agree that I will therefore lose my statutory right to cancel my subscription within 14 days of acceptance of my order. Any notice of cancellation that I provide will only take effect at the end of my subscription period and previously paid amounts are non-refundable, except in the event that there is a fault in the provision of the services.
       </span>
     </li>
     <li>
@@ -556,7 +644,7 @@ exports[`AcceptTerms renders appropriately if a signup not for the print product
     </li>
     <li>
       <span class="terms-signup">
-        By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
+        By placing my order, my subscription will start immediately and I am aware and agree that I will therefore lose my statutory right to cancel my subscription within 14 days of acceptance of my order. Any notice of cancellation that I provide will only take effect at the end of my subscription period and previously paid amounts are non-refundable, except in the event that there is a fault in the provision of the services.
       </span>
     </li>
     <li>
@@ -1155,7 +1243,7 @@ exports[`AcceptTerms renders appropriately if is transition with transition type
     </li>
     <li>
       <span class="terms-transition terms-transition--immediate">
-        By placing my order, my subscription will start immediately. Cancellation notice would take effect at the end of the subscription period and previously paid amounts are non-refundable.
+        By placing my order, my subscription will start immediately and I am aware and agree that I will therefore lose my statutory right to cancel my subscription within 14 days of acceptance of my order. Any notice of cancellation that I provide will only take effect at the end of my subscription period and previously paid amounts are non-refundable, except in the event that there is a fault in the provision of the services.
       </span>
     </li>
     <li>
