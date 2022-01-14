@@ -22,8 +22,8 @@ export function DeliveryAddress ({
 
 	const addressLine3Title = {
 		GBR: 'Address line 3',
-		USA: 'Apt/Floor/Suite',
-		CAN: 'Apt/Floor/Suite',
+		USA: 'APT/FL/STE',
+		CAN: 'APT/FL/STE',
 	};
 
 	const addressLine3Prompt = {
@@ -32,8 +32,8 @@ export function DeliveryAddress ({
 	};
 
 	const addressLine3Placeholder = {
-		USA: 'e.g Apt 2C / FL 10 / STE 5',
-		CAN: 'e.g Apt 2C / FL 10 / STE 5',
+		USA: 'e.g Apt 2C / FL 10 / STE 50',
+		CAN: 'e.g Apt 2C / FL 10 / STE 50',
 	};
 
 	const addressLine1Placeholder = {
