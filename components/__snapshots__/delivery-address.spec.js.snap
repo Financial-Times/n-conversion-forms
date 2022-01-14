@@ -185,7 +185,7 @@ exports[`DeliveryAddress renders with country different than default 1`] = `
   >
     <span class="o-forms-title">
       <span class="o-forms-title__main">
-        Apt/Floor/Suite
+        APT/FL/STE
       </span>
       <span class="o-forms-title__prompt">
         Max. 6 characters. Please enter “Apartment 2C” as “Apt 2C”, “Floor 10 as FL 10”
@@ -197,7 +197,7 @@ exports[`DeliveryAddress renders with country different than default 1`] = `
              name="deliveryAddressLine3"
              data-trackable="field-deliveryAddressLine3"
              autocomplete="address-line3"
-             placeholder="e.g Apt 2C / FL 10 / STE 5"
+             placeholder="e.g Apt 2C / FL 10 / STE 50"
              maxlength="50"
              value
       >
