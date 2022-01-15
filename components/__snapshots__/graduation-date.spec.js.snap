@@ -71,9 +71,6 @@ exports[`GraduationDate renders with default props 1`] = `
                 name="graduationDateYear"
                 aria-required="false"
         >
-          <option value="2017">
-            2017
-          </option>
           <option value="2018">
             2018
           </option>
@@ -97,6 +94,9 @@ exports[`GraduationDate renders with default props 1`] = `
           </option>
           <option value="2025">
             2025
+          </option>
+          <option value="2026">
+            2026
           </option>
         </select>
       </span>
