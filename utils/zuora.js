@@ -43,7 +43,7 @@ class Zuora {
 	 * @param {Object} prePopulatedFields Parameters with field ids and values to be pre-populated on the form
 	 * @param {Function} renderCallback A function that gets called after the form is rendered.
 	 */
-	render ({ params, prePopulatedFields = {}, renderCallback = () => {} }) {
+	render ({ params, prePopulatedFields = {}, renderCallback = () => {}, captchaCallback = () => {} }) {
 		// Using an undocumented Zuora method to attach a render callback for the iframe.
 		// This method is called once when the iframe is rendered but gets removed for subsequent renderings.
 		// In the Zuora code https://static.zuora.com/Resources/libs/hosted/1.3.1/zuora.js
@@ -71,6 +71,16 @@ class Zuora {
 				this.Z.sendErrorMessageToHpm(key, errorMessage);
 			}
 		);
+
+		// if we have RECAPTCHA enabled for a given app id this allows the application
+		// to hide/show the loader so it is not in the way of completing the challenge
+		// docs: https://knowledgecenter.zuora.com/Billing/Billing_and_Payments/LA_Hosted_Payment_Pages/B_Payment_Pages_2.0/Configure_Advanced_Security_Checks_for_Payment_Pages_2.0
+		/**
+		 * Z.setEventHandler - Zuora 3rd party method
+		 * @param {string}    event name
+		 * @param {Function}  anonymous - expects a single argument - event
+		 */
+		this.Z.setEventHandler('onCaptchaStateChange', captchaCallback);
 	}
 
 	/**
