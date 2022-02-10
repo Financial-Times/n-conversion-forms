@@ -11,6 +11,7 @@ export default {
 		isDisabled: { control: 'boolean' },
 		isRequired: { control: 'boolean' },
 		isHidden: { control: 'boolean' },
+		maxlength: { control: 'number'}
 	},
 };
 
