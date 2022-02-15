@@ -15,7 +15,7 @@ export function JobFunction ({
 	fieldLabel = 'What is your job function?',
 	isRequired = true,
 }) {
-	const inpiutWrapperClassName = classNames([
+	const inputWrapperClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--select',
 		{ 'o-forms-input--invalid': hasError },
@@ -35,7 +35,7 @@ export function JobFunction ({
 			<span className={fieldTitleClassName}>
 				<span className="o-forms-title__main">{fieldLabel}</span>
 			</span>
-			<span className={inpiutWrapperClassName}>
+			<span className={inputWrapperClassName}>
 				<select
 					id={selectId}
 					name={selectName}
