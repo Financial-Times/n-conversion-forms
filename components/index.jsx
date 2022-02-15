@@ -28,6 +28,7 @@ export { Fieldset } from './fieldset';
 export { FirstName } from './first-name';
 export { Form } from './form';
 export { Industry } from './industry';
+export { JobFunction } from './job-function';
 export { JobTitle } from './job-title';
 export { PersonalTitle } from './personal-title';
 export { LastName } from './last-name';
