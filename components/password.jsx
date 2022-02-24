@@ -12,7 +12,7 @@ export function Password ({
 	inputName,
 	label = 'Password',
 	placeholder = 'Enter a password',
-	description = 'Use 8 or more characters with a mix of letters, numbers & symbols',
+	description = 'Use 8 or more characters. You can use letters, numbers or symbols',
 	showDescription = true,
 	hasShowPassword = true,
 }) {
