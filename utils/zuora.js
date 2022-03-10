@@ -162,7 +162,7 @@ class Zuora {
 	setAgreement () {
 		const mitConsentAgreementSrc = 'External';
 		const mitProfileType = 'Recurring';
-		const agreementSupportedBrands = 'Visa,Mastercard';
+		const agreementSupportedBrands = 'Visa,Mastercard,AmericanExpress';
 		const mitConsentAgreementRef = 'createStoredCredentialProfile';
 
 		return this.Z.setAgreement(
