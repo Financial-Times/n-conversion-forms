@@ -26,19 +26,6 @@
   "homepage": "https://github.com/Financial-Times/n-conversion-forms#readme",
   "dependencies": {
     "@babel/runtime": "^7.11.2",
-    "@financial-times/o-buttons": "^7.5.0",
-    "@financial-times/o-colors": "^6.4.2",
-    "@financial-times/o-expander": "^6.2.2",
-    "@financial-times/o-forms": "^9.2.4",
-    "@financial-times/o-grid": "^6.1.5",
-    "@financial-times/o-header-services": "^5.2.2",
-    "@financial-times/o-icons": "^7.2.1",
-    "@financial-times/o-layout": "^5.2.2",
-    "@financial-times/o-loading": "^5.2.1",
-    "@financial-times/o-message": "^5.2.1",
-    "@financial-times/o-normalise": "^3.2.2",
-    "@financial-times/o-stepped-progress": "^4.0.2",
-    "@financial-times/o-typography": "^7.3.1",
     "classnames": "2.3.1",
     "fetchres": "1.7.2",
     "lodash.get": "4.4.2",
@@ -97,5 +84,20 @@
       "pre-commit": "node_modules/.bin/secret-squirrel && npm run lint",
       "pre-push": "make test"
     }
+  },
+  "peerDependencies": {
+    "@financial-times/o-buttons": "^7.5.0",
+    "@financial-times/o-colors": "^6.4.2",
+    "@financial-times/o-expander": "^6.2.2",
+    "@financial-times/o-forms": "^9.2.4",
+    "@financial-times/o-grid": "^6.1.5",
+    "@financial-times/o-header-services": "^5.2.2",
+    "@financial-times/o-icons": "^7.2.1",
+    "@financial-times/o-layout": "^5.2.2",
+    "@financial-times/o-loading": "^5.2.1",
+    "@financial-times/o-message": "^5.2.1",
+    "@financial-times/o-normalise": "^3.2.2",
+    "@financial-times/o-stepped-progress": "^4.0.2",
+    "@financial-times/o-typography": "^7.3.1"
   }
 }
