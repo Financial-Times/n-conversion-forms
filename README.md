@@ -23,7 +23,6 @@ For installing dependencies, running the build process and the documentation app
 
 - [Node](https://nodejs.org/en/)
 - [NPM](https://www.npmjs.com/)
-- [Bower](https://bower.io/)
 
 ## Usage
 
