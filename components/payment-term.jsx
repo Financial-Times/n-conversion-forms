@@ -168,9 +168,7 @@ export function PaymentTerm ({
 				displayName = `Trial: ${termName} - `;
 			}
 			const termPeriod = nameMap[option.name] ? title : option.title;
-			displayName = `${displayName}${termPeriod} `;
-
-			return displayName;
+			return `${displayName}${termPeriod} `;
 		};
 
 		return (
