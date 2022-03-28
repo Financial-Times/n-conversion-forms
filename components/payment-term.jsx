@@ -161,6 +161,18 @@ export function PaymentTerm ({
 			);
 		};
 
+		const getDisplayName = () => {
+			let displayName = '';
+			if (showTrialCopyInTitle) {
+				const termName = option.displayName ? option.displayName : 'Premium Digital';
+				displayName = `Trial: ${termName} - `;
+			}
+			const termPeriod = nameMap[option.name] ? title : option.title;
+			displayName = `${displayName}${termPeriod} `;
+
+			return displayName;
+		};
+
 		return (
 			<div key={option.value} className={className}>
 				<input {...props} />
@@ -176,8 +188,7 @@ export function PaymentTerm ({
 							{ 'ncf__payment-term__title--large-price': largePrice },
 						])}
 					>
-						{showTrialCopyInTitle ? 'Trial: Premium Digital - ' : ''}
-						{nameMap[option.name] ? title : option.title}{' '}
+						{getDisplayName()}
 						{option.subTitle && (
 							<span className="ncf__regular ncf__payment-term__sub-title">
 								{option.subTitle}

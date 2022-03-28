@@ -153,6 +153,48 @@ describe('PaymentTerm', () => {
 		});
 	});
 
+	describe('getDisplayName', () => {
+		const baseOptions = {
+			name: 'monthly',
+			value: 'monthly',
+			price: '£20.00',
+			monthlyPrice: '£1.67',
+		};
+		describe('non-trial terms', () => {
+			const options = [{
+				...baseOptions,
+				isTrial: false,
+			}];
+			it('renders with time period only if trial.option == false', () => {
+				const wrapper = shallow(<PaymentTerm options={options} />);
+				expect(wrapper.find('.ncf__payment-term__label').text()).toMatch(/^Monthly .*$/);
+			});
+		});
+		describe('getDisplayName', () => {
+			const trialOptions = {
+				...baseOptions,
+				isTrial: true,
+			};
+			it('defaults to `Premium digital`', () => {
+				const options = [trialOptions];
+				const wrapper = shallow(<PaymentTerm options={options} />);
+				expect(wrapper.find('.ncf__payment-term__label').text()).toMatch(
+					/^Trial: Premium Digital - Monthly .*$/
+				);
+			});
+			it('renders using displayName if available', () => {
+				const options = [{
+					...trialOptions,
+					displayName: 'someDisplayName',
+				}];
+				const wrapper = shallow(<PaymentTerm options={options} />);
+				expect(wrapper.find('.ncf__payment-term__label').text()).toMatch(
+					/^Trial: someDisplayName - Monthly .*/
+				);
+			});
+		});
+	});
+
 	describe('[data-base-amount]', () => {
 		it('renders option.amount as data-base-amount if isTrial is false', () => {
 			const options = [
