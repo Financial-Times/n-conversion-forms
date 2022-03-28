@@ -16,7 +16,7 @@ exports[`PaymentTerm When using custom options renders when not using an option 
              class="o-forms-input__label ncf__payment-term__label"
       >
         <span class="ncf__payment-term__discount">
-          Best offer - 33% off RRP
+          Best offer
         </span>
         <span class="ncf__payment-term__title ncf__payment-term__title--large-price">
           Annual
