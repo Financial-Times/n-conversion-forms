@@ -12,6 +12,7 @@ export function PaymentTerm ({
 	showLegal = true,
 	largePrice = false,
 	optionsInARow = false,
+	isSingleTerm = false,
 }) {
 	const nameMap = {
 		annual: {
@@ -113,14 +114,24 @@ export function PaymentTerm ({
 			? `${displayName} - ${defaultTitle}`
 			: defaultTitle;
 		const createDiscount = () => {
-			return (
-				option.discount && (
-					<span className="ncf__payment-term__discount">
-						{option.bestOffer ? 'Best offer -' : 'Save'} {option.discount} off
-						RRP
-					</span>
-				)
-			);
+			if(!isSingleTerm) {
+				return (
+					option.discount && (
+						<span className="ncf__payment-term__discount">
+							{option.bestOffer ? 'Best offer -' : 'Save'} {option.discount} off
+							RRP
+						</span>
+					)
+				);
+			} else {
+				return (
+					option.bestOffer && (
+						<span className="ncf__payment-term__discount">
+							Best offer
+						</span>
+					)
+				);
+			}
 		};
 		const createDescription = () => {
 			return option.isTrial ? (
@@ -281,4 +292,5 @@ PaymentTerm.propTypes = {
 	showLegal: PropTypes.bool,
 	largePrice: PropTypes.bool,
 	optionsInARow: PropTypes.bool,
+	isSingleTerm: PropTypes.bool,
 };
