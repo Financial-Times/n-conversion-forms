@@ -1,5 +1,6 @@
 /.idea/
 /.sass-cache/
+/bower_components/
 /node_modules/
 /demos/
 /test/
@@ -18,6 +19,7 @@ main.scss
 .scss-lint.yml
 .pa11yci.js
 .stylelintrc
+bower.json
 circle.yml
 ft.yml
 Makefile

@@ -1,5 +1,5 @@
 /* stylelint-disable selector-no-qualifying-type */
-@import '@financial-times/o-loading/main';
+@import 'o-loading/main';
 
 @mixin ncfLoader() {
 	&__loader {
