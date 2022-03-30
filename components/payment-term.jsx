@@ -116,8 +116,7 @@ export function PaymentTerm ({
 			return (
 				option.discount && (
 					<span className="ncf__payment-term__discount">
-						{option.bestOffer ? 'Best offer -' : 'Save'} {option.discount} off
-						RRP
+						{option.bestOffer ? 'Best offer' : `Save ${option.discount} off RRP`}
 					</span>
 				)
 			);
