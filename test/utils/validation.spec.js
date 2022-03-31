@@ -43,8 +43,8 @@ let InputStub = sinon.stub().returns({
 });
 
 const Validation = proxyquire('../../utils/validation', {
-	'o-forms': OFormsStub,
-	'o-forms/src/js/input': {
+	'@financial-times/o-forms': OFormsStub,
+	'@financial-times/o-forms/src/js/input': {
 		default: InputStub,
 	},
 });
