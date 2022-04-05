@@ -29,7 +29,7 @@ class PaymentType {
 		);
 		if (this.$directDebitGuarantee) {
 			// HACK require here so server side code use the static methods
-			const expander = require('o-expander').default;
+			const expander = require('@financial-times/o-expander').default;
 			this.expander = expander.init(this.$directDebitGuarantee);
 		}
 

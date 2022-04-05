@@ -5,7 +5,7 @@ const proxyquire = require('proxyquire').noCallThru();
 const expanderInstance = 'expanderInstance';
 const initStub = sandbox.stub().returns(expanderInstance);
 const PaymentType = proxyquire('../../utils/payment-type', {
-	'o-expander': {
+	'@financial-times/o-expander': {
 		default: {
 			init: initStub,
 		},

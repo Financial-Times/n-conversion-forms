@@ -1,5 +1,5 @@
-const OForms = require('o-forms').default;
-const Input = require('o-forms/src/js/input').default;
+const OForms = require('@financial-times/o-forms').default;
+const Input = require('@financial-times/o-forms/src/js/input').default;
 
 class Validation {
 	/**
