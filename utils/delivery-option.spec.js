@@ -5,19 +5,16 @@ import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
-const { JSDOM } = require('jsdom');
-
 describe('Delivery Option - Util', () => {
 	describe('Get an instance of the util class', () => {
 		it('should throw an error since the component is not found', () => {
-			const dom = new JSDOM(`
+			document.body.innerHTML = `
 				<!DOCTYPE html>
 				<html>
 				<head></head>
 				<body></body>
 				</html>
-			`);
-			const document = dom.window.document;
+			`;
 
 			expect(() => {
 				new DeliveryOptionUtil(document);
@@ -38,14 +35,13 @@ describe('Delivery Option - Util', () => {
 					<DeliveryOption {...props} />
 				</Form>
 			);
-			const dom = new JSDOM(`
+			document.body.innerHTML = `
 				<!DOCTYPE html>
 				<html>
 				<head></head>
 				<body>${component.html()}</body>
 				</html>
-			`);
-			const document = dom.window.document;
+			`;
 
 			const deliveryoptionUtilInstance = new DeliveryOptionUtil(document);
 			expect(deliveryoptionUtilInstance).toBeDefined();
