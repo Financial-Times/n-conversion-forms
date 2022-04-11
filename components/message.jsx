@@ -87,7 +87,7 @@ const actionType = PropTypes.shape({
 	link: PropTypes.string.isRequired,
 	isSecondary: PropTypes.bool,
 	text: PropTypes.string,
-	target: '_self',
+	target: PropTypes.oneOf(['_self']),
 });
 
 Message.propTypes = {
