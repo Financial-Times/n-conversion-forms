@@ -22,6 +22,7 @@ export function AcceptTerms ({
 	isPrintProduct = false,
 	specialTerms = null,
 	isSingleTerm = false,
+	isNewDigitalBuyFlowConsent = false,
 }) {
 	const divProps = {
 		id: 'acceptTermsField',
@@ -50,34 +51,49 @@ export function AcceptTerms ({
 
 	const authFirstStepTerms = (
 		<>
-			<ul className="o-typography-list ncf__accept-terms-list">
-				<li>
-					<span className="terms-auth-first-step">
-						For more information about how we use your data, please refer to our <a
-							className="ncf__link--external"
-							href="http://help.ft.com/help/legal-privacy/terms-conditions/"
-							target='_blank'
-							rel="noopener noreferrer"
-							data-trackable="terms-and-conditions"
-						>
-							privacy
-						</a> and&nbsp;
-						<a
-							className="ncf__link--external"
-							href="http://help.ft.com/help/legal-privacy/terms-conditions/"
-							target='_blank'
-							rel="noopener noreferrer"
-							data-trackable="terms-and-conditions"
-						>
-							cookie
-						</a> policies.
-					</span>
-				</li>
-			</ul>
+			{
+				// TODO: clean up the code in https://financialtimes.atlassian.net/browse/ACQ-1593
+				// isNewDigitalBuyFlowConsent flag for new A/B testing of consents auth first buy flow
+				// after the test it will be one of the conditions for the below flow
+			}
+			{isNewDigitalBuyFlowConsent && (
+				<hr className=" ncf ncf__divider-horizontal" />
+			)}
+			{!isNewDigitalBuyFlowConsent && (
+				<ul className="o-typography-list ncf__accept-terms-list">
+					<li>
+						<span className="terms-auth-first-step">
+							For more information about how we use your data, please refer to
+							our{' '}
+							<a
+								className="ncf__link--external"
+								href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+								target="_blank"
+								rel="noopener noreferrer"
+								data-trackable="terms-and-conditions"
+							>
+								privacy
+							</a>{' '}
+							and&nbsp;
+							<a
+								className="ncf__link--external"
+								href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+								target="_blank"
+								rel="noopener noreferrer"
+								data-trackable="terms-and-conditions"
+							>
+								cookie
+							</a>{' '}
+							policies.
+						</span>
+					</li>
+				</ul>
+			)}
 			<label className={labelClassName} htmlFor="termsAcceptance">
 				<input {...inputProps} />
 				<span className="o-forms-input__label terms-auth-first-step">
-					I confirm that I am {ageRestriction} years or older and agree to the full {' '}
+					I confirm that I am {ageRestriction} years or older and agree to the
+					full{' '}
 					<a
 						className="ncf__link--external"
 						href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -391,4 +407,5 @@ AcceptTerms.propTypes = {
 	isPrintProduct: PropTypes.bool,
 	specialTerms: PropTypes.string,
 	isSingleTerm: PropTypes.bool,
+	isNewDigitalBuyFlowConsent: PropTypes.bool,
 };
