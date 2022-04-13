@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { demographics } from 'n-common-static-data';
-const defaultOptions = demographics.positions.positions;
+import { b2b, demographics } from 'n-common-static-data';
+const B2CPositions = demographics.positions.positions;
+const B2BPositions = b2b.demographics.positions.positions;
 
 export function Position ({
 	value,
@@ -11,7 +12,8 @@ export function Position ({
 	fieldId = 'positionField',
 	selectId = 'position',
 	selectName = 'position',
-	options = defaultOptions,
+	isB2B = false,
+	options = isB2B ? B2BPositions : B2CPositions,
 	isRequired = true,
 	fieldLabel = 'What’s your job position?',
 }) {
@@ -70,6 +72,7 @@ Position.propTypes = {
 	fieldId: PropTypes.string,
 	selectId: PropTypes.string,
 	selectName: PropTypes.string,
+	isB2B: PropTypes.bool,
 	options: PropTypes.arrayOf(
 		PropTypes.shape({
 			code: PropTypes.string,
