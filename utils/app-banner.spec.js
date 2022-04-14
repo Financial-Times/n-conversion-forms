@@ -29,27 +29,27 @@ describe('Apple Pay', () => {
 	});
 
 	describe('constructor', () => {
-		it('should throw an error if window not provided', () => {
+		it('throws an error if window not provided', () => {
 			expect(() => {
 				new AppBanner();
 			}).toThrow();
 		});
 
-		it('should throw an error if banner not found', () => {
+		it('throws an error if banner not found', () => {
 			window.document.querySelector = jest.fn(() => false);
 			expect(() => {
 				new AppBanner(window);
 			}).toThrow();
 		});
 
-		it('should not remove any actions if the user agent is not sniffed', () => {
+		it('does not remove any actions if the user agent is not sniffed', () => {
 			new AppBanner(window);
 
 			expect(iosAction.remove).not.toHaveBeenCalled();
 			expect(androidAction.remove).not.toHaveBeenCalled();
 		});
 
-		it('should remove ios action if the user agent is android', () => {
+		it('removes ios action if the user agent is android', () => {
 			window.navigator.userAgent = 'android';
 			new AppBanner(window);
 
@@ -57,7 +57,7 @@ describe('Apple Pay', () => {
 			expect(androidAction.remove).not.toHaveBeenCalled();
 		});
 
-		it('should remove android action if the user agent is ios', () => {
+		it('removes android action if the user agent is ios', () => {
 			window.navigator.userAgent = 'iphone';
 			new AppBanner(window);
 

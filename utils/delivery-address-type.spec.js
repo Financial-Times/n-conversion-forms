@@ -7,7 +7,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('Delivery Address Type - Util', () => {
 	describe('Get an instance of the util class', () => {
-		it('should throw an error since the component is not found', () => {
+		it('throws an error since the component is not found', () => {
 			const component = mount(<Form></Form>);
 			document.body.innerHTML = `
 				<!DOCTYPE html>
@@ -22,7 +22,7 @@ describe('Delivery Address Type - Util', () => {
 		});
 	});
 	describe('Get option selected', () => {
-		it('should return the default option', () => {
+		it('returns the default option', () => {
 			const props = {};
 			const component = mount(
 				<Form>
@@ -40,7 +40,7 @@ describe('Delivery Address Type - Util', () => {
 			expect(deliveryAdressTypeUtilInstance.getSelected()).toEqual('home');
 		});
 
-		it('should return the option selected different than the default', () => {
+		it('returns the option selected different than the default', () => {
 			const props = { value: 'pobox' };
 			const component = mount(
 				<Form>

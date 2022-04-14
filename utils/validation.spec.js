@@ -35,11 +35,11 @@ describe('Validation - Util', () => {
 	});
 
 	describe('constructor', () => {
-		it('should call oForms to setup client side validation', () => {
+		it('calls oForms to setup client side validation', () => {
 			expect(OForms.default.init).toHaveBeenCalled();
 		});
 
-		it.skip('should check validation status on init', () => {
+		it.skip('checks validation status on init', () => {
 			// TODO test in progress
 			expect(validation.checkFormValidity).toHaveBeenCalled();
 		});

@@ -7,7 +7,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('Delivery Option - Util', () => {
 	describe('Get an instance of the util class', () => {
-		it('should throw an error since the component is not found', () => {
+		it('throws an error since the component is not found', () => {
 			document.body.innerHTML = `
 				<!DOCTYPE html>
 				<html>
@@ -22,7 +22,7 @@ describe('Delivery Option - Util', () => {
 		});
 	});
 	describe('Show/Hide Items for Delivery Option Change', () => {
-		it('should swap between hide and show two items by adding and removing the related classes', () => {
+		it('swapes between hide and show two items by adding and removing the related classes', () => {
 			const props = {
 				country: 'GBR',
 				options: [

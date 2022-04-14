@@ -7,7 +7,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('Company Name - Util', () => {
 	describe('Make Optional/Required using the methods inherited from FormElements', () => {
-		it('should switch between required and optional the input by adding and removing the related classes', () => {
+		it('switches between required and optional the input by adding and removing the related classes', () => {
 			const props = {};
 			const component = mount(
 				<Form>
