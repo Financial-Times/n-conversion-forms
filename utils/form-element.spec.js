@@ -1,17 +1,14 @@
-const FormElement = require('../../utils/form-element');
-const expect = require('chai').expect;
-const sinon = require('sinon');
+const FormElement = require('./form-element');
 
 describe('FormElement', () => {
 	let formElement;
 	let document;
-	let sandbox;
 	let addStub;
 	let removeStub;
 
 	beforeEach(() => {
-		addStub = sinon.stub();
-		removeStub = sinon.stub();
+		addStub = jest.fn();
+		removeStub = jest.fn();
 		document = {
 			querySelector: () => {
 				return {
@@ -29,47 +26,46 @@ describe('FormElement', () => {
 			},
 		};
 		formElement = new FormElement(document);
-		sandbox = sinon.createSandbox();
 	});
 
 	afterEach(() => {
-		sandbox.restore();
+		jest.clearAllMocks();
 	});
 
 	describe('constructor', () => {
-		it('should throw an error if document element isn\'t passed in.', () => {
+		it('throws an error if document element isn not passed in', () => {
 			expect(() => {
 				new FormElement();
-			}).to.throw();
+			}).toThrow();
 		});
 
-		it('should throw an error if form element does not exist on the page', () => {
+		it('throws an error if form element does not exist on the page', () => {
 			expect(() => {
 				document.querySelector = () => {};
 				new FormElement(document);
-			}).to.throw();
+			}).toThrow();
 		});
 	});
 
 	describe('hide', () => {
-		it('should add the ncf__hidden class', () => {
+		it('adds the ncf__hidden class', () => {
 			formElement.hide();
 
-			expect(addStub.getCall(0).args[0]).to.equal('ncf__hidden');
+			expect(addStub).toHaveBeenCalledWith('ncf__hidden');
 		});
 	});
 
 	describe('show', () => {
-		it('should remove the ncf__hidden class', () => {
+		it('removes the ncf__hidden class', () => {
 			formElement.show();
 
-			expect(removeStub.getCall(0).args[0]).to.equal('ncf__hidden');
+			expect(removeStub).toHaveBeenCalledWith('ncf__hidden');
 		});
 	});
 
 	describe('value', () => {
-		it('should return the value', () => {
-			expect(formElement.value()).to.equal('test');
+		it('returns the value', () => {
+			expect(formElement.value()).toEqual('test');
 		});
 	});
 });
