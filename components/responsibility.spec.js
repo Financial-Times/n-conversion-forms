@@ -1,7 +1,7 @@
 import { Responsibility } from './index';
 import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
 import { demographics } from 'n-common-static-data';
-const defaultOptions = demographics.responsibilities.responsibilities;
+const B2CResponsibilities = demographics.responsibilities.responsibilities;
 
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -12,7 +12,7 @@ expect.extend(expectToRenderCorrectly);
 describe('Responsibility', () => {
 	it('render a select with a label', () => {
 		const props = {
-			options: defaultOptions,
+			options: B2CResponsibilities,
 		};
 
 		expect(Responsibility).toRenderCorrectly(props);
@@ -20,7 +20,7 @@ describe('Responsibility', () => {
 
 	it('can render an initial selected value', () => {
 		const props = {
-			options: defaultOptions,
+			options: B2CResponsibilities,
 			value: 'FIN',
 		};
 
@@ -29,7 +29,7 @@ describe('Responsibility', () => {
 
 	it('can render a disable select', () => {
 		const props = {
-			options: defaultOptions,
+			options: B2CResponsibilities,
 			isDisabled: true,
 		};
 
@@ -38,7 +38,7 @@ describe('Responsibility', () => {
 
 	it('can render an error message', () => {
 		const props = {
-			options: defaultOptions,
+			options: B2CResponsibilities,
 			hasError: true,
 		};
 
@@ -73,5 +73,15 @@ describe('Responsibility', () => {
 		expect(
 			component.find('.o-forms-title.o-forms-field--optional').length
 		).toEqual(1);
+	});
+
+	it('defaults to B2B options if isB2B is true', () => {
+		const props = { isB2B: true };
+		const component = mount(Responsibility(props));
+
+		// Look for an option which is only present in the default B2B data set and not in the B2C one.
+		const optionValue = component.find('option').at(1).instance().value;
+
+		expect(optionValue).toBe('ACC');
 	});
 });
