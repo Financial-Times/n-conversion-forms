@@ -13,7 +13,7 @@ export function Responsibility ({
 	fieldId = 'responsibilityField',
 	selectId = 'responsibility',
 	selectName = 'responsibility',
-	isB2B = true,
+	isB2B = false,
 	options = isB2B ? B2BResponsibilities : B2CResponsibilities,
 	fieldLabel = 'Which best describes your job responsibility?',
 }) {
