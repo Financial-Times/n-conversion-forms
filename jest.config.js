@@ -9,6 +9,7 @@ module.exports = {
 	},
 	testMatch: [
 		'**/components/**/?(*.)+(spec|test).[tj]s?(x)',
+		'**/helpers/**/?(*.)+(spec|test).[tj]s?(x)',
 		'**/utils/**/?(*.)+(spec|test).[tj]s?(x)',
 	],
 	snapshotSerializers: ['jest-serializer-html'],

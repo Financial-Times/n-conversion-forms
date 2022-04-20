@@ -72,7 +72,7 @@ describe('Event Notifier', () => {
 	});
 
 	it('does postMessage when the event listener is triggered', () => {
-		mockElement.addEventListener = jest.fn().mockImplementation(() => {
+		mockElement.addEventListener = jest.fn(() => {
 			parent.postMessage();
 		});
 		EventNotifier.init(mockElement);
@@ -80,7 +80,7 @@ describe('Event Notifier', () => {
 	});
 
 	it('does postMessage when the event listener is triggered even if notifyOnStart is false', () => {
-		mockElement.addEventListener = jest.fn().mockImplementation(() => {
+		mockElement.addEventListener = jest.fn(() => {
 			parent.postMessage();
 		});
 		EventNotifier.init(mockElement, { notifyOnStart: false });

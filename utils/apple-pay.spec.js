@@ -155,7 +155,7 @@ describe('Apple Pay', () => {
 				).toEqual(ApplePay.TEST_MERCHANT_VALIDATION_URL);
 			});
 
-			it('should default to the production merchant validation url', () => {
+			it('defaults to the production merchant validation url', () => {
 				expect(ApplePay.getMerchantValidationUrl()).toEqual(
 					ApplePay.MERCHANT_VALIDATION_URL
 				);

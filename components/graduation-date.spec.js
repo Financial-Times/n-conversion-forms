@@ -24,7 +24,7 @@ describe('GraduationDate', () => {
 		).toBe(true);
 	});
 
-	it('should display graduationDateMonth options as English month names', () => {
+	it('displays graduationDateMonth options as English month names', () => {
 		const wrapper = shallow(<GraduationDate />);
 		const values = wrapper
 			.find('#graduationDateMonth option')
@@ -45,7 +45,7 @@ describe('GraduationDate', () => {
 		]);
 	});
 
-	it('should store graduationDateMonth values as two-digit numbers', () => {
+	it('stores graduationDateMonth values as two-digit numbers', () => {
 		const wrapper = shallow(<GraduationDate />);
 		const values = wrapper
 			.find('#graduationDateMonth option')
@@ -85,13 +85,13 @@ describe('GraduationDate', () => {
 	describe('given a valid value prop is passed', () => {
 		const wrapper = shallow(<GraduationDate value="2020-08-28" />);
 
-		it('should set the default month', () => {
+		it('sets the default month', () => {
 			expect(wrapper.find('#graduationDateMonth').prop('defaultValue')).toEqual(
 				'08'
 			);
 		});
 
-		it('should set the default year', () => {
+		it('sets the default year', () => {
 			expect(wrapper.find('#graduationDateYear').prop('defaultValue')).toEqual(
 				'2020'
 			);
@@ -101,7 +101,7 @@ describe('GraduationDate', () => {
 	describe('given an invalid value prop is passed', () => {
 		const wrapper = shallow(<GraduationDate value="invalid" />);
 
-		it('should not set any default values', () => {
+		it('does not set any default values', () => {
 			expect(
 				wrapper.find('#graduationDateMonth').prop('defaultValue')
 			).toBeFalsy();
@@ -114,7 +114,7 @@ describe('GraduationDate', () => {
 	describe('given the isDisabled prop is set to true', () => {
 		const wrapper = shallow(<GraduationDate isDisabled={true} />);
 
-		it('should disable both select fields', () => {
+		it('disables both select fields', () => {
 			expect(
 				wrapper.find('#graduationDateMonth').prop('disabled')
 			).toBeTruthy();
@@ -125,7 +125,7 @@ describe('GraduationDate', () => {
 	describe('given the isRequired prop is set to true', () => {
 		const wrapper = shallow(<GraduationDate isRequired={true} />);
 
-		it('should make both fields required', () => {
+		it('makes both fields required', () => {
 			expect(
 				wrapper.find('#graduationDateMonth').prop('required')
 			).toBeTruthy();
@@ -136,7 +136,7 @@ describe('GraduationDate', () => {
 	describe('given the hasError prop is set to true', () => {
 		const wrapper = shallow(<GraduationDate hasError={true} />);
 
-		it('should add an invalid modifier class', () => {
+		it('adds an invalid modifier class', () => {
 			expect(wrapper.find('div.o-forms-input').prop('className')).toMatch(
 				'o-forms-input--invalid'
 			);

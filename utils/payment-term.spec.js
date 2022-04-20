@@ -129,7 +129,7 @@ describe('PaymentTerm', () => {
 				expect(trialPriceStub.innerHTML).toEqual('£1.01');
 			});
 
-			it('should replace the monthly price with the correct updated monthly price', () => {
+			it('replaces the monthly price with the correct updated monthly price', () => {
 				const monthlyPriceStub = {};
 				elementStub.querySelector.mockImplementation((elementId) => {
 					return elementId === '.ncf__payment-term__monthly-price'
@@ -159,7 +159,7 @@ describe('PaymentTerm', () => {
 					elementStub.querySelector.mockReturnValue(elementStub);
 				});
 
-				it('should replace the base amount with the correct updated trial amount', () => {
+				it('replaces the base amount with the correct updated trial amount', () => {
 					updatedOptions[0].isTrial = true;
 					paymentTerm.updateOptions(updatedOptions);
 					expect(elementStub.setAttribute).toHaveBeenCalledWith(
@@ -168,7 +168,7 @@ describe('PaymentTerm', () => {
 					);
 				});
 
-				it('should replace the base amount with the correct updated amount', () => {
+				it('replaces the base amount with the correct updated amount', () => {
 					updatedOptions[0].isTrial = false;
 					paymentTerm.updateOptions(updatedOptions);
 					expect(elementStub.setAttribute).toHaveBeenCalledWith(
@@ -186,7 +186,7 @@ describe('PaymentTerm', () => {
 					}).toThrow();
 				});
 
-				it('should return base amount of the selected term', () => {
+				it('returns base amount of the selected term', () => {
 					elementStub.dataset.baseAmount = 99;
 					elementStub.querySelector.mockReturnValue(elementStub);
 					const returnedAmount = paymentTerm.getBaseAmount();

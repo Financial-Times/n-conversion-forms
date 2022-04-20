@@ -50,13 +50,13 @@ describe('Password', () => {
 	});
 
 	describe('toggleMask', () => {
-		it('set the input type to text', () => {
+		it('sets the input type to text', () => {
 			passwordElement.type = 'password';
 			password.toggleMask(false);
 			expect(passwordElement.type).toEqual('text');
 		});
 
-		it('set the input type to password', () => {
+		it('sets the input type to password', () => {
 			passwordElement.type = 'text';
 			password.toggleMask(true);
 			expect(passwordElement.type).toEqual('password');

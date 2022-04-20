@@ -47,7 +47,7 @@ describe('DeliveryPostcode', () => {
 				);
 			});
 
-			it('set postcodeReference to post code by default', () => {
+			it('sets postcodeReference to post code by default', () => {
 				const expectedResponse = [
 					{ innerHTML: 'postcode' },
 					{ innerHTML: 'postcode' },
@@ -56,7 +56,7 @@ describe('DeliveryPostcode', () => {
 				expect(deliveryPostcode.reference).toEqual(expectedResponse);
 			});
 
-			it('set postcodeReference to zip code when country code is USA', () => {
+			it('sets postcodeReference to zip code when country code is USA', () => {
 				const expectedResponse = [
 					{ innerHTML: 'zip code' },
 					{ innerHTML: 'zip code' },
@@ -65,7 +65,7 @@ describe('DeliveryPostcode', () => {
 				expect(deliveryPostcode.reference).toEqual(expectedResponse);
 			});
 
-			it('set postcodeReference to postal code when country code is Canada', () => {
+			it('sets postcodeReference to postal code when country code is Canada', () => {
 				const expectedResponse = [
 					{ innerHTML: 'postal code' },
 					{ innerHTML: 'postal code' },
@@ -84,7 +84,7 @@ describe('DeliveryPostcode', () => {
 				expect(querySelectorStub).toHaveBeenCalledWith('input');
 			});
 
-			it('set postcode placeholder to `Enter your postcode` by default', () => {
+			it('sets postcode placeholder to `Enter your postcode` by default', () => {
 				querySelectorStub.mockReturnValue({
 					placeholder: 'Enter your zip code',
 				});
@@ -94,7 +94,7 @@ describe('DeliveryPostcode', () => {
 				);
 			});
 
-			it('set postcode placeholder to `Enter your zip code` when country code is USA', () => {
+			it('sets postcode placeholder to `Enter your zip code` when country code is USA', () => {
 				querySelectorStub.mockReturnValue({
 					placeholder: 'Enter your postcode',
 				});
@@ -104,7 +104,7 @@ describe('DeliveryPostcode', () => {
 				);
 			});
 
-			it('set postcode placeholder to `Enter your postal code` when country code is Canada', () => {
+			it('sets postcode placeholder to `Enter your postal code` when country code is Canada', () => {
 				querySelectorStub.mockReturnValue({
 					placeholder: 'Enter your zip code',
 				});

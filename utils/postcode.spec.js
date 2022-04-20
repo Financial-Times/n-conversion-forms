@@ -59,7 +59,7 @@ describe('postcode', () => {
 				expect(querySelectorAllStub).toBeCalledWith('[data-reference=postcode]');
 			});
 
-			it('set postcodeReference to post code by default', () => {
+			it('sets postcodeReference to post code by default', () => {
 				const expectedResponse = [
 					{ innerHTML: 'postcode' },
 					{ innerHTML: 'postcode' },
@@ -68,7 +68,7 @@ describe('postcode', () => {
 				expect(postcode.reference).toEqual(expectedResponse);
 			});
 
-			it('set postcodeReference to zip code when country code is USA', () => {
+			it('sets postcodeReference to zip code when country code is USA', () => {
 				const expectedResponse = [
 					{ innerHTML: 'zip code' },
 					{ innerHTML: 'zip code' },
@@ -77,7 +77,7 @@ describe('postcode', () => {
 				expect(postcode.reference).toEqual(expectedResponse);
 			});
 
-			it('set postcodeReference to postal code when country code is Canada', () => {
+			it('sets postcodeReference to postal code when country code is Canada', () => {
 				const expectedResponse = [
 					{ innerHTML: 'postal code' },
 					{ innerHTML: 'postal code' },
@@ -94,7 +94,7 @@ describe('postcode', () => {
 				expect(querySelectorStub).toHaveBeenCalledWith('input');
 			});
 
-			it('set postcode placeholder to `Enter your postcode` by default', () => {
+			it('sets postcode placeholder to `Enter your postcode` by default', () => {
 				querySelectorStub.mockReturnValue({ placeholder: 'Enter your zip code' });
 				postcode.changePostcodeReferenceForCountry = 'GBR';
 				expect(postcode.postcodeInput.placeholder).toEqual(
@@ -102,7 +102,7 @@ describe('postcode', () => {
 				);
 			});
 
-			it('set postcode placeholder to `Enter your zip code` when country code is USA', () => {
+			it('sets postcode placeholder to `Enter your zip code` when country code is USA', () => {
 				querySelectorStub.mockReturnValue({ placeholder: 'Enter your postcode' });
 				postcode.changePostcodeReferenceForCountry = 'USA';
 				expect(postcode.postcodeInput.placeholder).toEqual(
@@ -110,7 +110,7 @@ describe('postcode', () => {
 				);
 			});
 
-			it('set postcode placeholder to `Enter your postal code` when country code is Canada', () => {
+			it('sets postcode placeholder to `Enter your postal code` when country code is Canada', () => {
 				querySelectorStub.mockReturnValue({ placeholder: 'Enter your zip code' });
 				postcode.changePostcodeReferenceForCountry = 'CAN';
 				expect(postcode.postcodeInput.placeholder).toEqual(

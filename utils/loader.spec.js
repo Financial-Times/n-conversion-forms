@@ -67,11 +67,11 @@ describe('Loader', () => {
 					expect.anything()
 				);
 			});
-			it('set the title of the partial', () => {
+			it('sets the title of the partial', () => {
 				loader.setContent({ title: 'Hooray!' });
 				expect(elementStub.innerHTML).toEqual('Hooray!');
 			});
-			it('set the content of the partial', () => {
+			it('sets the content of the partial', () => {
 				loader.setContent({ content: '<div>Baz</div>' });
 				expect(elementStub.innerHTML).toEqual('<div>Baz</div>');
 			});
