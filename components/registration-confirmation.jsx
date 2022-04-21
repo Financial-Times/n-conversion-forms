@@ -5,46 +5,56 @@ const EMAIL_DEFAULT_TEXT = 'your email';
 
 export function RegistrationConfirmation ({ email = EMAIL_DEFAULT_TEXT }) {
 	return (
-		<div className="ncf ncf__wrapper">
-			<div className="ncf__center">
+		<div className="ncf">
+			<div className="ncf__center ncf__margin">
 				<div className="ncf__icon ncf__icon--tick ncf__icon--large"></div>
-				<div className="ncf__paragraph">
-					<h1 className="ncf__header ncf__header--confirmation">
-						Welcome to FT.com
-					</h1>
-				</div>
-			</div>
-
-			<p className="ncf__paragraph">
-				We’ve sent confirmation of your new account to {email}.
-			</p>
-
-			<div className="ncf__headed-paragraph">
-				<h2 className="ncf__header">Something not right?</h2>
-				<p className="ncf__paragraph">
-					Go to your{' '}
-					<a
-						className="ncf__link ncf__link--external"
-						href="https://www.ft.com/myaccount/personal-details"
-						target="_blank"
-						rel="noopener noreferrer"
-						data-trackable="yourAccount"
-					>
-						account settings
-					</a>{' '}
-					to view or edit your account. If you need to get in touch call us on{' '}
-					<a href="tel:+442077556248" className="ncf__link ncf__link--external">
-						+44 (0) 207 755 6248
-					</a>
-					. Or contact us for additional support.
+				<h1 className="ncf__header ncf__header--confirmation">Success</h1>
+				<p className="ncf__paragraph ncf__confirmation--message">
+					We’ve sent confirmation to {email}.
 				</p>
 			</div>
 
-			<p className="ncf__center">
-				<a href="/products " className="ncf__button ncf__button--submit">
-					See our subscription packages
-				</a>
-			</p>
+			<div className="ncf__divider-horizontal" />
+
+			<div className="ncf__confirmation--links ncf__margin">
+				<div className="ncf__confirmation--socials">
+					<b>Breaking news alerts, direct to your lock screen</b>
+					<p className="ncf__confirmation--mobile">
+						Download our apps or follow us on our socials
+					</p>
+					<p className="ncf__confirmation--desktop">
+						Find us in the app and google play stores or follow us on our
+						socials
+					</p>
+				</div>
+				<div className="ncf__confirmation--alerts">
+					<b>
+						Set up email alerts in
+						<span aria-label="myFT" className="icon-myft" />
+					</b>
+
+					<p>
+						Choose the content you want to follow by personalising your alerts
+						for the most important topics and additional newsletters
+					</p>
+					<a
+						href={'/myft'}
+						className="margin-top-x4 ncf__button ncf__button--secondary"
+						data-trackable="personalise-alerts"
+					>
+						Personalise my alerts
+					</a>
+				</div>
+			</div>
+
+			<a
+				href={'/'}
+				target="_parent"
+				className="ncf__confirmation--finish ncf__button ncf__button--submit"
+				data-trackable="confirmation-finish"
+			>
+				Finish
+			</a>
 		</div>
 	);
 }
