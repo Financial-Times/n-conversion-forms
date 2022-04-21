@@ -5,25 +5,21 @@ import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
-const { JSDOM } = require('jsdom');
-
 describe('Company Name - Util', () => {
 	describe('Make Optional/Required using the methods inherited from FormElements', () => {
-		it('should switch between required and optional the input by adding and removing the related classes', () => {
+		it('switches between required and optional the input by adding and removing the related classes', () => {
 			const props = {};
 			const component = mount(
 				<Form>
 					<CompanyName {...props} />
 				</Form>
 			);
-			const dom = new JSDOM(`
+			document.body.innerHTML = `
 				<!DOCTYPE html>
 				<html>
 				<head></head>
 				<body>${component.html()}</body>
-				</html>
-			`);
-			const document = dom.window.document;
+				</html>`;
 
 			const companyNameUtilInstance = new CompanyNameUtil(document);
 			expect(companyNameUtilInstance).toBeDefined();

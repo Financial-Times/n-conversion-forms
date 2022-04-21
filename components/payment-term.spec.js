@@ -134,19 +134,19 @@ describe('PaymentTerm', () => {
 			/>
 		);
 
-		it('should not include renewal text', () => {
+		it('does not include renewal text', () => {
 			expect(
 				wrapper.find('.ncf__payment-term__renews-text').text()
 			).not.toMatch(/Renews (annually|monthly|quarterly) unless cancelled/);
 		});
 
-		it('should render fixed term renewal text in English', () => {
+		it('renders fixed term renewal text in English', () => {
 			expect(wrapper.find('.ncf__payment-term__renews-text').text()).toMatch(
 				/This subscription is for 3 months, charged monthly. You can cancel at anytime/
 			);
 		});
 
-		it('should render offer name on payment term title', () => {
+		it('renders offer name on payment term title', () => {
 			expect(wrapper.find('.ncf__payment-term__title').text()).toMatch(
 				'Mix & Match - Monthly'
 			);

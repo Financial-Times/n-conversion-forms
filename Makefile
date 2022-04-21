@@ -12,10 +12,6 @@ run:
 
 test:
 	make jest
-	make unit-test
-
-unit-test:
-	mocha --recursive --reporter spec test
 
 jest:
 	jest

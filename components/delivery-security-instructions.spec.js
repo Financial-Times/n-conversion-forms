@@ -104,11 +104,11 @@ describe('DeliverySecurityInstructions', () => {
 				expect(textAreaProps.name).toBe('inputId');
 			});
 
-			it('set maxLength to 10', () => {
+			it('sets maxLength to 10', () => {
 				expect(textAreaProps.maxLength).toBe(10);
 			});
 
-			it('set rows to 3', () => {
+			it('sets rows to 3', () => {
 				expect(textAreaProps.rows).toBe(3);
 			});
 
@@ -120,7 +120,7 @@ describe('DeliverySecurityInstructions', () => {
 				expect(textAreaProps.disabled).toBeTrue;
 			});
 
-			it('set value', () => {
+			it('sets value', () => {
 				expect(textAreaProps.defaultValue).toBe('value');
 			});
 		});

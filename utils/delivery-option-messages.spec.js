@@ -12,20 +12,20 @@ describe('Find Custom Delivery Option', () => {
 			stubOption.mailDelivery = false;
 		});
 
-		it('should return undefined when other country than custom messages', () => {
+		it('returns undefined when other country than custom messages', () => {
 			expect(
 				getDeliveryOption(sixDaysProductCode, stubOption, 'AAA')
 			).toBeUndefined();
 		});
 
-		it('should return undefined when invalid distributor type code', () => {
+		it('returns undefined when invalid distributor type code', () => {
 			const option = { ...stubOption, value: 'ZZ' };
 			expect(
 				getDeliveryOption(sixDaysProductCode, option, 'USA')
 			).toBeUndefined();
 		});
 
-		it('should return undefined when mailDelivery is false and not other required props are setup', () => {
+		it('returns undefined when mailDelivery is false and not other required props are setup', () => {
 			stubOption.deliveryOnPublicationDate = undefined;
 			stubOption.flightMarket = undefined;
 			expect(

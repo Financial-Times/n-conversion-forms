@@ -1,13 +1,10 @@
-const Password = require('../../utils/password');
-const expect = require('chai').expect;
-const sinon = require('sinon');
+const Password = require('./password');
 
 describe('Password', () => {
 	let password;
 	let document;
 	let passwordElement;
 	let checkboxElement;
-	let sandbox;
 
 	beforeEach(() => {
 		passwordElement = { type: '' };
@@ -22,48 +19,47 @@ describe('Password', () => {
 			},
 		};
 		password = new Password(document);
-		sandbox = sinon.createSandbox();
-		sandbox.spy(password, 'toggleMask');
-		sandbox.spy(checkboxElement, 'addEventListener');
+		jest.spyOn(password, 'toggleMask');
+		jest.spyOn(checkboxElement, 'addEventListener');
 	});
 
 	afterEach(() => {
-		sandbox.restore();
+		jest.clearAllMocks();
 	});
 
 	describe('constructor', () => {
-		it('should throw an error if document element isn\'t passed in.', () => {
+		it('throws an error if document element is not passed in.', () => {
 			expect(() => {
 				new Password();
-			}).to.throw();
+			}).toThrow();
 		});
 
-		it('should throw an error if password element does not exist on the page', () => {
+		it('throws an error if password element does not exist on the page', () => {
 			expect(() => {
 				document.querySelector = () => {};
 				new Password(document);
-			}).to.throw();
+			}).toThrow();
 		});
 	});
 
 	describe('registerMaskCheckbox', () => {
-		it('should add event listener to checkbox if it exists', () => {
+		it('adds event listener to checkbox if it exists', () => {
 			new Password(document);
-			expect(checkboxElement.addEventListener.calledOnce).to.be.true;
+			expect(checkboxElement.addEventListener).toHaveBeenCalled();
 		});
 	});
 
 	describe('toggleMask', () => {
-		it('should set the input type to text', () => {
+		it('sets the input type to text', () => {
 			passwordElement.type = 'password';
 			password.toggleMask(false);
-			expect(passwordElement.type).to.equal('text');
+			expect(passwordElement.type).toEqual('text');
 		});
 
-		it('should set the input type to password', () => {
+		it('sets the input type to password', () => {
 			passwordElement.type = 'text';
 			password.toggleMask(true);
-			expect(passwordElement.type).to.equal('password');
+			expect(passwordElement.type).toEqual('password');
 		});
 	});
 });

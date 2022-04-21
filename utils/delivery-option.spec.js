@@ -5,27 +5,23 @@ import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
-const { JSDOM } = require('jsdom');
-
 describe('Delivery Option - Util', () => {
 	describe('Get an instance of the util class', () => {
-		it('should throw an error since the component is not found', () => {
-			const dom = new JSDOM(`
-				<!DOCTYPE html>
-				<html>
-				<head></head>
-				<body></body>
-				</html>
-			`);
-			const document = dom.window.document;
+		it('throws an error if document element isn not passed in', () => {
+			expect(() => {
+				new DeliveryOptionUtil();
+			}).toThrow();
+		});
 
+		it('throws an error since the component is not found', () => {
 			expect(() => {
 				new DeliveryOptionUtil(document);
 			}).toThrow();
 		});
 	});
+
 	describe('Show/Hide Items for Delivery Option Change', () => {
-		it('should swap between hide and show two items by adding and removing the related classes', () => {
+		it('swapes between hide and show two items by adding and removing the related classes', () => {
 			const props = {
 				country: 'GBR',
 				options: [
@@ -38,14 +34,13 @@ describe('Delivery Option - Util', () => {
 					<DeliveryOption {...props} />
 				</Form>
 			);
-			const dom = new JSDOM(`
+			document.body.innerHTML = `
 				<!DOCTYPE html>
 				<html>
 				<head></head>
 				<body>${component.html()}</body>
 				</html>
-			`);
-			const document = dom.window.document;
+			`;
 
 			const deliveryoptionUtilInstance = new DeliveryOptionUtil(document);
 			expect(deliveryoptionUtilInstance).toBeDefined();
@@ -59,6 +54,96 @@ describe('Delivery Option - Util', () => {
 			expect(document.querySelector('.ncf__hidden #PV')).toBeDefined();
 			expect(document.querySelector('#HD')).toBeDefined();
 			expect(document.querySelector('.ncf__hidden #HD')).toBe(null);
+		});
+	});
+
+	describe('handleDeliveryOptionChange', () => {
+		let deliveryOption1Listener;
+		let deliveryOption2Listener;
+		let formStub;
+
+		beforeEach(() => {
+			deliveryOption1Listener = jest.fn();
+			deliveryOption2Listener = jest.fn();
+
+			formStub = {
+				elements: {
+					deliveryOption: [
+						{ addEventListener: deliveryOption1Listener },
+						{ addEventListener: deliveryOption2Listener },
+					],
+				},
+			};
+
+			document.querySelector = jest.fn(() => formStub);
+			document.querySelectorAll = jest.fn(() => []);
+		});
+
+		afterEach(() => {
+			jest.clearAllMocks();
+		});
+
+		describe('can handle an array', () => {
+			it('binds the given callback to the change event on the delivery option fields', async () => {
+				let deliveryOptionUtil = new DeliveryOptionUtil(document);
+				let callback = jest.fn();
+				deliveryOptionUtil.handleDeliveryOptionChange(callback);
+
+				expect(deliveryOption1Listener).toHaveBeenCalledWith(
+					'change',
+					callback
+				);
+				expect(deliveryOption2Listener).toHaveBeenCalledWith(
+					'change',
+					callback
+				);
+			});
+		});
+
+		describe('can handle a single node element', () => {
+			let deliveryOptionUtil;
+			let callback;
+
+			beforeEach(() => {
+				const props = {
+					country: 'GBR',
+					options: [
+						{ value: 'HD', isSelected: true, isValidDeliveryOption: true },
+						{ value: 'PV', isSelected: false, isValidDeliveryOption: true },
+					],
+				};
+				const component = mount(
+					<Form>
+						<DeliveryOption {...props} />
+					</Form>
+				);
+				document.body.innerHTML = `
+					<!DOCTYPE html>
+					<html>
+					<head></head>
+					<body>${component.html()}</body>
+					</html>
+				`;
+
+				document.querySelector = jest.fn(() => formStub);
+
+				deliveryOptionUtil = new DeliveryOptionUtil(document);
+				callback = jest.fn();
+			});
+
+			it('can handle having only one form element', () => {
+				expect(() => {
+					deliveryOptionUtil.handleDeliveryOptionChange(callback);
+				}).not.toThrow();
+			});
+
+			it('adds the event listener', () => {
+				jest.spyOn(formStub.elements.deliveryOption[0], 'addEventListener');
+				deliveryOptionUtil.handleDeliveryOptionChange(callback);
+				expect(
+					formStub.elements.deliveryOption[0].addEventListener
+				).toHaveBeenCalledWith('change', callback);
+			});
 		});
 	});
 });
