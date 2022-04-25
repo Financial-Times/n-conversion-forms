@@ -8,7 +8,7 @@ export function PaymentTerm ({
 	isEpaper = false,
 	options = [],
 	isFixedTermOffer = false,
-	displayName,
+	offerDisplayName,
 	showLegal = true,
 	largePrice = false,
 	optionsInARow = false,
@@ -103,15 +103,9 @@ export function PaymentTerm ({
 			name: inputName,
 			value: option.value,
 			className:
-				'o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input',
-			...(option.selected && { defaultChecked: true }),
+				'o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input',			...(option.selected && { defaultChecked: true }),
 		};
-		const showTrialCopyInTitle =
-			option.isTrial && !isPrintOrBundle && !isEpaper;
-		const defaultTitle = option.name ? nameMap[option.name].title : '';
-		const title = isFixedTermOffer
-			? `${displayName} - ${defaultTitle}`
-			: defaultTitle;
+
 		const createDiscount = () => {
 			return (
 				option.discount && (
@@ -160,14 +154,34 @@ export function PaymentTerm ({
 			);
 		};
 
-		const getDisplayName = () => {
-			let displayName = '';
+		const getTermDisplayName = () => {
+
+			const showTrialCopyInTitle =
+				option.isTrial && !isPrintOrBundle && !isEpaper;
+
+			const defaultTitle = (option.name && nameMap[option.name]) ? nameMap[option.name].title : '';
+
+			const title = isFixedTermOffer
+				? `${offerDisplayName} - ${defaultTitle}`
+				: defaultTitle;
+
+			let termDisplayName = '';
 			if (showTrialCopyInTitle) {
 				const termName = option.displayName ? option.displayName : 'Premium Digital';
-				displayName = `Trial: ${termName} - `;
+				termDisplayName = `Trial: ${termName} - `;
 			}
-			const termPeriod = nameMap[option.name] ? title : option.title;
-			return `${displayName}${termPeriod} `;
+
+			const getTermPeriod = () => {
+				if (nameMap[option.name]) {
+					return title;
+				}
+				return option.name;
+			};
+
+			const termPeriod = getTermPeriod();
+			termDisplayName = `${termDisplayName}${termPeriod} `;
+
+			return termDisplayName;
 		};
 
 		return (
@@ -185,7 +199,7 @@ export function PaymentTerm ({
 							{ 'ncf__payment-term__title--large-price': largePrice },
 						])}
 					>
-						{getDisplayName()}
+						{getTermDisplayName()}
 						{option.subTitle && (
 							<span className="ncf__regular ncf__payment-term__sub-title">
 								{option.subTitle}
@@ -276,7 +290,7 @@ PaymentTerm.propTypes = {
 		})
 	),
 	isFixedTermOffer: PropTypes.bool,
-	displayName: PropTypes.string,
+	offerDisplayName: PropTypes.string,
 	showLegal: PropTypes.bool,
 	largePrice: PropTypes.bool,
 	optionsInARow: PropTypes.bool,
