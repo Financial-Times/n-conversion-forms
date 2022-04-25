@@ -247,7 +247,8 @@ export function PaymentType ({
 				{createDirectDebitPanel()}
 
 				{createZuoraPanel()}
-
+			</div>
+			<div className="o-forms-field">
 				{isSingleTerm && (
 					<>
 						<label
