@@ -72,6 +72,8 @@ exports[`PaymentType can initialise with the loader visible 1`] = `
     Please enter a valid payment type
   </div>
 </div>
+<div class="o-forms-field">
+</div>
 `;
 
 exports[`PaymentType render with default props 1`] = `
@@ -146,6 +148,8 @@ exports[`PaymentType render with default props 1`] = `
     Please enter a valid payment type
   </div>
 </div>
+<div class="o-forms-field">
+</div>
 `;
 
 exports[`PaymentType render with enableApplepay 1`] = `
@@ -219,6 +223,8 @@ exports[`PaymentType render with enableApplepay 1`] = `
   <div class="o-forms-input__error">
     Please enter a valid payment type
   </div>
+</div>
+<div class="o-forms-field">
 </div>
 `;
 
@@ -313,6 +319,8 @@ exports[`PaymentType render with enableCreditcard 1`] = `
     <script src="https://static.zuora.com/Resources/libs/hosted/1.3.1/zuora-min.js">
     </script>
   </div>
+</div>
+<div class="o-forms-field">
 </div>
 `;
 
@@ -447,6 +455,8 @@ exports[`PaymentType render with enableDirectdebit 1`] = `
     </script>
   </div>
 </div>
+<div class="o-forms-field">
+</div>
 `;
 
 exports[`PaymentType render with enablePaypal 1`] = `
@@ -521,6 +531,8 @@ exports[`PaymentType render with enablePaypal 1`] = `
     Please enter a valid payment type
   </div>
 </div>
+<div class="o-forms-field">
+</div>
 `;
 
 exports[`PaymentType render with isSingleTerm 1`] = `
@@ -594,6 +606,8 @@ exports[`PaymentType render with isSingleTerm 1`] = `
   <div class="o-forms-input__error">
     Please enter a valid payment type
   </div>
+</div>
+<div class="o-forms-field">
   <label class="o-forms-input o-forms-input--checkbox o-forms-input--suffix ncf__payment-type-pay-faster-next-time-checkbox"
          for="payFasterNextTime"
   >
@@ -680,6 +694,8 @@ exports[`PaymentType render with isSingleTermChecked 1`] = `
   <div class="o-forms-input__error">
     Please enter a valid payment type
   </div>
+</div>
+<div class="o-forms-field">
   <label class="o-forms-input o-forms-input--checkbox o-forms-input--suffix ncf__payment-type-pay-faster-next-time-checkbox"
          for="payFasterNextTime"
   >
@@ -768,5 +784,7 @@ exports[`PaymentType render with value 1`] = `
   <div class="o-forms-input__error">
     Please enter a valid payment type
   </div>
+</div>
+<div class="o-forms-field">
 </div>
 `;
