@@ -1,4 +1,5 @@
 @import '@financial-times/o-social-follow/main';
+@import '@financial-times/o-grid/main';
 
 @include oSocialFollow(
 	$opts: (
@@ -19,13 +20,13 @@
 		}
 
 		&--desktop {
-			@media (max-width: 979px) {
+			@include oGridRespondTo($until: L) {
 				display: none;
 			}
 		}
 
 		&--mobile {
-			@media (min-width: 980px) {
+			@include oGridRespondTo(L) {
 				display: none;
 			}
 		}
