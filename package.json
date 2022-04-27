@@ -1,104 +1,105 @@
 {
-  "name": "@financial-times/n-conversion-forms",
-  "version": "0.0.0",
-  "description": "Containing jsx components and styles for forms included on Accounts and Acqusition apps (next-signup, next-profile, next-retention, etc).",
-  "main": "dist/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel components/*.jsx -d dist --copy-files",
-    "prepare": "(npx snyk protect || npx snyk protect -d || true)",
-    "storybook": "start-storybook -p 5005",
-    "build-storybook": "build-storybook --docs --output-dir docs",
-    "lint": "eslint . --ext .jsx,.js",
-    "lint-fix": "eslint . --ext .jsx,.js --fix",
-    "prettier": "prettier --write '**/*.{js,jsx,json,scss}'",
-    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Financial-Times/n-conversion-forms.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Financial-Times/n-conversion-forms/issues"
-  },
-  "homepage": "https://github.com/Financial-Times/n-conversion-forms#readme",
-  "dependencies": {
-    "@babel/runtime": "^7.11.2",
-    "classnames": "2.3.1",
-    "fetchres": "1.7.2",
-    "lodash.get": "4.4.2",
-    "n-common-static-data": "github:Financial-Times/n-common-static-data#v1.7.1"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.11.1",
-    "@babel/plugin-transform-runtime": "^7.11.0",
-    "@babel/preset-env": "^7.11.0",
-    "@babel/preset-react": "^7.10.4",
-    "@financial-times/eslint-config-next": "^3.0.0",
-    "@financial-times/jest-browser-resolver": "^1.0.2",
-    "@financial-times/n-gage": "^8.2.0",
-    "@storybook/addon-a11y": "^6.0.10",
-    "@storybook/addon-essentials": "6.0.10",
-    "@storybook/react": "^6.0.10",
-    "@sucrase/jest-plugin": "^2.0.0",
-    "chai": "^4.2.0",
-    "check-engines": "^1.5.0",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1",
-    "eslint": "^8.1.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-jest": "^25.2.4",
-    "eslint-plugin-react": "^7.26.1",
-    "fetch-mock": "^7.2.0",
-    "jest": "^26.0.0",
-    "jest-serializer-html": "^7.0.0",
-    "jsdom": "15.1.0",
-    "lint-staged": "^11.2.6",
-    "mocha": "5.1.1",
-    "node-sass": "4.14.1",
-    "pa11y-ci": "2.1.1",
-    "postcss": "^7.0.32",
-    "prettier": "2.4.1",
-    "prop-types": "15.7.2",
-    "proxyquire": "2.1.0",
-    "react": "16.14.0",
-    "react-dom": "16.14.0",
-    "react-is": "^16.13.1",
-    "sass-loader": "^9.0.3",
-    "sinon": "6.3.5",
-    "snyk": "1.230.7"
-  },
-  "engines": {
-    "node": "12.x || 14.x",
-    "npm": "7.x || 8.x"
-  },
-  "lint-staged": {
-    "**/*.{js,jsx,json,scss}": "prettier --write",
-    "**/*.{js,jsx}": "eslint --fix"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "node_modules/.bin/secret-squirrel-commitmsg",
-      "pre-commit": "node_modules/.bin/secret-squirrel && npm run lint",
-      "pre-push": "make test"
-    }
-  },
-  "peerDependencies": {
-    "@financial-times/o-buttons": "^7.5.0",
-    "@financial-times/o-colors": "^6.4.2",
-    "@financial-times/o-expander": "^6.2.2",
-    "@financial-times/o-forms": "^9.3.1",
-    "@financial-times/o-grid": "^6.1.5",
-    "@financial-times/o-header-services": "^5.2.2",
-    "@financial-times/o-icons": "^7.2.1",
-    "@financial-times/o-layout": "^5.2.2",
-    "@financial-times/o-loading": "^5.2.1",
-    "@financial-times/o-message": "^5.2.1",
-    "@financial-times/o-normalise": "^3.2.2",
-    "@financial-times/o-stepped-progress": "^4.0.2",
-    "@financial-times/o-typography": "^7.3.1"
-  }
+	"name": "@financial-times/n-conversion-forms",
+	"version": "0.0.0",
+	"description": "Containing jsx components and styles for forms included on Accounts and Acqusition apps (next-signup, next-profile, next-retention, etc).",
+	"main": "dist/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "babel components/*.jsx -d dist --copy-files",
+		"prepare": "(npx snyk protect || npx snyk protect -d || true)",
+		"storybook": "start-storybook -p 5005",
+		"build-storybook": "build-storybook --docs --output-dir docs",
+		"lint": "eslint . --ext .jsx,.js",
+		"lint-fix": "eslint . --ext .jsx,.js --fix",
+		"prettier": "prettier --write '**/*.{js,jsx,json,scss}'",
+		"preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Financial-Times/n-conversion-forms.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Financial-Times/n-conversion-forms/issues"
+	},
+	"homepage": "https://github.com/Financial-Times/n-conversion-forms#readme",
+	"dependencies": {
+		"@babel/runtime": "^7.11.2",
+		"classnames": "2.3.1",
+		"fetchres": "1.7.2",
+		"lodash.get": "4.4.2",
+		"n-common-static-data": "github:Financial-Times/n-common-static-data#v1.7.1"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.10.5",
+		"@babel/core": "^7.11.1",
+		"@babel/plugin-transform-runtime": "^7.11.0",
+		"@babel/preset-env": "^7.11.0",
+		"@babel/preset-react": "^7.10.4",
+		"@financial-times/eslint-config-next": "^3.0.0",
+		"@financial-times/jest-browser-resolver": "^1.0.2",
+		"@financial-times/n-gage": "^8.2.0",
+		"@storybook/addon-a11y": "^6.0.10",
+		"@storybook/addon-essentials": "6.0.10",
+		"@storybook/react": "^6.0.10",
+		"@sucrase/jest-plugin": "^2.0.0",
+		"chai": "^4.2.0",
+		"check-engines": "^1.5.0",
+		"enzyme": "^3.10.0",
+		"enzyme-adapter-react-16": "^1.15.1",
+		"eslint": "^8.1.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-jest": "^25.2.4",
+		"eslint-plugin-react": "^7.26.1",
+		"fetch-mock": "^7.2.0",
+		"jest": "^26.0.0",
+		"jest-serializer-html": "^7.0.0",
+		"jsdom": "15.1.0",
+		"lint-staged": "^11.2.6",
+		"mocha": "5.1.1",
+		"node-sass": "4.14.1",
+		"pa11y-ci": "2.1.1",
+		"postcss": "^7.0.32",
+		"prettier": "2.4.1",
+		"prop-types": "15.7.2",
+		"proxyquire": "2.1.0",
+		"react": "16.14.0",
+		"react-dom": "16.14.0",
+		"react-is": "^16.13.1",
+		"sass-loader": "^9.0.3",
+		"sinon": "6.3.5",
+		"snyk": "1.230.7"
+	},
+	"engines": {
+		"node": "12.x || 14.x",
+		"npm": "7.x || 8.x"
+	},
+	"lint-staged": {
+		"**/*.{js,jsx,json,scss}": "prettier --write",
+		"**/*.{js,jsx}": "eslint --fix"
+	},
+	"husky": {
+		"hooks": {
+			"commit-msg": "node_modules/.bin/secret-squirrel-commitmsg",
+			"pre-commit": "node_modules/.bin/secret-squirrel && npm run lint",
+			"pre-push": "make test"
+		}
+	},
+	"peerDependencies": {
+		"@financial-times/o-buttons": "^7.5.0",
+		"@financial-times/o-colors": "^6.4.2",
+		"@financial-times/o-expander": "^6.2.2",
+		"@financial-times/o-forms": "^9.3.1",
+		"@financial-times/o-grid": "^6.1.5",
+		"@financial-times/o-header-services": "^5.2.2",
+		"@financial-times/o-icons": "^7.2.1",
+		"@financial-times/o-layout": "^5.2.2",
+		"@financial-times/o-loading": "^5.2.1",
+		"@financial-times/o-message": "^5.2.1",
+		"@financial-times/o-normalise": "^3.2.2",
+		"@financial-times/o-social-follow": "^1.0.0",
+		"@financial-times/o-stepped-progress": "^4.0.2",
+		"@financial-times/o-typography": "^7.3.1"
+	}
 }

@@ -1,3 +1,16 @@
+@import '@financial-times/o-social-follow/main';
+
+@include oSocialFollow(
+	$opts: (
+		'icons': (
+			'twitter',
+			'facebook',
+			'linkedin',
+			'instagram',
+		),
+	)
+);
+
 @mixin ncfConfirmation() {
 	&__confirmation {
 		&--message {
