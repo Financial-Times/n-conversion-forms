@@ -71,17 +71,17 @@
 				max-width: 260px;
 			}
 		}
-
-		.icon-myft::before {
-			content: '';
-			display: inline-block;
-			margin-left: 0.5rem;
-			height: 1rem;
-			width: 3rem;
-			vertical-align: middle;
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/ftlogo:brand-myft?format=svg&source=next-subscribe&tint=%2333302E%2C%2333302E&width=28&height=16');
-		}
 	}
+}
+
+.icon-myft::before {
+	content: '';
+	display: inline-block;
+	margin-left: 0.5rem;
+	height: 1rem;
+	width: 3rem;
+	vertical-align: middle;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/ftlogo:brand-myft?format=svg&source=next-subscribe&tint=%2333302E%2C%2333302E&width=28&height=16');
 }
