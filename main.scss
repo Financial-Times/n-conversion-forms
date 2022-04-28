@@ -23,6 +23,7 @@
 @import './styles/graduation-date';
 @import './styles/lite-subs-confirmation';
 @import './styles/google-sign-in';
+@import './styles/confirmation';
 
 @include oTypography();
 @include oFonts();
@@ -58,7 +59,7 @@
 		height: 0;
 		left: 0;
 		top: 0;
-		border: 1px solid rgba(0, 0, 0, 0.15);
+		border-top: thin solid rgba(0, 0, 0, 0.15);
 	}
 
 	&__wrapper {
@@ -67,6 +68,14 @@
 
 		@include oGridRespondTo($from: S) {
 			padding: 50px;
+		}
+	}
+
+	&__margin {
+		margin: 20px 0;
+
+		@include oGridRespondTo($from: S) {
+			margin: 50px;
 		}
 	}
 
@@ -176,6 +185,7 @@
 
 		&--confirmation {
 			@include oTypographySerif($scale: 3);
+			margin: oSpacingByName('s6') 0;
 		}
 	}
 
@@ -435,6 +445,7 @@
 	@include ncfAcceptTermsList();
 	@include ncfGraduationDate();
 	@include ncfLiteSubsConfirmation();
+	@include ncfConfirmation();
 
 	&__hidden {
 		display: none !important;

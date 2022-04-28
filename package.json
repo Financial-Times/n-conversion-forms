@@ -98,6 +98,7 @@
     "@financial-times/o-loading": "^5.2.1",
     "@financial-times/o-message": "^5.2.1",
     "@financial-times/o-normalise": "^3.2.2",
+    "@financial-times/o-social-follow": "^1.0.0",
     "@financial-times/o-stepped-progress": "^4.0.2",
     "@financial-times/o-typography": "^7.3.1"
   }

@@ -1,0 +1,88 @@
+@import '@financial-times/o-social-follow/main';
+@import '@financial-times/o-grid/main';
+
+@include oSocialFollow(
+	$opts: (
+		'icons': (
+			'twitter',
+			'facebook',
+			'linkedin',
+			'instagram',
+		),
+	)
+);
+
+@mixin ncfConfirmation() {
+	&__confirmation {
+		&--message {
+			max-width: 304px;
+			margin: auto;
+		}
+
+		&--desktop {
+			@include oGridRespondTo($until: L) {
+				display: none;
+			}
+		}
+
+		&--mobile {
+			@include oGridRespondTo(L) {
+				display: none;
+			}
+		}
+
+		&--links {
+			display: grid;
+			grid-template-rows: 1fr 1fr;
+			gap: oSpacingByName('s6');
+
+			@media (min-width: 980px) {
+				grid-template-rows: unset;
+				grid-template-columns: 1fr 1fr;
+				gap: oSpacingByName('s8');
+			}
+		}
+
+		&--socials {
+			@media (min-width: 980px) {
+				padding: oSpacingByName('s6') oSpacingByName('s4');
+			}
+		}
+
+		&--alerts {
+			display: flex;
+			flex-direction: column;
+			padding: oSpacingByName('s6') oSpacingByName('s4');
+			background-color: oColorsByName('white-60');
+
+			a {
+				color: oColorsByName('black-90');
+				border-color: currentColor;
+				position: sticky;
+				top: 100vh;
+			}
+		}
+
+		&--finish {
+			display: block;
+			margin: 4rem auto 0;
+			width: 100%;
+
+			@media (min-width: 740px) {
+				max-width: 260px;
+			}
+		}
+	}
+}
+
+.icon-myft::before {
+	content: '';
+	display: inline-block;
+	margin-left: 0.5rem;
+	height: 1rem;
+	width: 3rem;
+	vertical-align: middle;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/ftlogo:brand-myft?format=svg&source=next-subscribe&tint=%2333302E%2C%2333302E&width=28&height=16');
+}
