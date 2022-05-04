@@ -42,7 +42,7 @@ export function RegistrationConfirmation ({
 			<div className="ncf__center ncf__margin">
 				<div className="ncf__icon ncf__icon--tick ncf__icon--large"></div>
 				<h1 className="ncf__header ncf__header--confirmation">Success</h1>
-				<p className="ncf__paragraph ncf__confirmation--message">
+				<p className="ncf__confirmation--message">
 					We’ve sent confirmation to {email}.
 				</p>
 			</div>

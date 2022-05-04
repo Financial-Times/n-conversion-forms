@@ -35,6 +35,7 @@
 			display: grid;
 			grid-template-rows: 1fr 1fr;
 			gap: oSpacingByName('s4');
+			margin-top: oSpacingByName('s6');
 
 			@include oGridRespondTo(M) {
 				grid-template-rows: unset;
@@ -55,7 +56,7 @@
 				grid-template-columns: 1fr 1fr;
 				gap: oSpacingByName('s6');
 				margin: auto;
-				max-width: 300px;
+				max-width: 256px;
 			}
 		}
 
@@ -70,7 +71,7 @@
 		&--alerts {
 			display: flex;
 			flex-direction: column;
-			padding: oSpacingByName('s6') oSpacingByName('s4');
+			padding: 24px 20px;
 			background-color: oColorsByName('white-60');
 
 			a {
@@ -83,7 +84,7 @@
 
 		&--finish {
 			display: block;
-			margin: oSpacingByName('s8') auto 0;
+			margin: 48px auto 0;
 			width: 100%;
 
 			@include oGridRespondTo(M) {
