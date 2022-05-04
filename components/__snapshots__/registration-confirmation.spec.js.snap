@@ -8,7 +8,7 @@ exports[`RegistrationConfirmation renders with a custom email 1`] = `
     <h1 class="ncf__header ncf__header--confirmation">
       Success
     </h1>
-    <p class="ncf__paragraph ncf__confirmation--message">
+    <p class="ncf__confirmation--message">
       We’ve sent confirmation to test@example.com.
     </p>
   </div>
@@ -133,7 +133,7 @@ exports[`RegistrationConfirmation renders with default props 1`] = `
     <h1 class="ncf__header ncf__header--confirmation">
       Success
     </h1>
-    <p class="ncf__paragraph ncf__confirmation--message">
+    <p class="ncf__confirmation--message">
       We’ve sent confirmation to your email.
     </p>
   </div>
