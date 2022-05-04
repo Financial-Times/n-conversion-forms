@@ -33,7 +33,10 @@ const STORES = [
 	},
 ];
 
-export function RegistrationConfirmation ({ email = EMAIL_DEFAULT_TEXT }) {
+export function RegistrationConfirmation ({
+	email = EMAIL_DEFAULT_TEXT,
+	returnUrl = '/',
+}) {
 	return (
 		<div className="ncf">
 			<div className="ncf__center ncf__margin">
@@ -104,7 +107,7 @@ export function RegistrationConfirmation ({ email = EMAIL_DEFAULT_TEXT }) {
 						for the most important topics and additional newsletters
 					</p>
 					<a
-						href={'/myft'}
+						href="/myft"
 						className="margin-top-x4 ncf__button ncf__button--secondary"
 						data-trackable="register-personalise-my-alerts"
 					>
@@ -114,7 +117,7 @@ export function RegistrationConfirmation ({ email = EMAIL_DEFAULT_TEXT }) {
 			</div>
 
 			<a
-				href={'/'}
+				href={returnUrl}
 				target="_parent"
 				className="ncf__confirmation--finish ncf__button ncf__button--submit"
 				data-trackable="register-finish"
