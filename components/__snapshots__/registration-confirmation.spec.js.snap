@@ -20,61 +20,87 @@ exports[`RegistrationConfirmation renders with a custom email 1`] = `
         Breaking news alerts, direct to your lock screen
       </b>
       <p class="ncf__confirmation--mobile">
-        Find us in the app and google play stores or follow us on our socials
+        Download our apps or follow us on our socials
       </p>
       <p class="ncf__confirmation--desktop">
         Find us in the app and google play stores or follow us on our socials
       </p>
-      <section class="o-social-follow"
-               aria-label="Follow on social media"
-      >
-        <a href="https://www.instagram.com/financialtimes"
-           class="o-social-follow-icon o-social-follow-icon--instagram"
-           target="_blank"
-           rel="noopener noreferrer"
-           data-trackable="register-social-instagram"
+      <div class="ncf__confirmation--badges">
+        <div class="o-social-follow"
+             aria-label="Follow on social media"
         >
-          <span class="o-social-follow-icon__label">
-            on instagram
-          </span>
-        </a>
-        <a href="https://www.linkedin.com/company/financial-times"
-           class="o-social-follow-icon o-social-follow-icon--linkedin"
-           target="_blank"
-           rel="noopener noreferrer"
-           data-trackable="register-social-linkedin"
+          <a href="https://www.instagram.com/financialtimes"
+             class="o-social-follow-icon o-social-follow-icon--instagram"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-instagram"
+          >
+            <span class="o-social-follow-icon__label">
+              on instagram
+            </span>
+          </a>
+          <a href="https://www.linkedin.com/company/financial-times"
+             class="o-social-follow-icon o-social-follow-icon--linkedin"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-linkedin"
+          >
+            <span class="o-social-follow-icon__label">
+              on linkedin
+            </span>
+          </a>
+          <a href="https://twitter.com/FT"
+             class="o-social-follow-icon o-social-follow-icon--twitter"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-twitter"
+          >
+            <span class="o-social-follow-icon__label">
+              on twitter
+            </span>
+          </a>
+          <a href="https://www.facebook.com/financialtimes"
+             class="o-social-follow-icon o-social-follow-icon--facebook"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-facebook"
+          >
+            <span class="o-social-follow-icon__label">
+              on facebook
+            </span>
+          </a>
+        </div>
+        <div class="ncf__confirmation--mobile ncf__confirmation--app-badges"
+             aria-label="Download the app"
         >
-          <span class="o-social-follow-icon__label">
-            on linkedin
-          </span>
-        </a>
-        <a href="https://twitter.com/FT"
-           class="o-social-follow-icon o-social-follow-icon--twitter"
-           target="_blank"
-           rel="noopener noreferrer"
-           data-trackable="register-social-twitter"
-        >
-          <span class="o-social-follow-icon__label">
-            on twitter
-          </span>
-        </a>
-        <a href="https://www.facebook.com/financialtimes"
-           class="o-social-follow-icon o-social-follow-icon--facebook"
-           target="_blank"
-           rel="noopener noreferrer"
-           data-trackable="register-social-facebook"
-        >
-          <span class="o-social-follow-icon__label">
-            on facebook
-          </span>
-        </a>
-      </section>
+          <a href="https://apps.apple.com/app/apple-store/id1200842933"
+             class="ncf-icon ncf-icon--apple"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-app-apple"
+          >
+            <span class="o-social-follow-icon__label">
+              on apple
+            </span>
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.ft.news"
+             class="ncf-icon ncf-icon--android"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-app-android"
+          >
+            <span class="o-social-follow-icon__label">
+              on android
+            </span>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="ncf__confirmation--alerts">
       <b>
         Set up email alerts in
         <span aria-label="myFT"
-              class="icon-myft"
+              class="ncf-icon ncf-icon--myft"
         >
         </span>
       </b>
@@ -119,61 +145,87 @@ exports[`RegistrationConfirmation renders with default props 1`] = `
         Breaking news alerts, direct to your lock screen
       </b>
       <p class="ncf__confirmation--mobile">
-        Find us in the app and google play stores or follow us on our socials
+        Download our apps or follow us on our socials
       </p>
       <p class="ncf__confirmation--desktop">
         Find us in the app and google play stores or follow us on our socials
       </p>
-      <section class="o-social-follow"
-               aria-label="Follow on social media"
-      >
-        <a href="https://www.instagram.com/financialtimes"
-           class="o-social-follow-icon o-social-follow-icon--instagram"
-           target="_blank"
-           rel="noopener noreferrer"
-           data-trackable="register-social-instagram"
+      <div class="ncf__confirmation--badges">
+        <div class="o-social-follow"
+             aria-label="Follow on social media"
         >
-          <span class="o-social-follow-icon__label">
-            on instagram
-          </span>
-        </a>
-        <a href="https://www.linkedin.com/company/financial-times"
-           class="o-social-follow-icon o-social-follow-icon--linkedin"
-           target="_blank"
-           rel="noopener noreferrer"
-           data-trackable="register-social-linkedin"
+          <a href="https://www.instagram.com/financialtimes"
+             class="o-social-follow-icon o-social-follow-icon--instagram"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-instagram"
+          >
+            <span class="o-social-follow-icon__label">
+              on instagram
+            </span>
+          </a>
+          <a href="https://www.linkedin.com/company/financial-times"
+             class="o-social-follow-icon o-social-follow-icon--linkedin"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-linkedin"
+          >
+            <span class="o-social-follow-icon__label">
+              on linkedin
+            </span>
+          </a>
+          <a href="https://twitter.com/FT"
+             class="o-social-follow-icon o-social-follow-icon--twitter"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-twitter"
+          >
+            <span class="o-social-follow-icon__label">
+              on twitter
+            </span>
+          </a>
+          <a href="https://www.facebook.com/financialtimes"
+             class="o-social-follow-icon o-social-follow-icon--facebook"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-facebook"
+          >
+            <span class="o-social-follow-icon__label">
+              on facebook
+            </span>
+          </a>
+        </div>
+        <div class="ncf__confirmation--mobile ncf__confirmation--app-badges"
+             aria-label="Download the app"
         >
-          <span class="o-social-follow-icon__label">
-            on linkedin
-          </span>
-        </a>
-        <a href="https://twitter.com/FT"
-           class="o-social-follow-icon o-social-follow-icon--twitter"
-           target="_blank"
-           rel="noopener noreferrer"
-           data-trackable="register-social-twitter"
-        >
-          <span class="o-social-follow-icon__label">
-            on twitter
-          </span>
-        </a>
-        <a href="https://www.facebook.com/financialtimes"
-           class="o-social-follow-icon o-social-follow-icon--facebook"
-           target="_blank"
-           rel="noopener noreferrer"
-           data-trackable="register-social-facebook"
-        >
-          <span class="o-social-follow-icon__label">
-            on facebook
-          </span>
-        </a>
-      </section>
+          <a href="https://apps.apple.com/app/apple-store/id1200842933"
+             class="ncf-icon ncf-icon--apple"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-app-apple"
+          >
+            <span class="o-social-follow-icon__label">
+              on apple
+            </span>
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.ft.news"
+             class="ncf-icon ncf-icon--android"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-app-android"
+          >
+            <span class="o-social-follow-icon__label">
+              on android
+            </span>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="ncf__confirmation--alerts">
       <b>
         Set up email alerts in
         <span aria-label="myFT"
-              class="icon-myft"
+              class="ncf-icon ncf-icon--myft"
         >
         </span>
       </b>

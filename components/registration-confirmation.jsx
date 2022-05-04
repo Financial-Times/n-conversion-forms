@@ -22,6 +22,17 @@ const SOCIALS = [
 	},
 ];
 
+const STORES = [
+	{
+		name: 'apple',
+		link: 'https://apps.apple.com/app/apple-store/id1200842933',
+	},
+	{
+		name: 'android',
+		link: 'https://play.google.com/store/apps/details?id=com.ft.news',
+	},
+];
+
 export function RegistrationConfirmation ({ email = EMAIL_DEFAULT_TEXT }) {
 	return (
 		<div className="ncf">
@@ -39,37 +50,53 @@ export function RegistrationConfirmation ({ email = EMAIL_DEFAULT_TEXT }) {
 				<div className="ncf__confirmation--socials">
 					<b>Breaking news alerts, direct to your lock screen</b>
 					<p className="ncf__confirmation--mobile">
-						{/* TODO: Once the store links are done, switch this sentence */}
-						{/* Download our apps or follow us on our socials */}
-						Find us in the app and google play stores or follow us on our
-						socials
+						Download our apps or follow us on our socials
 					</p>
 					<p className="ncf__confirmation--desktop">
 						Find us in the app and google play stores or follow us on our
 						socials
 					</p>
-					<section
-						className="o-social-follow"
-						aria-label="Follow on social media"
-					>
-						{SOCIALS.map(({ name, link }) => (
-							<a
-								key={name}
-								href={link}
-								className={`o-social-follow-icon o-social-follow-icon--${name}`}
-								target="_blank"
-								rel="noopener noreferrer"
-								data-trackable={`register-social-${name}`}
-							>
-								<span className="o-social-follow-icon__label">on {name}</span>
-							</a>
-						))}
-					</section>
+					<div className="ncf__confirmation--badges">
+						<div
+							className="o-social-follow"
+							aria-label="Follow on social media"
+						>
+							{SOCIALS.map(({ name, link }) => (
+								<a
+									key={name}
+									href={link}
+									className={`o-social-follow-icon o-social-follow-icon--${name}`}
+									target="_blank"
+									rel="noopener noreferrer"
+									data-trackable={`register-social-${name}`}
+								>
+									<span className="o-social-follow-icon__label">on {name}</span>
+								</a>
+							))}
+						</div>
+						<div
+							className="ncf__confirmation--mobile ncf__confirmation--app-badges"
+							aria-label="Download the app"
+						>
+							{STORES.map(({ name, link }) => (
+								<a
+									key={name}
+									href={link}
+									className={`ncf-icon ncf-icon--${name}`}
+									target="_blank"
+									rel="noopener noreferrer"
+									data-trackable={`register-app-${name}`}
+								>
+									<span className="o-social-follow-icon__label">on {name}</span>
+								</a>
+							))}
+						</div>
+					</div>
 				</div>
 				<div className="ncf__confirmation--alerts">
 					<b>
 						Set up email alerts in
-						<span aria-label="myFT" className="icon-myft" />
+						<span aria-label="myFT" className="ncf-icon ncf-icon--myft" />
 					</b>
 
 					<p>
