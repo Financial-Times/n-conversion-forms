@@ -615,6 +615,7 @@ exports[`PaymentType render with isSingleTerm 1`] = `
            id="payFasterNextTime"
            name="payFasterNextTime"
            value="true"
+           checked
     >
     <span class="o-forms-input__label">
       Use these details to pay faster next time
