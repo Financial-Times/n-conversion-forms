@@ -228,6 +228,7 @@ export function PaymentType ({
 		name: 'payFasterNextTime',
 		value: 'true',
 		required: false,
+		checked: true,
 		...(isSingleTermChecked && { defaultChecked: true }),
 	};
 
