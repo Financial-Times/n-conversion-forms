@@ -14,25 +14,80 @@ export const Basic = (args) => (
 		</Fieldset>
 	</div>
 );
+
 Basic.args = {
 	options: [
 		{
-			name: 'monthly',
-			price: '£49.99',
-			value: 49.99,
-			isTrial: false,
-			discount: '33%',
-			selected: false,
+		  'name': '2 yearly',
+		  'isTrial': true,
+		  'discount': '',
+		  'selected': false,
+		  'price': '$645.00',
+		  'trialPrice': '$100.00',
+		  'trialDuration': 'Trial period',
+		  'monthlyPrice': '0',
+		  'amount': '645.00',
+		  'trialAmount': 100,
+		  'value': 'P2Y',
+		  'currency': 'USD'
 		},
 		{
-			name: 'annual',
-			price: '£299.99',
-			value: 299.99,
-			isTrial: false,
-			discount: null,
-			selected: true,
+			'name': '3 yearly',
+			'isTrial': false,
+			'discount': '',
+			'selected': false,
+			'price': '$909.00',
+			'trialPrice': '$0.00',
+			'trialDuration': '',
+			'monthlyPrice': '0',
+			'amount': '909.00',
+			'trialAmount': null,
+			'value': 'P3Y',
+			'currency': 'USD'
+		  },
+		{
+		  'name': '6 monthly',
+		  'isTrial': false,
+		  'discount': '',
+		  'selected': false,
+		  'price': '$229.00',
+		  'trialPrice': '$0.00',
+		  'trialDuration': '',
+		  'monthlyPrice': '0',
+		  'amount': '229.00',
+		  'trialAmount': null,
+		  'value': 'P6M',
+		  'currency': 'USD'
 		},
-	],
+		{
+		  'name': 'annual',
+		  'isTrial': false,
+		  'discount': '',
+		  'selected': true,
+		  'price': '$385.00',
+		  'trialPrice': '$0.00',
+		  'trialDuration': '',
+		  'monthlyPrice': '$32.09',
+		  'amount': '385.00',
+		  'trialAmount': null,
+		  'value': 'P1Y',
+		  'currency': 'USD'
+		},
+		{
+		  'name': 'quarterly',
+		  'isTrial': false,
+		  'discount': '',
+		  'selected': false,
+		  'price': '$95.00',
+		  'trialPrice': '$0.00',
+		  'trialDuration': '',
+		  'monthlyPrice': '$31.67',
+		  'amount': '95.00',
+		  'trialAmount': null,
+		  'value': 'P3M',
+		  'currency': 'USD'
+		}
+	  ]
 };
 
 export const FixedTermOffer = (args) => (
@@ -51,7 +106,7 @@ FixedTermOffer.args = {
 		},
 	],
 	isFixedTermOffer: true,
-	displayName: 'Mix & Match',
+	offerDisplayName: 'Mix & Match',
 };
 
 export const RenewOffers = (args) => (
