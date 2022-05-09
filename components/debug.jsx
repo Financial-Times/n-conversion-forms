@@ -8,18 +8,19 @@ export function Debug ({ isTest = false, showHelpers = false, links = {} }) {
 	// entirely this component should be rethought.
 	const testEnvironment = `
 		<span class="ncf__debug-environment">
-			<a class="ncf__button ncf__button--inverse ncf__debug-button--test" onclick="setTestEnvironment('off');"><strong>TEST</strong> relax you are using the test API</a>
+			<a class="ncf__button ncf__button--debug ncf__button--inverse ncf__debug-button--test" onclick="setTestEnvironment('off');"><strong>TEST</strong> relax you are using the test API</a>
 		</span>
 	`;
 	const productionEnvironment = `
 		<span class="ncf__debug-environment">
-			<a class="ncf__button ncf__button--inverse ncf__debug-button--production" onclick="setTestEnvironment('on');"><strong>PRODUCTION</strong> careful you are using the production API</a>
+			<a class="ncf__button ncf__button--debug ncf__button--inverse ncf__debug-button--production" onclick="setTestEnvironment('on');"><strong>PRODUCTION</strong> careful you are using the production API</a>
 		</span>
 	`;
 	const testCards = `
-		<button id="ncf-copy-uk-visa" class="ncf__button ncf__button--inverse" onclick="copyToClipboard('ukVisa');" title="Copy UK Visa card number to clipboard">UK Visa</button>
-		<button id="ncf-copy-us-visa" class="ncf__button ncf__button--inverse" onclick="copyToClipboard('usVisa');" title="Copy US Visa card number to clipboard">US Visa</button>
-		<button id="ncf-copy-us-amex" class="ncf__button ncf__button--inverse" onclick="copyToClipboard('usAmex');" title="Copy US Amex card number to clipboard">US Amex</button>
+		<button id="ncf-copy-visa-checkout-card" class="ncf__button ncf__button--debug ncf__button--inverse" onclick="copyToClipboard('checkoutVisa');" title="Copy Checkout Visa test card number to clipboard">EU Visa (cvv:100)</button>
+		<button id="ncf-copy-visa-checkout-3ds" class="ncf__button ncf__button--debug ncf__button--inverse" onclick="copyToClipboard('checkout3dsChallenge');" title="Copy Checkout cvv number (default success) to clipboard">EU 3ds challenge</button>
+		<button id="ncf-copy-visa-chase-card" class="ncf__button ncf__button--debug ncf__button--inverse" onclick="copyToClipboard('chaseVisa');" title="Copy Chase card number to clipboard">US Visa (exp:1230,cvv:111)</button>
+		<button id="ncf-link-checkout-cards" class="ncf__button ncf__button--debug ncf__button--inverse" onclick="window.open('https://www.checkout.com/docs/testing/test-card-numbers#Credit_cards', '_blank');" title="Checkout test cards documentation">Doc:Checkout</button>
 	`;
 	const linksString = Object.keys(links).map(
 		(link) =>
@@ -27,9 +28,9 @@ export function Debug ({ isTest = false, showHelpers = false, links = {} }) {
 	);
 	const helpers = `
 		<span class="ncf__debug-helpers">
-			<button class="ncf__button ncf__button--inverse" onclick="logout();" title="Logout and refresh">Logout</button>
-			<button class="ncf__button ncf__button--inverse" onclick="fillForm();" title="Fill form with debug data">Fill</button>
-			<button class="ncf__button ncf__button--inverse" onclick="fillForm(); submitForm();" title="Fill form with debug data and submit">Fill &amp; Submit</button>
+			<button class="ncf__button ncf__button--debug ncf__button--inverse" onclick="logout();" title="Logout and refresh">Logout</button>
+			<button class="ncf__button ncf__button--debug ncf__button--inverse" onclick="fillForm();" title="Fill form with debug data">Fill</button>
+			<button class="ncf__button ncf__button--debug ncf__button--inverse" onclick="fillForm(); submitForm();" title="Fill form with debug data and submit">Fill &amp; Submit</button>
 			${isTest ? testCards : ''}
 			${links.length ? linksString : ''}
 		</span>
@@ -55,7 +56,7 @@ export function Debug ({ isTest = false, showHelpers = false, links = {} }) {
 		GBR: 'EC4M9BT',
 		USA: '10028',
 		CAN: 'K0E 9Z9'
-	}
+	};
 
 	var debugData = {
 		billingCity: 'London',
@@ -79,9 +80,12 @@ export function Debug ({ isTest = false, showHelpers = false, links = {} }) {
 		postCode: postcodeByCountry[COUNTRY_CODE],
 		primaryTelephone: '0987654321',
 		responsibility: 'ADL',
-		ukVisa: '4111111111111111',
+		ukVisaWorldpay: '4111111111111111',
 		usAmex: '378282246310005',
-		usVisa: '4112344112344113'
+		usVisaWorldpay: '4112344112344113',
+		checkoutVisa: '4242424242424242',
+		checkout3dsChallenge: 'Checkout1!',
+		chaseVisa: '4011361100000010',
 	};
 
 	function logout () {
@@ -156,6 +160,9 @@ export function Debug ({ isTest = false, showHelpers = false, links = {} }) {
 	}
 	.ncf__debug-button--production {
 		background-color: #990000;
+	}
+	.ncf__button--debug {
+		padding: 0px 5px;
 	}
 	`,
 	};
