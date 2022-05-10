@@ -159,7 +159,8 @@ export function PaymentTerm ({
 			name: inputName,
 			value: option.value,
 			className:
-				'o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input',			...(option.selected && { defaultChecked: true }),
+				'o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input',
+			...(option.selected && { defaultChecked: true }),
 		};
 
 		const createDiscount = () => {
