@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import {
+	Period,
+	Monthly,
+} from '@financial-times/n-pricing';
+
 export function PaymentTerm ({
 	fieldId = 'paymentTermField',
 	inputName = 'paymentTerm',
@@ -13,9 +18,26 @@ export function PaymentTerm ({
 	largePrice = false,
 	optionsInARow = false,
 }) {
-	// returns period converted to time if found
-	// otherwise returns empty string to avoid show information not mapped
-	// period must come in the form of PxY (yearly) or PxM (montly) where x is the amount of years/months
+
+	/**
+	 * Compute monthly price for given term name
+	 * @param {number} amount price in number format
+	 * @param {string} currency country id of the currency
+	 * @param {string} period PxY (yearly) or PxM (montly) where x is the amount of years/months
+	 * @returns {string}
+	 */
+	 function getMontlyPriceFromPeriod (amount, currency, period) {
+		const periodObj = new Period(period);
+		const monthlyPrice = periodObj.calculatePrice('P1M', amount);
+		return new Monthly({ value: monthlyPrice, currency }).getAmount('monthly');
+	}
+
+	/**
+	 * returns period converted to time if found
+	 * otherwise returns empty string to avoid show information not mapped
+	 * @param {string} period PxY (yearly) or PxM (montly) where x is the amount of years/months
+	 * @returns {string}
+	 */
 	const getTimeFromPeriod = (period) => {
 		const freq = period.substring(period.length - 1) === 'Y' ? 'years' : 'months';
 		const amount = period.substring(1, period.length - 1);
@@ -24,18 +46,15 @@ export function PaymentTerm ({
 		);
 	};
 
-	// return monthly price calculated from price and based on period
-	// period must come in the form of PxY (yearly) or PxM (montly) where x is the amount of years/months
-	const getMontlyPriceFromPeriod = (price, period) => {
-		const currencySymbol = price.match(/^.*?(?=[0-9])/);
-		const amount = price.match(/[0-9].*/);
-		const quantity = period.substring(1, period.length - 1);
-		const monthlyPrice = period.substring(period.length - 1) === 'Y' ?
-			(Number(amount) / (quantity * 12)).toFixed(2) :
-			(Number(amount) / quantity).toFixed(2);
-		return (
-			`${currencySymbol}${monthlyPrice}`
-		);
+	const isValidPeriod = (period) => {
+		try {
+			// Period should throw an error if it is not properly provided
+			// in order to validate it, we just send in case type is string
+			new Period(typeof period === 'string' ? period : '');
+			return true;
+		} catch (e) {
+			return false;
+		}
 	};
 
 	const nameMap = {
@@ -130,7 +149,7 @@ export function PaymentTerm ({
 				</React.Fragment>
 			),
 			monthlyPrice: (monthlyPrice) =>
-				!!monthlyPrice && (
+				Boolean(monthlyPrice) && (
 					<span className="ncf__payment-term__equivalent-price">
 						That’s equivalent to{' '}
 						<span className="ncf__payment-term__monthly-price">{monthlyPrice}</span>{' '}
@@ -138,7 +157,7 @@ export function PaymentTerm ({
 					</span>
 				),
 			renewsText: (renewalPeriod) => (
-				!!renewalPeriod && (
+				Boolean(renewalPeriod) && (
 					<p className="ncf__payment-term__renews-text">
 						Renews every {renewalPeriod} unless cancelled
 					</p>
@@ -197,11 +216,11 @@ export function PaymentTerm ({
 					) : (
 						// this should cover the cases different than annual, quarterly and monthly
 						// for those containing period on option.value, render custom template, for the rest keep legacy render
-						typeof option.value === 'string' && !!(option.value.match(/^(P[0-9]+(M|Y))$/)) ?
+						isValidPeriod(option.value) ?
 							<div className="ncf__payment-term__description">
 								{nameMap['custom'].price(option.price)}
 								{nameMap['custom'].monthlyPrice(
-									option.monthlyPrice && option.monthlyPrice !== '0' ? Number(option.monthlyPrice) : getMontlyPriceFromPeriod(option.price, option.value)
+									option.monthlyPrice && option.monthlyPrice !== '0' ? Number(option.monthlyPrice) : getMontlyPriceFromPeriod(option.amount, option.currency, option.value)
 								)}
 								{nameMap['custom'].renewsText(getTimeFromPeriod(option.value))}
 							</div>
@@ -243,11 +262,12 @@ export function PaymentTerm ({
 				// annual, quarterly and monthly
 				if (nameMap[option.name]) {
 					return title;
+				}
 				// custom offer with period provided
-				} else if (typeof option.value === 'string' && !!(option.value.match(/^(P[0-9]+(M|Y))$/))) {
+				if (isValidPeriod(option.value)) {
 					return getTimeFromPeriod(option.value);
 				}
-				// this covers custom legacy cases, where period is not provided
+				// custom legacy cases, where period is not provided
 				return option.title;
 			};
 
