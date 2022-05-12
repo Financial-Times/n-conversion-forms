@@ -130,7 +130,7 @@ describe('PaymentTerm', () => {
 			<PaymentTerm
 				isFixedTermOffer={true}
 				options={options}
-				displayName="Mix & Match"
+				offerDisplayName="Mix & Match"
 			/>
 		);
 

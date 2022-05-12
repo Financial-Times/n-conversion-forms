@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import {
+	Period,
+	Monthly,
+} from '@financial-times/n-pricing';
+
 export function PaymentTerm ({
 	fieldId = 'paymentTermField',
 	inputName = 'paymentTerm',
@@ -8,11 +13,50 @@ export function PaymentTerm ({
 	isEpaper = false,
 	options = [],
 	isFixedTermOffer = false,
-	displayName,
+	offerDisplayName,
 	showLegal = true,
 	largePrice = false,
 	optionsInARow = false,
 }) {
+
+	/**
+	 * Compute monthly price for given term name
+	 * @param {number} amount price in number format
+	 * @param {string} currency country id of the currency
+	 * @param {string} period PxY (yearly) or PxM (montly) where x is the amount of years/months
+	 * @returns {string}
+	 */
+	 function getMontlyPriceFromPeriod (amount, currency, period) {
+		const periodObj = new Period(period);
+		const monthlyPrice = periodObj.calculatePrice('P1M', amount);
+		return new Monthly({ value: monthlyPrice, currency }).getAmount('monthly');
+	}
+
+	/**
+	 * returns period converted to time if found
+	 * otherwise returns empty string to avoid show information not mapped
+	 * @param {string} period PxY (yearly) or PxM (montly) where x is the amount of years/months
+	 * @returns {string}
+	 */
+	const getTimeFromPeriod = (period) => {
+		const freq = period.substring(period.length - 1) === 'Y' ? 'years' : 'months';
+		const amount = period.substring(1, period.length - 1);
+		return (
+			period ? `${amount} ${freq}` : ''
+		);
+	};
+
+	const isValidPeriod = (period) => {
+		try {
+			// Period should throw an error if it is not properly provided
+			// in order to validate it, we just send in case type is string
+			new Period(typeof period === 'string' ? period : '');
+			return true;
+		} catch (e) {
+			return false;
+		}
+	};
+
 	const nameMap = {
 		annual: {
 			title: 'Annual',
@@ -89,6 +133,37 @@ export function PaymentTerm ({
 				);
 			},
 		},
+		custom: {
+			price: (price) => (
+				<React.Fragment>
+					Single{' '}
+					<span className="ncf__payment-term__price ncf__strong">{price}</span>{' '}
+					payment
+				</React.Fragment>
+			),
+			trialPrice: (trialPrice, trialPeriod) => (
+				<React.Fragment>
+					Unless you cancel during your trial you will be billed{' '}
+					<span className="ncf__payment-term__price">{trialPrice}</span> per {trialPeriod}
+					after the trial period.
+				</React.Fragment>
+			),
+			monthlyPrice: (monthlyPrice) =>
+				Boolean(monthlyPrice) && (
+					<span className="ncf__payment-term__equivalent-price">
+						That’s equivalent to{' '}
+						<span className="ncf__payment-term__monthly-price">{monthlyPrice}</span>{' '}
+						per month
+					</span>
+				),
+			renewsText: (renewalPeriod) => (
+				Boolean(renewalPeriod) && (
+					<p className="ncf__payment-term__renews-text">
+						Renews every {renewalPeriod} unless cancelled
+					</p>
+				)
+			),
+		}
 	};
 	const createPaymentTerm = (option) => {
 		const className = classNames([
@@ -106,12 +181,7 @@ export function PaymentTerm ({
 				'o-forms-input__radio o-forms-input__radio--right ncf__payment-term__input',
 			...(option.selected && { defaultChecked: true }),
 		};
-		const showTrialCopyInTitle =
-			option.isTrial && !isPrintOrBundle && !isEpaper;
-		const defaultTitle = option.name ? nameMap[option.name].title : '';
-		const title = isFixedTermOffer
-			? `${displayName} - ${defaultTitle}`
-			: defaultTitle;
+
 		const createDiscount = () => {
 			return (
 				option.discount && (
@@ -121,6 +191,7 @@ export function PaymentTerm ({
 				)
 			);
 		};
+
 		const createDescription = () => {
 			return option.isTrial ? (
 				<div className="ncf__payment-term__description">
@@ -143,31 +214,67 @@ export function PaymentTerm ({
 							{/* <br />Save up to 25% when you pay annually */}
 						</div>
 					) : (
-						<div>
-							<span
-								className={largePrice ? 'ncf__payment-term__large-price' : ''}
-							>
-								{option.price}
-							</span>
-							{option.chargeOnText && (
-								<p className="ncf__payment-term__charge-on-text">
-									{option.chargeOnText}
-								</p>
-							)}
-						</div>
+						// this should cover the cases different than annual, quarterly and monthly
+						// for those containing period on option.value, render custom template, for the rest keep legacy render
+						isValidPeriod(option.value) ?
+							<div className="ncf__payment-term__description">
+								{nameMap['custom'].price(option.price)}
+								{nameMap['custom'].monthlyPrice(
+									option.monthlyPrice && option.monthlyPrice !== '0' ? Number(option.monthlyPrice) : getMontlyPriceFromPeriod(option.amount, option.currency, option.value)
+								)}
+								{nameMap['custom'].renewsText(getTimeFromPeriod(option.value))}
+							</div>
+							: (
+								<div>
+									<span className={largePrice ? 'ncf__payment-term__large-price' : ''}>
+										{option.price}
+									</span>
+									{option.chargeOnText && (
+										<p className="ncf__payment-term__charge-on-text">
+											{option.chargeOnText}
+										</p>
+									)}
+								</div>
+							)
 					)}
 				</React.Fragment>
 			);
 		};
 
-		const getDisplayName = () => {
-			let displayName = '';
+		const getTermDisplayName = () => {
+
+			const showTrialCopyInTitle =
+				option.isTrial && !isPrintOrBundle && !isEpaper;
+
+			const defaultTitle = (option.name && nameMap[option.name]) ? nameMap[option.name].title : '';
+
+			const title = isFixedTermOffer
+				? `${offerDisplayName} - ${defaultTitle}`
+				: defaultTitle;
+
+			let termDisplayName = '';
 			if (showTrialCopyInTitle) {
 				const termName = option.displayName ? option.displayName : 'Premium Digital';
-				displayName = `Trial: ${termName} - `;
+				termDisplayName = `Trial: ${termName} - `;
 			}
-			const termPeriod = nameMap[option.name] ? title : option.title;
-			return `${displayName}${termPeriod} `;
+
+			const getTermPeriod = () => {
+				// annual, quarterly and monthly
+				if (nameMap[option.name]) {
+					return title;
+				}
+				// custom offer with period provided
+				if (isValidPeriod(option.value)) {
+					return getTimeFromPeriod(option.value);
+				}
+				// custom legacy cases, where period is not provided
+				return option.title;
+			};
+
+			const termPeriod = getTermPeriod();
+			termDisplayName = `${termDisplayName}${termPeriod} `;
+
+			return termDisplayName;
 		};
 
 		return (
@@ -185,7 +292,7 @@ export function PaymentTerm ({
 							{ 'ncf__payment-term__title--large-price': largePrice },
 						])}
 					>
-						{getDisplayName()}
+						{getTermDisplayName()}
 						{option.subTitle && (
 							<span className="ncf__regular ncf__payment-term__sub-title">
 								{option.subTitle}
@@ -265,7 +372,7 @@ PaymentTerm.propTypes = {
 			selected: PropTypes.bool,
 			trialDuration: PropTypes.string,
 			trialPrice: PropTypes.string,
-			amount: PropTypes.number,
+			amount: PropTypes.string,
 			trialAmount: PropTypes.number,
 			value: PropTypes.string.isRequired,
 			monthlyPrice: PropTypes.string,
@@ -276,7 +383,7 @@ PaymentTerm.propTypes = {
 		})
 	),
 	isFixedTermOffer: PropTypes.bool,
-	displayName: PropTypes.string,
+	offerDisplayName: PropTypes.string,
 	showLegal: PropTypes.bool,
 	largePrice: PropTypes.bool,
 	optionsInARow: PropTypes.bool,
