@@ -5,7 +5,7 @@ exports[`Debug renders with default props 1`] = `""`;
 exports[`Debug renders with isTest 1`] = `
 <div class="ncf__debug-panel">
   <span class="ncf__debug-environment">
-    <a class="ncf__button ncf__button--inverse ncf__debug-button--test"
+    <a class="ncf__button ncf__button--debug ncf__button--inverse ncf__debug-button--test"
        onclick="setTestEnvironment('off');"
     >
       <strong>
@@ -30,7 +30,7 @@ exports[`Debug renders with isTest 1`] = `
 		GBR: 'EC4M9BT',
 		USA: '10028',
 		CAN: 'K0E 9Z9'
-	}
+	};
 
 	var debugData = {
 		billingCity: 'London',
@@ -54,9 +54,12 @@ exports[`Debug renders with isTest 1`] = `
 		postCode: postcodeByCountry[COUNTRY_CODE],
 		primaryTelephone: '0987654321',
 		responsibility: 'ADL',
-		ukVisa: '4111111111111111',
+		ukVisaWorldpay: '4111111111111111',
 		usAmex: '378282246310005',
-		usVisa: '4112344112344113'
+		usVisaWorldpay: '4112344112344113',
+		checkoutVisa: '4242424242424242',
+		checkout3dsChallenge: 'Checkout1!',
+		chaseVisa: '4011361100000010',
 	};
 
 	function logout () {
@@ -130,6 +133,9 @@ exports[`Debug renders with isTest 1`] = `
 	.ncf__debug-button--production {
 		background-color: #990000;
 	}
+	.ncf__button--debug {
+		padding: 0px 5px;
+	}
 </style>
 `;
 
@@ -138,7 +144,7 @@ exports[`Debug renders with links 1`] = `""`;
 exports[`Debug renders with showHelpers 1`] = `
 <div class="ncf__debug-panel">
   <span class="ncf__debug-environment">
-    <a class="ncf__button ncf__button--inverse ncf__debug-button--production"
+    <a class="ncf__button ncf__button--debug ncf__button--inverse ncf__debug-button--production"
        onclick="setTestEnvironment('on');"
     >
       <strong>
@@ -148,19 +154,19 @@ exports[`Debug renders with showHelpers 1`] = `
     </a>
   </span>
   <span class="ncf__debug-helpers">
-    <button class="ncf__button ncf__button--inverse"
+    <button class="ncf__button ncf__button--debug ncf__button--inverse"
             onclick="logout();"
             title="Logout and refresh"
     >
       Logout
     </button>
-    <button class="ncf__button ncf__button--inverse"
+    <button class="ncf__button ncf__button--debug ncf__button--inverse"
             onclick="fillForm();"
             title="Fill form with debug data"
     >
       Fill
     </button>
-    <button class="ncf__button ncf__button--inverse"
+    <button class="ncf__button ncf__button--debug ncf__button--inverse"
             onclick="fillForm(); submitForm();"
             title="Fill form with debug data and submit"
     >
@@ -183,7 +189,7 @@ exports[`Debug renders with showHelpers 1`] = `
 		GBR: 'EC4M9BT',
 		USA: '10028',
 		CAN: 'K0E 9Z9'
-	}
+	};
 
 	var debugData = {
 		billingCity: 'London',
@@ -207,9 +213,12 @@ exports[`Debug renders with showHelpers 1`] = `
 		postCode: postcodeByCountry[COUNTRY_CODE],
 		primaryTelephone: '0987654321',
 		responsibility: 'ADL',
-		ukVisa: '4111111111111111',
+		ukVisaWorldpay: '4111111111111111',
 		usAmex: '378282246310005',
-		usVisa: '4112344112344113'
+		usVisaWorldpay: '4112344112344113',
+		checkoutVisa: '4242424242424242',
+		checkout3dsChallenge: 'Checkout1!',
+		chaseVisa: '4011361100000010',
 	};
 
 	function logout () {
@@ -282,6 +291,9 @@ exports[`Debug renders with showHelpers 1`] = `
 	}
 	.ncf__debug-button--production {
 		background-color: #990000;
+	}
+	.ncf__button--debug {
+		padding: 0px 5px;
 	}
 </style>
 `;
