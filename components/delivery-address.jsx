@@ -24,6 +24,21 @@ export function DeliveryAddress ({
 		GBR: 'Address line 3',
 		USA: 'APT/FL/STE',
 		CAN: 'APT/FL/STE',
+		BEL: 'Address line 3',
+		DNK: 'Address line 3',
+		FIN: 'Address line 3',
+		DEU: 'Address line 3',
+		GRC: 'Address line 3',
+		ISL: 'Address line 3',
+		ITA: 'Address line 3',
+		LIE: 'Address line 3',
+		NLD: 'Address line 3',
+		NOR: 'Address line 3',
+		POL: 'Address line 3',
+		PRT: 'Address line 3',
+		ESP: 'Address line 3',
+		SWE: 'Address line 3',
+		CHE: 'Address line 3',
 	};
 
 	const addressLine3Prompt = {
@@ -34,12 +49,60 @@ export function DeliveryAddress ({
 	const addressLine3Placeholder = {
 		USA: 'e.g Apt 2C / FL 10 / STE 50',
 		CAN: 'e.g Apt 2C / FL 10 / STE 50',
+		BEL: ' ',
+		DNK: ' ',
+		FIN: ' ',
+		DEU: ' ',
+		GRC: ' ',
+		ISL: ' ',
+		ITA: ' ',
+		LIE: ' ',
+		NLD: ' ',
+		NOR: ' ',
+		POL: ' ',
+		PRT: ' ',
+		ESP: ' ',
+		SWE: ' ',
+		CHE: ' ',
 	};
 
 	const addressLine1Placeholder = {
 		GBR: 'e.g. 10 Elm Street',
 		USA: 'e.g. 10 Elm St.',
 		CAN: 'e.g. 36 Poirier Blvd.',
+		BEL: 'Street and House Number',
+		DNK: 'Street and House Number',
+		FIN: 'Street and House Number',
+		DEU: 'Street and House Number',
+		GRC: 'Street and House Number',
+		ISL: 'Street and House Number',
+		ITA: 'Street and House Number',
+		LIE: 'Street and House Number',
+		NLD: 'Street and House Number',
+		NOR: 'Street and House Number',
+		POL: 'Street and House Number',
+		PRT: 'Street and House Number',
+		ESP: 'Street and House Number',
+		SWE: 'Street and House Number',
+		CHE: 'Street and House Number',
+	};
+
+	const addressLine2Placeholder = {
+		BEL: 'Apt No./Floor/Building',
+		DNK: 'Apt No./Floor/Building',
+		FIN: 'Apt No./Floor/Building',
+		DEU: 'Apt No./Floor/Building',
+		GRC: 'Apt No./Floor/Building',
+		ISL: 'Apt No./Floor/Building',
+		ITA: 'Apt No./Floor/Building',
+		LIE: 'Apt No./Floor/Building',
+		NLD: 'Apt No./Floor/Building',
+		NOR: 'Apt No./Floor/Building',
+		POL: 'Apt No./Floor/Building',
+		PRT: 'Apt No./Floor/Building',
+		ESP: 'Apt No./Floor/Building',
+		SWE: 'Apt No./Floor/Building',
+		CHE: 'Apt No./Floor/Building',
 	};
 
 	const addressLine1 = (
@@ -86,7 +149,7 @@ export function DeliveryAddress ({
 					name="deliveryAddressLine2"
 					data-trackable="field-deliveryAddressLine2"
 					autoComplete="address-line2"
-					placeholder=""
+					placeholder={addressLine2Placeholder[country] || ''}
 					maxLength={50}
 					disabled={isDisabled}
 					defaultValue={line2}
@@ -149,6 +212,127 @@ export function DeliveryAddress ({
 				{addressLine2}{' '}
 			</>
 		),
+
+		BEL: (
+			<>
+				{' '}
+				{addressLine1}
+				{addressLine2}
+				{addressLine3}{' '}
+			</>
+		),
+		DNK:(
+			<>
+				{' '}
+				{addressLine1}
+				{addressLine2}
+				{addressLine3}{' '}
+			</>
+		),
+		FIN: (
+			<>
+				{' '}
+				{addressLine1}
+				{addressLine2}
+				{addressLine3}{' '}
+			</>
+		),
+		DEU: (
+			<>
+				{' '}
+				{addressLine1}
+				{addressLine2}
+				{addressLine3}{' '}
+			</>
+		),
+		GRC: (
+			<>
+				{' '}
+				{addressLine1}
+				{addressLine2}
+				{addressLine3}{' '}
+			</>
+		),
+		ISL: (
+			<>
+				{' '}
+				{addressLine1}
+				{addressLine2}
+				{addressLine3}{' '}
+			</>
+		),
+		ITA: (
+			<>
+				{' '}
+				{addressLine1}
+				{addressLine2}
+				{addressLine3}{' '}
+			</>
+		),
+		LIE: (
+			<>
+				{' '}
+				{addressLine1}
+				{addressLine2}
+				{addressLine3}{' '}
+			</>
+		),
+		NLD: (
+			<>
+				{' '}
+				{addressLine1}
+				{addressLine2}
+				{addressLine3}{' '}
+			</>
+		),
+		NOR: (
+			<>
+				{' '}
+				{addressLine1}
+				{addressLine2}
+				{addressLine3}{' '}
+			</>
+		),
+		POL: (
+			<>
+				{' '}
+				{addressLine1}
+				{addressLine2}
+				{addressLine3}{' '}
+			</>
+		),
+		PRT: (
+			<>
+				{' '}
+				{addressLine1}
+				{addressLine2}
+				{addressLine3}{' '}
+			</>
+		),
+		ESP: (
+			<>
+				{' '}
+				{addressLine1}
+				{addressLine2}
+				{addressLine3}{' '}
+			</>
+		),
+		SWE: (
+			<>
+				{' '}
+				{addressLine1}
+				{addressLine2}
+				{addressLine3}{' '}
+			</>
+		),
+		CHE: (
+			<>
+				{' '}
+				{addressLine1}
+				{addressLine2}
+				{addressLine3}{' '}
+			</>
+		),
 	};
 
 	return (
@@ -166,5 +350,5 @@ DeliveryAddress.propTypes = {
 	line3: PropTypes.string,
 	isDisabled: PropTypes.bool,
 	isHidden: PropTypes.bool,
-	country: PropTypes.oneOf(['GBR', 'USA', 'CAN']),
+	country: PropTypes.oneOf(['GBR', 'USA', 'CAN', 'BEL', 'DNK', 'FIN', 'DEU', 'GRC', 'ISL', 'ITA', 'LIE', 'NLD', 'NOR', 'POL', 'PRT', 'ESP', 'SWE', 'CHE']),
 };
