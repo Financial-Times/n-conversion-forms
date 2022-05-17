@@ -7,16 +7,19 @@ const deliveryAddressMap = {
 			CAN: 'e.g. 36 Poirier Blvd.',
 			CEMEA_V1: 'Street and House Number',
 			CEMEA_V2: 'House Number and Street',
+			APAC: 'Street name',
 		},
 		addressLine2Placeholder: {
 			CEMEA_V1: 'Apt No./Floor/Building',
 			CEMEA_V2: 'Apt No./Floor/Building',
+			APAC: 'House/Apartment/Building name',
 		},
 		addressLine3Placeholder: {
 			USA: 'e.g Apt 2C / FL 10 / STE 50',
 			CAN: 'e.g Apt 2C / FL 10 / STE 50',
 			CEMEA_V1: ' ',
 			CEMEA_V2: ' ',
+			APAC: 'District/County/Province/Ward',
 		},
 		addressLine3Title:  {
 			GBR: 'Address line 3',
@@ -71,6 +74,14 @@ const deliveryAddressMap = {
 						{addressLine2}
 						{addressLine3}{' '}
 					</>
+				),
+				APAC:(
+					<>
+						{' '}
+						{addressLine1}
+						{addressLine2}
+						{addressLine3}{' '}
+					</>
 				)
 			};
 			return addressLines[region];
@@ -83,16 +94,19 @@ const deliveryAddressMap = {
 			CAN: 'e.g. 36 Poirier Blvd.',
 			CEMEA_V1: 'Street and House Number',
 			CEMEA_V2: 'House Number and Street',
+			APAC: 'Street name',
 		},
 		addressLine2Placeholder: {
 			CEMEA_V1: 'Apt No./Floor/Building/Department',
 			CEMEA_V2: 'Apt No./Floor/Building/Department',
+			APAC: 'House/Apartment/Building name',
 		},
 		addressLine3Placeholder: {
 			USA: 'e.g Apt 2C / FL 10 / STE 50',
 			CAN: 'e.g Apt 2C / FL 10 / STE 50',
 			CEMEA_V1: 'Department name/job title',
 			CEMEA_V2: 'Department name/job title',
+			APAC: 'District/County/Province/Ward',
 		},
 		addressLine3Title:  {
 			GBR: 'Address line 3',
@@ -141,6 +155,14 @@ const deliveryAddressMap = {
 					</>
 				),
 				CEMEA_V2:(
+					<>
+						{' '}
+						{addressLine1}
+						{addressLine2}
+						{addressLine3}{' '}
+					</>
+				),
+				APAC:(
 					<>
 						{' '}
 						{addressLine1}

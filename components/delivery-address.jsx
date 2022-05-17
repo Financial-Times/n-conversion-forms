@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import deliveryAddressMap from '../helpers/deliveryAddressMap';
-const cemeaV1Countries = ['BEL','DNK','FIN', 'DEU', 'GRC', 'ISL', 'ITA', 'LIE', 'NLD', 'NOR', 'POL', 'PRT', 'ESP', 'SWE', 'CHE'];
+const cemeaV1Countries = ['AUT', 'BEL','DNK','FIN', 'DEU', 'GRC', 'ISL', 'ITA', 'LIE', 'NLD', 'NOR', 'POL', 'PRT', 'ESP', 'SWE', 'CHE', 'CZE', 'SVN', 'HUN', 'ROU', 'HRV', 'SVK', 'LTU', 'BGR', 'RUS', 'ZAF', 'QAT'];
 const cemeaV2Countries =['FRA', 'LUX', 'MCO'];
+const apacCountries = ['HKG', 'JPN', 'SGP', 'KOR', 'IND', 'TWN', 'MYS', 'CHN', 'PHL', 'THA', 'IDN'];
 
 export function DeliveryAddress ({
 	fieldId = 'deliveryAddressFields',
@@ -28,7 +29,9 @@ export function DeliveryAddress ({
 		region = 'CEMEA_V1';
 	} else if(cemeaV2Countries.includes(country)) {
 		region = 'CEMEA_V2';
-	} else{
+	} else if(apacCountries.includes(country)) {
+		region = 'APAC';
+	} else {
 		region = country;
 	}
 
@@ -136,6 +139,6 @@ DeliveryAddress.propTypes = {
 	line3: PropTypes.string,
 	isDisabled: PropTypes.bool,
 	isHidden: PropTypes.bool,
-	country: PropTypes.oneOf(['GBR', 'USA', 'CAN', 'BEL', 'DNK', 'FIN', 'DEU', 'GRC', 'ISL', 'ITA', 'LIE', 'NLD', 'NOR', 'POL', 'PRT', 'ESP', 'SWE', 'CHE']),
+	country: PropTypes.oneOf(['GBR', 'USA', 'CAN', ...cemeaV1Countries, ...cemeaV2Countries, ...apacCountries]),
 	addressType: PropTypes.oneOf(['home', 'company', 'pobox']),
 };
