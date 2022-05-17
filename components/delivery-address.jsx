@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import deliveryAddressMap from '../helpers/deliveryAddressMap';
+const cemeaV1Countries = ['BEL','DNK','FIN', 'DEU', 'GRC', 'ISL', 'ITA', 'LIE', 'NLD', 'NOR', 'POL', 'PRT', 'ESP', 'SWE', 'CHE'];
+const cemeaV2Countries =['FRA', 'LUX', 'MCO'];
 
 export function DeliveryAddress ({
 	fieldId = 'deliveryAddressFields',
@@ -11,99 +14,24 @@ export function DeliveryAddress ({
 	isDisabled = false,
 	isHidden = false,
 	country = 'GBR',
+	addressType = 'home',
 }) {
 	const divClassNames = classNames([{ ncf__hidden: isHidden }]);
-
+	let region;
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
 		{ 'o-forms-input--invalid': hasError },
 	]);
 
-	const addressLine3Title = {
-		GBR: 'Address line 3',
-		USA: 'APT/FL/STE',
-		CAN: 'APT/FL/STE',
-		BEL: 'Address line 3',
-		DNK: 'Address line 3',
-		FIN: 'Address line 3',
-		DEU: 'Address line 3',
-		GRC: 'Address line 3',
-		ISL: 'Address line 3',
-		ITA: 'Address line 3',
-		LIE: 'Address line 3',
-		NLD: 'Address line 3',
-		NOR: 'Address line 3',
-		POL: 'Address line 3',
-		PRT: 'Address line 3',
-		ESP: 'Address line 3',
-		SWE: 'Address line 3',
-		CHE: 'Address line 3',
-	};
+	if(cemeaV1Countries.includes(country)){
+		region = 'CEMEA_V1';
+	} else if(cemeaV2Countries.includes(country)) {
+		region = 'CEMEA_V2';
+	} else{
+		region = country;
+	}
 
-	const addressLine3Prompt = {
-		USA: 'Max. 6 characters. Please enter “Apartment 2C” as “Apt 2C”, “Floor 10 as FL 10”',
-		CAN: 'Max. 6 characters. Please enter “Apartment 2C” as “Apt 2C”, “Floor 10 as FL 10”',
-	};
-
-	const addressLine3Placeholder = {
-		USA: 'e.g Apt 2C / FL 10 / STE 50',
-		CAN: 'e.g Apt 2C / FL 10 / STE 50',
-		BEL: ' ',
-		DNK: ' ',
-		FIN: ' ',
-		DEU: ' ',
-		GRC: ' ',
-		ISL: ' ',
-		ITA: ' ',
-		LIE: ' ',
-		NLD: ' ',
-		NOR: ' ',
-		POL: ' ',
-		PRT: ' ',
-		ESP: ' ',
-		SWE: ' ',
-		CHE: ' ',
-	};
-
-	const addressLine1Placeholder = {
-		GBR: 'e.g. 10 Elm Street',
-		USA: 'e.g. 10 Elm St.',
-		CAN: 'e.g. 36 Poirier Blvd.',
-		BEL: 'Street and House Number',
-		DNK: 'Street and House Number',
-		FIN: 'Street and House Number',
-		DEU: 'Street and House Number',
-		GRC: 'Street and House Number',
-		ISL: 'Street and House Number',
-		ITA: 'Street and House Number',
-		LIE: 'Street and House Number',
-		NLD: 'Street and House Number',
-		NOR: 'Street and House Number',
-		POL: 'Street and House Number',
-		PRT: 'Street and House Number',
-		ESP: 'Street and House Number',
-		SWE: 'Street and House Number',
-		CHE: 'Street and House Number',
-	};
-
-	const addressLine2Placeholder = {
-		BEL: 'Apt No./Floor/Building',
-		DNK: 'Apt No./Floor/Building',
-		FIN: 'Apt No./Floor/Building',
-		DEU: 'Apt No./Floor/Building',
-		GRC: 'Apt No./Floor/Building',
-		ISL: 'Apt No./Floor/Building',
-		ITA: 'Apt No./Floor/Building',
-		LIE: 'Apt No./Floor/Building',
-		NLD: 'Apt No./Floor/Building',
-		NOR: 'Apt No./Floor/Building',
-		POL: 'Apt No./Floor/Building',
-		PRT: 'Apt No./Floor/Building',
-		ESP: 'Apt No./Floor/Building',
-		SWE: 'Apt No./Floor/Building',
-		CHE: 'Apt No./Floor/Building',
-	};
 
 	const addressLine1 = (
 		<label
@@ -120,7 +48,7 @@ export function DeliveryAddress ({
 					name="deliveryAddressLine1"
 					data-trackable="field-deliveryAddressLine1"
 					autoComplete="address-line1"
-					placeholder={addressLine1Placeholder[country]}
+					placeholder={deliveryAddressMap[addressType].addressLine1Placeholder[region]}
 					maxLength={50}
 					aria-required="true"
 					required
@@ -149,7 +77,7 @@ export function DeliveryAddress ({
 					name="deliveryAddressLine2"
 					data-trackable="field-deliveryAddressLine2"
 					autoComplete="address-line2"
-					placeholder={addressLine2Placeholder[country] || ''}
+					placeholder={deliveryAddressMap[addressType].addressLine2Placeholder[region] || ''}
 					maxLength={50}
 					disabled={isDisabled}
 					defaultValue={line2}
@@ -165,10 +93,10 @@ export function DeliveryAddress ({
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">
-					{addressLine3Title[country]}
+					{deliveryAddressMap[addressType].addressLine3Title[region]}
 				</span>
 				<span className="o-forms-title__prompt">
-					{addressLine3Prompt[country]}
+					{deliveryAddressMap[addressType].addressLine3Prompt[region]}
 				</span>
 			</span>
 			<span className={inputWrapperClassNames}>
@@ -178,7 +106,7 @@ export function DeliveryAddress ({
 					name="deliveryAddressLine3"
 					data-trackable="field-deliveryAddressLine3"
 					autoComplete="address-line3"
-					placeholder={addressLine3Placeholder[country] || 'e.g. Apt. 1'}
+					placeholder={deliveryAddressMap[addressType].addressLine3Placeholder[region] || 'e.g. Apt. 1'}
 					maxLength={50}
 					disabled={isDisabled}
 					defaultValue={line3}
@@ -186,158 +114,16 @@ export function DeliveryAddress ({
 			</span>
 		</label>
 	);
-
-	const addressLines = {
-		GBR: (
-			<>
-				{' '}
-				{addressLine1}
-				{addressLine2}
-				{addressLine3}{' '}
-			</>
-		),
-		USA: (
-			<>
-				{' '}
-				{addressLine1}
-				{addressLine3}
-				{addressLine2}{' '}
-			</>
-		),
-		CAN: (
-			<>
-				{' '}
-				{addressLine1}
-				{addressLine3}
-				{addressLine2}{' '}
-			</>
-		),
-
-		BEL: (
-			<>
-				{' '}
-				{addressLine1}
-				{addressLine2}
-				{addressLine3}{' '}
-			</>
-		),
-		DNK:(
-			<>
-				{' '}
-				{addressLine1}
-				{addressLine2}
-				{addressLine3}{' '}
-			</>
-		),
-		FIN: (
-			<>
-				{' '}
-				{addressLine1}
-				{addressLine2}
-				{addressLine3}{' '}
-			</>
-		),
-		DEU: (
-			<>
-				{' '}
-				{addressLine1}
-				{addressLine2}
-				{addressLine3}{' '}
-			</>
-		),
-		GRC: (
-			<>
-				{' '}
-				{addressLine1}
-				{addressLine2}
-				{addressLine3}{' '}
-			</>
-		),
-		ISL: (
-			<>
-				{' '}
-				{addressLine1}
-				{addressLine2}
-				{addressLine3}{' '}
-			</>
-		),
-		ITA: (
-			<>
-				{' '}
-				{addressLine1}
-				{addressLine2}
-				{addressLine3}{' '}
-			</>
-		),
-		LIE: (
-			<>
-				{' '}
-				{addressLine1}
-				{addressLine2}
-				{addressLine3}{' '}
-			</>
-		),
-		NLD: (
-			<>
-				{' '}
-				{addressLine1}
-				{addressLine2}
-				{addressLine3}{' '}
-			</>
-		),
-		NOR: (
-			<>
-				{' '}
-				{addressLine1}
-				{addressLine2}
-				{addressLine3}{' '}
-			</>
-		),
-		POL: (
-			<>
-				{' '}
-				{addressLine1}
-				{addressLine2}
-				{addressLine3}{' '}
-			</>
-		),
-		PRT: (
-			<>
-				{' '}
-				{addressLine1}
-				{addressLine2}
-				{addressLine3}{' '}
-			</>
-		),
-		ESP: (
-			<>
-				{' '}
-				{addressLine1}
-				{addressLine2}
-				{addressLine3}{' '}
-			</>
-		),
-		SWE: (
-			<>
-				{' '}
-				{addressLine1}
-				{addressLine2}
-				{addressLine3}{' '}
-			</>
-		),
-		CHE: (
-			<>
-				{' '}
-				{addressLine1}
-				{addressLine2}
-				{addressLine3}{' '}
-			</>
-		),
-	};
+	const addressLines = deliveryAddressMap[addressType].template(
+		addressLine1,
+		addressLine2,
+		addressLine3,
+		region
+	);
 
 	return (
 		<div id={fieldId} data-validate="required" className={divClassNames}>
-			{addressLines[country]}
+			{addressLines}
 		</div>
 	);
 }
@@ -351,4 +137,5 @@ DeliveryAddress.propTypes = {
 	isDisabled: PropTypes.bool,
 	isHidden: PropTypes.bool,
 	country: PropTypes.oneOf(['GBR', 'USA', 'CAN', 'BEL', 'DNK', 'FIN', 'DEU', 'GRC', 'ISL', 'ITA', 'LIE', 'NLD', 'NOR', 'POL', 'PRT', 'ESP', 'SWE', 'CHE']),
+	addressType: PropTypes.oneOf(['home', 'company', 'pobox']),
 };
