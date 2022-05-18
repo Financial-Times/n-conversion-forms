@@ -26,11 +26,11 @@ export function PaymentTerm ({
 	 * @param {string} period PxY (yearly) or PxM (montly) where x is the amount of years/months
 	 * @returns {string}
 	 */
-	 function getMontlyPriceFromPeriod (amount, currency, period) {
+	const getMontlyPriceFromPeriod = (amount, currency, period) => {
 		const periodObj = new Period(period);
 		const monthlyPrice = periodObj.calculatePrice('P1M', amount);
 		return new Monthly({ value: monthlyPrice, currency }).getAmount('monthly');
-	}
+	};
 
 	/**
 	 * returns period converted to time if found
