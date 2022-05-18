@@ -2,21 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function Input ({
-	dataTrackable = 'generic-input',
+export function TextInput ({
+	dataTrackable,
 	errorText = 'Please enter a value',
-	fieldId = 'genericInputField',
+	fieldId,
 	hasError = false,
-	inputId = 'genericInput',
+	inputId,
 	inputName,
 	isDisabled = false,
 	isRequired = false,
 	label = '',
 	placeHolder = '',
 	value = '',
-	description = '',
-	type = 'text',
-	inputClassNames = '',
+	description,
 }) {
 	// Use inputId if inputName is not explicitly passed.
 	inputName = inputName || inputId;
@@ -25,6 +23,7 @@ export function Input ({
 		'o-forms-input',
 		'o-forms-input--text',
 		{ 'o-forms-input--invalid': hasError },
+		{ 'o-forms-field--optional': !isRequired },
 	]);
 
 	return (
@@ -42,7 +41,7 @@ export function Input ({
 			</span>
 			<span className={inputWrapperClassNames}>
 				<input
-					type={type}
+					type="text"
 					id={inputId}
 					name={inputName}
 					placeholder={placeHolder}
@@ -51,7 +50,6 @@ export function Input ({
 					required={isRequired}
 					disabled={isDisabled}
 					defaultValue={value}
-					className={inputClassNames}
 				/>
 				<span className="o-forms-input__error">{errorText}</span>
 			</span>
@@ -59,7 +57,7 @@ export function Input ({
 	);
 }
 
-Input.propTypes = {
+TextInput.propTypes = {
 	dataTrackable: PropTypes.string,
 	errorText: PropTypes.string,
 	fieldId: PropTypes.string,
@@ -72,6 +70,4 @@ Input.propTypes = {
 	placeHolder: PropTypes.string,
 	value: PropTypes.string,
 	description: PropTypes.string,
-	inputClassNames: PropTypes.string,
-	type: PropTypes.arrayOf(PropTypes.oneOf(['text', 'hidden', 'number'])),
 };
