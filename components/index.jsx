@@ -1,6 +1,5 @@
 export { AcceptTerms } from './accept-terms';
 export { AppBanner } from './app-banner';
-export { B2cPartnershipPaymentTerm } from './b2c-partnership-payment-term';
 export { BillingCity } from './billing-city';
 export { BillingCountry } from './billing-country';
 export { BillingPostcode } from './billing-postcode';
