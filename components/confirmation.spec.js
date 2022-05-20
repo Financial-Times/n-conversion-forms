@@ -21,7 +21,7 @@ describe('Confirmation', () => {
 	});
 
 	it('renders appropriately if is B2C Partnership', () => {
-		const props = { isB2cPartnership: true };
+		const props = { isB2cPartnership: true, b2cDiscountCopy: ['Send email'] };
 
 		expect(Confirmation).toRenderCorrectly(props);
 	});

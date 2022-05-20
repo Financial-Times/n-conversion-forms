@@ -10,7 +10,6 @@
 @import '@financial-times/o-fonts/main';
 @import './styles/package-change';
 @import './styles/payment-term';
-@import './styles/b2c-partnership-payment-term';
 @import './styles/payment-type';
 @import './styles/loader';
 @import './styles/accept-terms';
@@ -436,7 +435,6 @@
 	@include ncfMessage();
 	@include ncfPackageChange();
 	@include ncfPaymentTerm();
-	@include ncfB2cPartnershipPaymentTerm();
 	@include ncfPaymentType();
 	@include ncfLoader();
 	@include ncfContinueReading();

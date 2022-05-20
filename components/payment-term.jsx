@@ -192,6 +192,15 @@ export function PaymentTerm ({
 			);
 		};
 
+		const createB2cDiscountCopy = () => {
+			return (
+				option.b2cPartnership && option.b2cDiscountCopy && (
+					<span className="ncf__payment-term__discount">
+						{option.b2cDiscountCopy}
+					</span>
+				)
+			);
+		};
 		const createDescription = () => {
 			return option.isTrial ? (
 				<div className="ncf__payment-term__description">
@@ -285,6 +294,7 @@ export function PaymentTerm ({
 					className="o-forms-input__label ncf__payment-term__label"
 				>
 					{createDiscount()}
+					{createB2cDiscountCopy()}
 
 					<span
 						className={classNames([
@@ -365,6 +375,8 @@ PaymentTerm.propTypes = {
 	isEpaper: PropTypes.bool,
 	options: PropTypes.arrayOf(
 		PropTypes.shape({
+			b2cDiscountCopy: PropTypes.string,
+			isB2cPartnership: PropTypes.bool,
 			discount: PropTypes.string,
 			isTrial: PropTypes.bool,
 			name: PropTypes.string.isRequired,
