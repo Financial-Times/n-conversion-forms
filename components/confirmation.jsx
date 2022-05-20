@@ -68,7 +68,8 @@ export function Confirmation ({
 				<p className="ncf__paragraph">
 					We’ve sent confirmation to {email}. Make sure you check your spam folder
 					if you don’t receive it.
-				</p>)}
+				</p>
+			)}
 
 			{isB2cPartnership && b2cPartnershipCopy.length > 0 ? (
 				<p className="ncf__paragraph">
