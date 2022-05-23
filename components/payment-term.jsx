@@ -194,7 +194,7 @@ export function PaymentTerm ({
 
 		const createB2cDiscountCopy = () => {
 			return (
-				option.b2cPartnership && option.b2cDiscountCopy && (
+				option.name === 'annual' && option.b2cPartnership && option.b2cDiscountCopy && (
 					<span className="ncf__payment-term__discount">
 						{option.b2cDiscountCopy}
 					</span>
