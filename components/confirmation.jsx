@@ -20,6 +20,8 @@ export function Confirmation ({
 		...(isTrial && { 'data-signup-is-trial': 'true' }),
 	};
 
+	const isB2cPartnershipCopyAvailable = isB2cPartnership && b2cPartnershipCopy.length > 0;
+
 	const detailElements = details && (
 		<React.Fragment>
 			<h2 className="ncf__header2--afterline">Your billing details</h2>
@@ -64,14 +66,14 @@ export function Confirmation ({
 			</div>
 
 			{nextActionTop}
-			{!isB2cPartnership && (
+			{!isB2cPartnershipCopyAvailable && (
 				<p className="ncf__paragraph">
 					We’ve sent confirmation to {email}. Make sure you check your spam folder
 					if you don’t receive it.
 				</p>
 			)}
 
-			{isB2cPartnership && b2cPartnershipCopy.length > 0 ? (
+			{isB2cPartnershipCopyAvailable ? (
 				<p className="ncf__paragraph">
 					{b2cPartnershipCopy[0]}
 					<span className="ncf__legend">{` ${email}. `}</span>
