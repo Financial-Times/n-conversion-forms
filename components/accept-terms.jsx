@@ -23,6 +23,7 @@ export function AcceptTerms ({
 	specialTerms = null,
 	isSingleTerm = false,
 	isNewDigitalBuyFlowConsent = false,
+	hideConfirmTermsAndConditions = false,
 }) {
 	const divProps = {
 		id: 'acceptTermsField',
@@ -89,26 +90,28 @@ export function AcceptTerms ({
 					</li>
 				</ul>
 			)}
-			<label className={labelClassName} htmlFor="termsAcceptance">
-				<input {...inputProps} />
-				<span className="o-forms-input__label terms-auth-first-step">
-					I confirm that I am {ageRestriction} years or older and agree to the
-					full{' '}
-					<a
-						className="ncf__link--external"
-						href="http://help.ft.com/help/legal-privacy/terms-conditions/"
-						target={isEmbedded ? '_top' : '_blank'}
-						rel="noopener noreferrer"
-						data-trackable="terms-and-conditions"
-					>
-						Terms &amp; Conditions
-					</a>
-					.
-				</span>
-				<p className="o-forms-input__error">
-					Please accept our terms &amp; conditions
-				</p>
-			</label>
+			{!hideConfirmTermsAndConditions && (
+				<label className={labelClassName} htmlFor="termsAcceptance">
+					<input {...inputProps} />
+					<span className="o-forms-input__label terms-auth-first-step">
+						I confirm that I am {ageRestriction} years or older and agree to the
+						full{' '}
+						<a
+							className="ncf__link--external"
+							href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+							target={isEmbedded ? '_top' : '_blank'}
+							rel="noopener noreferrer"
+							data-trackable="terms-and-conditions"
+						>
+							Terms &amp; Conditions
+						</a>
+						.
+					</span>
+					<p className="o-forms-input__error">
+						Please accept our terms &amp; conditions
+					</p>
+				</label>
+			)}
 		</>
 	);
 
@@ -408,4 +411,5 @@ AcceptTerms.propTypes = {
 	specialTerms: PropTypes.string,
 	isSingleTerm: PropTypes.bool,
 	isNewDigitalBuyFlowConsent: PropTypes.bool,
+	hideConfirmTermsAndConditions: PropTypes.bool,
 };
