@@ -53,7 +53,7 @@ const promptLabel = {
 	USA: 'Please enter your 5 digit Zip Code',
 	CAN: 'Please enter your 6 digit postal code',
 	HKG: '',//check
-	JPN: 'Please enter your 6 digit postal code',
+	JPN: 'Please enter your postal code',
 	SGP: 'Please enter your 6 digit postal code',
 	KOR: 'Please enter your 6 digit postal code',
 	IND: 'Please enter your 6 digit postal code',
