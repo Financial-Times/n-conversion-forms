@@ -2,9 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import deliveryAddressMap from '../helpers/deliveryAddressMap';
-const cemeaV1Countries = ['AUT', 'BEL','DNK','FIN', 'DEU', 'GRC', 'ISL', 'ITA', 'LIE', 'NLD', 'NOR', 'POL', 'PRT', 'ESP', 'SWE', 'CHE', 'CZE', 'SVN', 'HUN', 'ROU', 'HRV', 'SVK', 'LTU', 'BGR', 'RUS', 'ZAF', 'QAT'];
-const cemeaV2Countries =['FRA', 'LUX', 'MCO'];
-const apacCountries = ['HKG', 'JPN', 'SGP', 'KOR', 'IND', 'TWN', 'MYS', 'CHN', 'PHL', 'THA', 'IDN'];
+import {cemeaV1ISO, cemeaV2ISO, apacISO} from '../helpers/supportedCountries';
+const cemeaV1Countries = cemeaV1ISO;
+const cemeaV2Countries =cemeaV2ISO;
+const apacCountries = apacISO;
+
+
 
 export function DeliveryAddress ({
 	fieldId = 'deliveryAddressFields',
@@ -42,7 +45,9 @@ export function DeliveryAddress ({
 			htmlFor="deliveryAddressLine1"
 		>
 			<span className="o-forms-title">
-				<span className="o-forms-title__main">Address line 1</span>
+				<span className="o-forms-title__main">
+					{deliveryAddressMap[addressType].addressLine1Title[region] || 'Address line 1'}
+				</span>
 			</span>
 			<span className={inputWrapperClassNames}>
 				<input
@@ -139,6 +144,6 @@ DeliveryAddress.propTypes = {
 	line3: PropTypes.string,
 	isDisabled: PropTypes.bool,
 	isHidden: PropTypes.bool,
-	country: PropTypes.oneOf(['GBR', 'USA', 'CAN', ...cemeaV1Countries, ...cemeaV2Countries, ...apacCountries]),
+	country: PropTypes.oneOf(['GBR', 'USA', 'CAN', 'ARE',...cemeaV1Countries, ...cemeaV2Countries, ...apacCountries]),
 	addressType: PropTypes.oneOf(['home', 'company', 'pobox']),
 };

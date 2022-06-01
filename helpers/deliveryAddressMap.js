@@ -8,6 +8,7 @@ const deliveryAddressMap = {
 			CEMEA_V1: 'Street and House Number',
 			CEMEA_V2: 'House Number and Street',
 			APAC: 'Street name',
+			ARE: 'PO Box 12345'
 		},
 		addressLine2Placeholder: {
 			CEMEA_V1: 'Apt No./Floor/Building',
@@ -20,6 +21,9 @@ const deliveryAddressMap = {
 			CEMEA_V1: ' ',
 			CEMEA_V2: ' ',
 			APAC: 'District/County/Province/Ward',
+		},
+		addressLine1Title:{
+			'ARE': 'PO Box',
 		},
 		addressLine3Title:  {
 			GBR: 'Address line 3',
@@ -82,6 +86,12 @@ const deliveryAddressMap = {
 						{addressLine2}
 						{addressLine3}{' '}
 					</>
+				),
+				ARE:(
+					<>
+						{' '}
+						{addressLine1}{' '}
+					</>
 				)
 			};
 			return addressLines[region];
@@ -95,6 +105,7 @@ const deliveryAddressMap = {
 			CEMEA_V1: 'Street and House Number',
 			CEMEA_V2: 'House Number and Street',
 			APAC: 'Street name',
+			ARE: 'PO Box 12345'
 		},
 		addressLine2Placeholder: {
 			CEMEA_V1: 'Apt No./Floor/Building/Department',
@@ -118,6 +129,9 @@ const deliveryAddressMap = {
 		addressLine3Prompt: {
 			USA: 'Max. 6 characters. Please enter “Apartment 2C” as “Apt 2C”, “Floor 10 as FL 10”',
 			CAN: 'Max. 6 characters. Please enter “Apartment 2C” as “Apt 2C”, “Floor 10 as FL 10”',
+		},
+		addressLine1Title:{
+			'ARE': 'PO Box',
 		},
 		template: (addressLine1, addressLine2, addressLine3, region) => {
 			const addressLines = {
@@ -169,6 +183,12 @@ const deliveryAddressMap = {
 						{addressLine2}
 						{addressLine3}{' '}
 					</>
+				),
+				ARE:(
+					<>
+						{' '}
+						{addressLine1}{' '}
+					</>
 				)
 			};
 			return addressLines[region];
@@ -186,6 +206,7 @@ const deliveryAddressMap = {
 		},
 		addressLine3Placeholder: {
 		},
+		addressLine1Title:{},
 		addressLine3Title:  {
 			GBR: 'Address line 3',
 			USA: 'APT/FL/STE',
