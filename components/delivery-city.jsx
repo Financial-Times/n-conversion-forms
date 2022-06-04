@@ -37,7 +37,7 @@ export function DeliveryCity ({
 					name="deliveryCity"
 					data-trackable="field-deliveryCity"
 					autoComplete="address-level2"
-					placeholder={inputPlaceholder[country]}
+					placeholder={inputPlaceholder[country] || ''}
 					maxLength={40}
 					aria-required="true"
 					required
