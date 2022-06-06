@@ -84,6 +84,9 @@
 
 		&__sub-title {
 			@include oTypographySans($scale: -1, $include-font-family: false);
+			display: block;
+			margin-top: 2px;
+			margin-bottom: 2px;
 		}
 	}
 }
