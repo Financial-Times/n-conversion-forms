@@ -54,3 +54,7 @@ export { EducationJobTitle } from './education-job-title';
 export { GraduationDate } from './graduation-date';
 export { LiteSubConfirmation } from './lite-sub-confirmation';
 export { GoogleSignIn } from './google-sign-in';
+//change exports to index.js
+export { cemeaV1ISO, cemeaV2ISO, apacISO, countriesSupported } from '../helpers/supportedCountries';
+export { supportedPostcodeValidators } from '../helpers/supportedPostcodeValidators';
+export { supportedPostcodeExamples } from '../helpers/supportedPostcodeExamples';

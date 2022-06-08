@@ -51,6 +51,7 @@ const supportedCountriesMasterList = {
 const cemeaV1ISO = Object.keys(supportedCountriesMasterList.cemeaV1);
 const cemeaV2ISO = Object.keys(supportedCountriesMasterList.cemeaV2);
 const apacISO = Object.keys(supportedCountriesMasterList.apac);
+//hopefully this is refactored
 const countriesSupported = Object.assign({}, ...(function _flatten (o) { return [].concat(...Object.keys(o).map(k => typeof o[k] === 'object' ? _flatten(o[k]) : ({[k]: o[k]})));}(supportedCountriesMasterList)));
 
 
