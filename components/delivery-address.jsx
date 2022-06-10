@@ -8,6 +8,17 @@ const cemeaV2Countries =cemeaV2ISO;
 const apacCountries = apacISO;
 
 
+function identifyRegion (country) {
+	if (cemeaV1Countries.includes(country)) {
+		return 'CEMEA_V1';
+	} else if (cemeaV2Countries.includes(country)) {
+		return 'CEMEA_V2';
+	} else if (apacCountries.includes(country)) {
+		return 'APAC';
+	} else {
+		return country;
+	}
+}
 
 export function DeliveryAddress ({
 	fieldId = 'deliveryAddressFields',
@@ -21,22 +32,12 @@ export function DeliveryAddress ({
 	addressType = 'home',
 }) {
 	const divClassNames = classNames([{ ncf__hidden: isHidden }]);
-	let region;
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
 		'o-forms-input--text',
 		{ 'o-forms-input--invalid': hasError },
 	]);
-
-	if(cemeaV1Countries.includes(country)){
-		region = 'CEMEA_V1';
-	} else if(cemeaV2Countries.includes(country)) {
-		region = 'CEMEA_V2';
-	} else if(apacCountries.includes(country)) {
-		region = 'APAC';
-	} else {
-		region = country;
-	}
+	const region = identifyRegion(country);
 
 
 	const addressLine1 = (
