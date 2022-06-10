@@ -14,9 +14,6 @@ exports[`Confirmation renders appropriately if is B2C Partnership 1`] = `
   <p class="ncf__paragraph">
     We’ve sent confirmation to your email. Make sure you check your spam folder if you don’t receive it.
   </p>
-  <p>
-    We&#x27;ve also sent you an email to start your 90-day All Access Digital subscription with The Washington Post.
-  </p>
   <p class="ncf__paragraph">
     Here’s a summary of your  subscription:
   </p>

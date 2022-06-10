@@ -7,6 +7,7 @@ export function Confirmation ({
 	// isTrial prop is needed for the floodlight pixel tracking.
 	isTrial = false,
 	isB2cPartnership = false,
+	b2cPartnershipCopy = [],
 	offer = '',
 	email = EMAIL_DEFAULT_TEXT,
 	details = null,
@@ -18,6 +19,8 @@ export function Confirmation ({
 		className: 'ncf ncf__wrapper',
 		...(isTrial && { 'data-signup-is-trial': 'true' }),
 	};
+
+	const isB2cPartnershipCopyAvailable = isB2cPartnership && b2cPartnershipCopy.length > 0;
 
 	const detailElements = details && (
 		<React.Fragment>
@@ -63,15 +66,18 @@ export function Confirmation ({
 			</div>
 
 			{nextActionTop}
+			{!isB2cPartnershipCopyAvailable && (
+				<p className="ncf__paragraph">
+					We’ve sent confirmation to {email}. Make sure you check your spam folder
+					if you don’t receive it.
+				</p>
+			)}
 
-			<p className="ncf__paragraph">
-				We’ve sent confirmation to {email}. Make sure you check your spam folder
-				if you don’t receive it.
-			</p>
-			{isB2cPartnership ? (
-				<p>
-					We&apos;ve also sent you an email to start your 90-day All Access
-					Digital subscription with The Washington Post.
+			{isB2cPartnershipCopyAvailable ? (
+				<p className="ncf__paragraph">
+					{b2cPartnershipCopy[0]}
+					<span className="ncf__legend">{` ${email}. `}</span>
+					{b2cPartnershipCopy[1]}
 				</p>
 			) : (
 				''
@@ -126,6 +132,7 @@ export function Confirmation ({
 Confirmation.propTypes = {
 	isTrial: PropTypes.bool,
 	isB2cPartnership: PropTypes.bool,
+	b2cPartnershipCopy: PropTypes.array,
 	offer: PropTypes.string.isRequired,
 	email: PropTypes.string,
 	details: PropTypes.arrayOf(

@@ -1,6 +1,5 @@
 export { AcceptTerms } from './accept-terms';
 export { AppBanner } from './app-banner';
-export { B2cPartnershipPaymentTerm } from './b2c-partnership-payment-term';
 export { BillingCity } from './billing-city';
 export { BillingCountry } from './billing-country';
 export { BillingPostcode } from './billing-postcode';
@@ -54,3 +53,4 @@ export { EducationJobTitle } from './education-job-title';
 export { GraduationDate } from './graduation-date';
 export { LiteSubConfirmation } from './lite-sub-confirmation';
 export { GoogleSignIn } from './google-sign-in';
+export { TextInput } from './text-input';

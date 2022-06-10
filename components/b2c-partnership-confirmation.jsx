@@ -19,7 +19,7 @@ export function B2CPartnershipConfirmation ({ ctaElement = null }) {
 				<div className="ncf__paragraph">
 					{
 						<h1 className="ncf__header ncf__header--confirmation">
-							{'Welcome to your three months\' Premium access'}
+							{'Welcome to your 30 days\' Premium access'}
 						</h1>
 					}
 				</div>
