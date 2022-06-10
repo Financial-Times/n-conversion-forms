@@ -86,11 +86,11 @@ exports[`Delivery Postcode renders a postcode input with a label set as Zip Code
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       <span data-reference="postcode">
-        Zip Code
+        Postal Code
       </span>
     </span>
     <span class="o-forms-title__prompt">
-      Please enter your 5 digit Zip Code
+      Please enter your postal code
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -108,7 +108,7 @@ exports[`Delivery Postcode renders a postcode input with a label set as Zip Code
     <span class="o-forms-input__error">
       Please enter a valid
       <span data-reference="postcode">
-        Zip Code
+        Postal Code
       </span>
       .
     </span>
@@ -125,11 +125,11 @@ exports[`Delivery Postcode renders a postcode input with a label set as Zip Code
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       <span data-reference="postcode">
-        Zip Code
+        Postal Code
       </span>
     </span>
     <span class="o-forms-title__prompt">
-      Please enter your 5 digit Zip Code
+      Please enter your postal code
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -147,7 +147,7 @@ exports[`Delivery Postcode renders a postcode input with a label set as Zip Code
     <span class="o-forms-input__error">
       Please enter a valid
       <span data-reference="postcode">
-        Zip Code
+        Postal Code
       </span>
       .
     </span>
@@ -168,7 +168,7 @@ exports[`Delivery Postcode renders a postcode input with a label set as postal c
       </span>
     </span>
     <span class="o-forms-title__prompt">
-      Please enter your 6 digit postal code
+      Please enter your postal code
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -279,11 +279,11 @@ exports[`Delivery Postcode renders with link to change the value 1`] = `
   <span class="o-forms-title">
     <span class="o-forms-title__main">
       <span data-reference="postcode">
-        Zip Code
+        Postal Code
       </span>
     </span>
     <span class="o-forms-title__prompt">
-      Please enter your 5 digit Zip Code
+      Please enter your postal code
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -301,7 +301,7 @@ exports[`Delivery Postcode renders with link to change the value 1`] = `
     <span class="o-forms-input__error">
       Please enter a valid
       <span data-reference="postcode">
-        Zip Code
+        Postal Code
       </span>
       .
     </span>
@@ -310,7 +310,7 @@ exports[`Delivery Postcode renders with link to change the value 1`] = `
        class="change-postcode-url"
        data-trackable="change-progress"
     >
-      Change Zip Code
+      Change Postal Code
     </a>
   </span>
 </label>
