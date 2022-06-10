@@ -18,7 +18,7 @@ export function Debug ({ isTest = false, showHelpers = false, links = {} }) {
 	`;
 	const testCards = `
 		<button id="ncf-copy-visa-checkout-card" class="ncf__button ncf__button--debug ncf__button--inverse" onclick="copyToClipboard('checkoutVisa');" title="Copy Checkout Visa test card number to clipboard">EU Visa (cvv:100)</button>
-		<button id="ncf-copy-visa-checkout-3ds" class="ncf__button ncf__button--debug ncf__button--inverse" onclick="copyToClipboard('checkout3dsChallenge');" title="Copy Checkout cvv number (default success) to clipboard">EU 3ds challenge</button>
+		<button id="ncf-copy-visa-checkout-3ds" class="ncf__button ncf__button--debug ncf__button--inverse" onclick="copyToClipboard('checkout3dsChallenge');" title="Copy Checkout challenge code -Checkout1!- to clipboard">EU 3ds challenge</button>
 		<button id="ncf-copy-visa-chase-card" class="ncf__button ncf__button--debug ncf__button--inverse" onclick="copyToClipboard('chaseVisa');" title="Copy Chase card number to clipboard">US Visa (exp:1230,cvv:111)</button>
 		<button id="ncf-link-checkout-cards" class="ncf__button ncf__button--debug ncf__button--inverse" onclick="window.open('https://www.checkout.com/docs/testing/test-card-numbers#Credit_cards', '_blank');" title="Checkout test cards documentation">Doc:Checkout</button>
 	`;
@@ -104,7 +104,7 @@ export function Debug ({ isTest = false, showHelpers = false, links = {} }) {
 
 		var inputs = document.querySelectorAll(INPUT_SELECTOR + ', ' + SELECT_SELECTOR);
 		inputs.forEach(function (input) {
-			if (!/hidden/i.test(input.type)) {
+			if (!/hidden/i.test(input.type) && input.disabled === false) {
 				var value = debugData[input.name];
 				input.value = value;
 				input.dispatchEvent(changeEvent);
