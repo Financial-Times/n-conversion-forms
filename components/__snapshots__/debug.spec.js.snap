@@ -78,7 +78,7 @@ exports[`Debug renders with isTest 1`] = `
 
 		var inputs = document.querySelectorAll(INPUT_SELECTOR + ', ' + SELECT_SELECTOR);
 		inputs.forEach(function (input) {
-			if (!/hidden/i.test(input.type)) {
+			if (!/hidden/i.test(input.type) && input.disabled === false) {
 				var value = debugData[input.name];
 				input.value = value;
 				input.dispatchEvent(changeEvent);
@@ -237,7 +237,7 @@ exports[`Debug renders with showHelpers 1`] = `
 
 		var inputs = document.querySelectorAll(INPUT_SELECTOR + ', ' + SELECT_SELECTOR);
 		inputs.forEach(function (input) {
-			if (!/hidden/i.test(input.type)) {
+			if (!/hidden/i.test(input.type) && input.disabled === false) {
 				var value = debugData[input.name];
 				input.value = value;
 				input.dispatchEvent(changeEvent);
