@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {countriesSupported} from '../helpers/supportedCountries';
-import { supportedPostcodeExamples } from '../helpers/supportedPostcodeExamples';
+import { allSupportedPostcodeExamples } from '../helpers/supportedPostcodeExamples';
 
 const otherPostcodeLabels = Object.keys(countriesSupported).reduce((previous, countryCode) => {
 	previous[countryCode] = 'Postal Code';
@@ -18,9 +18,8 @@ const otherPromptLabels = Object.keys(countriesSupported).reduce((previous, coun
 , {}
 );
 
-const allSupportedPostcodeExamples = {...supportedPostcodeExamples.cemeaV1, ...supportedPostcodeExamples.cemeaV2, ...supportedPostcodeExamples.apac};
 const otherPlaceholderLabels = Object.keys(allSupportedPostcodeExamples).reduce((previous, countryCode) => {
-	previous[countryCode] = 'e.g.' + allSupportedPostcodeExamples[countryCode];
+	previous[countryCode] = 'e.g. ' + allSupportedPostcodeExamples[countryCode];
 	return previous;
 }
 , {}
