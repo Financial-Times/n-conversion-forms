@@ -9,7 +9,7 @@ export default {
 		country: {
 			control: {
 				type: 'inline-radio',
-				options: ['USA', 'CAN', 'Other'],
+				options: ['USA', 'CAN', 'FRA', 'IND'],
 			},
 		},
 	},
