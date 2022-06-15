@@ -2,23 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import deliveryAddressMap from '../helpers/deliveryAddressMap';
-import {cemeaV1ISO, cemeaV2ISO, apacISO} from '../helpers/supportedCountries';
+import {cemeaV1ISO, cemeaV2ISO, apacISO, identifyRegion} from '../helpers/supportedCountries';
 const cemeaV1Countries = cemeaV1ISO;
 const cemeaV2Countries =cemeaV2ISO;
 const apacCountries = apacISO;
-
-
-function identifyRegion (country) {
-	if (cemeaV1Countries.includes(country)) {
-		return 'CEMEA_V1';
-	} else if (cemeaV2Countries.includes(country)) {
-		return 'CEMEA_V2';
-	} else if (apacCountries.includes(country)) {
-		return 'APAC';
-	} else {
-		return country;
-	}
-}
 
 export function DeliveryAddress ({
 	fieldId = 'deliveryAddressFields',

@@ -47,7 +47,6 @@ const supportedCountriesMasterList = {
 	CAN: 'Canada'
 };
 
-
 const cemeaV1ISO = Object.keys(supportedCountriesMasterList.cemeaV1);
 const cemeaV2ISO = Object.keys(supportedCountriesMasterList.cemeaV2);
 const apacISO = Object.keys(supportedCountriesMasterList.apac);
@@ -64,6 +63,17 @@ const countriesSupported = Object.assign(
 		);
 	}(supportedCountriesMasterList))
 );
+const countriesSupportedISO = Object.keys(countriesSupported);
+const identifyRegion = (country) => {
+	if (cemeaV1ISO.includes(country)) {
+		return 'CEMEA_V1';
+	} else if (cemeaV2ISO.includes(country)) {
+		return 'CEMEA_V2';
+	} else if (apacISO.includes(country)) {
+		return 'APAC';
+	} else {
+		return country;
+	}
+};
 
-
-module.exports = { cemeaV1ISO, cemeaV2ISO, apacISO, countriesSupported };
+module.exports = { cemeaV1ISO, cemeaV2ISO, apacISO, countriesSupported, countriesSupportedISO, identifyRegion };

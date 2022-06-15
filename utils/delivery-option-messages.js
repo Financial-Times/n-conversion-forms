@@ -108,6 +108,19 @@ const deliveryOptionMessages = [
 			FIVE_DAYS_WEEK_DELIVERY_FREQ,
 			SIX_DAYS_WEEK_DELIVERY_FREQ,
 		],
+		distributorType: HAND_DELIVERY,
+		deliveryOnPublicationDate: true,
+		flightMarket: false,
+		country: ['CEMEA_V1', 'CEMEA_V2', 'APAC'],
+		title: 'Hand delivery',
+		description:
+			'Enjoy the delivery of the newspaper to your home or office address. Please note we fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT’s control. In those circumstances, your newspaper will be delivered the next delivery day. Please also be aware that your FT weekend will be delivered on Sunday.',
+	},
+	{
+		deliveryFrequency: [
+			FIVE_DAYS_WEEK_DELIVERY_FREQ,
+			SIX_DAYS_WEEK_DELIVERY_FREQ,
+		],
 		distributorType: MAIL,
 		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
 		title: 'Mail',

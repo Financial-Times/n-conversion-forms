@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getDeliveryOption } from '../utils/delivery-option-messages';
-
+import { identifyRegion } from '../helpers/supportedCountries';
 export function DeliveryOption ({
 	fieldId = 'deliveryOptionField',
 	country,
@@ -16,6 +16,8 @@ export function DeliveryOption ({
 		{ 'ncf__delivery-option--single': isSingle },
 	]);
 
+	const region = identifyRegion(country);
+
 	return (
 		<div
 			id={fieldId}
@@ -26,11 +28,10 @@ export function DeliveryOption ({
 			<span className="o-forms-input o-forms-input--radio-round">
 				{options.map((option) => {
 					const { value, isValidDeliveryOption, isSelected } = option;
-
 					const deliveryOptionValue = getDeliveryOption(
 						productCode,
 						option,
-						country
+						region
 					);
 
 					if (!isValidDeliveryOption || !deliveryOptionValue) {
