@@ -175,7 +175,7 @@ exports[`Delivery Postcode renders a postcode input with a label set as postal c
     <input type="text"
            id="deliveryPostcode"
            name="deliveryPostcode"
-           placeholder="e.g. M4W 2C6"
+           placeholder="e.g. M5H 3E5"
            autocomplete="postal-code"
            data-trackable="delivery-postcode"
            aria-required="true"
