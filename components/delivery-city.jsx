@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { supportedCountriesISO } from '../helpers/supportedCountries';
+
 
 export function DeliveryCity ({
 	hasError = false,
@@ -57,5 +59,5 @@ DeliveryCity.propTypes = {
 	value: PropTypes.string,
 	isDisabled: PropTypes.bool,
 	maxlength: PropTypes.number,
-	country: PropTypes.oneOf(['GBR', 'USA', 'CAN']),
+	country: PropTypes.oneOf(supportedCountriesISO),
 };

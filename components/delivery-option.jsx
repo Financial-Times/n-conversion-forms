@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getDeliveryOption } from '../utils/delivery-option-messages';
-import { identifyRegion } from '../helpers/supportedCountries';
+import { identifyRegion, supportedCountriesISO } from '../helpers/supportedCountries';
+
 export function DeliveryOption ({
 	fieldId = 'deliveryOptionField',
 	country,
@@ -74,7 +75,7 @@ export function DeliveryOption ({
 }
 
 DeliveryOption.propTypes = {
-	country: PropTypes.oneOf(['GBR', 'USA', 'CAN']).isRequired,
+	country: PropTypes.oneOf(supportedCountriesISO).isRequired,
 	productCode: PropTypes.string,
 	options: PropTypes.arrayOf(
 		PropTypes.shape({
