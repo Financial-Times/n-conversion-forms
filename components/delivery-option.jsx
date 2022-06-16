@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getDeliveryOption } from '../utils/delivery-option-messages';
-import { identifyRegion, supportedCountriesISO } from '../helpers/supportedCountries';
+import { identifyFTShippingZone, supportedCountriesISO } from '../helpers/supportedCountries';
 
 export function DeliveryOption ({
 	fieldId = 'deliveryOptionField',
@@ -17,7 +17,7 @@ export function DeliveryOption ({
 		{ 'ncf__delivery-option--single': isSingle },
 	]);
 
-	const region = identifyRegion(country);
+	const FTShippingZone = identifyFTShippingZone(country);
 
 	return (
 		<div
@@ -32,7 +32,7 @@ export function DeliveryOption ({
 					const deliveryOptionValue = getDeliveryOption(
 						productCode,
 						option,
-						region
+						FTShippingZone
 					);
 
 					if (!isValidDeliveryOption || !deliveryOptionValue) {

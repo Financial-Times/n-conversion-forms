@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import deliveryAddressMap from '../helpers/deliveryAddressMap';
-import { identifyRegion, supportedCountriesISO } from '../helpers/supportedCountries';
+import { identifyFTShippingZone, supportedCountriesISO } from '../helpers/supportedCountries';
 
 export function DeliveryAddress ({
 	fieldId = 'deliveryAddressFields',
@@ -21,7 +21,7 @@ export function DeliveryAddress ({
 		'o-forms-input--text',
 		{ 'o-forms-input--invalid': hasError },
 	]);
-	const region = identifyRegion(country);
+	const FTShippingZone = identifyFTShippingZone(country);
 
 
 	const addressLine1 = (
@@ -31,7 +31,7 @@ export function DeliveryAddress ({
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">
-					{deliveryAddressMap[addressType].addressLine1Title[region] || 'Address line 1'}
+					{deliveryAddressMap[addressType].addressLine1Title[FTShippingZone] || 'Address line 1'}
 				</span>
 			</span>
 			<span className={inputWrapperClassNames}>
@@ -41,7 +41,7 @@ export function DeliveryAddress ({
 					name="deliveryAddressLine1"
 					data-trackable="field-deliveryAddressLine1"
 					autoComplete="address-line1"
-					placeholder={deliveryAddressMap[addressType].addressLine1Placeholder[region]}
+					placeholder={deliveryAddressMap[addressType].addressLine1Placeholder[FTShippingZone]}
 					maxLength={50}
 					aria-required="true"
 					required
@@ -70,7 +70,7 @@ export function DeliveryAddress ({
 					name="deliveryAddressLine2"
 					data-trackable="field-deliveryAddressLine2"
 					autoComplete="address-line2"
-					placeholder={deliveryAddressMap[addressType].addressLine2Placeholder[region] || ''}
+					placeholder={deliveryAddressMap[addressType].addressLine2Placeholder[FTShippingZone] || ''}
 					maxLength={50}
 					disabled={isDisabled}
 					defaultValue={line2}
@@ -86,10 +86,10 @@ export function DeliveryAddress ({
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">
-					{deliveryAddressMap[addressType].addressLine3Title[region]}
+					{deliveryAddressMap[addressType].addressLine3Title[FTShippingZone]}
 				</span>
 				<span className="o-forms-title__prompt">
-					{deliveryAddressMap[addressType].addressLine3Prompt[region]}
+					{deliveryAddressMap[addressType].addressLine3Prompt[FTShippingZone]}
 				</span>
 			</span>
 			<span className={inputWrapperClassNames}>
@@ -99,7 +99,7 @@ export function DeliveryAddress ({
 					name="deliveryAddressLine3"
 					data-trackable="field-deliveryAddressLine3"
 					autoComplete="address-line3"
-					placeholder={deliveryAddressMap[addressType].addressLine3Placeholder[region] || 'e.g. Apt. 1'}
+					placeholder={deliveryAddressMap[addressType].addressLine3Placeholder[FTShippingZone] || 'e.g. Apt. 1'}
 					maxLength={50}
 					disabled={isDisabled}
 					defaultValue={line3}
@@ -111,7 +111,7 @@ export function DeliveryAddress ({
 		addressLine1,
 		addressLine2,
 		addressLine3,
-		region
+		FTShippingZone
 	);
 
 	return (

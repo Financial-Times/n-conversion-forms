@@ -1,4 +1,12 @@
 const React = require('react');
+
+const addressTemplateGenerator = (addressLine1, addressLine2, addressLine3) => (<>
+	{' '}
+	{addressLine1}
+	{addressLine2}
+	{addressLine3}{' '}
+</>);
+
 const deliveryAddressMap = {
 	'home': {
 		addressLine1Placeholder: {
@@ -38,55 +46,13 @@ const deliveryAddressMap = {
 		},
 		template: (addressLine1, addressLine2, addressLine3, region) => {
 			const addressLines = {
-				GBR: (
-					<>
-						{' '}
-						{addressLine1}
-						{addressLine2}
-						{addressLine3}{' '}
-					</>
-				),
-				USA: (
-					<>
-						{' '}
-						{addressLine1}
-						{addressLine3}
-						{addressLine2}{' '}
-					</>
-				),
-				CAN: (
-					<>
-						{' '}
-						{addressLine1}
-						{addressLine3}
-						{addressLine2}{' '}
-					</>
-				),
+				GBR: addressTemplateGenerator(addressLine1, addressLine2, addressLine3),
+				USA: addressTemplateGenerator(addressLine1, addressLine3, addressLine2),
+				CAN: addressTemplateGenerator(addressLine1, addressLine3, addressLine2),
 
-				CEMEA_V1: (
-					<>
-						{' '}
-						{addressLine1}
-						{addressLine2}
-						{addressLine3}{' '}
-					</>
-				),
-				CEMEA_V2:(
-					<>
-						{' '}
-						{addressLine1}
-						{addressLine2}
-						{addressLine3}{' '}
-					</>
-				),
-				APAC:(
-					<>
-						{' '}
-						{addressLine1}
-						{addressLine2}
-						{addressLine3}{' '}
-					</>
-				),
+				CEMEA_V1: addressTemplateGenerator(addressLine1, addressLine2, addressLine3),
+				CEMEA_V2: addressTemplateGenerator(addressLine1, addressLine2, addressLine3),
+				APAC: addressTemplateGenerator(addressLine1, addressLine2, addressLine3),
 				ARE:(
 					<>
 						{' '}
@@ -135,55 +101,13 @@ const deliveryAddressMap = {
 		},
 		template: (addressLine1, addressLine2, addressLine3, region) => {
 			const addressLines = {
-				GBR: (
-					<>
-						{' '}
-						{addressLine1}
-						{addressLine2}
-						{addressLine3}{' '}
-					</>
-				),
-				USA: (
-					<>
-						{' '}
-						{addressLine1}
-						{addressLine3}
-						{addressLine2}{' '}
-					</>
-				),
-				CAN: (
-					<>
-						{' '}
-						{addressLine1}
-						{addressLine3}
-						{addressLine2}{' '}
-					</>
-				),
+				GBR: addressTemplateGenerator(addressLine1, addressLine2, addressLine3),
+				USA: addressTemplateGenerator(addressLine1, addressLine3, addressLine2),
+				CAN: addressTemplateGenerator(addressLine1, addressLine3, addressLine2),
 
-				CEMEA_V1: (
-					<>
-						{' '}
-						{addressLine1}
-						{addressLine2}
-						{addressLine3}{' '}
-					</>
-				),
-				CEMEA_V2:(
-					<>
-						{' '}
-						{addressLine1}
-						{addressLine2}
-						{addressLine3}{' '}
-					</>
-				),
-				APAC:(
-					<>
-						{' '}
-						{addressLine1}
-						{addressLine2}
-						{addressLine3}{' '}
-					</>
-				),
+				CEMEA_V1: addressTemplateGenerator(addressLine1, addressLine2, addressLine3),
+				CEMEA_V2: addressTemplateGenerator(addressLine1, addressLine2, addressLine3),
+				APAC: addressTemplateGenerator(addressLine1, addressLine2, addressLine3),
 				ARE:(
 					<>
 						{' '}
@@ -218,30 +142,9 @@ const deliveryAddressMap = {
 		},
 		template: (addressLine1, addressLine2, addressLine3, region) => {
 			const addressLines = {
-				GBR: (
-					<>
-						{' '}
-						{addressLine1}
-						{addressLine2}
-						{addressLine3}{' '}
-					</>
-				),
-				USA: (
-					<>
-						{' '}
-						{addressLine1}
-						{addressLine3}
-						{addressLine2}{' '}
-					</>
-				),
-				CAN: (
-					<>
-						{' '}
-						{addressLine1}
-						{addressLine3}
-						{addressLine2}{' '}
-					</>
-				),
+				GBR: addressTemplateGenerator(addressLine1, addressLine2, addressLine3),
+				USA: addressTemplateGenerator(addressLine1, addressLine3, addressLine2),
+				CAN: addressTemplateGenerator(addressLine1, addressLine3, addressLine2),
 
 				CEMEA_V1: (
 					<>

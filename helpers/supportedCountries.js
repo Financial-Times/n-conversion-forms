@@ -60,7 +60,7 @@ const apacISO = Object.keys(supportedCountriesMasterList.apac);
 const countriesSupported = flattenObj(supportedCountriesMasterList);
 const countriesSupportedISO = Object.keys(countriesSupported);
 
-const identifyRegion = (country) => {
+const identifyFTShippingZone = (country) => {
 	if (cemeaV1ISO.includes(country)) {
 		return printRegions.cemeaV1;
 	} else if (cemeaV2ISO.includes(country)) {
@@ -72,4 +72,4 @@ const identifyRegion = (country) => {
 	}
 };
 
-module.exports = { cemeaV1ISO, cemeaV2ISO, apacISO, countriesSupported, countriesSupportedISO, identifyRegion };
+module.exports = { cemeaV1ISO, cemeaV2ISO, apacISO, countriesSupported, countriesSupportedISO, identifyFTShippingZone };
