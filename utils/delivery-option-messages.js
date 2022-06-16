@@ -1,4 +1,4 @@
-const { printRegions } = require('../helpers/constants')
+const { printRegions } = require('../helpers/constants');
 
 // Delivery Frequency codes
 const ONLY_WEEKEND_DELIVERY_FREQ = 'A1';
