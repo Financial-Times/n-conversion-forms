@@ -2,10 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import deliveryAddressMap from '../helpers/deliveryAddressMap';
-import {cemeaV1ISO, cemeaV2ISO, apacISO, identifyRegion} from '../helpers/supportedCountries';
-const cemeaV1Countries = cemeaV1ISO;
-const cemeaV2Countries =cemeaV2ISO;
-const apacCountries = apacISO;
+import { cemeaV1ISO, cemeaV2ISO, apacISO, identifyRegion } from '../helpers/supportedCountries';
 
 export function DeliveryAddress ({
 	fieldId = 'deliveryAddressFields',
@@ -132,6 +129,6 @@ DeliveryAddress.propTypes = {
 	line3: PropTypes.string,
 	isDisabled: PropTypes.bool,
 	isHidden: PropTypes.bool,
-	country: PropTypes.oneOf(['GBR', 'USA', 'CAN', 'ARE',...cemeaV1Countries, ...cemeaV2Countries, ...apacCountries]),
+	country: PropTypes.oneOf(['GBR', 'USA', 'CAN',...cemeaV1ISO, ...cemeaV2ISO, ...apacISO]),
 	addressType: PropTypes.oneOf(['home', 'company', 'pobox']),
 };

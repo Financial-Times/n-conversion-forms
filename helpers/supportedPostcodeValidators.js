@@ -43,9 +43,11 @@ const supportedPostcodeValidators = {
 		TWN: /^\\d{5}$/,
 		THA: /^\\d{5}$/
 	},
-	GBR: /^[A-Za-z]{1,2}[0-9][0-9A-Za-z]?[\s-]?[0-9][A-Za-z]{2}$/,
-	USA: /^[0-9]{5}$/,
-	CAN: /^[A-Za-z]\d[A-Za-z][\s-]?\d[A-Za-z]\d$/
+	other: {
+		GBR: /^[A-Za-z]{1,2}[0-9][0-9A-Za-z]?[\s-]?[0-9][A-Za-z]{2}$/,
+		USA: /^[0-9]{5}$/,
+		CAN: /^[A-Za-z]\d[A-Za-z][\s-]?\d[A-Za-z]\d$/
+	}
 };
 
 module.exports = { supportedPostcodeValidators };

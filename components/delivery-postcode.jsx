@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import {countriesSupported} from '../helpers/supportedCountries';
+import { countriesSupported } from '../helpers/supportedCountries';
 import { allSupportedPostcodeExamples } from '../helpers/supportedPostcodeExamples';
 
 const otherPostcodeLabels = Object.keys(countriesSupported).reduce((previous, countryCode) => {

@@ -1,6 +1,10 @@
+const { flattenObj } = require('./utilities');
+const { printRegions } = require('./constants');
+
 const supportedCountriesMasterList = {
 	cemeaV1: {
 		AUT: 'Austria',
+		ARE: 'United Arab Emirates',
 		BEL: 'Belgium',
 		BGR: 'Bulgaria',
 		HRV: 'Croatia',
@@ -42,35 +46,27 @@ const supportedCountriesMasterList = {
 		TWN: 'Taiwan, Province of China',
 		THA: 'Thailand'
 	},
-	GBR: 'United Kingdom',
-	USA: 'United States',
-	CAN: 'Canada'
+	other: {
+		GBR: 'United Kingdom',
+		USA: 'United States',
+		CAN: 'Canada'
+	}
 };
 
 const cemeaV1ISO = Object.keys(supportedCountriesMasterList.cemeaV1);
 const cemeaV2ISO = Object.keys(supportedCountriesMasterList.cemeaV2);
 const apacISO = Object.keys(supportedCountriesMasterList.apac);
 
-const countriesSupported = Object.assign(
-	{},
-	...(function _flatten (o) {
-		return [].concat(...Object.keys(o)
-			.map(k =>
-				typeof o[k] === 'object' ?
-					_flatten(o[k]) :
-					({[k]: o[k]})
-			)
-		);
-	}(supportedCountriesMasterList))
-);
+const countriesSupported = flattenObj(supportedCountriesMasterList);
 const countriesSupportedISO = Object.keys(countriesSupported);
+
 const identifyRegion = (country) => {
 	if (cemeaV1ISO.includes(country)) {
-		return 'CEMEA_V1';
+		return printRegions.cemeaV1;
 	} else if (cemeaV2ISO.includes(country)) {
-		return 'CEMEA_V2';
+		return printRegions.cemeaV2;
 	} else if (apacISO.includes(country)) {
-		return 'APAC';
+		return printRegions.apac;
 	} else {
 		return country;
 	}

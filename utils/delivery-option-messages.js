@@ -1,3 +1,5 @@
+const { printRegions } = require('../helpers/constants')
+
 // Delivery Frequency codes
 const ONLY_WEEKEND_DELIVERY_FREQ = 'A1';
 const FIVE_DAYS_WEEK_DELIVERY_FREQ = 'A5';
@@ -111,7 +113,7 @@ const deliveryOptionMessages = [
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: true,
 		flightMarket: false,
-		country: ['CEMEA_V1', 'CEMEA_V2', 'APAC'],
+		country: [printRegions.cemeaV1, printRegions.cemeaV2, printRegions.apac],
 		title: 'Hand delivery',
 		description:
 			'Enjoy the delivery of the newspaper to your home or office address. Please note we fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT’s control. In those circumstances, your newspaper will be delivered the next delivery day. Please also be aware that your FT weekend will be delivered on Sunday.',

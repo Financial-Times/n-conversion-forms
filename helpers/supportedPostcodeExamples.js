@@ -1,3 +1,5 @@
+const { flattenObj } = require('./utilities');
+
 const supportedPostcodeExamples = {
 	cemeaV1: {
 		AUT: '17087',
@@ -43,22 +45,13 @@ const supportedPostcodeExamples = {
 		TWN: '100',
 		THA: '10330'
 	},
-	// GBR: /^[A-Za-z]{1,2}[0-9][0-9A-Za-z]?[\s-]?[0-9][A-Za-z]{2}$/,
-	// USA: /^[0-9]{5}$/,
-	// CAN: /^[A-Za-z]\d[A-Za-z][\s-]?\d[A-Za-z]\d$/
+	other: {
+		GBR: 'EC4M 9BT',
+		USA: '60411',
+		CAN: 'M5H 3E5'
+	}
 };
 
-const allSupportedPostcodeExamples = Object.assign(
-	{},
-	...(function _flatten (o) {
-		return [].concat(...Object.keys(o)
-			.map(k =>
-				typeof o[k] === 'object' ?
-					_flatten(o[k]) :
-					({[k]: o[k]})
-			)
-		);
-	}(supportedPostcodeExamples))
-);
+const allSupportedPostcodeExamples = flattenObj(supportedPostcodeExamples);
 
 module.exports = { allSupportedPostcodeExamples };
