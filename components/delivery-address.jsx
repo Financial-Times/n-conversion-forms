@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import deliveryAddressMap from '../helpers/deliveryAddressMap';
-import { identifyFTShippingZone, supportedCountriesISO } from '../helpers/supportedCountries';
+import { identifyFTShippingZone, countriesSupportedISO } from '../helpers/supportedCountries';
 
 export function DeliveryAddress ({
 	fieldId = 'deliveryAddressFields',
@@ -129,6 +129,6 @@ DeliveryAddress.propTypes = {
 	line3: PropTypes.string,
 	isDisabled: PropTypes.bool,
 	isHidden: PropTypes.bool,
-	country: PropTypes.oneOf(supportedCountriesISO),
+	country: PropTypes.oneOf(countriesSupportedISO),
 	addressType: PropTypes.oneOf(['home', 'company', 'pobox']),
 };
