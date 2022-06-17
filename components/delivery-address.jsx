@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import deliveryAddressMap from '../helpers/deliveryAddressMap';
 import { identifyFTShippingZone, countriesSupportedISO } from '../helpers/supportedCountries';
-
 export function DeliveryAddress ({
 	fieldId = 'deliveryAddressFields',
 	hasError = false,
