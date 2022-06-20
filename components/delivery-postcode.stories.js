@@ -1,5 +1,6 @@
 import React from 'react';
 import { DeliveryPostcode } from './delivery-postcode';
+import { countriesSupportedISO } from '../helpers/supportedCountries';
 
 export default {
 	title: 'Delivery Postcode',
@@ -9,7 +10,7 @@ export default {
 		country: {
 			control: {
 				type: 'inline-radio',
-				options: ['USA', 'CAN', 'Other'],
+				options: countriesSupportedISO,
 			},
 		},
 	},

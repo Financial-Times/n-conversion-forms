@@ -1,5 +1,6 @@
 import React from 'react';
 import { DeliveryAddress } from './delivery-address';
+import { countriesSupportedISO } from '../helpers/supportedCountries';
 
 export default {
 	title: 'Delivery Address',
@@ -12,6 +13,12 @@ export default {
 		line3: { control: 'string' },
 		isDisabled: { control: 'boolean' },
 		isHidden: { control: 'boolean' },
+		country: {
+			control: {
+				type: 'inline-radio',
+				options: countriesSupportedISO,
+			},
+		},
 	},
 };
 
