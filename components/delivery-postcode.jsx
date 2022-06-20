@@ -1,22 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { countriesSupported } from '../helpers/supportedCountries';
+import { allSupportedPostcodeExamples } from '../helpers/supportedPostcodeExamples';
 
-const postcodeLabel = {
-	USA: 'Zip Code',
-	CAN: 'Postal Code',
-};
+const postcodeLabel = Object.keys(countriesSupported).reduce((previous, countryCode) => {
+	if (countryCode === 'USA') {
+		previous[countryCode] = 'Zip Code';
+	} else if (countryCode === 'GBR') {
+		previous[countryCode] = 'Postcode';
+	} else {
+		previous[countryCode] = 'Postal Code';
+	}
+	return previous;
+}
+, {}
+);
 
-const promptLabel = {
-	USA: 'Please enter your 5 digit Zip Code',
-	CAN: 'Please enter your 6 digit postal code',
-};
+const promptLabel = Object.keys(countriesSupported).reduce((previous, countryCode) => {
+	if (countryCode === 'USA') {
+		previous[countryCode] = 'Please enter your 5 digit Zip Code';
+	} else if (countryCode === 'CAN') {
+		previous[countryCode] = 'Please enter your 6 digit postal code';
+	} else if (countryCode !== 'GBR') { //GBR has no label
+		previous[countryCode] = 'Please enter your postal code';
+	}
+	return previous;
+}
+, {}
+);
 
-const placeholderLabel = {
-	USA: 'e.g. 60411',
-	CAN: 'e.g. M4W 2C6',
-};
-
+const placeholderLabel = Object.keys(allSupportedPostcodeExamples).reduce((previous, countryCode) => {
+	previous[countryCode] = 'e.g. ' + allSupportedPostcodeExamples[countryCode];
+	return previous;
+}
+, {}
+);
 export function DeliveryPostcode ({
 	value = '',
 	country = '',
