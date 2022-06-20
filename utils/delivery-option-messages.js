@@ -1,3 +1,5 @@
+const { printRegions } = require('../helpers/constants');
+
 // Delivery Frequency codes
 const ONLY_WEEKEND_DELIVERY_FREQ = 'A1';
 const FIVE_DAYS_WEEK_DELIVERY_FREQ = 'A5';
@@ -102,6 +104,19 @@ const deliveryOptionMessages = [
 		title: 'Hand delivery',
 		description:
 			'Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: Your FT Weekend will be delivered on Sunday or Monday.',
+	},
+	{
+		deliveryFrequency: [
+			FIVE_DAYS_WEEK_DELIVERY_FREQ,
+			SIX_DAYS_WEEK_DELIVERY_FREQ,
+		],
+		distributorType: HAND_DELIVERY,
+		deliveryOnPublicationDate: true,
+		flightMarket: false,
+		country: [printRegions.cemeaV1, printRegions.cemeaV2, printRegions.apac],
+		title: 'Hand delivery',
+		description:
+			'Enjoy the delivery of the newspaper to your home or office address. Please note we fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT’s control. In those circumstances, your newspaper will be delivered the next delivery day. Please also be aware that your FT weekend will be delivered on Sunday.',
 	},
 	{
 		deliveryFrequency: [
