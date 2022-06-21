@@ -63,14 +63,13 @@ const countriesSupportedISO = Object.keys(countriesSupported);
 const identifyFTShippingZone = (country) => {
 	if (cemeaV1ISO.includes(country)) {
 		return printRegions.cemeaV1;
-	} 
+	}
 	if (cemeaV2ISO.includes(country)) {
 		return printRegions.cemeaV2;
-	} 
+	}
 	if (apacISO.includes(country)) {
 		return printRegions.apac;
 	}
-	
 	return country;
 };
 
