@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getDeliveryOption } from '../utils/delivery-option-messages';
+import { identifyFTShippingZone, countriesSupportedISO } from '../helpers/supportedCountries';
 
 export function DeliveryOption ({
 	fieldId = 'deliveryOptionField',
@@ -16,6 +17,8 @@ export function DeliveryOption ({
 		{ 'ncf__delivery-option--single': isSingle },
 	]);
 
+	const FTShippingZone = identifyFTShippingZone(country);
+
 	return (
 		<div
 			id={fieldId}
@@ -26,11 +29,10 @@ export function DeliveryOption ({
 			<span className="o-forms-input o-forms-input--radio-round">
 				{options.map((option) => {
 					const { value, isValidDeliveryOption, isSelected } = option;
-
 					const deliveryOptionValue = getDeliveryOption(
 						productCode,
 						option,
-						country
+						FTShippingZone
 					);
 
 					if (!isValidDeliveryOption || !deliveryOptionValue) {
@@ -73,7 +75,7 @@ export function DeliveryOption ({
 }
 
 DeliveryOption.propTypes = {
-	country: PropTypes.oneOf(['GBR', 'USA', 'CAN']).isRequired,
+	country: PropTypes.oneOf(countriesSupportedISO).isRequired,
 	productCode: PropTypes.string,
 	options: PropTypes.arrayOf(
 		PropTypes.shape({

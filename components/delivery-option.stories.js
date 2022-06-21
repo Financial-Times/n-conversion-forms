@@ -1,12 +1,18 @@
 import React from 'react';
 import { DeliveryOption } from './delivery-option';
+import { countriesSupportedISO } from '../helpers/supportedCountries';
 
 export default {
 	title: 'Delivery Options',
 	component: DeliveryOption,
 	argTypes: {
 		options: { control: 'array' },
-		country: { control: 'string' },
+		country: {
+			control: {
+				type: 'inline-radio',
+				options: countriesSupportedISO,
+			},
+		},
 		productCode: { control: 'string' },
 	},
 };

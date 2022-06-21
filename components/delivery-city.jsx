@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { countriesSupportedISO } from '../helpers/supportedCountries';
+
 
 export function DeliveryCity ({
 	hasError = false,
@@ -37,7 +39,7 @@ export function DeliveryCity ({
 					name="deliveryCity"
 					data-trackable="field-deliveryCity"
 					autoComplete="address-level2"
-					placeholder={inputPlaceholder[country]}
+					placeholder={inputPlaceholder[country] || ''}
 					maxLength={40}
 					aria-required="true"
 					required
@@ -57,5 +59,5 @@ DeliveryCity.propTypes = {
 	value: PropTypes.string,
 	isDisabled: PropTypes.bool,
 	maxlength: PropTypes.number,
-	country: PropTypes.oneOf(['GBR', 'USA', 'CAN']),
+	country: PropTypes.oneOf(countriesSupportedISO),
 };
