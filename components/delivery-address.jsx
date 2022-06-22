@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import deliveryAddressMap from '../helpers/deliveryAddressMap';
+import deliveryAddressMap from './delivery-address.helper';
 import { identifyFTShippingZone, countriesSupportedISO } from '../helpers/supportedCountries';
 export function DeliveryAddress ({
 	fieldId = 'deliveryAddressFields',
