@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel components/*.jsx -d dist --copy-files",
+    "build": "babel components/*.jsx helpers/*.jsx -d dist --copy-files",
     "prepare": "(npx snyk protect || npx snyk protect -d || true)",
     "storybook": "start-storybook -p 5005",
     "build-storybook": "build-storybook --docs --output-dir docs",
