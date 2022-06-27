@@ -90,7 +90,7 @@ const deliveryAddressMap = {
 			USA: 'APT/FL/STE',
 			CAN: 'APT/FL/STE',
 			CEMEA_V1: 'Address line 3',
-			CEMEA_V3: 'Address line 3',
+			CEMEA_V2: 'Address line 3',
 		},
 		addressLine3Prompt: {
 			USA: 'Max. 6 characters. Please enter “Apartment 2C” as “Apt 2C”, “Floor 10 as FL 10”',
