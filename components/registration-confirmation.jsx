@@ -122,7 +122,7 @@ export function RegistrationConfirmation ({
 				className="ncf__confirmation--finish ncf__button ncf__button--submit"
 				data-trackable="register-finish"
 			>
-				Finish
+				Start reading
 			</a>
 		</div>
 	);

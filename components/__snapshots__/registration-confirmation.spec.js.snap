@@ -120,7 +120,7 @@ exports[`RegistrationConfirmation renders with a custom email 1`] = `
      class="ncf__confirmation--finish ncf__button ncf__button--submit"
      data-trackable="register-finish"
   >
-    Finish
+    Start reading
   </a>
 </div>
 `;
@@ -245,7 +245,7 @@ exports[`RegistrationConfirmation renders with default props 1`] = `
      class="ncf__confirmation--finish ncf__button ncf__button--submit"
      data-trackable="register-finish"
   >
-    Finish
+    Start reading
   </a>
 </div>
 `;
