@@ -8,7 +8,7 @@ exports[`LicenceTitle renders if is isB2cPartnershipLicence 1`] = `
 
 exports[`LicenceTitle renders if is trial 1`] = `
 <h1 class="ncf__header ncf__center">
-  Start your free trial
+  Welcome to the Financial Times
 </h1>
 `;
 
