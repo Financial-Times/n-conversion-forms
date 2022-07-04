@@ -2,27 +2,27 @@ const { flattenObj } = require('./utilities');
 
 const supportedPostcodeExamples = {
 	cemeaV1: {
-		AUT: '17087',
+		AUT: '1708',
 		ARE: '', //match anything
 		BEL: '6596',
 		BGR: '4000',
 		HRV: '10000',
-		CZE: '00 100',
+		CZE: '122 00',
 		DNK: '1819',
 		FIN: '39500',
 		DEU: '17087',
 		GRC: '241 00',
 		HUN: '3821',
-		ISL: '60411',
+		ISL: '149',
 		ITA: '23844',
-		LIE: '9480',
+		LIE: '9485',
 		LTU: 'LT-12345',
 		NLD: '6971 HJ',
 		NOR: '1608',
 		POL: '43-190',
 		PRT: '2525-517',
 		QAT: '',//match anything
-		ROU: '71234',
+		ROU: '712341',
 		RUS: '191028',
 		SVK: '98401',
 		SVN: '8263',
@@ -41,7 +41,7 @@ const supportedPostcodeExamples = {
 		KOR: '46500',
 		MYS: '59100',
 		PHL: '2799',
-		SGP: '58416',
+		SGP: '584163',
 		TWN: '100',
 		THA: '10330'
 	},
@@ -54,4 +54,4 @@ const supportedPostcodeExamples = {
 
 const allSupportedPostcodeExamples = flattenObj(supportedPostcodeExamples);
 
-module.exports = { allSupportedPostcodeExamples };
+module.exports = { allSupportedPostcodeExamples, supportedPostcodeExamples };
