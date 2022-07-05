@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { identifyFTShippingZone } from '../helpers/supportedCountries';
+
 
 const spanMessageByCountry = {
 	GBR: (
@@ -31,6 +33,57 @@ const spanMessageByCountry = {
 			form, or contact &nbsp;
 			<a href="https://help.ft.com/contact/">FT Customer Care</a>.
 		</span>
+	),
+	CEMEA_V1: (
+		<>
+			<span className="o-forms-title__prompt">
+				Newspaper delivery is restricted to ground floor addresses.
+				If you live in an apartment the newspaper will be left at reception or by the entrance.
+				Delivery is made in the early hours making it sometimes difficult to identify the right
+				delivery location or gaining access where letter boxes are inside a building.
+			</span>
+			<span className="o-forms-title__prompt">
+				Special characters including punctuation cannot be used in the delivery instructions.
+			</span>
+			<span className="o-forms-title__prompt">
+				If you prefer delivery to a mailbox, please either select the “PO Box” delivery option from the top of this form, or contact&nbsp;
+				<a href="https://help.ft.com/contact/">FT Customer Care</a>.
+			</span>
+		</>
+	),
+	CEMEA_V2: (
+		<>
+			<span className="o-forms-title__prompt">
+				Newspaper delivery is restricted to ground floor addresses.
+				If you live in an apartment the newspaper will be left at reception or by the entrance.
+				Delivery is made in the early hours making it sometimes difficult to identify the right
+				delivery location or gaining access where letter boxes are inside a building.
+			</span>
+			<span className="o-forms-title__prompt">
+				Special characters including punctuation cannot be used in the delivery instructions.
+			</span>
+			<span className="o-forms-title__prompt">
+				If you prefer delivery to a mailbox, please either select the “PO Box” delivery option from the top of this form, or contact&nbsp;
+				<a href="https://help.ft.com/contact/">FT Customer Care</a>.
+			</span>
+		</>
+	),
+	APAC: (
+		<>
+			<span className="o-forms-title__prompt">
+				Newspaper delivery is restricted to ground floor addresses.
+				If you live in an apartment the newspaper will be left at reception or by the entrance.
+				Delivery is made in the early hours making it sometimes difficult to identify the right
+				delivery location or gaining access where letter boxes are inside a building.
+			</span>
+			<span className="o-forms-title__prompt">
+				Special characters including punctuation cannot be used in the delivery instructions.
+			</span>
+			<span className="o-forms-title__prompt">
+				If you prefer delivery to a mailbox, please either select the “PO Box” delivery option from the top of this form, or contact&nbsp;
+				<a href="https://help.ft.com/contact/">FT Customer Care</a>.
+			</span>
+		</>
 	),
 };
 
@@ -79,11 +132,10 @@ export function DeliveryInstructions ({
 	};
 	const deliveryInstructionsMessage = (
 		<span className="o-forms-title__prompt">
-			Special characters including punctuation cannot be used in the Delivery
-			instructions.
+			Special characters including punctuation cannot be used in the delivery instructions.
 		</span>
 	);
-
+	const FTShippingZone = identifyFTShippingZone(country);
 	return (
 		<label
 			id={fieldId}
@@ -93,7 +145,7 @@ export function DeliveryInstructions ({
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">Delivery instructions</span>
-				{spanMessageByCountry[country]}
+				{spanMessageByCountry[FTShippingZone]}
 				{country === 'GBR' && deliveryInstructionsMessage}
 			</span>
 
