@@ -8,6 +8,7 @@ export function LicenceConfirmation ({
 	isEducationalLicence = false,
 	contentId = '',
 	ctaElement = null,
+	bodyContent = null,
 }) {
 	const readingLinkProps = {
 		href: contentId === '' ? '/' : `/content/${contentId}`,
@@ -32,17 +33,19 @@ export function LicenceConfirmation ({
 					)}
 				</div>
 			</div>
+			{
+				bodyContent ? bodyContent : <>
+					<p className="ncf__paragraph">
+					Go to myFT to personalise your feed &amp; follow topics &amp; articles
+					of interest to you. Set this up now or later.
+					</p>
 
-			<p className="ncf__paragraph">
-				Go to myFT to personalise your feed &amp; follow topics &amp; articles
-				of interest to you. Set this up now or later.
-			</p>
-
-			<p className="ncf__paragraph">
-				Explore the homepage &amp; enjoy your unlimited access &amp; exclusive
-				content.
-			</p>
-
+					<p className="ncf__paragraph">
+						Explore the homepage &amp; enjoy your unlimited access &amp; exclusive
+						content.
+					</p>
+				</>
+			}
 			{ctaElement || (
 				<p className="ncf__paragraph ncf__center">
 					<a className="ncf__button ncf__button--submit" href="/myft">
@@ -65,4 +68,5 @@ LicenceConfirmation.propTypes = {
 	isEducationalLicence: PropTypes.bool,
 	contentId: PropTypes.string,
 	ctaElement: PropTypes.node,
+	bodyContent: PropTypes.element,
 };
