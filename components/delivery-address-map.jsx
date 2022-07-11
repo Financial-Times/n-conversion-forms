@@ -31,7 +31,7 @@ const deliveryAddressMap = {
 			APAC: 'District/County/Province/Ward',
 		},
 		addressLine1Title:{
-			'ARE': 'PO Box',
+			ARE: 'PO Box',
 		},
 		addressLine3Title:  {
 			GBR: 'Address line 3',
@@ -39,6 +39,7 @@ const deliveryAddressMap = {
 			CAN: 'APT/FL/STE',
 			CEMEA_V1: 'Address line 3',
 			CEMEA_V2: 'Address line 3',
+			APAC: 'Address line 3',
 		},
 		addressLine3Prompt: {
 			USA: 'Max. 6 characters. Please enter “Apartment 2C” as “Apt 2C”, “Floor 10 as FL 10”',

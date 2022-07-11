@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { identifyFTShippingZone } from '../helpers/supportedCountries';
 
 const addressTypes = [
 	{ id: 'home', label: 'Home Address' },
@@ -12,7 +13,10 @@ export function DeliveryAddressType ({
 	fieldId = 'deliveryAddressTypeField',
 	inputName = 'deliveryAddressType',
 	options = ['home', 'company', 'pobox'],
+	editMode = false,
+	deliveryCountry
 }) {
+	const FTShippingZone = identifyFTShippingZone(deliveryCountry);
 	return (
 		<div
 			id={fieldId}
@@ -28,7 +32,7 @@ export function DeliveryAddressType ({
 				{options.map((option) => {
 					const type = addressTypes.find((item) => item.id === option);
 
-					return !type ? null : (
+					return !type ||(FTShippingZone==='APAC' && type.id==='pobox') ? null : (
 						<label htmlFor={type.id} aria-label={type.label} key={type.id}>
 							<input
 								type="radio"
@@ -36,6 +40,7 @@ export function DeliveryAddressType ({
 								name={inputName}
 								value={type.id}
 								className="ncf__delivery-address-type__input"
+								disabled={editMode && (type.id !== value)}
 								defaultChecked={type.id === value}
 							/>
 							<span
