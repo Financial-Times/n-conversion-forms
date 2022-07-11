@@ -124,7 +124,7 @@ const deliveryOptionMessages = [
 			SIX_DAYS_WEEK_DELIVERY_FREQ,
 		],
 		distributorType: MAIL,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [printRegions.cemeaV1, printRegions.cemeaV2, printRegions.apac],
 		title: 'Mail',
 		customId: 'ML',
 		description:
@@ -188,38 +188,38 @@ function includesDeliveryFrequency (productCode = '', item) {
 	});
 }
 
-function mailStrategy (productCode, option, country, item) {
+function mailStrategy (productCode, option, FTShippingZone, item) {
 	return (
 		includesDeliveryFrequency(productCode, item) &&
 		item.distributorType === MAIL &&
-		item.country.includes(country)
+		item.country.includes(FTShippingZone)
 	);
 }
 
-function handDeliveryStrategy (productCode, option, country, item) {
+function handDeliveryStrategy (productCode, option, FTShippingZone, item) {
 	return (
 		includesDeliveryFrequency(productCode, item) &&
 		item.distributorType === HAND_DELIVERY &&
 		item.deliveryOnPublicationDate === option.deliveryOnPublicationDate &&
 		item.flightMarket === option.flightMarket &&
-		item.country.includes(country)
+		item.country.includes(FTShippingZone)
 	);
 }
 
 /**
- * Method to find a specific delivery option based on the delivery frequency, country and option values.
+ * Method to find a specific delivery option based on the delivery frequency, FTShippingZone and option values.
  * There are two different strategies, one for options with mailDelivery = true and other by the opposite.
  * Both cases are represented by system option code 'HD', but differ on the mailDelivery property value.
  * If no message matchs, then undefined is returned.
  */
-function findCustomDeliveryOption (productCode, option, country) {
+function findCustomDeliveryOption (productCode, option, FTShippingZone) {
 	let deliveryOption;
 
 	if (option.value === HAND_DELIVERY) {
 		const filteredMessages = deliveryOptionMessages.filter((item) => {
 			return option.mailDelivery
-				? mailStrategy(productCode, option, country, item)
-				: handDeliveryStrategy(productCode, option, country, item);
+				? mailStrategy(productCode, option, FTShippingZone, item)
+				: handDeliveryStrategy(productCode, option, FTShippingZone, item);
 		});
 
 		if (filteredMessages.length) {
@@ -231,10 +231,10 @@ function findCustomDeliveryOption (productCode, option, country) {
 	return deliveryOption;
 }
 
-function getDeliveryOption (productCode, option, country) {
-	return country === UK_COUNTRY_CODE
+function getDeliveryOption (productCode, option, FTShippingZone) {
+	return FTShippingZone === UK_COUNTRY_CODE
 		? UKDeliveryOptions[option.value]
-		: findCustomDeliveryOption(productCode, option, country);
+		: findCustomDeliveryOption(productCode, option, FTShippingZone);
 }
 
 module.exports = {
