@@ -4,6 +4,7 @@ module.exports = {
 	'cemeaV1ISO': require('./supportedCountries').cemeaV1ISO,
 	'cemeaV2ISO': require('./supportedCountries').cemeaV2ISO,
 	'apacISO': require('./supportedCountries').apacISO,
+	'identifyFTShippingZone': require('./supportedCountries').identifyFTShippingZone,
 	'countriesSupported': require('./supportedCountries').countriesSupported,
 	'countriesSupportedISO': require('./supportedCountries').countriesSupportedISO,
 	'supportedPostcodeValidators': require('./supportedPostcodeValidators').supportedPostcodeValidators,
