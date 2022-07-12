@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { identifyFTShippingZone } from '../helpers/supportedCountries';
 
 const addressTypes = [
 	{ id: 'home', label: 'Home Address' },
@@ -14,9 +13,7 @@ export function DeliveryAddressType ({
 	inputName = 'deliveryAddressType',
 	options = ['home', 'company', 'pobox'],
 	editMode = false,
-	deliveryCountry
 }) {
-	const FTShippingZone = identifyFTShippingZone(deliveryCountry);
 	return (
 		<div
 			id={fieldId}
@@ -32,7 +29,7 @@ export function DeliveryAddressType ({
 				{options.map((option) => {
 					const type = addressTypes.find((item) => item.id === option);
 
-					return !type ||(FTShippingZone==='APAC' && type.id==='pobox') ? null : (
+					return !type ? null : (
 						<label htmlFor={type.id} aria-label={type.label} key={type.id}>
 							<input
 								type="radio"
