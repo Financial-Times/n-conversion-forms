@@ -133,4 +133,45 @@ describe('Find Custom Delivery Option', () => {
 			expect(deliveryOption).toEqual(expected);
 		});
 	});
+
+	describe('Find CEMEA/APAC Delivery Option', () => {
+
+		it('returns CEMEA/APAC HD delivery option', () => {
+			stubOption.flightMarket = true;
+			stubOption.deliveryOnPublicationDate = false;
+			stubOption.mailDelivery = false;
+			const expected = {
+				title: 'Hand Delivery',
+				description:
+					'Enjoy the delivery of the newspaper to your home or office address. Please note we fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT’s control. In those circumstances, your newspaper will be delivered the next delivery day. Please also be aware that your FT weekend will be delivered on Sunday.',
+			};
+
+			const deliveryOption = getDeliveryOption(
+				'N6D',
+				stubOption,
+				'CEMEA_V1'
+			);
+
+			expect(deliveryOption).toEqual(expected);
+		});
+
+		it('returns CEMEA/APAC ML delivery option', () => {
+			stubOption.mailDelivery = true;
+
+			const expected = {
+				title: 'Mail Delivery',
+				customId: 'ML',
+				description:
+					'We can only deliver the newspaper to your location by postal mail which means your delivery will arrive up to 3 business days after the date of publication and will not include the HTSI Magazine. We also fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside the FT\'s control. If you prefer to read the printed content on the day of publication, please proceed to subscribe to the FT ePaper - a digital replica of the print edition.',
+			};
+
+			const deliveryOption = getDeliveryOption(
+				'N6D',
+				stubOption,
+				'APAC'
+			);
+
+			expect(deliveryOption).toEqual(expected);
+		});
+	});
 });
