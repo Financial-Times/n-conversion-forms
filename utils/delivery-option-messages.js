@@ -111,12 +111,37 @@ const deliveryOptionMessages = [
 			SIX_DAYS_WEEK_DELIVERY_FREQ,
 		],
 		distributorType: HAND_DELIVERY,
-		deliveryOnPublicationDate: true,
-		flightMarket: false,
+		deliveryOnPublicationDate: false,
+		flightMarket: true,
 		country: [printRegions.cemeaV1, printRegions.cemeaV2, printRegions.apac],
-		title: 'Hand delivery',
+		title: 'Hand Delivery',
 		description:
 			'Enjoy the delivery of the newspaper to your home or office address. Please note we fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT’s control. In those circumstances, your newspaper will be delivered the next delivery day. Please also be aware that your FT weekend will be delivered on Sunday.',
+	},
+	{
+		deliveryFrequency: [
+			FIVE_DAYS_WEEK_DELIVERY_FREQ,
+			SIX_DAYS_WEEK_DELIVERY_FREQ,
+		],
+		distributorType: HAND_DELIVERY,
+		deliveryOnPublicationDate: true,
+		flightMarket: true,
+		country: [printRegions.cemeaV1, printRegions.cemeaV2, printRegions.apac],
+		title: 'Hand Delivery',
+		description:
+			'Enjoy the delivery of the newspaper to your home or office address. Please note we fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT’s control. In those circumstances, your newspaper will be delivered the next delivery day. Please also be aware that your FT weekend will be delivered on Sunday.',
+	},
+	{
+		deliveryFrequency: [
+			FIVE_DAYS_WEEK_DELIVERY_FREQ,
+			SIX_DAYS_WEEK_DELIVERY_FREQ,
+		],
+		distributorType: MAIL,
+		country: [printRegions.cemeaV1, printRegions.cemeaV2, printRegions.apac],
+		title: 'Mail Delivery',
+		customId: 'ML',
+		description:
+			'We can only deliver the newspaper to your location by postal mail which means your delivery will arrive up to 3 business days after the date of publication and will not include the HTSI Magazine. We also fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside the FT\'s control. If you prefer to read the printed content on the day of publication, please proceed to subscribe to the FT ePaper - a digital replica of the print edition.',
 	},
 	{
 		deliveryFrequency: [
@@ -188,38 +213,38 @@ function includesDeliveryFrequency (productCode = '', item) {
 	});
 }
 
-function mailStrategy (productCode, option, country, item) {
+function mailStrategy (productCode, option, FTShippingZone, item) {
 	return (
 		includesDeliveryFrequency(productCode, item) &&
 		item.distributorType === MAIL &&
-		item.country.includes(country)
+		item.country.includes(FTShippingZone)
 	);
 }
 
-function handDeliveryStrategy (productCode, option, country, item) {
+function handDeliveryStrategy (productCode, option, FTShippingZone, item) {
 	return (
 		includesDeliveryFrequency(productCode, item) &&
 		item.distributorType === HAND_DELIVERY &&
 		item.deliveryOnPublicationDate === option.deliveryOnPublicationDate &&
 		item.flightMarket === option.flightMarket &&
-		item.country.includes(country)
+		item.country.includes(FTShippingZone)
 	);
 }
 
 /**
- * Method to find a specific delivery option based on the delivery frequency, country and option values.
+ * Method to find a specific delivery option based on the delivery frequency, FTShippingZone and option values.
  * There are two different strategies, one for options with mailDelivery = true and other by the opposite.
  * Both cases are represented by system option code 'HD', but differ on the mailDelivery property value.
  * If no message matchs, then undefined is returned.
  */
-function findCustomDeliveryOption (productCode, option, country) {
+function findCustomDeliveryOption (productCode, option, FTShippingZone) {
 	let deliveryOption;
 
 	if (option.value === HAND_DELIVERY) {
 		const filteredMessages = deliveryOptionMessages.filter((item) => {
 			return option.mailDelivery
-				? mailStrategy(productCode, option, country, item)
-				: handDeliveryStrategy(productCode, option, country, item);
+				? mailStrategy(productCode, option, FTShippingZone, item)
+				: handDeliveryStrategy(productCode, option, FTShippingZone, item);
 		});
 
 		if (filteredMessages.length) {
@@ -231,10 +256,10 @@ function findCustomDeliveryOption (productCode, option, country) {
 	return deliveryOption;
 }
 
-function getDeliveryOption (productCode, option, country) {
-	return country === UK_COUNTRY_CODE
+function getDeliveryOption (productCode, option, FTShippingZone) {
+	return FTShippingZone === UK_COUNTRY_CODE
 		? UKDeliveryOptions[option.value]
-		: findCustomDeliveryOption(productCode, option, country);
+		: findCustomDeliveryOption(productCode, option, FTShippingZone);
 }
 
 module.exports = {

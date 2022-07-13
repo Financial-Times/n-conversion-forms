@@ -12,6 +12,7 @@ export function DeliveryAddressType ({
 	fieldId = 'deliveryAddressTypeField',
 	inputName = 'deliveryAddressType',
 	options = ['home', 'company', 'pobox'],
+	editMode = false,
 }) {
 	return (
 		<div
@@ -36,6 +37,7 @@ export function DeliveryAddressType ({
 								name={inputName}
 								value={type.id}
 								className="ncf__delivery-address-type__input"
+								disabled={editMode && (type.id !== value)}
 								defaultChecked={type.id === value}
 							/>
 							<span
