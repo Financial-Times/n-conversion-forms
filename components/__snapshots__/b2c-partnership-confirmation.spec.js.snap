@@ -7,7 +7,7 @@ exports[`B2CPartnershipConfirmation renders as default 1`] = `
     </div>
     <div class="ncf__paragraph">
       <h1 class="ncf__header ncf__header--confirmation">
-        Welcome to your 30 days&#x27; Premium access
+        Welcome to your Premium access
       </h1>
     </div>
   </div>
