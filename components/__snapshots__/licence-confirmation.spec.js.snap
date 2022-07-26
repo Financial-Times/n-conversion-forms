@@ -28,7 +28,7 @@ exports[`LicenceConfirmation renders if content id 1`] = `
     <a href="/content/d19dc7a6-c33b-4931-9a7e-4a74674da29a"
        class="ncf__link"
     >
-      Start reading
+      Go to homepage
     </a>
   </p>
 </div>
@@ -62,7 +62,7 @@ exports[`LicenceConfirmation renders if educational licence 1`] = `
     <a href="/"
        class="ncf__link"
     >
-      Start reading
+      Go to homepage
     </a>
   </p>
 </div>
@@ -97,7 +97,7 @@ exports[`LicenceConfirmation renders if is embedded 1`] = `
        class="ncf__link"
        target="_top"
     >
-      Start reading
+      Go to homepage
     </a>
   </p>
 </div>
@@ -131,7 +131,7 @@ exports[`LicenceConfirmation renders if is trial 1`] = `
     <a href="/"
        class="ncf__link"
     >
-      Start reading
+      Go to homepage
     </a>
   </p>
 </div>
@@ -165,7 +165,7 @@ exports[`LicenceConfirmation renders with custom duration value 1`] = `
     <a href="/"
        class="ncf__link"
     >
-      Start reading
+      Go to homepage
     </a>
   </p>
 </div>
@@ -199,7 +199,7 @@ exports[`LicenceConfirmation renders with default props 1`] = `
     <a href="/"
        class="ncf__link"
     >
-      Start reading
+      Go to homepage
     </a>
   </p>
 </div>
