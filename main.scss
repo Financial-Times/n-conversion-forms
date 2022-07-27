@@ -432,6 +432,12 @@
 		}
 	}
 
+	&__logo {
+		display: block;
+		margin: 0 auto 2rem;
+		width: 40%;
+	}
+
 	@include ncfMessage();
 	@include ncfPackageChange();
 	@include ncfPaymentTerm();

@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LicenceTitle renders if is isB2cPartnershipLicence 1`] = `
-<h1 class="ncf__header ncf__center">
+<h1 class="ncf__header">
   Welcome to the Financial Times
 </h1>
 `;
 
 exports[`LicenceTitle renders if is trial 1`] = `
-<h1 class="ncf__header ncf__center">
+<h1 class="ncf__header">
   Welcome to the Financial Times
 </h1>
 `;
 
 exports[`LicenceTitle renders with custom display name 1`] = `
-<h1 class="ncf__header ncf__center">
+<h1 class="ncf__header">
   <span class="ncf__light-licence-text">
     Great news!
     <span class="ncf__bold-licence-text">
@@ -29,7 +29,7 @@ exports[`LicenceTitle renders with custom display name 1`] = `
 `;
 
 exports[`LicenceTitle renders with default props 1`] = `
-<h1 class="ncf__header ncf__center">
+<h1 class="ncf__header">
   Join your FT.com subscription
 </h1>
 `;

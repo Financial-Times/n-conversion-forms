@@ -6,6 +6,7 @@ import { LicenceTitle } from './licence-title';
 export function LicenceHeader (props) {
 	const {
 		displayName = '',
+		logoUrl = '',
 		isTrial = false,
 		isB2cPartnershipLicence = false,
 		welcomeText = '',
@@ -17,6 +18,10 @@ export function LicenceHeader (props) {
 
 	return (
 		<React.Fragment>
+			{Boolean(logoUrl) && (
+				<img className="ncf__logo" alt="logo" src={logoUrl}/>
+			)}
+
 			<LicenceTitle
 				displayName={displayName}
 				isTrial={isTrial}
@@ -34,6 +39,7 @@ export function LicenceHeader (props) {
 
 LicenceHeader.propTypes = {
 	displayName: PropTypes.string,
+	logoUrl: PropTypes.string,
 	isTrial: PropTypes.bool,
 	welcomeText: PropTypes.string,
 	isB2cPartnershipLicence: PropTypes.bool,
