@@ -20,7 +20,10 @@ export function DeliveryCity ({
 		GBR: 'e.g. Bath',
 		USA: 'e.g. Los Angeles',
 		CAN: 'e.g. Montreal',
+		ARE: 'e.g. Dubai'
 	};
+	
+	const inputLabel = country === 'ARE'? 'Emirate or City':'City'
 
 	return (
 		<label
@@ -30,7 +33,7 @@ export function DeliveryCity ({
 			htmlFor="deliveryCity"
 		>
 			<span className="o-forms-title">
-				<span className="o-forms-title__main">City</span>
+				<span className="o-forms-title__main">{inputLabel}</span>
 			</span>
 			<span className={inputWrapperClassName}>
 				<input
