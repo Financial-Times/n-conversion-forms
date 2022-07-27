@@ -4,7 +4,6 @@ const { printRegions } = require('./constants');
 const supportedCountriesMasterList = {
 	cemeaV1: {
 		AUT: 'Austria',
-		ARE: 'United Arab Emirates',
 		BEL: 'Belgium',
 		BGR: 'Bulgaria',
 		HRV: 'Croatia',
@@ -49,7 +48,8 @@ const supportedCountriesMasterList = {
 	other: {
 		GBR: 'United Kingdom',
 		USA: 'United States',
-		CAN: 'Canada'
+		CAN: 'Canada',
+		ARE: 'United Arab Emirates'
 	}
 };
 
