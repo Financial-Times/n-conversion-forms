@@ -103,12 +103,18 @@ export function DeliveryInstructions ({
 		'o-forms-input--textarea',
 		{ 'o-forms-input--invalid': hasError },
 	]);
-
+	const FTShippingZone = identifyFTShippingZone(country);
 	const extraInstruction =
 		country === 'GBR'
 			? ''
 			: '\u000a- Special handling, e.g. place in plastic bag, 24/7 security on reception';
 	const defaultPlaceholder = {
+		CEMEA_V1: `Enter instructions ${
+			maxlength && `(Max. ${maxlength} characters)`
+		}:\u000a- Door colour, letterbox location\u000a- Door entry codes, etc.`,
+		CEMEA_V2: `Enter instructions ${
+			maxlength && `(Max. ${maxlength} characters)`
+		}:\u000a- Door colour, letterbox location\u000a- Door entry codes, etc.`,
 		GBR: `Enter instructions ${
 			maxlength && `(Max. ${maxlength} characters)`
 		}:\u000a- Door colour, letterbox location\u000a- Placement i.e. letterbox delivery${extraInstruction}`,
@@ -126,7 +132,7 @@ export function DeliveryInstructions ({
 		...(maxlength && { maxLength: maxlength }),
 		...(rows && { rows }),
 		'data-trackable': 'field-deliveryInstructions',
-		placeholder: placeholder ? placeholder : defaultPlaceholder[country],
+		placeholder: placeholder ? placeholder : defaultPlaceholder[FTShippingZone],
 		disabled: isDisabled,
 		defaultValue: value,
 	};
@@ -135,7 +141,7 @@ export function DeliveryInstructions ({
 			Special characters including punctuation cannot be used in the delivery instructions.
 		</span>
 	);
-	const FTShippingZone = identifyFTShippingZone(country);
+
 	return (
 		<label
 			id={fieldId}
