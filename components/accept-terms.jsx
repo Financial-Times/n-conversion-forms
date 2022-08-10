@@ -22,7 +22,6 @@ export function AcceptTerms ({
 	isPrintProduct = false,
 	specialTerms = null,
 	isSingleTerm = false,
-	isNewDigitalBuyFlowConsent = false,
 	hideConfirmTermsAndConditions = false,
 }) {
 	const divProps = {
@@ -52,15 +51,7 @@ export function AcceptTerms ({
 
 	const authFirstStepTerms = (
 		<>
-			{
-				// TODO: clean up the code in https://financialtimes.atlassian.net/browse/ACQ-1593
-				// isNewDigitalBuyFlowConsent flag for new A/B testing of consents auth first buy flow
-				// after the test it will be one of the conditions for the below flow
-			}
-			{isNewDigitalBuyFlowConsent && (
-				<hr className=" ncf ncf__divider-horizontal" />
-			)}
-			{!isNewDigitalBuyFlowConsent && (
+			{(
 				<ul className="o-typography-list ncf__accept-terms-list">
 					<li>
 						<span className="terms-auth-first-step">
@@ -410,6 +401,5 @@ AcceptTerms.propTypes = {
 	isPrintProduct: PropTypes.bool,
 	specialTerms: PropTypes.string,
 	isSingleTerm: PropTypes.bool,
-	isNewDigitalBuyFlowConsent: PropTypes.bool,
 	hideConfirmTermsAndConditions: PropTypes.bool,
 };
