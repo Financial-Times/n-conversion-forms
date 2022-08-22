@@ -13,6 +13,7 @@ export function DeliveryAddressType ({
 	inputName = 'deliveryAddressType',
 	options = ['home', 'company', 'pobox'],
 	editMode = false,
+	titlePrompt = ''
 }) {
 	return (
 		<div
@@ -23,6 +24,7 @@ export function DeliveryAddressType ({
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">Address type</span>
+				<span className="o-forms-title__prompt">{titlePrompt}</span>
 			</span>
 
 			<div className="o-forms-input o-forms-input--inline o-forms-input--radio-round">
@@ -59,4 +61,5 @@ DeliveryAddressType.propTypes = {
 	inputName: PropTypes.string,
 	value: PropTypes.oneOf(['home', 'company', 'pobox']),
 	options: PropTypes.arrayOf(PropTypes.oneOf(['home', 'company', 'pobox'])),
+	titlePrompt:PropTypes.string,
 };

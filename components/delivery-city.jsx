@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { countriesSupportedISO } from '../helpers/supportedCountries';
+import { countriesSupportedISO, identifyFTShippingZone } from '../helpers/supportedCountries';
 
 
 export function DeliveryCity ({
@@ -22,8 +22,14 @@ export function DeliveryCity ({
 		CAN: 'e.g. Montreal',
 		ARE: 'e.g. Dubai'
 	};
+	const FTShippingZone = identifyFTShippingZone(country);
 
-	const inputLabel = country === 'ARE'? 'Emirate or City':'City';
+	const labelMapping = {
+		ARE: 'Emirate or City',
+		APAC: 'City/Prefecture',
+		DEFAULT: 'City',
+	};
+	const inputLabel = labelMapping[FTShippingZone] ? labelMapping[FTShippingZone] : labelMapping['DEFAULT'];
 
 	return (
 		<label
