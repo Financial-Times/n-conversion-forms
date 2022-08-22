@@ -29,7 +29,7 @@ export function DeliveryCity ({
 		APAC: 'City/Prefecture',
 		DEFAULT: 'City',
 	};
-	const inputLabel = labelMapping[FTShippingZone] ? labelMapping[FTShippingZone] :  labelMapping['DEFAULT]';
+	const inputLabel = labelMapping[FTShippingZone] ? labelMapping[FTShippingZone] : labelMapping['DEFAULT'];
 
 	return (
 		<label
