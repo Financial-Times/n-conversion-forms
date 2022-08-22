@@ -24,12 +24,12 @@ export function DeliveryCity ({
 	};
 	const FTShippingZone = identifyFTShippingZone(country);
 
-	let inputLabel = 'City';
-	if(FTShippingZone === 'ARE'){
-		inputLabel = 'Emirate or City';
-	} else if (FTShippingZone === 'APAC'){
-		inputLabel ='City/Prefecture';
-	}
+	const labelMapping = {
+		ARE: 'Emirate or City',
+		APAC: 'City/Prefecture',
+		DEFAULT: 'City',
+	};
+	const inputLabel = labelMapping[FTShippingZone] ? labelMapping[FTShippingZone] :  labelMapping['DEFAULT]';
 
 	return (
 		<label
