@@ -115,6 +115,18 @@ class PaymentType {
 			}
 		}
 	}
+	/**
+	 * Hide the payment types panel
+	 */
+	hidePanel () {
+		const content = this.$paymentType.querySelectorAll(
+			'.ncf__payment-type-panel'
+		);
+		for (let i = 0; i < content.length; i++) {
+			const element = content[i];
+			element.classList.add('ncf__hidden');
+		}
+	}
 
 	static get CREDITCARD () {
 		return 'creditcard';
