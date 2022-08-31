@@ -39,7 +39,8 @@ export function Phone ({
 			<span className={fieldTitleClassName}>
 				<span className="o-forms-title__main">{labelText}</span>
 				<span className="o-forms-title__prompt">
-					5 to 15 characters (numbers only)
+					We need this for security purposes. We&apos;ll never send anything
+					without consent (Use numbers only)
 				</span>
 			</span>
 			<span className={inputWrapperClassNames}>

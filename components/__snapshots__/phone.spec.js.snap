@@ -11,7 +11,7 @@ exports[`Phone render a disabled phone input 1`] = `
       Phone number
     </span>
     <span class="o-forms-title__prompt">
-      5 to 15 characters (numbers only)
+      We need this for security purposes. We&#x27;ll never send anything without consent (Use numbers only)
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -48,7 +48,7 @@ exports[`Phone render a phone input with a label 1`] = `
       Phone number
     </span>
     <span class="o-forms-title__prompt">
-      5 to 15 characters (numbers only)
+      We need this for security purposes. We&#x27;ll never send anything without consent (Use numbers only)
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -84,7 +84,7 @@ exports[`Phone render a phone input with a label for B2B 1`] = `
       Work phone number
     </span>
     <span class="o-forms-title__prompt">
-      5 to 15 characters (numbers only)
+      We need this for security purposes. We&#x27;ll never send anything without consent (Use numbers only)
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -120,7 +120,7 @@ exports[`Phone render a phone input with error styling 1`] = `
       Phone number
     </span>
     <span class="o-forms-title__prompt">
-      5 to 15 characters (numbers only)
+      We need this for security purposes. We&#x27;ll never send anything without consent (Use numbers only)
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
@@ -156,7 +156,7 @@ exports[`Phone render default label if B2B and educational licence 1`] = `
       Phone number
     </span>
     <span class="o-forms-title__prompt">
-      5 to 15 characters (numbers only)
+      We need this for security purposes. We&#x27;ll never send anything without consent (Use numbers only)
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
