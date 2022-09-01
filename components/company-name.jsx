@@ -13,6 +13,7 @@ export function CompanyName ({
 	placeholder = 'Please enter your company name',
 	isRequired = true,
 	isHidden = false,
+	maxlength = '50',
 }) {
 	const divClassNames = classNames([
 		'o-forms-field',
@@ -37,6 +38,7 @@ export function CompanyName ({
 		required: isRequired,
 		disabled: isDisabled,
 		defaultValue: value,
+		maxlength
 	};
 
 	return (
@@ -67,4 +69,5 @@ CompanyName.propTypes = {
 	fieldLabel: PropTypes.string,
 	isRequired: PropTypes.bool,
 	isHidden: PropTypes.bool,
+	maxlength: PropTypes.number,
 };
