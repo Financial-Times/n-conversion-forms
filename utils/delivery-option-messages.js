@@ -136,6 +136,19 @@ const deliveryOptionMessages = [
 			FIVE_DAYS_WEEK_DELIVERY_FREQ,
 			SIX_DAYS_WEEK_DELIVERY_FREQ,
 		],
+		distributorType: HAND_DELIVERY,
+		deliveryOnPublicationDate: true,
+		flightMarket: false,
+		country: [printRegions.cemeaV1, printRegions.cemeaV2, printRegions.apac],
+		title: 'Hand Delivery',
+		description:
+			'Enjoy delivery of the newspaper daily to your home or office address on the day of publication.',
+	},
+	{
+		deliveryFrequency: [
+			FIVE_DAYS_WEEK_DELIVERY_FREQ,
+			SIX_DAYS_WEEK_DELIVERY_FREQ,
+		],
 		distributorType: MAIL,
 		country: [printRegions.cemeaV1, printRegions.cemeaV2, printRegions.apac],
 		title: 'Mail Delivery',

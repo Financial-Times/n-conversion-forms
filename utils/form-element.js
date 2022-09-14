@@ -69,7 +69,7 @@ class FormElement {
 	}
 
 	/**
-	 * Make firts input element required
+	 * Make first input element required
 	 */
 	makeRequired () {
 		if (this.inputs && this.inputs.length) {
@@ -79,7 +79,7 @@ class FormElement {
 	}
 
 	/**
-	 * Make firts input element not required (optional)
+	 * Make first input element not required (optional)
 	 */
 	makeOptional () {
 		if (this.inputs && this.inputs.length) {
