@@ -86,6 +86,7 @@ export function Debug ({ isTest = false, showHelpers = false, links = {} }) {
 		checkoutVisa: '4242424242424242',
 		checkout3dsChallenge: 'Checkout1!',
 		chaseVisa: '4011361100000010',
+		verificationEmail: SYSTEM_CODE + '-' + Date.now() + '@ftqa.org',
 	};
 
 	function logout () {
