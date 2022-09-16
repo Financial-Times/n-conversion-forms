@@ -70,7 +70,7 @@ exports[`DeferredBillingTerms renders appropriately if a isDeferredBilling 1`] =
            id="accept-deferred-billing-terms"
            name="accept-deferred-billing-terms"
            value="true"
-           data-trackable="ield-terms"
+           data-trackable="field-terms"
            aria-required="true"
            required
     >
@@ -154,7 +154,7 @@ exports[`DeferredBillingTerms renders appropriately if all props are set to true
            id="accept-deferred-billing-terms"
            name="accept-deferred-billing-terms"
            value="true"
-           data-trackable="ield-terms"
+           data-trackable="field-terms"
            aria-required="true"
            required
     >

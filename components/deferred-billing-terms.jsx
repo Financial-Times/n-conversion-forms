@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 const CONSENT_AGE = 16;
-export function DeferredBillingTerms ({ isDeferredBilling = false, checkBoxTrackableAttr = 'ield-terms', trackableAttr = 'deferred-billing-terms', errorMessage = 'Please accept our terms &amp; conditions', inputId = 'accept-deferred-billing-terms', fieldId = 'accept-deferred-terms', isChecked = false, hasError = false }) {
+export function DeferredBillingTerms ({ isDeferredBilling = false, checkBoxTrackableAttr = 'field-terms', trackableAttr = 'deferred-billing-terms', errorMessage = 'Please accept our terms &amp; conditions', inputId = 'accept-deferred-billing-terms', fieldId = 'accept-deferred-terms', isChecked = false, hasError = false }) {
 	const labelClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--checkbox',
