@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeferredBillingTerms renders appropriately and checked 1`] = `""`;
+
+exports[`DeferredBillingTerms renders appropriately if a isDeferredBilling 1`] = `
+<p class="o-forms-input o-forms-input--checkbox">
+  <span class="ncf__paragraph">
+    I confirm I am 16 years or older and have read and agree to the
+    <a class="ncf__link--external"
+       href="https://help.ft.com/legal-privacy/terms-and-conditions/"
+       title="FT Legal Terms and Conditions help page"
+       target="_blank"
+       rel="noopener noreferrer"
+       data-trackable="terms-and-conditions"
+    >
+      Terms &amp; Conditions
+    </a>
+    .
+  </span>
+</p>
+<p class="o-forms-input o-forms-input--checkbox">
+  <span class="ncf__paragraph">
+    I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting Customer Care through chat, phone or email.
+  </span>
+</p>
+<p class="o-forms-input o-forms-input--checkbox">
+  <span class="ncf__paragraph">
+    By placing my order, I acknowledge that my subscription will start on the date given above. Any cancellation notice received after that date will take effect at the end of my subscription term and previously paid amounts are non-refundable.
+  </span>
+</p>
+<p class="o-forms-input o-forms-input--checkbox">
+  <span class="ncf__paragraph">
+    Find out more about our cancellation policy in our
+    <a class="ncf__link--external"
+       href="https://help.ft.com/legal-privacy/terms-and-conditions/"
+       title="FT Legal Terms and Conditions help page"
+       target="_blank"
+       rel="noopener noreferrer"
+       data-trackable="terms-and-conditions"
+    >
+      Terms &amp; Conditions
+    </a>
+    .
+  </span>
+</p>
+<p class="o-forms-input o-forms-input--checkbox">
+  <span class="ncf__paragraph">
+    Please note that if you fail to make payment for your Deferred Billing Plan within the due date your subscription will be automatically cancelled.
+    <a class="ncf__link--external"
+       href="https://help.ft.com/legal-privacy/terms-and-conditions/"
+       title="FT Legal Terms and Conditions help page"
+       target="_blank"
+       rel="noopener noreferrer"
+       data-trackable="terms-and-conditions"
+    >
+      Terms &amp; Conditions
+    </a>
+    .
+  </span>
+</p>
+<div id="acceptTermsField"
+     class="o-forms-field o-layout-typography ncf__validation-error"
+     data-validate="required,checked"
+>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="accept-deferred-billing-terms"
+         id="accept-deferred-terms"
+  >
+    <input type="checkbox"
+           id="accept-deferred-billing-terms"
+           name="accept-deferred-billing-terms"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree with terms &amp; conditions.
+    </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp;amp; conditions
+    </p>
+  </label>
+</div>
+`;
+
+exports[`DeferredBillingTerms renders appropriately if all props are set to false - no rendering of the component 1`] = `""`;
+
+exports[`DeferredBillingTerms renders appropriately if all props are set to true -  rendering of the component 1`] = `
+<p class="o-forms-input o-forms-input--checkbox o-forms-input--invalid">
+  <span class="ncf__paragraph">
+    I confirm I am 16 years or older and have read and agree to the
+    <a class="ncf__link--external"
+       href="https://help.ft.com/legal-privacy/terms-and-conditions/"
+       title="FT Legal Terms and Conditions help page"
+       target="_blank"
+       rel="noopener noreferrer"
+       data-trackable="terms-and-conditions"
+    >
+      Terms &amp; Conditions
+    </a>
+    .
+  </span>
+</p>
+<p class="o-forms-input o-forms-input--checkbox o-forms-input--invalid">
+  <span class="ncf__paragraph">
+    I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting Customer Care through chat, phone or email.
+  </span>
+</p>
+<p class="o-forms-input o-forms-input--checkbox o-forms-input--invalid">
+  <span class="ncf__paragraph">
+    By placing my order, I acknowledge that my subscription will start on the date given above. Any cancellation notice received after that date will take effect at the end of my subscription term and previously paid amounts are non-refundable.
+  </span>
+</p>
+<p class="o-forms-input o-forms-input--checkbox o-forms-input--invalid">
+  <span class="ncf__paragraph">
+    Find out more about our cancellation policy in our
+    <a class="ncf__link--external"
+       href="https://help.ft.com/legal-privacy/terms-and-conditions/"
+       title="FT Legal Terms and Conditions help page"
+       target="_blank"
+       rel="noopener noreferrer"
+       data-trackable="terms-and-conditions"
+    >
+      Terms &amp; Conditions
+    </a>
+    .
+  </span>
+</p>
+<p class="o-forms-input o-forms-input--checkbox o-forms-input--invalid">
+  <span class="ncf__paragraph">
+    Please note that if you fail to make payment for your Deferred Billing Plan within the due date your subscription will be automatically cancelled.
+    <a class="ncf__link--external"
+       href="https://help.ft.com/legal-privacy/terms-and-conditions/"
+       title="FT Legal Terms and Conditions help page"
+       target="_blank"
+       rel="noopener noreferrer"
+       data-trackable="terms-and-conditions"
+    >
+      Terms &amp; Conditions
+    </a>
+    .
+  </span>
+</p>
+<div id="acceptTermsField"
+     class="o-forms-field o-layout-typography ncf__validation-error"
+     data-validate="required,checked"
+>
+  <label class="o-forms-input o-forms-input--checkbox o-forms-input--invalid"
+         for="accept-deferred-billing-terms"
+         id="accept-deferred-terms"
+  >
+    <input type="checkbox"
+           id="accept-deferred-billing-terms"
+           name="accept-deferred-billing-terms"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree with terms &amp; conditions.
+    </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp;amp; conditions
+    </p>
+  </label>
+</div>
+`;
+
+exports[`DeferredBillingTerms renders with an error 1`] = `""`;
+
+exports[`DeferredBillingTerms renders with default props 1`] = `""`;
