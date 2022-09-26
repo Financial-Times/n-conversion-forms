@@ -59,7 +59,7 @@
     "jsdom": "15.1.0",
     "lint-staged": "^11.2.6",
     "mocha": "5.1.1",
-    "node-sass": "4.14.1",
+    "node-sass": "^7.0.3",
     "pa11y-ci": "2.1.1",
     "postcss": "^7.0.32",
     "prettier": "2.4.1",
@@ -73,7 +73,7 @@
     "snyk": "1.230.7"
   },
   "engines": {
-    "node": "12.x || 14.x",
+    "node": "14.x || 16.x",
     "npm": "7.x || 8.x"
   },
   "lint-staged": {
