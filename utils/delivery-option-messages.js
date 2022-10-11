@@ -129,7 +129,7 @@ const deliveryOptionMessages = [
 		country: [printRegions.cemeaV1, printRegions.cemeaV2, printRegions.apac],
 		title: 'Hand Delivery',
 		description:
-			'Enjoy the delivery of the newspaper to your home or office address. Please note we fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT’s control. In those circumstances, your newspaper will be delivered the next delivery day. Please also be aware that your FT weekend will be delivered on Sunday.',
+			'Enjoy delivery of the newspaper to your home or office address. FT Weekend will be delivered on Sunday or Monday.',
 	},
 	{
 		deliveryFrequency: [
@@ -153,8 +153,22 @@ const deliveryOptionMessages = [
 		country: [printRegions.cemeaV1, printRegions.cemeaV2, printRegions.apac],
 		title: 'Mail Delivery',
 		customId: 'ML',
+		flightMarket: true,
 		description:
-			'We can only deliver the newspaper to your location by postal mail which means your delivery will arrive up to 3 business days after the date of publication and will not include the HTSI Magazine. We also fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside the FT\'s control. If you prefer to read the printed content on the day of publication, please proceed to subscribe to the FT ePaper - a digital replica of the print edition.',
+			'Enjoy delivery of the newspaper to your home or office address. Note this is a postal delivery - expect delivery after the day of publication. If you would prefer to read the newspaper on the day of publication, purchase an FT ePaper subscription, our digital replica of the each daily edition.',
+	},
+	{
+		deliveryFrequency: [
+			FIVE_DAYS_WEEK_DELIVERY_FREQ,
+			SIX_DAYS_WEEK_DELIVERY_FREQ,
+		],
+		distributorType: MAIL,
+		country: [printRegions.cemeaV1, printRegions.cemeaV2, printRegions.apac],
+		title: 'Mail Delivery',
+		customId: 'ML',
+		flightMarket: false,
+		description:
+			'Enjoy delivery of the newspaper to your home or office address one day after publication.',
 	},
 	{
 		deliveryFrequency: [
