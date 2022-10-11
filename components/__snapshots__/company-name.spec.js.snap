@@ -20,6 +20,7 @@ exports[`CompanyName renders with a custom value 1`] = `
            data-trackable="company-name"
            aria-required="true"
            required
+           maxlength="100"
            value="foobar"
     >
     <span class="o-forms-input__error">
@@ -49,6 +50,7 @@ exports[`CompanyName renders with an error 1`] = `
            data-trackable="company-name"
            aria-required="true"
            required
+           maxlength="100"
            value
     >
     <span class="o-forms-input__error">
@@ -78,6 +80,7 @@ exports[`CompanyName renders with default props 1`] = `
            data-trackable="company-name"
            aria-required="true"
            required
+           maxlength="100"
            value
     >
     <span class="o-forms-input__error">
@@ -108,6 +111,7 @@ exports[`CompanyName renders with disabled input 1`] = `
            aria-required="true"
            required
            disabled
+           maxlength="100"
            value
     >
     <span class="o-forms-input__error">
@@ -136,6 +140,7 @@ exports[`CompanyName renders with optional field 1`] = `
            autocomplete="organization"
            data-trackable="company-name"
            aria-required="false"
+           maxlength="100"
            value
     >
     <span class="o-forms-input__error">
