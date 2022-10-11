@@ -69,5 +69,5 @@ CompanyName.propTypes = {
 	fieldLabel: PropTypes.string,
 	isRequired: PropTypes.bool,
 	isHidden: PropTypes.bool,
-	maxlength: PropTypes.string,
+	maxlength: PropTypes.number,
 };
