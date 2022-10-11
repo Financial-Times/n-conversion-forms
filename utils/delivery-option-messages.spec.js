@@ -162,7 +162,7 @@ describe('Find Custom Delivery Option', () => {
 				title: 'Mail Delivery',
 				customId: 'ML',
 				description:
-					'We can only deliver the newspaper to your location by postal mail which means your delivery will arrive up to 3 business days after the date of publication and will not include the HTSI Magazine. We also fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside the FT\'s control. If you prefer to read the printed content on the day of publication, please proceed to subscribe to the FT ePaper - a digital replica of the print edition.',
+					'Enjoy delivery of the newspaper to your home or office address. Note this is a postal delivery - expect delivery after the day of publication. If you would prefer to read the newspaper on the day of publication, purchase an FT ePaper subscription, our digital replica of the each daily edition.',
 			};
 
 			const deliveryOption = getDeliveryOption(
