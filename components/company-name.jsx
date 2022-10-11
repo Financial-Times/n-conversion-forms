@@ -13,7 +13,7 @@ export function CompanyName ({
 	placeholder = 'Please enter your company name',
 	isRequired = true,
 	isHidden = false,
-	maxlength = '',
+	maxlength = 100,
 }) {
 	const divClassNames = classNames([
 		'o-forms-field',
