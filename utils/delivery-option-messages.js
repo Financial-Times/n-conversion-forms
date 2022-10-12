@@ -122,12 +122,13 @@ const deliveryOptionMessages = [
 		deliveryFrequency: [
 			FIVE_DAYS_WEEK_DELIVERY_FREQ,
 			SIX_DAYS_WEEK_DELIVERY_FREQ,
+			ONLY_WEEKEND_DELIVERY_FREQ,
 		],
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: true,
 		flightMarket: true,
-		country: [printRegions.cemeaV1, printRegions.cemeaV2, printRegions.apac],
 		title: 'Hand Delivery',
+		country: [printRegions.cemeaV1, printRegions.cemeaV2, printRegions.apac],
 		description:
 			'Enjoy delivery of the newspaper to your home or office address. FT Weekend will be delivered on Sunday or Monday.',
 	},
@@ -135,6 +136,7 @@ const deliveryOptionMessages = [
 		deliveryFrequency: [
 			FIVE_DAYS_WEEK_DELIVERY_FREQ,
 			SIX_DAYS_WEEK_DELIVERY_FREQ,
+			ONLY_WEEKEND_DELIVERY_FREQ,
 		],
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: true,
@@ -148,6 +150,7 @@ const deliveryOptionMessages = [
 		deliveryFrequency: [
 			FIVE_DAYS_WEEK_DELIVERY_FREQ,
 			SIX_DAYS_WEEK_DELIVERY_FREQ,
+			ONLY_WEEKEND_DELIVERY_FREQ,
 		],
 		distributorType: MAIL,
 		country: [printRegions.cemeaV1, printRegions.cemeaV2, printRegions.apac],
@@ -161,6 +164,7 @@ const deliveryOptionMessages = [
 		deliveryFrequency: [
 			FIVE_DAYS_WEEK_DELIVERY_FREQ,
 			SIX_DAYS_WEEK_DELIVERY_FREQ,
+			ONLY_WEEKEND_DELIVERY_FREQ,
 		],
 		distributorType: MAIL,
 		country: [printRegions.cemeaV1, printRegions.cemeaV2, printRegions.apac],
