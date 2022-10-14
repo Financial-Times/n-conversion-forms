@@ -5,10 +5,11 @@ class Validation {
 	/**
 	 * Set up the Validation utility
 	 * @param {Boolean} mutePromptBeforeLeaving (default: false) Whether to prompt the user before leaving if there have been changes in any of the fields.
+	 * @param {string} [errorSummaryMessage='There is a problem'] - A message to show in the header of the error summary. It defaults to: 'There is a problem'
 	 */
-	constructor ({ mutePromptBeforeLeaving, useBrowserValidation } = {}) {
+	constructor ({ errorSummaryMessage, mutePromptBeforeLeaving, useBrowserValidation } = {}) {
 		this.$form = document.querySelector('form.ncf');
-		this.oForms = OForms.init(this.$form, { useBrowserValidation });
+		this.oForms = OForms.init(this.$form, { errorSummaryMessage, useBrowserValidation });
 		this.$requiredEls = this.oForms.formInputs.filter(
 			({ input }) => input.type !== 'hidden' && input.required
 		);
