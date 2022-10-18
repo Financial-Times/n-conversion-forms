@@ -6,6 +6,7 @@ class Validation {
 	 * Set up the Validation utility
 	 * @param {Boolean} mutePromptBeforeLeaving (default: false) Whether to prompt the user before leaving if there have been changes in any of the fields.
 	 * @param {string} [errorSummaryMessage='There is a problem'] - A message to show in the header of the error summary. It defaults to: 'There is a problem'
+	 * @param {Boolean} [useBrowserValidation=false] - Whether to use the browsers validation and error messages. Defaults to `false`.
 	 */
 	constructor ({ errorSummaryMessage, mutePromptBeforeLeaving, useBrowserValidation } = {}) {
 		this.$form = document.querySelector('form.ncf');

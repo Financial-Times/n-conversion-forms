@@ -6,6 +6,9 @@ const ValidationUtil = require('./validation');
 
 describe('Validation - Util', () => {
 	let validation;
+	const mockErrorSummaryMessage = 'mockError';
+	const mockUseBrowserValidation = false;
+
 	beforeEach(() => {
 		document.body.innerHTML = `
 			<!DOCTYPE html>
@@ -16,7 +19,10 @@ describe('Validation - Util', () => {
 			</body>
 			</html>`;
 
-		validation = new ValidationUtil(document);
+		validation = new ValidationUtil({
+			errorSummaryMessage: mockErrorSummaryMessage,
+			useBrowserValidation: mockUseBrowserValidation,
+		});
 		jest.spyOn(validation, 'checkFormValidity');
 		validation.init();
 	});
@@ -26,8 +32,13 @@ describe('Validation - Util', () => {
 	});
 
 	describe('constructor', () => {
-		it('calls oForms to setup client side validation', () => {
-			expect(OForms.default.init).toHaveBeenCalled();
+		it('calls oForms to setup client side validation with expected arguments', () => {
+			const form = document.querySelector('form.ncf');
+
+			expect(OForms.default.init).toHaveBeenCalledWith(form, {
+				errorSummaryMessage: mockErrorSummaryMessage,
+				useBrowserValidation: mockUseBrowserValidation,
+			});
 		});
 
 		it('checks validation status on init', () => {
