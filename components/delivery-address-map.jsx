@@ -1,8 +1,8 @@
 const React = require('react');
-
-export const addressLine1AutoComplete = 'address-line1';
-export const addressLine2AutoComplete = 'address-line2';
-export const addressLine3AutoComplete = 'address-line3';
+import {
+	addressLine2AutoComplete,
+	addressLine3AutoComplete,
+} from '../helpers/constants';
 
 const addressTemplateGenerator = (addressLine1, addressLine2, addressLine3) => (
 	<>

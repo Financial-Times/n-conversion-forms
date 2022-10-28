@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import deliveryAddressMap, {
+import deliveryAddressMap from './delivery-address-map';
+import {
 	addressLine1AutoComplete,
 	addressLine2AutoComplete,
 	addressLine3AutoComplete,
-} from './delivery-address-map';
+} from '../helpers/constants';
 import {
 	identifyFTShippingZone,
 	countriesSupportedISO,
