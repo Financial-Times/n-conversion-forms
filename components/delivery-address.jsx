@@ -1,8 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import deliveryAddressMap from './delivery-address-map';
-import { identifyFTShippingZone, countriesSupportedISO } from '../helpers/supportedCountries';
+import deliveryAddressMap, {
+	addressLine1AutoComplete,
+	addressLine2AutoComplete,
+	addressLine3AutoComplete,
+} from './delivery-address-map';
+import {
+	identifyFTShippingZone,
+	countriesSupportedISO,
+} from '../helpers/supportedCountries';
+
 export function DeliveryAddress ({
 	fieldId = 'deliveryAddressFields',
 	hasError = false,
@@ -22,7 +30,6 @@ export function DeliveryAddress ({
 	]);
 	const FTShippingZone = identifyFTShippingZone(country);
 
-
 	const addressLine1 = (
 		<label
 			className="o-forms-field ncf__validation-error"
@@ -30,7 +37,8 @@ export function DeliveryAddress ({
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main">
-					{deliveryAddressMap[addressType].addressLine1Title[FTShippingZone] || 'Address line 1'}
+					{deliveryAddressMap[addressType].addressLine1Title[FTShippingZone] ||
+						'Address line 1'}
 				</span>
 			</span>
 			<span className={inputWrapperClassNames}>
@@ -39,8 +47,12 @@ export function DeliveryAddress ({
 					id="deliveryAddressLine1"
 					name="deliveryAddressLine1"
 					data-trackable="field-deliveryAddressLine1"
-					autoComplete="address-line1"
-					placeholder={deliveryAddressMap[addressType].addressLine1Placeholder[FTShippingZone]}
+					autoComplete={addressLine1AutoComplete}
+					placeholder={
+						deliveryAddressMap[addressType].addressLine1Placeholder[
+							FTShippingZone
+						]
+					}
 					maxLength={50}
 					aria-required="true"
 					required
@@ -68,8 +80,16 @@ export function DeliveryAddress ({
 					id="deliveryAddressLine2"
 					name="deliveryAddressLine2"
 					data-trackable="field-deliveryAddressLine2"
-					autoComplete="address-line2"
-					placeholder={deliveryAddressMap[addressType].addressLine2Placeholder[FTShippingZone] || ''}
+					autoComplete={
+						deliveryAddressMap[addressType].addressLine2AutoComplete[
+							FTShippingZone
+						] || addressLine2AutoComplete
+					}
+					placeholder={
+						deliveryAddressMap[addressType].addressLine2Placeholder[
+							FTShippingZone
+						] || ''
+					}
 					maxLength={50}
 					disabled={isDisabled}
 					defaultValue={line2}
@@ -97,8 +117,16 @@ export function DeliveryAddress ({
 					id="deliveryAddressLine3"
 					name="deliveryAddressLine3"
 					data-trackable="field-deliveryAddressLine3"
-					autoComplete="address-line3"
-					placeholder={deliveryAddressMap[addressType].addressLine3Placeholder[FTShippingZone] || 'e.g. Apt. 1'}
+					autoComplete={
+						deliveryAddressMap[addressType].addressLine3AutoComplete[
+							FTShippingZone
+						] || addressLine3AutoComplete
+					}
+					placeholder={
+						deliveryAddressMap[addressType].addressLine3Placeholder[
+							FTShippingZone
+						] || 'e.g. Apt. 1'
+					}
 					maxLength={50}
 					disabled={isDisabled}
 					defaultValue={line3}
