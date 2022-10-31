@@ -1,14 +1,19 @@
 const React = require('react');
+import {
+	addressLine2AutoComplete,
+	addressLine3AutoComplete,
+} from '../helpers/constants';
 
-const addressTemplateGenerator = (addressLine1, addressLine2, addressLine3) => (<>
-	{' '}
-	{addressLine1}
-	{addressLine2}
-	{addressLine3}{' '}
-</>);
+const addressTemplateGenerator = (addressLine1, addressLine2, addressLine3) => (
+	<>
+		{addressLine1}
+		{addressLine2}
+		{addressLine3}
+	</>
+);
 
 const deliveryAddressMap = {
-	'home': {
+	home: {
 		addressLine1Placeholder: {
 			GBR: 'e.g. 10 Elm Street',
 			USA: 'e.g. 10 Elm St.',
@@ -16,7 +21,7 @@ const deliveryAddressMap = {
 			CEMEA_V1: 'Street and House Number',
 			CEMEA_V2: 'House Number and Street',
 			APAC: 'Street name',
-			ARE: 'PO Box 12345'
+			ARE: 'PO Box 12345',
 		},
 		addressLine2Placeholder: {
 			CEMEA_V1: 'Apt No./Floor/Building',
@@ -30,10 +35,20 @@ const deliveryAddressMap = {
 			CEMEA_V2: ' ',
 			APAC: 'District/County/Province/Ward',
 		},
-		addressLine1Title:{
+		addressLine1Title: {
 			ARE: 'PO Box',
 		},
-		addressLine3Title:  {
+		// Overrides auto-complete
+		addressLine2AutoComplete: {
+			USA: addressLine3AutoComplete,
+			CAN: addressLine3AutoComplete,
+		},
+		// Overrides auto-complete
+		addressLine3AutoComplete: {
+			USA: addressLine2AutoComplete,
+			CAN: addressLine2AutoComplete,
+		},
+		addressLine3Title: {
 			GBR: 'Address line 3',
 			USA: 'APT/FL/STE',
 			CAN: 'APT/FL/STE',
@@ -50,21 +65,27 @@ const deliveryAddressMap = {
 				GBR: addressTemplateGenerator(addressLine1, addressLine2, addressLine3),
 				USA: addressTemplateGenerator(addressLine1, addressLine3, addressLine2),
 				CAN: addressTemplateGenerator(addressLine1, addressLine3, addressLine2),
-
-				CEMEA_V1: addressTemplateGenerator(addressLine1, addressLine2, addressLine3),
-				CEMEA_V2: addressTemplateGenerator(addressLine1, addressLine2, addressLine3),
-				APAC: addressTemplateGenerator(addressLine1, addressLine2, addressLine3),
-				ARE:(
-					<>
-						{' '}
-						{addressLine1}{' '}
-					</>
-				)
+				CEMEA_V1: addressTemplateGenerator(
+					addressLine1,
+					addressLine2,
+					addressLine3
+				),
+				CEMEA_V2: addressTemplateGenerator(
+					addressLine1,
+					addressLine2,
+					addressLine3
+				),
+				APAC: addressTemplateGenerator(
+					addressLine1,
+					addressLine2,
+					addressLine3
+				),
+				ARE: <> {addressLine1} </>,
 			};
 			return addressLines[region];
-		}
+		},
 	},
-	'company': {
+	company: {
 		addressLine1Placeholder: {
 			GBR: 'e.g. 10 Elm Street',
 			USA: 'e.g. 10 Elm St.',
@@ -72,7 +93,7 @@ const deliveryAddressMap = {
 			CEMEA_V1: 'Street and House Number',
 			CEMEA_V2: 'House Number and Street',
 			APAC: 'Street name',
-			ARE: 'PO Box 12345'
+			ARE: 'PO Box 12345',
 		},
 		addressLine2Placeholder: {
 			CEMEA_V1: 'Apt No./Floor/Building/Department',
@@ -86,7 +107,7 @@ const deliveryAddressMap = {
 			CEMEA_V2: 'Department name/job title',
 			APAC: 'District/County/Province/Ward',
 		},
-		addressLine3Title:  {
+		addressLine3Title: {
 			GBR: 'Address line 3',
 			USA: 'APT/FL/STE',
 			CAN: 'APT/FL/STE',
@@ -97,8 +118,18 @@ const deliveryAddressMap = {
 			USA: 'Max. 6 characters. Please enter “Apartment 2C” as “Apt 2C”, “Floor 10 as FL 10”',
 			CAN: 'Max. 6 characters. Please enter “Apartment 2C” as “Apt 2C”, “Floor 10 as FL 10”',
 		},
-		addressLine1Title:{
-			'ARE': 'PO Box',
+		addressLine1Title: {
+			ARE: 'PO Box',
+		},
+		// Overrides auto-complete
+		addressLine2AutoComplete: {
+			USA: addressLine3AutoComplete,
+			CAN: addressLine3AutoComplete,
+		},
+		// Overrides auto-complete
+		addressLine3AutoComplete: {
+			USA: addressLine2AutoComplete,
+			CAN: addressLine2AutoComplete,
 		},
 		template: (addressLine1, addressLine2, addressLine3, region) => {
 			const addressLines = {
@@ -106,20 +137,27 @@ const deliveryAddressMap = {
 				USA: addressTemplateGenerator(addressLine1, addressLine3, addressLine2),
 				CAN: addressTemplateGenerator(addressLine1, addressLine3, addressLine2),
 
-				CEMEA_V1: addressTemplateGenerator(addressLine1, addressLine2, addressLine3),
-				CEMEA_V2: addressTemplateGenerator(addressLine1, addressLine2, addressLine3),
-				APAC: addressTemplateGenerator(addressLine1, addressLine2, addressLine3),
-				ARE:(
-					<>
-						{' '}
-						{addressLine1}{' '}
-					</>
-				)
+				CEMEA_V1: addressTemplateGenerator(
+					addressLine1,
+					addressLine2,
+					addressLine3
+				),
+				CEMEA_V2: addressTemplateGenerator(
+					addressLine1,
+					addressLine2,
+					addressLine3
+				),
+				APAC: addressTemplateGenerator(
+					addressLine1,
+					addressLine2,
+					addressLine3
+				),
+				ARE: <> {addressLine1} </>,
 			};
 			return addressLines[region];
-		}
+		},
 	},
-	'pobox': {
+	pobox: {
 		addressLine1Placeholder: {
 			GBR: 'e.g. 10 Elm Street',
 			USA: 'e.g. 10 Elm St.',
@@ -127,15 +165,23 @@ const deliveryAddressMap = {
 			CEMEA_V1: 'P.O. Box',
 			CEMEA_V2: 'P.O. Box',
 		},
-		addressLine2Placeholder: {
-		},
-		addressLine3Placeholder: {
-		},
-		addressLine1Title:{},
-		addressLine3Title:  {
+		addressLine2Placeholder: {},
+		addressLine3Placeholder: {},
+		addressLine1Title: {},
+		addressLine3Title: {
 			GBR: 'Address line 3',
 			USA: 'APT/FL/STE',
 			CAN: 'APT/FL/STE',
+		},
+		// Overrides auto-complete
+		addressLine2AutoComplete: {
+			USA: addressLine3AutoComplete,
+			CAN: addressLine3AutoComplete,
+		},
+		// Overrides auto-complete
+		addressLine3AutoComplete: {
+			USA: addressLine2AutoComplete,
+			CAN: addressLine2AutoComplete,
 		},
 		addressLine3Prompt: {
 			USA: 'Max. 6 characters. Please enter “Apartment 2C” as “Apt 2C”, “Floor 10 as FL 10”',
@@ -147,21 +193,11 @@ const deliveryAddressMap = {
 				USA: addressTemplateGenerator(addressLine1, addressLine3, addressLine2),
 				CAN: addressTemplateGenerator(addressLine1, addressLine3, addressLine2),
 
-				CEMEA_V1: (
-					<>
-						{' '}
-						{addressLine1}{' '}
-					</>
-				),
-				CEMEA_V2:(
-					<>
-						{' '}
-						{addressLine1}{' '}
-					</>
-				)
+				CEMEA_V1: <> {addressLine1} </>,
+				CEMEA_V2: <> {addressLine1} </>,
 			};
 			return addressLines[region];
-		}
+		},
 	},
 };
 
