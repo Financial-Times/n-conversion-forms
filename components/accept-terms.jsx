@@ -59,20 +59,20 @@ export function AcceptTerms ({
 							our{' '}
 							<a
 								className="ncf__link--external"
-								href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+								href="https://help.ft.com/legal-privacy/privacy-policy/"
 								target="_blank"
 								rel="noopener noreferrer"
-								data-trackable="terms-and-conditions"
+								data-trackable="privacy-policy-info"
 							>
 								privacy
 							</a>{' '}
 							and&nbsp;
 							<a
 								className="ncf__link--external"
-								href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+								href="https://help.ft.com/legal-privacy/cookies/"
 								target="_blank"
 								rel="noopener noreferrer"
-								data-trackable="terms-and-conditions"
+								data-trackable="cookies-info"
 							>
 								cookie
 							</a>{' '}
