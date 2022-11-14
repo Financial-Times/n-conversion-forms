@@ -10,19 +10,19 @@ exports[`AcceptTerms renders appropriately if a isAuthFirstAccount 1`] = `
       <span class="terms-auth-first-step">
         For more information about how we use your data, please refer to our
         <a class="ncf__link--external"
-           href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+           href="https://help.ft.com/legal-privacy/privacy-policy/"
            target="_blank"
            rel="noopener noreferrer"
-           data-trackable="terms-and-conditions"
+           data-trackable="privacy-policy-info"
         >
           privacy
         </a>
         and 
         <a class="ncf__link--external"
-           href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+           href="https://help.ft.com/legal-privacy/cookies/"
            target="_blank"
            rel="noopener noreferrer"
-           data-trackable="terms-and-conditions"
+           data-trackable="cookies-info"
         >
           cookie
         </a>
