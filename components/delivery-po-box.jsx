@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const message = {
-	USA: 'A P.O. Box address is only deliverable by US Mail, and is subject to a delay of up to 3 business days. For delivery on the publication date, we recommend you enter a residential or business address.',
-	CAN: 'A P.O. Box address is only deliverable by Canada Post, and is subject to a delay of up to 3 business days. For delivery on the publication day, we recommend you enter a residential or business address.',
+	USA: 'A P.O. Box address is only deliverable by US Mail, and is subject to a delay of up to 5 business days. For delivery on the publication date, we recommend you enter a residential or business address.',
+	CAN: 'A P.O. Box address is only deliverable by Canada Post, and is subject to a delay of up to 5 business days. For delivery on the publication day, we recommend you enter a residential or business address.',
 };
 
 export function DeliveryPOBox ({
