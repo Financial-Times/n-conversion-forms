@@ -29,7 +29,8 @@
     "classnames": "2.3.1",
     "fetchres": "1.7.2",
     "lodash.get": "4.4.2",
-    "n-common-static-data": "github:Financial-Times/n-common-static-data#v1.7.1"
+    "n-common-static-data": "github:Financial-Times/n-common-static-data#v1.7.1",
+    "@financial-times/n-pricing": "5.5.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
@@ -40,7 +41,6 @@
     "@financial-times/eslint-config-next": "^3.0.0",
     "@financial-times/jest-browser-resolver": "^1.0.2",
     "@financial-times/n-gage": "^8.2.0",
-    "@financial-times/n-pricing": "5.5.0",
     "@storybook/addon-a11y": "^6.5.13",
     "@storybook/addon-essentials": "6.5.13",
     "@storybook/react": "^6.5.13",
