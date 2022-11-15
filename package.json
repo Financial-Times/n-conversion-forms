@@ -58,7 +58,7 @@
     "jest-serializer-html": "^7.0.0",
     "jsdom": "15.1.0",
     "lint-staged": "^11.2.6",
-    "mocha": "5.1.1",
+    "mocha": "10.1.0",
     "pa11y-ci": "2.1.1",
     "postcss": "^7.0.32",
     "prettier": "2.4.1",
