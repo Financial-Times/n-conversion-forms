@@ -14,4 +14,5 @@ Basic.args = {
 	enableCreditcard: true,
 	enablePaypal: true,
 	showPaypalCustomerCareMessage: true,
+	enableBankTransfer: true,
 };

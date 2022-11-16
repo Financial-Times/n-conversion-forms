@@ -34,6 +34,7 @@ export function PaymentType ({
 	enableCreditcard = false,
 	enableDirectdebit = false,
 	enablePaypal = false,
+	enableBankTransfer = false,
 	showLoaderOnInit = false,
 	showPaypalCustomerCareMessage = false,
 	fieldId = 'paymentTypeField',
@@ -90,12 +91,19 @@ export function PaymentType ({
 		hide: !enableApplepay,
 	};
 
+	const paymentTypeBankTransfer = {
+		id: 'banktransfer',
+		label: 'Bank Transfer',
+		hide: !enableBankTransfer,
+	};
+
 	const createPaymentTypes = () => {
 		const paymentTypes = [
 			paymentTypeCreditCard,
 			paymentTypePaypal(),
 			paymentTypeDirectDebit,
 			paymentTypeApplePay,
+			paymentTypeBankTransfer
 		];
 		return paymentTypes.map((type) => {
 			if (type.id === undefined) {
