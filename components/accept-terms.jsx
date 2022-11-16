@@ -412,5 +412,6 @@ AcceptTerms.propTypes = {
 	isPrintProduct: PropTypes.bool,
 	specialTerms: PropTypes.string,
 	isSingleTerm: PropTypes.bool,
+	isDeferredBilling: PropTypes.bool,
 	hideConfirmTermsAndConditions: PropTypes.bool,
 };

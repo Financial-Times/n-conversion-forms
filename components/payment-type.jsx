@@ -281,6 +281,7 @@ PaymentType.propTypes = {
 	enableCreditcard: PropTypes.bool,
 	enableDirectdebit: PropTypes.bool,
 	enablePaypal: PropTypes.bool,
+	enableBankTransfer: PropTypes.bool,
 	showLoaderOnInit: PropTypes.bool,
 	showPaypalCustomerCareMessage: PropTypes.bool,
 	fieldId: PropTypes.string,
