@@ -22,6 +22,7 @@ export function AcceptTerms ({
 	isPrintProduct = false,
 	specialTerms = null,
 	isSingleTerm = false,
+	isDeferredBilling = false,
 	hideConfirmTermsAndConditions = false,
 }) {
 	const divProps = {
@@ -331,6 +332,15 @@ export function AcceptTerms ({
 		</>
 	);
 
+	const deferredBillingTerms = isDeferredBilling && (
+		<li>
+			<span className="terms-deferred">
+				Please note if you fail to make payment for your deferred billing plan within due
+				date your subscription will be automatically cancelled.
+			</span>
+		</li>
+	);
+
 	const b2cPartnershipTerms = (
 		<label className={[labelClassName, 'checkbox-two-lines'].join(' ')}>
 			<input {...inputProps} />
@@ -369,6 +379,7 @@ export function AcceptTerms ({
 						{corpSignupTerms}
 						{transitionTerms}
 						{signupTerms}
+						{deferredBillingTerms}
 					</ul>
 					<label className={labelClassName} htmlFor="termsAcceptance">
 						<input {...inputProps} />
