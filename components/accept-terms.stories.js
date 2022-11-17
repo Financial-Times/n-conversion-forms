@@ -27,6 +27,7 @@ export default {
 		isSingleTerm: { control: 'boolean' },
 		isNewDigitalBuyFlowConsent: { control: 'boolean' },
 		hideConfirmTermsAndConditions: { control: 'boolean' },
+		isDeferredBilling: { control: 'boolean' },
 	},
 };
 

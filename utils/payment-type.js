@@ -143,6 +143,10 @@ class PaymentType {
 	static get APPLEPAY () {
 		return 'applepay';
 	}
+
+	static get BANKTRANSFER () {
+		return 'banktransfer';
+	}
 }
 
 module.exports = PaymentType;

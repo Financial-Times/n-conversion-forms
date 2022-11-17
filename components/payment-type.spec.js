@@ -74,4 +74,12 @@ describe('PaymentType', () => {
 
 		expect(PaymentType).toRenderCorrectly(props);
 	});
+
+	it('render with enableBankTransfer', () => {
+		const props = {
+			enableBankTransfer: true,
+		};
+
+		expect(PaymentType).toRenderCorrectly(props);
+	});
 });
