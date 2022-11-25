@@ -26,11 +26,11 @@
   "homepage": "https://github.com/Financial-Times/n-conversion-forms#readme",
   "dependencies": {
     "@babel/runtime": "^7.11.2",
+    "@financial-times/n-pricing": "5.6.1",
     "classnames": "2.3.1",
     "fetchres": "1.7.2",
     "lodash.get": "4.4.2",
-    "n-common-static-data": "github:Financial-Times/n-common-static-data#v1.7.1",
-    "@financial-times/n-pricing": "5.6.1"
+    "n-common-static-data": "github:Financial-Times/n-common-static-data#v1.7.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
@@ -45,7 +45,6 @@
     "@storybook/addon-essentials": "6.5.13",
     "@storybook/react": "^6.5.13",
     "@sucrase/jest-plugin": "^2.0.0",
-    "chai": "^4.2.0",
     "check-engines": "^1.5.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
@@ -58,18 +57,14 @@
     "jest-serializer-html": "^7.0.0",
     "jsdom": "15.1.0",
     "lint-staged": "^11.2.6",
-    "mocha": "5.1.1",
     "pa11y-ci": "2.1.1",
-    "postcss": "^7.0.32",
     "prettier": "2.4.1",
     "prop-types": "15.7.2",
-    "proxyquire": "2.1.0",
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "react-is": "^16.13.1",
     "sass": "^1.55.0",
     "sass-loader": "^10.2.1",
-    "sinon": "6.3.5",
     "snyk": "1.230.7"
   },
   "engines": {
