@@ -29,7 +29,7 @@ const supportedCountriesMasterList = {
 		ZAF: 'South Africa',
 		ESP: 'Spain',
 		SWE: 'Sweden',
-		CHE: 'Switzerland'
+		CHE: 'Switzerland',
 	},
 	cemeaV2: { FRA: 'France', LUX: 'Luxembourg', MCO: 'Monaco' },
 	apac: {
@@ -43,14 +43,14 @@ const supportedCountriesMasterList = {
 		PHL: 'Philippines',
 		SGP: 'Singapore',
 		TWN: 'Taiwan, Province of China',
-		THA: 'Thailand'
+		THA: 'Thailand',
 	},
 	other: {
 		GBR: 'United Kingdom',
 		USA: 'United States',
 		CAN: 'Canada',
-		ARE: 'United Arab Emirates'
-	}
+		ARE: 'United Arab Emirates',
+	},
 };
 
 const cemeaV1ISO = Object.keys(supportedCountriesMasterList.cemeaV1);
@@ -73,4 +73,11 @@ const identifyFTShippingZone = (country) => {
 	return country;
 };
 
-module.exports = { cemeaV1ISO, cemeaV2ISO, apacISO, countriesSupported, countriesSupportedISO, identifyFTShippingZone };
+module.exports = {
+	cemeaV1ISO,
+	cemeaV2ISO,
+	apacISO,
+	countriesSupported,
+	countriesSupportedISO,
+	identifyFTShippingZone,
+};

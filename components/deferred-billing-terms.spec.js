@@ -29,7 +29,11 @@ describe('DeferredBillingTerms', () => {
 	});
 
 	it('renders appropriately if all props are set to false - no rendering of the component', () => {
-		const props = { isChecked: false, isDeferredBilling: false, hasError: false };
+		const props = {
+			isChecked: false,
+			isDeferredBilling: false,
+			hasError: false,
+		};
 
 		expect(DeferredBillingTerms).toRenderCorrectly(props);
 	});

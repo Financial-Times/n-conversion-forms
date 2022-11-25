@@ -36,7 +36,9 @@ describe('Delivery Address Type - Util', () => {
 				<body>${component.html()}</body>
 				</html>`;
 
-			const deliveryAdressTypeUtilInstance = new DeliveryAdressTypeUtil(document);
+			const deliveryAdressTypeUtilInstance = new DeliveryAdressTypeUtil(
+				document
+			);
 			expect(deliveryAdressTypeUtilInstance.getSelected()).toEqual('home');
 		});
 
@@ -54,7 +56,9 @@ describe('Delivery Address Type - Util', () => {
 				<body>${component.html()}</body>
 				</html>`;
 
-			const deliveryAdressTypeUtilInstance = new DeliveryAdressTypeUtil(document);
+			const deliveryAdressTypeUtilInstance = new DeliveryAdressTypeUtil(
+				document
+			);
 			expect(deliveryAdressTypeUtilInstance.getSelected()).toEqual(props.value);
 		});
 	});

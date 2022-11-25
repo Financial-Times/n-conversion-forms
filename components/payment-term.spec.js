@@ -161,13 +161,17 @@ describe('PaymentTerm', () => {
 			monthlyPrice: '£1.67',
 		};
 		describe('non-trial terms', () => {
-			const options = [{
-				...baseOptions,
-				isTrial: false,
-			}];
+			const options = [
+				{
+					...baseOptions,
+					isTrial: false,
+				},
+			];
 			it('renders with time period only if trial.option == false', () => {
 				const wrapper = shallow(<PaymentTerm options={options} />);
-				expect(wrapper.find('.ncf__payment-term__label').text()).toMatch(/^Monthly .*$/);
+				expect(wrapper.find('.ncf__payment-term__label').text()).toMatch(
+					/^Monthly .*$/
+				);
 			});
 		});
 		describe('getDisplayName', () => {
@@ -183,10 +187,12 @@ describe('PaymentTerm', () => {
 				);
 			});
 			it('renders using displayName if available', () => {
-				const options = [{
-					...trialOptions,
-					displayName: 'someDisplayName',
-				}];
+				const options = [
+					{
+						...trialOptions,
+						displayName: 'someDisplayName',
+					},
+				];
 				const wrapper = shallow(<PaymentTerm options={options} />);
 				expect(wrapper.find('.ncf__payment-term__label').text()).toMatch(
 					/^Trial: someDisplayName - Monthly .*/

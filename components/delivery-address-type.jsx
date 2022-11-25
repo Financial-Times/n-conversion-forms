@@ -7,13 +7,13 @@ const addressTypes = [
 	{ id: 'pobox', label: 'P.O. Box' },
 ];
 
-export function DeliveryAddressType ({
+export function DeliveryAddressType({
 	value = 'home',
 	fieldId = 'deliveryAddressTypeField',
 	inputName = 'deliveryAddressType',
 	options = ['home', 'company', 'pobox'],
 	editMode = false,
-	titlePrompt = ''
+	titlePrompt = '',
 }) {
 	return (
 		<div
@@ -39,7 +39,7 @@ export function DeliveryAddressType ({
 								name={inputName}
 								value={type.id}
 								className="ncf__delivery-address-type__input"
-								disabled={editMode && (type.id !== value)}
+								disabled={editMode && type.id !== value}
 								defaultChecked={type.id === value}
 							/>
 							<span
@@ -61,5 +61,5 @@ DeliveryAddressType.propTypes = {
 	inputName: PropTypes.string,
 	value: PropTypes.oneOf(['home', 'company', 'pobox']),
 	options: PropTypes.arrayOf(PropTypes.oneOf(['home', 'company', 'pobox'])),
-	titlePrompt:PropTypes.string,
+	titlePrompt: PropTypes.string,
 };

@@ -1,9 +1,5 @@
 module.exports = {
-	testPathIgnorePatterns: [
-		'/node_modules/',
-		'/cypress/',
-		'/test/',
-	],
+	testPathIgnorePatterns: ['/node_modules/', '/cypress/', '/test/'],
 	transform: {
 		'.(js|jsx)': '@sucrase/jest-plugin',
 	},

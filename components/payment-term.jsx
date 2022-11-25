@@ -1,12 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import {
-	Period,
-	Monthly,
-} from '@financial-times/n-pricing';
+import { Period, Monthly } from '@financial-times/n-pricing';
 
-export function PaymentTerm ({
+export function PaymentTerm({
 	fieldId = 'paymentTermField',
 	inputName = 'paymentTerm',
 	isPrintOrBundle = false,
@@ -18,7 +15,6 @@ export function PaymentTerm ({
 	largePrice = false,
 	optionsInARow = false,
 }) {
-
 	/**
 	 * Compute monthly price for given term name
 	 * @param {number} amount price in number format
@@ -39,11 +35,10 @@ export function PaymentTerm ({
 	 * @returns {string}
 	 */
 	const getTimeFromPeriod = (period) => {
-		const freq = period.substring(period.length - 1) === 'Y' ? 'years' : 'months';
+		const freq =
+			period.substring(period.length - 1) === 'Y' ? 'years' : 'months';
 		const amount = period.substring(1, period.length - 1);
-		return (
-			period ? `${amount} ${freq}` : ''
-		);
+		return period ? `${amount} ${freq}` : '';
 	};
 
 	const isValidPeriod = (period) => {
@@ -144,7 +139,8 @@ export function PaymentTerm ({
 			trialPrice: (trialPrice, trialPeriod) => (
 				<React.Fragment>
 					Unless you cancel during your trial you will be billed{' '}
-					<span className="ncf__payment-term__price">{trialPrice}</span> per {trialPeriod}
+					<span className="ncf__payment-term__price">{trialPrice}</span> per{' '}
+					{trialPeriod}
 					after the trial period.
 				</React.Fragment>
 			),
@@ -152,18 +148,19 @@ export function PaymentTerm ({
 				Boolean(monthlyPrice) && (
 					<span className="ncf__payment-term__equivalent-price">
 						That’s equivalent to{' '}
-						<span className="ncf__payment-term__monthly-price">{monthlyPrice}</span>{' '}
+						<span className="ncf__payment-term__monthly-price">
+							{monthlyPrice}
+						</span>{' '}
 						per month
 					</span>
 				),
-			renewsText: (renewalPeriod) => (
+			renewsText: (renewalPeriod) =>
 				Boolean(renewalPeriod) && (
 					<p className="ncf__payment-term__renews-text">
 						Renews every {renewalPeriod} unless cancelled
 					</p>
-				)
-			),
-		}
+				),
+		},
 	};
 	const createPaymentTerm = (option) => {
 		const className = classNames([
@@ -186,7 +183,9 @@ export function PaymentTerm ({
 			return (
 				option.discount && (
 					<span className="ncf__payment-term__discount">
-						{option.bestOffer ? 'Best offer' : `Save ${option.discount} off RRP`}
+						{option.bestOffer
+							? 'Best offer'
+							: `Save ${option.discount} off RRP`}
 					</span>
 				)
 			);
@@ -194,7 +193,9 @@ export function PaymentTerm ({
 
 		const createB2cDiscountCopy = () => {
 			return (
-				option.name === 'annual' && option.b2cPartnership && option.b2cDiscountCopy && (
+				option.name === 'annual' &&
+				option.b2cPartnership &&
+				option.b2cDiscountCopy && (
 					<span className="ncf__payment-term__discount">
 						{option.b2cDiscountCopy}
 					</span>
@@ -222,40 +223,46 @@ export function PaymentTerm ({
 							{/* Remove this discount text temporarily in favour of monthly price */}
 							{/* <br />Save up to 25% when you pay annually */}
 						</div>
+					) : // this should cover the cases different than annual, quarterly and monthly
+					// for those containing period on option.value, render custom template, for the rest keep legacy render
+					isValidPeriod(option.value) ? (
+						<div className="ncf__payment-term__description">
+							{nameMap['custom'].price(option.price)}
+							{nameMap['custom'].monthlyPrice(
+								option.monthlyPrice && option.monthlyPrice !== '0'
+									? Number(option.monthlyPrice)
+									: getMontlyPriceFromPeriod(
+											option.amount,
+											option.currency,
+											option.value
+									  )
+							)}
+							{nameMap['custom'].renewsText(getTimeFromPeriod(option.value))}
+						</div>
 					) : (
-						// this should cover the cases different than annual, quarterly and monthly
-						// for those containing period on option.value, render custom template, for the rest keep legacy render
-						isValidPeriod(option.value) ?
-							<div className="ncf__payment-term__description">
-								{nameMap['custom'].price(option.price)}
-								{nameMap['custom'].monthlyPrice(
-									option.monthlyPrice && option.monthlyPrice !== '0' ? Number(option.monthlyPrice) : getMontlyPriceFromPeriod(option.amount, option.currency, option.value)
-								)}
-								{nameMap['custom'].renewsText(getTimeFromPeriod(option.value))}
-							</div>
-							: (
-								<div>
-									<span className={largePrice ? 'ncf__payment-term__large-price' : ''}>
-										{option.price}
-									</span>
-									{option.chargeOnText && (
-										<p className="ncf__payment-term__charge-on-text">
-											{option.chargeOnText}
-										</p>
-									)}
-								</div>
-							)
+						<div>
+							<span
+								className={largePrice ? 'ncf__payment-term__large-price' : ''}
+							>
+								{option.price}
+							</span>
+							{option.chargeOnText && (
+								<p className="ncf__payment-term__charge-on-text">
+									{option.chargeOnText}
+								</p>
+							)}
+						</div>
 					)}
 				</React.Fragment>
 			);
 		};
 
 		const getTermDisplayName = () => {
-
 			const showTrialCopyInTitle =
 				option.isTrial && !isPrintOrBundle && !isEpaper;
 
-			const defaultTitle = (option.name && nameMap[option.name]) ? nameMap[option.name].title : '';
+			const defaultTitle =
+				option.name && nameMap[option.name] ? nameMap[option.name].title : '';
 
 			const title = isFixedTermOffer
 				? `${offerDisplayName} - ${defaultTitle}`
@@ -263,7 +270,9 @@ export function PaymentTerm ({
 
 			let termDisplayName = '';
 			if (showTrialCopyInTitle) {
-				const termName = option.displayName ? option.displayName : 'Premium Digital';
+				const termName = option.displayName
+					? option.displayName
+					: 'Premium Digital';
 				termDisplayName = `Trial: ${termName} - `;
 			}
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { LicenceSignIn } from './licence-sign-in';
 import { LicenceTitle } from './licence-title';
 
-export function LicenceHeader (props) {
+export function LicenceHeader(props) {
 	const {
 		displayName = '',
 		logoUrl = '',
@@ -12,14 +12,14 @@ export function LicenceHeader (props) {
 		welcomeText = '',
 		url = '',
 	} = props;
-	function createMarkup (text) {
+	function createMarkup(text) {
 		return { __html: text };
 	}
 
 	return (
 		<React.Fragment>
 			{Boolean(logoUrl) && (
-				<img className="ncf__logo" alt="logo" src={logoUrl}/>
+				<img className="ncf__logo" alt="logo" src={logoUrl} />
 			)}
 
 			<LicenceTitle

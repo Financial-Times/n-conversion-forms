@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const EMAIL_DEFAULT_TEXT = 'your email';
 
-export function Confirmation ({
+export function Confirmation({
 	// isTrial prop is needed for the floodlight pixel tracking.
 	isTrial = false,
 	isB2cPartnership = false,
@@ -20,7 +20,8 @@ export function Confirmation ({
 		...(isTrial && { 'data-signup-is-trial': 'true' }),
 	};
 
-	const isB2cPartnershipCopyAvailable = isB2cPartnership && b2cPartnershipCopy.length > 0;
+	const isB2cPartnershipCopyAvailable =
+		isB2cPartnership && b2cPartnershipCopy.length > 0;
 
 	const detailElements = details && (
 		<React.Fragment>
@@ -68,8 +69,8 @@ export function Confirmation ({
 			{nextActionTop}
 			{!isB2cPartnershipCopyAvailable && (
 				<p className="ncf__paragraph">
-					We’ve sent confirmation to {email}. Make sure you check your spam folder
-					if you don’t receive it.
+					We’ve sent confirmation to {email}. Make sure you check your spam
+					folder if you don’t receive it.
 				</p>
 			)}
 
