@@ -13,7 +13,7 @@ const PaypalCustomerCareMessage = () => {
 				<div className="o-message__container">
 					<div className="o-message__content">
 						<p className="o-message__content-main">
-							If you{'\''}d like to change your payment method to Paypal please{' '}
+							If you{"'"}d like to change your payment method to Paypal please{' '}
 							<a
 								className="o-message__actions__secondary"
 								href="https://help.ft.com"
@@ -29,7 +29,7 @@ const PaypalCustomerCareMessage = () => {
 	);
 };
 
-export function PaymentType ({
+export function PaymentType({
 	enableApplepay = false,
 	enableCreditcard = false,
 	enableDirectdebit = false,
@@ -103,7 +103,7 @@ export function PaymentType ({
 			paymentTypePaypal(),
 			paymentTypeDirectDebit,
 			paymentTypeApplePay,
-			paymentTypeBankTransfer
+			paymentTypeBankTransfer,
 		];
 		return paymentTypes.map((type) => {
 			if (type.id === undefined) {
@@ -196,6 +196,7 @@ export function PaymentType ({
 	};
 
 	const createZuoraPanel = () => {
+		// eslint-disable-next-line react/no-unknown-property
 		return (
 			(enableDirectdebit || enableCreditcard) && (
 				<div className="ncf__payment-type-panel ncf__payment-type-panel--creditcard ncf__payment-type-panel--directdebit ncf__hidden">
@@ -207,7 +208,6 @@ export function PaymentType ({
 							overflow="visible"
 							scrolling="no"
 							frameBorder="0"
-							allowtransparency="true"
 							className="z_hppm_iframe"
 							style={{ display: 'block', width: '100%' }}
 						></iframe>
