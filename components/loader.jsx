@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function Loader ({ children, showLoader, title, inElement }) {
+export function Loader({ children, showLoader, title, inElement }) {
 	const label = title ? (
 		<div className="ncf__loader__content__title" id="loader-aria-label">
 			{title}

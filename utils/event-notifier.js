@@ -44,6 +44,6 @@ module.exports = {
 	},
 };
 
-function notifier (payload, windowObject) {
+function notifier(payload, windowObject) {
 	windowObject.postMessage(JSON.stringify(payload), '*');
 }

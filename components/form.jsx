@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function Form ({ children, action = '', method = 'POST' }) {
+export function Form({ children, action = '', method = 'POST' }) {
 	return (
 		<div className="ncf__wrapper">
 			<form className="ncf" action={action} method={method} noValidate>

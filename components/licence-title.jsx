@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function LicenceTitle ({
+export function LicenceTitle({
 	displayName = '',
 	isTrial = false,
 	isB2cPartnershipLicence = false,
@@ -18,7 +18,7 @@ export function LicenceTitle ({
 	}
 }
 
-function renderB2BTitle (displayName) {
+function renderB2BTitle(displayName) {
 	if (!displayName) {
 		return <h1 className="ncf__header">Join your FT.com subscription</h1>;
 	}

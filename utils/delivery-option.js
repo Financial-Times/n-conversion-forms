@@ -9,7 +9,7 @@ class DeliveryOption {
 	 * @param {Element} element Usually the window.document
 	 * @throws If the element not passed
 	 */
-	constructor (element) {
+	constructor(element) {
 		if (!element) {
 			throw new Error('Please supply the DOM element');
 		}
@@ -27,7 +27,7 @@ class DeliveryOption {
 	 * Binds the given callback to the field's onchange event.
 	 * @param {Function} callback The callback function to call when a change event occurs.
 	 */
-	handleDeliveryOptionChange (callback) {
+	handleDeliveryOptionChange(callback) {
 		if (this.$form.elements['deliveryOption'].length === undefined) {
 			this.$form.elements['deliveryOption'].addEventListener(
 				'change',
@@ -43,7 +43,7 @@ class DeliveryOption {
 	/**
 	 * Hide a specific radio input item.
 	 */
-	hideItem (itemId) {
+	hideItem(itemId) {
 		const labelNodes = this.$form.querySelectorAll(
 			'.ncf__delivery-option__item'
 		);
@@ -56,7 +56,7 @@ class DeliveryOption {
 	/**
 	 * Show a specific radio input item.
 	 */
-	showItem (itemId) {
+	showItem(itemId) {
 		const labelNodes = this.$form.querySelectorAll(
 			'.ncf__delivery-option__item'
 		);
@@ -69,7 +69,7 @@ class DeliveryOption {
 	/**
 	 * Mark an input item as checked
 	 */
-	checkItem (itemId) {
+	checkItem(itemId) {
 		const inputNodes = this.$form.elements['deliveryOption'];
 		const item = Array.from(inputNodes).find((node) => node.id === itemId);
 		if (item) {

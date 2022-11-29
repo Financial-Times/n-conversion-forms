@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function TrialBanner ({ trialDuration = '' }) {
+export function TrialBanner({ trialDuration = '' }) {
 	const durationMessage = trialDuration ? (
 		<>
 			<span className="ncf__strong">{trialDuration}</span>{' '}

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function DeliverySecurityInstructions ({
+export function DeliverySecurityInstructions({
 	fieldId = 'deliverySecurityInstructionsField',
 	hasError = false,
 	inputId = 'deliverySecurityInstructions',

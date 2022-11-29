@@ -5,7 +5,7 @@ import { b2b, demographics } from 'n-common-static-data';
 const B2CPositions = demographics.positions.positions;
 const B2BPositions = b2b.demographics.positions.positions;
 
-export function Position ({
+export function Position({
 	value,
 	isDisabled = false,
 	hasError = false,

@@ -40,7 +40,7 @@ export const Compliance = () => (
 	</div>
 );
 
-export function GraduationDate ({
+export function GraduationDate({
 	value,
 	isDisabled = false,
 	isRequired = false,

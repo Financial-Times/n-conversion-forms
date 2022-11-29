@@ -10,7 +10,7 @@ class FormElement {
 	 * @param {object} document The global document object
 	 * @param {string} querySelector The selector for the main element used by this component.
 	 */
-	constructor (document, querySelector) {
+	constructor(document, querySelector) {
 		this.$document = document;
 
 		if (!this.$document) {
@@ -31,21 +31,21 @@ class FormElement {
 	/**
 	 * Hides the form element.
 	 */
-	hide () {
+	hide() {
 		this.$el.classList.add('ncf__hidden');
 	}
 
 	/**
 	 * Shows the form element.
 	 */
-	show () {
+	show() {
 		this.$el.classList.remove('ncf__hidden');
 	}
 
 	/**
 	 * Disable any inputs or selects inside form element
 	 */
-	disable () {
+	disable() {
 		for (let i = 0; i < this.inputs.length; i++) {
 			this.inputs[i].disabled = true;
 		}
@@ -54,7 +54,7 @@ class FormElement {
 	/**
 	 * Enable any inputs or selects inside form element
 	 */
-	enable () {
+	enable() {
 		for (let i = 0; i < this.inputs.length; i++) {
 			this.inputs[i].disabled = false;
 		}
@@ -64,14 +64,14 @@ class FormElement {
 	 * Get the value of the form element
 	 * Assumes the first input or select is what's required
 	 */
-	value () {
+	value() {
 		return this.$el.querySelector('input,select').value;
 	}
 
 	/**
 	 * Make first input element required
 	 */
-	makeRequired () {
+	makeRequired() {
 		if (this.inputs && this.inputs.length) {
 			this.inputs[0].required = true;
 		}
@@ -81,7 +81,7 @@ class FormElement {
 	/**
 	 * Make first input element not required (optional)
 	 */
-	makeOptional () {
+	makeOptional() {
 		if (this.inputs && this.inputs.length) {
 			this.inputs[0].required = false;
 		}

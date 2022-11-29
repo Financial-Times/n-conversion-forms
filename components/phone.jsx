@@ -2,7 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function Phone ({
+export function Phone({
 	hasError = false,
 	isB2b = false,
 	isDisabled = false,
