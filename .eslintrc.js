@@ -1,9 +1,7 @@
-// we run prettier on commit and push, disabling some rules here that will conflict with prettier
 module.exports = {
-	extends: ['@financial-times/eslint-config-next'],
+	extends: ['@financial-times/eslint-config-next', 'prettier'],
 	rules: {
-		'space-before-function-paren': 'off',
-		'quotes': 0,
-		'indent': 0,
+		'prettier/prettier': 'error',
 	},
+	plugins: ['prettier'],
 };
