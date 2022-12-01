@@ -33,7 +33,7 @@ const STORES = [
 	},
 ];
 
-export function RegistrationConfirmation ({
+export function RegistrationConfirmation({
 	email = EMAIL_DEFAULT_TEXT,
 	returnUrl = '/',
 }) {

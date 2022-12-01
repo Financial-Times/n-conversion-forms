@@ -2,9 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getDeliveryOption } from '../utils/delivery-option-messages';
-import { identifyFTShippingZone, countriesSupportedISO } from '../helpers/supportedCountries';
+import {
+	identifyFTShippingZone,
+	countriesSupportedISO,
+} from '../helpers/supportedCountries';
 
-export function DeliveryOption ({
+export function DeliveryOption({
 	fieldId = 'deliveryOptionField',
 	country,
 	productCode = undefined,

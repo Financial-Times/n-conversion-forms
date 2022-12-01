@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function LicenceConfirmation ({
+export function LicenceConfirmation({
 	isTrial = false,
 	isEmbedded = false,
 	duration = null,
@@ -33,19 +33,21 @@ export function LicenceConfirmation ({
 					)}
 				</div>
 			</div>
-			{
-				bodyContent ? bodyContent : <>
+			{bodyContent ? (
+				bodyContent
+			) : (
+				<>
 					<p className="ncf__paragraph">
-					Go to myFT to personalise your feed &amp; follow topics &amp; articles
-					of interest to you. Set this up now or later.
+						Go to myFT to personalise your feed &amp; follow topics &amp;
+						articles of interest to you. Set this up now or later.
 					</p>
 
 					<p className="ncf__paragraph">
-						Explore the homepage &amp; enjoy your unlimited access &amp; exclusive
-						content.
+						Explore the homepage &amp; enjoy your unlimited access &amp;
+						exclusive content.
 					</p>
 				</>
-			}
+			)}
 			{ctaElement || (
 				<p className="ncf__paragraph ncf__center">
 					<a className="ncf__button ncf__button--submit" href="/myft">

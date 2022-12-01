@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function Organisation ({
+export function Organisation({
 	dataTrackable = 'organization',
 	errorText = 'Please enter your organisation',
 	fieldId = 'organisationField',

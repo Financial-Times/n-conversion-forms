@@ -5,7 +5,7 @@ import { b2b, demographics } from 'n-common-static-data';
 const B2CResponsibilities = demographics.responsibilities.responsibilities;
 const B2BResponsibilities = b2b.demographics.responsibilities.responsibilities;
 
-export function Responsibility ({
+export function Responsibility({
 	value,
 	isDisabled = false,
 	isRequired = true,

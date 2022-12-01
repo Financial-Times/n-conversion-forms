@@ -16,7 +16,7 @@ class PaymentType {
 	 * @throws If the document not passed
 	 * @throws When the paymentTypeField element not found
 	 */
-	constructor (element) {
+	constructor(element) {
 		if (!element) {
 			throw new Error('Please supply a DOM element');
 		}
@@ -46,7 +46,7 @@ class PaymentType {
 	 * Hides and removes from the DOM the payment type given
 	 * @param {String} type Payment type to hide
 	 */
-	hide (type) {
+	hide(type) {
 		const container = this.$paymentType.querySelector(`#${type}`).parentElement
 			.parentElement;
 		container.classList.add('ncf__hidden');
@@ -57,7 +57,7 @@ class PaymentType {
 	 * cloning existing payment types
 	 * @param {String} type Payment type to show
 	 */
-	show (type) {
+	show(type) {
 		const container = this.$paymentType.querySelector(`#${type}`).parentElement
 			.parentElement;
 		container.classList.remove('ncf__hidden');
@@ -66,14 +66,14 @@ class PaymentType {
 	/**
 	 * Display an error message on the paymentType
 	 */
-	displayError () {
+	displayError() {
 		this.$paymentType.classList.add('o-forms-input--invalid');
 	}
 
 	/**
 	 * Remove an error from display
 	 */
-	removeError () {
+	removeError() {
 		this.$paymentType.classList.remove('o-forms-input--invalid');
 	}
 
@@ -81,7 +81,7 @@ class PaymentType {
 	 * Register on change an event listener
 	 * @param {Function} callback Called with event when changed
 	 */
-	onChange (callback = () => {}) {
+	onChange(callback = () => {}) {
 		return this.$paymentType.addEventListener('change', callback);
 	}
 
@@ -90,7 +90,7 @@ class PaymentType {
 	 * @return {String}
 	 * @throws If nothing has been selected
 	 */
-	getSelected () {
+	getSelected() {
 		const checked = this.$paymentType.querySelector('input:checked');
 		if (!checked) {
 			throw new Error('No payment type has been selected');
@@ -101,7 +101,7 @@ class PaymentType {
 	/**
 	 * Show the payment types panel
 	 */
-	showPanel () {
+	showPanel() {
 		const type = this.getSelected();
 		const content = this.$paymentType.querySelectorAll(
 			'.ncf__payment-type-panel'
@@ -118,7 +118,7 @@ class PaymentType {
 	/**
 	 * Hide the payment types panel
 	 */
-	hidePanel () {
+	hidePanel() {
 		const content = this.$paymentType.querySelectorAll(
 			'.ncf__payment-type-panel'
 		);
@@ -128,23 +128,23 @@ class PaymentType {
 		}
 	}
 
-	static get CREDITCARD () {
+	static get CREDITCARD() {
 		return 'creditcard';
 	}
 
-	static get DIRECTDEBIT () {
+	static get DIRECTDEBIT() {
 		return 'directdebit';
 	}
 
-	static get PAYPAL () {
+	static get PAYPAL() {
 		return 'paypal';
 	}
 
-	static get APPLEPAY () {
+	static get APPLEPAY() {
 		return 'applepay';
 	}
 
-	static get BANKTRANSFER () {
+	static get BANKTRANSFER() {
 		return 'banktransfer';
 	}
 }

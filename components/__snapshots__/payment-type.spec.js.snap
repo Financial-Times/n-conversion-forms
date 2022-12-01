@@ -461,7 +461,6 @@ exports[`PaymentType render with enableCreditcard 1`] = `
               overflow="visible"
               scrolling="no"
               frameborder="0"
-              allowtransparency="true"
               class="z_hppm_iframe"
               style="display:block;width:100%"
       >
@@ -611,7 +610,6 @@ exports[`PaymentType render with enableDirectdebit 1`] = `
               overflow="visible"
               scrolling="no"
               frameborder="0"
-              allowtransparency="true"
               class="z_hppm_iframe"
               style="display:block;width:100%"
       >

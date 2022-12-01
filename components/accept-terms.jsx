@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 const DEFAULT_AGE_RESTRICTION = '16';
 
-export function AcceptTerms ({
+export function AcceptTerms({
 	isAuthFirstAccount = false,
 	isAuthFirstPayment = false,
 	hasError = false,
@@ -52,7 +52,7 @@ export function AcceptTerms ({
 
 	const authFirstStepTerms = (
 		<>
-			{(
+			{
 				<ul className="o-typography-list ncf__accept-terms-list">
 					<li>
 						<span className="terms-auth-first-step">
@@ -81,7 +81,7 @@ export function AcceptTerms ({
 						</span>
 					</li>
 				</ul>
-			)}
+			}
 			{!hideConfirmTermsAndConditions && (
 				<label className={labelClassName} htmlFor="termsAcceptance">
 					<input {...inputProps} />
@@ -216,11 +216,12 @@ export function AcceptTerms ({
 				<li>
 					<span className="terms-transition terms-transition--immediate">
 						By placing my order, my subscription will start immediately and I am
-						aware and agree that I will therefore lose my statutory right to cancel my
-						subscription within 14 days of acceptance of my order. Any notice of
-						cancellation that I provide will only take effect at the end of my subscription
-						period and previously paid amounts are non-refundable, except in the event that
-						there is a fault in the provision of the services.
+						aware and agree that I will therefore lose my statutory right to
+						cancel my subscription within 14 days of acceptance of my order. Any
+						notice of cancellation that I provide will only take effect at the
+						end of my subscription period and previously paid amounts are
+						non-refundable, except in the event that there is a fault in the
+						provision of the services.
 					</span>
 				</li>
 			) : (
@@ -299,12 +300,13 @@ export function AcceptTerms ({
 					</li>
 					<li>
 						<span className="terms-signup">
-							By placing my order, my subscription will start immediately and I am
-							aware and agree that I will therefore lose my statutory right to cancel
-							my subscription within 14 days of acceptance of my order. Any notice of
-							cancellation that I provide will only take effect at the end of my
-							subscription period and previously paid amounts are non-refundable,
-							except in the event that there is a fault in the provision of the services.
+							By placing my order, my subscription will start immediately and I
+							am aware and agree that I will therefore lose my statutory right
+							to cancel my subscription within 14 days of acceptance of my
+							order. Any notice of cancellation that I provide will only take
+							effect at the end of my subscription period and previously paid
+							amounts are non-refundable, except in the event that there is a
+							fault in the provision of the services.
 						</span>
 					</li>
 					<li>
@@ -335,8 +337,8 @@ export function AcceptTerms ({
 	const deferredBillingTerms = isDeferredBilling && (
 		<li>
 			<span className="terms-deferred">
-				Please note if you fail to make payment for your deferred billing plan within due
-				date your subscription will be automatically cancelled.
+				Please note if you fail to make payment for your deferred billing plan
+				within due date your subscription will be automatically cancelled.
 			</span>
 		</li>
 	);

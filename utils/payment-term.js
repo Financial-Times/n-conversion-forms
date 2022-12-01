@@ -1,7 +1,4 @@
-const {
-	Period,
-	Monthly,
-} = require('@financial-times/n-pricing');
+const { Period, Monthly } = require('@financial-times/n-pricing');
 
 /**
  * Utility for the `n-conversion-forms/partial/payment-term.html` partial
@@ -33,7 +30,7 @@ class PaymentTerm {
 	 * @throws If the document not passed
 	 * @throws When the paymentTermField element not found
 	 */
-	constructor (element) {
+	constructor(element) {
 		if (!element) {
 			throw new Error('Please supply a DOM element');
 		}
@@ -51,7 +48,7 @@ class PaymentTerm {
 	 * @return {String}
 	 * @throws If nothing has been selected
 	 */
-	getSelected () {
+	getSelected() {
 		const checked = this.$paymentTerm.querySelector('input:checked');
 		if (!checked) {
 			throw new Error('No payment term has been selected');
@@ -64,7 +61,7 @@ class PaymentTerm {
 	 * @return {Number}
 	 * @throws If no payment term has been selected
 	 */
-	getBaseAmount () {
+	getBaseAmount() {
 		const checked = this.$paymentTerm.querySelector('input:checked');
 		if (!checked) {
 			throw new Error('No payment term has been selected');
@@ -76,11 +73,11 @@ class PaymentTerm {
 	 * Register on change an event listener
 	 * @param {Function} callback Called with event when changed
 	 */
-	onChange (callback = () => {}) {
+	onChange(callback = () => {}) {
 		return this.$paymentTerm.addEventListener('change', callback);
 	}
 
-	isValidPeriod (period) {
+	isValidPeriod(period) {
 		try {
 			// Period should throw an error if it is not properly provided
 			// in order to validate it, we just send in case type is string
@@ -89,9 +86,9 @@ class PaymentTerm {
 		} catch (e) {
 			return false;
 		}
-	};
+	}
 
-	getMontlyPriceFromPeriod (amount, currency, period) {
+	getMontlyPriceFromPeriod(amount, currency, period) {
 		const periodObj = new Period(period);
 		const monthlyPrice = periodObj.calculatePrice('P1M', amount);
 		return new Monthly({ value: monthlyPrice, currency }).getAmount('monthly');
@@ -101,7 +98,7 @@ class PaymentTerm {
 	 * Update the payment term options
 	 * @param {Array} options Array of objects contain terms information
 	 */
-	updateOptions (options) {
+	updateOptions(options) {
 		const terms = this.$paymentTerm.querySelectorAll(ITEM_CLASS);
 		for (let i = 0; i < terms.length; i++) {
 			const term = terms[i];
@@ -126,9 +123,13 @@ class PaymentTerm {
 				trialPrice.innerHTML = update.trialPrice;
 			}
 			if (monthlyPrice) {
-				monthlyPrice.innerHTML = this.isValidPeriod(update.value) ?
-					this.getMontlyPriceFromPeriod(update.amount, update.currency, update.value) :
-					update.monthlyPrice;
+				monthlyPrice.innerHTML = this.isValidPeriod(update.value)
+					? this.getMontlyPriceFromPeriod(
+							update.amount,
+							update.currency,
+							update.value
+					  )
+					: update.monthlyPrice;
 			}
 		}
 	}

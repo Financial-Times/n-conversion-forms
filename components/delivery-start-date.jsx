@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function DeliveryStartDate ({
+export function DeliveryStartDate({
 	hasError = false,
 	date = '',
 	value = '',

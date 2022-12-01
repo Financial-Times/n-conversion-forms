@@ -1,7 +1,7 @@
 const FormElement = require('./form-element');
 
 class CompanyName extends FormElement {
-	constructor (document, fieldId = 'companyNameField') {
+	constructor(document, fieldId = 'companyNameField') {
 		super(document, `.ncf #${fieldId}`);
 	}
 }

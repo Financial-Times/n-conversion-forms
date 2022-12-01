@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function B2CPartnershipConfirmation ({ ctaElement = null }) {
+export function B2CPartnershipConfirmation({ ctaElement = null }) {
 	const readingLinkProps = {
 		href: '/',
 		className: 'ncf__link',

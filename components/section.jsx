@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function Section ({ children }) {
+export function Section({ children }) {
 	return (
 		<div className="o-forms-section o-forms-section--wide">
 			<div className="o-forms-section__message">{children}</div>

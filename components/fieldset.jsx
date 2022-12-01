@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function Fieldset ({
+export function Fieldset({
 	children = null,
 	name = null,
 	legend = null,

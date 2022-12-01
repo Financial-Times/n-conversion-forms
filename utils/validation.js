@@ -8,9 +8,16 @@ class Validation {
 	 * @param {string} [errorSummaryMessage='There is a problem'] - A message to show in the header of the error summary. It defaults to: 'There is a problem'
 	 * @param {Boolean} [useBrowserValidation=false] - Whether to use the browsers validation and error messages. Defaults to `false`.
 	 */
-	constructor ({ errorSummaryMessage, mutePromptBeforeLeaving, useBrowserValidation } = {}) {
+	constructor({
+		errorSummaryMessage,
+		mutePromptBeforeLeaving,
+		useBrowserValidation,
+	} = {}) {
 		this.$form = document.querySelector('form.ncf');
-		this.oForms = OForms.init(this.$form, { errorSummaryMessage, useBrowserValidation });
+		this.oForms = OForms.init(this.$form, {
+			errorSummaryMessage,
+			useBrowserValidation,
+		});
 		this.$requiredEls = this.oForms.formInputs.filter(
 			({ input }) => input.type !== 'hidden' && input.required
 		);
@@ -24,7 +31,7 @@ class Validation {
 	/**
 	 * Initalise
 	 */
-	init () {
+	init() {
 		if (!this.$form) return;
 		for (const $el of this.$requiredEls) {
 			if (/(checkbox)/gi.test($el.input.type)) {
@@ -63,7 +70,7 @@ class Validation {
 	 * Proxy method for oForms validateForm
 	 * @param {Event} event DOM event
 	 */
-	validateForm (event) {
+	validateForm(event) {
 		this.oForms.validateFormInputs(event);
 		this.checkCustomValidation();
 	}
@@ -75,7 +82,7 @@ class Validation {
 	 * @param {Function} validator The function that will be run to determine whether the field is valid (needs to return `true` or `false`).
 	 * @param {String} errorMessage The error message to display to the user should the validation fail.
 	 */
-	addCustomValidation ({ field, validator, errorMessage }) {
+	addCustomValidation({ field, validator, errorMessage }) {
 		if (this.customValidation.get(field.name)) {
 			throw new Error(`Custom validation for ${field.name} already exists.`);
 		}
@@ -103,7 +110,7 @@ class Validation {
 	 * @param {DOMElement} $field The field for which to show a validation error.
 	 * @param {DOMElement} $message The error message to display.
 	 */
-	showCustomFieldValidationError ($field, $message) {
+	showCustomFieldValidationError($field, $message) {
 		/**
 		 * - remove o-forms-input--valid class from $parent
 		 */
@@ -139,7 +146,7 @@ class Validation {
 	 *
 	 * @param {DOMElement} $field The field related to the error that now needs to be cleared.
 	 */
-	clearCustomFieldValidationError ($field) {
+	clearCustomFieldValidationError($field) {
 		$field.setCustomValidity('');
 		const $message = this.$form.querySelector(
 			`#custom-validation-for-${$field.name}`
@@ -163,7 +170,7 @@ class Validation {
 	 *
 	 * @returns {Boolean} whether or not the custom validation passed.
 	 */
-	checkCustomValidation () {
+	checkCustomValidation() {
 		// Debounce this to prevent custom validation running again straight away
 		// through the checkFormValidity function below.
 		if (this.customValidation.size > 0 && !this.debounceCustomValidation) {
@@ -184,7 +191,7 @@ class Validation {
 	/**
 	 * Checks a single elements validity.
 	 */
-	checkElementValidity ($el) {
+	checkElementValidity($el) {
 		const passedCustomValidation = this.checkCustomValidation();
 
 		// If field fails custom validation don't `validateInput` as it may pass standard validation
@@ -198,7 +205,7 @@ class Validation {
 	/**
 	 * Update the state of the form to reflect form validity.
 	 */
-	checkFormValidity () {
+	checkFormValidity() {
 		const passedCustomValidation = this.checkCustomValidation();
 
 		if (passedCustomValidation && this.getInvalidEls().length === 0) {
@@ -212,7 +219,7 @@ class Validation {
 	 * Return the invalid fields on the form.
 	 * @returns {DOMElements} The array-like containing the invalid form elements.
 	 */
-	getInvalidEls () {
+	getInvalidEls() {
 		return this.$requiredEls
 			.filter(($el) => !$el.input.checkValidity())
 			.map(($el) => $el.input);

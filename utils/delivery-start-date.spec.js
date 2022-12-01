@@ -73,7 +73,7 @@ describe('DeliveryStartDate', () => {
 		let startDateUtil;
 		let startDateChangeResult;
 
-		async function setup () {
+		async function setup() {
 			global.fetch = jest.fn(() =>
 				Promise.resolve({
 					json: () =>
@@ -136,7 +136,8 @@ describe('DeliveryStartDate', () => {
 		});
 
 		it('displays an error and return false if the fetch call errors', async () => {
-			global.fetch = jest.fn(() => Promise.reject('API is down'));
+			const fetchError = new Error('API is down');
+			global.fetch = jest.fn(() => Promise.reject(fetchError));
 			startDateUtil = new DeliveryStartDate(document);
 
 			let startDateChangeResult =

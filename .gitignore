@@ -18,7 +18,6 @@ npm-debug.log
 /public*
 /pa11y_screenCapture/
 .editorconfig
-# .eslintrc.js
 .pa11yci.js
 .stylelintrc
 dist

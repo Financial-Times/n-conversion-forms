@@ -170,7 +170,8 @@ describe('Email', () => {
 		});
 
 		it('calls the onNotFound callback if the call to the url fails', async () => {
-			global.fetch = jest.fn(() => Promise.reject('API is down'));
+			const fetchError = new Error('API is down');
+			global.fetch = jest.fn(() => Promise.reject(fetchError));
 
 			emailElement.value = 'test@example.com';
 			await email.handleEmailExistsChange(url, onFound, onNotFound);

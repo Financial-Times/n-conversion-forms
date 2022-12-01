@@ -12,7 +12,7 @@ class Email {
 	 * @throws If the element not passed
 	 * @throws When the email element not found
 	 */
-	constructor (element) {
+	constructor(element) {
 		if (!element) {
 			throw new Error('Please supply the DOM element');
 		}
@@ -35,7 +35,7 @@ class Email {
 	/**
 	 * Check the values of the two fields and update error state accordingly.
 	 */
-	checkMatch () {
+	checkMatch() {
 		if (this.$emailConfirm.value) {
 			if (this.$email.value !== this.$emailConfirm.value) {
 				this.$emailConfirmField.classList.add('o-forms--error');
@@ -54,7 +54,7 @@ class Email {
 	 * @param {Function} onNotFound Callback function to run if email does *not* exist.
 	 * @returns {Function} The handler function so the caller can unregister it if they need.
 	 */
-	registerEmailExistsCheck (url, onFound, onNotFound) {
+	registerEmailExistsCheck(url, onFound, onNotFound) {
 		const handler = () => {
 			this.handleEmailExistsChange(url, onFound, onNotFound);
 		};
@@ -71,7 +71,7 @@ class Email {
 	 * @param {Function} onNotFound Function to call when not found
 	 * @return {Promise}
 	 */
-	handleEmailExistsChange (url, onFound, onNotFound) {
+	handleEmailExistsChange(url, onFound, onNotFound) {
 		if (this.$email.value) {
 			return fetch(url, {
 				method: 'POST',

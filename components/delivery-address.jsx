@@ -12,7 +12,7 @@ import {
 	countriesSupportedISO,
 } from '../helpers/supportedCountries';
 
-export function DeliveryAddress ({
+export function DeliveryAddress({
 	fieldId = 'deliveryAddressFields',
 	hasError = false,
 	line1 = '',

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function LicenceSignIn ({ displayName = '', url = '' }) {
+export function LicenceSignIn({ displayName = '', url = '' }) {
 	return (
 		<div className="ncf__center">
 			{renderSignInTitle(displayName)}
@@ -19,7 +19,7 @@ export function LicenceSignIn ({ displayName = '', url = '' }) {
 	);
 }
 
-function renderSignInTitle (displayName) {
+function renderSignInTitle(displayName) {
 	let signInTitle;
 
 	if (displayName !== '') {

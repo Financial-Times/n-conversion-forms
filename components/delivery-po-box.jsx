@@ -7,7 +7,7 @@ const message = {
 	CAN: 'A P.O. Box address is only deliverable by Canada Post, and is subject to a delay of up to 5 business days. For delivery on the publication day, we recommend you enter a residential or business address.',
 };
 
-export function DeliveryPOBox ({
+export function DeliveryPOBox({
 	fieldId = 'deliveryPOBoxField',
 	inputId = 'deliveryPOBox',
 	hasError = false,

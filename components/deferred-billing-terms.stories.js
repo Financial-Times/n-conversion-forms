@@ -11,8 +11,8 @@ export default {
 		fieldId: { control: 'string' },
 		trackableAttr: { control: 'string' },
 		errorMessage: { control: 'string' },
-		isDeferredBilling: { control: 'boolean' }
-	}
+		isDeferredBilling: { control: 'boolean' },
+	},
 };
 
 export const Basic = (args) => <DeferredBillingTerms {...args} />;
@@ -22,5 +22,5 @@ export const CheckedFlow = (args) => <DeferredBillingTerms {...args} />;
 CheckedFlow.args = {
 	isChecked: true,
 	isDeferredBilling: true,
-	hasError: false
+	hasError: false,
 };

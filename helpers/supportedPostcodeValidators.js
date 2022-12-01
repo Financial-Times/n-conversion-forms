@@ -19,7 +19,7 @@ const supportedPostcodeValidators = {
 		NOR: /^\d{4}$/,
 		POL: /^\d{2}-\d{3}$/,
 		PRT: /^\d{4}([\-]\d{3})?$/,
-		QAT: /.*$/,//match anything
+		QAT: /.*$/, //match anything
 		ROU: /^\d{6}$/,
 		RUS: /^\d{6}$/,
 		SVK: /^\d{3}[ ]?\d{2}$/,
@@ -27,7 +27,7 @@ const supportedPostcodeValidators = {
 		ZAF: /^\d{4}$/,
 		ESP: /^\d{5}$/,
 		SWE: /^\d{3}[ ]?\d{2}$/,
-		CHE: /^\d{4}$/
+		CHE: /^\d{4}$/,
 	},
 	cemeaV2: { FRA: /^[0-9]{5}$/, LUX: /^\d{4}$/, MCO: /^980\d{2}$/ },
 	apac: {
@@ -41,13 +41,13 @@ const supportedPostcodeValidators = {
 		PHL: /^\d{4}$/,
 		SGP: /^\d{6}$/,
 		TWN: /^\d{3}(\d{2})?$/,
-		THA: /^\d{5}$/
+		THA: /^\d{5}$/,
 	},
 	other: {
 		GBR: /^[A-Za-z]{1,2}[0-9][0-9A-Za-z]?[\s-]?[0-9][A-Za-z]{2}$/,
 		USA: /^[0-9]{5}$/,
-		CAN: /^[A-Za-z]\d[A-Za-z][\s-]?\d[A-Za-z]\d$/
-	}
+		CAN: /^[A-Za-z]\d[A-Za-z][\s-]?\d[A-Za-z]\d$/,
+	},
 };
 
 module.exports = { supportedPostcodeValidators };

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export function JobTitle ({
+export function JobTitle({
 	value = '',
 	isDisabled = false,
 	hasError = false,
