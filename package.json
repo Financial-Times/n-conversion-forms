@@ -30,7 +30,7 @@
     "classnames": "2.3.1",
     "fetchres": "1.7.2",
     "lodash.get": "4.4.2",
-    "n-common-static-data": "github:Financial-Times/n-common-static-data#v1.7.1"
+    "n-common-static-data": "github:Financial-Times/n-common-static-data#v1.8.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
