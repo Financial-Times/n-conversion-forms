@@ -12,4 +12,6 @@ module.exports = {
 		.supportedPostcodeValidators,
 	allSupportedPostcodeExamples: require('./supportedPostcodeExamples')
 		.allSupportedPostcodeExamples,
+	demographics: require('./demographics').demographics,
+	billingCountries: require('./billing-countries').billingCountries,
 };
