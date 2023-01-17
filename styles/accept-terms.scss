@@ -18,3 +18,25 @@
 		}
 	}
 }
+
+.auth-first-step-terms {
+  display: flex;
+  flex-direction: column;
+
+  .consent-text {
+    &--top {
+      order: -1;
+    }
+
+    &--bottom {
+      order: 99;
+      margin-top: oSpacingByName('s4');
+    }
+  }
+
+  .children-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: oSpacingByName('s4');
+  }
+}
