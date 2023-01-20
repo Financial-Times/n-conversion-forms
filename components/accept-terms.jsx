@@ -36,11 +36,18 @@ export function AcceptTerms({
 		...(isRegister && { 'data-trackable': 'register-up-terms' }),
 	};
 
+	const labelPositionClassnameRelatedToPrivacyPoliciesPosition = `consent-text--${
+		privacyPoliciesPosition === 'top' ? 'bottom' : 'top'
+	}`;
+
 	const labelClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--checkbox',
-		`consent-text--${privacyPoliciesPosition === 'top' ? 'bottom' : 'top'}`,
-		{ 'o-forms-input--invalid': hasError },
+		{
+			'o-forms-input--invalid': hasError,
+			[labelPositionClassnameRelatedToPrivacyPoliciesPosition]:
+				isAuthFirstAccount,
+		},
 	]);
 
 	const inputProps = {
