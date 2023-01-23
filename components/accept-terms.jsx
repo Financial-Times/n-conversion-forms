@@ -84,8 +84,8 @@ export function AcceptTerms({
 				<label className={labelClassName} htmlFor="termsAcceptance">
 					<input {...inputProps} />
 					<span className="o-forms-input__label">
-						I confirm I am {ageRestriction} years or older and have read and
-						agree to the{' '}
+						I confirm that I am {ageRestriction} years or older and agree to the
+						ful{' '}
 						<a
 							className="ncf__link--external"
 							href="http://help.ft.com/help/legal-privacy/terms-conditions/"
