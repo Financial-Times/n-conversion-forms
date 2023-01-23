@@ -36,17 +36,11 @@ export function AcceptTerms({
 		...(isRegister && { 'data-trackable': 'register-up-terms' }),
 	};
 
-	const labelPositionClassnameRelatedToPrivacyPoliciesPosition = `consent-text--${
-		privacyPoliciesPosition === 'top' ? 'bottom' : 'top'
-	}`;
-
 	const labelClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--checkbox',
 		{
 			'o-forms-input--invalid': hasError,
-			[labelPositionClassnameRelatedToPrivacyPoliciesPosition]:
-				isAuthFirstAccount,
 		},
 	]);
 
@@ -86,7 +80,6 @@ export function AcceptTerms({
 				</a>{' '}
 				policies.
 			</span>
-			{children && <div className="children-container">{children}</div>}
 			{!hideConfirmTermsAndConditions && (
 				<label className={labelClassName} htmlFor="termsAcceptance">
 					<input {...inputProps} />
@@ -109,6 +102,7 @@ export function AcceptTerms({
 					</p>
 				</label>
 			)}
+			{children && <div className="children-container">{children}</div>}
 		</div>
 	);
 

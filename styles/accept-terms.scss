@@ -26,11 +26,12 @@
   .consent-text {
     &--top {
       order: -1;
+      margin-bottom: oSpacingByName('s4');
     }
 
     &--bottom {
-      order: 99;
       margin-top: oSpacingByName('s4');
+      order: 99;
     }
   }
 
