@@ -27,7 +27,7 @@ exports[`AcceptTerms renders appropriately if a isAuthFirstAccount 1`] = `
       </a>
       policies.
     </span>
-    <label class="o-forms-input o-forms-input--checkbox consent-text--bottom"
+    <label class="o-forms-input o-forms-input--checkbox"
            for="termsAcceptance"
     >
       <input type="checkbox"
@@ -39,7 +39,7 @@ exports[`AcceptTerms renders appropriately if a isAuthFirstAccount 1`] = `
              required
       >
       <span class="o-forms-input__label">
-        I confirm I am 16 years or older and have read and agree to the
+        I confirm that I am 16 years or older and agree to the ful
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
