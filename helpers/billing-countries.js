@@ -1,3 +1,3 @@
-import { billingCountries } from 'n-common-static-data';
+const { billingCountries } = require('n-common-static-data');
 
 export { billingCountries };
