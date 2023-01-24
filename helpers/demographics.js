@@ -1,3 +1,3 @@
-import { demographics } from 'n-common-static-data';
+const { demographics } = require('n-common-static-data');
 
 export { demographics };
