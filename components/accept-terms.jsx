@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const DEFAULT_AGE_RESTRICTION = '16';
+const DEFAULT_PRIVACY_POLICIES_POSITION = 'top';
 
 export function AcceptTerms({
 	isAuthFirstAccount = false,
@@ -24,6 +25,8 @@ export function AcceptTerms({
 	isSingleTerm = false,
 	isDeferredBilling = false,
 	hideConfirmTermsAndConditions = false,
+	children,
+	privacyPoliciesPosition = DEFAULT_PRIVACY_POLICIES_POSITION,
 }) {
 	const divProps = {
 		id: 'acceptTermsField',
@@ -36,7 +39,9 @@ export function AcceptTerms({
 	const labelClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--checkbox',
-		{ 'o-forms-input--invalid': hasError },
+		{
+			'o-forms-input--invalid': hasError,
+		},
 	]);
 
 	const inputProps = {
@@ -51,41 +56,34 @@ export function AcceptTerms({
 	};
 
 	const authFirstStepTerms = (
-		<>
-			{
-				<ul className="o-typography-list ncf__accept-terms-list">
-					<li>
-						<span className="terms-auth-first-step">
-							For more information about how we use your data, please refer to
-							our{' '}
-							<a
-								className="ncf__link--external"
-								href="https://help.ft.com/legal-privacy/privacy-policy/"
-								target="_blank"
-								rel="noopener noreferrer"
-								data-trackable="privacy-policy-info"
-							>
-								privacy
-							</a>{' '}
-							and&nbsp;
-							<a
-								className="ncf__link--external"
-								href="https://help.ft.com/legal-privacy/cookies/"
-								target="_blank"
-								rel="noopener noreferrer"
-								data-trackable="cookies-info"
-							>
-								cookie
-							</a>{' '}
-							policies.
-						</span>
-					</li>
-				</ul>
-			}
+		<div className="auth-first-step-terms">
+			<span className={`consent-text--${privacyPoliciesPosition}`}>
+				For more information about how we use your data, please refer to our{' '}
+				<a
+					className="ncf__link--external"
+					href="https://help.ft.com/legal-privacy/privacy-policy/"
+					target="_blank"
+					rel="noopener noreferrer"
+					data-trackable="privacy-policy-info"
+				>
+					privacy
+				</a>{' '}
+				and&nbsp;
+				<a
+					className="ncf__link--external"
+					href="https://help.ft.com/legal-privacy/cookies/"
+					target="_blank"
+					rel="noopener noreferrer"
+					data-trackable="cookies-info"
+				>
+					cookie
+				</a>{' '}
+				policies.
+			</span>
 			{!hideConfirmTermsAndConditions && (
 				<label className={labelClassName} htmlFor="termsAcceptance">
 					<input {...inputProps} />
-					<span className="o-forms-input__label terms-auth-first-step">
+					<span className="o-forms-input__label">
 						I confirm that I am {ageRestriction} years or older and agree to the
 						full{' '}
 						<a
@@ -104,7 +102,8 @@ export function AcceptTerms({
 					</p>
 				</label>
 			)}
-		</>
+			{children && <div className="children-container">{children}</div>}
+		</div>
 	);
 
 	const registerTerms = (
@@ -416,4 +415,9 @@ AcceptTerms.propTypes = {
 	isSingleTerm: PropTypes.bool,
 	isDeferredBilling: PropTypes.bool,
 	hideConfirmTermsAndConditions: PropTypes.bool,
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node,
+	]),
+	privacyPoliciesPosition: PropTypes.oneOf(['top', 'bottom']),
 };
