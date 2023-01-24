@@ -39,7 +39,7 @@ exports[`AcceptTerms renders appropriately if a isAuthFirstAccount 1`] = `
              required
       >
       <span class="o-forms-input__label">
-        I confirm that I am 16 years or older and agree to the ful
+        I confirm that I am 16 years or older and agree to the full
         <a class="ncf__link--external"
            href="http://help.ft.com/help/legal-privacy/terms-conditions/"
            target="_blank"
