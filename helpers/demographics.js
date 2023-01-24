@@ -1,3 +1,3 @@
 const { demographics } = require('n-common-static-data');
 
-export { demographics };
+module.exports = { demographics };
