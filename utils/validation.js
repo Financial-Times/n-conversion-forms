@@ -3,21 +3,19 @@ const Input = require('@financial-times/o-forms/src/js/input').default;
 
 class Validation {
 	/**
-	 * Set up the Validation utility
-	 * @param {Boolean} mutePromptBeforeLeaving (default: false) Whether to prompt the user before leaving if there have been changes in any of the fields.
-	 * @param {string} [errorSummaryMessage='There is a problem'] - A message to show in the header of the error summary. It defaults to: 'There is a problem'
-	 * @param {Boolean} [useBrowserValidation=false] - Whether to use the browsers validation and error messages. Defaults to `false`.
+	 * @typedef FormsOptions
+	 * @type {object}
+	 * @property {string} [errorSummaryMessage="There is a problem"] - A message to show in the header of the error summary. It defaults to: 'There is a problem'
 	 */
-	constructor({
-		errorSummaryMessage,
-		mutePromptBeforeLeaving,
-		useBrowserValidation,
-	} = {}) {
+
+	/**
+	 * Set up the Validation utility
+	 * @param {boolean} [mutePromptBeforeLeaving=false] (default: false) Whether to prompt the user before leaving if there have been changes in any of the fields.
+	 * @param {FormsOptions} [formsOptions={}] Options object for Origami Forms: https://github.com/Financial-Times/origami/blob/main/components/o-forms/src/js/forms.js
+	 */
+	constructor({ mutePromptBeforeLeaving, formsOptions } = {}) {
 		this.$form = document.querySelector('form.ncf');
-		this.oForms = OForms.init(this.$form, {
-			errorSummaryMessage,
-			useBrowserValidation,
-		});
+		this.oForms = OForms.init(this.$form, formsOptions);
 		this.$requiredEls = this.oForms.formInputs.filter(
 			({ input }) => input.type !== 'hidden' && input.required
 		);
