@@ -8,6 +8,7 @@ describe('Validation - Util', () => {
 	let validation;
 	const mockErrorSummaryMessage = 'mockError';
 	const mockUseBrowserValidation = false;
+	const mockPreventSubmit = true;
 
 	beforeEach(() => {
 		document.body.innerHTML = `
@@ -20,8 +21,11 @@ describe('Validation - Util', () => {
 			</html>`;
 
 		validation = new ValidationUtil({
-			errorSummaryMessage: mockErrorSummaryMessage,
-			useBrowserValidation: mockUseBrowserValidation,
+			formsOptions: {
+				errorSummaryMessage: mockErrorSummaryMessage,
+				useBrowserValidation: mockUseBrowserValidation,
+				preventSubmit: mockPreventSubmit,
+			},
 		});
 		jest.spyOn(validation, 'checkFormValidity');
 		validation.init();
@@ -38,6 +42,7 @@ describe('Validation - Util', () => {
 			expect(OForms.default.init).toHaveBeenCalledWith(form, {
 				errorSummaryMessage: mockErrorSummaryMessage,
 				useBrowserValidation: mockUseBrowserValidation,
+				preventSubmit: mockPreventSubmit,
 			});
 		});
 
