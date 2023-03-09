@@ -40,7 +40,7 @@
     "@babel/preset-react": "^7.10.4",
     "@financial-times/eslint-config-next": "^6.0.0",
     "@financial-times/jest-browser-resolver": "^1.0.2",
-    "@financial-times/n-gage": "^8.2.0",
+    "@financial-times/n-gage": "^9.0.1",
     "@storybook/addon-a11y": "^6.5.13",
     "@storybook/addon-essentials": "6.5.13",
     "@storybook/react": "^6.5.13",
