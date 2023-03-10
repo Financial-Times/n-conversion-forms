@@ -63,6 +63,14 @@ describe('Country', () => {
 		expect(BillingCountry).toRenderCorrectly(props);
 	});
 
+	it('renders with isHidden', () => {
+		const props = {
+			isHidden: true,
+		};
+
+		expect(BillingCountry).toRenderCorrectly(props);
+	});
+
 	it('renders with value', () => {
 		const props = {
 			value: 'GBR',

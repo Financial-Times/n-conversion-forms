@@ -9,8 +9,14 @@ export function BillingCountry({
 	hasError = false,
 	inputId = 'billingCountry',
 	isDisabled = false,
+	isHidden = false,
 	value,
 }) {
+	const billingCountryFieldClassNames = classNames([
+		'o-forms-field',
+		{ ncf__hidden: isHidden },
+	]);
+
 	const selectWrapperClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--select',
@@ -51,7 +57,7 @@ export function BillingCountry({
 	return (
 		<label
 			id={fieldId}
-			className="o-forms-field"
+			className={billingCountryFieldClassNames}
 			data-validate="required"
 			htmlFor={inputId}
 		>
@@ -72,5 +78,6 @@ BillingCountry.propTypes = {
 	hasError: PropTypes.bool,
 	inputId: PropTypes.string,
 	isDisabled: PropTypes.bool,
+	isHidden: PropTypes.bool,
 	value: PropTypes.string,
 };
