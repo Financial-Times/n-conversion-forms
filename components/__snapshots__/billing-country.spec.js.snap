@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Country renders with default props 1`] = `
+exports[`BillingCountry renders with default props 1`] = `
 <label id="billingCountryField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="billingCountry"
 >
@@ -13,7 +13,6 @@ exports[`Country renders with default props 1`] = `
   </span>
   <span class="o-forms-input o-forms-input--select">
     <select id="billingCountry"
-            class="js-field__input js-item__value"
             aria-required="true"
             required
             name="billingCountry"
@@ -798,9 +797,9 @@ exports[`Country renders with default props 1`] = `
 </label>
 `;
 
-exports[`Country renders with hasError 1`] = `
+exports[`BillingCountry renders with hasError 1`] = `
 <label id="billingCountryField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="billingCountry"
 >
@@ -811,7 +810,6 @@ exports[`Country renders with hasError 1`] = `
   </span>
   <span class="o-forms-input o-forms-input--select o-forms-input--invalid">
     <select id="billingCountry"
-            class="js-field__input js-item__value"
             aria-required="true"
             required
             name="billingCountry"
@@ -1596,9 +1594,9 @@ exports[`Country renders with hasError 1`] = `
 </label>
 `;
 
-exports[`Country renders with isDisabled 1`] = `
+exports[`BillingCountry renders with isDisabled 1`] = `
 <label id="billingCountryField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="billingCountry"
 >
@@ -1609,7 +1607,6 @@ exports[`Country renders with isDisabled 1`] = `
   </span>
   <span class="o-forms-input o-forms-input--select">
     <select id="billingCountry"
-            class="js-field__input js-item__value"
             aria-required="true"
             required
             name="billingCountry"
@@ -2395,9 +2392,9 @@ exports[`Country renders with isDisabled 1`] = `
 </label>
 `;
 
-exports[`Country renders with large filterList 1`] = `
+exports[`BillingCountry renders with large filterList 1`] = `
 <label id="billingCountryField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="billingCountry"
 >
@@ -2408,7 +2405,6 @@ exports[`Country renders with large filterList 1`] = `
   </span>
   <span class="o-forms-input o-forms-input--select">
     <select id="billingCountry"
-            class="js-field__input js-item__value"
             aria-required="true"
             required
             name="billingCountry"
@@ -2487,9 +2483,9 @@ exports[`Country renders with large filterList 1`] = `
 </label>
 `;
 
-exports[`Country renders with small filterList 1`] = `
+exports[`BillingCountry renders with small filterList 1`] = `
 <label id="billingCountryField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="billingCountry"
 >
@@ -2500,7 +2496,6 @@ exports[`Country renders with small filterList 1`] = `
   </span>
   <span class="o-forms-input o-forms-input--select">
     <select id="billingCountry"
-            class="js-field__input js-item__value"
             aria-required="true"
             required
             name="billingCountry"
@@ -2522,9 +2517,9 @@ exports[`Country renders with small filterList 1`] = `
 </label>
 `;
 
-exports[`Country renders with value 1`] = `
+exports[`BillingCountry renders with value 1`] = `
 <label id="billingCountryField"
-       class="o-forms-field"
+       class="o-forms-field ncf__validation-error"
        data-validate="required"
        for="billingCountry"
 >
@@ -2535,7 +2530,6 @@ exports[`Country renders with value 1`] = `
   </span>
   <span class="o-forms-input o-forms-input--select">
     <select id="billingCountry"
-            class="js-field__input js-item__value"
             aria-required="true"
             required
             name="billingCountry"
