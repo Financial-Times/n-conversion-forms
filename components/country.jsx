@@ -4,13 +4,17 @@ import classNames from 'classnames';
 import { getCountries } from '../utils/countries';
 
 export function Country({
+	dataTrackable = 'field-country',
 	fieldId = 'countryField',
 	filterList = [],
 	hasError = false,
 	inputId = 'country',
 	isB2b = false,
 	isDisabled = false,
+	isPlaceholderDisabled = false,
 	value,
+	label = `Country${isB2b ? '/Region' : ''}`,
+	errorText = `Please select your country${isB2b ? '/region' : ''}`,
 	additionalFieldInformation,
 }) {
 	const selectWrapperClassName = classNames([
@@ -18,14 +22,12 @@ export function Country({
 		'o-forms-input--select',
 		{ 'o-forms-input--invalid': hasError },
 	]);
-	const label = `Country${isB2b ? '/Region' : ''}`;
-	const error = `Please select your country${isB2b ? '/region' : ''}`;
 	const selectProps = {
 		id: inputId,
 		'aria-required': true,
 		required: true,
-		name: 'country',
-		'data-trackable': 'field-country',
+		name: inputId,
+		'data-trackable': dataTrackable,
 		disabled: isDisabled,
 	};
 	const countries = getCountries({ filter: filterList, value });
@@ -42,7 +44,9 @@ export function Country({
 	);
 	const createSelect = (countries) => (
 		<select {...selectProps}>
-			<option value="">Please select a country{isB2b ? '/region' : ''}</option>
+			<option value="" disabled={isPlaceholderDisabled}>
+				Please select a country{isB2b ? '/region' : ''}
+			</option>
 			{countries.map((country) =>
 				country.label ? createOptGroup(country) : createOption(country)
 			)}
@@ -60,7 +64,7 @@ export function Country({
 	return (
 		<label
 			id={fieldId}
-			className="o-forms-field js-unknown-user-field ncf__validation-error"
+			className="o-forms-field ncf__validation-error"
 			data-validate="required"
 			htmlFor={selectProps.id}
 		>
@@ -69,7 +73,7 @@ export function Country({
 			</span>
 			<span className={selectWrapperClassName}>
 				{createSelect(countries)}
-				<span className={fieldErrorClassNames}>{error}</span>
+				<span className={fieldErrorClassNames}>{errorText}</span>
 				{additionalFieldInformation ? (
 					<p className="additional-field-information">
 						{additionalFieldInformation}
@@ -81,12 +85,16 @@ export function Country({
 }
 
 Country.propTypes = {
+	dataTrackable: PropTypes.string,
 	fieldId: PropTypes.string,
 	filterList: PropTypes.arrayOf(PropTypes.string),
 	hasError: PropTypes.bool,
 	inputId: PropTypes.string,
 	isB2b: PropTypes.bool,
 	isDisabled: PropTypes.bool,
+	isPlaceholderDisabled: PropTypes.bool,
 	value: PropTypes.string,
+	label: PropTypes.string,
+	errorText: PropTypes.string,
 	additionalFieldInformation: PropTypes.node,
 };

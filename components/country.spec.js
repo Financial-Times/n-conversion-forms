@@ -18,6 +18,14 @@ describe('Country', () => {
 		expect(Country).toRenderCorrectly(props);
 	});
 
+	it('renders with dataTrackable', () => {
+		const props = {
+			dataTrackable: 'some-trackable',
+		};
+
+		expect(Country).toRenderCorrectly(props);
+	});
+
 	it('renders with large filterList', () => {
 		const props = {
 			filterList: [
@@ -74,6 +82,30 @@ describe('Country', () => {
 	it('renders with value', () => {
 		const props = {
 			value: 'GBR',
+		};
+
+		expect(Country).toRenderCorrectly(props);
+	});
+
+	it('renders with inputId', () => {
+		const props = {
+			inputId: 'some-other-name',
+		};
+
+		expect(Country).toRenderCorrectly(props);
+	});
+
+	it('renders with label', () => {
+		const props = {
+			label: 'Some Label',
+		};
+
+		expect(Country).toRenderCorrectly(props);
+	});
+
+	it('renders with errorText', () => {
+		const props = {
+			errorText: 'Some Error Text',
 		};
 
 		expect(Country).toRenderCorrectly(props);
