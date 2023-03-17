@@ -31,7 +31,6 @@ export default {
 		isTransition: { control: 'boolean' },
 		isPrintProduct: { control: 'boolean' },
 		isSingleTerm: { control: 'boolean' },
-		isNewDigitalBuyFlowConsent: { control: 'boolean' },
 		hideConfirmTermsAndConditions: { control: 'boolean' },
 		isDeferredBilling: { control: 'boolean' },
 		children: {
