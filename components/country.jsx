@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { getCountries } from '../utils/countries';
 
 export function Country({
+	additionalFieldInformation,
 	dataTrackable = 'field-country',
 	fieldId = 'countryField',
 	filterList = [],
@@ -15,7 +16,6 @@ export function Country({
 	value,
 	label = `Country${isB2b ? '/Region' : ''}`,
 	errorText = `Please select your country${isB2b ? '/region' : ''}`,
-	additionalFieldInformation,
 }) {
 	const selectWrapperClassName = classNames([
 		'o-forms-input',
@@ -85,7 +85,9 @@ export function Country({
 }
 
 Country.propTypes = {
+	additionalFieldInformation: PropTypes.node,
 	dataTrackable: PropTypes.string,
+	errorText: PropTypes.string,
 	fieldId: PropTypes.string,
 	filterList: PropTypes.arrayOf(PropTypes.string),
 	hasError: PropTypes.bool,
@@ -93,8 +95,6 @@ Country.propTypes = {
 	isB2b: PropTypes.bool,
 	isDisabled: PropTypes.bool,
 	isPlaceholderDisabled: PropTypes.bool,
-	value: PropTypes.string,
 	label: PropTypes.string,
-	errorText: PropTypes.string,
-	additionalFieldInformation: PropTypes.node,
+	value: PropTypes.string,
 };

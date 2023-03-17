@@ -20,8 +20,8 @@ export function BillingCountry({
 			isB2b={false}
 			isDisabled={isDisabled}
 			isPlaceholderDisabled={true}
-			value={value}
 			label="Billing Country"
+			value={value}
 		/>
 	);
 }
