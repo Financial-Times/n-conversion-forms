@@ -3,7 +3,7 @@ import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-c
 
 expect.extend(expectToRenderCorrectly);
 
-describe('Country', () => {
+describe('BillingCountry', () => {
 	it('renders with default props', () => {
 		const props = {};
 
