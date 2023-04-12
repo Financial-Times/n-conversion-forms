@@ -14,6 +14,7 @@ export function PaymentTerm({
 	showLegal = true,
 	largePrice = false,
 	optionsInARow = false,
+	billingCountry = '',
 }) {
 	/**
 	 * Compute monthly price for given term name
@@ -326,7 +327,11 @@ export function PaymentTerm({
 	};
 
 	return (
-		<div id={fieldId} className="o-forms__group ncf__payment-term">
+		<div
+			id={fieldId}
+			className="o-forms__group ncf__payment-term"
+			data-country-code={billingCountry}
+		>
 			<div className={optionsInARow ? 'ncf__payment-term__options-grid' : ''}>
 				{options.map((option) => createPaymentTerm(option))}
 			</div>
@@ -401,6 +406,7 @@ PaymentTerm.propTypes = {
 			subTitle: PropTypes.string,
 			bestOffer: PropTypes.bool,
 			chargeOnText: PropTypes.string,
+			countryCode: PropTypes.string,
 		})
 	),
 	isFixedTermOffer: PropTypes.bool,
@@ -408,4 +414,5 @@ PaymentTerm.propTypes = {
 	showLegal: PropTypes.bool,
 	largePrice: PropTypes.bool,
 	optionsInARow: PropTypes.bool,
+	countryCode: PropTypes.string,
 };

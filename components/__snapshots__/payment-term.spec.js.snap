@@ -3,6 +3,7 @@
 exports[`PaymentTerm When using custom options renders when not using an option in nameMap but provides a custom props instead 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class="ncf__payment-term__options-grid">
     <div class="ncf__payment-term__item o-forms-input--radio-round ncf__payment-term__item--discount">
@@ -68,6 +69,7 @@ exports[`PaymentTerm When using custom options renders when not using an option 
 exports[`PaymentTerm annual option render option 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class>
     <div class="ncf__payment-term__item o-forms-input--radio-round">
@@ -119,6 +121,7 @@ exports[`PaymentTerm annual option render option 1`] = `
 exports[`PaymentTerm annual option render option with discount 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class>
     <div class="ncf__payment-term__item o-forms-input--radio-round ncf__payment-term__item--discount">
@@ -173,6 +176,7 @@ exports[`PaymentTerm annual option render option with discount 1`] = `
 exports[`PaymentTerm annual option render option with isTrial 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class>
     <div class="ncf__payment-term__item o-forms-input--radio-round">
@@ -225,6 +229,7 @@ exports[`PaymentTerm annual option render option with isTrial 1`] = `
 exports[`PaymentTerm annual option render option with monthlyPrice 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class>
     <div class="ncf__payment-term__item o-forms-input--radio-round">
@@ -283,6 +288,7 @@ exports[`PaymentTerm annual option render option with monthlyPrice 1`] = `
 exports[`PaymentTerm annual option render option with selected 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class>
     <div class="ncf__payment-term__item o-forms-input--radio-round">
@@ -335,6 +341,7 @@ exports[`PaymentTerm annual option render option with selected 1`] = `
 exports[`PaymentTerm annual option render option with trial 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class>
     <div class="ncf__payment-term__item o-forms-input--radio-round">
@@ -388,6 +395,7 @@ exports[`PaymentTerm annual option render option with trial 1`] = `
 exports[`PaymentTerm monthly option render option 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class>
     <div class="ncf__payment-term__item o-forms-input--radio-round">
@@ -438,6 +446,7 @@ exports[`PaymentTerm monthly option render option 1`] = `
 exports[`PaymentTerm monthly option render option with discount 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class>
     <div class="ncf__payment-term__item o-forms-input--radio-round ncf__payment-term__item--discount">
@@ -491,6 +500,7 @@ exports[`PaymentTerm monthly option render option with discount 1`] = `
 exports[`PaymentTerm monthly option render option with isTrial 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class>
     <div class="ncf__payment-term__item o-forms-input--radio-round">
@@ -543,6 +553,7 @@ exports[`PaymentTerm monthly option render option with isTrial 1`] = `
 exports[`PaymentTerm monthly option render option with monthlyPrice 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class>
     <div class="ncf__payment-term__item o-forms-input--radio-round">
@@ -593,6 +604,7 @@ exports[`PaymentTerm monthly option render option with monthlyPrice 1`] = `
 exports[`PaymentTerm monthly option render option with selected 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class>
     <div class="ncf__payment-term__item o-forms-input--radio-round">
@@ -644,6 +656,7 @@ exports[`PaymentTerm monthly option render option with selected 1`] = `
 exports[`PaymentTerm monthly option render option with trial 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class>
     <div class="ncf__payment-term__item o-forms-input--radio-round">
@@ -697,6 +710,7 @@ exports[`PaymentTerm monthly option render option with trial 1`] = `
 exports[`PaymentTerm quarterly option render option 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class>
     <div class="ncf__payment-term__item o-forms-input--radio-round">
@@ -747,6 +761,7 @@ exports[`PaymentTerm quarterly option render option 1`] = `
 exports[`PaymentTerm quarterly option render option with discount 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class>
     <div class="ncf__payment-term__item o-forms-input--radio-round ncf__payment-term__item--discount">
@@ -800,6 +815,7 @@ exports[`PaymentTerm quarterly option render option with discount 1`] = `
 exports[`PaymentTerm quarterly option render option with isTrial 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class>
     <div class="ncf__payment-term__item o-forms-input--radio-round">
@@ -852,6 +868,7 @@ exports[`PaymentTerm quarterly option render option with isTrial 1`] = `
 exports[`PaymentTerm quarterly option render option with monthlyPrice 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class>
     <div class="ncf__payment-term__item o-forms-input--radio-round">
@@ -902,6 +919,7 @@ exports[`PaymentTerm quarterly option render option with monthlyPrice 1`] = `
 exports[`PaymentTerm quarterly option render option with selected 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class>
     <div class="ncf__payment-term__item o-forms-input--radio-round">
@@ -953,6 +971,7 @@ exports[`PaymentTerm quarterly option render option with selected 1`] = `
 exports[`PaymentTerm quarterly option render option with trial 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class>
     <div class="ncf__payment-term__item o-forms-input--radio-round">
@@ -1006,6 +1025,7 @@ exports[`PaymentTerm quarterly option render option with trial 1`] = `
 exports[`PaymentTerm render with defaults 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class>
   </div>
@@ -1032,6 +1052,7 @@ exports[`PaymentTerm render with defaults 1`] = `
 exports[`PaymentTerm render with isPrintOrBundle 1`] = `
 <div id="paymentTermField"
      class="o-forms__group ncf__payment-term"
+     data-country-code
 >
   <div class>
   </div>
