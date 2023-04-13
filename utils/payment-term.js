@@ -103,10 +103,28 @@ class PaymentTerm {
 		}
 	}
 
-	getMontlyPriceFromPeriod(amount, currency, period) {
+	getMonthlyPriceFromPeriod(amount, currency, period, symbol) {
 		const periodObj = new Period(period);
 		const monthlyPrice = periodObj.calculatePrice('P1M', amount);
-		return new Monthly({ value: monthlyPrice, currency }).getAmount('monthly');
+		return new Monthly({ value: monthlyPrice, currency, symbol }).getAmount(
+			'monthly'
+		);
+	}
+
+	getUpdatedPrice(update) {
+		if (update.monthlyPrice) {
+			return update.monthlyPrice;
+		}
+		if (this.isValidPeriod(update.value)) {
+			return this.getMonthlyPriceFromPeriod(
+				update.amount,
+				update.currency,
+				update.value,
+				update.symbol
+			);
+		}
+
+		return false;
 	}
 
 	/**
@@ -138,13 +156,10 @@ class PaymentTerm {
 				trialPrice.innerHTML = update.trialPrice;
 			}
 			if (monthlyPrice) {
-				monthlyPrice.innerHTML = this.isValidPeriod(update.value)
-					? this.getMontlyPriceFromPeriod(
-							update.amount,
-							update.currency,
-							update.value
-					  )
-					: update.monthlyPrice;
+				const updatedPrice = this.getUpdatedPrice(update);
+				if (updatedPrice) {
+					monthlyPrice.innerHTML = updatedPrice;
+				}
 			}
 		}
 	}
