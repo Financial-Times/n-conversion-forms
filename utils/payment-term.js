@@ -57,6 +57,22 @@ class PaymentTerm {
 	}
 
 	/**
+	 * Returns country code
+	 * @return {string}
+	 */
+	getCountryCode() {
+		return this.$paymentTerm.dataset.countryCode;
+	}
+
+	/**
+	 * Update country code
+	 * @return {string}
+	 */
+	updateCountryCode(countryCode) {
+		this.$paymentTerm.dataset.countryCode = countryCode;
+	}
+
+	/**
 	 * Returns the base amount for the selected payment term
 	 * @return {Number}
 	 * @throws If no payment term has been selected
@@ -68,7 +84,6 @@ class PaymentTerm {
 		}
 		return checked.dataset.baseAmount;
 	}
-
 	/**
 	 * Register on change an event listener
 	 * @param {Function} callback Called with event when changed

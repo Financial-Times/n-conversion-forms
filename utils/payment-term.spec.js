@@ -19,6 +19,7 @@ describe('PaymentTerm', () => {
 			value: 'test',
 			dataset: {
 				baseAmount: 100,
+				countryCode: 'GBP',
 			},
 		};
 		documentStub = {
@@ -191,6 +192,13 @@ describe('PaymentTerm', () => {
 					elementStub.querySelector.mockReturnValue(elementStub);
 					const returnedAmount = paymentTerm.getBaseAmount();
 					expect(returnedAmount).toBe(99);
+				});
+			});
+
+			describe('getCountryCode', () => {
+				it('returns countryCode of the selected term', () => {
+					const countryCode = paymentTerm.getCountryCode();
+					expect(countryCode).toBe('GBP');
 				});
 			});
 		});
