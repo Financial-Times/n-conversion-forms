@@ -406,7 +406,6 @@ PaymentTerm.propTypes = {
 			subTitle: PropTypes.string,
 			bestOffer: PropTypes.bool,
 			chargeOnText: PropTypes.string,
-			countryCode: PropTypes.string,
 		})
 	),
 	isFixedTermOffer: PropTypes.bool,
@@ -414,5 +413,5 @@ PaymentTerm.propTypes = {
 	showLegal: PropTypes.bool,
 	largePrice: PropTypes.bool,
 	optionsInARow: PropTypes.bool,
-	countryCode: PropTypes.string,
+	billingCountry: PropTypes.string,
 };

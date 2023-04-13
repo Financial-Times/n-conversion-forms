@@ -196,7 +196,7 @@ describe('PaymentTerm', () => {
 			});
 
 			describe('getCountryCode', () => {
-				it('returns base amount of the selected term', () => {
+				it('returns countryCode of the selected term', () => {
 					const countryCode = paymentTerm.getCountryCode();
 					expect(countryCode).toBe('GBP');
 				});
