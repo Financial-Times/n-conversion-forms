@@ -156,9 +156,8 @@ class PaymentTerm {
 				trialPrice.innerHTML = update.trialPrice;
 			}
 			if (monthlyPrice) {
-				const updatedPrice = this.getUpdatedPrice(update);
 				if (updatedPrice) {
-					monthlyPrice.innerHTML = updatedPrice;
+					monthlyPrice.innerHTML = update.monthlyPrice;
 				}
 			}
 		}
