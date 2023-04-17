@@ -1,4 +1,4 @@
-const { Period, Monthly } = require('@financial-times/n-pricing');
+const { Period } = require('@financial-times/n-pricing');
 
 /**
  * Utility for the `n-conversion-forms/partial/payment-term.html` partial
@@ -103,12 +103,6 @@ class PaymentTerm {
 		}
 	}
 
-	getMontlyPriceFromPeriod(amount, currency, period) {
-		const periodObj = new Period(period);
-		const monthlyPrice = periodObj.calculatePrice('P1M', amount);
-		return new Monthly({ value: monthlyPrice, currency }).getAmount('monthly');
-	}
-
 	/**
 	 * Update the payment term options
 	 * @param {Array} options Array of objects contain terms information
@@ -137,14 +131,8 @@ class PaymentTerm {
 			if (trialPrice) {
 				trialPrice.innerHTML = update.trialPrice;
 			}
-			if (monthlyPrice) {
-				monthlyPrice.innerHTML = this.isValidPeriod(update.value)
-					? this.getMontlyPriceFromPeriod(
-							update.amount,
-							update.currency,
-							update.value
-					  )
-					: update.monthlyPrice;
+			if (monthlyPrice && update.monthlyPrice) {
+				monthlyPrice.innerHTML = update.monthlyPrice;
 			}
 		}
 	}
