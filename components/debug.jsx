@@ -65,7 +65,7 @@ export function Debug({ isTest = false, showHelpers = false, links = {} }) {
 		country: COUNTRY_CODE,
 		deliveryAddressLine1: 'delivery test1',
 		deliveryAddressLine2: 'delivery test2',
-		deliveryAddressLine3: 'delivery test3',
+		deliveryAddressLine3: 'APT 2C',
 		deliveryCity: 'delivery city',
 		deliveryCounty: 'delivery county',
 		deliveryPostcode: postcodeByCountry[COUNTRY_CODE],

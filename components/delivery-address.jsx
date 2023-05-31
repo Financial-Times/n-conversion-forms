@@ -128,7 +128,9 @@ export function DeliveryAddress({
 							FTShippingZone
 						] || 'e.g. Apt. 1'
 					}
-					maxLength={50}
+					maxLength={
+						deliveryAddressMap[addressType].addressLine3MaxLength[country] || 50
+					}
 					disabled={isDisabled}
 					defaultValue={line3}
 				/>
