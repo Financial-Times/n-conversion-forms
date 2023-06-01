@@ -65,4 +65,54 @@ describe('DeliveryAddress', () => {
 
 		expect(DeliveryAddress).toRenderCorrectly(props);
 	});
+
+	describe('DeliveryAddressLine3', () => {
+		let props = {};
+
+		beforeEach(() => {
+			props = {
+				line1: 'line 1',
+				line2: 'line 2',
+				line3: 'APT6',
+				country: 'USA',
+				addressType: 'home',
+			};
+		});
+
+		it('sets addressLine3 maxLenght to 6 when country is USA and HomeAddress', () => {
+			const deliveryAddress = mount(DeliveryAddress(props));
+
+			expect(
+				deliveryAddress.find('#deliveryAddressLine3').prop('maxLength')
+			).toBe(6);
+		});
+
+		it('sets addressLine3 maxLenght to 50 when country is GBR and HomeAddress', () => {
+			props.country = 'GBR';
+			const deliveryAddress = mount(DeliveryAddress(props));
+
+			expect(
+				deliveryAddress.find('#deliveryAddressLine3').prop('maxLength')
+			).toBe(50);
+		});
+
+		it('sets addressLine3 maxLenght to 6 when country is CAN and Company', () => {
+			props.country = 'CAN';
+			props.addressType = 'company';
+			const deliveryAddress = mount(DeliveryAddress(props));
+
+			expect(
+				deliveryAddress.find('#deliveryAddressLine3').prop('maxLength')
+			).toBe(6);
+		});
+
+		it('sets addressLine3 hidden when is POBox', () => {
+			props.addressType = 'pobox';
+			const deliveryAddress = mount(DeliveryAddress(props));
+
+			expect(
+				deliveryAddress.find('#deliveryAddressLine3').hasClass('ncf__hidden')
+			).toBe(false);
+		});
+	});
 });
