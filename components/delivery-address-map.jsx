@@ -210,4 +210,4 @@ const deliveryAddressMap = {
 	},
 };
 
-module.exports = deliveryAddressMap;
+export default deliveryAddressMap;

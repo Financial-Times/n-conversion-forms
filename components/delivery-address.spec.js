@@ -79,7 +79,7 @@ describe('DeliveryAddress', () => {
 			};
 		});
 
-		it('sets addressLine3 maxLenght to 6 when country is USA and HomeAddress', () => {
+		it('sets addressLine3 maxLenght to 6 when country is USA and address type is Home', () => {
 			const deliveryAddress = mount(DeliveryAddress(props));
 
 			expect(
@@ -87,7 +87,7 @@ describe('DeliveryAddress', () => {
 			).toBe(6);
 		});
 
-		it('sets addressLine3 maxLenght to 50 when country is GBR and HomeAddress', () => {
+		it('sets addressLine3 maxLenght to 50 when country is GBR and address type is Home', () => {
 			props.country = 'GBR';
 			const deliveryAddress = mount(DeliveryAddress(props));
 
@@ -106,13 +106,13 @@ describe('DeliveryAddress', () => {
 			).toBe(6);
 		});
 
-		it('sets addressLine3 hidden when is POBox', () => {
+		it('sets addressLine3 to default maxLength when AddressType is POBox', () => {
 			props.addressType = 'pobox';
 			const deliveryAddress = mount(DeliveryAddress(props));
 
 			expect(
-				deliveryAddress.find('#deliveryAddressLine3').hasClass('ncf__hidden')
-			).toBe(false);
+				deliveryAddress.find('#deliveryAddressLine3').prop('maxLength')
+			).toBe(50);
 		});
 	});
 });
