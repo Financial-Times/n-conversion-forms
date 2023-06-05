@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function B2CPartnershipConfirmation({ ctaElement = null }) {
+export function B2CPartnershipConfirmation({
+	ctaElement = null,
+	productCode = null,
+}) {
 	const readingLinkProps = {
 		href: '/',
 		className: 'ncf__link',
@@ -12,6 +15,9 @@ export function B2CPartnershipConfirmation({ ctaElement = null }) {
 		className: 'ncf__link',
 	};
 
+	const accessType =
+		productCode?.toUpperCase() === 'P1' ? 'Standard' : 'Premium';
+
 	return (
 		<div className="ncf ncf__wrapper">
 			<div className="ncf__center">
@@ -19,7 +25,7 @@ export function B2CPartnershipConfirmation({ ctaElement = null }) {
 				<div className="ncf__paragraph">
 					{
 						<h1 className="ncf__header ncf__header--confirmation">
-							{'Welcome to your Premium access'}
+							{`Welcome to your ${accessType} access`}
 						</h1>
 					}
 				</div>
@@ -57,4 +63,5 @@ export function B2CPartnershipConfirmation({ ctaElement = null }) {
 
 B2CPartnershipConfirmation.propTypes = {
 	ctaElement: PropTypes.node,
+	productCode: PropTypes.string,
 };
