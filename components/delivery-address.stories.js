@@ -23,3 +23,15 @@ export default {
 };
 
 export const Basic = (args) => <DeliveryAddress {...args} />;
+
+export const USADeliveryAddress = (args) => <DeliveryAddress {...args} />;
+USADeliveryAddress.args = {
+	country: 'USA',
+	addressType: 'home',
+};
+
+export const UKDeliveryAddress = (args) => <DeliveryAddress {...args} />;
+UKDeliveryAddress.args = {
+	country: 'GBR',
+	addressType: 'home',
+};

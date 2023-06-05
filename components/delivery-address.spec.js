@@ -65,4 +65,54 @@ describe('DeliveryAddress', () => {
 
 		expect(DeliveryAddress).toRenderCorrectly(props);
 	});
+
+	describe('DeliveryAddressLine3', () => {
+		let props = {};
+
+		beforeEach(() => {
+			props = {
+				line1: 'line 1',
+				line2: 'line 2',
+				line3: 'APT6',
+				country: 'USA',
+				addressType: 'home',
+			};
+		});
+
+		it('sets addressLine3 maxLenght to 6 when country is USA and address type is Home', () => {
+			const deliveryAddress = mount(DeliveryAddress(props));
+
+			expect(
+				deliveryAddress.find('#deliveryAddressLine3').prop('maxLength')
+			).toBe(6);
+		});
+
+		it('sets addressLine3 maxLenght to 50 when country is GBR and address type is Home', () => {
+			props.country = 'GBR';
+			const deliveryAddress = mount(DeliveryAddress(props));
+
+			expect(
+				deliveryAddress.find('#deliveryAddressLine3').prop('maxLength')
+			).toBe(50);
+		});
+
+		it('sets addressLine3 maxLenght to 6 when country is CAN and Company', () => {
+			props.country = 'CAN';
+			props.addressType = 'company';
+			const deliveryAddress = mount(DeliveryAddress(props));
+
+			expect(
+				deliveryAddress.find('#deliveryAddressLine3').prop('maxLength')
+			).toBe(6);
+		});
+
+		it('sets addressLine3 to default maxLength when AddressType is POBox', () => {
+			props.addressType = 'pobox';
+			const deliveryAddress = mount(DeliveryAddress(props));
+
+			expect(
+				deliveryAddress.find('#deliveryAddressLine3').prop('maxLength')
+			).toBe(50);
+		});
+	});
 });

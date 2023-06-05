@@ -198,7 +198,7 @@ exports[`DeliveryAddress renders with country different than default 1`] = `
              data-trackable="field-deliveryAddressLine3"
              autocomplete="address-line2"
              placeholder="e.g Apt 2C / FL 10 / STE 50"
-             maxlength="50"
+             maxlength="6"
              value
       >
     </span>

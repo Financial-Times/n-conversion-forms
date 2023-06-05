@@ -60,6 +60,10 @@ const deliveryAddressMap = {
 			USA: 'Max. 6 characters. Please enter “Apartment 2C” as “Apt 2C”, “Floor 10 as FL 10”',
 			CAN: 'Max. 6 characters. Please enter “Apartment 2C” as “Apt 2C”, “Floor 10 as FL 10”',
 		},
+		addressLine3MaxLength: {
+			USA: 6,
+			CAN: 6,
+		},
 		template: (addressLine1, addressLine2, addressLine3, region) => {
 			const addressLines = {
 				GBR: addressTemplateGenerator(addressLine1, addressLine2, addressLine3),
@@ -131,6 +135,10 @@ const deliveryAddressMap = {
 			USA: addressLine2AutoComplete,
 			CAN: addressLine2AutoComplete,
 		},
+		addressLine3MaxLength: {
+			USA: 6,
+			CAN: 6,
+		},
 		template: (addressLine1, addressLine2, addressLine3, region) => {
 			const addressLines = {
 				GBR: addressTemplateGenerator(addressLine1, addressLine2, addressLine3),
@@ -187,6 +195,7 @@ const deliveryAddressMap = {
 			USA: 'Max. 6 characters. Please enter “Apartment 2C” as “Apt 2C”, “Floor 10 as FL 10”',
 			CAN: 'Max. 6 characters. Please enter “Apartment 2C” as “Apt 2C”, “Floor 10 as FL 10”',
 		},
+		addressLine3MaxLength: {},
 		template: (addressLine1, addressLine2, addressLine3, region) => {
 			const addressLines = {
 				GBR: addressTemplateGenerator(addressLine1, addressLine2, addressLine3),
@@ -201,4 +210,4 @@ const deliveryAddressMap = {
 	},
 };
 
-module.exports = deliveryAddressMap;
+export default deliveryAddressMap;
