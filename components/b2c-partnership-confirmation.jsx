@@ -1,6 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const productCodeMapping = {
+	P1: 'Standard',
+	P2: 'Premium',
+	EP: 'ePaper',
+};
+
 export function B2CPartnershipConfirmation({
 	ctaElement = null,
 	productCode = null,
@@ -15,8 +21,11 @@ export function B2CPartnershipConfirmation({
 		className: 'ncf__link',
 	};
 
-	const accessType =
-		productCode?.toUpperCase() === 'P1' ? 'Standard' : 'Premium';
+	// Welcome to your Standard access
+	// Welcome to your Premium access
+	// Welcome to your ePaper access
+	// Welcome to your FT access (default)
+	const accessType = productCodeMapping[productCode?.toUpperCase()] || 'FT';
 
 	return (
 		<div className="ncf ncf__wrapper">
