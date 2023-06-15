@@ -94,7 +94,7 @@ describe('PaymentTerm', () => {
 
 			it('throws an error if not all terms have an update', () => {
 				expect(() => {
-					paymentTerm.updateOptions([]);
+					paymentTerm.updateOptions({});
 				}).toThrow();
 			});
 
@@ -105,12 +105,12 @@ describe('PaymentTerm', () => {
 						? priceStub
 						: elementStub;
 				});
-				paymentTerm.updateOptions([
-					{
+				paymentTerm.updateOptions({
+					test: {
 						value: 'test',
 						price: '£1.01',
 					},
-				]);
+				});
 				expect(priceStub.innerHTML).toEqual('£1.01');
 			});
 
@@ -121,12 +121,12 @@ describe('PaymentTerm', () => {
 						? trialPriceStub
 						: elementStub;
 				});
-				paymentTerm.updateOptions([
-					{
+				paymentTerm.updateOptions({
+					test: {
 						value: 'test',
 						trialPrice: '£1.01',
 					},
-				]);
+				});
 				expect(trialPriceStub.innerHTML).toEqual('£1.01');
 			});
 
@@ -137,31 +137,31 @@ describe('PaymentTerm', () => {
 						? monthlyPriceStub
 						: elementStub;
 				});
-				paymentTerm.updateOptions([
-					{
+				paymentTerm.updateOptions({
+					test: {
 						value: 'test',
 						monthlyPrice: '£1.01',
 					},
-				]);
+				});
 				expect(monthlyPriceStub.innerHTML).toEqual('£1.01');
 			});
 
 			describe('updating base amount', () => {
-				const updatedOptions = [
-					{
+				const updatedOptions = {
+					test: {
 						value: 'test',
 						monthlyPrice: '£1.01',
 						amount: 500,
 						trialAmount: 1,
 					},
-				];
+				};
 
 				beforeEach(() => {
 					elementStub.querySelector.mockReturnValue(elementStub);
 				});
 
 				it('replaces the base amount with the correct updated trial amount', () => {
-					updatedOptions[0].isTrial = true;
+					updatedOptions.test.isTrial = true;
 					paymentTerm.updateOptions(updatedOptions);
 					expect(elementStub.setAttribute).toHaveBeenCalledWith(
 						'data-base-amount',
@@ -170,7 +170,7 @@ describe('PaymentTerm', () => {
 				});
 
 				it('replaces the base amount with the correct updated amount', () => {
-					updatedOptions[0].isTrial = false;
+					updatedOptions.test.isTrial = false;
 					paymentTerm.updateOptions(updatedOptions);
 					expect(elementStub.setAttribute).toHaveBeenCalledWith(
 						'data-base-amount',

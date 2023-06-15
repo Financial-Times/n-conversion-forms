@@ -406,6 +406,7 @@ PaymentTerm.propTypes = {
 			subTitle: PropTypes.string,
 			bestOffer: PropTypes.bool,
 			chargeOnText: PropTypes.string,
+			fulfilmentOption: PropTypes.string,
 		})
 	),
 	isFixedTermOffer: PropTypes.bool,
