@@ -53,7 +53,7 @@ export function AcceptTerms({
 		...(isChecked && { defaultChecked: true }),
 	};
 
-	const authFirstStepTerms = (
+	const terms = (
 		<div className="auth-first-step-terms">
 			<span className={`consent-text--${privacyPoliciesPosition}`}>
 				For more information about how we use your data, please refer to our{' '}
@@ -102,29 +102,6 @@ export function AcceptTerms({
 			)}
 			{children && <div className="children-container">{children}</div>}
 		</div>
-	);
-
-	const registerTerms = (
-		<label className={labelClassName} htmlFor="termsAcceptance">
-			<input {...inputProps} />
-			<span className="o-forms-input__label terms-register">
-				I confirm I am {ageRestriction} years or older and have read and agree
-				to the{' '}
-				<a
-					className="ncf__link--external"
-					href="http://help.ft.com/help/legal-privacy/terms-conditions/"
-					target={isEmbedded ? '_top' : '_blank'}
-					rel="noopener noreferrer"
-					data-trackable="terms-and-conditions"
-				>
-					Terms &amp; Conditions
-				</a>
-				.
-			</span>
-			<p className="o-forms-input__error">
-				Please accept our terms &amp; conditions
-			</p>
-		</label>
 	);
 
 	const b2bTerms = isB2b ? (
@@ -368,11 +345,11 @@ export function AcceptTerms({
 			{isB2cPartnership ? (
 				b2cPartnershipTerms
 			) : isAccessPage ? (
-				authFirstStepTerms
+				terms
 			) : (
 				<>
 					<ul className="o-typography-list ncf__accept-terms-list">
-						{!isAccessPage && b2bTerms}
+						{!isPaymentPage && b2bTerms}
 						{corpSignupTerms}
 						{transitionTerms}
 						{signupTerms}
