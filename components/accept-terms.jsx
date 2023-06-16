@@ -6,11 +6,10 @@ const DEFAULT_AGE_RESTRICTION = '16';
 const DEFAULT_PRIVACY_POLICIES_POSITION = 'top';
 
 export function AcceptTerms({
-	isAuthFirstAccount = false,
-	isAuthFirstPayment = false,
+	isAccessPage = false,
+	isPaymentPage = false,
 	hasError = false,
 	isSignup = false,
-	isRegister = false,
 	isChecked = false,
 	isB2b = false,
 	isB2cPartnership = false,
@@ -33,7 +32,6 @@ export function AcceptTerms({
 		className: 'o-forms-field o-layout-typography ncf__validation-error',
 		'data-validate': 'required,checked',
 		...(isSignup && { 'data-trackable': 'sign-up-terms' }),
-		...(isRegister && { 'data-trackable': 'register-up-terms' }),
 	};
 
 	const labelClassName = classNames([
@@ -369,14 +367,12 @@ export function AcceptTerms({
 		<div {...divProps}>
 			{isB2cPartnership ? (
 				b2cPartnershipTerms
-			) : isRegister ? (
-				registerTerms
-			) : isAuthFirstAccount ? (
+			) : isAccessPage ? (
 				authFirstStepTerms
 			) : (
 				<>
 					<ul className="o-typography-list ncf__accept-terms-list">
-						{!isAuthFirstPayment && b2bTerms}
+						{!isAccessPage && b2bTerms}
 						{corpSignupTerms}
 						{transitionTerms}
 						{signupTerms}
@@ -400,7 +396,6 @@ export function AcceptTerms({
 AcceptTerms.propTypes = {
 	hasError: PropTypes.bool,
 	isSignup: PropTypes.bool,
-	isRegister: PropTypes.bool,
 	isChecked: PropTypes.bool,
 	isB2b: PropTypes.bool,
 	isB2cPartnership: PropTypes.bool,

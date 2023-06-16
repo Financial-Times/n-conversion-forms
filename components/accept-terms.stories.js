@@ -12,16 +12,15 @@ export default {
 				options: ['immediate', 'endOfTerm'],
 			},
 		},
-		isAuthFirstAccount: {
+		isAccessPage: {
 			control: 'boolean',
 			table: {
 				type: { summary: 'Show new buy flow design' },
 			},
 		},
-		isAuthFirstPayment: { control: 'boolean' },
+		isPaymentPage: { control: 'boolean' },
 		hasError: { control: 'boolean' },
 		isSignup: { control: 'boolean' },
-		isRegister: { control: 'boolean' },
 		isChecked: { control: 'boolean' },
 		isB2b: { control: 'boolean' },
 		isB2cPartnership: { control: 'boolean' },
@@ -36,7 +35,7 @@ export default {
 		children: {
 			control: false,
 			table: {
-				type: { summary: "Only rendered when 'isAuthFirstAccount' is true" },
+				type: { summary: "Only rendered when 'isAccessPage' is true" },
 			},
 		},
 		privacyPoliciesPosition: {
@@ -56,12 +55,12 @@ Basic.args = {};
 
 export const NewBuyFlow = (args) => <AcceptTerms {...args} />;
 NewBuyFlow.args = {
-	isAuthFirstAccount: true,
+	isAccessPage: true,
 };
 
 export const NewBuyFlowEmailVerification = (args) => <AcceptTerms {...args} />;
 NewBuyFlowEmailVerification.args = {
-	isAuthFirstAccount: true,
+	isAccessPage: true,
 	hideConfirmTermsAndConditions: true,
 };
 
@@ -71,12 +70,12 @@ export const NewBuyFlowWithChildren = (args) => (
 	</AcceptTerms>
 );
 NewBuyFlowWithChildren.args = {
-	isAuthFirstAccount: true,
+	isAccessPage: true,
 	privacyPoliciesPosition: 'bottom',
 };
 NewBuyFlowWithChildren.parameters = {
 	controls: {
-		include: ['privacyPoliciesPosition', 'isAuthFirstAccount', 'children'],
+		include: ['privacyPoliciesPosition', 'isAccessPage', 'children'],
 		expanded: true,
 	},
 };

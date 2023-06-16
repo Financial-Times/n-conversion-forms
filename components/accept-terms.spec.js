@@ -16,14 +16,14 @@ describe('AcceptTerms', () => {
 		expect(AcceptTerms).toRenderCorrectly(props);
 	});
 
-	it('renders appropriately if a isAuthFirstAccount', () => {
-		const props = { isAuthFirstAccount: true };
+	it('renders appropriately if a isAccessPage', () => {
+		const props = { isAccessPage: true };
 
 		expect(AcceptTerms).toRenderCorrectly(props);
 	});
 
-	it('renders appropriately if a isAuthFirstPayment', () => {
-		const props = { isAuthFirstPayment: true };
+	it('renders appropriately if a isPaymentPage', () => {
+		const props = { isPaymentPage: true };
 
 		expect(AcceptTerms).toRenderCorrectly(props);
 	});
@@ -75,12 +75,6 @@ describe('AcceptTerms', () => {
 			isSignup: true,
 			specialTerms: 'Special terms text',
 		};
-
-		expect(AcceptTerms).toRenderCorrectly(props);
-	});
-
-	it('renders appropriately if a registration', () => {
-		const props = { isRegister: true };
 
 		expect(AcceptTerms).toRenderCorrectly(props);
 	});
