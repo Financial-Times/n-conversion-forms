@@ -104,8 +104,9 @@ class PaymentTerm {
 	}
 
 	/**
-	 * Update the payment term options
-	 * @param {Array} options Array of objects contain terms information
+	 * Updates the payment term options.
+	 * @param {Object} options - indexed Object about Array of objects containing terms information. E.g.: { P1Y: {...}, P3M: {...}}
+	 * @throws Will throw an error if a payment term update is not found for a given value.
 	 */
 	updateOptions(options) {
 		const terms = this.$paymentTerm.querySelectorAll(ITEM_CLASS);
@@ -115,7 +116,7 @@ class PaymentTerm {
 			const price = term.querySelector(PRICE_CLASS);
 			const trialPrice = term.querySelector(TRIAL_PRICE_CLASS);
 			const monthlyPrice = term.querySelector(MONTHLY_PRICE_CLASS);
-			const update = options.find((option) => option.value === value);
+			const update = options[value];
 
 			if (!update) {
 				throw new Error(`Payment term update not found for "${value}"`);
