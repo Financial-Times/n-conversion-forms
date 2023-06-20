@@ -1,11 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AcceptTerms renders appropriately if a isAccessPage 1`] = `
+exports[`AcceptTerms renders a component matching snapshot when \`withB2BTerms\` is true 1`] = `
 <div id="acceptTermsField"
      class="o-forms-field o-layout-typography ncf__validation-error"
      data-validate="required,checked"
 >
-  <div class="auth-first-step-terms">
+  <ul class="o-typography-list ncf__accept-terms-list">
+  </ul>
+  <label class="o-forms-input o-forms-input--checkbox"
+         for="termsAcceptance"
+  >
+    <input type="checkbox"
+           id="termsAcceptance"
+           name="termsAcceptance"
+           value="true"
+           data-trackable="field-terms"
+           aria-required="true"
+           required
+    >
+    <span class="o-forms-input__label">
+      I agree to the above terms &amp; conditions.
+    </span>
+    <p class="o-forms-input__error">
+      Please accept our terms &amp; conditions
+    </p>
+  </label>
+</div>
+`;
+
+exports[`AcceptTerms renders a component matching snapshot when withPrivacyPolicyTerms is true 1`] = `
+<div id="acceptTermsField"
+     class="o-forms-field o-layout-typography ncf__validation-error"
+     data-validate="required,checked"
+>
+  <div class="privacy-policy-terms">
     <span class="consent-text--top">
       For more information about how we use your data, please refer to our
       <a class="ncf__link--external"
@@ -55,34 +83,6 @@ exports[`AcceptTerms renders appropriately if a isAccessPage 1`] = `
       </p>
     </label>
   </div>
-</div>
-`;
-
-exports[`AcceptTerms renders appropriately if a isPaymentPage 1`] = `
-<div id="acceptTermsField"
-     class="o-forms-field o-layout-typography ncf__validation-error"
-     data-validate="required,checked"
->
-  <ul class="o-typography-list ncf__accept-terms-list">
-  </ul>
-  <label class="o-forms-input o-forms-input--checkbox"
-         for="termsAcceptance"
-  >
-    <input type="checkbox"
-           id="termsAcceptance"
-           name="termsAcceptance"
-           value="true"
-           data-trackable="field-terms"
-           aria-required="true"
-           required
-    >
-    <span class="o-forms-input__label">
-      I agree to the above terms &amp; conditions.
-    </span>
-    <p class="o-forms-input__error">
-      Please accept our terms &amp; conditions
-    </p>
-  </label>
 </div>
 `;
 

@@ -12,13 +12,13 @@ export default {
 				options: ['immediate', 'endOfTerm'],
 			},
 		},
-		isAccessPage: {
+		withPrivacyPolicyTerms: {
 			control: 'boolean',
 			table: {
-				type: { summary: 'Show new buy flow design' },
+				type: { summary: 'Show privacy policy terms' },
 			},
 		},
-		isPaymentPage: { control: 'boolean' },
+		withB2BTerms: { control: 'boolean' },
 		hasError: { control: 'boolean' },
 		isSignup: { control: 'boolean' },
 		isChecked: { control: 'boolean' },

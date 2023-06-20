@@ -16,14 +16,14 @@ describe('AcceptTerms', () => {
 		expect(AcceptTerms).toRenderCorrectly(props);
 	});
 
-	it('renders appropriately if a isAccessPage', () => {
-		const props = { isAccessPage: true };
+	it('renders a component matching snapshot when withPrivacyPolicyTerms is true', () => {
+		const props = { withPrivacyPolicyTerms: true };
 
 		expect(AcceptTerms).toRenderCorrectly(props);
 	});
 
-	it('renders appropriately if a isPaymentPage', () => {
-		const props = { isPaymentPage: true };
+	it('renders a component matching snapshot when `withB2BTerms` is true', () => {
+		const props = { withB2BTerms: true };
 
 		expect(AcceptTerms).toRenderCorrectly(props);
 	});

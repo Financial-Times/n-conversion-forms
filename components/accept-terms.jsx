@@ -6,8 +6,8 @@ const DEFAULT_AGE_RESTRICTION = '16';
 const DEFAULT_PRIVACY_POLICIES_POSITION = 'top';
 
 export function AcceptTerms({
-	isAccessPage = false,
-	isPaymentPage = false,
+	withPrivacyPolicyTerms = false,
+	withB2BTerms = false,
 	hasError = false,
 	isSignup = false,
 	isChecked = false,
@@ -53,8 +53,8 @@ export function AcceptTerms({
 		...(isChecked && { defaultChecked: true }),
 	};
 
-	const terms = (
-		<div className="auth-first-step-terms">
+	const privacyPolicyTerms = (
+		<div className="privacy-policy-terms">
 			<span className={`consent-text--${privacyPoliciesPosition}`}>
 				For more information about how we use your data, please refer to our{' '}
 				<a
@@ -344,12 +344,12 @@ export function AcceptTerms({
 		<div {...divProps}>
 			{isB2cPartnership ? (
 				b2cPartnershipTerms
-			) : isAccessPage ? (
-				terms
+			) : withPrivacyPolicyTerms ? (
+				privacyPolicyTerms
 			) : (
 				<>
 					<ul className="o-typography-list ncf__accept-terms-list">
-						{!isPaymentPage && b2bTerms}
+						{!withB2BTerms && b2bTerms}
 						{corpSignupTerms}
 						{transitionTerms}
 						{signupTerms}
