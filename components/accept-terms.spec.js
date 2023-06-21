@@ -70,15 +70,6 @@ describe('AcceptTerms', () => {
 		expect(AcceptTerms).toRenderCorrectly(props);
 	});
 
-	it('renders appropriately if a signup and has special terms', () => {
-		const props = {
-			isSignup: true,
-			specialTerms: 'Special terms text',
-		};
-
-		expect(AcceptTerms).toRenderCorrectly(props);
-	});
-
 	it('renders appropriately if input is checked', () => {
 		const props = { isChecked: true };
 

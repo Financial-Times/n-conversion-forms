@@ -7,7 +7,6 @@ const DEFAULT_PRIVACY_POLICIES_POSITION = 'top';
 
 export function AcceptTerms({
 	withPrivacyPolicyTerms = false,
-	withB2BTerms = false,
 	hasError = false,
 	isSignup = false,
 	isChecked = false,
@@ -20,7 +19,6 @@ export function AcceptTerms({
 	isTransition = false,
 	transitionType = null,
 	isPrintProduct = false,
-	specialTerms = null,
 	isSingleTerm = false,
 	isDeferredBilling = false,
 	hideConfirmTermsAndConditions = false,
@@ -299,12 +297,6 @@ export function AcceptTerms({
 					</li>
 				</>
 			)}
-
-			{specialTerms && (
-				<li>
-					<span className="terms-special">{specialTerms}</span>
-				</li>
-			)}
 		</>
 	);
 
@@ -349,7 +341,7 @@ export function AcceptTerms({
 			) : (
 				<>
 					<ul className="o-typography-list ncf__accept-terms-list">
-						{!withB2BTerms && b2bTerms}
+						{b2bTerms}
 						{corpSignupTerms}
 						{transitionTerms}
 						{signupTerms}
@@ -383,7 +375,6 @@ AcceptTerms.propTypes = {
 	isTransition: PropTypes.bool,
 	transitionType: PropTypes.string,
 	isPrintProduct: PropTypes.bool,
-	specialTerms: PropTypes.string,
 	isSingleTerm: PropTypes.bool,
 	isDeferredBilling: PropTypes.bool,
 	hideConfirmTermsAndConditions: PropTypes.bool,
