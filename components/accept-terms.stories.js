@@ -56,12 +56,12 @@ Basic.args = {};
 
 export const NewBuyFlow = (args) => <AcceptTerms {...args} />;
 NewBuyFlow.args = {
-	isAccessPage: true,
+	withPrivacyPolicyTerms: true,
 };
 
 export const NewBuyFlowEmailVerification = (args) => <AcceptTerms {...args} />;
 NewBuyFlowEmailVerification.args = {
-	isAccessPage: true,
+	withPrivacyPolicyTerms: true,
 	hideConfirmTermsAndConditions: true,
 };
 
@@ -71,12 +71,12 @@ export const NewBuyFlowWithChildren = (args) => (
 	</AcceptTerms>
 );
 NewBuyFlowWithChildren.args = {
-	isAccessPage: true,
+	withPrivacyPolicyTerms: true,
 	privacyPoliciesPosition: 'bottom',
 };
 NewBuyFlowWithChildren.parameters = {
 	controls: {
-		include: ['privacyPoliciesPosition', 'isAccessPage', 'children'],
+		include: ['privacyPoliciesPosition', 'withPrivacyPolicyTerms', 'children'],
 		expanded: true,
 	},
 };
