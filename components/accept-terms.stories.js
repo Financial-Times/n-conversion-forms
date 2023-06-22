@@ -18,7 +18,6 @@ export default {
 				type: { summary: 'Show privacy policy terms' },
 			},
 		},
-		withB2BTerms: { control: 'boolean' },
 		hasError: { control: 'boolean' },
 		isSignup: { control: 'boolean' },
 		isChecked: { control: 'boolean' },

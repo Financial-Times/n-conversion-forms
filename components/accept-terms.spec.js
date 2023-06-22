@@ -22,12 +22,6 @@ describe('AcceptTerms', () => {
 		expect(AcceptTerms).toRenderCorrectly(props);
 	});
 
-	it('renders a component matching snapshot when `withB2BTerms` is true', () => {
-		const props = { withB2BTerms: true };
-
-		expect(AcceptTerms).toRenderCorrectly(props);
-	});
-
 	it('renders appropriately if a signup', () => {
 		const props = { isSignup: true };
 
