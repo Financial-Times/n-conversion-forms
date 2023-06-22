@@ -363,6 +363,7 @@ export function AcceptTerms({
 }
 
 AcceptTerms.propTypes = {
+	withPrivacyPolicyTerms: PropTypes.bool,
 	hasError: PropTypes.bool,
 	isSignup: PropTypes.bool,
 	isChecked: PropTypes.bool,
