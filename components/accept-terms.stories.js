@@ -34,7 +34,9 @@ export default {
 		children: {
 			control: false,
 			table: {
-				type: { summary: "Only rendered when 'isAccessPage' is true" },
+				type: {
+					summary: "Only rendered when 'withPrivacyPolicyTerms' is true",
+				},
 			},
 		},
 		privacyPoliciesPosition: {
