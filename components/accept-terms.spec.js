@@ -16,14 +16,8 @@ describe('AcceptTerms', () => {
 		expect(AcceptTerms).toRenderCorrectly(props);
 	});
 
-	it('renders appropriately if a isAuthFirstAccount', () => {
-		const props = { isAuthFirstAccount: true };
-
-		expect(AcceptTerms).toRenderCorrectly(props);
-	});
-
-	it('renders appropriately if a isAuthFirstPayment', () => {
-		const props = { isAuthFirstPayment: true };
+	it('renders a component matching snapshot when withPrivacyPolicyTerms is true', () => {
+		const props = { withPrivacyPolicyTerms: true };
 
 		expect(AcceptTerms).toRenderCorrectly(props);
 	});
@@ -66,21 +60,6 @@ describe('AcceptTerms', () => {
 
 	it('renders appropriately if a signup not for the print product and is not embedded', () => {
 		const props = { isSignup: true, isPrintProduct: false, isEmbedded: false };
-
-		expect(AcceptTerms).toRenderCorrectly(props);
-	});
-
-	it('renders appropriately if a signup and has special terms', () => {
-		const props = {
-			isSignup: true,
-			specialTerms: 'Special terms text',
-		};
-
-		expect(AcceptTerms).toRenderCorrectly(props);
-	});
-
-	it('renders appropriately if a registration', () => {
-		const props = { isRegister: true };
 
 		expect(AcceptTerms).toRenderCorrectly(props);
 	});

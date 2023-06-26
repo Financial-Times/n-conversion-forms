@@ -6,11 +6,9 @@ const DEFAULT_AGE_RESTRICTION = '16';
 const DEFAULT_PRIVACY_POLICIES_POSITION = 'top';
 
 export function AcceptTerms({
-	isAuthFirstAccount = false,
-	isAuthFirstPayment = false,
+	withPrivacyPolicyTerms = false,
 	hasError = false,
 	isSignup = false,
-	isRegister = false,
 	isChecked = false,
 	isB2b = false,
 	isB2cPartnership = false,
@@ -21,7 +19,6 @@ export function AcceptTerms({
 	isTransition = false,
 	transitionType = null,
 	isPrintProduct = false,
-	specialTerms = null,
 	isSingleTerm = false,
 	isDeferredBilling = false,
 	hideConfirmTermsAndConditions = false,
@@ -33,7 +30,6 @@ export function AcceptTerms({
 		className: 'o-forms-field o-layout-typography ncf__validation-error',
 		'data-validate': 'required,checked',
 		...(isSignup && { 'data-trackable': 'sign-up-terms' }),
-		...(isRegister && { 'data-trackable': 'register-up-terms' }),
 	};
 
 	const labelClassName = classNames([
@@ -55,8 +51,8 @@ export function AcceptTerms({
 		...(isChecked && { defaultChecked: true }),
 	};
 
-	const authFirstStepTerms = (
-		<div className="auth-first-step-terms">
+	const privacyPolicyTerms = (
+		<div className="privacy-policy-terms">
 			<span className={`consent-text--${privacyPoliciesPosition}`}>
 				For more information about how we use your data, please refer to our{' '}
 				<a
@@ -104,29 +100,6 @@ export function AcceptTerms({
 			)}
 			{children && <div className="children-container">{children}</div>}
 		</div>
-	);
-
-	const registerTerms = (
-		<label className={labelClassName} htmlFor="termsAcceptance">
-			<input {...inputProps} />
-			<span className="o-forms-input__label terms-register">
-				I confirm I am {ageRestriction} years or older and have read and agree
-				to the{' '}
-				<a
-					className="ncf__link--external"
-					href="http://help.ft.com/help/legal-privacy/terms-conditions/"
-					target={isEmbedded ? '_top' : '_blank'}
-					rel="noopener noreferrer"
-					data-trackable="terms-and-conditions"
-				>
-					Terms &amp; Conditions
-				</a>
-				.
-			</span>
-			<p className="o-forms-input__error">
-				Please accept our terms &amp; conditions
-			</p>
-		</label>
 	);
 
 	const b2bTerms = isB2b ? (
@@ -324,12 +297,6 @@ export function AcceptTerms({
 					</li>
 				</>
 			)}
-
-			{specialTerms && (
-				<li>
-					<span className="terms-special">{specialTerms}</span>
-				</li>
-			)}
 		</>
 	);
 
@@ -369,14 +336,12 @@ export function AcceptTerms({
 		<div {...divProps}>
 			{isB2cPartnership ? (
 				b2cPartnershipTerms
-			) : isRegister ? (
-				registerTerms
-			) : isAuthFirstAccount ? (
-				authFirstStepTerms
+			) : withPrivacyPolicyTerms ? (
+				privacyPolicyTerms
 			) : (
 				<>
 					<ul className="o-typography-list ncf__accept-terms-list">
-						{!isAuthFirstPayment && b2bTerms}
+						{b2bTerms}
 						{corpSignupTerms}
 						{transitionTerms}
 						{signupTerms}
@@ -398,9 +363,9 @@ export function AcceptTerms({
 }
 
 AcceptTerms.propTypes = {
+	withPrivacyPolicyTerms: PropTypes.bool,
 	hasError: PropTypes.bool,
 	isSignup: PropTypes.bool,
-	isRegister: PropTypes.bool,
 	isChecked: PropTypes.bool,
 	isB2b: PropTypes.bool,
 	isB2cPartnership: PropTypes.bool,
@@ -411,7 +376,6 @@ AcceptTerms.propTypes = {
 	isTransition: PropTypes.bool,
 	transitionType: PropTypes.string,
 	isPrintProduct: PropTypes.bool,
-	specialTerms: PropTypes.string,
 	isSingleTerm: PropTypes.bool,
 	isDeferredBilling: PropTypes.bool,
 	hideConfirmTermsAndConditions: PropTypes.bool,
