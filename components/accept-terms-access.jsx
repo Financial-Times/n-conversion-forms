@@ -5,22 +5,13 @@ import classNames from 'classnames';
 const DEFAULT_AGE_RESTRICTION = '16';
 const DEFAULT_PRIVACY_POLICIES_POSITION = 'top';
 
-export function AcceptTerms({
+export function AcceptTermsAccess({
 	withPrivacyPolicyTerms = false,
 	hasError = false,
 	isSignup = false,
 	isChecked = false,
-	isB2b = false,
-	isB2cPartnership = false,
 	ageRestriction = DEFAULT_AGE_RESTRICTION,
 	isEmbedded = false,
-	isCorpSignup = false,
-	isTrial = false,
-	isTransition = false,
-	transitionType = null,
-	isPrintProduct = false,
-	isSingleTerm = false,
-	isDeferredBilling = false,
 	hideConfirmTermsAndConditions = false,
 	children,
 	privacyPoliciesPosition = DEFAULT_PRIVACY_POLICIES_POSITION,
@@ -131,22 +122,13 @@ export function AcceptTerms({
 	);
 }
 
-AcceptTerms.propTypes = {
+AcceptTermsAccess.propTypes = {
 	withPrivacyPolicyTerms: PropTypes.bool,
 	hasError: PropTypes.bool,
 	isSignup: PropTypes.bool,
 	isChecked: PropTypes.bool,
-	isB2b: PropTypes.bool,
-	isB2cPartnership: PropTypes.bool,
 	ageRestriction: PropTypes.string,
 	isEmbedded: PropTypes.bool,
-	isCorpSignup: PropTypes.bool,
-	isTrial: PropTypes.bool,
-	isTransition: PropTypes.bool,
-	transitionType: PropTypes.string,
-	isPrintProduct: PropTypes.bool,
-	isSingleTerm: PropTypes.bool,
-	isDeferredBilling: PropTypes.bool,
 	hideConfirmTermsAndConditions: PropTypes.bool,
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),

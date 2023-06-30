@@ -1,19 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import { AcceptTermsAccess } from './accept-terms-access';
-
-const DEFAULT_AGE_RESTRICTION = '16';
-const DEFAULT_PRIVACY_POLICIES_POSITION = 'top';
 
 export function AcceptTermsPayments({
-	withPrivacyPolicyTerms = false,
-	hasError = false,
 	isSignup = false,
 	isEmbedded = false,
 	isTrial = false,
 	isPrintProduct = false,
+	isSingleTerm = false,
+	isTransition = false,
+	transitionType = null,
+	isDeferredBilling = false,
 }) {
+	/* probably not needed here*/
 	const divProps = {
 		id: 'acceptTermsField',
 		className: 'o-forms-field o-layout-typography ncf__validation-error',
@@ -167,7 +165,7 @@ export function AcceptTermsPayments({
 	);
 
 	return (
-		<div {...divProps}>
+		<div>
 			{signupTerms}
 			{/* transitionTerms and deferredBillingTerms used in next-retention, condition to render? */}
 			{transitionTerms}
@@ -177,25 +175,12 @@ export function AcceptTermsPayments({
 }
 
 AcceptTermsPayments.propTypes = {
-	withPrivacyPolicyTerms: PropTypes.bool,
-	hasError: PropTypes.bool,
 	isSignup: PropTypes.bool,
-	isChecked: PropTypes.bool,
-	isB2b: PropTypes.bool,
-	isB2cPartnership: PropTypes.bool,
-	ageRestriction: PropTypes.string,
 	isEmbedded: PropTypes.bool,
-	isCorpSignup: PropTypes.bool,
 	isTrial: PropTypes.bool,
 	isTransition: PropTypes.bool,
 	transitionType: PropTypes.string,
 	isPrintProduct: PropTypes.bool,
 	isSingleTerm: PropTypes.bool,
 	isDeferredBilling: PropTypes.bool,
-	hideConfirmTermsAndConditions: PropTypes.bool,
-	children: PropTypes.oneOfType([
-		PropTypes.arrayOf(PropTypes.node),
-		PropTypes.node,
-	]),
-	privacyPoliciesPosition: PropTypes.oneOf(['top', 'bottom']),
 };

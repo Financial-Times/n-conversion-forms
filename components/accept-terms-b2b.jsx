@@ -1,18 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { AcceptTermsAccess } from './accept-terms-access';
 
 const DEFAULT_AGE_RESTRICTION = '16';
-const DEFAULT_PRIVACY_POLICIES_POSITION = 'top';
 
-export function AcceptTerms({
-	withPrivacyPolicyTerms = false,
+export function AcceptTermsB2B({
 	hasError = false,
 	isSignup = false,
 	isChecked = false,
 	isB2b = false,
-	isB2cPartnership = false,
 	ageRestriction = DEFAULT_AGE_RESTRICTION,
 	isEmbedded = false,
 	isCorpSignup = false,
@@ -134,17 +130,17 @@ export function AcceptTerms({
 		<div {...divProps}>
 			{b2bTerms}
 			{corpSignupTerms}
+			{b2cPartnershipTerms}
 		</div>
 	);
 }
 
-AcceptTerms.propTypes = {
+AcceptTermsB2B.propTypes = {
 	withPrivacyPolicyTerms: PropTypes.bool,
 	hasError: PropTypes.bool,
 	isSignup: PropTypes.bool,
 	isChecked: PropTypes.bool,
 	isB2b: PropTypes.bool,
-	isB2cPartnership: PropTypes.bool,
 	ageRestriction: PropTypes.string,
 	isEmbedded: PropTypes.bool,
 	isCorpSignup: PropTypes.bool,

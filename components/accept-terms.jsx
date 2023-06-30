@@ -51,7 +51,7 @@ export function AcceptTerms({
 		required: true,
 		...(isChecked && { defaultChecked: true }),
 	};
-	/* 
+
 	const privacyPolicyTerms = (
 		<div className="privacy-policy-terms">
 			<span className={`consent-text--${privacyPoliciesPosition}`}>
@@ -81,8 +81,8 @@ export function AcceptTerms({
 				<label className={labelClassName} htmlFor="termsAcceptance">
 					<input {...inputProps} />
 					<span className="o-forms-input__label">
-						TESTEOI confirm that I am {ageRestriction} years or older and agree to the
-						full{' '}
+						TESTEOI confirm that I am {ageRestriction} years or older and agree
+						to the full{' '}
 						<a
 							className="ncf__link--external"
 							href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -101,7 +101,7 @@ export function AcceptTerms({
 			)}
 			{children && <div className="children-container">{children}</div>}
 		</div>
-	); */
+	);
 
 	const b2bTerms = isB2b ? (
 		<li>
