@@ -5,8 +5,7 @@ import classNames from 'classnames';
 const DEFAULT_AGE_RESTRICTION = '16';
 const DEFAULT_PRIVACY_POLICIES_POSITION = 'top';
 
-export function AcceptTermsAccess({
-	withPrivacyPolicyTerms = false,
+export function AcceptTermsPrivacyPolicy({
 	hasError = false,
 	isSignup = false,
 	isChecked = false,
@@ -93,37 +92,10 @@ export function AcceptTermsAccess({
 		</div>
 	);
 
-	return (
-		<div {...divProps}>
-			{withPrivacyPolicyTerms ? (
-				privacyPolicyTerms
-			) : (
-				<>
-					<h1>TESTING</h1>
-					{/* <ul className="o-typography-list ncf__accept-terms-list">
-						{b2bTerms}
-						{corpSignupTerms}
-						{transitionTerms}
-						{signupTerms}
-						{deferredBillingTerms}
-					</ul>
-					<label className={labelClassName} htmlFor="termsAcceptance">
-						<input {...inputProps} />
-						<span className="o-forms-input__label">
-							I agree to the above terms &amp; conditions.
-						</span>
-						<p className="o-forms-input__error">
-							Please accept our terms &amp; conditions
-						</p>
-					</label> */}
-				</>
-			)}
-		</div>
-	);
+	return <div {...divProps}>{privacyPolicyTerms}</div>;
 }
 
-AcceptTermsAccess.propTypes = {
-	withPrivacyPolicyTerms: PropTypes.bool,
+AcceptTermsPrivacyPolicy.propTypes = {
 	hasError: PropTypes.bool,
 	isSignup: PropTypes.bool,
 	isChecked: PropTypes.bool,

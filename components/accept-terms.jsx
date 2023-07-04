@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { AcceptTermsAccess } from './accept-terms-access';
 
 const DEFAULT_AGE_RESTRICTION = '16';
 const DEFAULT_PRIVACY_POLICIES_POSITION = 'top';
@@ -81,8 +80,8 @@ export function AcceptTerms({
 				<label className={labelClassName} htmlFor="termsAcceptance">
 					<input {...inputProps} />
 					<span className="o-forms-input__label">
-						TESTEOI confirm that I am {ageRestriction} years or older and agree
-						to the full{' '}
+						I confirm that I am {ageRestriction} years or older and agree to the
+						full{' '}
 						<a
 							className="ncf__link--external"
 							href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -335,7 +334,30 @@ export function AcceptTerms({
 
 	return (
 		<div {...divProps}>
-			{isB2cPartnership ? b2cPartnershipTerms : <AcceptTermsAccess />}
+			{isB2cPartnership ? (
+				b2cPartnershipTerms
+			) : withPrivacyPolicyTerms ? (
+				privacyPolicyTerms
+			) : (
+				<>
+					<ul className="o-typography-list ncf__accept-terms-list">
+						{b2bTerms}
+						{corpSignupTerms}
+						{transitionTerms}
+						{signupTerms}
+						{deferredBillingTerms}
+					</ul>
+					<label className={labelClassName} htmlFor="termsAcceptance">
+						<input {...inputProps} />
+						<span className="o-forms-input__label">
+							I agree to the above terms &amp; conditions.
+						</span>
+						<p className="o-forms-input__error">
+							Please accept our terms &amp; conditions
+						</p>
+					</label>
+				</>
+			)}
 		</div>
 	);
 }
