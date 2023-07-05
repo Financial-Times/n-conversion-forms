@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AcceptTermsAndConditions renders with default props 1`] = `
+<div id="acceptTermsField"
+     class="o-forms-field o-layout-typography ncf__validation-error"
+     data-validate="required,checked"
+>
+  <span class="terms-signup">
+    I give consent for my chosen payment method to be charged automatically at the end of each subscription term until I cancel it by contacting
+    <a class="ncf__link--external"
+       href="https://help.ft.com/help/contact-us/"
+       target="_blank"
+       rel="noopener noreferrer"
+    >
+      customer care through chat, phone or email
+    </a>
+    .
+  </span>
+  <span class="terms-signup">
+    By placing my order, my subscription will start immediately and I am aware and agree that I will therefore lose my statutory right to cancel my subscription within 14 days of acceptance of my order. Any notice of cancellation that I provide will only take effect at the end of my subscription period and previously paid amounts are non-refundable, except in the event that there is a fault in the provision of the services.
+  </span>
+  <span class="terms-signup">
+    Find out more about our cancellation policy in our
+    <a class="ncf__link--external"
+       href="https://help.ft.com/legal-privacy/terms-and-conditions/"
+       target="_blank"
+       rel="noopener noreferrer"
+    >
+      Terms &amp; Conditions
+    </a>
+    .
+  </span>
+</div>
+`;
