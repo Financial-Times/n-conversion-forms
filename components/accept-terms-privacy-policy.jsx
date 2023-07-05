@@ -2,24 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const DEFAULT_AGE_RESTRICTION = '16';
-const DEFAULT_PRIVACY_POLICIES_POSITION = 'top';
-
 export function AcceptTermsPrivacyPolicy({
 	hasError = false,
-	isSignup = false,
-	isChecked = false,
-	ageRestriction = DEFAULT_AGE_RESTRICTION,
 	isEmbedded = false,
 	hideConfirmTermsAndConditions = false,
 	children,
-	privacyPoliciesPosition = DEFAULT_PRIVACY_POLICIES_POSITION,
 }) {
 	const divProps = {
 		id: 'acceptTermsField',
 		className: 'o-forms-field o-layout-typography ncf__validation-error',
 		'data-validate': 'required,checked',
-		...(isSignup && { 'data-trackable': 'sign-up-terms' }),
+		/* is needed? 
+		...(isSignup && { 'data-trackable': 'sign-up-terms' }),*/
 	};
 
 	const labelClassName = classNames([
@@ -29,7 +23,6 @@ export function AcceptTermsPrivacyPolicy({
 			'o-forms-input--invalid': hasError,
 		},
 	]);
-
 	const inputProps = {
 		id: 'termsAcceptance',
 		type: 'checkbox',
@@ -38,73 +31,67 @@ export function AcceptTermsPrivacyPolicy({
 		'data-trackable': 'field-terms',
 		'aria-required': 'true',
 		required: true,
-		...(isChecked && { defaultChecked: true }),
 	};
 
-	const privacyPolicyTerms = (
-		<div className="privacy-policy-terms">
-			<span className={`consent-text--${privacyPoliciesPosition}`}>
-				For more information about how we use your data, please refer to our{' '}
-				<a
-					className="ncf__link--external"
-					href="https://help.ft.com/legal-privacy/privacy-policy/"
-					target="_blank"
-					rel="noopener noreferrer"
-					data-trackable="privacy-policy-info"
-				>
-					privacy
-				</a>{' '}
-				and&nbsp;
-				<a
-					className="ncf__link--external"
-					href="https://help.ft.com/legal-privacy/cookies/"
-					target="_blank"
-					rel="noopener noreferrer"
-					data-trackable="cookies-info"
-				>
-					cookie
-				</a>{' '}
-				policies.
-			</span>
-			{!hideConfirmTermsAndConditions && (
-				<label className={labelClassName} htmlFor="termsAcceptance">
-					<input {...inputProps} />
-					<span className="o-forms-input__label">
-						I confirm that I am {ageRestriction} years or older and agree to the
-						full{' '}
-						<a
-							className="ncf__link--external"
-							href="http://help.ft.com/help/legal-privacy/terms-conditions/"
-							target={isEmbedded ? '_top' : '_blank'}
-							rel="noopener noreferrer"
-							data-trackable="terms-and-conditions"
-						>
-							Terms &amp; Conditions
-						</a>
-						.
-					</span>
-					<p className="o-forms-input__error">
-						Please accept our terms &amp; conditions
-					</p>
-				</label>
-			)}
-			{children && <div className="children-container">{children}</div>}
+	return (
+		<div {...divProps}>
+			<div className="privacy-policy-terms">
+				<span className={`consent-text--bottom`}>
+					For more information about how we use your data, please refer to our{' '}
+					<a
+						className="ncf__link--external"
+						href="https://help.ft.com/legal-privacy/privacy-policy/"
+						target="_blank"
+						rel="noopener noreferrer"
+						data-trackable="privacy-policy-info"
+					>
+						privacy
+					</a>{' '}
+					and&nbsp;
+					<a
+						className="ncf__link--external"
+						href="https://help.ft.com/legal-privacy/cookies/"
+						target="_blank"
+						rel="noopener noreferrer"
+						data-trackable="cookies-info"
+					>
+						cookie
+					</a>{' '}
+					policies.
+				</span>
+				{!hideConfirmTermsAndConditions && (
+					<label className={labelClassName} htmlFor="termsAcceptance">
+						<input {...inputProps} />
+						<span className="o-forms-input__label">
+							I confirm that I am 16 years or older and agree to the full{' '}
+							<a
+								className="ncf__link--external"
+								href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+								target={isEmbedded ? '_top' : '_blank'}
+								rel="noopener noreferrer"
+								data-trackable="terms-and-conditions"
+							>
+								Terms &amp; Conditions
+							</a>
+							.
+						</span>
+						<p className="o-forms-input__error">
+							Please accept our terms &amp; conditions
+						</p>
+					</label>
+				)}
+				{children && <div className="children-container">{children}</div>}
+			</div>
 		</div>
 	);
-
-	return <div {...divProps}>{privacyPolicyTerms}</div>;
 }
 
 AcceptTermsPrivacyPolicy.propTypes = {
 	hasError: PropTypes.bool,
-	isSignup: PropTypes.bool,
-	isChecked: PropTypes.bool,
-	ageRestriction: PropTypes.string,
 	isEmbedded: PropTypes.bool,
 	hideConfirmTermsAndConditions: PropTypes.bool,
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node,
 	]),
-	privacyPoliciesPosition: PropTypes.oneOf(['top', 'bottom']),
 };

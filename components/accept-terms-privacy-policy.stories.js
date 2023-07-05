@@ -10,18 +10,22 @@ export default {
 export const Basic = (args) => <AcceptTermsPrivacyPolicy {...args} />;
 Basic.args = {};
 
-export const NewBuyFlowHideTermsAndConditions = (args) => (
+export const AcceptTermsError = (args) => (
 	<AcceptTermsPrivacyPolicy {...args} />
 );
-NewBuyFlowHideTermsAndConditions.args = {
+AcceptTermsError.args = {
+	hasError: true,
+};
+
+export const AcceptTermsHidingTermsAndConditions = (args) => (
+	<AcceptTermsPrivacyPolicy {...args} />
+);
+AcceptTermsHidingTermsAndConditions.args = {
 	hideConfirmTermsAndConditions: true,
 };
 
-export const NewBuyFlowWithChildren = (args) => (
+export const AcceptTermsWithChildren = (args) => (
 	<AcceptTermsPrivacyPolicy {...args}>
 		<Submit />
 	</AcceptTermsPrivacyPolicy>
 );
-NewBuyFlowWithChildren.args = {
-	privacyPoliciesPosition: 'bottom',
-};

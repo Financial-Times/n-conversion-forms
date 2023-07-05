@@ -1,5 +1,6 @@
 export { AcceptTerms } from './accept-terms';
 export { AcceptTermsPrivacyPolicy } from './accept-terms-privacy-policy';
+export { AcceptTermsAndConditions } from './accept-terms-and-conditions';
 export { AppBanner } from './app-banner';
 export { BillingCity } from './billing-city';
 export { BillingCountry } from './billing-country';
