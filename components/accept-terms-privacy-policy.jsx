@@ -5,15 +5,12 @@ import classNames from 'classnames';
 export function AcceptTermsPrivacyPolicy({
 	hasError = false,
 	isEmbedded = false,
-	hideConfirmTermsAndConditions = false,
 	children,
 }) {
 	const divProps = {
 		id: 'acceptTermsField',
 		className: 'o-forms-field o-layout-typography ncf__validation-error',
 		'data-validate': 'required,checked',
-		/* is needed? 
-		...(isSignup && { 'data-trackable': 'sign-up-terms' }),*/
 	};
 
 	const labelClassName = classNames([
@@ -36,6 +33,28 @@ export function AcceptTermsPrivacyPolicy({
 	return (
 		<div {...divProps}>
 			<div className="privacy-policy-terms">
+				<label className={labelClassName} htmlFor="termsAcceptance">
+					<input {...inputProps} />
+					<span className="o-forms-input__label">
+						I confirm that I am 16 years or older and agree to the full{' '}
+						<a
+							className="ncf__link--external"
+							href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+							target={isEmbedded ? '_top' : '_blank'}
+							rel="noopener noreferrer"
+							data-trackable="terms-and-conditions"
+						>
+							Terms &amp; Conditions
+						</a>
+						.
+					</span>
+					<p className="o-forms-input__error">
+						Please accept our terms &amp; conditions
+					</p>
+				</label>
+
+				{children && <div className="children-container">{children}</div>}
+
 				<span className={`consent-text--bottom`}>
 					For more information about how we use your data, please refer to our{' '}
 					<a
@@ -59,28 +78,6 @@ export function AcceptTermsPrivacyPolicy({
 					</a>{' '}
 					policies.
 				</span>
-				{!hideConfirmTermsAndConditions && (
-					<label className={labelClassName} htmlFor="termsAcceptance">
-						<input {...inputProps} />
-						<span className="o-forms-input__label">
-							I confirm that I am 16 years or older and agree to the full{' '}
-							<a
-								className="ncf__link--external"
-								href="http://help.ft.com/help/legal-privacy/terms-conditions/"
-								target={isEmbedded ? '_top' : '_blank'}
-								rel="noopener noreferrer"
-								data-trackable="terms-and-conditions"
-							>
-								Terms &amp; Conditions
-							</a>
-							.
-						</span>
-						<p className="o-forms-input__error">
-							Please accept our terms &amp; conditions
-						</p>
-					</label>
-				)}
-				{children && <div className="children-container">{children}</div>}
 			</div>
 		</div>
 	);
@@ -89,7 +86,6 @@ export function AcceptTermsPrivacyPolicy({
 AcceptTermsPrivacyPolicy.propTypes = {
 	hasError: PropTypes.bool,
 	isEmbedded: PropTypes.bool,
-	hideConfirmTermsAndConditions: PropTypes.bool,
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node,

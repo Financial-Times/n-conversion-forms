@@ -1,6 +1,5 @@
 import React from 'react';
 import { AcceptTermsAndConditions } from './accept-terms-and-conditions';
-import { Submit } from './submit';
 
 export default {
 	title: 'Accept Terms and Conditions',

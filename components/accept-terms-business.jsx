@@ -2,25 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const DEFAULT_AGE_RESTRICTION = '16';
-
-export function AcceptTermsB2B({
+export function AcceptTermsBusiness({
 	hasError = false,
-	isSignup = false,
-	isChecked = false,
 	isB2b = false,
-	ageRestriction = DEFAULT_AGE_RESTRICTION,
 	isEmbedded = false,
-	isCorpSignup = false,
 	isTrial = false,
 }) {
 	const divProps = {
 		id: 'acceptTermsField',
 		className: 'o-forms-field o-layout-typography ncf__validation-error',
 		'data-validate': 'required,checked',
-		...(isSignup && { 'data-trackable': 'sign-up-terms' }),
 	};
-
 	const labelClassName = classNames([
 		'o-forms-input',
 		'o-forms-input--checkbox',
@@ -37,7 +29,6 @@ export function AcceptTermsB2B({
 		'data-trackable': 'field-terms',
 		'aria-required': 'true',
 		required: true,
-		...(isChecked && { defaultChecked: true }),
 	};
 
 	const b2bTerms = isB2b ? (
@@ -51,8 +42,7 @@ export function AcceptTermsB2B({
 	) : (
 		<li>
 			<span className="terms-default">
-				I confirm I am {ageRestriction} years or older and have read and agree
-				to the{' '}
+				I confirm I am 16 years or older and have read and agree to the{' '}
 				<a
 					className="ncf__link--external"
 					href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -67,7 +57,7 @@ export function AcceptTermsB2B({
 		</li>
 	);
 
-	const corpSignupTerms = isCorpSignup && (
+	const corpSignupTerms = (
 		<>
 			<li>
 				<span className="terms-corp-signup">
@@ -102,58 +92,30 @@ export function AcceptTermsB2B({
 		</>
 	);
 
-	/* where?  */
-	const b2cPartnershipTerms = (
-		<label className={[labelClassName, 'checkbox-two-lines'].join(' ')}>
-			<input {...inputProps} />
-			<span className="o-forms-input__label">
-				I confirm I am {ageRestriction} years or older and have read and agree
-				to the{' '}
-				<a
-					className="ncf__link--external"
-					href="http://help.ft.com/help/legal-privacy/terms-conditions/"
-					target={isEmbedded ? '_top' : '_blank'}
-					rel="noopener noreferrer"
-					data-trackable="terms-and-conditions"
-				>
-					Terms &amp; Conditions
-				</a>
-				.
-			</span>
-			<p className="o-forms-input__error">
-				Please accept our terms &amp; conditions
-			</p>
-		</label>
-	);
-
 	return (
 		<div {...divProps}>
-			{b2bTerms}
-			{corpSignupTerms}
-			{b2cPartnershipTerms}
+			<ul className="o-typography-list ncf__accept-terms-list">
+				{b2bTerms}
+				{corpSignupTerms}
+			</ul>
+
+			<label className={labelClassName} htmlFor="termsAcceptance">
+				<input {...inputProps} />
+				<span className="o-forms-input__label">
+					I agree to the above terms &amp; conditions.
+				</span>
+				<p className="o-forms-input__error">
+					Please accept our terms &amp; conditions
+				</p>
+			</label>
 		</div>
 	);
 }
 
-AcceptTermsB2B.propTypes = {
-	withPrivacyPolicyTerms: PropTypes.bool,
+AcceptTermsBusiness.propTypes = {
 	hasError: PropTypes.bool,
-	isSignup: PropTypes.bool,
 	isChecked: PropTypes.bool,
 	isB2b: PropTypes.bool,
-	ageRestriction: PropTypes.string,
 	isEmbedded: PropTypes.bool,
-	isCorpSignup: PropTypes.bool,
 	isTrial: PropTypes.bool,
-	isTransition: PropTypes.bool,
-	transitionType: PropTypes.string,
-	isPrintProduct: PropTypes.bool,
-	isSingleTerm: PropTypes.bool,
-	isDeferredBilling: PropTypes.bool,
-	hideConfirmTermsAndConditions: PropTypes.bool,
-	children: PropTypes.oneOfType([
-		PropTypes.arrayOf(PropTypes.node),
-		PropTypes.node,
-	]),
-	privacyPoliciesPosition: PropTypes.oneOf(['top', 'bottom']),
 };
