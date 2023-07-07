@@ -1,9 +1,6 @@
-import { AcceptTermsPrivacyPolicy } from './index';
-import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
-import { mount } from 'enzyme';
 import React from 'react';
-
-expect.extend(expectToRenderCorrectly);
+import { mount } from 'enzyme';
+import { AcceptTermsPrivacyPolicy } from './index';
 
 describe('AcceptTermsPrivacyPolicy', () => {
 	it('renders with "o-forms-input--invalid" class when hasError prop is true', () => {
@@ -13,6 +10,17 @@ describe('AcceptTermsPrivacyPolicy', () => {
 
 		const labelElement = component.find('label');
 		expect(labelElement.hasClass('o-forms-input--invalid')).toBe(true);
+	});
+
+	it('renders the external link with target="_top" when isEmbedded prop is true', () => {
+		const props = {
+			isEmbedded: true,
+		};
+
+		const component = mount(<AcceptTermsPrivacyPolicy {...props} />);
+
+		const externalLink = component.find('.ncf__link--external').first();
+		expect(externalLink.prop('target')).toBe('_top');
 	});
 
 	it('renders children when children prop is provided', () => {

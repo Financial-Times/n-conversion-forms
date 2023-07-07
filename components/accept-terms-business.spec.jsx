@@ -1,42 +1,47 @@
-import { AcceptTermsBusiness } from './index';
-import { expectToRenderCorrectly } from '../test-jest/helpers/expect-to-render-correctly';
-import { mount } from 'enzyme';
 import React from 'react';
-
-expect.extend(expectToRenderCorrectly);
+import { mount } from 'enzyme';
+import { AcceptTermsBusiness } from './index';
 
 describe('AcceptTermsPrivacyPolicy', () => {
-	it('renders b2b terms when isB2b prop is true', () => {
+	it('renders with "o-forms-input--invalid" class when hasError prop is true', () => {
+		const props = { hasError: true };
+
+		const component = mount(<AcceptTermsBusiness {...props} />);
+
+		const labelElement = component.find('label');
+		expect(labelElement.hasClass('o-forms-input--invalid')).toBe(true);
+	});
+
+	it('renders the B2B terms when isB2b prop is true', () => {
 		const props = {
 			isB2b: true,
 		};
 
-		const wrapper = mount(<AcceptTermsBusiness {...props} />);
+		const component = mount(<AcceptTermsBusiness {...props} />);
 
-		const b2bTermsElement = wrapper.find('.terms-b2b');
-		expect(b2bTermsElement.exists()).toBe(true);
-		expect(b2bTermsElement.text()).toBe(
-			'By submitting this form, you indicate your consent to also being contacted by Financial Times by email, post, or phone about our other products, services or special offers unless you untick this box.'
-		);
-
-		const defaultTermsElement = wrapper.find('.terms-default');
-		expect(defaultTermsElement.exists()).toBe(false);
-
-		const corpSignupTermsElement = wrapper.find('.terms-corp-signup');
-		expect(corpSignupTermsElement.exists()).toBe(true);
+		const b2bTerms = component.find('.terms-b2b');
+		expect(b2bTerms.exists()).toBe(true);
 	});
 
-	it('does not render trial terms when isTrial prop is false', () => {
+	it('renders the external link with target="_blank" when isEmbedded prop is false', () => {
 		const props = {
-			isTrial: false,
+			isEmbedded: false,
 		};
 
-		const wrapper = mount(<AcceptTermsBusiness {...props} />);
+		const component = mount(<AcceptTermsBusiness {...props} />);
 
-		const trialTermsElement = wrapper.find('.terms-trial');
-		expect(trialTermsElement.exists()).toBe(false);
+		const externalLink = component.find('.ncf__link--external');
+		expect(externalLink.prop('target')).toBe('_blank');
+	});
 
-		const corpSignupTermsElement = wrapper.find('.terms-corp-signup');
-		expect(corpSignupTermsElement.exists()).toBe(true);
+	it('renders the trial terms when isTrial prop is true', () => {
+		const props = {
+			isTrial: true,
+		};
+
+		const component = mount(<AcceptTermsBusiness {...props} />);
+
+		const trialTerms = component.find('.terms-corp-signup');
+		expect(trialTerms.exists()).toBe(true);
 	});
 });

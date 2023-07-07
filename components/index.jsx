@@ -1,6 +1,6 @@
 export { AcceptTerms } from './accept-terms';
 export { AcceptTermsPrivacyPolicy } from './accept-terms-privacy-policy';
-export { AcceptTermsAndConditions } from './accept-terms-and-conditions';
+export { AcceptTermsSubscription } from './accept-terms-subscription';
 export { AcceptTermsBusiness } from './accept-terms-business';
 export { AppBanner } from './app-banner';
 export { BillingCity } from './billing-city';
