@@ -30,10 +30,3 @@ AcceptTermsBusinessTrialAndB2b.args = {
 	isTrial: true,
 	isB2b: true,
 };
-/*
-export const AcceptTermsWithChildren = (args) => (
-    <AcceptTermsPrivacyPolicy {...args}>
-        <Submit />
-    </AcceptTermsPrivacyPolicy>
-);
- */

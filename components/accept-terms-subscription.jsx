@@ -181,6 +181,7 @@ export function AcceptTermsSubscription({
 	);
 
 	const signupTerms = <>{isPrintProduct ? printTerms : nonPrintTerms}</>;
+
 	return (
 		<div {...divProps}>
 			<ul className="o-typography-list ncf__accept-terms-list">
