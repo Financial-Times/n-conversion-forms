@@ -11,8 +11,7 @@
     "build-storybook": "build-storybook --docs --output-dir docs",
     "lint": "eslint . --ext .jsx,.js",
     "lint-fix": "eslint . --ext .jsx,.js --fix",
-    "prettier": "prettier --write '**/*.{js,jsx,json,scss}'",
-    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
+    "prettier": "prettier --write '**/*.{js,jsx,json,scss}'"
   },
   "repository": {
     "type": "git",
@@ -30,7 +29,7 @@
     "classnames": "2.3.2",
     "fetchres": "1.7.2",
     "lodash.get": "4.4.2",
-    "n-common-static-data": "github:Financial-Times/n-common-static-data#v1.8.2"
+    "n-common-static-data": "github:Financial-Times/n-common-static-data#v2.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
@@ -70,8 +69,8 @@
     "snyk": "1.1115.0"
   },
   "engines": {
-    "node": "14.x || 16.x",
-    "npm": "7.x || 8.x"
+    "node": "16.x || 18.x",
+    "npm": "7.x || 8.x || 9.x"
   },
   "lint-staged": {
     "**/*.{js,jsx,json,scss}": "prettier --write",
@@ -99,5 +98,8 @@
     "@financial-times/o-social-follow": "^1.0.0",
     "@financial-times/o-stepped-progress": "^4.0.2",
     "@financial-times/o-typography": "^7.3.1"
+  },
+  "volta": {
+    "node": "18.17.0"
   }
 }
