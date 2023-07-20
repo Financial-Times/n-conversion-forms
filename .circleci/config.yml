@@ -64,8 +64,8 @@ jobs:
           command: git clone --depth 1 git@github.com:Financial-Times/next-ci-shared-helpers.git --branch unpin-heroku .circleci/shared-helpers
       - *restore_npm_cache
       - run:
-          name: Install npm v7
-          command: npm install -g npm@7
+          name: Install npm v9
+          command: npm install -g npm@9
       - run:
           name: Install project dependencies
           command: make install
