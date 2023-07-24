@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel components/*.jsx -d dist --copy-files",
-    "prepare": "(npx snyk protect || npx snyk protect -d || true)",
+    "prepare": "snyk-protect || snyk-protect -d || true",
     "storybook": "start-storybook -p 5005",
     "build-storybook": "build-storybook --docs --output-dir docs",
     "lint": "eslint . --ext .jsx,.js",
@@ -43,6 +43,7 @@
     "@storybook/addon-a11y": "^6.5.13",
     "@storybook/addon-essentials": "6.5.13",
     "@storybook/react": "^6.5.13",
+    "@snyk/protect": "1.1193.0",
     "@sucrase/jest-plugin": "^2.0.0",
     "check-engines": "^1.5.0",
     "enzyme": "^3.11.0",
@@ -65,8 +66,7 @@
     "react-dom": "16.14.0",
     "react-is": "^16.13.1",
     "sass": "^1.55.0",
-    "sass-loader": "^10.2.1",
-    "snyk": "1.1193.0"
+    "sass-loader": "^10.2.1"
   },
   "engines": {
     "node": "16.x || 18.x",
