@@ -6,8 +6,8 @@ Contains HTML and CSS that's used within the conversion forms
 [![Known Vulnerabilities](https://snyk.io/test/github/Financial-Times/n-conversion-forms/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Financial-Times/n-conversion-forms?targetFile=package.json)
 
 ```bash
-make install # install all dependencies
-make run # build and start documentation app at http://local.ft.com:5005/
+npm install # install all dependencies
+npm start # build and start documentation app at http://local.ft.com:5005/
 ```
 
 ## Table of contents
