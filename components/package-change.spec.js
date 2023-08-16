@@ -74,6 +74,23 @@ describe('PackageChange', () => {
 
 				expect(PackageChange).toRenderCorrectly(props);
 			});
+
+			it('render when is7DayPassExperiment is true', () => {
+				const props = {
+					changePackageUrl: 'https://www.ft.com',
+					currentPackage: 'Trial',
+					is7DayPassExperiment: true,
+					terms: [
+						{
+							name: term,
+							price: '£1.00',
+							weeklyPrice: '£1.00',
+						},
+					],
+				};
+
+				expect(PackageChange).toRenderCorrectly(props);
+			});
 		});
 	});
 });
