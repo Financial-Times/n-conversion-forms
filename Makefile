@@ -8,7 +8,7 @@ build:
 	npm run build
 
 run:
-	npm run storybook
+	NODE_OPTIONS=--openssl-legacy-provider npm run storybook
 
 test:
 	make jest
