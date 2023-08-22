@@ -12,4 +12,5 @@ module.exports = {
 	setupFilesAfterEnv: ['<rootDir>/test-jest/helpers/setup.js'],
 	resolver: '@financial-times/jest-browser-resolver',
 	transformIgnorePatterns: ['/node_modules//(?!(@financial-times)/)'],
+	testEnvironment: 'jsdom',
 };
