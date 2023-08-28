@@ -1,4 +1,5 @@
 module.exports = {
+	maxWorkers: 2,
 	testPathIgnorePatterns: ['/node_modules/', '/cypress/', '/test/'],
 	transform: {
 		'.(js|jsx)': '@sucrase/jest-plugin',
