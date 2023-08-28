@@ -20,4 +20,4 @@ hooks:
     - JestCI
 options:
   "@dotcom-tool-kit/circleci":
-    nodeVersion: 18.19-browsers
+    nodeVersion: 18.17-browsers

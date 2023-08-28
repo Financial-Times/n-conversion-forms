@@ -5,7 +5,7 @@ orbs:
 executors:
   node:
     docker:
-      - image: cimg/node:18.19-browsers
+      - image: cimg/node:18.17-browsers
 jobs:
   checkout:
     docker:
@@ -31,6 +31,8 @@ workflows:
           filters:
             branches:
               only: /(^renovate-.*|^nori/.*)/
+            tags:
+              only: /^v\d+\.\d+\.\d+(-.+)?/
       - tool-kit/setup:
           name: tool-kit/setup-<< matrix.executor >>
           requires:
