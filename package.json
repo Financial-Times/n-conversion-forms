@@ -67,8 +67,8 @@
     "eslint-plugin-react": "^7.31.1",
     "fetch-mock": "^7.2.0",
     "html-webpack-plugin": "^5.5.3",
-    "jest": "^29.6.2",
-    "jest-environment-jsdom": "^29.6.3",
+    "jest": "^29.6.4",
+    "jest-environment-jsdom": "^29.6.4",
     "jest-serializer-html": "^7.1.0",
     "jsdom": "^22.1.0",
     "jsdom-global": "^3.0.2",
@@ -96,8 +96,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "dotcom-tool-kit git:commitmsg",
-      "pre-commit": "dotcom-tool-kit git:precommit",
-      "pre-push": "pretty-quick --staged && make test"
+      "pre-commit": "pretty-quick --staged && dotcom-tool-kit git:precommit"
     }
   },
   "peerDependencies": {
