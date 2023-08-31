@@ -9,6 +9,7 @@ export function AcceptTermsSubscription({
 	isTrial = false,
 	isPrintProduct = false,
 	isSingleTerm = false,
+	is7DayPassExperiment = false,
 	isTransition = false,
 	transitionType = null,
 	isDeferredBilling = false,
@@ -36,6 +37,54 @@ export function AcceptTermsSubscription({
 		'aria-required': 'true',
 		required: true,
 	};
+
+	if (is7DayPassExperiment) {
+		return (
+			<div {...divProps}>
+				<ul className="o-typography-list ncf__accept-terms-list">
+					<li>
+						<span className="terms-transition terms-transition--immediate">
+							I give consent for my chosen payment method to be charged
+							automatically.
+						</span>
+					</li>
+					<li>
+						<span className="terms-transition terms-transition--immediate">
+							By placing your order subject to the Terms & Conditions (save for
+							section 2) referred to below, you are waiving your statutory right
+							to cancel our contract within 14 days of payment. Your payment is
+							a one-time payment collected at the time of checkout, and
+							unsubscribing or cancelling at any point (whether before or after
+							the 14-day period) will not entitle you to a refund.
+						</span>
+					</li>
+					<li>
+						<span className="terms-transition">
+							Please see here for the complete{' '}
+							<a
+								className="ncf__link--external"
+								href="http://help.ft.com/help/legal-privacy/terms-conditions/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Terms &amp; Conditions
+							</a>
+							.
+						</span>
+					</li>
+				</ul>
+				<label className={labelClassName} htmlFor="termsAcceptance">
+					<input {...inputProps} />
+					<span className="o-forms-input__label">
+						I agree to the above terms &amp; conditions.
+					</span>
+					<p className="o-forms-input__error">
+						Please accept our terms &amp; conditions
+					</p>
+				</label>
+			</div>
+		);
+	}
 
 	const transitionTerms = isTransition && (
 		<>
@@ -209,6 +258,7 @@ AcceptTermsSubscription.propTypes = {
 	isTrial: PropTypes.bool,
 	isPrintProduct: PropTypes.bool,
 	isSingleTerm: PropTypes.bool,
+	is7DayPassExperiment: PropTypes.bool,
 	isTransition: PropTypes.bool,
 	transitionType: PropTypes.string,
 	isDeferredBilling: PropTypes.bool,

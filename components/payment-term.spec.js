@@ -153,6 +153,37 @@ describe('PaymentTerm', () => {
 		});
 	});
 
+	describe('given is7DayPassExperiment is true', () => {
+		const options = [
+			{
+				name: 'monthly',
+				price: '$5.00',
+				value: 'monthly',
+				monthlyPrice: '$5.00',
+			},
+		];
+		const wrapper = shallow(
+			<PaymentTerm
+				isFixedTermOffer={true}
+				options={options}
+				offerDisplayName="7-day pass"
+				is7DayPassExperiment={true}
+			/>
+		);
+
+		it('renders renewal text that actually reflects how the 7-day pass is a fixed term subscription with a one-off payment made at the outset', () => {
+			expect(wrapper.find('.ncf__payment-term__renews-text').text()).toMatch(
+				/This subscription is for 7 days, charged at the outset./
+			);
+		});
+
+		it('renders offer name and omits payment term title', () => {
+			expect(wrapper.find('.ncf__payment-term__title').text()).toMatch(
+				'7-day pass'
+			);
+		});
+	});
+
 	describe('getDisplayName', () => {
 		const baseOptions = {
 			name: 'monthly',
@@ -196,6 +227,22 @@ describe('PaymentTerm', () => {
 				const wrapper = shallow(<PaymentTerm options={options} />);
 				expect(wrapper.find('.ncf__payment-term__label').text()).toMatch(
 					/^Trial: someDisplayName - Monthly .*/
+				);
+			});
+		});
+		describe('7-day pass experiment', () => {
+			const options = [
+				{
+					...baseOptions,
+					isTrial: false,
+				},
+			];
+			it('renders with time period only if trial.option == false', () => {
+				const wrapper = shallow(
+					<PaymentTerm options={options} is7DayPassExperiment={true} />
+				);
+				expect(wrapper.find('.ncf__payment-term__label').text().trim()).toMatch(
+					'£20.00 one-time paymentThis subscription is for 7 days, charged at the outset.'
 				);
 			});
 		});
