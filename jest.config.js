@@ -1,4 +1,5 @@
 module.exports = {
+	maxWorkers: 2,
 	testPathIgnorePatterns: ['/node_modules/', '/cypress/', '/test/'],
 	transform: {
 		'.(js|jsx)': '@sucrase/jest-plugin',
@@ -12,4 +13,5 @@ module.exports = {
 	setupFilesAfterEnv: ['<rootDir>/test-jest/helpers/setup.js'],
 	resolver: '@financial-times/jest-browser-resolver',
 	transformIgnorePatterns: ['/node_modules//(?!(@financial-times)/)'],
+	testEnvironment: 'jsdom',
 };

@@ -1,0 +1,19 @@
+plugins:
+  - "@dotcom-tool-kit/component"
+  - "@dotcom-tool-kit/jest"
+  - "@dotcom-tool-kit/eslint"
+  - "@dotcom-tool-kit/prettier"
+  - "@dotcom-tool-kit/lint-staged"
+hooks:
+  git:precommit:
+    - SecretSquirrel
+    - LintStaged
+  test:local:
+    - Eslint
+    - JestLocal
+  test:ci:
+    - Eslint
+    - JestCI
+options:
+  "@dotcom-tool-kit/circleci":
+    nodeVersion: 18.17-browsers
