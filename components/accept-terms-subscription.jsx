@@ -51,11 +51,13 @@ export function AcceptTermsSubscription({
 					<li>
 						<span className="terms-transition terms-transition--immediate">
 							By placing your order subject to the Terms & Conditions (save for
-							section 2) referred to below, you are waiving your statutory right
-							to cancel our contract within 14 days of payment. Your payment is
-							a one-time payment collected at the time of checkout, and
-							unsubscribing or cancelling at any point (whether before or after
-							the 14-day period) will not entitle you to a refund.
+							section 2) referred to below, you agree that we may start your
+							7-day pass immediately upon our acceptance of your order and that
+							you are waiving your statutory right to cancel our contract within
+							14 days of confirmation. Your payment is a one-time payment
+							collected at the time of checkout, and cancelling at any point
+							(whether before or after the 14-day period) will not entitle you
+							to a refund.
 						</span>
 					</li>
 					<li>
