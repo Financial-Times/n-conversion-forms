@@ -1,9 +1,11 @@
 plugins:
   - "@dotcom-tool-kit/component"
+  - "@dotcom-tool-kit/babel"
   - "@dotcom-tool-kit/jest"
   - "@dotcom-tool-kit/eslint"
   - "@dotcom-tool-kit/prettier"
   - "@dotcom-tool-kit/lint-staged"
+  - './toolkit/run-storybook'
 hooks:
   git:precommit:
     - SecretSquirrel
@@ -14,6 +16,11 @@ hooks:
   test:ci:
     - Eslint
     - JestCI
+  run:local:
+   - RunStorybook
 options:
   "@dotcom-tool-kit/circleci":
     nodeVersion: 18.17-browsers
+  "@dotcom-tool-kit/babel":
+    files: components/*.jsx
+    outputPath: dist
