@@ -13,12 +13,12 @@ jobs:
     steps:
       - uses: actions/setup-node@v3
         with:
-          node-version: 14.x
+          node-version: 18.x
       - uses: actions/checkout@v2
         with:
           persist-credentials: false
       - run: git config --global url."https://${{ secrets.NEXT_USER_PAT }}@github.com/".insteadOf ssh://git@github.com/
-      - run: npm install -g npm@7.24.2
+      - run: npm install -g npm@9.6.7
       - run: npm install
       - run: npm run build-storybook
       - name: Deploy
