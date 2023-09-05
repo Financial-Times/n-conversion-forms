@@ -7,7 +7,7 @@ Contains HTML and CSS that's used within the conversion forms
 
 ```bash
 npm install # install all dependencies
-npm run storybook # build and start documentation app at http://local.ft.com:5005/
+npm start # build and start documentation app at http://local.ft.com:5005/
 ```
 
 ## Table of contents
