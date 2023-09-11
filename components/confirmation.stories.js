@@ -38,6 +38,13 @@ const nextActionBottom = (
 	</div>
 );
 
+const newsletterScheduleExplainer = (
+	<p className="ncf__paragraph">
+		You will receive your first newsletter on the next weekday to{' '}
+		<strong>foo@bar.com</strong>.
+	</p>
+);
+
 export const Basic = (args) => <Confirmation {...args} />;
 Basic.args = {
 	offer: 'Premium Digital',
@@ -55,4 +62,5 @@ Basic.args = {
 	],
 	nextActionTop,
 	nextActionBottom,
+	newsletterScheduleExplainer,
 };
