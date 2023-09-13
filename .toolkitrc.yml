@@ -22,5 +22,5 @@ options:
   "@dotcom-tool-kit/circleci":
     nodeVersion: 18.17-browsers
   "@dotcom-tool-kit/babel":
-    files: components/*.jsx
+    files: "components/{*.jsx,index.js}"
     outputPath: dist
