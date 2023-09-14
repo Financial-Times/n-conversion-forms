@@ -109,26 +109,6 @@ FixedTermOffer.args = {
 	offerDisplayName: 'Mix & Match',
 };
 
-export const SevenDayPassExperimentOffer = (args) => (
-	<div className="ncf">
-		<Fieldset>
-			<PaymentTerm {...args} />
-		</Fieldset>
-	</div>
-);
-SevenDayPassExperimentOffer.args = {
-	options: [
-		{
-			name: 'monthly',
-			price: '$5.00',
-			value: 5.0,
-		},
-	],
-	isFixedTermOffer: true,
-	is7DayPassExperiment: true,
-	offerDisplayName: '7-day pass',
-};
-
 export const RenewOffers = (args) => (
 	<div className="ncf">
 		<Fieldset>
