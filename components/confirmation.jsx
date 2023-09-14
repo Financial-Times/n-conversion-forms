@@ -14,6 +14,7 @@ export function Confirmation({
 	directDebitMandateUrl = null,
 	nextActionTop = null,
 	nextActionBottom = null,
+	newsletterScheduleExplainer = null,
 }) {
 	const containerDivProps = {
 		className: 'ncf ncf__wrapper',
@@ -83,6 +84,9 @@ export function Confirmation({
 			) : (
 				''
 			)}
+
+			{newsletterScheduleExplainer}
+
 			<p className="ncf__paragraph">
 				Here’s a summary of your {offer} subscription:
 			</p>
@@ -146,4 +150,5 @@ Confirmation.propTypes = {
 	directDebitMandateUrl: PropTypes.string,
 	nextActionTop: PropTypes.node,
 	nextActionBottom: PropTypes.node,
+	newsletterScheduleExplainer: PropTypes.node,
 };
