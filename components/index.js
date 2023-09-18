@@ -49,7 +49,6 @@ export { Province } from './province';
 export { RegistrationConfirmation } from './registration-confirmation';
 export { Responsibility } from './responsibility';
 export { Section } from './section';
-export { SevenDayPassExperimentConfirmation } from './seven-day-pass-experiment-confirmation';
 export { State } from './state';
 export { Submit } from './submit';
 export { TrialBanner } from './trial-banner';

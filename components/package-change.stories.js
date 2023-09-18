@@ -18,11 +18,3 @@ WithPackageDescription.args = {
 	changePackageUrl: 'https://ft.com/products',
 	packageDescription: 'Personalised email briefings and alerts',
 };
-
-export const SevenDayPassExperiment = (args) => <PackageChange {...args} />;
-SevenDayPassExperiment.args = {
-	currentPackage: 'Premium Digital',
-	changePackageUrl: 'https://ft.com/products',
-	packageDescription: 'Personalised email briefings and alerts',
-	is7DayPassExperiment: true,
-};
