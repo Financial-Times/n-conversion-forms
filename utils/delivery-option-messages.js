@@ -114,7 +114,7 @@ const deliveryOptionMessages = [
 		deliveryOnPublicationDate: false,
 		flightMarket: true,
 		country: [printRegions.cemeaV1, printRegions.cemeaV2, printRegions.apac],
-		title: 'Hand Delivery',
+		title: 'Hand delivery',
 		description:
 			'Enjoy the delivery of the newspaper to your home or office address. Please note we fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT’s control. In those circumstances, your newspaper will be delivered the next delivery day. Please also be aware that your FT weekend will be delivered on Sunday.',
 	},
@@ -127,7 +127,7 @@ const deliveryOptionMessages = [
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: true,
 		flightMarket: true,
-		title: 'Hand Delivery',
+		title: 'Hand delivery',
 		country: [printRegions.cemeaV1, printRegions.cemeaV2, printRegions.apac],
 		description:
 			'Enjoy delivery of the newspaper to your home or office address. FT Weekend will be delivered on Sunday or Monday.',
@@ -142,7 +142,7 @@ const deliveryOptionMessages = [
 		deliveryOnPublicationDate: true,
 		flightMarket: false,
 		country: [printRegions.cemeaV1, printRegions.cemeaV2, printRegions.apac],
-		title: 'Hand Delivery',
+		title: 'Hand delivery',
 		description:
 			'Enjoy delivery of the newspaper daily to your home or office address on the day of publication.',
 	},

@@ -140,7 +140,7 @@ describe('Find Custom Delivery Option', () => {
 			stubOption.deliveryOnPublicationDate = false;
 			stubOption.mailDelivery = false;
 			const expected = {
-				title: 'Hand Delivery',
+				title: 'Hand delivery',
 				description:
 					'Enjoy the delivery of the newspaper to your home or office address. Please note we fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT’s control. In those circumstances, your newspaper will be delivered the next delivery day. Please also be aware that your FT weekend will be delivered on Sunday.',
 			};
