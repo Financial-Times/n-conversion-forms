@@ -19,7 +19,7 @@ exports[`DeliveryOption renders with USA print offer 1`] = `
       >
       <span class="o-forms-input__label ncf__delivery-option__label">
         <span class="ncf__delivery-option__title o-forms-title__main">
-          Hand delivery
+          Hand Delivery
         </span>
         <div class="ncf__delivery-option__description">
           Enjoy delivery of the newspaper daily to your home or office address.
@@ -85,7 +85,7 @@ exports[`DeliveryOption renders with a context of being single 1`] = `
       >
       <span class="o-forms-input__label ncf__delivery-option__label">
         <span class="ncf__delivery-option__title o-forms-title__main">
-          Home delivery
+          Hand Delivery
         </span>
         <div class="ncf__delivery-option__description">
           Free delivery to your home or office before 7am.
@@ -133,7 +133,7 @@ exports[`DeliveryOption renders with country CAN print offer HD and mailDelivery
       >
       <span class="o-forms-input__label ncf__delivery-option__label">
         <span class="ncf__delivery-option__title o-forms-title__main">
-          Hand delivery
+          Hand Delivery
         </span>
         <div class="ncf__delivery-option__description">
           Enjoy delivery of the newspaper daily to your home or office address.
@@ -181,7 +181,7 @@ exports[`DeliveryOption renders with minimum mandatory props 1`] = `
       >
       <span class="o-forms-input__label ncf__delivery-option__label">
         <span class="ncf__delivery-option__title o-forms-title__main">
-          Home delivery
+          Hand Delivery
         </span>
         <div class="ncf__delivery-option__description">
           Free delivery to your home or office before 7am.
@@ -247,7 +247,7 @@ exports[`DeliveryOption renders without unrecognised delivery options 1`] = `
       >
       <span class="o-forms-input__label ncf__delivery-option__label">
         <span class="ncf__delivery-option__title o-forms-title__main">
-          Home delivery
+          Hand Delivery
         </span>
         <div class="ncf__delivery-option__description">
           Free delivery to your home or office before 7am.

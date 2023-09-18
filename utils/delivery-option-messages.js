@@ -62,7 +62,7 @@ const deliveryOptionMessages = [
 		deliveryOnPublicationDate: true,
 		flightMarket: true,
 		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
-		title: 'Hand delivery',
+		title: 'Hand Delivery',
 		description:
 			"Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: We fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT's control. In those circumstances, your newspaper will be delivered on the next delivery day.",
 	},
@@ -75,7 +75,7 @@ const deliveryOptionMessages = [
 		deliveryOnPublicationDate: true,
 		flightMarket: false,
 		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
-		title: 'Hand delivery',
+		title: 'Hand Delivery',
 		description:
 			'Enjoy delivery of the newspaper daily to your home or office address.',
 	},
@@ -88,7 +88,7 @@ const deliveryOptionMessages = [
 		deliveryOnPublicationDate: false,
 		flightMarket: true,
 		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
-		title: 'Hand delivery',
+		title: 'Hand Delivery',
 		description:
 			"Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: We fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT's control. In those circumstances, your newspaper will be delivered on the next delivery day. Please also be aware that your FT Weekend will be delivered on Sunday.",
 	},
@@ -101,7 +101,7 @@ const deliveryOptionMessages = [
 		deliveryOnPublicationDate: false,
 		flightMarket: false,
 		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
-		title: 'Hand delivery',
+		title: 'Hand Delivery',
 		description:
 			'Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: Your FT Weekend will be delivered on Sunday or Monday.',
 	},
@@ -192,7 +192,7 @@ const deliveryOptionMessages = [
 		deliveryOnPublicationDate: true,
 		flightMarket: true,
 		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
-		title: 'Hand delivery',
+		title: 'Hand Delivery',
 		description:
 			"Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: We fly the newspapers to your location which means delivery is subject to flight delays/cancellations outside of the FT's control. In those circumstances, your newspaper will be delivered the next delivery day.",
 	},
@@ -202,7 +202,7 @@ const deliveryOptionMessages = [
 		deliveryOnPublicationDate: true,
 		flightMarket: false,
 		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
-		title: 'Hand delivery',
+		title: 'Hand Delivery',
 		description:
 			'Enjoy delivery of the newspaper daily to your home or office address.',
 	},
@@ -212,7 +212,7 @@ const deliveryOptionMessages = [
 		deliveryOnPublicationDate: false,
 		flightMarket: true,
 		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
-		title: 'Hand delivery',
+		title: 'Hand Delivery',
 		description:
 			"Enjoy delivery of the newspaper daily to your home or office address. \nPlease note we fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT's control. In those circumstances, your newspaper will be delivered on the next delivery day. Please also be aware that your FT Weekend will be delivered on Sunday.",
 	},
@@ -222,7 +222,7 @@ const deliveryOptionMessages = [
 		deliveryOnPublicationDate: false,
 		flightMarket: false,
 		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
-		title: 'Hand delivery',
+		title: 'Hand Delivery',
 		description:
 			'Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: Your FT Weekend will be delivered on Sunday.',
 	},

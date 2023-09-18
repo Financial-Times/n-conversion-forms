@@ -43,7 +43,7 @@ describe('Find Custom Delivery Option', () => {
 			stubOption.deliveryOnPublicationDate = true;
 			stubOption.flightMarket = false;
 			const expected = {
-				title: 'Hand delivery',
+				title: 'Hand Delivery',
 				description:
 					'Enjoy delivery of the newspaper daily to your home or office address.',
 			};
@@ -61,7 +61,7 @@ describe('Find Custom Delivery Option', () => {
 			stubOption.deliveryOnPublicationDate = false;
 			stubOption.flightMarket = false;
 			const expected = {
-				title: 'Hand delivery',
+				title: 'Hand Delivery',
 				description:
 					'Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: Your FT Weekend will be delivered on Sunday.',
 			};
