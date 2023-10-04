@@ -70,7 +70,7 @@ exports[`DeliveryOption renders with a context of being single 1`] = `
           Paper vouchers
         </span>
         <div class="ncf__delivery-option__description">
-          13-week voucher pack delivered quarterly and redeemable at retailers nationwide. COVID-19 - make sure your preferred newsagent or retailer is open and/or delivering before you select this option.
+          13-week voucher pack delivered quarterly and redeemable at retailers nationwide.
         </div>
       </span>
     </label>
@@ -166,7 +166,7 @@ exports[`DeliveryOption renders with minimum mandatory props 1`] = `
           Paper vouchers
         </span>
         <div class="ncf__delivery-option__description">
-          13-week voucher pack delivered quarterly and redeemable at retailers nationwide. COVID-19 - make sure your preferred newsagent or retailer is open and/or delivering before you select this option.
+          13-week voucher pack delivered quarterly and redeemable at retailers nationwide.
         </div>
       </span>
     </label>
@@ -232,7 +232,7 @@ exports[`DeliveryOption renders without unrecognised delivery options 1`] = `
           Paper vouchers
         </span>
         <div class="ncf__delivery-option__description">
-          13-week voucher pack delivered quarterly and redeemable at retailers nationwide. COVID-19 - make sure your preferred newsagent or retailer is open and/or delivering before you select this option.
+          13-week voucher pack delivered quarterly and redeemable at retailers nationwide.
         </div>
       </span>
     </label>
