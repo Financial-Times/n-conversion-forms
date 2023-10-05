@@ -2,3 +2,5 @@
 /dist
 /.eslintrc.js
 /public
+secret-squirrel.js
+secret-squirrel.cjs
