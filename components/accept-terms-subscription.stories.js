@@ -24,28 +24,28 @@ PrintProductTrial.args = {
 	isTrial: true,
 };
 
-export const isSingleTerm = (args) => <AcceptTermsSubscription {...args} />;
+export const IsSingleTerm = (args) => <AcceptTermsSubscription {...args} />;
 
-isSingleTerm.args = {
+IsSingleTerm.args = {
 	isSingleTerm: true,
 };
 
-export const isTransition = (args) => <AcceptTermsSubscription {...args} />;
+export const IsTransition = (args) => <AcceptTermsSubscription {...args} />;
 
-isTransition.args = {
+IsTransition.args = {
 	isTransition: true,
 };
 
-export const transitionType = (args) => <AcceptTermsSubscription {...args} />;
+export const TransitionType = (args) => <AcceptTermsSubscription {...args} />;
 
-transitionType.args = {
+TransitionType.args = {
 	transitionType: true,
 };
 
-export const isDeferredBilling = (args) => (
+export const IsDeferredBilling = (args) => (
 	<AcceptTermsSubscription {...args} />
 );
 
-isDeferredBilling.args = {
+IsDeferredBilling.args = {
 	isDeferredBilling: true,
 };
