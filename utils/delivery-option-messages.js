@@ -28,7 +28,7 @@ const UKDeliveryOptions = {
 	PV: {
 		title: 'Paper vouchers',
 		description:
-			'13-week voucher pack delivered quarterly and redeemable at retailers nationwide. COVID-19 - make sure your preferred newsagent or retailer is open and/or delivering before you select this option.',
+			'13-week voucher pack delivered quarterly and redeemable at retailers nationwide.',
 	},
 	HD: {
 		title: 'Hand delivery',
