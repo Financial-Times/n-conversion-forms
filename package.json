@@ -95,7 +95,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "dotcom-tool-kit git:commitmsg",
-      "pre-commit": "dotcom-tool-kit git:precommit"
+      "pre-commit": "pretty-quick --staged && dotcom-tool-kit git:precommit"
     }
   },
   "peerDependencies": {
