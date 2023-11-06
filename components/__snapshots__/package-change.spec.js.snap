@@ -1,5 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`PackageChange annual render when is7DayPassExperiment is true 1`] = `
+<div class="ncf__package-change">
+  <div class="ncf__package-change__package">
+    <div class="ncf__package-change__content">
+      <p>
+        You have chosen
+        <span class="ncf__strong">
+          Trial
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`PackageChange annual render with defaults 1`] = `
 <div class="ncf__package-change">
   <div class="ncf__package-change__package">
