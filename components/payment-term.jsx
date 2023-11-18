@@ -16,12 +16,13 @@ export function PaymentTerm({
 	optionsInARow = false,
 	billingCountry = '',
 	is7DayPassExperiment = false,
+	isTermedSubscriptionTermType = false,
 }) {
 	/**
 	 * Compute monthly price for given term name
 	 * @param {number} amount price in number format
 	 * @param {string} currency country id of the currency
-	 * @param {string} period PxY (yearly) or PxM (montly) where x is the amount of years/months
+	 * @param {string} period (expressed in IS0 8601 duration format): PxY (yearly) or PxM (montly) where x is the amount of years/months
 	 * @returns {string}
 	 */
 	const getMontlyPriceFromPeriod = (amount, currency, period) => {
@@ -33,13 +34,22 @@ export function PaymentTerm({
 	/**
 	 * returns period converted to time if found
 	 * otherwise returns empty string to avoid show information not mapped
-	 * @param {string} period PxY (yearly) or PxM (montly) where x is the amount of years/months
+	 * @param {string} period (expressed in IS0 8601 duration format): PxY (yearly), PxM (montly), or PxW, where x is the amount of years/months/weeks
 	 * @returns {string}
 	 */
 	const getTimeFromPeriod = (period) => {
-		const freq =
-			period.substring(period.length - 1) === 'Y' ? 'years' : 'months';
+		const periodUnitCodeToWordMap = {
+			Y: 'years',
+			M: 'months',
+			W: 'weeks',
+		};
+
+		const periodUnitCode = period.substring(period.length - 1);
+
+		const freq = periodUnitCodeToWordMap[periodUnitCode] || '';
+
 		const amount = period.substring(1, period.length - 1);
+
 		return period ? `${amount} ${freq}` : '';
 	};
 
@@ -177,6 +187,7 @@ export function PaymentTerm({
 					</span>
 				),
 			renewsText: (renewalPeriod) =>
+				!isTermedSubscriptionTermType &&
 				Boolean(renewalPeriod) && (
 					<p className="ncf__payment-term__renews-text">
 						Renews every {renewalPeriod} unless cancelled
@@ -371,7 +382,7 @@ export function PaymentTerm({
 
 			{showLegal && (
 				<div className="ncf__payment-term__legal">
-					{isFixedTermOffer ? (
+					{isTermedSubscriptionTermType || isFixedTermOffer ? (
 						<p>
 							Find out more about our cancellation policy in our{' '}
 							<a
@@ -443,6 +454,7 @@ PaymentTerm.propTypes = {
 		})
 	),
 	isFixedTermOffer: PropTypes.bool,
+	isTermedSubscriptionTermType: PropTypes.bool,
 	offerDisplayName: PropTypes.string,
 	showLegal: PropTypes.bool,
 	largePrice: PropTypes.bool,

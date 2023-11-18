@@ -70,6 +70,17 @@ describe('AcceptTermsSubscription', () => {
 		expect(transitionTerms.exists()).toBe(true);
 	});
 
+	it('renders the transition terms when isTermedSubscriptionTermType prop is true', () => {
+		const props = {
+			isTermedSubscriptionTermType: true,
+		};
+
+		const component = mount(<AcceptTermsSubscription {...props} />);
+
+		const transitionTerms = component.find('.terms-transition');
+		expect(transitionTerms.exists()).toBe(true);
+	});
+
 	it('does not render the transition terms when transitionType prop is null', () => {
 		const props = {
 			transitionType: null,

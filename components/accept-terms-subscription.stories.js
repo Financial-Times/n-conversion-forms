@@ -30,6 +30,14 @@ IsSingleTerm.args = {
 	isSingleTerm: true,
 };
 
+export const TermedSubscriptionTermType = (args) => (
+	<AcceptTermsSubscription {...args} />
+);
+
+TermedSubscriptionTermType.args = {
+	isTermedSubscriptionTermType: true,
+};
+
 export const IsTransition = (args) => <AcceptTermsSubscription {...args} />;
 
 IsTransition.args = {

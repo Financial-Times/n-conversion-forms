@@ -129,6 +129,25 @@ SevenDayPassExperimentOffer.args = {
 	offerDisplayName: '7-day pass',
 };
 
+export const TermedSubscriptionTermType = (args) => (
+	<div className="ncf">
+		<Fieldset>
+			<PaymentTerm {...args} />
+		</Fieldset>
+	</div>
+);
+TermedSubscriptionTermType.args = {
+	options: [
+		{
+			name: '8 weeks',
+			price: '£19.00',
+			amount: '19.00',
+			value: 'P8W',
+		},
+	],
+	isTermedSubscriptionTermType: true,
+};
+
 export const RenewOffers = (args) => (
 	<div className="ncf">
 		<Fieldset>
