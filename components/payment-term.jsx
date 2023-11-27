@@ -22,7 +22,7 @@ export function PaymentTerm({
 	 * Compute monthly price for given term name
 	 * @param {number} amount price in number format
 	 * @param {string} currency country id of the currency
-	 * @param {string} period (expressed in IS0 8601 duration format): PxY (yearly) or PxM (montly) where x is the amount of years/months
+	 * @param {string} period (expressed in IS0 8601 duration format): e.g. PxY (yearly) or PxM (montly) where x is the amount of years/months
 	 * @returns {string}
 	 */
 	const getMontlyPriceFromPeriod = (amount, currency, period) => {
