@@ -70,6 +70,28 @@ describe('AcceptTermsSubscription', () => {
 		expect(transitionTerms.exists()).toBe(true);
 	});
 
+	it('renders the transition terms when isTermedSubscriptionTermType prop is true', () => {
+		const props = {
+			isTermedSubscriptionTermType: true,
+		};
+
+		const component = mount(<AcceptTermsSubscription {...props} />);
+
+		const transitionTerms1 = component.find('.terms-transition').at(0);
+		const transitionTerms2 = component.find('.terms-transition').at(1);
+		const transitionTerms3 = component.find('.terms-transition').at(2);
+
+		expect(transitionTerms1.text()).toEqual(
+			'I give consent for the chosen payment method to be charged automatically.'
+		);
+		expect(transitionTerms2.text()).toEqual(
+			'By placing your order subject to the Terms & Conditions (save for section 2) referred to below, you are waiving your statutory right to cancel our contract within 14 days of payment. Your payment is a one-time payment collected at the time of checkout, and unsubscribing or cancelling at any point (whether before or after the 14-day period) will not entitle you to a refund.'
+		);
+		expect(transitionTerms3.text()).toEqual(
+			'Please see here for the complete Terms & Conditions.'
+		);
+	});
+
 	it('does not render the transition terms when transitionType prop is null', () => {
 		const props = {
 			transitionType: null,
