@@ -185,28 +185,58 @@ describe('PaymentTerm', () => {
 	});
 
 	describe('given isTermedSubscriptionTermType is true', () => {
-		const options = [
-			{
-				name: '8 weeks',
-				price: '£19.00',
-				amount: '19.00',
-				value: 'P8W',
-			},
-		];
-		const wrapper = shallow(
-			<PaymentTerm options={options} isTermedSubscriptionTermType={true} />
-		);
-
-		it('renders subscription term as title', () => {
-			expect(wrapper.find('.ncf__payment-term__title').text()).toMatch(
-				'8 weeks'
+		describe('options include duration expressed in weeks', () => {
+			const options = [
+				{
+					price: '£19.00',
+					amount: '19.00',
+					value: 'P8W',
+				},
+			];
+			const wrapper = shallow(
+				<PaymentTerm options={options} isTermedSubscriptionTermType={true} />
 			);
+
+			it('renders subscription term as title', () => {
+				expect(wrapper.find('.ncf__payment-term__title').text()).toMatch(
+					'8 weeks'
+				);
+			});
+
+			it('renders description text that reflects that the termed subscription requires a single payment that expresses the per duration cost for shorter durations', () => {
+				expect(
+					wrapper.find('.ncf__payment-term__description').text()
+				).toContain(
+					'Single £19.00 paymentThat’s equivalent to GBP9.50 per month'
+				);
+			});
 		});
 
-		it('renders description text that reflects that the termed subscription requires a single payment that expresses the per duration cost for shorter durations', () => {
-			expect(wrapper.find('.ncf__payment-term__description').text()).toContain(
-				'Single £19.00 paymentThat’s equivalent to GBP9.50 per month'
+		describe('options include duration expressed in days', () => {
+			const options = [
+				{
+					price: '£30.00',
+					amount: '30.00',
+					value: 'P90D',
+				},
+			];
+			const wrapper = shallow(
+				<PaymentTerm options={options} isTermedSubscriptionTermType={true} />
 			);
+
+			it('renders subscription term as title', () => {
+				expect(wrapper.find('.ncf__payment-term__title').text()).toMatch(
+					'90 days'
+				);
+			});
+
+			it('renders description text that reflects that the termed subscription requires a single payment that expresses the per duration cost for shorter durations', () => {
+				expect(
+					wrapper.find('.ncf__payment-term__description').text()
+				).toContain(
+					'Single £30.00 paymentThat’s equivalent to GBP10.00 per month'
+				);
+			});
 		});
 	});
 
