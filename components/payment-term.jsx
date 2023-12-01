@@ -34,7 +34,7 @@ export function PaymentTerm({
 	/**
 	 * returns period converted to time if found
 	 * otherwise returns empty string to avoid show information not mapped
-	 * @param {string} period (expressed in IS0 8601 duration format): PxY (yearly), PxM (montly), or PxW, where x is the amount of years/months/weeks
+	 * @param {string} period (expressed in IS0 8601 duration format): PxY (yearly), PxM (montly), PxW (weekly), of PxD (daily), where x is the amount of years/months/weeks/days
 	 * @returns {string}
 	 */
 	const getTimeFromPeriod = (period) => {
@@ -42,6 +42,7 @@ export function PaymentTerm({
 			Y: 'years',
 			M: 'months',
 			W: 'weeks',
+			D: 'days',
 		};
 
 		const periodUnitCode = period.substring(period.length - 1);
