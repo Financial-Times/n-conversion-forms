@@ -7,22 +7,7 @@ const { Period } = require('@financial-times/n-pricing');
  *
  * // Return the currently selected payment term
  * paymentTerm.getSelected();
- *
- * // Update the payment term options displayed
- * const options = [{
- * 	name: 'Name of term',
- * 	value: 'Value to send',
- * 	description: 'Can contain <strong>HTML</strong>'
- * }];
- * paymentTerm.updateOptions(options);
  */
-
-const ITEM_CLASS = '.ncf__payment-term__item';
-const VALUE_CLASS = '.ncf__payment-term__item input';
-const PRICE_CLASS = '.ncf__payment-term__price';
-const TRIAL_PRICE_CLASS = '.ncf__payment-term__trial-price';
-const MONTHLY_PRICE_CLASS = '.ncf__payment-term__monthly-price';
-
 class PaymentTerm {
 	/**
 	 * Initalise the PaymentTerm utility
@@ -100,41 +85,6 @@ class PaymentTerm {
 			return true;
 		} catch (e) {
 			return false;
-		}
-	}
-
-	/**
-	 * Updates the payment term options.
-	 * @param {Object} options - indexed Object about Array of objects containing terms information. E.g.: { P1Y: {...}, P3M: {...}}
-	 * @throws Will throw an error if a payment term update is not found for a given value.
-	 */
-	updateOptions(options) {
-		const terms = this.$paymentTerm.querySelectorAll(ITEM_CLASS);
-		for (let i = 0; i < terms.length; i++) {
-			const term = terms[i];
-			const value = term.querySelector(VALUE_CLASS).value;
-			const price = term.querySelector(PRICE_CLASS);
-			const trialPrice = term.querySelector(TRIAL_PRICE_CLASS);
-			const monthlyPrice = term.querySelector(MONTHLY_PRICE_CLASS);
-			const update = options[value];
-
-			if (!update) {
-				throw new Error(`Payment term update not found for "${value}"`);
-			}
-
-			const baseAmount = update.isTrial ? update.trialAmount : update.amount;
-			term.setAttribute('data-base-amount', baseAmount);
-
-			// Update prices if they are found in the term
-			if (price) {
-				price.innerHTML = update.price;
-			}
-			if (trialPrice) {
-				trialPrice.innerHTML = update.trialPrice;
-			}
-			if (monthlyPrice && update.monthlyPrice) {
-				monthlyPrice.innerHTML = update.monthlyPrice;
-			}
 		}
 	}
 }

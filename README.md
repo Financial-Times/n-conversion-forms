@@ -225,16 +225,6 @@ const paymentTerm = new PaymentTerm(document);
 
 // Return the currently selected payment term
 paymentTerm.getSelected();
-
-// Update the payment term options displayed
-const options = [
-	{
-		name: 'Name of term',
-		value: 'Value to send',
-		description: 'Can contain <strong>HTML</strong>',
-	},
-];
-paymentTerm.updateOptions(options);
 ```
 
 Update and get the currently selected payment term on the form

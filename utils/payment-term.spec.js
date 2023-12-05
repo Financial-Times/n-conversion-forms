@@ -84,122 +84,26 @@ describe('PaymentTerm', () => {
 			});
 		});
 
-		describe('updateOptions', () => {
-			beforeEach(() => {
-				paymentTerm.getSelected = jest.fn().mockReturnValue(true);
-				elementStub.querySelector.mockReturnValue(elementStub);
-				elementStub.cloneNode.mockReturnValue(elementStub);
-				elementStub.querySelectorAll.mockReturnValue([elementStub]);
-			});
-
-			it('throws an error if not all terms have an update', () => {
+		describe('getBaseAmount', () => {
+			it('throws an error if nothing selected', () => {
+				elementStub.querySelector.mockReturnValue(false);
 				expect(() => {
-					paymentTerm.updateOptions({});
+					paymentTerm.getBaseAmount();
 				}).toThrow();
 			});
 
-			it('replaces the price with the correct updated price', () => {
-				const priceStub = {};
-				elementStub.querySelector.mockImplementation((elementId) => {
-					return elementId === '.ncf__payment-term__price'
-						? priceStub
-						: elementStub;
-				});
-				paymentTerm.updateOptions({
-					test: {
-						value: 'test',
-						price: '£1.01',
-					},
-				});
-				expect(priceStub.innerHTML).toEqual('£1.01');
+			it('returns base amount of the selected term', () => {
+				elementStub.dataset.baseAmount = 99;
+				elementStub.querySelector.mockReturnValue(elementStub);
+				const returnedAmount = paymentTerm.getBaseAmount();
+				expect(returnedAmount).toBe(99);
 			});
+		});
 
-			it('replaces the trial price with the correct updated trial price', () => {
-				const trialPriceStub = {};
-				elementStub.querySelector.mockImplementation((elementId) => {
-					return elementId === '.ncf__payment-term__trial-price'
-						? trialPriceStub
-						: elementStub;
-				});
-				paymentTerm.updateOptions({
-					test: {
-						value: 'test',
-						trialPrice: '£1.01',
-					},
-				});
-				expect(trialPriceStub.innerHTML).toEqual('£1.01');
-			});
-
-			it('replaces the monthly price with the correct updated monthly price', () => {
-				const monthlyPriceStub = {};
-				elementStub.querySelector.mockImplementation((elementId) => {
-					return elementId === '.ncf__payment-term__monthly-price'
-						? monthlyPriceStub
-						: elementStub;
-				});
-				paymentTerm.updateOptions({
-					test: {
-						value: 'test',
-						monthlyPrice: '£1.01',
-					},
-				});
-				expect(monthlyPriceStub.innerHTML).toEqual('£1.01');
-			});
-
-			describe('updating base amount', () => {
-				const updatedOptions = {
-					test: {
-						value: 'test',
-						monthlyPrice: '£1.01',
-						amount: 500,
-						trialAmount: 1,
-					},
-				};
-
-				beforeEach(() => {
-					elementStub.querySelector.mockReturnValue(elementStub);
-				});
-
-				it('replaces the base amount with the correct updated trial amount', () => {
-					updatedOptions.test.isTrial = true;
-					paymentTerm.updateOptions(updatedOptions);
-					expect(elementStub.setAttribute).toHaveBeenCalledWith(
-						'data-base-amount',
-						1
-					);
-				});
-
-				it('replaces the base amount with the correct updated amount', () => {
-					updatedOptions.test.isTrial = false;
-					paymentTerm.updateOptions(updatedOptions);
-					expect(elementStub.setAttribute).toHaveBeenCalledWith(
-						'data-base-amount',
-						500
-					);
-				});
-			});
-
-			describe('getBaseAmount', () => {
-				it('throws an error if nothing selected', () => {
-					elementStub.querySelector.mockReturnValue(false);
-					expect(() => {
-						paymentTerm.getBaseAmount();
-					}).toThrow();
-				});
-
-				it('returns base amount of the selected term', () => {
-					elementStub.dataset.baseAmount = 99;
-					elementStub.querySelector.mockReturnValue(elementStub);
-					const returnedAmount = paymentTerm.getBaseAmount();
-					expect(returnedAmount).toBe(99);
-				});
-			});
-
-			describe('getCountryCode', () => {
-				it('returns countryCode of the selected term', () => {
-					const countryCode = paymentTerm.getCountryCode();
-					expect(countryCode).toBe('GBP');
-				});
+		describe('getCountryCode', () => {
+			it('returns countryCode of the selected term', () => {
+				const countryCode = paymentTerm.getCountryCode();
+				expect(countryCode).toBe('GBP');
 			});
 		});
 	});
