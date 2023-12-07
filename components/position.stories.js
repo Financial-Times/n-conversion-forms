@@ -1,5 +1,8 @@
 import React from 'react';
 import { Position } from './position';
+import { demographics } from 'n-common-static-data';
+
+const positionsData = demographics.positions.positions;
 
 export default {
 	title: 'Position',
@@ -8,16 +11,5 @@ export default {
 
 export const Basic = (args) => <Position {...args} />;
 Basic.args = {
-	options: [
-		{
-			code: 'AN',
-			active: true,
-			description: 'Analyst',
-		},
-		{
-			code: 'AS',
-			active: true,
-			description: 'Associate',
-		},
-	],
+	options: positionsData,
 };
