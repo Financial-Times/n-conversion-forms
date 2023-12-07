@@ -68,14 +68,4 @@ describe('Position', () => {
 			component.find('.o-forms-title.o-forms-field--optional').length
 		).toEqual(1);
 	});
-
-	it('defaults to B2B options if isB2B is true', () => {
-		const props = { isB2B: true };
-		const component = mount(Position(props));
-
-		// Look for an option which is only present in the default B2B data set and not in the B2C one.
-		const optionValue = component.find('option').at(1).instance().value;
-
-		expect(optionValue).toBe('OW');
-	});
 });

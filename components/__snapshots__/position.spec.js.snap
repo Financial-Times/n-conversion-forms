@@ -22,8 +22,14 @@ exports[`Position can render a disable select 1`] = `
       <option value>
         Please select a job position
       </option>
+      <option value="BU">
+        Academic
+      </option>
       <option value="AN">
         Analyst
+      </option>
+      <option value="CS">
+        Consultant
       </option>
       <option value="AS">
         Associate
@@ -31,65 +37,47 @@ exports[`Position can render a disable select 1`] = `
       <option value="BR">
         Broker/Trader/Advisor
       </option>
-      <option value="BU">
-        Academic
-      </option>
       <option value="CP">
         CEO/President/Chairperson
-      </option>
-      <option value="CS">
-        Consultant
       </option>
       <option value="CL">
         C-Suite
       </option>
+      <option value="DR">
+        Director
+      </option>
       <option value="GI">
         Diplomat/Sen Govt Officer
-      </option>
-      <option value="OE">
-        Executive Management
-      </option>
-      <option value="GI">
-        Gov&#x27;t/Int&#x27;l org official
       </option>
       <option value="IN">
         Intern/Trainee/Student
       </option>
-      <option value="DH">
-        VP/Director
+      <option value="MA">
+        Manager/Supervisor
       </option>
       <option value="MB">
         MBA Student
       </option>
-      <option value="MA">
-        Manager/Supervisor
-      </option>
       <option value="NW">
         Not working
+      </option>
+      <option value="OE">
+        Executive Management
       </option>
       <option value="OT">
         Other
       </option>
-      <option value="MD">
-        Other C Level (CFO/COO/CIO/CMO)
-      </option>
       <option value="OP">
         Founder/Owner
-      </option>
-      <option value="PO">
-        Politician/Government Minister
       </option>
       <option value="PA">
         Partner/Principal
       </option>
-      <option value="PR">
-        Professional
-      </option>
       <option value="PM">
         Programme/Project Manager
       </option>
-      <option value="SE">
-        Secretary/Treasurer
+      <option value="PO">
+        Politician/Government Minister
       </option>
       <option value="SM">
         Senior Manager/Dept Head
@@ -99,9 +87,6 @@ exports[`Position can render a disable select 1`] = `
       </option>
       <option value="VP">
         Vice President
-      </option>
-      <option value="DR">
-        Director
       </option>
     </select>
     <span class="o-forms-input__error">
@@ -132,8 +117,14 @@ exports[`Position can render an error message 1`] = `
       <option value>
         Please select a job position
       </option>
+      <option value="BU">
+        Academic
+      </option>
       <option value="AN">
         Analyst
+      </option>
+      <option value="CS">
+        Consultant
       </option>
       <option value="AS">
         Associate
@@ -141,65 +132,47 @@ exports[`Position can render an error message 1`] = `
       <option value="BR">
         Broker/Trader/Advisor
       </option>
-      <option value="BU">
-        Academic
-      </option>
       <option value="CP">
         CEO/President/Chairperson
-      </option>
-      <option value="CS">
-        Consultant
       </option>
       <option value="CL">
         C-Suite
       </option>
+      <option value="DR">
+        Director
+      </option>
       <option value="GI">
         Diplomat/Sen Govt Officer
-      </option>
-      <option value="OE">
-        Executive Management
-      </option>
-      <option value="GI">
-        Gov&#x27;t/Int&#x27;l org official
       </option>
       <option value="IN">
         Intern/Trainee/Student
       </option>
-      <option value="DH">
-        VP/Director
+      <option value="MA">
+        Manager/Supervisor
       </option>
       <option value="MB">
         MBA Student
       </option>
-      <option value="MA">
-        Manager/Supervisor
-      </option>
       <option value="NW">
         Not working
+      </option>
+      <option value="OE">
+        Executive Management
       </option>
       <option value="OT">
         Other
       </option>
-      <option value="MD">
-        Other C Level (CFO/COO/CIO/CMO)
-      </option>
       <option value="OP">
         Founder/Owner
-      </option>
-      <option value="PO">
-        Politician/Government Minister
       </option>
       <option value="PA">
         Partner/Principal
       </option>
-      <option value="PR">
-        Professional
-      </option>
       <option value="PM">
         Programme/Project Manager
       </option>
-      <option value="SE">
-        Secretary/Treasurer
+      <option value="PO">
+        Politician/Government Minister
       </option>
       <option value="SM">
         Senior Manager/Dept Head
@@ -209,9 +182,6 @@ exports[`Position can render an error message 1`] = `
       </option>
       <option value="VP">
         Vice President
-      </option>
-      <option value="DR">
-        Director
       </option>
     </select>
     <span class="o-forms-input__error">
@@ -242,8 +212,14 @@ exports[`Position can render an initial selected value 1`] = `
       <option value>
         Please select a job position
       </option>
+      <option value="BU">
+        Academic
+      </option>
       <option value="AN">
         Analyst
+      </option>
+      <option value="CS">
+        Consultant
       </option>
       <option value="AS">
         Associate
@@ -251,67 +227,49 @@ exports[`Position can render an initial selected value 1`] = `
       <option value="BR">
         Broker/Trader/Advisor
       </option>
-      <option value="BU">
-        Academic
-      </option>
       <option selected
               value="CP"
       >
         CEO/President/Chairperson
       </option>
-      <option value="CS">
-        Consultant
-      </option>
       <option value="CL">
         C-Suite
+      </option>
+      <option value="DR">
+        Director
       </option>
       <option value="GI">
         Diplomat/Sen Govt Officer
       </option>
-      <option value="OE">
-        Executive Management
-      </option>
-      <option value="GI">
-        Gov&#x27;t/Int&#x27;l org official
-      </option>
       <option value="IN">
         Intern/Trainee/Student
-      </option>
-      <option value="DH">
-        VP/Director
-      </option>
-      <option value="MB">
-        MBA Student
       </option>
       <option value="MA">
         Manager/Supervisor
       </option>
+      <option value="MB">
+        MBA Student
+      </option>
       <option value="NW">
         Not working
+      </option>
+      <option value="OE">
+        Executive Management
       </option>
       <option value="OT">
         Other
       </option>
-      <option value="MD">
-        Other C Level (CFO/COO/CIO/CMO)
-      </option>
       <option value="OP">
         Founder/Owner
-      </option>
-      <option value="PO">
-        Politician/Government Minister
       </option>
       <option value="PA">
         Partner/Principal
       </option>
-      <option value="PR">
-        Professional
-      </option>
       <option value="PM">
         Programme/Project Manager
       </option>
-      <option value="SE">
-        Secretary/Treasurer
+      <option value="PO">
+        Politician/Government Minister
       </option>
       <option value="SM">
         Senior Manager/Dept Head
@@ -321,9 +279,6 @@ exports[`Position can render an initial selected value 1`] = `
       </option>
       <option value="VP">
         Vice President
-      </option>
-      <option value="DR">
-        Director
       </option>
     </select>
     <span class="o-forms-input__error">
@@ -354,8 +309,14 @@ exports[`Position render a select with a label 1`] = `
       <option value>
         Please select a job position
       </option>
+      <option value="BU">
+        Academic
+      </option>
       <option value="AN">
         Analyst
+      </option>
+      <option value="CS">
+        Consultant
       </option>
       <option value="AS">
         Associate
@@ -363,65 +324,47 @@ exports[`Position render a select with a label 1`] = `
       <option value="BR">
         Broker/Trader/Advisor
       </option>
-      <option value="BU">
-        Academic
-      </option>
       <option value="CP">
         CEO/President/Chairperson
-      </option>
-      <option value="CS">
-        Consultant
       </option>
       <option value="CL">
         C-Suite
       </option>
+      <option value="DR">
+        Director
+      </option>
       <option value="GI">
         Diplomat/Sen Govt Officer
-      </option>
-      <option value="OE">
-        Executive Management
-      </option>
-      <option value="GI">
-        Gov&#x27;t/Int&#x27;l org official
       </option>
       <option value="IN">
         Intern/Trainee/Student
       </option>
-      <option value="DH">
-        VP/Director
+      <option value="MA">
+        Manager/Supervisor
       </option>
       <option value="MB">
         MBA Student
       </option>
-      <option value="MA">
-        Manager/Supervisor
-      </option>
       <option value="NW">
         Not working
+      </option>
+      <option value="OE">
+        Executive Management
       </option>
       <option value="OT">
         Other
       </option>
-      <option value="MD">
-        Other C Level (CFO/COO/CIO/CMO)
-      </option>
       <option value="OP">
         Founder/Owner
-      </option>
-      <option value="PO">
-        Politician/Government Minister
       </option>
       <option value="PA">
         Partner/Principal
       </option>
-      <option value="PR">
-        Professional
-      </option>
       <option value="PM">
         Programme/Project Manager
       </option>
-      <option value="SE">
-        Secretary/Treasurer
+      <option value="PO">
+        Politician/Government Minister
       </option>
       <option value="SM">
         Senior Manager/Dept Head
@@ -431,9 +374,6 @@ exports[`Position render a select with a label 1`] = `
       </option>
       <option value="VP">
         Vice President
-      </option>
-      <option value="DR">
-        Director
       </option>
     </select>
     <span class="o-forms-input__error">
