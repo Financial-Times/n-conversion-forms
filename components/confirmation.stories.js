@@ -64,3 +64,21 @@ Basic.args = {
 	nextActionBottom,
 	newsletterScheduleExplainer,
 };
+
+export const TermedSubscriptionTermType = (args) => <Confirmation {...args} />;
+TermedSubscriptionTermType.args = {
+	isTermedSubscriptionTermType: true,
+	offer: 'Single-term subscription',
+	details: [
+		{
+			title: 'End date',
+			data: 'February 2, 2024',
+		},
+		{
+			title: 'One-time payment',
+			data: 'GBP 19.00',
+		},
+	],
+	nextActionTop,
+	nextActionBottom,
+};

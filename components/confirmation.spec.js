@@ -29,6 +29,12 @@ describe('Confirmation', () => {
 		expect(Confirmation).toRenderCorrectly(props);
 	});
 
+	it("renders appropriately if is 'Termed' subscription term type", () => {
+		const props = { isTermedSubscriptionTermType: true };
+
+		expect(Confirmation).toRenderCorrectly(props);
+	});
+
 	it('renders with custom email', () => {
 		const props = { offer: OFFER_TEXT, email: 'test@example.com' };
 

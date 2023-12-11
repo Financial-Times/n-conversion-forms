@@ -8,6 +8,7 @@ export function Confirmation({
 	isTrial = false,
 	isB2cPartnership = false,
 	b2cPartnershipCopy = [],
+	isTermedSubscriptionTermType = false,
 	offer = '',
 	email = EMAIL_DEFAULT_TEXT,
 	details = null,
@@ -116,8 +117,12 @@ export function Confirmation({
 				</p>
 			</div>
 			<p className="ncf__paragraph">
-				We will automatically renew your subscription using the payment method
-				provided unless you cancel before your renewal date. See our{' '}
+				{
+					!isTermedSubscriptionTermType
+						? 'We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. '
+						: ''
+				}
+				{'See our '}
 				<a
 					className="ncf__link ncf__link--external"
 					href="http://help.ft.com/help/legal-privacy/terms-conditions/"
@@ -125,10 +130,9 @@ export function Confirmation({
 					rel="noopener"
 				>
 					Terms &amp; Conditions
-				</a>{' '}
-				for details on how to cancel.
+				</a>
+				{' for details on how to cancel.'}
 			</p>
-
 			{nextActionBottom}
 		</div>
 	);
@@ -138,6 +142,7 @@ Confirmation.propTypes = {
 	isTrial: PropTypes.bool,
 	isB2cPartnership: PropTypes.bool,
 	b2cPartnershipCopy: PropTypes.array,
+	isTermedSubscriptionTermType: PropTypes.bool,
 	offer: PropTypes.string.isRequired,
 	email: PropTypes.string,
 	details: PropTypes.arrayOf(
