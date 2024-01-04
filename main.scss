@@ -20,7 +20,6 @@
 @import './styles/forms-additional-field-information';
 @import './styles/error';
 @import './styles/graduation-date';
-@import './styles/lite-subs-confirmation';
 @import './styles/google-sign-in';
 @import './styles/confirmation';
 
@@ -448,7 +447,6 @@
 	@include ncfCustomerCarePanel();
 	@include ncfAcceptTermsList();
 	@include ncfGraduationDate();
-	@include ncfLiteSubsConfirmation();
 	@include ncfConfirmation();
 
 	&__hidden {
