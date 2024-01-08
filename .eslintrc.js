@@ -1,7 +1,7 @@
 module.exports = {
 	extends: [
         "@financial-times/eslint-config-next",
-        "prettier",
+        "plugin:prettier/recommended",
         "plugin:storybook/recommended"
     ],
 	rules: {

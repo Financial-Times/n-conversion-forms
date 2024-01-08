@@ -95,16 +95,18 @@ export function AcceptTermsSubscription({
 				<ul className="o-typography-list ncf__accept-terms-list">
 					<li>
 						<span className="terms-transition terms-transition--immediate">
-							I give consent for the chosen payment method to be charged automatically.
+							I give consent for the chosen payment method to be charged
+							automatically.
 						</span>
 					</li>
 					<li>
 						<span className="terms-transition terms-transition--immediate">
-							By placing your order subject to the Terms & Conditions (save for section 2) referred to
-							below, you are waiving your statutory right to cancel our contract within 14 days of
-							payment. Your payment is a one-time payment collected at the time of checkout, and
-							unsubscribing or cancelling at any point (whether before or after the 14-day period)
-							will not entitle you to a refund.
+							By placing your order subject to the Terms & Conditions (save for
+							section 2) referred to below, you are waiving your statutory right
+							to cancel our contract within 14 days of payment. Your payment is
+							a one-time payment collected at the time of checkout, and
+							unsubscribing or cancelling at any point (whether before or after
+							the 14-day period) will not entitle you to a refund.
 						</span>
 					</li>
 					<li>

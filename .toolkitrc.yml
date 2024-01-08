@@ -4,9 +4,9 @@ plugins:
   - "@dotcom-tool-kit/jest"
   - "@dotcom-tool-kit/eslint"
   - "@dotcom-tool-kit/prettier"
-  - "@dotcom-tool-kit/lint-staged"
+  - "@dotcom-tool-kit/lint-staged-npm"
   - "@dotcom-tool-kit/husky-npm"
-  - './toolkit/run-storybook'
+  - "./toolkit/run-storybook"
 hooks:
   test:local:
     - Eslint
@@ -15,10 +15,16 @@ hooks:
     - Eslint
     - JestCI
   run:local:
-   - RunStorybook
+    - RunStorybook
 options:
   "@dotcom-tool-kit/circleci":
     nodeVersion: 18.17-browsers
   "@dotcom-tool-kit/babel":
     files: "components/{*.jsx,index.js}"
     outputPath: dist
+  "@dotcom-tool-kit/lint-staged-npm":
+    testGlob: "**/*.{js,jsx,json,scss}"
+    formatGlob: "**/*.{js,jsx,json,scss}"
+  "@dotcom-tool-kit/prettier":
+    files: ["**/*.{js,jsx,json,scss}"]
+    configFile: ".prettierrc.js"

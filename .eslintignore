@@ -2,5 +2,9 @@
 /dist
 /.eslintrc.js
 /public
-secret-squirrel.js
-secret-squirrel.cjs
+package-lock.json
+*.json
+*.sh
+.*
+*.feature
+/docs
