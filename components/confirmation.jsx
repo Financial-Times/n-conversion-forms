@@ -117,11 +117,9 @@ export function Confirmation({
 				</p>
 			</div>
 			<p className="ncf__paragraph">
-				{
-					!isTermedSubscriptionTermType
-						? 'We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. '
-						: ''
-				}
+				{!isTermedSubscriptionTermType
+					? 'We will automatically renew your subscription using the payment method provided unless you cancel before your renewal date. '
+					: ''}
 				{'See our '}
 				<a
 					className="ncf__link ncf__link--external"

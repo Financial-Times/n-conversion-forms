@@ -11,6 +11,7 @@ node_modules
 
 /coverage
 /pa11y-screen-capture
+/docs
 
 *.json
 *.sh
