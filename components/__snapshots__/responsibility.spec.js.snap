@@ -22,32 +22,65 @@ exports[`Responsibility can render a disable select 1`] = `
       <option value>
         Please select a job responsibility
       </option>
-      <option value="FIN">
-        Accounting/finance
+      <option value="ACC">
+        Accounting
       </option>
       <option value="ADL">
         Administration
       </option>
+      <option value="ANL">
+        Analyst
+      </option>
+      <option value="ART">
+        Arts &amp; design
+      </option>
       <option value="RES">
         Broker/trader
       </option>
-      <option value="BUY">
-        Buying/procurement
+      <option value="COM">
+        Community &amp; social services
+      </option>
+      <option value="COS">
+        Consulting
+      </option>
+      <option value="RAD">
+        Data &amp; Analytics
+      </option>
+      <option value="ENG">
+        Engineering
+      </option>
+      <option value="ESG">
+        ESG (Env’tl, Social &amp; Corp. Governance)
       </option>
       <option value="EXP">
         Export/international sales
       </option>
+      <option value="FAC">
+        Facilities
+      </option>
+      <option value="FIN">
+        Finance
+      </option>
+      <option value="FNC">
+        Finance
+      </option>
+      <option value="IFA">
+        Financial Advisor
+      </option>
+      <option value="FUM">
+        Fund management
+      </option>
       <option value="CON">
         General management
       </option>
+      <option value="HEA">
+        Healthcare services
+      </option>
       <option value="PAT">
-        HR/Training
+        Human resources
       </option>
-      <option value="IFA">
-        IFA/financial adviser
-      </option>
-      <option value="ITC">
-        IT/computing
+      <option value="HUM">
+        Human resources
       </option>
       <option value="TEC">
         Information technology
@@ -55,17 +88,32 @@ exports[`Responsibility can render a disable select 1`] = `
       <option value="INS">
         Insurance
       </option>
+      <option value="PRI">
+        Investments
+      </option>
+      <option value="ITC">
+        IT/computing
+      </option>
       <option value="KNO">
-        Knowledge management
+        Knowledge &amp; information management
+      </option>
+      <option value="LEA">
+        Learning &amp; Development
       </option>
       <option value="LEG">
-        Legal/company secretarial
+        Legal
+      </option>
+      <option value="LGL">
+        Legal
       </option>
       <option value="MKT">
-        Marketing/communications/PR
+        Marketing
       </option>
-      <option value="MON">
-        Money/portfolio management
+      <option value="MAR">
+        Marketing
+      </option>
+      <option value="MED">
+        Media &amp; communication
       </option>
       <option value="OTH">
         N/A
@@ -76,29 +124,50 @@ exports[`Responsibility can render a disable select 1`] = `
       <option value="OPS">
         Operations
       </option>
-      <option value="PRI">
-        Private Investor
+      <option value="POL">
+        Policy making
+      </option>
+      <option value="MON">
+        Portfolio management
       </option>
       <option value="PRO">
-        Product mgmt/development
+        Product management
       </option>
-      <option value="RAD">
-        Research/analysis
+      <option value="PMN">
+        Program and project management
+      </option>
+      <option value="BUY">
+        Purchasing &amp; procurement
+      </option>
+      <option value="QUA">
+        Quantitative Analysis
+      </option>
+      <option value="REA">
+        Real Estate
+      </option>
+      <option value="RSR">
+        Research
       </option>
       <option value="RET">
         Retired
       </option>
       <option value="RSK">
-        Risk management/compliance
+        Risk &amp; compliance
       </option>
       <option value="SAL">
-        Sales/business development
+        Sales &amp; business development
       </option>
       <option value="CPL">
-        Strategy/planning
+        Strategy
       </option>
       <option value="STU">
         Student
+      </option>
+      <option value="SUP">
+        Support
+      </option>
+      <option value="TEA">
+        Teaching &amp; training
       </option>
       <option value="TEL">
         Telecommunications
@@ -132,32 +201,65 @@ exports[`Responsibility can render an error message 1`] = `
       <option value>
         Please select a job responsibility
       </option>
-      <option value="FIN">
-        Accounting/finance
+      <option value="ACC">
+        Accounting
       </option>
       <option value="ADL">
         Administration
       </option>
+      <option value="ANL">
+        Analyst
+      </option>
+      <option value="ART">
+        Arts &amp; design
+      </option>
       <option value="RES">
         Broker/trader
       </option>
-      <option value="BUY">
-        Buying/procurement
+      <option value="COM">
+        Community &amp; social services
+      </option>
+      <option value="COS">
+        Consulting
+      </option>
+      <option value="RAD">
+        Data &amp; Analytics
+      </option>
+      <option value="ENG">
+        Engineering
+      </option>
+      <option value="ESG">
+        ESG (Env’tl, Social &amp; Corp. Governance)
       </option>
       <option value="EXP">
         Export/international sales
       </option>
+      <option value="FAC">
+        Facilities
+      </option>
+      <option value="FIN">
+        Finance
+      </option>
+      <option value="FNC">
+        Finance
+      </option>
+      <option value="IFA">
+        Financial Advisor
+      </option>
+      <option value="FUM">
+        Fund management
+      </option>
       <option value="CON">
         General management
       </option>
+      <option value="HEA">
+        Healthcare services
+      </option>
       <option value="PAT">
-        HR/Training
+        Human resources
       </option>
-      <option value="IFA">
-        IFA/financial adviser
-      </option>
-      <option value="ITC">
-        IT/computing
+      <option value="HUM">
+        Human resources
       </option>
       <option value="TEC">
         Information technology
@@ -165,17 +267,32 @@ exports[`Responsibility can render an error message 1`] = `
       <option value="INS">
         Insurance
       </option>
+      <option value="PRI">
+        Investments
+      </option>
+      <option value="ITC">
+        IT/computing
+      </option>
       <option value="KNO">
-        Knowledge management
+        Knowledge &amp; information management
+      </option>
+      <option value="LEA">
+        Learning &amp; Development
       </option>
       <option value="LEG">
-        Legal/company secretarial
+        Legal
+      </option>
+      <option value="LGL">
+        Legal
       </option>
       <option value="MKT">
-        Marketing/communications/PR
+        Marketing
       </option>
-      <option value="MON">
-        Money/portfolio management
+      <option value="MAR">
+        Marketing
+      </option>
+      <option value="MED">
+        Media &amp; communication
       </option>
       <option value="OTH">
         N/A
@@ -186,29 +303,50 @@ exports[`Responsibility can render an error message 1`] = `
       <option value="OPS">
         Operations
       </option>
-      <option value="PRI">
-        Private Investor
+      <option value="POL">
+        Policy making
+      </option>
+      <option value="MON">
+        Portfolio management
       </option>
       <option value="PRO">
-        Product mgmt/development
+        Product management
       </option>
-      <option value="RAD">
-        Research/analysis
+      <option value="PMN">
+        Program and project management
+      </option>
+      <option value="BUY">
+        Purchasing &amp; procurement
+      </option>
+      <option value="QUA">
+        Quantitative Analysis
+      </option>
+      <option value="REA">
+        Real Estate
+      </option>
+      <option value="RSR">
+        Research
       </option>
       <option value="RET">
         Retired
       </option>
       <option value="RSK">
-        Risk management/compliance
+        Risk &amp; compliance
       </option>
       <option value="SAL">
-        Sales/business development
+        Sales &amp; business development
       </option>
       <option value="CPL">
-        Strategy/planning
+        Strategy
       </option>
       <option value="STU">
         Student
+      </option>
+      <option value="SUP">
+        Support
+      </option>
+      <option value="TEA">
+        Teaching &amp; training
       </option>
       <option value="TEL">
         Telecommunications
@@ -242,34 +380,67 @@ exports[`Responsibility can render an initial selected value 1`] = `
       <option value>
         Please select a job responsibility
       </option>
-      <option selected
-              value="FIN"
-      >
-        Accounting/finance
+      <option value="ACC">
+        Accounting
       </option>
       <option value="ADL">
         Administration
       </option>
+      <option value="ANL">
+        Analyst
+      </option>
+      <option value="ART">
+        Arts &amp; design
+      </option>
       <option value="RES">
         Broker/trader
       </option>
-      <option value="BUY">
-        Buying/procurement
+      <option value="COM">
+        Community &amp; social services
+      </option>
+      <option value="COS">
+        Consulting
+      </option>
+      <option value="RAD">
+        Data &amp; Analytics
+      </option>
+      <option value="ENG">
+        Engineering
+      </option>
+      <option value="ESG">
+        ESG (Env’tl, Social &amp; Corp. Governance)
       </option>
       <option value="EXP">
         Export/international sales
       </option>
+      <option value="FAC">
+        Facilities
+      </option>
+      <option selected
+              value="FIN"
+      >
+        Finance
+      </option>
+      <option value="FNC">
+        Finance
+      </option>
+      <option value="IFA">
+        Financial Advisor
+      </option>
+      <option value="FUM">
+        Fund management
+      </option>
       <option value="CON">
         General management
       </option>
+      <option value="HEA">
+        Healthcare services
+      </option>
       <option value="PAT">
-        HR/Training
+        Human resources
       </option>
-      <option value="IFA">
-        IFA/financial adviser
-      </option>
-      <option value="ITC">
-        IT/computing
+      <option value="HUM">
+        Human resources
       </option>
       <option value="TEC">
         Information technology
@@ -277,17 +448,32 @@ exports[`Responsibility can render an initial selected value 1`] = `
       <option value="INS">
         Insurance
       </option>
+      <option value="PRI">
+        Investments
+      </option>
+      <option value="ITC">
+        IT/computing
+      </option>
       <option value="KNO">
-        Knowledge management
+        Knowledge &amp; information management
+      </option>
+      <option value="LEA">
+        Learning &amp; Development
       </option>
       <option value="LEG">
-        Legal/company secretarial
+        Legal
+      </option>
+      <option value="LGL">
+        Legal
       </option>
       <option value="MKT">
-        Marketing/communications/PR
+        Marketing
       </option>
-      <option value="MON">
-        Money/portfolio management
+      <option value="MAR">
+        Marketing
+      </option>
+      <option value="MED">
+        Media &amp; communication
       </option>
       <option value="OTH">
         N/A
@@ -298,29 +484,50 @@ exports[`Responsibility can render an initial selected value 1`] = `
       <option value="OPS">
         Operations
       </option>
-      <option value="PRI">
-        Private Investor
+      <option value="POL">
+        Policy making
+      </option>
+      <option value="MON">
+        Portfolio management
       </option>
       <option value="PRO">
-        Product mgmt/development
+        Product management
       </option>
-      <option value="RAD">
-        Research/analysis
+      <option value="PMN">
+        Program and project management
+      </option>
+      <option value="BUY">
+        Purchasing &amp; procurement
+      </option>
+      <option value="QUA">
+        Quantitative Analysis
+      </option>
+      <option value="REA">
+        Real Estate
+      </option>
+      <option value="RSR">
+        Research
       </option>
       <option value="RET">
         Retired
       </option>
       <option value="RSK">
-        Risk management/compliance
+        Risk &amp; compliance
       </option>
       <option value="SAL">
-        Sales/business development
+        Sales &amp; business development
       </option>
       <option value="CPL">
-        Strategy/planning
+        Strategy
       </option>
       <option value="STU">
         Student
+      </option>
+      <option value="SUP">
+        Support
+      </option>
+      <option value="TEA">
+        Teaching &amp; training
       </option>
       <option value="TEL">
         Telecommunications
@@ -354,32 +561,65 @@ exports[`Responsibility render a select with a label 1`] = `
       <option value>
         Please select a job responsibility
       </option>
-      <option value="FIN">
-        Accounting/finance
+      <option value="ACC">
+        Accounting
       </option>
       <option value="ADL">
         Administration
       </option>
+      <option value="ANL">
+        Analyst
+      </option>
+      <option value="ART">
+        Arts &amp; design
+      </option>
       <option value="RES">
         Broker/trader
       </option>
-      <option value="BUY">
-        Buying/procurement
+      <option value="COM">
+        Community &amp; social services
+      </option>
+      <option value="COS">
+        Consulting
+      </option>
+      <option value="RAD">
+        Data &amp; Analytics
+      </option>
+      <option value="ENG">
+        Engineering
+      </option>
+      <option value="ESG">
+        ESG (Env’tl, Social &amp; Corp. Governance)
       </option>
       <option value="EXP">
         Export/international sales
       </option>
+      <option value="FAC">
+        Facilities
+      </option>
+      <option value="FIN">
+        Finance
+      </option>
+      <option value="FNC">
+        Finance
+      </option>
+      <option value="IFA">
+        Financial Advisor
+      </option>
+      <option value="FUM">
+        Fund management
+      </option>
       <option value="CON">
         General management
       </option>
+      <option value="HEA">
+        Healthcare services
+      </option>
       <option value="PAT">
-        HR/Training
+        Human resources
       </option>
-      <option value="IFA">
-        IFA/financial adviser
-      </option>
-      <option value="ITC">
-        IT/computing
+      <option value="HUM">
+        Human resources
       </option>
       <option value="TEC">
         Information technology
@@ -387,17 +627,32 @@ exports[`Responsibility render a select with a label 1`] = `
       <option value="INS">
         Insurance
       </option>
+      <option value="PRI">
+        Investments
+      </option>
+      <option value="ITC">
+        IT/computing
+      </option>
       <option value="KNO">
-        Knowledge management
+        Knowledge &amp; information management
+      </option>
+      <option value="LEA">
+        Learning &amp; Development
       </option>
       <option value="LEG">
-        Legal/company secretarial
+        Legal
+      </option>
+      <option value="LGL">
+        Legal
       </option>
       <option value="MKT">
-        Marketing/communications/PR
+        Marketing
       </option>
-      <option value="MON">
-        Money/portfolio management
+      <option value="MAR">
+        Marketing
+      </option>
+      <option value="MED">
+        Media &amp; communication
       </option>
       <option value="OTH">
         N/A
@@ -408,29 +663,50 @@ exports[`Responsibility render a select with a label 1`] = `
       <option value="OPS">
         Operations
       </option>
-      <option value="PRI">
-        Private Investor
+      <option value="POL">
+        Policy making
+      </option>
+      <option value="MON">
+        Portfolio management
       </option>
       <option value="PRO">
-        Product mgmt/development
+        Product management
       </option>
-      <option value="RAD">
-        Research/analysis
+      <option value="PMN">
+        Program and project management
+      </option>
+      <option value="BUY">
+        Purchasing &amp; procurement
+      </option>
+      <option value="QUA">
+        Quantitative Analysis
+      </option>
+      <option value="REA">
+        Real Estate
+      </option>
+      <option value="RSR">
+        Research
       </option>
       <option value="RET">
         Retired
       </option>
       <option value="RSK">
-        Risk management/compliance
+        Risk &amp; compliance
       </option>
       <option value="SAL">
-        Sales/business development
+        Sales &amp; business development
       </option>
       <option value="CPL">
-        Strategy/planning
+        Strategy
       </option>
       <option value="STU">
         Student
+      </option>
+      <option value="SUP">
+        Support
+      </option>
+      <option value="TEA">
+        Teaching &amp; training
       </option>
       <option value="TEL">
         Telecommunications

@@ -5,6 +5,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "test": "dotcom-tool-kit test:local",
+    "test:update-snapshots": "NODE_ENV=test jest --updateSnapshot",
     "prepare": "snyk-protect || snyk-protect -d || true",
     "build": "npm run clean && dotcom-tool-kit build:local",
     "start": "dotcom-tool-kit run:local",
@@ -29,7 +30,7 @@
     "classnames": "2.3.2",
     "fetchres": "1.7.2",
     "lodash.get": "4.4.2",
-    "n-common-static-data": "github:Financial-Times/n-common-static-data#v2.2.0"
+    "n-common-static-data": "github:Financial-Times/n-common-static-data#v2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.22.15",

@@ -26,3 +26,6 @@ Basic.args = {
 		},
 	],
 };
+
+export const Default = (args) => <Responsibility {...args} />;
+Default.args = {};

@@ -28,26 +28,32 @@ exports[`Position can render a disable select 1`] = `
       <option value="AN">
         Analyst
       </option>
-      <option value="CS">
-        Consultant
-      </option>
       <option value="AS">
         Associate
       </option>
       <option value="BR">
         Broker/Trader/Advisor
       </option>
+      <option value="CL">
+        C-Suite
+      </option>
       <option value="CP">
         CEO/President/Chairperson
       </option>
-      <option value="CL">
-        C-Suite
+      <option value="CS">
+        Consultant
+      </option>
+      <option value="GI">
+        Diplomat/Sen Govt Officer
       </option>
       <option value="DR">
         Director
       </option>
-      <option value="GI">
-        Diplomat/Sen Govt Officer
+      <option value="OE">
+        Executive Management
+      </option>
+      <option value="OP">
+        Founder/Owner
       </option>
       <option value="IN">
         Intern/Trainee/Student
@@ -61,23 +67,17 @@ exports[`Position can render a disable select 1`] = `
       <option value="NW">
         Not working
       </option>
-      <option value="OE">
-        Executive Management
-      </option>
       <option value="OT">
         Other
-      </option>
-      <option value="OP">
-        Founder/Owner
       </option>
       <option value="PA">
         Partner/Principal
       </option>
-      <option value="PM">
-        Programme/Project Manager
-      </option>
       <option value="PO">
         Politician/Government Minister
+      </option>
+      <option value="PM">
+        Programme/Project Manager
       </option>
       <option value="SM">
         Senior Manager/Dept Head
@@ -123,26 +123,32 @@ exports[`Position can render an error message 1`] = `
       <option value="AN">
         Analyst
       </option>
-      <option value="CS">
-        Consultant
-      </option>
       <option value="AS">
         Associate
       </option>
       <option value="BR">
         Broker/Trader/Advisor
       </option>
+      <option value="CL">
+        C-Suite
+      </option>
       <option value="CP">
         CEO/President/Chairperson
       </option>
-      <option value="CL">
-        C-Suite
+      <option value="CS">
+        Consultant
+      </option>
+      <option value="GI">
+        Diplomat/Sen Govt Officer
       </option>
       <option value="DR">
         Director
       </option>
-      <option value="GI">
-        Diplomat/Sen Govt Officer
+      <option value="OE">
+        Executive Management
+      </option>
+      <option value="OP">
+        Founder/Owner
       </option>
       <option value="IN">
         Intern/Trainee/Student
@@ -156,23 +162,17 @@ exports[`Position can render an error message 1`] = `
       <option value="NW">
         Not working
       </option>
-      <option value="OE">
-        Executive Management
-      </option>
       <option value="OT">
         Other
-      </option>
-      <option value="OP">
-        Founder/Owner
       </option>
       <option value="PA">
         Partner/Principal
       </option>
-      <option value="PM">
-        Programme/Project Manager
-      </option>
       <option value="PO">
         Politician/Government Minister
+      </option>
+      <option value="PM">
+        Programme/Project Manager
       </option>
       <option value="SM">
         Senior Manager/Dept Head
@@ -218,28 +218,34 @@ exports[`Position can render an initial selected value 1`] = `
       <option value="AN">
         Analyst
       </option>
-      <option value="CS">
-        Consultant
-      </option>
       <option value="AS">
         Associate
       </option>
       <option value="BR">
         Broker/Trader/Advisor
       </option>
+      <option value="CL">
+        C-Suite
+      </option>
       <option selected
               value="CP"
       >
         CEO/President/Chairperson
       </option>
-      <option value="CL">
-        C-Suite
+      <option value="CS">
+        Consultant
+      </option>
+      <option value="GI">
+        Diplomat/Sen Govt Officer
       </option>
       <option value="DR">
         Director
       </option>
-      <option value="GI">
-        Diplomat/Sen Govt Officer
+      <option value="OE">
+        Executive Management
+      </option>
+      <option value="OP">
+        Founder/Owner
       </option>
       <option value="IN">
         Intern/Trainee/Student
@@ -253,23 +259,17 @@ exports[`Position can render an initial selected value 1`] = `
       <option value="NW">
         Not working
       </option>
-      <option value="OE">
-        Executive Management
-      </option>
       <option value="OT">
         Other
-      </option>
-      <option value="OP">
-        Founder/Owner
       </option>
       <option value="PA">
         Partner/Principal
       </option>
-      <option value="PM">
-        Programme/Project Manager
-      </option>
       <option value="PO">
         Politician/Government Minister
+      </option>
+      <option value="PM">
+        Programme/Project Manager
       </option>
       <option value="SM">
         Senior Manager/Dept Head
@@ -315,26 +315,32 @@ exports[`Position render a select with a label 1`] = `
       <option value="AN">
         Analyst
       </option>
-      <option value="CS">
-        Consultant
-      </option>
       <option value="AS">
         Associate
       </option>
       <option value="BR">
         Broker/Trader/Advisor
       </option>
+      <option value="CL">
+        C-Suite
+      </option>
       <option value="CP">
         CEO/President/Chairperson
       </option>
-      <option value="CL">
-        C-Suite
+      <option value="CS">
+        Consultant
+      </option>
+      <option value="GI">
+        Diplomat/Sen Govt Officer
       </option>
       <option value="DR">
         Director
       </option>
-      <option value="GI">
-        Diplomat/Sen Govt Officer
+      <option value="OE">
+        Executive Management
+      </option>
+      <option value="OP">
+        Founder/Owner
       </option>
       <option value="IN">
         Intern/Trainee/Student
@@ -348,23 +354,17 @@ exports[`Position render a select with a label 1`] = `
       <option value="NW">
         Not working
       </option>
-      <option value="OE">
-        Executive Management
-      </option>
       <option value="OT">
         Other
-      </option>
-      <option value="OP">
-        Founder/Owner
       </option>
       <option value="PA">
         Partner/Principal
       </option>
-      <option value="PM">
-        Programme/Project Manager
-      </option>
       <option value="PO">
         Politician/Government Minister
+      </option>
+      <option value="PM">
+        Programme/Project Manager
       </option>
       <option value="SM">
         Senior Manager/Dept Head
