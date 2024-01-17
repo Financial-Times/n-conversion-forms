@@ -13,3 +13,6 @@ Basic.args = {
 		{ code: 'COM', description: 'Computing' },
 	],
 };
+
+export const Default = (args) => <Industry {...args} />;
+Default.args = {};

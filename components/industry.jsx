@@ -26,6 +26,8 @@ export function Industry({
 		{ 'o-forms-field--optional': !isRequired },
 	]);
 
+	options.sort((a, b) => a.description.localeCompare(b.description));
+
 	return (
 		<label
 			id={fieldId}

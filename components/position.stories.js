@@ -21,3 +21,6 @@ Basic.args = {
 		},
 	],
 };
+
+export const Default = (args) => <Position {...args} />;
+Default.args = {};
