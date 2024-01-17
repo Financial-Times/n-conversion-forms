@@ -28,14 +28,8 @@ exports[`Responsibility can render a disable select 1`] = `
       <option value="ADL">
         Administration
       </option>
-      <option value="ANL">
-        Analyst
-      </option>
       <option value="ART">
         Arts &amp; design
-      </option>
-      <option value="RES">
-        Broker/trader
       </option>
       <option value="COM">
         Community &amp; social services
@@ -52,16 +46,10 @@ exports[`Responsibility can render a disable select 1`] = `
       <option value="ESG">
         ESG (Env’tl, Social &amp; Corp. Governance)
       </option>
-      <option value="EXP">
-        Export/international sales
-      </option>
       <option value="FAC">
         Facilities
       </option>
       <option value="FIN">
-        Finance
-      </option>
-      <option value="FNC">
         Finance
       </option>
       <option value="IFA">
@@ -70,29 +58,17 @@ exports[`Responsibility can render a disable select 1`] = `
       <option value="FUM">
         Fund management
       </option>
-      <option value="CON">
-        General management
-      </option>
       <option value="HEA">
         Healthcare services
       </option>
       <option value="PAT">
         Human resources
       </option>
-      <option value="HUM">
-        Human resources
-      </option>
       <option value="TEC">
         Information technology
       </option>
-      <option value="INS">
-        Insurance
-      </option>
       <option value="PRI">
         Investments
-      </option>
-      <option value="ITC">
-        IT/computing
       </option>
       <option value="KNO">
         Knowledge &amp; information management
@@ -103,20 +79,11 @@ exports[`Responsibility can render a disable select 1`] = `
       <option value="LEG">
         Legal
       </option>
-      <option value="LGL">
-        Legal
-      </option>
       <option value="MKT">
-        Marketing
-      </option>
-      <option value="MAR">
         Marketing
       </option>
       <option value="MED">
         Media &amp; communication
-      </option>
-      <option value="OTH">
-        N/A
       </option>
       <option value="NOT">
         Not working
@@ -148,9 +115,6 @@ exports[`Responsibility can render a disable select 1`] = `
       <option value="RSR">
         Research
       </option>
-      <option value="RET">
-        Retired
-      </option>
       <option value="RSK">
         Risk &amp; compliance
       </option>
@@ -168,9 +132,6 @@ exports[`Responsibility can render a disable select 1`] = `
       </option>
       <option value="TEA">
         Teaching &amp; training
-      </option>
-      <option value="TEL">
-        Telecommunications
       </option>
     </select>
     <span class="o-forms-input__error">
@@ -207,14 +168,8 @@ exports[`Responsibility can render an error message 1`] = `
       <option value="ADL">
         Administration
       </option>
-      <option value="ANL">
-        Analyst
-      </option>
       <option value="ART">
         Arts &amp; design
-      </option>
-      <option value="RES">
-        Broker/trader
       </option>
       <option value="COM">
         Community &amp; social services
@@ -231,16 +186,10 @@ exports[`Responsibility can render an error message 1`] = `
       <option value="ESG">
         ESG (Env’tl, Social &amp; Corp. Governance)
       </option>
-      <option value="EXP">
-        Export/international sales
-      </option>
       <option value="FAC">
         Facilities
       </option>
       <option value="FIN">
-        Finance
-      </option>
-      <option value="FNC">
         Finance
       </option>
       <option value="IFA">
@@ -249,29 +198,17 @@ exports[`Responsibility can render an error message 1`] = `
       <option value="FUM">
         Fund management
       </option>
-      <option value="CON">
-        General management
-      </option>
       <option value="HEA">
         Healthcare services
       </option>
       <option value="PAT">
         Human resources
       </option>
-      <option value="HUM">
-        Human resources
-      </option>
       <option value="TEC">
         Information technology
       </option>
-      <option value="INS">
-        Insurance
-      </option>
       <option value="PRI">
         Investments
-      </option>
-      <option value="ITC">
-        IT/computing
       </option>
       <option value="KNO">
         Knowledge &amp; information management
@@ -282,20 +219,11 @@ exports[`Responsibility can render an error message 1`] = `
       <option value="LEG">
         Legal
       </option>
-      <option value="LGL">
-        Legal
-      </option>
       <option value="MKT">
-        Marketing
-      </option>
-      <option value="MAR">
         Marketing
       </option>
       <option value="MED">
         Media &amp; communication
-      </option>
-      <option value="OTH">
-        N/A
       </option>
       <option value="NOT">
         Not working
@@ -327,9 +255,6 @@ exports[`Responsibility can render an error message 1`] = `
       <option value="RSR">
         Research
       </option>
-      <option value="RET">
-        Retired
-      </option>
       <option value="RSK">
         Risk &amp; compliance
       </option>
@@ -347,9 +272,6 @@ exports[`Responsibility can render an error message 1`] = `
       </option>
       <option value="TEA">
         Teaching &amp; training
-      </option>
-      <option value="TEL">
-        Telecommunications
       </option>
     </select>
     <span class="o-forms-input__error">
@@ -386,14 +308,8 @@ exports[`Responsibility can render an initial selected value 1`] = `
       <option value="ADL">
         Administration
       </option>
-      <option value="ANL">
-        Analyst
-      </option>
       <option value="ART">
         Arts &amp; design
-      </option>
-      <option value="RES">
-        Broker/trader
       </option>
       <option value="COM">
         Community &amp; social services
@@ -410,9 +326,6 @@ exports[`Responsibility can render an initial selected value 1`] = `
       <option value="ESG">
         ESG (Env’tl, Social &amp; Corp. Governance)
       </option>
-      <option value="EXP">
-        Export/international sales
-      </option>
       <option value="FAC">
         Facilities
       </option>
@@ -421,17 +334,11 @@ exports[`Responsibility can render an initial selected value 1`] = `
       >
         Finance
       </option>
-      <option value="FNC">
-        Finance
-      </option>
       <option value="IFA">
         Financial Advisor
       </option>
       <option value="FUM">
         Fund management
-      </option>
-      <option value="CON">
-        General management
       </option>
       <option value="HEA">
         Healthcare services
@@ -439,20 +346,11 @@ exports[`Responsibility can render an initial selected value 1`] = `
       <option value="PAT">
         Human resources
       </option>
-      <option value="HUM">
-        Human resources
-      </option>
       <option value="TEC">
         Information technology
       </option>
-      <option value="INS">
-        Insurance
-      </option>
       <option value="PRI">
         Investments
-      </option>
-      <option value="ITC">
-        IT/computing
       </option>
       <option value="KNO">
         Knowledge &amp; information management
@@ -463,20 +361,11 @@ exports[`Responsibility can render an initial selected value 1`] = `
       <option value="LEG">
         Legal
       </option>
-      <option value="LGL">
-        Legal
-      </option>
       <option value="MKT">
-        Marketing
-      </option>
-      <option value="MAR">
         Marketing
       </option>
       <option value="MED">
         Media &amp; communication
-      </option>
-      <option value="OTH">
-        N/A
       </option>
       <option value="NOT">
         Not working
@@ -508,9 +397,6 @@ exports[`Responsibility can render an initial selected value 1`] = `
       <option value="RSR">
         Research
       </option>
-      <option value="RET">
-        Retired
-      </option>
       <option value="RSK">
         Risk &amp; compliance
       </option>
@@ -528,9 +414,6 @@ exports[`Responsibility can render an initial selected value 1`] = `
       </option>
       <option value="TEA">
         Teaching &amp; training
-      </option>
-      <option value="TEL">
-        Telecommunications
       </option>
     </select>
     <span class="o-forms-input__error">
@@ -567,14 +450,8 @@ exports[`Responsibility render a select with a label 1`] = `
       <option value="ADL">
         Administration
       </option>
-      <option value="ANL">
-        Analyst
-      </option>
       <option value="ART">
         Arts &amp; design
-      </option>
-      <option value="RES">
-        Broker/trader
       </option>
       <option value="COM">
         Community &amp; social services
@@ -591,16 +468,10 @@ exports[`Responsibility render a select with a label 1`] = `
       <option value="ESG">
         ESG (Env’tl, Social &amp; Corp. Governance)
       </option>
-      <option value="EXP">
-        Export/international sales
-      </option>
       <option value="FAC">
         Facilities
       </option>
       <option value="FIN">
-        Finance
-      </option>
-      <option value="FNC">
         Finance
       </option>
       <option value="IFA">
@@ -609,29 +480,17 @@ exports[`Responsibility render a select with a label 1`] = `
       <option value="FUM">
         Fund management
       </option>
-      <option value="CON">
-        General management
-      </option>
       <option value="HEA">
         Healthcare services
       </option>
       <option value="PAT">
         Human resources
       </option>
-      <option value="HUM">
-        Human resources
-      </option>
       <option value="TEC">
         Information technology
       </option>
-      <option value="INS">
-        Insurance
-      </option>
       <option value="PRI">
         Investments
-      </option>
-      <option value="ITC">
-        IT/computing
       </option>
       <option value="KNO">
         Knowledge &amp; information management
@@ -642,20 +501,11 @@ exports[`Responsibility render a select with a label 1`] = `
       <option value="LEG">
         Legal
       </option>
-      <option value="LGL">
-        Legal
-      </option>
       <option value="MKT">
-        Marketing
-      </option>
-      <option value="MAR">
         Marketing
       </option>
       <option value="MED">
         Media &amp; communication
-      </option>
-      <option value="OTH">
-        N/A
       </option>
       <option value="NOT">
         Not working
@@ -687,9 +537,6 @@ exports[`Responsibility render a select with a label 1`] = `
       <option value="RSR">
         Research
       </option>
-      <option value="RET">
-        Retired
-      </option>
       <option value="RSK">
         Risk &amp; compliance
       </option>
@@ -707,9 +554,6 @@ exports[`Responsibility render a select with a label 1`] = `
       </option>
       <option value="TEA">
         Teaching &amp; training
-      </option>
-      <option value="TEL">
-        Telecommunications
       </option>
     </select>
     <span class="o-forms-input__error">
