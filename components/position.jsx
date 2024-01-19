@@ -71,7 +71,6 @@ Position.propTypes = {
 	fieldId: PropTypes.string,
 	selectId: PropTypes.string,
 	selectName: PropTypes.string,
-	isB2B: PropTypes.bool,
 	options: PropTypes.arrayOf(
 		PropTypes.shape({
 			code: PropTypes.string,
