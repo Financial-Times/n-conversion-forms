@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { b2b, demographics } from 'n-common-static-data';
-const B2CResponsibilities = demographics.responsibilities.responsibilities;
-const B2BResponsibilities = b2b.demographics.responsibilities.responsibilities;
+import { demographics } from 'n-common-static-data';
 
 export function Responsibility({
 	value,
@@ -13,8 +11,7 @@ export function Responsibility({
 	fieldId = 'responsibilityField',
 	selectId = 'responsibility',
 	selectName = 'responsibility',
-	isB2B = false,
-	options = isB2B ? B2BResponsibilities : B2CResponsibilities,
+	options = demographics.responsibilities.responsibilities,
 	fieldLabel = 'Which best describes your job responsibility?',
 }) {
 	const inputWrapperClassName = classNames([
@@ -76,7 +73,6 @@ Responsibility.propTypes = {
 	fieldId: PropTypes.string,
 	selectId: PropTypes.string,
 	selectName: PropTypes.string,
-	isB2B: PropTypes.bool,
 	options: PropTypes.arrayOf(
 		PropTypes.shape({
 			code: PropTypes.string,
