@@ -261,7 +261,7 @@ describe('PaymentTerm', () => {
 				);
 			});
 		});
-		describe('getDisplayName', () => {
+		describe('getDisplayName trial', () => {
 			const trialOptions = {
 				...baseOptions,
 				isTrial: true,
@@ -275,10 +275,15 @@ describe('PaymentTerm', () => {
 			});
 			it('handles trial to non-trial payment term display name', () => {
 				const options = [trialOptions];
-				options.isTrialOfferAsNonTrialOverride = true;
-				const wrapper = shallow(<PaymentTerm options={options} />);
+				const wrapper = shallow(
+					<PaymentTerm
+						options={options}
+						labelOverride={'some term label'}
+						isTrialOfferAsNonTrialOverride={true}
+					/>
+				);
 				expect(wrapper.find('.ncf__payment-term__label').text()).toMatch(
-					/^Trial: Premium Digital - Monthly .*$/
+					/^some term label.*$/
 				);
 			});
 			it('renders using displayName if available', () => {
