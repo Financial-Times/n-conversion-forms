@@ -273,6 +273,14 @@ describe('PaymentTerm', () => {
 					/^Trial: Premium Digital - Monthly .*$/
 				);
 			});
+			it('handles trial to non-trial payment term display name', () => {
+				const options = [trialOptions];
+				options.isTrialOfferAsNonTrialOverride = true;
+				const wrapper = shallow(<PaymentTerm options={options} />);
+				expect(wrapper.find('.ncf__payment-term__label').text()).toMatch(
+					/^Trial: Premium Digital - Monthly .*$/
+				);
+			});
 			it('renders using displayName if available', () => {
 				const options = [
 					{

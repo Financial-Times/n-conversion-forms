@@ -17,6 +17,7 @@ export function PaymentTerm({
 	billingCountry = '',
 	is7DayPassExperiment = false,
 	isTermedSubscriptionTermType = false,
+	isTrialOfferAsNonTrialOverride = false,
 }) {
 	/**
 	 * Compute monthly price for given term name
@@ -319,7 +320,18 @@ export function PaymentTerm({
 				const termName = option.displayName
 					? option.displayName
 					: 'Premium Digital';
-				termDisplayName = `Trial: ${termName} - `;
+
+				// https://financialtimes.atlassian.net/browse/ACQ-2592
+				// We need to have one specific trial offer to have terms displayed as non-trial.
+				// The offer is a trial offer and should use trial mechanics but should show as non-trial.
+				// There is nothing in the offer payload to identify when this should happen, we need to rely on the offer id.
+				// This is a TEMPORARY hack and will be removed once the campaign is over.
+				// A ticket as been raised already to deal with the clean up: https://financialtimes.atlassian.net/browse/ACQ-2593.
+				const trialPrefix = isTrialOfferAsNonTrialOverride ? '' : 'Trial: ';
+				termDisplayName = `${trialPrefix}${termName} - `;
+
+				// the original line of code being
+				// termDisplayName = `Trial: ${termName} - `;
 			}
 
 			const getTermPeriod = () => {
@@ -461,4 +473,5 @@ PaymentTerm.propTypes = {
 	largePrice: PropTypes.bool,
 	optionsInARow: PropTypes.bool,
 	billingCountry: PropTypes.string,
+	isTrialOfferAsNonTrialOverride: PropTypes.bool,
 };
