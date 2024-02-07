@@ -17,6 +17,8 @@ export function PaymentTerm({
 	billingCountry = '',
 	is7DayPassExperiment = false,
 	isTermedSubscriptionTermType = false,
+	isTrialOfferAsNonTrialOverride = false,
+	labelOverride = '', // this is a temporary hack for the February 2024 campaign
 }) {
 	/**
 	 * Compute monthly price for given term name
@@ -25,7 +27,7 @@ export function PaymentTerm({
 	 * @param {string} period (expressed in IS0 8601 duration format): e.g. PxY (yearly) or PxM (montly) where x is the amount of years/months
 	 * @returns {string}
 	 */
-	const getMontlyPriceFromPeriod = (amount, currency, period) => {
+	const getMonthlyPriceFromPeriod = (amount, currency, period) => {
 		const periodObj = new Period(period);
 		const monthlyPrice = periodObj.calculatePrice('P1M', amount);
 		return new Monthly({ value: monthlyPrice, currency }).getAmount('monthly');
@@ -268,7 +270,7 @@ export function PaymentTerm({
 							{nameMap['custom'].monthlyPrice(
 								option.monthlyPrice && option.monthlyPrice !== '0'
 									? Number(option.monthlyPrice)
-									: getMontlyPriceFromPeriod(
+									: getMonthlyPriceFromPeriod(
 											option.amount,
 											option.currency,
 											option.value
@@ -297,6 +299,16 @@ export function PaymentTerm({
 		const getTermDisplayName = () => {
 			const showTrialCopyInTitle =
 				option.isTrial && !isPrintOrBundle && !isEpaper;
+
+			// https://financialtimes.atlassian.net/browse/ACQ-2592
+			// We need to have one specific trial offer to have terms displayed as non-trial.
+			// The offer is a trial offer and should use trial mechanics but should show as non-trial.
+			// There is nothing in the offer payload to identify when this should happen, we need to rely on the offer id.
+			// This is a TEMPORARY hack and will be removed once the campaign is over.
+			// A ticket as been raised already to deal with the clean up: https://financialtimes.atlassian.net/browse/ACQ-2593.
+			if (isTrialOfferAsNonTrialOverride && labelOverride) {
+				return labelOverride;
+			}
 
 			const defaultTitle = (() => {
 				if (is7DayPassExperiment) {
@@ -461,4 +473,5 @@ PaymentTerm.propTypes = {
 	largePrice: PropTypes.bool,
 	optionsInARow: PropTypes.bool,
 	billingCountry: PropTypes.string,
+	isTrialOfferAsNonTrialOverride: PropTypes.bool,
 };
