@@ -81,7 +81,7 @@ describe('BillingPostcode', () => {
 					placeholder: 'Enter your postcode',
 				});
 				billingPostcode.changePostcodeReferenceForCountry = 'GBR';
-				expect(querySelectorStub).toBeCalledWith('input');
+				expect(querySelectorStub).toHaveBeenCalledWith('input');
 			});
 
 			it('sets postcode placeholder to `Enter your postcode` by default', () => {
@@ -89,7 +89,7 @@ describe('BillingPostcode', () => {
 					placeholder: 'Enter your zip code',
 				});
 				billingPostcode.changePostcodeReferenceForCountry = 'GBR';
-				expect(billingPostcode.postcodeInput.placeholder).toEqual(
+				expect(billingPostcode.postcodeInput.placeholder).toBe(
 					'Enter your postcode'
 				);
 			});
@@ -99,7 +99,7 @@ describe('BillingPostcode', () => {
 					placeholder: 'Enter your postcode',
 				});
 				billingPostcode.changePostcodeReferenceForCountry = 'USA';
-				expect(billingPostcode.postcodeInput.placeholder).toEqual(
+				expect(billingPostcode.postcodeInput.placeholder).toBe(
 					'Enter your zip code'
 				);
 			});
@@ -109,7 +109,7 @@ describe('BillingPostcode', () => {
 					placeholder: 'Enter your zip code',
 				});
 				billingPostcode.changePostcodeReferenceForCountry = 'CAN';
-				expect(billingPostcode.postcodeInput.placeholder).toEqual(
+				expect(billingPostcode.postcodeInput.placeholder).toBe(
 					'Enter your postal code'
 				);
 			});
@@ -117,20 +117,20 @@ describe('BillingPostcode', () => {
 	});
 
 	describe('getPostcodeReferenceByCountry', () => {
-		it('returns post code by default ', () => {
-			expect(BillingPostcode.getPostcodeReferenceByCountry('ZAR')).toEqual(
+		it('returns post code by default', () => {
+			expect(BillingPostcode.getPostcodeReferenceByCountry('ZAR')).toBe(
 				'postcode'
 			);
 		});
 
 		it('returns postal code when country is Canada', () => {
-			expect(BillingPostcode.getPostcodeReferenceByCountry('CAN')).toEqual(
+			expect(BillingPostcode.getPostcodeReferenceByCountry('CAN')).toBe(
 				'postal code'
 			);
 		});
 
 		it('returns zip code when country is USA', () => {
-			expect(BillingPostcode.getPostcodeReferenceByCountry('USA')).toEqual(
+			expect(BillingPostcode.getPostcodeReferenceByCountry('USA')).toBe(
 				'zip code'
 			);
 		});

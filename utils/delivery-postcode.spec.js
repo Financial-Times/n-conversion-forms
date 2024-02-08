@@ -89,7 +89,7 @@ describe('DeliveryPostcode', () => {
 					placeholder: 'Enter your zip code',
 				});
 				deliveryPostcode.changePostcodeReferenceForCountry = 'GBR';
-				expect(deliveryPostcode.postcodeInput.placeholder).toEqual(
+				expect(deliveryPostcode.postcodeInput.placeholder).toBe(
 					'Enter your postcode'
 				);
 			});
@@ -99,7 +99,7 @@ describe('DeliveryPostcode', () => {
 					placeholder: 'Enter your postcode',
 				});
 				deliveryPostcode.changePostcodeReferenceForCountry = 'USA';
-				expect(deliveryPostcode.postcodeInput.placeholder).toEqual(
+				expect(deliveryPostcode.postcodeInput.placeholder).toBe(
 					'Enter your zip code'
 				);
 			});
@@ -109,7 +109,7 @@ describe('DeliveryPostcode', () => {
 					placeholder: 'Enter your zip code',
 				});
 				deliveryPostcode.changePostcodeReferenceForCountry = 'CAN';
-				expect(deliveryPostcode.postcodeInput.placeholder).toEqual(
+				expect(deliveryPostcode.postcodeInput.placeholder).toBe(
 					'Enter your postal code'
 				);
 			});
@@ -117,20 +117,20 @@ describe('DeliveryPostcode', () => {
 	});
 
 	describe('getPostcodeReferenceByCountry', () => {
-		it('returns post code by default ', () => {
-			expect(DeliveryPostcode.getPostcodeReferenceByCountry('ZAR')).toEqual(
+		it('returns post code by default', () => {
+			expect(DeliveryPostcode.getPostcodeReferenceByCountry('ZAR')).toBe(
 				'postcode'
 			);
 		});
 
 		it('returns postal code when country is Canada', () => {
-			expect(DeliveryPostcode.getPostcodeReferenceByCountry('CAN')).toEqual(
+			expect(DeliveryPostcode.getPostcodeReferenceByCountry('CAN')).toBe(
 				'postal code'
 			);
 		});
 
 		it('returns zip code when country is USA', () => {
-			expect(DeliveryPostcode.getPostcodeReferenceByCountry('USA')).toEqual(
+			expect(DeliveryPostcode.getPostcodeReferenceByCountry('USA')).toBe(
 				'zip code'
 			);
 		});

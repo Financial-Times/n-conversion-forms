@@ -98,7 +98,7 @@ describe('PaymentType', () => {
 		describe('removeError', () => {
 			it('removes a class to the paymentType element', () => {
 				paymentType.removeError();
-				expect(elementStub.classList.remove).toHaveBeenCalled;
+				expect(elementStub.classList.remove).toHaveBeenCalled();
 			});
 		});
 

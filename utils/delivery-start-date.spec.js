@@ -121,10 +121,8 @@ describe('DeliveryStartDate', () => {
 
 		it('updates the page according to the response from the API call', async () => {
 			await setup();
-			expect(startDateFieldStub.value).toEqual('2019-04-13');
-			expect(startDateTextStub.innerHTML).toEqual(
-				'Saturday 13th of April 2019'
-			);
+			expect(startDateFieldStub.value).toBe('2019-04-13');
+			expect(startDateTextStub.innerHTML).toBe('Saturday 13th of April 2019');
 		});
 
 		it('clears errors and return true if the fetch call succeeds', async () => {

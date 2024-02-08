@@ -48,12 +48,12 @@ describe('Delivery Option - Util', () => {
 			deliveryoptionUtilInstance.showItem('PV');
 			expect(document.querySelector('.ncf__hidden #HD')).toBeDefined();
 			expect(document.querySelector('#PV')).toBeDefined();
-			expect(document.querySelector('.ncf__hidden #PV')).toBe(null);
+			expect(document.querySelector('.ncf__hidden #PV')).toBeNull();
 			deliveryoptionUtilInstance.showItem('HD');
 			deliveryoptionUtilInstance.hideItem('PV');
 			expect(document.querySelector('.ncf__hidden #PV')).toBeDefined();
 			expect(document.querySelector('#HD')).toBeDefined();
-			expect(document.querySelector('.ncf__hidden #HD')).toBe(null);
+			expect(document.querySelector('.ncf__hidden #HD')).toBeNull();
 		});
 	});
 

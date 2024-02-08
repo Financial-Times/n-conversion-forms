@@ -10,7 +10,7 @@ describe('DeliverySecurityInstructions', () => {
 			wrapper = shallow(<DeliverySecurityInstructions />);
 		});
 
-		test('contains textAreaProps id set to default: deliverySecurityInstructionsField ', () => {
+		test('contains textAreaProps id set to default: deliverySecurityInstructionsField', () => {
 			expect(wrapper.prop('id')).toBe('deliverySecurityInstructionsField');
 		});
 
@@ -55,11 +55,11 @@ describe('DeliverySecurityInstructions', () => {
 			});
 
 			it('does not set maxLength when no value is given', () => {
-				expect(textAreaProps.maxLength).toBeUndefined;
+				expect(textAreaProps.maxLength).toBeUndefined();
 			});
 
 			it('does not set rows when no value is given', () => {
-				expect(textAreaProps.rows).toBeUndefined;
+				expect(textAreaProps.rows).toBeUndefined();
 			});
 
 			it('sets data-trackable to field-deliverySecurityInstructions', () => {
@@ -75,11 +75,11 @@ describe('DeliverySecurityInstructions', () => {
 			});
 
 			it('sets disabled to false', () => {
-				expect(textAreaProps.disabled).toBeFalse;
+				expect(textAreaProps.disabled).toBe(false);
 			});
 
 			it('does not set value when no value is given', () => {
-				expect(textAreaProps.defaultValue).toBeUndefined;
+				expect(textAreaProps.defaultValue).toBe('');
 			});
 		});
 
@@ -117,7 +117,7 @@ describe('DeliverySecurityInstructions', () => {
 			});
 
 			it('sets disabled to true', () => {
-				expect(textAreaProps.disabled).toBeTrue;
+				expect(textAreaProps.disabled).toBe(true);
 			});
 
 			it('sets value', () => {

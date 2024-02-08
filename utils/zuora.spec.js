@@ -110,6 +110,7 @@ describe('Zuora', () => {
 			expect(error instanceof Zuora.ZuoraErrorInvalidPaymentType).toBe(true);
 		});
 
+		// eslint-disable-next-line jest/valid-title
 		describe(PaymentType.CREDITCARD, () => {
 			it('calls validate', async () => {
 				window.Z.validate.mockImplementation((callback) =>
@@ -144,6 +145,7 @@ describe('Zuora', () => {
 			});
 		});
 
+		// eslint-disable-next-line jest/valid-title
 		describe(PaymentType.DIRECTDEBIT, () => {
 			it('calls validate', async () => {
 				zuora.onDirectDebitConfirmation = jest.fn((callback) => callback(true));

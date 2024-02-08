@@ -111,7 +111,7 @@ describe('PaymentTerm', () => {
 						price: '£1.01',
 					},
 				});
-				expect(priceStub.innerHTML).toEqual('£1.01');
+				expect(priceStub.innerHTML).toBe('£1.01');
 			});
 
 			it('replaces the trial price with the correct updated trial price', () => {
@@ -127,7 +127,7 @@ describe('PaymentTerm', () => {
 						trialPrice: '£1.01',
 					},
 				});
-				expect(trialPriceStub.innerHTML).toEqual('£1.01');
+				expect(trialPriceStub.innerHTML).toBe('£1.01');
 			});
 
 			it('replaces the monthly price with the correct updated monthly price', () => {
@@ -143,7 +143,7 @@ describe('PaymentTerm', () => {
 						monthlyPrice: '£1.01',
 					},
 				});
-				expect(monthlyPriceStub.innerHTML).toEqual('£1.01');
+				expect(monthlyPriceStub.innerHTML).toBe('£1.01');
 			});
 
 			describe('updating base amount', () => {

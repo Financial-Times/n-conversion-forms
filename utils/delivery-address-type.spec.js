@@ -39,7 +39,7 @@ describe('Delivery Address Type - Util', () => {
 			const deliveryAdressTypeUtilInstance = new DeliveryAdressTypeUtil(
 				document
 			);
-			expect(deliveryAdressTypeUtilInstance.getSelected()).toEqual('home');
+			expect(deliveryAdressTypeUtilInstance.getSelected()).toBe('home');
 		});
 
 		it('returns the option selected different than the default', () => {

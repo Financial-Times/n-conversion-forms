@@ -74,13 +74,13 @@ describe('Validation - Util', () => {
 			});
 			validationTest.init();
 
-			expect(global.window.onbeforeunload).not.toBeDefined();
+			expect(global.window.onbeforeunload).toBeUndefined();
 		});
 	});
 
 	describe('onbeforeunload', () => {
 		it('returns null by default', () => {
-			expect(global.window.onbeforeunload()).toBe(null);
+			expect(global.window.onbeforeunload()).toBeNull();
 		});
 
 		it('returns true if the form has changed', () => {

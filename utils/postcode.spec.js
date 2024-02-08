@@ -29,17 +29,15 @@ describe('postcode', () => {
 
 	describe('getPostcodeReferenceByCountry', () => {
 		it('returns postcode by default', () => {
-			expect(Postcode.getPostcodeReferenceByCountry('GBR')).toEqual('postcode');
+			expect(Postcode.getPostcodeReferenceByCountry('GBR')).toBe('postcode');
 		});
 
 		it('returns zip code when country code is USA', () => {
-			expect(Postcode.getPostcodeReferenceByCountry('USA')).toEqual('zip code');
+			expect(Postcode.getPostcodeReferenceByCountry('USA')).toBe('zip code');
 		});
 
 		it('returns postal when country code is CAN', () => {
-			expect(Postcode.getPostcodeReferenceByCountry('CAN')).toEqual(
-				'postal code'
-			);
+			expect(Postcode.getPostcodeReferenceByCountry('CAN')).toBe('postal code');
 		});
 	});
 
@@ -55,7 +53,7 @@ describe('postcode', () => {
 		describe('postcode reference name', () => {
 			it('calls querySelector with [data-reference]', () => {
 				postcode.changePostcodeReferenceForCountry = 'GBR';
-				expect(querySelectorAllStub).toBeCalledWith(
+				expect(querySelectorAllStub).toHaveBeenCalledWith(
 					'[data-reference=postcode]'
 				);
 			});
@@ -102,9 +100,7 @@ describe('postcode', () => {
 					placeholder: 'Enter your zip code',
 				});
 				postcode.changePostcodeReferenceForCountry = 'GBR';
-				expect(postcode.postcodeInput.placeholder).toEqual(
-					'Enter your postcode'
-				);
+				expect(postcode.postcodeInput.placeholder).toBe('Enter your postcode');
 			});
 
 			it('sets postcode placeholder to `Enter your zip code` when country code is USA', () => {
@@ -112,9 +108,7 @@ describe('postcode', () => {
 					placeholder: 'Enter your postcode',
 				});
 				postcode.changePostcodeReferenceForCountry = 'USA';
-				expect(postcode.postcodeInput.placeholder).toEqual(
-					'Enter your zip code'
-				);
+				expect(postcode.postcodeInput.placeholder).toBe('Enter your zip code');
 			});
 
 			it('sets postcode placeholder to `Enter your postal code` when country code is Canada', () => {
@@ -122,7 +116,7 @@ describe('postcode', () => {
 					placeholder: 'Enter your zip code',
 				});
 				postcode.changePostcodeReferenceForCountry = 'CAN';
-				expect(postcode.postcodeInput.placeholder).toEqual(
+				expect(postcode.postcodeInput.placeholder).toBe(
 					'Enter your postal code'
 				);
 			});

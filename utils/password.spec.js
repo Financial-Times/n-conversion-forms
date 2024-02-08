@@ -53,13 +53,13 @@ describe('Password', () => {
 		it('sets the input type to text', () => {
 			passwordElement.type = 'password';
 			password.toggleMask(false);
-			expect(passwordElement.type).toEqual('text');
+			expect(passwordElement.type).toBe('text');
 		});
 
 		it('sets the input type to password', () => {
 			passwordElement.type = 'text';
 			password.toggleMask(true);
-			expect(passwordElement.type).toEqual('password');
+			expect(passwordElement.type).toBe('password');
 		});
 	});
 });

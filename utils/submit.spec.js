@@ -51,7 +51,7 @@ describe('Submit', () => {
 
 			it('updates the innerHTML of the button', () => {
 				submit.updateText(newString);
-				expect(elementStub.innerHTML).toEqual('test');
+				expect(elementStub.innerHTML).toBe('test');
 			});
 		});
 

@@ -65,7 +65,7 @@ describe('FormElement', () => {
 
 	describe('value', () => {
 		it('returns the value', () => {
-			expect(formElement.value()).toEqual('test');
+			expect(formElement.value()).toBe('test');
 		});
 	});
 });
