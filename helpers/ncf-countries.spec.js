@@ -48,7 +48,7 @@ describe('ncf-countries', () => {
 
 			expect(
 				context.countries.find((country) => country.selected)
-			).not.toBeDefined();
+			).toBeUndefined();
 		});
 
 		it('does not mark any countries selected if incorrect value passed', () => {
@@ -57,7 +57,7 @@ describe('ncf-countries', () => {
 
 			expect(
 				context.countries.find((country) => country.selected)
-			).not.toBeDefined();
+			).toBeUndefined();
 		});
 
 		it('marks a country as selected if value matches code', () => {

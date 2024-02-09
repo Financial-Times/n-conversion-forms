@@ -71,7 +71,7 @@ describe('PersonalTitle', () => {
 
 		const component = mount(PersonalTitle(props));
 
-		expect(component.find('.o-forms-title__main').text()).toEqual('Title');
+		expect(component.find('.o-forms-title__main').text()).toBe('Title');
 	});
 
 	it('renders with custom label wording', () => {
@@ -79,9 +79,7 @@ describe('PersonalTitle', () => {
 
 		const component = mount(PersonalTitle(props));
 
-		expect(component.find('.o-forms-title__main').text()).toEqual(
-			'PersonalTitle'
-		);
+		expect(component.find('.o-forms-title__main').text()).toBe('PersonalTitle');
 	});
 
 	it('renders with optional title class, when not required', () => {
@@ -89,7 +87,7 @@ describe('PersonalTitle', () => {
 		const component = mount(PersonalTitle(props));
 
 		expect(
-			component.find('.o-forms-title.o-forms-field--optional').length
-		).toEqual(1);
+			component.find('.o-forms-title.o-forms-field--optional')
+		).toHaveLength(1);
 	});
 });

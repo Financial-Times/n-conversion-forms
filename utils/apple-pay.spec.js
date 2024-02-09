@@ -138,7 +138,7 @@ describe('Apple Pay', () => {
 
 			it('returns merchant id from methods data', () => {
 				const methods = [{ data: { merchantIdentifier: 'test' } }];
-				expect(ApplePay.getMerchantId(methods)).toEqual('test');
+				expect(ApplePay.getMerchantId(methods)).toBe('test');
 			});
 		});
 

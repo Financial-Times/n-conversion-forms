@@ -54,7 +54,7 @@ describe('Loader', () => {
 			it('cleares the content of the partial', () => {
 				loader.setContent('<div>Baz</div>');
 				loader.clearContent();
-				expect(elementStub.innerHTML).toEqual('');
+				expect(elementStub.innerHTML).toBe('');
 			});
 		});
 
@@ -69,11 +69,11 @@ describe('Loader', () => {
 			});
 			it('sets the title of the partial', () => {
 				loader.setContent({ title: 'Hooray!' });
-				expect(elementStub.innerHTML).toEqual('Hooray!');
+				expect(elementStub.innerHTML).toBe('Hooray!');
 			});
 			it('sets the content of the partial', () => {
 				loader.setContent({ content: '<div>Baz</div>' });
-				expect(elementStub.innerHTML).toEqual('<div>Baz</div>');
+				expect(elementStub.innerHTML).toBe('<div>Baz</div>');
 			});
 		});
 

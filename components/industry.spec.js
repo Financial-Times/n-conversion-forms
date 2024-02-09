@@ -71,7 +71,7 @@ describe('Industry', () => {
 
 		const component = mount(Industry(props));
 
-		expect(component.find('.o-forms-title__main').text()).toEqual(
+		expect(component.find('.o-forms-title__main').text()).toBe(
 			'In which industry do you work?'
 		);
 	});
@@ -81,7 +81,7 @@ describe('Industry', () => {
 
 		const component = mount(Industry(props));
 
-		expect(component.find('.o-forms-title__main').text()).toEqual('Industry');
+		expect(component.find('.o-forms-title__main').text()).toBe('Industry');
 	});
 
 	it('renders with optional title class, when not required', () => {
@@ -89,7 +89,7 @@ describe('Industry', () => {
 		const component = mount(Industry(props));
 
 		expect(
-			component.find('.o-forms-title.o-forms-field--optional').length
-		).toEqual(1);
+			component.find('.o-forms-title.o-forms-field--optional')
+		).toHaveLength(1);
 	});
 });

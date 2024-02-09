@@ -31,7 +31,7 @@ describe('Text Input', () => {
 		const errorMsg = component.find('.o-forms-input__error');
 
 		expect(element.exists()).toBe(true);
-		expect(errorMsg.text()).toEqual('Invalid value');
+		expect(errorMsg.text()).toBe('Invalid value');
 	});
 
 	it('renders a field with custom input id', () => {
@@ -59,7 +59,7 @@ describe('Text Input', () => {
 		const component = mount(TextInput(props));
 		const element = component.find('input');
 
-		expect(element.prop('defaultValue')).toEqual('foobar');
+		expect(element.prop('defaultValue')).toBe('foobar');
 	});
 
 	it('renders with disabled input', () => {
@@ -77,7 +77,7 @@ describe('Text Input', () => {
 		const component = mount(TextInput(props));
 		const label = component.find('.o-forms-title__main');
 
-		expect(label.text()).toEqual('');
+		expect(label.text()).toBe('');
 	});
 
 	it('renders with custom label wording', () => {
@@ -86,7 +86,7 @@ describe('Text Input', () => {
 		const component = mount(TextInput(props));
 		const label = component.find('.o-forms-title__main');
 
-		expect(label.text()).toEqual('Code');
+		expect(label.text()).toBe('Code');
 	});
 
 	it('renders with custom description wording', () => {
@@ -95,7 +95,7 @@ describe('Text Input', () => {
 		const component = mount(TextInput(props));
 		const description = component.find('.o-forms-title__prompt');
 
-		expect(description.text()).toEqual('Description text');
+		expect(description.text()).toBe('Description text');
 	});
 
 	it('renders as required field', () => {

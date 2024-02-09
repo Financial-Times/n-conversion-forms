@@ -7,6 +7,7 @@ export const expectToRenderCorrectly = {
 			reactComponent(props)
 		);
 
+		// eslint-disable-next-line jest/no-standalone-expect
 		expect(ReactComponentRendered).toMatchSnapshot();
 
 		// This point is reached when the above assertions were successful.

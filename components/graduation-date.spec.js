@@ -86,13 +86,13 @@ describe('GraduationDate', () => {
 		const wrapper = shallow(<GraduationDate value="2020-08-28" />);
 
 		it('sets the default month', () => {
-			expect(wrapper.find('#graduationDateMonth').prop('defaultValue')).toEqual(
+			expect(wrapper.find('#graduationDateMonth').prop('defaultValue')).toBe(
 				'08'
 			);
 		});
 
 		it('sets the default year', () => {
-			expect(wrapper.find('#graduationDateYear').prop('defaultValue')).toEqual(
+			expect(wrapper.find('#graduationDateYear').prop('defaultValue')).toBe(
 				'2020'
 			);
 		});

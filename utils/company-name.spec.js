@@ -31,7 +31,7 @@ describe('Company Name - Util', () => {
 			expect(document.querySelector('#companyNameField')).toBeDefined();
 			expect(
 				document.querySelector('.o-forms-field--optional #companyNameField')
-			).toBe(null);
+			).toBeNull();
 		});
 	});
 });

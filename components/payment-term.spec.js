@@ -331,7 +331,7 @@ describe('PaymentTerm', () => {
 				},
 			];
 			const wrapper = shallow(<PaymentTerm options={options} />);
-			expect(wrapper.find('input').prop('data-base-amount')).toEqual(100);
+			expect(wrapper.find('input').prop('data-base-amount')).toBe(100);
 		});
 
 		it('renders option.trialAmount as data-base-amount if isTrial is true', () => {
@@ -347,7 +347,7 @@ describe('PaymentTerm', () => {
 				},
 			];
 			const wrapper = shallow(<PaymentTerm options={options} />);
-			expect(wrapper.find('input').prop('data-base-amount')).toEqual(1);
+			expect(wrapper.find('input').prop('data-base-amount')).toBe(1);
 		});
 	});
 

@@ -12,7 +12,7 @@ describe('salesforce', () => {
 		});
 
 		it('returns the salesforce name for a country', () => {
-			expect(isoCodeToSalesforceName('GBR')).toEqual('United Kingdom');
+			expect(isoCodeToSalesforceName('GBR')).toBe('United Kingdom');
 		});
 	});
 
@@ -24,7 +24,7 @@ describe('salesforce', () => {
 		});
 
 		it('returns the ISO country code for Salesforce country', () => {
-			expect(salesforceNameToIsoCode('United Kingdom')).toEqual('GBR');
+			expect(salesforceNameToIsoCode('United Kingdom')).toBe('GBR');
 		});
 	});
 });

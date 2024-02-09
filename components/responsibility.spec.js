@@ -71,7 +71,7 @@ describe('Responsibility', () => {
 		const component = mount(Responsibility(props));
 
 		expect(
-			component.find('.o-forms-title.o-forms-field--optional').length
-		).toEqual(1);
+			component.find('.o-forms-title.o-forms-field--optional')
+		).toHaveLength(1);
 	});
 });

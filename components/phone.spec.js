@@ -55,7 +55,7 @@ describe('Phone', () => {
 		const component = mount(Phone(props));
 
 		expect(
-			component.find('.o-forms-title.o-forms-field--optional').length
-		).toEqual(1);
+			component.find('.o-forms-title.o-forms-field--optional')
+		).toHaveLength(1);
 	});
 });
