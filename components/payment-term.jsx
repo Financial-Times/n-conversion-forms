@@ -15,7 +15,6 @@ export function PaymentTerm({
 	largePrice = false,
 	optionsInARow = false,
 	billingCountry = '',
-	is7DayPassExperiment = false,
 	isTermedSubscriptionTermType = false,
 	isTrialOfferAsNonTrialOverride = false,
 	labelOverride = '', // this is a temporary hack for the February 2024 campaign
@@ -121,22 +120,11 @@ export function PaymentTerm({
 		},
 		monthly: {
 			title: 'Monthly',
-			price: (price, is7DayPassExperiment) => {
-				const paymentIntervalTextToDisplay = (() => {
-					if (is7DayPassExperiment) {
-						return ' one-time payment';
-					}
-
-					return ' per month';
-				})();
-
-				return (
-					<React.Fragment>
-						<span className="ncf__payment-term__price">{price}</span>
-						{paymentIntervalTextToDisplay}
-					</React.Fragment>
-				);
-			},
+			price: (price) => (
+				<React.Fragment>
+					<span className="ncf__payment-term__price">{price}</span> per month
+				</React.Fragment>
+			),
 			trialPrice: (price) => (
 				<React.Fragment>
 					Unless you cancel during your trial you will be billed{' '}
@@ -146,17 +134,9 @@ export function PaymentTerm({
 			),
 			monthlyPrice: () => {},
 			renewsText: (isFixedTermOffer) => {
-				const textToDisplay = (() => {
-					if (is7DayPassExperiment) {
-						return 'This subscription is for 7 days, charged at the outset.';
-					}
-
-					if (isFixedTermOffer) {
-						return 'This subscription is for 3 months, charged monthly. You can cancel at anytime';
-					}
-
-					return 'Renews monthly unless cancelled';
-				})();
+				const textToDisplay = isFixedTermOffer
+					? 'This subscription is for 3 months, charged monthly. You can cancel at anytime'
+					: 'Renews monthly unless cancelled';
 
 				return (
 					<p className="ncf__payment-term__renews-text">{textToDisplay}</p>
@@ -253,12 +233,9 @@ export function PaymentTerm({
 				<React.Fragment>
 					{nameMap[option.name] ? (
 						<div className="ncf__payment-term__description">
-							{nameMap[option.name].price(option.price, is7DayPassExperiment)}
+							{nameMap[option.name].price(option.price)}
 							{nameMap[option.name].monthlyPrice(option.monthlyPrice)}
-							{nameMap[option.name].renewsText(
-								isFixedTermOffer,
-								is7DayPassExperiment
-							)}
+							{nameMap[option.name].renewsText(isFixedTermOffer)}
 							{/* Remove this discount text temporarily in favour of monthly price */}
 							{/* <br />Save up to 25% when you pay annually */}
 						</div>
@@ -310,20 +287,11 @@ export function PaymentTerm({
 				return labelOverride;
 			}
 
-			const defaultTitle = (() => {
-				if (is7DayPassExperiment) {
-					return '';
-				}
-
-				if (Boolean(option.name && nameMap[option.name])) {
-					return nameMap[option.name].title;
-				}
-
-				return '';
-			})();
+			const defaultTitle =
+				option.name && nameMap[option.name] ? nameMap[option.name].title : '';
 
 			const title = isFixedTermOffer
-				? [offerDisplayName, defaultTitle].filter(Boolean).join(' - ')
+				? `${offerDisplayName} - ${defaultTitle}`
 				: defaultTitle;
 
 			let termDisplayName = '';

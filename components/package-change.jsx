@@ -5,7 +5,6 @@ export function PackageChange({
 	changePackageUrl,
 	currentPackage,
 	packageDescription,
-	is7DayPassExperiment,
 }) {
 	return (
 		<div className="ncf__package-change">
@@ -21,17 +20,15 @@ export function PackageChange({
 						</p>
 					)}
 				</div>
-				{!is7DayPassExperiment && (
-					<div className="ncf__package-change__actions">
-						<a
-							href={changePackageUrl}
-							className="ncf__button ncf__button--mono ncf__button--baseline"
-							data-trackable="change"
-						>
-							Change
-						</a>
-					</div>
-				)}
+				<div className="ncf__package-change__actions">
+					<a
+						href={changePackageUrl}
+						className="ncf__button ncf__button--mono ncf__button--baseline"
+						data-trackable="change"
+					>
+						Change
+					</a>
+				</div>
 			</div>
 		</div>
 	);
@@ -41,5 +38,4 @@ PackageChange.propTypes = {
 	changePackageUrl: PropTypes.string.isRequired,
 	currentPackage: PropTypes.string.isRequired,
 	packageDescription: PropTypes.string,
-	is7DayPassExperiment: PropTypes.bool,
 };
