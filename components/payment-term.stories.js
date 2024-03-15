@@ -90,25 +90,6 @@ Basic.args = {
 	],
 };
 
-export const FixedTermOffer = (args) => (
-	<div className="ncf">
-		<Fieldset>
-			<PaymentTerm {...args} />
-		</Fieldset>
-	</div>
-);
-FixedTermOffer.args = {
-	options: [
-		{
-			name: 'monthly',
-			price: '$5.00',
-			value: 5.0,
-		},
-	],
-	isFixedTermOffer: true,
-	offerDisplayName: 'Mix & Match',
-};
-
 export const TermedSubscriptionTermType = (args) => (
 	<div className="ncf">
 		<Fieldset>
