@@ -54,7 +54,6 @@ export { Submit } from './submit';
 export { TrialBanner } from './trial-banner';
 export { EducationJobTitle } from './education-job-title';
 export { GraduationDate } from './graduation-date';
-export { LiteSubConfirmation } from './lite-sub-confirmation';
 export { GoogleSignIn } from './google-sign-in';
 export { TextInput } from './text-input';
 export { DeferredBillingTerms } from './deferred-billing-terms';
