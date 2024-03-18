@@ -9,8 +9,6 @@ export function PaymentTerm({
 	isPrintOrBundle = false,
 	isEpaper = false,
 	options = [],
-	isFixedTermOffer = false,
-	offerDisplayName,
 	showLegal = true,
 	largePrice = false,
 	optionsInARow = false,
@@ -133,15 +131,11 @@ export function PaymentTerm({
 				</React.Fragment>
 			),
 			monthlyPrice: () => {},
-			renewsText: (isFixedTermOffer) => {
-				const textToDisplay = isFixedTermOffer
-					? 'This subscription is for 3 months, charged monthly. You can cancel at anytime'
-					: 'Renews monthly unless cancelled';
-
-				return (
-					<p className="ncf__payment-term__renews-text">{textToDisplay}</p>
-				);
-			},
+			renewsText: () => (
+				<p className="ncf__payment-term__renews-text">
+					{'Renews monthly unless cancelled'}
+				</p>
+			),
 		},
 		custom: {
 			price: (price) => (
@@ -235,7 +229,7 @@ export function PaymentTerm({
 						<div className="ncf__payment-term__description">
 							{nameMap[option.name].price(option.price)}
 							{nameMap[option.name].monthlyPrice(option.monthlyPrice)}
-							{nameMap[option.name].renewsText(isFixedTermOffer)}
+							{nameMap[option.name].renewsText()}
 							{/* Remove this discount text temporarily in favour of monthly price */}
 							{/* <br />Save up to 25% when you pay annually */}
 						</div>
@@ -287,12 +281,8 @@ export function PaymentTerm({
 				return labelOverride;
 			}
 
-			const defaultTitle =
+			const title =
 				option.name && nameMap[option.name] ? nameMap[option.name].title : '';
-
-			const title = isFixedTermOffer
-				? `${offerDisplayName} - ${defaultTitle}`
-				: defaultTitle;
 
 			let termDisplayName = '';
 			if (showTrialCopyInTitle) {
@@ -363,7 +353,7 @@ export function PaymentTerm({
 
 			{showLegal && (
 				<div className="ncf__payment-term__legal">
-					{isTermedSubscriptionTermType || isFixedTermOffer ? (
+					{isTermedSubscriptionTermType ? (
 						<p>
 							Find out more about our cancellation policy in our{' '}
 							<a
@@ -434,9 +424,7 @@ PaymentTerm.propTypes = {
 			fulfilmentOption: PropTypes.string,
 		})
 	),
-	isFixedTermOffer: PropTypes.bool,
 	isTermedSubscriptionTermType: PropTypes.bool,
-	offerDisplayName: PropTypes.string,
 	showLegal: PropTypes.bool,
 	largePrice: PropTypes.bool,
 	optionsInARow: PropTypes.bool,

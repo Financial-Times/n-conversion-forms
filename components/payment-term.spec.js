@@ -117,42 +117,6 @@ describe('PaymentTerm', () => {
 		});
 	});
 
-	describe('given isFixedTermOffer prop is set to true', () => {
-		const options = [
-			{
-				name: 'monthly',
-				price: '$5.00',
-				value: 'monthly',
-				monthlyPrice: '$5.00',
-			},
-		];
-		const wrapper = shallow(
-			<PaymentTerm
-				isFixedTermOffer={true}
-				options={options}
-				offerDisplayName="Mix & Match"
-			/>
-		);
-
-		it('does not include renewal text', () => {
-			expect(
-				wrapper.find('.ncf__payment-term__renews-text').text()
-			).not.toMatch(/Renews (annually|monthly|quarterly) unless cancelled/);
-		});
-
-		it('renders fixed term renewal text in English', () => {
-			expect(wrapper.find('.ncf__payment-term__renews-text').text()).toMatch(
-				/This subscription is for 3 months, charged monthly. You can cancel at anytime/
-			);
-		});
-
-		it('renders offer name on payment term title', () => {
-			expect(wrapper.find('.ncf__payment-term__title').text()).toMatch(
-				'Mix & Match - Monthly'
-			);
-		});
-	});
-
 	describe('given isTermedSubscriptionTermType is true', () => {
 		describe('options include duration expressed in weeks', () => {
 			const options = [
