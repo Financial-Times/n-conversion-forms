@@ -29,6 +29,7 @@ export { ErrorPage } from './error-page';
 export { Fieldset } from './fieldset';
 export { FirstName } from './first-name';
 export { Form } from './form';
+export { FTEditRegistrationConfirmation } from './ft-edit-registration-confirmation';
 export { Industry } from './industry';
 export { JobTitle } from './job-title';
 export { PersonalTitle } from './personal-title';
