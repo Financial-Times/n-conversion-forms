@@ -1,0 +1,139 @@
+@import '@financial-times/o-social-follow/main';
+@import '@financial-times/o-grid/main';
+
+/***
+ * This component has been created for a trial feature for the FT Edit app to be used inside
+ * next-subscribe. This can be removed after the trial. The trial is beginning May 2024, please
+ * reach out to light-apps channel if we dont reach out first, as to when this can be deleted.
+ */
+
+@include oSocialFollow(
+	$opts: (
+		'icons': (
+			'twitter',
+			'facebook',
+			'linkedin',
+			'instagram',
+		),
+	)
+);
+
+@mixin ncfConfirmation() {
+	&__FT_Edit_confirmation {
+		&--message {
+			max-width: 304px;
+			margin: auto;
+			margin-bottom: 12px;
+		}
+
+		&--desktop {
+			@include oGridRespondTo($until: M) {
+				display: none;
+			}
+		}
+
+		&--mobile {
+			@include oGridRespondTo(M) {
+				display: none;
+			}
+		}
+
+		&--links {
+			display: grid;
+			grid-template-rows: 1fr 1fr;
+			gap: oSpacingByName('s4');
+			margin-top: oSpacingByName('s6');
+
+			@include oGridRespondTo(M) {
+				grid-template-rows: unset;
+				grid-template-columns: 1fr 1fr;
+				gap: oSpacingByName('s8');
+			}
+		}
+
+		&--socials {
+			@include oGridRespondTo(M) {
+				padding: oSpacingByName('s6') oSpacingByName('s4');
+			}
+		}
+
+		&--badges {
+			@include oGridRespondTo($until: M) {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: oSpacingByName('s6');
+				margin: auto;
+				max-width: 256px;
+			}
+		}
+
+		&--app-badges {
+			@include oGridRespondTo($until: M) {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+			}
+		}
+
+		&--alerts {
+			display: flex;
+			flex-direction: column;
+			padding: 24px 20px;
+			background-color: oColorsByName('white-60');
+
+			a {
+				color: oColorsByName('black-90');
+				border-color: currentColor;
+				position: sticky;
+				top: 100vh;
+			}
+		}
+
+		&--finish {
+			display: block;
+			margin: 48px auto 0;
+			width: 100%;
+
+			@include oGridRespondTo(M) {
+				max-width: 260px;
+			}
+		}
+
+		&--finish-article-read {
+			display: block;
+			margin: 12px auto 0px;
+			width: 100%;
+
+			@include oGridRespondTo(M) {
+				max-width: 260px;
+			}
+		}
+	}
+}
+
+.ncf-icon::before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.ncf-icon--myft::before {
+	margin-left: 0.5rem;
+	height: 1rem;
+	width: 3rem;
+	background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/ftlogo:brand-myft?format=svg&source=next-subscribe&tint=%2333302E%2C%2333302E&width=28&height=16');
+}
+
+.ncf-icon--android::before {
+	height: 40px;
+	width: 136px;
+	background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/app-badge-v1%3Aandroid?source=next-subscribe');
+}
+
+.ncf-icon--apple::before {
+	height: 40px;
+	width: 136px;
+	background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/app-badge-v1%3Aapple?format=svg&source=next-subscribe');
+}

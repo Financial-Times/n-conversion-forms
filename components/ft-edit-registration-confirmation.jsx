@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/***
+ * This component has been created for a trial feature for the FT Edit app to be used inside
+ * next-subscribe. This can be removed after the trial. The trial is beginning May 2024, please
+ * reach out to light-apps channel if we dont reach out first, as to when this can be deleted.
+ */
 const EMAIL_DEFAULT_TEXT = 'your email';
 
 const SOCIALS = [
@@ -22,17 +27,6 @@ const SOCIALS = [
 	},
 ];
 
-const STORES = [
-	{
-		name: 'apple',
-		link: 'https://apps.apple.com/app/apple-store/id1200842933',
-	},
-	{
-		name: 'android',
-		link: 'https://play.google.com/store/apps/details?id=com.ft.news',
-	},
-];
-
 export function FTEditRegistrationConfirmation({
 	email = EMAIL_DEFAULT_TEXT,
 	articleUrl = false,
@@ -43,27 +37,26 @@ export function FTEditRegistrationConfirmation({
 			<div className="ncf__center ncf__margin">
 				<div className="ncf__icon ncf__icon--tick ncf__icon--large"></div>
 				<h1 className="ncf__header ncf__header--confirmation">Success</h1>
-				<p className="ncf__confirmation--message">
+				<p className="ncf__FT_Edit_confirmation--message">
 					Thankyou for registering for FT Edit.
 				</p>
-				<p className="ncf__confirmation--message">
+				<p className="ncf__FT_Edit_confirmation--message margin-top-x4 ">
 					Enjoy 30 days of great journalism. We’ve sent confirmation to {email}.
 				</p>
 			</div>
 
 			<div className="ncf__divider-horizontal" />
 
-			<div className="ncf__confirmation--links ncf__margin">
-				<div className="ncf__confirmation--socials">
+			<div className="ncf__FT_Edit_confirmation--links ncf__margin">
+				<div className="ncf__FT_Edit_confirmation--socials">
 					<b>Breaking news alerts, direct to your lock screen</b>
-					<p className="ncf__confirmation--mobile">
+					<p className="ncf__FT_Edit_confirmation--mobile">
 						Download our apps or follow us on our socials
 					</p>
-					<p className="ncf__confirmation--desktop">
-						Find us in the app and google play stores or follow us on our
-						socials
+					<p className="ncf__FT_Edit_confirmation--desktop">
+						Find us in the app stores or follow us on our socials
 					</p>
-					<div className="ncf__confirmation--badges">
+					<div className="ncf__FT_Edit_confirmation--badges">
 						<div
 							className="o-social-follow"
 							aria-label="Follow on social media"
@@ -82,25 +75,23 @@ export function FTEditRegistrationConfirmation({
 							))}
 						</div>
 						<div
-							className="ncf__confirmation--mobile ncf__confirmation--app-badges"
+							className="ncf__FT_Edit_confirmation--mobile ncf__FT_Edit_confirmation--app-badges"
 							aria-label="Download the app"
 						>
-							{STORES.map(({ name, link }) => (
-								<a
-									key={name}
-									href={link}
-									className={`ncf-icon ncf-icon--${name}`}
-									target="_blank"
-									rel="noopener noreferrer"
-									data-trackable={`register-app-${name}`}
-								>
-									<span className="o-social-follow-icon__label">on {name}</span>
-								</a>
-							))}
+							<a
+								key="apple-ft-edit"
+								href="https://apps.apple.com/gb/app/ft-edit-by-the-financial-times/id1574510369"
+								className={`ncf-icon ncf-icon--apple`}
+								target="_blank"
+								rel="noopener noreferrer"
+								data-trackable={`register-app-apple-ft-edit`}
+							>
+								<span className="o-social-follow-icon__label">on apple</span>
+							</a>
 						</div>
 					</div>
 				</div>
-				<div className="ncf__confirmation--alerts">
+				<div className="ncf__FT_Edit_confirmation--alerts">
 					<b>
 						Set up email alerts in
 						<span aria-label="myFT" className="ncf-icon ncf-icon--myft" />
@@ -123,7 +114,7 @@ export function FTEditRegistrationConfirmation({
 			<a
 				href={returnUrl}
 				target="_parent"
-				className="ncf__confirmation--finish ncf__button ncf__button--submit"
+				className=" ncf__FT_Edit_confirmation--finish ncf__button ncf__button--submit"
 				data-trackable="register-finish-head-to-ft-edit-hub"
 			>
 				Explore our FT Edit hub
@@ -133,7 +124,7 @@ export function FTEditRegistrationConfirmation({
 				<a
 					href={returnUrl}
 					target="_parent"
-					className="ncf__confirmation--finish ncf__button ncf__button--submit"
+					className=" ncf__FT_Edit_confirmation--finish-article-read ncf__button ncf__button--secondary reduce-bottom-spacing"
 					data-trackable="register-finish-head-to-article"
 				>
 					Continue reading
