@@ -23,7 +23,7 @@ describe('RegistrationConfirmation', () => {
 	});
 
 	it('renders an explore hub button always', () => {
-		const props = { email: 'test@example.com' };
+		const props = { email: 'test@example.com', hubUrl: 'http://thing-hub' };
 
 		expect(FTEditRegistrationConfirmation).toRenderCorrectly(props);
 	});

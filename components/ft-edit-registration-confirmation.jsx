@@ -30,7 +30,7 @@ const SOCIALS = [
 export function FTEditRegistrationConfirmation({
 	email = EMAIL_DEFAULT_TEXT,
 	articleUrl = false,
-	returnUrl = '/',
+	hubUrl = '/',
 }) {
 	return (
 		<div className="ncf">
@@ -38,7 +38,7 @@ export function FTEditRegistrationConfirmation({
 				<div className="ncf__icon ncf__icon--tick ncf__icon--large"></div>
 				<h1 className="ncf__header ncf__header--confirmation">Success</h1>
 				<p className="ncf__FT_Edit_confirmation--message">
-					Thankyou for registering for FT Edit.
+					Thank you for registering for FT Edit.
 				</p>
 				<p className="ncf__FT_Edit_confirmation--message margin-top-x4 ">
 					Enjoy 30 days of great journalism. We’ve sent confirmation to {email}.
@@ -112,7 +112,7 @@ export function FTEditRegistrationConfirmation({
 			</div>
 
 			<a
-				href={returnUrl}
+				href={hubUrl}
 				target="_parent"
 				className=" ncf__FT_Edit_confirmation--finish ncf__button ncf__button--submit"
 				data-trackable="register-finish-head-to-ft-edit-hub"
@@ -122,7 +122,7 @@ export function FTEditRegistrationConfirmation({
 
 			{articleUrl && (
 				<a
-					href={returnUrl}
+					href={articleUrl}
 					target="_parent"
 					className=" ncf__FT_Edit_confirmation--finish-article-read ncf__button ncf__button--secondary reduce-bottom-spacing"
 					data-trackable="register-finish-head-to-article"
