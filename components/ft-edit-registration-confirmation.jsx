@@ -29,7 +29,7 @@ const SOCIALS = [
 
 export function FTEditRegistrationConfirmation({
 	email = EMAIL_DEFAULT_TEXT,
-	articleUrl = false,
+	articleUrl = '',
 	hubUrl = '/',
 }) {
 	return (
@@ -136,4 +136,6 @@ export function FTEditRegistrationConfirmation({
 
 FTEditRegistrationConfirmation.propTypes = {
 	email: PropTypes.string,
+	articleUrl: PropTypes.string,
+	hubUrl: PropTypes.string,
 };
