@@ -1,0 +1,480 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegistrationConfirmation renders a continue reading button when an articleUrl is provided 1`] = `
+<div class="ncf">
+  <div class="ncf__center ncf__margin">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Success
+    </h1>
+    <p class="ncf__FT_Edit_confirmation--message">
+      Thank you for registering for FT Edit.
+    </p>
+    <p class="ncf__FT_Edit_confirmation--message margin-top-x4 ">
+      Enjoy 30 days of great journalism. We’ve sent confirmation to test@example.com.
+    </p>
+  </div>
+  <div class="ncf__divider-horizontal">
+  </div>
+  <div class="ncf__FT_Edit_confirmation--links ncf__margin">
+    <div class="ncf__FT_Edit_confirmation--socials">
+      <b>
+        Breaking news alerts, direct to your lock screen
+      </b>
+      <p class="ncf__FT_Edit_confirmation--mobile">
+        Download our apps or follow us on our socials
+      </p>
+      <p class="ncf__FT_Edit_confirmation--desktop">
+        Find us in the app stores or follow us on our socials
+      </p>
+      <div class="ncf__FT_Edit_confirmation--badges">
+        <div class="o-social-follow"
+             aria-label="Follow on social media"
+        >
+          <a href="https://www.instagram.com/financialtimes"
+             class="o-social-follow-icon o-social-follow-icon--instagram"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-instagram"
+          >
+            <span class="o-social-follow-icon__label">
+              on instagram
+            </span>
+          </a>
+          <a href="https://www.linkedin.com/company/financial-times"
+             class="o-social-follow-icon o-social-follow-icon--linkedin"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-linkedin"
+          >
+            <span class="o-social-follow-icon__label">
+              on linkedin
+            </span>
+          </a>
+          <a href="https://twitter.com/FT"
+             class="o-social-follow-icon o-social-follow-icon--twitter"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-twitter"
+          >
+            <span class="o-social-follow-icon__label">
+              on twitter
+            </span>
+          </a>
+          <a href="https://www.facebook.com/financialtimes"
+             class="o-social-follow-icon o-social-follow-icon--facebook"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-facebook"
+          >
+            <span class="o-social-follow-icon__label">
+              on facebook
+            </span>
+          </a>
+        </div>
+        <div class="ncf__FT_Edit_confirmation--mobile ncf__FT_Edit_confirmation--app-badges"
+             aria-label="Download the app"
+        >
+          <a href="https://apps.apple.com/gb/app/ft-edit-by-the-financial-times/id1574510369"
+             class="ncf-icon ncf-icon--apple"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-app-apple-ft-edit"
+          >
+            <span class="o-social-follow-icon__label">
+              on apple
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="ncf__FT_Edit_confirmation--alerts">
+      <b>
+        Set up email alerts in
+        <span aria-label="myFT"
+              class="ncf-icon ncf-icon--myft"
+        >
+        </span>
+      </b>
+      <p>
+        Choose the content you want to follow by personalising your alerts for the most important topics and additional newsletters
+      </p>
+      <a href="/myft"
+         class="margin-top-x4 ncf__button ncf__button--secondary"
+         data-trackable="register-personalise-my-alerts"
+      >
+        Personalise my alerts
+      </a>
+    </div>
+  </div>
+  <a href="/"
+     target="_parent"
+     class=" ncf__FT_Edit_confirmation--finish ncf__button ncf__button--submit"
+     data-trackable="register-finish-head-to-ft-edit-hub"
+  >
+    Explore our FT Edit hub
+  </a>
+  <a href="https://www.ft.com/content/9141eee7-825a-41d7-913d-49e8c12e76db"
+     target="_parent"
+     class=" ncf__FT_Edit_confirmation--finish-article-read ncf__button ncf__button--secondary reduce-bottom-spacing"
+     data-trackable="register-finish-head-to-article"
+  >
+    Continue reading
+  </a>
+</div>
+`;
+
+exports[`RegistrationConfirmation renders an explore hub button always 1`] = `
+<div class="ncf">
+  <div class="ncf__center ncf__margin">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Success
+    </h1>
+    <p class="ncf__FT_Edit_confirmation--message">
+      Thank you for registering for FT Edit.
+    </p>
+    <p class="ncf__FT_Edit_confirmation--message margin-top-x4 ">
+      Enjoy 30 days of great journalism. We’ve sent confirmation to test@example.com.
+    </p>
+  </div>
+  <div class="ncf__divider-horizontal">
+  </div>
+  <div class="ncf__FT_Edit_confirmation--links ncf__margin">
+    <div class="ncf__FT_Edit_confirmation--socials">
+      <b>
+        Breaking news alerts, direct to your lock screen
+      </b>
+      <p class="ncf__FT_Edit_confirmation--mobile">
+        Download our apps or follow us on our socials
+      </p>
+      <p class="ncf__FT_Edit_confirmation--desktop">
+        Find us in the app stores or follow us on our socials
+      </p>
+      <div class="ncf__FT_Edit_confirmation--badges">
+        <div class="o-social-follow"
+             aria-label="Follow on social media"
+        >
+          <a href="https://www.instagram.com/financialtimes"
+             class="o-social-follow-icon o-social-follow-icon--instagram"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-instagram"
+          >
+            <span class="o-social-follow-icon__label">
+              on instagram
+            </span>
+          </a>
+          <a href="https://www.linkedin.com/company/financial-times"
+             class="o-social-follow-icon o-social-follow-icon--linkedin"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-linkedin"
+          >
+            <span class="o-social-follow-icon__label">
+              on linkedin
+            </span>
+          </a>
+          <a href="https://twitter.com/FT"
+             class="o-social-follow-icon o-social-follow-icon--twitter"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-twitter"
+          >
+            <span class="o-social-follow-icon__label">
+              on twitter
+            </span>
+          </a>
+          <a href="https://www.facebook.com/financialtimes"
+             class="o-social-follow-icon o-social-follow-icon--facebook"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-facebook"
+          >
+            <span class="o-social-follow-icon__label">
+              on facebook
+            </span>
+          </a>
+        </div>
+        <div class="ncf__FT_Edit_confirmation--mobile ncf__FT_Edit_confirmation--app-badges"
+             aria-label="Download the app"
+        >
+          <a href="https://apps.apple.com/gb/app/ft-edit-by-the-financial-times/id1574510369"
+             class="ncf-icon ncf-icon--apple"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-app-apple-ft-edit"
+          >
+            <span class="o-social-follow-icon__label">
+              on apple
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="ncf__FT_Edit_confirmation--alerts">
+      <b>
+        Set up email alerts in
+        <span aria-label="myFT"
+              class="ncf-icon ncf-icon--myft"
+        >
+        </span>
+      </b>
+      <p>
+        Choose the content you want to follow by personalising your alerts for the most important topics and additional newsletters
+      </p>
+      <a href="/myft"
+         class="margin-top-x4 ncf__button ncf__button--secondary"
+         data-trackable="register-personalise-my-alerts"
+      >
+        Personalise my alerts
+      </a>
+    </div>
+  </div>
+  <a href="http://thing-hub"
+     target="_parent"
+     class=" ncf__FT_Edit_confirmation--finish ncf__button ncf__button--submit"
+     data-trackable="register-finish-head-to-ft-edit-hub"
+  >
+    Explore our FT Edit hub
+  </a>
+</div>
+`;
+
+exports[`RegistrationConfirmation renders with a custom email 1`] = `
+<div class="ncf">
+  <div class="ncf__center ncf__margin">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Success
+    </h1>
+    <p class="ncf__FT_Edit_confirmation--message">
+      Thank you for registering for FT Edit.
+    </p>
+    <p class="ncf__FT_Edit_confirmation--message margin-top-x4 ">
+      Enjoy 30 days of great journalism. We’ve sent confirmation to test@example.com.
+    </p>
+  </div>
+  <div class="ncf__divider-horizontal">
+  </div>
+  <div class="ncf__FT_Edit_confirmation--links ncf__margin">
+    <div class="ncf__FT_Edit_confirmation--socials">
+      <b>
+        Breaking news alerts, direct to your lock screen
+      </b>
+      <p class="ncf__FT_Edit_confirmation--mobile">
+        Download our apps or follow us on our socials
+      </p>
+      <p class="ncf__FT_Edit_confirmation--desktop">
+        Find us in the app stores or follow us on our socials
+      </p>
+      <div class="ncf__FT_Edit_confirmation--badges">
+        <div class="o-social-follow"
+             aria-label="Follow on social media"
+        >
+          <a href="https://www.instagram.com/financialtimes"
+             class="o-social-follow-icon o-social-follow-icon--instagram"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-instagram"
+          >
+            <span class="o-social-follow-icon__label">
+              on instagram
+            </span>
+          </a>
+          <a href="https://www.linkedin.com/company/financial-times"
+             class="o-social-follow-icon o-social-follow-icon--linkedin"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-linkedin"
+          >
+            <span class="o-social-follow-icon__label">
+              on linkedin
+            </span>
+          </a>
+          <a href="https://twitter.com/FT"
+             class="o-social-follow-icon o-social-follow-icon--twitter"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-twitter"
+          >
+            <span class="o-social-follow-icon__label">
+              on twitter
+            </span>
+          </a>
+          <a href="https://www.facebook.com/financialtimes"
+             class="o-social-follow-icon o-social-follow-icon--facebook"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-facebook"
+          >
+            <span class="o-social-follow-icon__label">
+              on facebook
+            </span>
+          </a>
+        </div>
+        <div class="ncf__FT_Edit_confirmation--mobile ncf__FT_Edit_confirmation--app-badges"
+             aria-label="Download the app"
+        >
+          <a href="https://apps.apple.com/gb/app/ft-edit-by-the-financial-times/id1574510369"
+             class="ncf-icon ncf-icon--apple"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-app-apple-ft-edit"
+          >
+            <span class="o-social-follow-icon__label">
+              on apple
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="ncf__FT_Edit_confirmation--alerts">
+      <b>
+        Set up email alerts in
+        <span aria-label="myFT"
+              class="ncf-icon ncf-icon--myft"
+        >
+        </span>
+      </b>
+      <p>
+        Choose the content you want to follow by personalising your alerts for the most important topics and additional newsletters
+      </p>
+      <a href="/myft"
+         class="margin-top-x4 ncf__button ncf__button--secondary"
+         data-trackable="register-personalise-my-alerts"
+      >
+        Personalise my alerts
+      </a>
+    </div>
+  </div>
+  <a href="/"
+     target="_parent"
+     class=" ncf__FT_Edit_confirmation--finish ncf__button ncf__button--submit"
+     data-trackable="register-finish-head-to-ft-edit-hub"
+  >
+    Explore our FT Edit hub
+  </a>
+</div>
+`;
+
+exports[`RegistrationConfirmation renders with default props 1`] = `
+<div class="ncf">
+  <div class="ncf__center ncf__margin">
+    <div class="ncf__icon ncf__icon--tick ncf__icon--large">
+    </div>
+    <h1 class="ncf__header ncf__header--confirmation">
+      Success
+    </h1>
+    <p class="ncf__FT_Edit_confirmation--message">
+      Thank you for registering for FT Edit.
+    </p>
+    <p class="ncf__FT_Edit_confirmation--message margin-top-x4 ">
+      Enjoy 30 days of great journalism. We’ve sent confirmation to your email.
+    </p>
+  </div>
+  <div class="ncf__divider-horizontal">
+  </div>
+  <div class="ncf__FT_Edit_confirmation--links ncf__margin">
+    <div class="ncf__FT_Edit_confirmation--socials">
+      <b>
+        Breaking news alerts, direct to your lock screen
+      </b>
+      <p class="ncf__FT_Edit_confirmation--mobile">
+        Download our apps or follow us on our socials
+      </p>
+      <p class="ncf__FT_Edit_confirmation--desktop">
+        Find us in the app stores or follow us on our socials
+      </p>
+      <div class="ncf__FT_Edit_confirmation--badges">
+        <div class="o-social-follow"
+             aria-label="Follow on social media"
+        >
+          <a href="https://www.instagram.com/financialtimes"
+             class="o-social-follow-icon o-social-follow-icon--instagram"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-instagram"
+          >
+            <span class="o-social-follow-icon__label">
+              on instagram
+            </span>
+          </a>
+          <a href="https://www.linkedin.com/company/financial-times"
+             class="o-social-follow-icon o-social-follow-icon--linkedin"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-linkedin"
+          >
+            <span class="o-social-follow-icon__label">
+              on linkedin
+            </span>
+          </a>
+          <a href="https://twitter.com/FT"
+             class="o-social-follow-icon o-social-follow-icon--twitter"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-twitter"
+          >
+            <span class="o-social-follow-icon__label">
+              on twitter
+            </span>
+          </a>
+          <a href="https://www.facebook.com/financialtimes"
+             class="o-social-follow-icon o-social-follow-icon--facebook"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-social-facebook"
+          >
+            <span class="o-social-follow-icon__label">
+              on facebook
+            </span>
+          </a>
+        </div>
+        <div class="ncf__FT_Edit_confirmation--mobile ncf__FT_Edit_confirmation--app-badges"
+             aria-label="Download the app"
+        >
+          <a href="https://apps.apple.com/gb/app/ft-edit-by-the-financial-times/id1574510369"
+             class="ncf-icon ncf-icon--apple"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-trackable="register-app-apple-ft-edit"
+          >
+            <span class="o-social-follow-icon__label">
+              on apple
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="ncf__FT_Edit_confirmation--alerts">
+      <b>
+        Set up email alerts in
+        <span aria-label="myFT"
+              class="ncf-icon ncf-icon--myft"
+        >
+        </span>
+      </b>
+      <p>
+        Choose the content you want to follow by personalising your alerts for the most important topics and additional newsletters
+      </p>
+      <a href="/myft"
+         class="margin-top-x4 ncf__button ncf__button--secondary"
+         data-trackable="register-personalise-my-alerts"
+      >
+        Personalise my alerts
+      </a>
+    </div>
+  </div>
+  <a href="/"
+     target="_parent"
+     class=" ncf__FT_Edit_confirmation--finish ncf__button ncf__button--submit"
+     data-trackable="register-finish-head-to-ft-edit-hub"
+  >
+    Explore our FT Edit hub
+  </a>
+</div>
+`;
