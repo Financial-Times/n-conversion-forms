@@ -14,7 +14,7 @@ export default {
 
 export const Basic = (args) => <FTEditRegistrationConfirmation {...args} />;
 Basic.args = {
-	email: 'hello',
+	email: 'some@email.com',
 	hubUrl: 'https://ft-hub',
 };
 
@@ -22,6 +22,6 @@ export const WithArticleUrl = (args) => (
 	<FTEditRegistrationConfirmation {...args} />
 );
 Basic.args = {
-	email: 'hello',
+	email: 'some@email.com',
 	articleUrl: 'http://read-this-article.com',
 };
