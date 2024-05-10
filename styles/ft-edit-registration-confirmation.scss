@@ -19,7 +19,7 @@
 );
 
 @mixin ncfConfirmation() {
-	&__FT_Edit_confirmation {
+	&__confirmation {
 		&--message {
 			max-width: 304px;
 			margin: auto;
