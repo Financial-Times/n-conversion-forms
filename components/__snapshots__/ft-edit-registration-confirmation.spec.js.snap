@@ -26,7 +26,7 @@ exports[`RegistrationConfirmation renders a continue reading button when an arti
      class=" ncf__confirmation--finish ncf__button ncf__button--submit"
      data-trackable="register-finish-head-to-ft-edit-hub"
   >
-    Explore our FT Edit hub
+    Explore FT Edit
   </a>
   <a href="https://www.ft.com/content/9141eee7-825a-41d7-913d-49e8c12e76db"
      target="_parent"
@@ -64,7 +64,7 @@ exports[`RegistrationConfirmation renders an explore hub button always 1`] = `
      class=" ncf__confirmation--finish ncf__button ncf__button--submit"
      data-trackable="register-finish-head-to-ft-edit-hub"
   >
-    Explore our FT Edit hub
+    Explore FT Edit
   </a>
 </div>
 `;
@@ -95,7 +95,7 @@ exports[`RegistrationConfirmation renders with a custom email 1`] = `
      class=" ncf__confirmation--finish ncf__button ncf__button--submit"
      data-trackable="register-finish-head-to-ft-edit-hub"
   >
-    Explore our FT Edit hub
+    Explore FT Edit
   </a>
 </div>
 `;
@@ -126,7 +126,7 @@ exports[`RegistrationConfirmation renders with default props 1`] = `
      class=" ncf__confirmation--finish ncf__button ncf__button--submit"
      data-trackable="register-finish-head-to-ft-edit-hub"
   >
-    Explore our FT Edit hub
+    Explore FT Edit
   </a>
 </div>
 `;
