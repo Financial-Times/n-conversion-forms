@@ -35,7 +35,7 @@ export function FTEditRegistrationConfirmation({
 				className=" ncf__confirmation--finish ncf__button ncf__button--submit"
 				data-trackable="register-finish-head-to-ft-edit-hub"
 			>
-				Explore our FT Edit hub
+				Explore FT Edit
 			</a>
 
 			{articleUrl && (
