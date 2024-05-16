@@ -30,7 +30,7 @@ exports[`DeliveryStartDate renders with a custom date 1`] = `
     </span>
   </span>
   <p>
-    Your print subscription will start from:
+    The first print edition you will receive is on:
     <strong class="js-start-date-text">
       5th November 2019
     </strong>
@@ -68,7 +68,7 @@ exports[`DeliveryStartDate renders with a custom input max value 1`] = `
     </span>
   </span>
   <p>
-    Your print subscription will start from:
+    The first print edition you will receive is on:
     <strong class="js-start-date-text">
       2
     </strong>
@@ -107,7 +107,7 @@ exports[`DeliveryStartDate renders with a custom input min value 1`] = `
     </span>
   </span>
   <p>
-    Your print subscription will start from:
+    The first print edition you will receive is on:
     <strong class="js-start-date-text">
     </strong>
   </p>
@@ -144,7 +144,7 @@ exports[`DeliveryStartDate renders with a custom input value 1`] = `
     </span>
   </span>
   <p>
-    Your print subscription will start from:
+    The first print edition you will receive is on:
     <strong class="js-start-date-text">
     </strong>
   </p>
@@ -182,7 +182,7 @@ exports[`DeliveryStartDate renders with a disabled input 1`] = `
     </span>
   </span>
   <p>
-    Your print subscription will start from:
+    The first print edition you will receive is on:
     <strong class="js-start-date-text">
     </strong>
   </p>
@@ -219,7 +219,7 @@ exports[`DeliveryStartDate renders with an error 1`] = `
     </span>
   </span>
   <p>
-    Your print subscription will start from:
+    The first print edition you will receive is on:
     <strong class="js-start-date-text">
     </strong>
   </p>
@@ -293,7 +293,7 @@ exports[`DeliveryStartDate renders with country different than default 1`] = `
     </span>
   </span>
   <p>
-    Your print subscription will start from:
+    The first print edition you will receive is on:
     <strong class="js-start-date-text">
     </strong>
   </p>
@@ -330,7 +330,7 @@ exports[`DeliveryStartDate renders with default props 1`] = `
     </span>
   </span>
   <p>
-    Your print subscription will start from:
+    The first print edition you will receive is on:
     <strong class="js-start-date-text">
     </strong>
   </p>
