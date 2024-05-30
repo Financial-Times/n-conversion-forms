@@ -32,7 +32,7 @@ export function DeliveryStartDate({
 
 	const startMessage = isAddressUpdate
 		? 'We’ll start delivering to this address from:'
-		: 'The first print edition you will receive is on:';
+		: 'The first print edition you will receive is:';
 
 	return (
 		<label
