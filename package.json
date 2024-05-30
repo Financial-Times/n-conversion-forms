@@ -1,7 +1,7 @@
 {
   "name": "@financial-times/n-conversion-forms",
   "version": "0.0.0",
-  "description": "Containing jsx components and styles for forms included on Accounts and Acqusition apps (next-signup, next-profile, next-retention, etc).",
+  "description": "Containing jsx components and styles for forms included on Accounts and Acquisition apps (next-signup, next-profile, next-retention, etc).",
   "main": "./dist/index.js",
   "scripts": {
     "test": "dotcom-tool-kit test:local",
