@@ -42,6 +42,7 @@ export function PaymentType({
 	value,
 	isSingleTerm = false,
 	isSingleTermChecked = false,
+	showNewDesign = false,
 }) {
 	const createSecuritySeal = () => {
 		return (
@@ -79,6 +80,12 @@ export function PaymentType({
 		}
 	};
 
+	const showPaymentTypePaypal = () => {
+		if (!showPaypalCustomerCareMessage) {
+			return { id: 'paypal', label: 'PayPal', hide: !enablePaypal };
+		}
+	};
+
 	const paymentTypeDirectDebit = {
 		id: 'directdebit',
 		label: 'Direct Debit',
@@ -97,14 +104,14 @@ export function PaymentType({
 		hide: !enableBankTransfer,
 	};
 
-	const createPaymentTypes = () => {
+	const createPaymentTypes = (useNewDesign = false) => {
 		const paymentTypes = [
 			paymentTypeCreditCard,
-			paymentTypePaypal(),
+			useNewDesign ? showPaymentTypePaypal() : paymentTypePaypal(),
 			paymentTypeDirectDebit,
 			paymentTypeApplePay,
 			paymentTypeBankTransfer,
-		];
+		].filter(Boolean);
 		return paymentTypes.map((type) => {
 			if (type.id === undefined) {
 				return type;
@@ -239,37 +246,55 @@ export function PaymentType({
 		checked: true,
 		...(isSingleTermChecked && { defaultChecked: true }),
 	};
-
 	return (
 		<React.Fragment>
-			{createSecuritySeal()}
-			<div id={fieldId} className="o-forms-field">
-				{createLoaderOnInit()}
-				<div className="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
-					{createPaymentTypes()}
-				</div>
+			{!showNewDesign && (
+				<>
+					{createSecuritySeal()}
+					<div id={fieldId} className="o-forms-field">
+						{createLoaderOnInit()}
+						<div className="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
+							{createPaymentTypes()}
+						</div>
+						<div className="o-forms-input__error">
+							Please enter a valid payment type
+						</div>
+						{createDirectDebitPanel()}
+						{createZuoraPanel()}
+					</div>
+				</>
+			)}
 
-				<div className="o-forms-input__error">
-					Please enter a valid payment type
-				</div>
+			{showNewDesign && (
+				<>
+					{createSecuritySeal()}
+					<div id={fieldId} className="o-forms-field">
+						{createLoaderOnInit()}
+						<div className="o-forms-input o-forms-input--radio-box ncf__payment-type-selector payment-type--container">
+							{createPaymentTypes(true)}
+						</div>
+						{showPaypalCustomerCareMessage && PaypalCustomerCareMessage()}
 
-				{createDirectDebitPanel()}
+						{createDirectDebitPanel()}
+						{createZuoraPanel()}
+						<div className="o-forms-input__error">
+							Please enter a valid payment type
+						</div>
+					</div>
+				</>
+			)}
 
-				{createZuoraPanel()}
-			</div>
 			<div className="o-forms-field">
 				{isSingleTerm && (
-					<>
-						<label
-							className="o-forms-input o-forms-input--checkbox o-forms-input--suffix ncf__payment-type-pay-faster-next-time-checkbox"
-							htmlFor="payFasterNextTime"
-						>
-							<input {...inputCheckProps} />
-							<span className="o-forms-input__label">
-								Use these details to pay faster next time
-							</span>
-						</label>
-					</>
+					<label
+						className="o-forms-input o-forms-input--checkbox o-forms-input--suffix ncf__payment-type-pay-faster-next-time-checkbox"
+						htmlFor="payFasterNextTime"
+					>
+						<input {...inputCheckProps} />
+						<span className="o-forms-input__label">
+							Use these details to pay faster next time
+						</span>
+					</label>
 				)}
 			</div>
 		</React.Fragment>

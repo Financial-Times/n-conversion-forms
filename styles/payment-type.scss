@@ -10,6 +10,7 @@
 }
 
 @mixin ncfPaymentType() {
+
 	// #1 - Need to be this specific to override specific o-forms styles.
 	//      Helps us override the floating of the radio box so that we can have it
 	//      full width.
@@ -37,13 +38,14 @@
 		}
 
 		.o-forms-input--radio-box &--paypal {
+
 			// #2
-			[type='radio'] + .o-forms-input__label {
+			[type='radio']+.o-forms-input__label {
 				@include buttonImageOverriding();
 				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2Fthird-party%2Fpp-logo-100px.png?width=300&source=next&fit=scale-down);
 			}
 
-			[type='radio']:checked + .o-forms-input__label {
+			[type='radio']:checked+.o-forms-input__label {
 				@include buttonImageOverriding();
 				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2Fthird-party%2Fpp-logo-white.png?width=300&source=next&fit=scale-down);
 			}
@@ -51,13 +53,14 @@
 
 
 		.o-forms-input--radio-box &--directdebit {
+
 			// #2
-			[type='radio'] + .o-forms-input__label {
+			[type='radio']+.o-forms-input__label {
 				@include buttonImageOverriding();
 				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2Fthird-party%2Fdirect_debit.png?width=300&source=next&fit=scale-down);
 			}
 
-			[type='radio']:checked + .o-forms-input__label {
+			[type='radio']:checked+.o-forms-input__label {
 				@include buttonImageOverriding();
 				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2Fthird-party%2Fdirect_debit-white.png?width=300&source=next&fit=scale-down);
 			}
@@ -101,10 +104,13 @@
 		table {
 			margin: 0 auto;
 		}
+
 		a {
 			border: 0;
 		}
 	}
+
+
 }
 
 .ncf__payment-type-paypal-message {
@@ -113,4 +119,21 @@
 
 .o-forms-input.o-forms-input--checkbox.o-forms-input--suffix.ncf__payment-type-pay-faster-next-time-checkbox {
 	margin-top: oSpacingByName('s3');
+}
+
+.payment-type--container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: baseline;
+	margin-bottom: oSpacingByName('s3');
+
+	@include oGridRespondTo($from: M) {
+		flex-direction: row;
+		gap: oSpacingByName('s2');
+	}
+
+	.o-forms-input--radio-box__container {
+		width: 100% !important;
+	}
 }
