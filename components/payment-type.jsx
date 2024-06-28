@@ -273,7 +273,9 @@ export function PaymentType({
 						<div className="o-forms-input o-forms-input--radio-box ncf__payment-type-selector payment-type--container">
 							{createPaymentTypes(true)}
 						</div>
-						{showPaypalCustomerCareMessage && PaypalCustomerCareMessage()}
+						{showPaypalCustomerCareMessage &&
+							showNewDesign &&
+							PaypalCustomerCareMessage()}
 
 						{createDirectDebitPanel()}
 						{createZuoraPanel()}
