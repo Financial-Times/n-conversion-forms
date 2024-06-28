@@ -80,7 +80,7 @@ export function PaymentType({
 		}
 	};
 
-	const showPaymentTypePaypal = () => {
+	const showNewDesignPaymentTypePaypal = () => {
 		if (!showPaypalCustomerCareMessage) {
 			return { id: 'paypal', label: 'PayPal', hide: !enablePaypal };
 		}
@@ -107,7 +107,7 @@ export function PaymentType({
 	const createPaymentTypes = (useNewDesign = false) => {
 		const paymentTypes = [
 			paymentTypeCreditCard,
-			useNewDesign ? showPaymentTypePaypal() : paymentTypePaypal(),
+			useNewDesign ? showNewDesignPaymentTypePaypal() : paymentTypePaypal(),
 			paymentTypeDirectDebit,
 			paymentTypeApplePay,
 			paymentTypeBankTransfer,
