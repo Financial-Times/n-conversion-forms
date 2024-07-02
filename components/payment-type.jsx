@@ -72,9 +72,7 @@ export function PaymentType({
 	};
 
 	const paymentTypePaypal = () => {
-		if (showPaypalCustomerCareMessage) {
-			return PaypalCustomerCareMessage();
-		} else {
+		if (!showPaypalCustomerCareMessage) {
 			return { id: 'paypal', label: 'PayPal', hide: !enablePaypal };
 		}
 	};
@@ -104,7 +102,8 @@ export function PaymentType({
 			paymentTypeDirectDebit,
 			paymentTypeApplePay,
 			paymentTypeBankTransfer,
-		];
+		].filter(Boolean);
+
 		return paymentTypes.map((type) => {
 			if (type.id === undefined) {
 				return type;
@@ -239,7 +238,6 @@ export function PaymentType({
 		checked: true,
 		...(isSingleTermChecked && { defaultChecked: true }),
 	};
-
 	return (
 		<React.Fragment>
 			{createSecuritySeal()}
@@ -252,24 +250,21 @@ export function PaymentType({
 				<div className="o-forms-input__error">
 					Please enter a valid payment type
 				</div>
-
+				{showPaypalCustomerCareMessage && PaypalCustomerCareMessage()}
 				{createDirectDebitPanel()}
-
 				{createZuoraPanel()}
 			</div>
 			<div className="o-forms-field">
 				{isSingleTerm && (
-					<>
-						<label
-							className="o-forms-input o-forms-input--checkbox o-forms-input--suffix ncf__payment-type-pay-faster-next-time-checkbox"
-							htmlFor="payFasterNextTime"
-						>
-							<input {...inputCheckProps} />
-							<span className="o-forms-input__label">
-								Use these details to pay faster next time
-							</span>
-						</label>
-					</>
+					<label
+						className="o-forms-input o-forms-input--checkbox o-forms-input--suffix ncf__payment-type-pay-faster-next-time-checkbox"
+						htmlFor="payFasterNextTime"
+					>
+						<input {...inputCheckProps} />
+						<span className="o-forms-input__label">
+							Use these details to pay faster next time
+						</span>
+					</label>
 				)}
 			</div>
 		</React.Fragment>
