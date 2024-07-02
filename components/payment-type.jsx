@@ -42,7 +42,6 @@ export function PaymentType({
 	value,
 	isSingleTerm = false,
 	isSingleTermChecked = false,
-	showNewDesign = false,
 }) {
 	const createSecuritySeal = () => {
 		return (
@@ -73,14 +72,6 @@ export function PaymentType({
 	};
 
 	const paymentTypePaypal = () => {
-		if (showPaypalCustomerCareMessage) {
-			return PaypalCustomerCareMessage();
-		} else {
-			return { id: 'paypal', label: 'PayPal', hide: !enablePaypal };
-		}
-	};
-
-	const showNewDesignPaymentTypePaypal = () => {
 		if (!showPaypalCustomerCareMessage) {
 			return { id: 'paypal', label: 'PayPal', hide: !enablePaypal };
 		}
@@ -104,14 +95,15 @@ export function PaymentType({
 		hide: !enableBankTransfer,
 	};
 
-	const createPaymentTypes = (useNewDesign = false) => {
+	const createPaymentTypes = () => {
 		const paymentTypes = [
 			paymentTypeCreditCard,
-			useNewDesign ? showNewDesignPaymentTypePaypal() : paymentTypePaypal(),
+			paymentTypePaypal,
 			paymentTypeDirectDebit,
 			paymentTypeApplePay,
 			paymentTypeBankTransfer,
 		].filter(Boolean);
+
 		return paymentTypes.map((type) => {
 			if (type.id === undefined) {
 				return type;
@@ -248,44 +240,20 @@ export function PaymentType({
 	};
 	return (
 		<React.Fragment>
-			{!showNewDesign && (
-				<>
-					{createSecuritySeal()}
-					<div id={fieldId} className="o-forms-field">
-						{createLoaderOnInit()}
-						<div className="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
-							{createPaymentTypes()}
-						</div>
-						<div className="o-forms-input__error">
-							Please enter a valid payment type
-						</div>
-						{createDirectDebitPanel()}
-						{createZuoraPanel()}
-					</div>
-				</>
-			)}
+			{createSecuritySeal()}
+			<div id={fieldId} className="o-forms-field">
+				{createLoaderOnInit()}
+				<div className="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
+					{createPaymentTypes()}
+				</div>
+				{showPaypalCustomerCareMessage && PaypalCustomerCareMessage()}
 
-			{showNewDesign && (
-				<>
-					{createSecuritySeal()}
-					<div id={fieldId} className="o-forms-field">
-						{createLoaderOnInit()}
-						<div className="o-forms-input o-forms-input--radio-box ncf__payment-type-selector payment-type--container">
-							{createPaymentTypes(true)}
-						</div>
-						{showPaypalCustomerCareMessage &&
-							showNewDesign &&
-							PaypalCustomerCareMessage()}
-
-						{createDirectDebitPanel()}
-						{createZuoraPanel()}
-						<div className="o-forms-input__error">
-							Please enter a valid payment type
-						</div>
-					</div>
-				</>
-			)}
-
+				{createDirectDebitPanel()}
+				{createZuoraPanel()}
+				<div className="o-forms-input__error">
+					Please enter a valid payment type
+				</div>
+			</div>
 			<div className="o-forms-field">
 				{isSingleTerm && (
 					<label

@@ -15,5 +15,4 @@ Basic.args = {
 	enablePaypal: true,
 	showPaypalCustomerCareMessage: true,
 	enableBankTransfer: true,
-	showNewDesign: false,
 };
