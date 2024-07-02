@@ -250,9 +250,9 @@ export function PaymentType({
 				<div className="o-forms-input__error">
 					Please enter a valid payment type
 				</div>
+				{showPaypalCustomerCareMessage && PaypalCustomerCareMessage()}
 				{createDirectDebitPanel()}
 				{createZuoraPanel()}
-				{showPaypalCustomerCareMessage && PaypalCustomerCareMessage()}
 			</div>
 			<div className="o-forms-field">
 				{isSingleTerm && (
