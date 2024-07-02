@@ -98,7 +98,7 @@ export function PaymentType({
 	const createPaymentTypes = () => {
 		const paymentTypes = [
 			paymentTypeCreditCard,
-			paymentTypePaypal,
+			paymentTypePaypal(),
 			paymentTypeDirectDebit,
 			paymentTypeApplePay,
 			paymentTypeBankTransfer,
@@ -246,13 +246,13 @@ export function PaymentType({
 				<div className="o-forms-input o-forms-input--radio-box ncf__payment-type-selector">
 					{createPaymentTypes()}
 				</div>
-				{showPaypalCustomerCareMessage && PaypalCustomerCareMessage()}
 
-				{createDirectDebitPanel()}
-				{createZuoraPanel()}
 				<div className="o-forms-input__error">
 					Please enter a valid payment type
 				</div>
+				{createDirectDebitPanel()}
+				{createZuoraPanel()}
+				{showPaypalCustomerCareMessage && PaypalCustomerCareMessage()}
 			</div>
 			<div className="o-forms-field">
 				{isSingleTerm && (
