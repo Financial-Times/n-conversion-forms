@@ -10,6 +10,9 @@
 | ------ | ----- |
 |        |       |
 
+### Semantic versioning
+<!-- What is the proposed release type (i.e. major, minor, path) for these changes and the rationale? -->
+
 ### Reminder
 Have you completed these common tasks (remove those that don't apply)?
 
