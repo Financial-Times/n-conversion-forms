@@ -41,7 +41,7 @@
 			align-items: baseline;
 			margin-bottom: oSpacingByName('s3');
 
-			@include oGridRespondTo($from: M) {
+			@include oGridRespondTo($from: L) {
 				flex-direction: row;
 				gap: oSpacingByName('s2');
 			}
