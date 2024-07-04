@@ -10,6 +10,7 @@
 }
 
 @mixin ncfPaymentType() {
+
 	// #1 - Need to be this specific to override specific o-forms styles.
 	//      Helps us override the floating of the radio box so that we can have it
 	//      full width.
@@ -21,6 +22,7 @@
 			// #1
 			display: block;
 			margin-bottom: oSpacingByName('s3');
+			width: 100%;
 
 			&:last-child {
 				margin-bottom: 0;
@@ -33,17 +35,27 @@
 		}
 
 		&-selector {
-			margin-top: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: baseline;
+			margin-bottom: oSpacingByName('s3');
+
+			@include oGridRespondTo($from: L) {
+				flex-direction: row;
+				gap: oSpacingByName('s2');
+			}
 		}
 
 		.o-forms-input--radio-box &--paypal {
+
 			// #2
-			[type='radio'] + .o-forms-input__label {
+			[type='radio']+.o-forms-input__label {
 				@include buttonImageOverriding();
 				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2Fthird-party%2Fpp-logo-100px.png?width=300&source=next&fit=scale-down);
 			}
 
-			[type='radio']:checked + .o-forms-input__label {
+			[type='radio']:checked+.o-forms-input__label {
 				@include buttonImageOverriding();
 				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2Fthird-party%2Fpp-logo-white.png?width=300&source=next&fit=scale-down);
 			}
@@ -52,12 +64,12 @@
 
 		.o-forms-input--radio-box &--directdebit {
 			// #2
-			[type='radio'] + .o-forms-input__label {
+			[type='radio']+.o-forms-input__label {
 				@include buttonImageOverriding();
 				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2Fthird-party%2Fdirect_debit.png?width=300&source=next&fit=scale-down);
 			}
 
-			[type='radio']:checked + .o-forms-input__label {
+			[type='radio']:checked+.o-forms-input__label {
 				@include buttonImageOverriding();
 				background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/%2F%2Fwww.ft.com%2F__assets%2Fcreatives%2Fthird-party%2Fdirect_debit-white.png?width=300&source=next&fit=scale-down);
 			}
