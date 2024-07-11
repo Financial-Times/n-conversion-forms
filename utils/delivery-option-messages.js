@@ -20,9 +20,10 @@ const HAND_DELIVERY = 'HD';
 const MAIL = 'ML';
 
 // Country codes
-const UK_COUNTRY_CODE = 'GBR';
-const USA_COUNTRY_CODE = 'USA';
 const CAN_COUNTRY_CODE = 'CAN';
+const UK_COUNTRY_CODE = 'GBR';
+const JPN_COUNTRY_CODE = 'JPN';
+const USA_COUNTRY_CODE = 'USA';
 
 const UKDeliveryOptions = {
 	PV: {
@@ -38,6 +39,14 @@ const UKDeliveryOptions = {
 		title: 'Electronic vouchers',
 		description:
 			'Delivered via email and card, redeemable at retailers nationwide.',
+	},
+};
+
+const JapanDeliveryOptions = {
+	HD: {
+		title: 'Hand delivery',
+		description:
+			'Enjoy delivery of the newspaper to your home or office address.',
 	},
 };
 
@@ -287,10 +296,18 @@ function findCustomDeliveryOption(productCode, option, FTShippingZone) {
 	return deliveryOption;
 }
 
-function getDeliveryOption(productCode, option, FTShippingZone) {
-	return FTShippingZone === UK_COUNTRY_CODE
-		? UKDeliveryOptions[option.value]
-		: findCustomDeliveryOption(productCode, option, FTShippingZone);
+function getDeliveryOption(productCode, option, FTShippingZone, country) {
+	if (FTShippingZone === UK_COUNTRY_CODE) {
+		return UKDeliveryOptions[option.value];
+	}
+
+	// A specific delivery message should be displayed for Japan
+	// More info: https://financialtimes.atlassian.net/browse/ACQ-2876
+	if (country === JPN_COUNTRY_CODE) {
+		return JapanDeliveryOptions[option.value];
+	}
+
+	return findCustomDeliveryOption(productCode, option, FTShippingZone);
 }
 
 module.exports = {

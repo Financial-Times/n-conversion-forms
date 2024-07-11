@@ -134,6 +134,25 @@ describe('Find Custom Delivery Option', () => {
 		});
 	});
 
+	describe('Find Japan Delivery Option', () => {
+		it('returns Japan HD delivery option', () => {
+			const expected = {
+				title: 'Hand delivery',
+				description:
+					'Enjoy delivery of the newspaper to your home or office address.',
+			};
+
+			const deliveryOption = getDeliveryOption(
+				sixDaysProductCode,
+				stubOption,
+				'APAC',
+				'JPN'
+			);
+
+			expect(deliveryOption).toEqual(expected);
+		});
+	});
+
 	describe('Find CEMEA/APAC Delivery Option', () => {
 		it('returns CEMEA/APAC HD delivery option', () => {
 			stubOption.flightMarket = true;

@@ -35,7 +35,8 @@ export function DeliveryOption({
 					const deliveryOptionValue = getDeliveryOption(
 						productCode,
 						option,
-						FTShippingZone
+						FTShippingZone,
+						country
 					);
 
 					if (!isValidDeliveryOption || !deliveryOptionValue) {
