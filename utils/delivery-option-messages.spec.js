@@ -14,14 +14,14 @@ describe('Find Custom Delivery Option', () => {
 
 		it('returns undefined when other country than custom messages', () => {
 			expect(
-				getDeliveryOption(sixDaysProductCode, stubOption, 'AAA')
+				getDeliveryOption(sixDaysProductCode, stubOption, 'AAA', 'AAA')
 			).toBeUndefined();
 		});
 
 		it('returns undefined when invalid distributor type code', () => {
 			const option = { ...stubOption, value: 'ZZ' };
 			expect(
-				getDeliveryOption(sixDaysProductCode, option, 'USA')
+				getDeliveryOption(sixDaysProductCode, option, 'USA', 'USA')
 			).toBeUndefined();
 		});
 
@@ -29,7 +29,7 @@ describe('Find Custom Delivery Option', () => {
 			stubOption.deliveryOnPublicationDate = undefined;
 			stubOption.flightMarket = undefined;
 			expect(
-				getDeliveryOption(sixDaysProductCode, stubOption, 'AAA')
+				getDeliveryOption(sixDaysProductCode, stubOption, 'AAA', 'AAA')
 			).toBeUndefined();
 		});
 	});
@@ -51,6 +51,7 @@ describe('Find Custom Delivery Option', () => {
 			const deliveryOption = getDeliveryOption(
 				sixDaysProductCode,
 				stubOption,
+				'USA',
 				'USA'
 			);
 
@@ -69,6 +70,7 @@ describe('Find Custom Delivery Option', () => {
 			const deliveryOption = getDeliveryOption(
 				weekendProductCode,
 				stubOption,
+				'USA',
 				'USA'
 			);
 
@@ -92,6 +94,7 @@ describe('Find Custom Delivery Option', () => {
 			const deliveryOption = getDeliveryOption(
 				sixDaysProductCode,
 				stubOption,
+				'USA',
 				'USA'
 			);
 
@@ -109,6 +112,7 @@ describe('Find Custom Delivery Option', () => {
 			const deliveryOption = getDeliveryOption(
 				weekendProductCode,
 				stubOption,
+				'CAN',
 				'CAN'
 			);
 
@@ -127,6 +131,7 @@ describe('Find Custom Delivery Option', () => {
 			const deliveryOption = getDeliveryOption(
 				sixDaysProductCode,
 				{ value: 'EV' },
+				'GBR',
 				'GBR'
 			);
 
@@ -164,7 +169,12 @@ describe('Find Custom Delivery Option', () => {
 					'Enjoy the delivery of the newspaper to your home or office address. Please note we fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT’s control. In those circumstances, your newspaper will be delivered the next delivery day. Please also be aware that your FT weekend will be delivered on Sunday.',
 			};
 
-			const deliveryOption = getDeliveryOption('N6D', stubOption, 'CEMEA_V1');
+			const deliveryOption = getDeliveryOption(
+				'N6D',
+				stubOption,
+				'CEMEA_V1',
+				'BGR'
+			);
 
 			expect(deliveryOption).toEqual(expected);
 		});
@@ -179,7 +189,12 @@ describe('Find Custom Delivery Option', () => {
 					'Enjoy delivery of the newspaper to your home or office address. Note this is a postal delivery - expect delivery after the day of publication. If you would prefer to read the newspaper on the day of publication, purchase an FT ePaper subscription, our digital replica of the each daily edition.',
 			};
 
-			const deliveryOption = getDeliveryOption('N6D', stubOption, 'APAC');
+			const deliveryOption = getDeliveryOption(
+				'N6D',
+				stubOption,
+				'APAC',
+				'HKG'
+			);
 
 			expect(deliveryOption).toEqual(expected);
 		});

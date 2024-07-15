@@ -25,28 +25,35 @@ const UK_COUNTRY_CODE = 'GBR';
 const JPN_COUNTRY_CODE = 'JPN';
 const USA_COUNTRY_CODE = 'USA';
 
-const UKDeliveryOptions = {
-	PV: {
-		title: 'Paper vouchers',
-		description:
-			'13-week voucher pack delivered quarterly and redeemable at retailers nationwide.',
+const customCountries = [UK_COUNTRY_CODE, JPN_COUNTRY_CODE];
+const customCountriesDeliveryOptions = {
+	GBR: {
+		PV: {
+			title: 'Paper vouchers',
+			description:
+				'13-week voucher pack delivered quarterly and redeemable at retailers nationwide.',
+		},
+		HD: {
+			title: 'Hand delivery',
+			description: 'Free delivery to your home or office before 7am.',
+		},
+		EV: {
+			title: 'Electronic vouchers',
+			description:
+				'Delivered via email and card, redeemable at retailers nationwide.',
+		},
 	},
-	HD: {
-		title: 'Hand delivery',
-		description: 'Free delivery to your home or office before 7am.',
-	},
-	EV: {
-		title: 'Electronic vouchers',
-		description:
-			'Delivered via email and card, redeemable at retailers nationwide.',
-	},
-};
-
-const JapanDeliveryOptions = {
-	HD: {
-		title: 'Hand delivery',
-		description:
-			'Enjoy delivery of the newspaper to your home or office address.',
+	JPN: {
+		HD: {
+			title: 'Hand delivery',
+			description:
+				'Enjoy delivery of the newspaper to your home or office address.',
+		},
+		ML: {
+			title: 'Mail Delivery',
+			description:
+				'Enjoy delivery of the newspaper to your home or office address.',
+		},
 	},
 };
 
@@ -297,14 +304,9 @@ function findCustomDeliveryOption(productCode, option, FTShippingZone) {
 }
 
 function getDeliveryOption(productCode, option, FTShippingZone, country) {
-	if (FTShippingZone === UK_COUNTRY_CODE) {
-		return UKDeliveryOptions[option.value];
-	}
-
-	// A specific delivery message should be displayed for Japan
-	// More info: https://financialtimes.atlassian.net/browse/ACQ-2876
-	if (country === JPN_COUNTRY_CODE) {
-		return JapanDeliveryOptions[option.value];
+	// Custom delivery messages are displayed for certain countries
+	if (customCountries.includes(country)) {
+		return customCountriesDeliveryOptions[country][option.value];
 	}
 
 	return findCustomDeliveryOption(productCode, option, FTShippingZone);
