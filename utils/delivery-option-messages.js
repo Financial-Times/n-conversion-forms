@@ -20,14 +20,25 @@ const HAND_DELIVERY = 'HD';
 const MAIL = 'ML';
 
 // Country codes
-const CAN_COUNTRY_CODE = 'CAN';
+const CANADA_COUNTRY_CODE = 'CAN';
+const JAPAN_COUNTRY_CODE = 'JPN';
 const UK_COUNTRY_CODE = 'GBR';
-const JPN_COUNTRY_CODE = 'JPN';
 const USA_COUNTRY_CODE = 'USA';
 
-const customCountries = [UK_COUNTRY_CODE, JPN_COUNTRY_CODE];
-const customCountriesDeliveryOptions = {
-	GBR: {
+const countryCodeToCustomDeliveryOptionsMap = {
+	[JAPAN_COUNTRY_CODE]: {
+		HD: {
+			title: 'Hand delivery',
+			description:
+				'Enjoy delivery of the newspaper to your home or office address.',
+		},
+		ML: {
+			title: 'Mail Delivery',
+			description:
+				'Enjoy delivery of the newspaper to your home or office address.',
+		},
+	},
+	[UK_COUNTRY_CODE]: {
 		PV: {
 			title: 'Paper vouchers',
 			description:
@@ -41,18 +52,6 @@ const customCountriesDeliveryOptions = {
 			title: 'Electronic vouchers',
 			description:
 				'Delivered via email and card, redeemable at retailers nationwide.',
-		},
-	},
-	JPN: {
-		HD: {
-			title: 'Hand delivery',
-			description:
-				'Enjoy delivery of the newspaper to your home or office address.',
-		},
-		ML: {
-			title: 'Mail Delivery',
-			description:
-				'Enjoy delivery of the newspaper to your home or office address.',
 		},
 	},
 };
@@ -77,7 +76,7 @@ const deliveryOptionMessages = [
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: true,
 		flightMarket: true,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [USA_COUNTRY_CODE, CANADA_COUNTRY_CODE],
 		title: 'Hand delivery',
 		description:
 			"Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: We fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT's control. In those circumstances, your newspaper will be delivered on the next delivery day.",
@@ -90,7 +89,7 @@ const deliveryOptionMessages = [
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: true,
 		flightMarket: false,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [USA_COUNTRY_CODE, CANADA_COUNTRY_CODE],
 		title: 'Hand delivery',
 		description:
 			'Enjoy delivery of the newspaper daily to your home or office address.',
@@ -103,7 +102,7 @@ const deliveryOptionMessages = [
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: false,
 		flightMarket: true,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [USA_COUNTRY_CODE, CANADA_COUNTRY_CODE],
 		title: 'Hand delivery',
 		description:
 			"Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: We fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT's control. In those circumstances, your newspaper will be delivered on the next delivery day. Please also be aware that your FT Weekend will be delivered on Sunday.",
@@ -116,7 +115,7 @@ const deliveryOptionMessages = [
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: false,
 		flightMarket: false,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [USA_COUNTRY_CODE, CANADA_COUNTRY_CODE],
 		title: 'Hand delivery',
 		description:
 			'Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: Your FT Weekend will be delivered on Sunday or Monday.',
@@ -196,7 +195,7 @@ const deliveryOptionMessages = [
 			SIX_DAYS_WEEK_DELIVERY_FREQ,
 		],
 		distributorType: MAIL,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [USA_COUNTRY_CODE, CANADA_COUNTRY_CODE],
 		title: 'Mail',
 		customId: 'ML',
 		description:
@@ -207,7 +206,7 @@ const deliveryOptionMessages = [
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: true,
 		flightMarket: true,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [USA_COUNTRY_CODE, CANADA_COUNTRY_CODE],
 		title: 'Hand delivery',
 		description:
 			"Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: We fly the newspapers to your location which means delivery is subject to flight delays/cancellations outside of the FT's control. In those circumstances, your newspaper will be delivered the next delivery day.",
@@ -217,7 +216,7 @@ const deliveryOptionMessages = [
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: true,
 		flightMarket: false,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [USA_COUNTRY_CODE, CANADA_COUNTRY_CODE],
 		title: 'Hand delivery',
 		description:
 			'Enjoy delivery of the newspaper daily to your home or office address.',
@@ -227,7 +226,7 @@ const deliveryOptionMessages = [
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: false,
 		flightMarket: true,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [USA_COUNTRY_CODE, CANADA_COUNTRY_CODE],
 		title: 'Hand delivery',
 		description:
 			"Enjoy delivery of the newspaper daily to your home or office address. \nPlease note we fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT's control. In those circumstances, your newspaper will be delivered on the next delivery day. Please also be aware that your FT Weekend will be delivered on Sunday.",
@@ -237,7 +236,7 @@ const deliveryOptionMessages = [
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: false,
 		flightMarket: false,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [USA_COUNTRY_CODE, CANADA_COUNTRY_CODE],
 		title: 'Hand delivery',
 		description:
 			'Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: Your FT Weekend will be delivered on Sunday.',
@@ -245,7 +244,7 @@ const deliveryOptionMessages = [
 	{
 		deliveryFrequency: [ONLY_WEEKEND_DELIVERY_FREQ],
 		distributorType: MAIL,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [USA_COUNTRY_CODE, CANADA_COUNTRY_CODE],
 		title: 'Mail',
 		customId: 'ML',
 		description:
@@ -305,8 +304,8 @@ function findCustomDeliveryOption(productCode, option, FTShippingZone) {
 
 function getDeliveryOption(productCode, option, FTShippingZone, country) {
 	// Custom delivery messages are displayed for certain countries
-	if (customCountries.includes(country)) {
-		return customCountriesDeliveryOptions[country][option.value];
+	if (Object.keys(countryCodeToCustomDeliveryOptionsMap).includes(country)) {
+		return countryCodeToCustomDeliveryOptionsMap[country][option.value];
 	}
 
 	return findCustomDeliveryOption(productCode, option, FTShippingZone);
