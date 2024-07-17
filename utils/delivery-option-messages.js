@@ -20,24 +20,39 @@ const HAND_DELIVERY = 'HD';
 const MAIL = 'ML';
 
 // Country codes
+const CANADA_COUNTRY_CODE = 'CAN';
+const JAPAN_COUNTRY_CODE = 'JPN';
 const UK_COUNTRY_CODE = 'GBR';
 const USA_COUNTRY_CODE = 'USA';
-const CAN_COUNTRY_CODE = 'CAN';
 
-const UKDeliveryOptions = {
-	PV: {
-		title: 'Paper vouchers',
-		description:
-			'13-week voucher pack delivered quarterly and redeemable at retailers nationwide.',
+const countryCodeToCustomDeliveryOptionsMap = {
+	[JAPAN_COUNTRY_CODE]: {
+		HD: {
+			title: 'Hand delivery',
+			description:
+				'Enjoy delivery of the newspaper to your home or office address.',
+		},
+		ML: {
+			title: 'Mail Delivery',
+			description:
+				'Enjoy delivery of the newspaper to your home or office address.',
+		},
 	},
-	HD: {
-		title: 'Hand delivery',
-		description: 'Free delivery to your home or office before 7am.',
-	},
-	EV: {
-		title: 'Electronic vouchers',
-		description:
-			'Delivered via email and card, redeemable at retailers nationwide.',
+	[UK_COUNTRY_CODE]: {
+		PV: {
+			title: 'Paper vouchers',
+			description:
+				'13-week voucher pack delivered quarterly and redeemable at retailers nationwide.',
+		},
+		HD: {
+			title: 'Hand delivery',
+			description: 'Free delivery to your home or office before 7am.',
+		},
+		EV: {
+			title: 'Electronic vouchers',
+			description:
+				'Delivered via email and card, redeemable at retailers nationwide.',
+		},
 	},
 };
 
@@ -61,7 +76,7 @@ const deliveryOptionMessages = [
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: true,
 		flightMarket: true,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [USA_COUNTRY_CODE, CANADA_COUNTRY_CODE],
 		title: 'Hand delivery',
 		description:
 			"Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: We fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT's control. In those circumstances, your newspaper will be delivered on the next delivery day.",
@@ -74,7 +89,7 @@ const deliveryOptionMessages = [
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: true,
 		flightMarket: false,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [USA_COUNTRY_CODE, CANADA_COUNTRY_CODE],
 		title: 'Hand delivery',
 		description:
 			'Enjoy delivery of the newspaper daily to your home or office address.',
@@ -87,7 +102,7 @@ const deliveryOptionMessages = [
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: false,
 		flightMarket: true,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [USA_COUNTRY_CODE, CANADA_COUNTRY_CODE],
 		title: 'Hand delivery',
 		description:
 			"Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: We fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT's control. In those circumstances, your newspaper will be delivered on the next delivery day. Please also be aware that your FT Weekend will be delivered on Sunday.",
@@ -100,7 +115,7 @@ const deliveryOptionMessages = [
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: false,
 		flightMarket: false,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [USA_COUNTRY_CODE, CANADA_COUNTRY_CODE],
 		title: 'Hand delivery',
 		description:
 			'Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: Your FT Weekend will be delivered on Sunday or Monday.',
@@ -180,7 +195,7 @@ const deliveryOptionMessages = [
 			SIX_DAYS_WEEK_DELIVERY_FREQ,
 		],
 		distributorType: MAIL,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [USA_COUNTRY_CODE, CANADA_COUNTRY_CODE],
 		title: 'Mail',
 		customId: 'ML',
 		description:
@@ -191,7 +206,7 @@ const deliveryOptionMessages = [
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: true,
 		flightMarket: true,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [USA_COUNTRY_CODE, CANADA_COUNTRY_CODE],
 		title: 'Hand delivery',
 		description:
 			"Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: We fly the newspapers to your location which means delivery is subject to flight delays/cancellations outside of the FT's control. In those circumstances, your newspaper will be delivered the next delivery day.",
@@ -201,7 +216,7 @@ const deliveryOptionMessages = [
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: true,
 		flightMarket: false,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [USA_COUNTRY_CODE, CANADA_COUNTRY_CODE],
 		title: 'Hand delivery',
 		description:
 			'Enjoy delivery of the newspaper daily to your home or office address.',
@@ -211,7 +226,7 @@ const deliveryOptionMessages = [
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: false,
 		flightMarket: true,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [USA_COUNTRY_CODE, CANADA_COUNTRY_CODE],
 		title: 'Hand delivery',
 		description:
 			"Enjoy delivery of the newspaper daily to your home or office address. \nPlease note we fly the newspaper to your location which means delivery is subject to flight delays/cancellations outside of the FT's control. In those circumstances, your newspaper will be delivered on the next delivery day. Please also be aware that your FT Weekend will be delivered on Sunday.",
@@ -221,7 +236,7 @@ const deliveryOptionMessages = [
 		distributorType: HAND_DELIVERY,
 		deliveryOnPublicationDate: false,
 		flightMarket: false,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [USA_COUNTRY_CODE, CANADA_COUNTRY_CODE],
 		title: 'Hand delivery',
 		description:
 			'Enjoy delivery of the newspaper daily to your home or office address. \nPlease note: Your FT Weekend will be delivered on Sunday.',
@@ -229,7 +244,7 @@ const deliveryOptionMessages = [
 	{
 		deliveryFrequency: [ONLY_WEEKEND_DELIVERY_FREQ],
 		distributorType: MAIL,
-		country: [USA_COUNTRY_CODE, CAN_COUNTRY_CODE],
+		country: [USA_COUNTRY_CODE, CANADA_COUNTRY_CODE],
 		title: 'Mail',
 		customId: 'ML',
 		description:
@@ -287,10 +302,13 @@ function findCustomDeliveryOption(productCode, option, FTShippingZone) {
 	return deliveryOption;
 }
 
-function getDeliveryOption(productCode, option, FTShippingZone) {
-	return FTShippingZone === UK_COUNTRY_CODE
-		? UKDeliveryOptions[option.value]
-		: findCustomDeliveryOption(productCode, option, FTShippingZone);
+function getDeliveryOption(productCode, option, FTShippingZone, country) {
+	// Custom delivery messages are displayed for certain countries
+	if (Object.keys(countryCodeToCustomDeliveryOptionsMap).includes(country)) {
+		return countryCodeToCustomDeliveryOptionsMap[country][option.value];
+	}
+
+	return findCustomDeliveryOption(productCode, option, FTShippingZone);
 }
 
 module.exports = {

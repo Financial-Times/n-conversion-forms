@@ -89,3 +89,18 @@ USWeekendOnlyDeliveryOptions.args = {
 	country: 'USA',
 	productCode: 'NWE',
 };
+
+export const JapanDeliveryOptions = (args) => (
+	<div className="ncf">
+		<DeliveryOption {...args} />
+	</div>
+);
+JapanDeliveryOptions.args = {
+	country: 'JPN',
+	options: [
+		{
+			value: 'HD',
+			isValidDeliveryOption: true,
+		},
+	],
+};
