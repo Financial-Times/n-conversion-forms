@@ -62,7 +62,13 @@ export function DeliveryOption({
 							htmlFor={id}
 						>
 							<input {...inputProps} />
-							<span className="o-forms-input__label ncf__delivery-option__label">
+							<span
+								className={`o-forms-input__label ncf__delivery-option__label ${
+									deliveryOptionValue.title
+										? ''
+										: 'no-title__delivery-option__box'
+								}`}
+							>
 								{deliveryOptionValue.title && (
 									<span className="ncf__delivery-option__title o-forms-title__main">
 										{deliveryOptionValue.title}
