@@ -63,9 +63,11 @@ export function DeliveryOption({
 						>
 							<input {...inputProps} />
 							<span className="o-forms-input__label ncf__delivery-option__label">
-								<span className="ncf__delivery-option__title o-forms-title__main">
-									{deliveryOptionValue.title}
-								</span>
+								{deliveryOptionValue.title && (
+									<span className="ncf__delivery-option__title o-forms-title__main">
+										{deliveryOptionValue.title}
+									</span>
+								)}
 								<div className="ncf__delivery-option__description">
 									{deliveryOptionValue.description}
 								</div>

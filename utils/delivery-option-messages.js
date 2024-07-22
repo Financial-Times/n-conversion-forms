@@ -25,19 +25,12 @@ const JAPAN_COUNTRY_CODE = 'JPN';
 const UK_COUNTRY_CODE = 'GBR';
 const USA_COUNTRY_CODE = 'USA';
 
+const japanDeliveryOption = {
+	description:
+		'Enjoy delivery of the newspaper to your home or office address.',
+};
+
 const countryCodeToCustomDeliveryOptionsMap = {
-	[JAPAN_COUNTRY_CODE]: {
-		HD: {
-			title: 'Hand delivery',
-			description:
-				'Enjoy delivery of the newspaper to your home or office address.',
-		},
-		ML: {
-			title: 'Mail Delivery',
-			description:
-				'Enjoy delivery of the newspaper to your home or office address.',
-		},
-	},
 	[UK_COUNTRY_CODE]: {
 		PV: {
 			title: 'Paper vouchers',
@@ -306,6 +299,11 @@ function getDeliveryOption(productCode, option, FTShippingZone, country) {
 	// Custom delivery messages are displayed for certain countries
 	if (Object.keys(countryCodeToCustomDeliveryOptionsMap).includes(country)) {
 		return countryCodeToCustomDeliveryOptionsMap[country][option.value];
+	}
+
+	// Specific delivery message for Japan (no title)
+	if (country === JAPAN_COUNTRY_CODE) {
+		return japanDeliveryOption;
 	}
 
 	return findCustomDeliveryOption(productCode, option, FTShippingZone);
