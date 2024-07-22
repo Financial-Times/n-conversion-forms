@@ -55,6 +55,12 @@ export function DeliveryOption({
 						defaultChecked: isSelected,
 					};
 
+					const deliveryOptionBoxClassNames = classNames([
+						'o-forms-input__label',
+						'ncf__delivery-option__label',
+						{ 'no-title__delivery-option__box': !deliveryOptionValue.title },
+					]);
+
 					return (
 						<label
 							key={value}
@@ -62,13 +68,7 @@ export function DeliveryOption({
 							htmlFor={id}
 						>
 							<input {...inputProps} />
-							<span
-								className={`o-forms-input__label ncf__delivery-option__label ${
-									deliveryOptionValue.title
-										? ''
-										: 'no-title__delivery-option__box'
-								}`}
-							>
+							<span className={deliveryOptionBoxClassNames}>
 								{deliveryOptionValue.title && (
 									<span className="ncf__delivery-option__title o-forms-title__main">
 										{deliveryOptionValue.title}

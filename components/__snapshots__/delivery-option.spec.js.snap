@@ -17,7 +17,7 @@ exports[`DeliveryOption renders with USA print offer 1`] = `
              class="ncf__delivery-option__input"
              checked
       >
-      <span class="o-forms-input__label ncf__delivery-option__label ">
+      <span class="o-forms-input__label ncf__delivery-option__label">
         <span class="ncf__delivery-option__title o-forms-title__main">
           Hand delivery
         </span>
@@ -35,7 +35,7 @@ exports[`DeliveryOption renders with USA print offer 1`] = `
              value="HD"
              class="ncf__delivery-option__input"
       >
-      <span class="o-forms-input__label ncf__delivery-option__label ">
+      <span class="o-forms-input__label ncf__delivery-option__label">
         <span class="ncf__delivery-option__title o-forms-title__main">
           Mail
         </span>
@@ -65,7 +65,7 @@ exports[`DeliveryOption renders with a context of being single 1`] = `
              class="ncf__delivery-option__input"
              checked
       >
-      <span class="o-forms-input__label ncf__delivery-option__label ">
+      <span class="o-forms-input__label ncf__delivery-option__label">
         <span class="ncf__delivery-option__title o-forms-title__main">
           Paper vouchers
         </span>
@@ -83,7 +83,7 @@ exports[`DeliveryOption renders with a context of being single 1`] = `
              value="HD"
              class="ncf__delivery-option__input"
       >
-      <span class="o-forms-input__label ncf__delivery-option__label ">
+      <span class="o-forms-input__label ncf__delivery-option__label">
         <span class="ncf__delivery-option__title o-forms-title__main">
           Hand delivery
         </span>
@@ -101,7 +101,7 @@ exports[`DeliveryOption renders with a context of being single 1`] = `
              value="EV"
              class="ncf__delivery-option__input"
       >
-      <span class="o-forms-input__label ncf__delivery-option__label ">
+      <span class="o-forms-input__label ncf__delivery-option__label">
         <span class="ncf__delivery-option__title o-forms-title__main">
           Electronic vouchers
         </span>
@@ -131,7 +131,7 @@ exports[`DeliveryOption renders with country CAN print offer HD and mailDelivery
              class="ncf__delivery-option__input"
              checked
       >
-      <span class="o-forms-input__label ncf__delivery-option__label ">
+      <span class="o-forms-input__label ncf__delivery-option__label">
         <span class="ncf__delivery-option__title o-forms-title__main">
           Hand delivery
         </span>
@@ -161,7 +161,7 @@ exports[`DeliveryOption renders with minimum mandatory props 1`] = `
              class="ncf__delivery-option__input"
              checked
       >
-      <span class="o-forms-input__label ncf__delivery-option__label ">
+      <span class="o-forms-input__label ncf__delivery-option__label">
         <span class="ncf__delivery-option__title o-forms-title__main">
           Paper vouchers
         </span>
@@ -179,7 +179,7 @@ exports[`DeliveryOption renders with minimum mandatory props 1`] = `
              value="HD"
              class="ncf__delivery-option__input"
       >
-      <span class="o-forms-input__label ncf__delivery-option__label ">
+      <span class="o-forms-input__label ncf__delivery-option__label">
         <span class="ncf__delivery-option__title o-forms-title__main">
           Hand delivery
         </span>
@@ -197,7 +197,7 @@ exports[`DeliveryOption renders with minimum mandatory props 1`] = `
              value="EV"
              class="ncf__delivery-option__input"
       >
-      <span class="o-forms-input__label ncf__delivery-option__label ">
+      <span class="o-forms-input__label ncf__delivery-option__label">
         <span class="ncf__delivery-option__title o-forms-title__main">
           Electronic vouchers
         </span>
@@ -227,7 +227,7 @@ exports[`DeliveryOption renders without unrecognised delivery options 1`] = `
              class="ncf__delivery-option__input"
              checked
       >
-      <span class="o-forms-input__label ncf__delivery-option__label ">
+      <span class="o-forms-input__label ncf__delivery-option__label">
         <span class="ncf__delivery-option__title o-forms-title__main">
           Paper vouchers
         </span>
@@ -245,7 +245,7 @@ exports[`DeliveryOption renders without unrecognised delivery options 1`] = `
              value="HD"
              class="ncf__delivery-option__input"
       >
-      <span class="o-forms-input__label ncf__delivery-option__label ">
+      <span class="o-forms-input__label ncf__delivery-option__label">
         <span class="ncf__delivery-option__title o-forms-title__main">
           Hand delivery
         </span>
@@ -263,7 +263,7 @@ exports[`DeliveryOption renders without unrecognised delivery options 1`] = `
              value="EV"
              class="ncf__delivery-option__input"
       >
-      <span class="o-forms-input__label ncf__delivery-option__label ">
+      <span class="o-forms-input__label ncf__delivery-option__label">
         <span class="ncf__delivery-option__title o-forms-title__main">
           Electronic vouchers
         </span>
