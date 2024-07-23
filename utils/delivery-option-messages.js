@@ -28,12 +28,10 @@ const USA_COUNTRY_CODE = 'USA';
 const countryCodeToCustomDeliveryOptionsMap = {
 	[JAPAN_COUNTRY_CODE]: {
 		HD: {
-			title: 'Hand delivery',
 			description:
 				'Enjoy delivery of the newspaper to your home or office address.',
 		},
 		ML: {
-			title: 'Mail Delivery',
 			description:
 				'Enjoy delivery of the newspaper to your home or office address.',
 		},

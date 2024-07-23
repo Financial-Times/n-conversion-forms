@@ -28,6 +28,9 @@
 			background-color: oColorsByName('white');
 			color: oColorsByName('black-80');;
 		}
+		.no-title__delivery-option__box {
+			min-height: 80px;
+		}
 		.o-forms-input__address-type__label {
 			padding: 2px 2px 2px 35px;
 			min-height: 0;

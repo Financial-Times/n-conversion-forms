@@ -142,7 +142,6 @@ describe('Find Custom Delivery Option', () => {
 	describe('Find Japan Delivery Option', () => {
 		it('returns Japan HD delivery option', () => {
 			const expected = {
-				title: 'Hand delivery',
 				description:
 					'Enjoy delivery of the newspaper to your home or office address.',
 			};
