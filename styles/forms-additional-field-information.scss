@@ -15,3 +15,16 @@
 .o-forms-title .o-forms-title__prompt + .o-forms-title__prompt {
 	padding-top: oSpacingByName('s2');
 }
+
+.delivery-start-date__early-message {
+    margin-top: oSpacingByName('s3');
+}
+
+.delivery-start-date__text {
+    color: oColorsByName('teal');
+}
+
+.delivery-start-date__message {
+    margin-top: oSpacingByName('s8');
+    margin-bottom: oSpacingByName('s2');
+}

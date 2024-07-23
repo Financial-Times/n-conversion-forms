@@ -10,6 +10,7 @@ export function DeliveryStartDate({
 	max = null,
 	isDisabled = false,
 	isAddressUpdate = false,
+	useNextProfileDesign = false,
 }) {
 	const inputWrapperClassNames = classNames([
 		'o-forms-input',
@@ -35,32 +36,72 @@ export function DeliveryStartDate({
 		: 'The first print edition you will receive is:';
 
 	return (
-		<label
-			id="deliveryStartDateField"
-			className="o-forms-field ncf__validation-error"
-			data-validate="required"
-			htmlFor={inputProps.id}
-		>
-			<span className="o-forms-title">
-				<span className="o-forms-title__main" id="start-date-picker-title-span">
-					Delivery start date
-				</span>
-				<span className="o-forms-title__prompt">
-					Earliest available delivery date: {date}
-				</span>
-			</span>
+		<>
+			{!useNextProfileDesign && (
+				<label
+					id="deliveryStartDateField"
+					className="o-forms-field ncf__validation-error"
+					data-validate="required"
+					htmlFor={inputProps.id}
+				>
+					<span className="o-forms-title">
+						<span
+							className="o-forms-title__main"
+							id="start-date-picker-title-span"
+						>
+							Delivery start date
+						</span>
+						<span className="o-forms-title__prompt">
+							Earliest available delivery date: {date}
+						</span>
+					</span>
 
-			<span className={inputWrapperClassNames}>
-				<input {...inputProps} />
-				<span className="o-forms-input__error">
-					Please select a valid start date
-				</span>
-			</span>
+					<span className={inputWrapperClassNames}>
+						<input {...inputProps} />
+						<span className="o-forms-input__error">
+							Please select a valid start date
+						</span>
+					</span>
 
-			<p>
-				{startMessage} <strong className="js-start-date-text">{date}</strong>
-			</p>
-		</label>
+					<p>
+						{startMessage}{' '}
+						<strong className="js-start-date-text">{date}</strong>
+					</p>
+				</label>
+			)}
+			{useNextProfileDesign && (
+				<label
+					id="deliveryStartDateField"
+					className="o-forms-field ncf__validation-error"
+					data-validate="required"
+					htmlFor={inputProps.id}
+				>
+					<span className="o-forms-title">
+						<span
+							className="o-forms-title__main"
+							id="start-date-picker-title-span"
+						>
+							Delivery start date
+						</span>
+					</span>
+					<span className={inputWrapperClassNames}>
+						<input {...inputProps} />
+						<span className="o-forms-input__error">
+							Please select a valid start date
+						</span>
+					</span>
+					<span className="o-forms-title__prompt delivery-start-date__early-message">
+						Earliest available delivery date: {date}
+					</span>
+					<p className="delivery-start-date__message">
+						{startMessage}{' '}
+						<strong className="js-start-date-text delivery-start-date--text">
+							{date}
+						</strong>
+					</p>
+				</label>
+			)}
+		</>
 	);
 }
 
@@ -72,4 +113,5 @@ DeliveryStartDate.propTypes = {
 	max: PropTypes.string,
 	isDisabled: PropTypes.bool,
 	isAddressUpdate: PropTypes.bool,
+	useNextProfileDesign: PropTypes.bool,
 };
