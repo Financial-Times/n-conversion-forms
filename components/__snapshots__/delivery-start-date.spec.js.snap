@@ -10,10 +10,10 @@ exports[`DeliveryStartDate renders with a custom date 1`] = `
     <span class="o-forms-title__main"
           id="start-date-picker-title-span"
     >
-      Delivery start date
+      Start date
     </span>
     <span class="o-forms-title__prompt">
-      Earliest available delivery date: 5th November 2019
+      The first print edition you will receive is: 5th November 2019
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -29,12 +29,6 @@ exports[`DeliveryStartDate renders with a custom date 1`] = `
       Please select a valid start date
     </span>
   </span>
-  <p>
-    The first print edition you will receive is:
-    <strong class="js-start-date-text">
-      5th November 2019
-    </strong>
-  </p>
 </label>
 `;
 
@@ -48,10 +42,10 @@ exports[`DeliveryStartDate renders with a custom input max value 1`] = `
     <span class="o-forms-title__main"
           id="start-date-picker-title-span"
     >
-      Delivery start date
+      Start date
     </span>
     <span class="o-forms-title__prompt">
-      Earliest available delivery date: 2
+      The first print edition you will receive is: 2
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -67,12 +61,6 @@ exports[`DeliveryStartDate renders with a custom input max value 1`] = `
       Please select a valid start date
     </span>
   </span>
-  <p>
-    The first print edition you will receive is:
-    <strong class="js-start-date-text">
-      2
-    </strong>
-  </p>
 </label>
 `;
 
@@ -86,10 +74,10 @@ exports[`DeliveryStartDate renders with a custom input min value 1`] = `
     <span class="o-forms-title__main"
           id="start-date-picker-title-span"
     >
-      Delivery start date
+      Start date
     </span>
     <span class="o-forms-title__prompt">
-      Earliest available delivery date:
+      The first print edition you will receive is:
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -106,11 +94,6 @@ exports[`DeliveryStartDate renders with a custom input min value 1`] = `
       Please select a valid start date
     </span>
   </span>
-  <p>
-    The first print edition you will receive is:
-    <strong class="js-start-date-text">
-    </strong>
-  </p>
 </label>
 `;
 
@@ -124,10 +107,10 @@ exports[`DeliveryStartDate renders with a custom input value 1`] = `
     <span class="o-forms-title__main"
           id="start-date-picker-title-span"
     >
-      Delivery start date
+      Start date
     </span>
     <span class="o-forms-title__prompt">
-      Earliest available delivery date:
+      The first print edition you will receive is:
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -143,11 +126,6 @@ exports[`DeliveryStartDate renders with a custom input value 1`] = `
       Please select a valid start date
     </span>
   </span>
-  <p>
-    The first print edition you will receive is:
-    <strong class="js-start-date-text">
-    </strong>
-  </p>
 </label>
 `;
 
@@ -161,10 +139,10 @@ exports[`DeliveryStartDate renders with a disabled input 1`] = `
     <span class="o-forms-title__main"
           id="start-date-picker-title-span"
     >
-      Delivery start date
+      Start date
     </span>
     <span class="o-forms-title__prompt">
-      Earliest available delivery date:
+      The first print edition you will receive is:
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -181,11 +159,6 @@ exports[`DeliveryStartDate renders with a disabled input 1`] = `
       Please select a valid start date
     </span>
   </span>
-  <p>
-    The first print edition you will receive is:
-    <strong class="js-start-date-text">
-    </strong>
-  </p>
 </label>
 `;
 
@@ -199,10 +172,10 @@ exports[`DeliveryStartDate renders with an error 1`] = `
     <span class="o-forms-title__main"
           id="start-date-picker-title-span"
     >
-      Delivery start date
+      Start date
     </span>
     <span class="o-forms-title__prompt">
-      Earliest available delivery date:
+      The first print edition you will receive is:
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
@@ -218,11 +191,6 @@ exports[`DeliveryStartDate renders with an error 1`] = `
       Please select a valid start date
     </span>
   </span>
-  <p>
-    The first print edition you will receive is:
-    <strong class="js-start-date-text">
-    </strong>
-  </p>
 </label>
 `;
 
@@ -236,10 +204,10 @@ exports[`DeliveryStartDate renders with appropriate start message when isAddress
     <span class="o-forms-title__main"
           id="start-date-picker-title-span"
     >
-      Delivery start date
+      Start date
     </span>
     <span class="o-forms-title__prompt">
-      Earliest available delivery date:
+      The first print edition you will receive is:
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -273,10 +241,10 @@ exports[`DeliveryStartDate renders with country different than default 1`] = `
     <span class="o-forms-title__main"
           id="start-date-picker-title-span"
     >
-      Delivery start date
+      Start date
     </span>
     <span class="o-forms-title__prompt">
-      Earliest available delivery date:
+      The first print edition you will receive is:
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -292,11 +260,6 @@ exports[`DeliveryStartDate renders with country different than default 1`] = `
       Please select a valid start date
     </span>
   </span>
-  <p>
-    The first print edition you will receive is:
-    <strong class="js-start-date-text">
-    </strong>
-  </p>
 </label>
 `;
 
@@ -310,10 +273,10 @@ exports[`DeliveryStartDate renders with default props 1`] = `
     <span class="o-forms-title__main"
           id="start-date-picker-title-span"
     >
-      Delivery start date
+      Start date
     </span>
     <span class="o-forms-title__prompt">
-      Earliest available delivery date:
+      The first print edition you will receive is:
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -329,10 +292,5 @@ exports[`DeliveryStartDate renders with default props 1`] = `
       Please select a valid start date
     </span>
   </span>
-  <p>
-    The first print edition you will receive is:
-    <strong class="js-start-date-text">
-    </strong>
-  </p>
 </label>
 `;
