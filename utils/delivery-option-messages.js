@@ -171,7 +171,7 @@ const deliveryOptionMessages = [
 		customId: 'ML',
 		flightMarket: true,
 		description:
-			'Enjoy delivery of the newspaper to your home or office address. Note this is a postal delivery - expect delivery after the day of publication. If you would prefer to read the newspaper on the day of publication, purchase an FT ePaper subscription, our digital replica of the each daily edition.',
+			'Enjoy delivery of the newspaper to your home or office address. Note this is a postal delivery - expect delivery after the day of publication. If you would prefer to read the newspaper on the day of publication, purchase an FT ePaper subscription, our digital replica of each daily edition.',
 	},
 	{
 		deliveryFrequency: [

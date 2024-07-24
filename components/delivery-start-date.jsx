@@ -30,10 +30,6 @@ export function DeliveryStartDate({
 		defaultValue: value,
 	};
 
-	const startMessage = isAddressUpdate
-		? 'We’ll start delivering to this address from:'
-		: 'The first print edition you will receive is:';
-
 	return (
 		<label
 			id="deliveryStartDateField"
@@ -43,10 +39,10 @@ export function DeliveryStartDate({
 		>
 			<span className="o-forms-title">
 				<span className="o-forms-title__main" id="start-date-picker-title-span">
-					Delivery start date
+					Start date
 				</span>
 				<span className="o-forms-title__prompt">
-					Earliest available delivery date: {date}
+					The first print edition you will receive is: {date}
 				</span>
 			</span>
 
@@ -57,9 +53,12 @@ export function DeliveryStartDate({
 				</span>
 			</span>
 
-			<p>
-				{startMessage} <strong className="js-start-date-text">{date}</strong>
-			</p>
+			{isAddressUpdate && (
+				<p>
+					We’ll start delivering to this address from:{' '}
+					<strong className="js-start-date-text">{date}</strong>
+				</p>
+			)}
 		</label>
 	);
 }
