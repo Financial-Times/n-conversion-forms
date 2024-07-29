@@ -5,6 +5,7 @@ import classNames from 'classnames';
 export function Message({
 	title,
 	message,
+	additionalClass,
 	additional = [],
 	actions = null,
 	name,
@@ -61,7 +62,14 @@ export function Message({
 	) : null;
 
 	return (
-		<div className={ncfClassNames} data-message-name={name}>
+		<div
+			className={
+				additionalClass
+					? `${ncfClassNames} ${additionalClass}`
+					: ncfClassNames
+			}
+			data-message-name={name}
+		>
 			<div className={oMessageClassNames} data-o-component="o-message">
 				<div className="o-message__container">
 					<div className="o-message__content">
@@ -93,6 +101,7 @@ const actionType = PropTypes.shape({
 Message.propTypes = {
 	title: PropTypes.string,
 	message: PropTypes.string.isRequired,
+	additionalClass: PropTypes.string,
 	additional: PropTypes.arrayOf(PropTypes.string),
 	actions: PropTypes.arrayOf(actionType),
 	name: PropTypes.string,
