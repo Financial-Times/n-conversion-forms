@@ -42,7 +42,8 @@ export function DeliveryStartDate({
 					Start date
 				</span>
 				<span className="o-forms-title__prompt">
-					The first print edition you will receive is: {date}
+					The first print edition you will receive is:{' '}
+					<span className="js-start-date-text">{date}</span>
 				</span>
 			</span>
 

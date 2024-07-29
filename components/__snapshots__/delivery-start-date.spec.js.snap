@@ -13,7 +13,10 @@ exports[`DeliveryStartDate renders with a custom date 1`] = `
       Start date
     </span>
     <span class="o-forms-title__prompt">
-      The first print edition you will receive is: 5th November 2019
+      The first print edition you will receive is:
+      <span class="js-start-date-text">
+        5th November 2019
+      </span>
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -45,7 +48,10 @@ exports[`DeliveryStartDate renders with a custom input max value 1`] = `
       Start date
     </span>
     <span class="o-forms-title__prompt">
-      The first print edition you will receive is: 2
+      The first print edition you will receive is:
+      <span class="js-start-date-text">
+        2
+      </span>
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -78,6 +84,8 @@ exports[`DeliveryStartDate renders with a custom input min value 1`] = `
     </span>
     <span class="o-forms-title__prompt">
       The first print edition you will receive is:
+      <span class="js-start-date-text">
+      </span>
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -111,6 +119,8 @@ exports[`DeliveryStartDate renders with a custom input value 1`] = `
     </span>
     <span class="o-forms-title__prompt">
       The first print edition you will receive is:
+      <span class="js-start-date-text">
+      </span>
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -143,6 +153,8 @@ exports[`DeliveryStartDate renders with a disabled input 1`] = `
     </span>
     <span class="o-forms-title__prompt">
       The first print edition you will receive is:
+      <span class="js-start-date-text">
+      </span>
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -176,6 +188,8 @@ exports[`DeliveryStartDate renders with an error 1`] = `
     </span>
     <span class="o-forms-title__prompt">
       The first print edition you will receive is:
+      <span class="js-start-date-text">
+      </span>
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text o-forms-input--invalid">
@@ -208,6 +222,8 @@ exports[`DeliveryStartDate renders with appropriate start message when isAddress
     </span>
     <span class="o-forms-title__prompt">
       The first print edition you will receive is:
+      <span class="js-start-date-text">
+      </span>
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -245,6 +261,8 @@ exports[`DeliveryStartDate renders with country different than default 1`] = `
     </span>
     <span class="o-forms-title__prompt">
       The first print edition you will receive is:
+      <span class="js-start-date-text">
+      </span>
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
@@ -277,6 +295,8 @@ exports[`DeliveryStartDate renders with default props 1`] = `
     </span>
     <span class="o-forms-title__prompt">
       The first print edition you will receive is:
+      <span class="js-start-date-text">
+      </span>
     </span>
   </span>
   <span class="o-forms-input o-forms-input--text">
