@@ -257,38 +257,38 @@ function includesDeliveryFrequency(productCode = '', item) {
 	});
 }
 
-function mailStrategy(productCode, option, FTShippingZone, item) {
+function mailStrategy(productCode, shippingZone, item) {
 	return (
 		includesDeliveryFrequency(productCode, item) &&
 		item.distributorType === MAIL &&
-		item.country.includes(FTShippingZone)
+		item.country.includes(shippingZone)
 	);
 }
 
-function handDeliveryStrategy(productCode, option, FTShippingZone, item) {
+function handDeliveryStrategy(productCode, option, shippingZone, item) {
 	return (
 		includesDeliveryFrequency(productCode, item) &&
 		item.distributorType === HAND_DELIVERY &&
 		item.deliveryOnPublicationDate === option.deliveryOnPublicationDate &&
 		item.flightMarket === option.flightMarket &&
-		item.country.includes(FTShippingZone)
+		item.country.includes(shippingZone)
 	);
 }
 
 /**
- * Method to find a specific delivery option based on the delivery frequency, FTShippingZone and option values.
+ * Method to find a specific delivery option based on the delivery frequency, shippingZone and option values.
  * There are two different strategies, one for options with mailDelivery = true and other by the opposite.
  * Both cases are represented by system option code 'HD', but differ on the mailDelivery property value.
  * If no message matchs, then undefined is returned.
  */
-function findCustomDeliveryOption(productCode, option, FTShippingZone) {
+function findCustomDeliveryOption(productCode, option, shippingZone) {
 	let deliveryOption;
 
 	if (option.value === HAND_DELIVERY) {
 		const filteredMessages = deliveryOptionMessages.filter((item) => {
 			return option.mailDelivery
-				? mailStrategy(productCode, option, FTShippingZone, item)
-				: handDeliveryStrategy(productCode, option, FTShippingZone, item);
+				? mailStrategy(productCode, shippingZone, item)
+				: handDeliveryStrategy(productCode, option, shippingZone, item);
 		});
 
 		if (filteredMessages.length) {
@@ -300,13 +300,15 @@ function findCustomDeliveryOption(productCode, option, FTShippingZone) {
 	return deliveryOption;
 }
 
-function getDeliveryOption(productCode, option, FTShippingZone, country) {
+function getDeliveryOption({ productCode, option, shippingZone, countryCode }) {
 	// Custom delivery messages are displayed for certain countries
-	if (Object.keys(countryCodeToCustomDeliveryOptionsMap).includes(country)) {
-		return countryCodeToCustomDeliveryOptionsMap[country][option.value];
+	if (
+		Object.keys(countryCodeToCustomDeliveryOptionsMap).includes(countryCode)
+	) {
+		return countryCodeToCustomDeliveryOptionsMap[countryCode][option.value];
 	}
 
-	return findCustomDeliveryOption(productCode, option, FTShippingZone);
+	return findCustomDeliveryOption(productCode, option, shippingZone);
 }
 
 module.exports = {

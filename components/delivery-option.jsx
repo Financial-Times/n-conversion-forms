@@ -9,7 +9,7 @@ import {
 
 export function DeliveryOption({
 	fieldId = 'deliveryOptionField',
-	country,
+	country: countryCode,
 	productCode = undefined,
 	options = [],
 	isSingle = false,
@@ -20,7 +20,7 @@ export function DeliveryOption({
 		{ 'ncf__delivery-option--single': isSingle },
 	]);
 
-	const FTShippingZone = identifyFTShippingZone(country);
+	const shippingZone = identifyFTShippingZone(countryCode);
 
 	return (
 		<div
@@ -32,12 +32,12 @@ export function DeliveryOption({
 			<span className="o-forms-input o-forms-input--radio-round">
 				{options.map((option) => {
 					const { value, isValidDeliveryOption, isSelected } = option;
-					const deliveryOptionValue = getDeliveryOption(
+					const deliveryOptionValue = getDeliveryOption({
 						productCode,
 						option,
-						FTShippingZone,
-						country
-					);
+						shippingZone,
+						countryCode,
+					});
 
 					if (!isValidDeliveryOption || !deliveryOptionValue) {
 						return null;
